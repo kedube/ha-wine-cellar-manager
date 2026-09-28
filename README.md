@@ -176,7 +176,7 @@ Individual cards can be dragged and dropped at will. Bottles can be moved to an 
 
 Clicking on a card opens the Bottle view. This shows detailed information about this particular bottle, including its link. The physical location of the bottle (cellar, shelf, row, position) is also shown, along with a small map of the cellar that highlights the bottle's slot, and a timeline of its drinking window.
 
-- **Delete** removes the bottle and all its information.
+- **Delete** removes the bottle and all its information, after a confirmation inside the window.
 - **Consume** removes the bottle from the cellar but keeps its information, so it can be reused if a similar bottle is added later.
 - **Edit** opens the edit window (see below).
 - **Copy** temporarily keeps the bottle data in memory and closes the view. A banner confirms the copy and every empty slot pulses; clicking one copies all the fields into that slot, making it quick to add a second similar bottle. The copy can be cancelled from the banner, and expires after 10 minutes.
@@ -209,9 +209,10 @@ Information and statistics for the current inventory, including total value and 
 
 ### Header controls
 
-The header switches between the four views and offers two main buttons:
+The header switches between the four views and offers three buttons:
 
-- **+ Cellar**: opens a window to create and configure a new cellar. It is the same window used to edit a cellar.
+- **+ Bottle**: opens the Add window on the next free slot (cellars in order, shelves top to bottom, front row before back). If every slot is taken, the header says so instead.
+- **+ Cellar**: opens a window to create and configure a new cellar. It is the same window used to edit a cellar. Each shelf shows how many bottles it holds, and a shelf that still holds bottles can't be removed.
 - **Clean-Up**: analyzes the whole inventory and identifies possible duplicates (for instance, similar but not identical names, or misspelled varietals). For each case, it proposes a fix and lets you decide which entry to keep.
 
   ![Cleanup tool](images/cleanup.png)
@@ -222,8 +223,8 @@ The header switches between the four views and offers two main buttons:
 
 Every view except Statistics has filtering options. While any filter is active, matching bottles stay highlighted, the others fade, and the header shows how many bottles match. Under the filters, a summary line gives the number of bottles, the free slots, and how many bottles are in each aging state.
 
-- **Search**: matches any of the main bottle fields.
-- **Aging**: shows bottles that are **Ready to drink** (the current year falls within their aging period) or to **Drink now** (bottles in their final peak year).
+- **Search**: filters as you type. Every word must match somewhere in the name, producer, varietal, region, country, vintage, type, cellar, shelf, row or notes, and accents are ignored (`chateau` finds `Château`). If no match is on screen, the first one scrolls into view. Press `/` to jump to the search box and Escape to clear it. **Clear filters** resets the search and every filter.
+- **Aging**: shows bottles that are **Ready to drink** (the current year falls within their aging period) or to **Drink now** (bottles in their final peak year, or past it).
 
   ![Aging filter](images/aging.gif)
 
@@ -239,7 +240,7 @@ Every view except Statistics has filtering options. While any filter is active, 
 - **Theme aware**: all surfaces, text, and accents come from the active Home Assistant theme, so the card follows light mode, dark mode, and custom themes.
 - **Compact header**: the header stays anchored on larger screens, and extra padding is dropped on small phone screens.
 - **Scroll position**: your scroll position is kept after minor interface refreshes.
-- **Keyboard support**: bottles and empty slots can be reached with Tab and opened with Enter or Space.
+- **Keyboard support**: bottles and empty slots can be reached with Tab and opened with Enter or Space. Windows keep keyboard focus inside them, close with Escape, and return focus to where you were. Closing a window with unsaved changes asks first.
 
 ## Notes
 

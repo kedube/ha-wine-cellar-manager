@@ -159,6 +159,11 @@ const WCM_TRANSLATIONS = {
     "unknown_error": "unknown error",
     "bottle_search_failed": "Bottle search failed: ",
     "bottles_found_suffix": " bottle(s) found.",
+    "search_no_match": "No bottles match your search or filters.",
+    "clear_filters": "Clear filters",
+    "no_bottles_yet": "No bottles in your cellars yet.",
+    "add_bottle_short": "+ Bottle",
+    "all_slots_full": "Every slot in your cellars is taken. Free a slot, or add a shelf or a cellar, to add a bottle.",
     "similar_bottles_total": "{n} similar bottles total",
     "only_bottle_of_kind": "Only bottle of this kind",
     "duplicate_warning": "⚠️ Warning: You already have {n} identical bottle(s) in your cellar.",
@@ -174,7 +179,59 @@ const WCM_TRANSLATIONS = {
     "status_past": "Past peak",
     "location": "Location",
     "no_shelves": "No shelves configured.",
-    "add_first_cellar": "Add a first cellar to get started!"
+    "add_first_cellar": "Add a first cellar to get started!",
+    "discard_title": "Discard your changes?",
+    "discard_body": "What you typed in this form will be lost.",
+    "keep_editing": "Keep editing",
+    "discard": "Discard",
+    "delete_bottle_title": "Delete “{name}”?",
+    "delete_bottle_body": "The bottle is removed for good and does not go to your history. This cannot be undone.",
+    "consume_bottle_title": "Mark “{name}” as consumed?",
+    "consume_bottle_body": "It leaves its slot and moves to your history.",
+    "delete_cellar_title": "Delete the cellar “{name}”?",
+    "delete_cellar_body": "This also deletes its {bottles} bottle(s), {history} history entry(ies) and their label photos. This cannot be undone.",
+    "delete_cellar_body_empty": "The cellar is empty. This cannot be undone.",
+    "delete_cellar_confirm": "Delete cellar",
+    "merge_all_title": "Merge {n} spelling pair(s)?",
+    "merge_all_body": "{m} bottle(s) will be updated to the selected spelling. Pairs marked for checking are left as they are.",
+    "reanalyze_title": "Analyze this wine again?",
+    "reanalyze_body": "Every field the analysis finds will replace what is in the form now.",
+    "analyze_again": "Analyze again",
+    "action_failed": "That did not work: {error}",
+    "err_select_cellar": "Choose a cellar.",
+    "err_select_shelf": "Choose a shelf.",
+    "err_select_lane": "Choose a row (front or back).",
+    "err_choose_position": "Choose a free position. If the list is empty, pick another shelf or row.",
+    "err_wine_name_required": "Wine name is required.",
+    "err_shelf_missing": "The selected shelf no longer exists.",
+    "err_no_back_lane": "This shelf has no back row.",
+    "err_no_front_positions": "This shelf has no front positions.",
+    "err_position_out_of_range": "That position is beyond the shelf's capacity for this row.",
+    "err_position_taken": "That position is already taken by “{name}”. Choose a free position.",
+    "err_aging_order": "The aging start year cannot be later than the aging end year.",
+    "err_aging_end_order": "The aging end year must be the same as or later than the aging start year.",
+    "err_rating_range": "Rating must be between 0 and 5.",
+    "err_slot_taken_server": "That slot is already taken. Choose another position.",
+    "err_shelf_has_bottles": "A shelf that still holds bottles cannot be removed. Move its bottles first.",
+    "err_shrink_front": "A front row cannot be made smaller than its last occupied position. Move those bottles first.",
+    "err_shrink_back": "A back row cannot be made smaller than its last occupied position. Move those bottles first.",
+    "err_remove_back_lane": "The back row still holds bottles, so it cannot be removed. Move them first.",
+    "err_bottle_missing": "This bottle no longer exists. It may have been removed elsewhere.",
+    "err_no_entry": "The Wine Cellar Manager integration is not set up.",
+    "err_shelf_front_min": "“{shelf}” holds a bottle in front position {n}, so it needs at least {n} front positions.",
+    "err_shelf_back_min": "“{shelf}” holds a bottle in back position {n}, so it needs at least {n} back positions.",
+    "position_free": "Position {n} (free)",
+    "position_current": "Position {n} (current)",
+    "no_free_position": "No free position in this row",
+    "shelf_n": "Shelf {n}",
+    "shelf_stored": "{n} bottle(s) stored",
+    "shelf_empty": "Empty",
+    "shelf_remove_blocked": "Move these bottles to another shelf before removing it.",
+    "label_uploaded": "Label image uploaded.",
+    "label_uploaded_duplicates": "Label image uploaded. Possible duplicates found below.",
+    "duplicate_detection_failed": "Duplicate detection failed: ",
+    "pasted_details": "Details copied from “{name}”. Check them and save.",
+    "cleanup_check_pair": "Similar spelling, but it may be a different name. Check it before merging; Merge All skips it."
   },
   "fr": {
     "cellars": "Celliers",
@@ -336,6 +393,11 @@ const WCM_TRANSLATIONS = {
     "unknown_error": "erreur inconnue",
     "bottle_search_failed": "La recherche de bouteilles a échoué : ",
     "bottles_found_suffix": " bouteille(s) trouvée(s).",
+    "search_no_match": "Aucune bouteille ne correspond à votre recherche ou à vos filtres.",
+    "clear_filters": "Effacer les filtres",
+    "no_bottles_yet": "Aucune bouteille dans vos celliers pour l'instant.",
+    "add_bottle_short": "+ Bouteille",
+    "all_slots_full": "Tous les emplacements de vos celliers sont occupés. Libérez un emplacement, ou ajoutez une tablette ou un cellier, pour ajouter une bouteille.",
     "similar_bottles_total": "{n} bouteilles semblables au total",
     "only_bottle_of_kind": "Seule bouteille de ce type",
     "duplicate_warning": "⚠️ Attention : Vous possédez déjà {n} bouteille(s) identique(s) dans votre cellier.",
@@ -351,7 +413,59 @@ const WCM_TRANSLATIONS = {
     "status_past": "Apogée passée",
     "location": "Emplacement",
     "no_shelves": "Aucune tablette configurée.",
-    "add_first_cellar": "Ajoutez un premier cellier pour commencer !"
+    "add_first_cellar": "Ajoutez un premier cellier pour commencer !",
+    "discard_title": "Abandonner vos modifications ?",
+    "discard_body": "Ce que vous avez saisi dans ce formulaire sera perdu.",
+    "keep_editing": "Continuer la saisie",
+    "discard": "Abandonner",
+    "delete_bottle_title": "Supprimer « {name} » ?",
+    "delete_bottle_body": "La bouteille est supprimée définitivement et ne va pas dans l'historique. Cette action est irréversible.",
+    "consume_bottle_title": "Marquer « {name} » comme consommée ?",
+    "consume_bottle_body": "Elle libère son emplacement et passe dans l'historique.",
+    "delete_cellar_title": "Supprimer le cellier « {name} » ?",
+    "delete_cellar_body": "Cela supprime aussi ses {bottles} bouteille(s), {history} entrée(s) d'historique et leurs photos d'étiquette. Cette action est irréversible.",
+    "delete_cellar_body_empty": "Le cellier est vide. Cette action est irréversible.",
+    "delete_cellar_confirm": "Supprimer le cellier",
+    "merge_all_title": "Fusionner {n} paire(s) d'orthographes ?",
+    "merge_all_body": "{m} bouteille(s) prendront l'orthographe choisie. Les paires à vérifier ne sont pas modifiées.",
+    "reanalyze_title": "Analyser ce vin à nouveau ?",
+    "reanalyze_body": "Chaque champ trouvé par l'analyse remplacera le contenu actuel du formulaire.",
+    "analyze_again": "Analyser à nouveau",
+    "action_failed": "L'opération a échoué : {error}",
+    "err_select_cellar": "Choisissez un cellier.",
+    "err_select_shelf": "Choisissez une tablette.",
+    "err_select_lane": "Choisissez un rang (avant ou arrière).",
+    "err_choose_position": "Choisissez une position libre. Si la liste est vide, choisissez une autre tablette ou un autre rang.",
+    "err_wine_name_required": "Le nom du vin est requis.",
+    "err_shelf_missing": "La tablette choisie n'existe plus.",
+    "err_no_back_lane": "Cette tablette n'a pas de rang arrière.",
+    "err_no_front_positions": "Cette tablette n'a aucune position avant.",
+    "err_position_out_of_range": "Cette position dépasse la capacité de la tablette pour ce rang.",
+    "err_position_taken": "Cette position est déjà occupée par « {name} ». Choisissez une position libre.",
+    "err_aging_order": "L'année de début de l'apogée ne peut pas être postérieure à l'année de fin.",
+    "err_aging_end_order": "L'année de fin de l'apogée doit être égale ou postérieure à l'année de début.",
+    "err_rating_range": "L'évaluation doit être comprise entre 0 et 5.",
+    "err_slot_taken_server": "Cet emplacement est déjà occupé. Choisissez une autre position.",
+    "err_shelf_has_bottles": "Une tablette qui contient encore des bouteilles ne peut pas être retirée. Déplacez d'abord ses bouteilles.",
+    "err_shrink_front": "Un rang avant ne peut pas être plus petit que sa dernière position occupée. Déplacez d'abord ces bouteilles.",
+    "err_shrink_back": "Un rang arrière ne peut pas être plus petit que sa dernière position occupée. Déplacez d'abord ces bouteilles.",
+    "err_remove_back_lane": "Le rang arrière contient encore des bouteilles et ne peut pas être retiré. Déplacez-les d'abord.",
+    "err_bottle_missing": "Cette bouteille n'existe plus. Elle a peut-être été supprimée ailleurs.",
+    "err_no_entry": "L'intégration Wine Cellar Manager n'est pas configurée.",
+    "err_shelf_front_min": "« {shelf} » contient une bouteille en position avant {n} : il lui faut au moins {n} positions avant.",
+    "err_shelf_back_min": "« {shelf} » contient une bouteille en position arrière {n} : il lui faut au moins {n} positions arrière.",
+    "position_free": "Position {n} (libre)",
+    "position_current": "Position {n} (actuelle)",
+    "no_free_position": "Aucune position libre dans ce rang",
+    "shelf_n": "Tablette {n}",
+    "shelf_stored": "{n} bouteille(s) rangée(s)",
+    "shelf_empty": "Vide",
+    "shelf_remove_blocked": "Déplacez ces bouteilles vers une autre tablette avant de la retirer.",
+    "label_uploaded": "Image de l'étiquette téléversée.",
+    "label_uploaded_duplicates": "Image de l'étiquette téléversée. Doublons possibles ci-dessous.",
+    "duplicate_detection_failed": "La détection des doublons a échoué : ",
+    "pasted_details": "Détails copiés depuis « {name} ». Vérifiez-les puis enregistrez.",
+    "cleanup_check_pair": "Orthographe proche, mais il peut s'agir d'un autre nom. Vérifiez avant de fusionner ; « Fusionner tout » l'ignore."
   },
   "de": {
     "cellars": "Weinkeller",
@@ -513,6 +627,11 @@ const WCM_TRANSLATIONS = {
     "unknown_error": "unbekannter Fehler",
     "bottle_search_failed": "Flaschensuche fehlgeschlagen: ",
     "bottles_found_suffix": " Flasche(n) gefunden.",
+    "search_no_match": "Keine Flasche entspricht Ihrer Suche oder Ihren Filtern.",
+    "clear_filters": "Filter zurücksetzen",
+    "no_bottles_yet": "Noch keine Flaschen in Ihren Kellern.",
+    "add_bottle_short": "+ Flasche",
+    "all_slots_full": "Alle Plätze in Ihren Kellern sind belegt. Geben Sie einen Platz frei oder fügen Sie ein Regal oder einen Keller hinzu, um eine Flasche hinzuzufügen.",
     "similar_bottles_total": "{n} ähnliche Flaschen insgesamt",
     "only_bottle_of_kind": "Einzige Flasche dieser Art",
     "duplicate_warning": "⚠️ Achtung: Sie haben bereits {n} identische Flasche(n) in Ihrem Keller.",
@@ -528,7 +647,59 @@ const WCM_TRANSLATIONS = {
     "status_past": "Über dem Höhepunkt",
     "location": "Lagerort",
     "no_shelves": "Keine Regale konfiguriert.",
-    "add_first_cellar": "Legen Sie einen ersten Keller an, um loszulegen!"
+    "add_first_cellar": "Legen Sie einen ersten Keller an, um loszulegen!",
+    "discard_title": "Änderungen verwerfen?",
+    "discard_body": "Was Sie in dieses Formular eingegeben haben, geht verloren.",
+    "keep_editing": "Weiter bearbeiten",
+    "discard": "Verwerfen",
+    "delete_bottle_title": "„{name}“ löschen?",
+    "delete_bottle_body": "Die Flasche wird endgültig entfernt und nicht in den Verlauf übernommen. Dies kann nicht rückgängig gemacht werden.",
+    "consume_bottle_title": "„{name}“ als getrunken markieren?",
+    "consume_bottle_body": "Sie gibt ihren Platz frei und wandert in den Verlauf.",
+    "delete_cellar_title": "Keller „{name}“ löschen?",
+    "delete_cellar_body": "Damit werden auch seine {bottles} Flasche(n), {history} Verlaufseintrag/-einträge und deren Etikettenfotos gelöscht. Dies kann nicht rückgängig gemacht werden.",
+    "delete_cellar_body_empty": "Der Keller ist leer. Dies kann nicht rückgängig gemacht werden.",
+    "delete_cellar_confirm": "Keller löschen",
+    "merge_all_title": "{n} Schreibweisen-Paar(e) zusammenführen?",
+    "merge_all_body": "{m} Flasche(n) erhalten die ausgewählte Schreibweise. Zu prüfende Paare bleiben unverändert.",
+    "reanalyze_title": "Diesen Wein erneut analysieren?",
+    "reanalyze_body": "Jedes von der Analyse gefundene Feld ersetzt den aktuellen Inhalt des Formulars.",
+    "analyze_again": "Erneut analysieren",
+    "action_failed": "Das hat nicht geklappt: {error}",
+    "position_free": "Position {n} (frei)",
+    "position_current": "Position {n} (aktuell)",
+    "no_free_position": "Keine freie Position in dieser Reihe",
+    "shelf_n": "Regal {n}",
+    "shelf_stored": "{n} Flasche(n) eingelagert",
+    "shelf_empty": "Leer",
+    "shelf_remove_blocked": "Verschieben Sie diese Flaschen in ein anderes Regal, bevor Sie es entfernen.",
+    "err_choose_position": "Wählen Sie eine freie Position. Ist die Liste leer, wählen Sie ein anderes Regal oder eine andere Reihe.",
+    "err_slot_taken_server": "Dieser Platz ist bereits belegt. Wählen Sie eine andere Position.",
+    "cleanup_check_pair": "Ähnliche Schreibweise, aber vielleicht ein anderer Name. Vor dem Zusammenführen prüfen; „Alle zusammenführen“ überspringt dieses Paar.",
+    "pasted_details": "Angaben von „{name}“ übernommen. Prüfen und speichern.",
+    "label_uploaded": "Etikettbild hochgeladen.",
+    "label_uploaded_duplicates": "Etikettbild hochgeladen. Mögliche Duplikate siehe unten.",
+    "err_select_cellar": "Wählen Sie einen Keller.",
+    "err_select_shelf": "Wählen Sie ein Regal.",
+    "err_select_lane": "Wählen Sie eine Reihe (vorne oder hinten).",
+    "err_wine_name_required": "Der Weinname ist erforderlich.",
+    "err_shelf_missing": "Das gewählte Regal existiert nicht mehr.",
+    "err_no_back_lane": "Dieses Regal hat keine hintere Reihe.",
+    "err_no_front_positions": "Dieses Regal hat keine vorderen Positionen.",
+    "err_position_out_of_range": "Diese Position liegt außerhalb der Kapazität dieser Reihe.",
+    "err_position_taken": "Diese Position ist bereits durch „{name}“ belegt. Wählen Sie eine freie Position.",
+    "err_aging_order": "Das Startjahr der Trinkreife darf nicht nach dem Endjahr liegen.",
+    "err_aging_end_order": "Das Endjahr der Trinkreife muss gleich oder später als das Startjahr sein.",
+    "err_rating_range": "Die Bewertung muss zwischen 0 und 5 liegen.",
+    "err_shelf_has_bottles": "Ein Regal mit Flaschen kann nicht entfernt werden. Verschieben Sie zuerst die Flaschen.",
+    "err_shrink_front": "Eine vordere Reihe kann nicht kleiner als ihre letzte belegte Position werden. Verschieben Sie zuerst diese Flaschen.",
+    "err_shrink_back": "Eine hintere Reihe kann nicht kleiner als ihre letzte belegte Position werden. Verschieben Sie zuerst diese Flaschen.",
+    "err_remove_back_lane": "In der hinteren Reihe liegen noch Flaschen, daher kann sie nicht entfernt werden. Verschieben Sie sie zuerst.",
+    "err_bottle_missing": "Diese Flasche existiert nicht mehr. Sie wurde möglicherweise an anderer Stelle entfernt.",
+    "err_no_entry": "Die Integration Wine Cellar Manager ist nicht eingerichtet.",
+    "err_shelf_front_min": "„{shelf}“ hat eine Flasche auf der vorderen Position {n} und braucht daher mindestens {n} vordere Positionen.",
+    "err_shelf_back_min": "„{shelf}“ hat eine Flasche auf der hinteren Position {n} und braucht daher mindestens {n} hintere Positionen.",
+    "duplicate_detection_failed": "Duplikatsuche fehlgeschlagen: "
   },
   "es": {
     "cellars": "Bodegas",
@@ -690,6 +861,11 @@ const WCM_TRANSLATIONS = {
     "unknown_error": "error desconocido",
     "bottle_search_failed": "Error en la búsqueda de botellas: ",
     "bottles_found_suffix": " botella(s) encontrada(s).",
+    "search_no_match": "Ninguna botella coincide con su búsqueda o sus filtros.",
+    "clear_filters": "Borrar filtros",
+    "no_bottles_yet": "Todavía no hay botellas en sus bodegas.",
+    "add_bottle_short": "+ Botella",
+    "all_slots_full": "Todos los espacios de sus bodegas están ocupados. Libere un espacio, o añada un estante o una bodega, para añadir una botella.",
     "similar_bottles_total": "{n} botellas similares en total",
     "only_bottle_of_kind": "Única botella de este tipo",
     "duplicate_warning": "⚠️ Atención: Ya tiene {n} botella(s) idéntica(s) en su bodega.",
@@ -705,7 +881,59 @@ const WCM_TRANSLATIONS = {
     "status_past": "Pasado su apogeo",
     "location": "Ubicación",
     "no_shelves": "No hay estantes configurados.",
-    "add_first_cellar": "¡Añada una primera bodega para empezar!"
+    "add_first_cellar": "¡Añada una primera bodega para empezar!",
+    "discard_title": "¿Descartar los cambios?",
+    "discard_body": "Se perderá lo que ha escrito en este formulario.",
+    "keep_editing": "Seguir editando",
+    "discard": "Descartar",
+    "delete_bottle_title": "¿Eliminar «{name}»?",
+    "delete_bottle_body": "La botella se elimina definitivamente y no pasa al historial. Esta acción no se puede deshacer.",
+    "consume_bottle_title": "¿Marcar «{name}» como consumida?",
+    "consume_bottle_body": "Libera su posición y pasa al historial.",
+    "delete_cellar_title": "¿Eliminar la bodega «{name}»?",
+    "delete_cellar_body": "También se eliminarán sus {bottles} botella(s), {history} entrada(s) del historial y sus fotos de etiqueta. Esta acción no se puede deshacer.",
+    "delete_cellar_body_empty": "La bodega está vacía. Esta acción no se puede deshacer.",
+    "delete_cellar_confirm": "Eliminar bodega",
+    "merge_all_title": "¿Fusionar {n} par(es) de grafías?",
+    "merge_all_body": "{m} botella(s) tomarán la grafía seleccionada. Los pares por revisar no se modifican.",
+    "reanalyze_title": "¿Analizar este vino de nuevo?",
+    "reanalyze_body": "Cada campo que encuentre el análisis reemplazará el contenido actual del formulario.",
+    "analyze_again": "Analizar de nuevo",
+    "action_failed": "No se pudo completar: {error}",
+    "position_free": "Posición {n} (libre)",
+    "position_current": "Posición {n} (actual)",
+    "no_free_position": "No hay posiciones libres en esta fila",
+    "shelf_n": "Estante {n}",
+    "shelf_stored": "{n} botella(s) guardada(s)",
+    "shelf_empty": "Vacío",
+    "shelf_remove_blocked": "Mueva estas botellas a otro estante antes de quitarlo.",
+    "err_choose_position": "Elija una posición libre. Si la lista está vacía, elija otro estante u otra fila.",
+    "err_slot_taken_server": "Esa posición ya está ocupada. Elija otra.",
+    "cleanup_check_pair": "Grafía parecida, pero puede ser otro nombre. Revíselo antes de fusionar; «Fusionar todo» lo omite.",
+    "pasted_details": "Datos copiados de «{name}». Revíselos y guarde.",
+    "label_uploaded": "Imagen de la etiqueta subida.",
+    "label_uploaded_duplicates": "Imagen de la etiqueta subida. Posibles duplicados abajo.",
+    "err_select_cellar": "Elija una bodega.",
+    "err_select_shelf": "Elija un estante.",
+    "err_select_lane": "Elija una fila (delante o detrás).",
+    "err_wine_name_required": "El nombre del vino es obligatorio.",
+    "err_shelf_missing": "El estante seleccionado ya no existe.",
+    "err_no_back_lane": "Este estante no tiene fila trasera.",
+    "err_no_front_positions": "Este estante no tiene posiciones delanteras.",
+    "err_position_out_of_range": "Esa posición supera la capacidad de esta fila del estante.",
+    "err_position_taken": "Esa posición ya está ocupada por «{name}». Elija una posición libre.",
+    "err_aging_order": "El año de inicio de madurez no puede ser posterior al año de fin.",
+    "err_aging_end_order": "El año de fin de madurez debe ser igual o posterior al año de inicio.",
+    "err_rating_range": "La valoración debe estar entre 0 y 5.",
+    "err_shelf_has_bottles": "No se puede quitar un estante que aún tiene botellas. Mueva primero sus botellas.",
+    "err_shrink_front": "Una fila delantera no puede ser más pequeña que su última posición ocupada. Mueva primero esas botellas.",
+    "err_shrink_back": "Una fila trasera no puede ser más pequeña que su última posición ocupada. Mueva primero esas botellas.",
+    "err_remove_back_lane": "La fila trasera todavía tiene botellas, así que no se puede quitar. Muévalas primero.",
+    "err_bottle_missing": "Esta botella ya no existe. Puede que se haya eliminado en otro lugar.",
+    "err_no_entry": "La integración Wine Cellar Manager no está configurada.",
+    "err_shelf_front_min": "«{shelf}» tiene una botella en la posición delantera {n}, así que necesita al menos {n} posiciones delanteras.",
+    "err_shelf_back_min": "«{shelf}» tiene una botella en la posición trasera {n}, así que necesita al menos {n} posiciones traseras.",
+    "duplicate_detection_failed": "Error al buscar duplicados: "
   },
   "it": {
     "cellars": "Cantine",
@@ -867,6 +1095,11 @@ const WCM_TRANSLATIONS = {
     "unknown_error": "errore sconosciuto",
     "bottle_search_failed": "Ricerca delle bottiglie non riuscita: ",
     "bottles_found_suffix": " bottiglia/e trovata/e.",
+    "search_no_match": "Nessuna bottiglia corrisponde alla ricerca o ai filtri.",
+    "clear_filters": "Cancella filtri",
+    "no_bottles_yet": "Ancora nessuna bottiglia nelle tue cantine.",
+    "add_bottle_short": "+ Bottiglia",
+    "all_slots_full": "Tutti i posti delle tue cantine sono occupati. Libera un posto, oppure aggiungi un ripiano o una cantina, per aggiungere una bottiglia.",
     "similar_bottles_total": "{n} bottiglie simili in totale",
     "only_bottle_of_kind": "Unica bottiglia di questo tipo",
     "duplicate_warning": "⚠️ Attenzione: hai già {n} bottiglia/e identica/che nella tua cantina.",
@@ -882,7 +1115,59 @@ const WCM_TRANSLATIONS = {
     "status_past": "Oltre il culmine",
     "location": "Collocazione",
     "no_shelves": "Nessun ripiano configurato.",
-    "add_first_cellar": "Aggiungi una prima cantina per iniziare!"
+    "add_first_cellar": "Aggiungi una prima cantina per iniziare!",
+    "discard_title": "Scartare le modifiche?",
+    "discard_body": "Quello che hai scritto in questo modulo andrà perso.",
+    "keep_editing": "Continua a modificare",
+    "discard": "Scarta",
+    "delete_bottle_title": "Eliminare «{name}»?",
+    "delete_bottle_body": "La bottiglia viene eliminata definitivamente e non passa nella cronologia. L'operazione non può essere annullata.",
+    "consume_bottle_title": "Segnare «{name}» come consumata?",
+    "consume_bottle_body": "Libera la sua posizione e passa nella cronologia.",
+    "delete_cellar_title": "Eliminare la cantina «{name}»?",
+    "delete_cellar_body": "Verranno eliminate anche le sue {bottles} bottiglia/e, {history} voce/i della cronologia e le foto delle etichette. L'operazione non può essere annullata.",
+    "delete_cellar_body_empty": "La cantina è vuota. L'operazione non può essere annullata.",
+    "delete_cellar_confirm": "Elimina cantina",
+    "merge_all_title": "Unire {n} coppia/e di grafie?",
+    "merge_all_body": "{m} bottiglia/e prenderanno la grafia selezionata. Le coppie da verificare restano invariate.",
+    "reanalyze_title": "Analizzare di nuovo questo vino?",
+    "reanalyze_body": "Ogni campo trovato dall'analisi sostituirà il contenuto attuale del modulo.",
+    "analyze_again": "Analizza di nuovo",
+    "action_failed": "Operazione non riuscita: {error}",
+    "position_free": "Posizione {n} (libera)",
+    "position_current": "Posizione {n} (attuale)",
+    "no_free_position": "Nessuna posizione libera in questa fila",
+    "shelf_n": "Ripiano {n}",
+    "shelf_stored": "{n} bottiglia/e presenti",
+    "shelf_empty": "Vuoto",
+    "shelf_remove_blocked": "Sposta queste bottiglie su un altro ripiano prima di rimuoverlo.",
+    "err_choose_position": "Scegli una posizione libera. Se l'elenco è vuoto, scegli un altro ripiano o un'altra fila.",
+    "err_slot_taken_server": "Questa posizione è già occupata. Scegline un'altra.",
+    "cleanup_check_pair": "Grafia simile, ma potrebbe essere un altro nome. Verifica prima di unire; «Unisci tutto» la salta.",
+    "pasted_details": "Dati copiati da «{name}». Controlla e salva.",
+    "label_uploaded": "Immagine dell'etichetta caricata.",
+    "label_uploaded_duplicates": "Immagine dell'etichetta caricata. Possibili duplicati qui sotto.",
+    "err_select_cellar": "Scegli una cantina.",
+    "err_select_shelf": "Scegli un ripiano.",
+    "err_select_lane": "Scegli una fila (davanti o dietro).",
+    "err_wine_name_required": "Il nome del vino è obbligatorio.",
+    "err_shelf_missing": "Il ripiano selezionato non esiste più.",
+    "err_no_back_lane": "Questo ripiano non ha una fila posteriore.",
+    "err_no_front_positions": "Questo ripiano non ha posizioni anteriori.",
+    "err_position_out_of_range": "Questa posizione supera la capacità di questa fila del ripiano.",
+    "err_position_taken": "Questa posizione è già occupata da «{name}». Scegli una posizione libera.",
+    "err_aging_order": "L'anno di inizio maturità non può essere successivo all'anno di fine.",
+    "err_aging_end_order": "L'anno di fine maturità deve essere uguale o successivo all'anno di inizio.",
+    "err_rating_range": "La valutazione deve essere compresa tra 0 e 5.",
+    "err_shelf_has_bottles": "Non puoi rimuovere un ripiano che contiene ancora bottiglie. Sposta prima le bottiglie.",
+    "err_shrink_front": "Una fila anteriore non può diventare più piccola della sua ultima posizione occupata. Sposta prima quelle bottiglie.",
+    "err_shrink_back": "Una fila posteriore non può diventare più piccola della sua ultima posizione occupata. Sposta prima quelle bottiglie.",
+    "err_remove_back_lane": "La fila posteriore contiene ancora bottiglie, quindi non può essere rimossa. Spostale prima.",
+    "err_bottle_missing": "Questa bottiglia non esiste più. Potrebbe essere stata rimossa altrove.",
+    "err_no_entry": "L'integrazione Wine Cellar Manager non è configurata.",
+    "err_shelf_front_min": "«{shelf}» ha una bottiglia nella posizione anteriore {n}, quindi servono almeno {n} posizioni anteriori.",
+    "err_shelf_back_min": "«{shelf}» ha una bottiglia nella posizione posteriore {n}, quindi servono almeno {n} posizioni posteriori.",
+    "duplicate_detection_failed": "Ricerca dei duplicati non riuscita: "
   },
   "nl": {
     "cellars": "Wijnkelders",
@@ -1044,6 +1329,11 @@ const WCM_TRANSLATIONS = {
     "unknown_error": "onbekende fout",
     "bottle_search_failed": "Zoeken naar flessen mislukt: ",
     "bottles_found_suffix": " fles(sen) gevonden.",
+    "search_no_match": "Geen flessen die overeenkomen met de zoekopdracht of filters.",
+    "clear_filters": "Filters wissen",
+    "no_bottles_yet": "Nog geen flessen in de kelders.",
+    "add_bottle_short": "+ Fles",
+    "all_slots_full": "Alle plaatsen in de kelders zijn bezet. Maak een plaats vrij, of voeg een plank of kelder toe, om een fles toe te voegen.",
     "similar_bottles_total": "{n} vergelijkbare flessen in totaal",
     "only_bottle_of_kind": "Enige fles van dit soort",
     "duplicate_warning": "⚠️ Let op: u heeft al {n} identieke fles(sen) in uw kelder.",
@@ -1059,7 +1349,59 @@ const WCM_TRANSLATIONS = {
     "status_past": "Over hoogtepunt",
     "location": "Locatie",
     "no_shelves": "Geen planken geconfigureerd.",
-    "add_first_cellar": "Voeg een eerste kelder toe om te beginnen!"
+    "add_first_cellar": "Voeg een eerste kelder toe om te beginnen!",
+    "discard_title": "Wijzigingen verwerpen?",
+    "discard_body": "Wat u in dit formulier hebt ingevuld, gaat verloren.",
+    "keep_editing": "Verder bewerken",
+    "discard": "Verwerpen",
+    "delete_bottle_title": "“{name}” verwijderen?",
+    "delete_bottle_body": "De fles wordt definitief verwijderd en komt niet in de geschiedenis. Dit kan niet ongedaan worden gemaakt.",
+    "consume_bottle_title": "“{name}” markeren als gedronken?",
+    "consume_bottle_body": "De plaats komt vrij en de fles gaat naar de geschiedenis.",
+    "delete_cellar_title": "Kelder “{name}” verwijderen?",
+    "delete_cellar_body": "Hiermee worden ook de {bottles} fles(sen), {history} geschiedenisitem(s) en hun etiketfoto's verwijderd. Dit kan niet ongedaan worden gemaakt.",
+    "delete_cellar_body_empty": "De kelder is leeg. Dit kan niet ongedaan worden gemaakt.",
+    "delete_cellar_confirm": "Kelder verwijderen",
+    "merge_all_title": "{n} paar/paren schrijfwijzen samenvoegen?",
+    "merge_all_body": "{m} fles(sen) krijgen de gekozen schrijfwijze. Paren om te controleren blijven ongewijzigd.",
+    "reanalyze_title": "Deze wijn opnieuw analyseren?",
+    "reanalyze_body": "Elk veld dat de analyse vindt, vervangt de huidige inhoud van het formulier.",
+    "analyze_again": "Opnieuw analyseren",
+    "action_failed": "Dat is niet gelukt: {error}",
+    "position_free": "Positie {n} (vrij)",
+    "position_current": "Positie {n} (huidig)",
+    "no_free_position": "Geen vrije positie in deze rij",
+    "shelf_n": "Plank {n}",
+    "shelf_stored": "{n} fles(sen) opgeslagen",
+    "shelf_empty": "Leeg",
+    "shelf_remove_blocked": "Verplaats deze flessen naar een andere plank voordat u deze verwijdert.",
+    "err_choose_position": "Kies een vrije positie. Is de lijst leeg, kies dan een andere plank of rij.",
+    "err_slot_taken_server": "Deze plaats is al bezet. Kies een andere positie.",
+    "cleanup_check_pair": "Vergelijkbare schrijfwijze, maar mogelijk een andere naam. Controleer dit vóór het samenvoegen; “Alles samenvoegen” slaat het over.",
+    "pasted_details": "Gegevens overgenomen van “{name}”. Controleer en sla op.",
+    "label_uploaded": "Etiketafbeelding geüpload.",
+    "label_uploaded_duplicates": "Etiketafbeelding geüpload. Mogelijke duplicaten hieronder.",
+    "err_select_cellar": "Kies een kelder.",
+    "err_select_shelf": "Kies een plank.",
+    "err_select_lane": "Kies een rij (voor of achter).",
+    "err_wine_name_required": "De wijnnaam is verplicht.",
+    "err_shelf_missing": "De gekozen plank bestaat niet meer.",
+    "err_no_back_lane": "Deze plank heeft geen achterste rij.",
+    "err_no_front_positions": "Deze plank heeft geen posities vooraan.",
+    "err_position_out_of_range": "Die positie valt buiten de capaciteit van deze rij.",
+    "err_position_taken": "Die positie is al bezet door ‘{name}’. Kies een vrije positie.",
+    "err_aging_order": "Het beginjaar van de drinkrijpheid mag niet na het eindjaar liggen.",
+    "err_aging_end_order": "Het eindjaar van de drinkrijpheid moet gelijk zijn aan of later zijn dan het beginjaar.",
+    "err_rating_range": "De beoordeling moet tussen 0 en 5 liggen.",
+    "err_shelf_has_bottles": "Een plank met flessen kan niet worden verwijderd. Verplaats eerst de flessen.",
+    "err_shrink_front": "Een voorste rij kan niet kleiner worden dan de laatst bezette positie. Verplaats eerst die flessen.",
+    "err_shrink_back": "Een achterste rij kan niet kleiner worden dan de laatst bezette positie. Verplaats eerst die flessen.",
+    "err_remove_back_lane": "Op de achterste rij liggen nog flessen, dus die kan niet worden verwijderd. Verplaats ze eerst.",
+    "err_bottle_missing": "Deze fles bestaat niet meer. Mogelijk is ze elders verwijderd.",
+    "err_no_entry": "De integratie Wine Cellar Manager is niet ingesteld.",
+    "err_shelf_front_min": "‘{shelf}’ heeft een fles op voorste positie {n} en heeft daarom minstens {n} posities vooraan nodig.",
+    "err_shelf_back_min": "‘{shelf}’ heeft een fles op achterste positie {n} en heeft daarom minstens {n} posities achteraan nodig.",
+    "duplicate_detection_failed": "Zoeken naar duplicaten mislukt: "
   },
   "pt": {
     "cellars": "Adegas",
@@ -1221,6 +1563,11 @@ const WCM_TRANSLATIONS = {
     "unknown_error": "erro desconhecido",
     "bottle_search_failed": "Falha na busca de garrafas: ",
     "bottles_found_suffix": " garrafa(s) encontrada(s).",
+    "search_no_match": "Nenhuma garrafa corresponde à pesquisa ou aos filtros.",
+    "clear_filters": "Limpar filtros",
+    "no_bottles_yet": "Ainda não há garrafas nas suas adegas.",
+    "add_bottle_short": "+ Garrafa",
+    "all_slots_full": "Todas as posições das suas adegas estão ocupadas. Esvazie uma posição, ou adicione uma prateleira ou uma adega, para adicionar uma garrafa.",
     "similar_bottles_total": "{n} garrafas semelhantes no total",
     "only_bottle_of_kind": "Única garrafa deste tipo",
     "duplicate_warning": "⚠️ Atenção: você já tem {n} garrafa(s) idêntica(s) na sua adega.",
@@ -1236,7 +1583,59 @@ const WCM_TRANSLATIONS = {
     "status_past": "Passou do auge",
     "location": "Localização",
     "no_shelves": "Nenhuma prateleira configurada.",
-    "add_first_cellar": "Adicione uma primeira adega para começar!"
+    "add_first_cellar": "Adicione uma primeira adega para começar!",
+    "discard_title": "Descartar as alterações?",
+    "discard_body": "O que você digitou neste formulário será perdido.",
+    "keep_editing": "Continuar editando",
+    "discard": "Descartar",
+    "delete_bottle_title": "Excluir “{name}”?",
+    "delete_bottle_body": "A garrafa é excluída definitivamente e não vai para o histórico. Isso não pode ser desfeito.",
+    "consume_bottle_title": "Marcar “{name}” como consumida?",
+    "consume_bottle_body": "Ela libera sua posição e vai para o histórico.",
+    "delete_cellar_title": "Excluir a adega “{name}”?",
+    "delete_cellar_body": "Isso também exclui suas {bottles} garrafa(s), {history} registro(s) do histórico e as fotos dos rótulos. Isso não pode ser desfeito.",
+    "delete_cellar_body_empty": "A adega está vazia. Isso não pode ser desfeito.",
+    "delete_cellar_confirm": "Excluir adega",
+    "merge_all_title": "Mesclar {n} par(es) de grafias?",
+    "merge_all_body": "{m} garrafa(s) passarão a usar a grafia selecionada. Os pares a verificar não são alterados.",
+    "reanalyze_title": "Analisar este vinho novamente?",
+    "reanalyze_body": "Cada campo encontrado pela análise substituirá o conteúdo atual do formulário.",
+    "analyze_again": "Analisar novamente",
+    "action_failed": "Não foi possível concluir: {error}",
+    "position_free": "Posição {n} (livre)",
+    "position_current": "Posição {n} (atual)",
+    "no_free_position": "Nenhuma posição livre nesta fila",
+    "shelf_n": "Prateleira {n}",
+    "shelf_stored": "{n} garrafa(s) guardada(s)",
+    "shelf_empty": "Vazia",
+    "shelf_remove_blocked": "Mova estas garrafas para outra prateleira antes de removê-la.",
+    "err_choose_position": "Escolha uma posição livre. Se a lista estiver vazia, escolha outra prateleira ou fila.",
+    "err_slot_taken_server": "Essa posição já está ocupada. Escolha outra.",
+    "cleanup_check_pair": "Grafia parecida, mas pode ser outro nome. Verifique antes de mesclar; “Mesclar tudo” ignora este par.",
+    "pasted_details": "Dados copiados de “{name}”. Verifique e salve.",
+    "label_uploaded": "Imagem do rótulo enviada.",
+    "label_uploaded_duplicates": "Imagem do rótulo enviada. Possíveis duplicatas abaixo.",
+    "err_select_cellar": "Escolha uma adega.",
+    "err_select_shelf": "Escolha uma prateleira.",
+    "err_select_lane": "Escolha uma fila (frente ou trás).",
+    "err_wine_name_required": "O nome do vinho é obrigatório.",
+    "err_shelf_missing": "A prateleira selecionada não existe mais.",
+    "err_no_back_lane": "Esta prateleira não tem fila de trás.",
+    "err_no_front_positions": "Esta prateleira não tem posições na frente.",
+    "err_position_out_of_range": "Essa posição ultrapassa a capacidade desta fila da prateleira.",
+    "err_position_taken": "Essa posição já está ocupada por “{name}”. Escolha uma posição livre.",
+    "err_aging_order": "O ano de início da maturidade não pode ser posterior ao ano final.",
+    "err_aging_end_order": "O ano final da maturidade deve ser igual ou posterior ao ano de início.",
+    "err_rating_range": "A avaliação deve estar entre 0 e 5.",
+    "err_shelf_has_bottles": "Não é possível remover uma prateleira que ainda tem garrafas. Mova as garrafas primeiro.",
+    "err_shrink_front": "Uma fila da frente não pode ficar menor que sua última posição ocupada. Mova essas garrafas primeiro.",
+    "err_shrink_back": "Uma fila de trás não pode ficar menor que sua última posição ocupada. Mova essas garrafas primeiro.",
+    "err_remove_back_lane": "A fila de trás ainda tem garrafas, então não pode ser removida. Mova-as primeiro.",
+    "err_bottle_missing": "Esta garrafa não existe mais. Ela pode ter sido removida em outro lugar.",
+    "err_no_entry": "A integração Wine Cellar Manager não está configurada.",
+    "err_shelf_front_min": "“{shelf}” tem uma garrafa na posição da frente {n}, então precisa de pelo menos {n} posições na frente.",
+    "err_shelf_back_min": "“{shelf}” tem uma garrafa na posição de trás {n}, então precisa de pelo menos {n} posições atrás.",
+    "duplicate_detection_failed": "Falha na busca por duplicatas: "
   },
   "pl": {
     "cellars": "Piwnice",
@@ -1398,6 +1797,11 @@ const WCM_TRANSLATIONS = {
     "unknown_error": "nieznany błąd",
     "bottle_search_failed": "Wyszukiwanie butelek nie powiodło się: ",
     "bottles_found_suffix": " znaleziona(-e) butelka(-ki).",
+    "search_no_match": "Żadna butelka nie pasuje do wyszukiwania ani filtrów.",
+    "clear_filters": "Wyczyść filtry",
+    "no_bottles_yet": "Brak butelek w Twoich piwnicach.",
+    "add_bottle_short": "+ Butelka",
+    "all_slots_full": "Wszystkie miejsca w Twoich piwnicach są zajęte. Zwolnij miejsce albo dodaj półkę lub piwnicę, aby dodać butelkę.",
     "similar_bottles_total": "Łącznie {n} podobnych butelek",
     "only_bottle_of_kind": "Jedyna butelka tego rodzaju",
     "duplicate_warning": "⚠️ Uwaga: masz już {n} identyczną(-e) butelkę(-ki) w swojej piwnicy.",
@@ -1413,7 +1817,59 @@ const WCM_TRANSLATIONS = {
     "status_past": "Po szczycie",
     "location": "Lokalizacja",
     "no_shelves": "Brak skonfigurowanych półek.",
-    "add_first_cellar": "Dodaj pierwszą piwnicę, aby rozpocząć!"
+    "add_first_cellar": "Dodaj pierwszą piwnicę, aby rozpocząć!",
+    "discard_title": "Odrzucić zmiany?",
+    "discard_body": "To, co wpisano w tym formularzu, zostanie utracone.",
+    "keep_editing": "Edytuj dalej",
+    "discard": "Odrzuć",
+    "delete_bottle_title": "Usunąć „{name}”?",
+    "delete_bottle_body": "Butelka zostanie trwale usunięta i nie trafi do historii. Tej operacji nie można cofnąć.",
+    "consume_bottle_title": "Oznaczyć „{name}” jako wypitą?",
+    "consume_bottle_body": "Zwolni swoje miejsce i trafi do historii.",
+    "delete_cellar_title": "Usunąć piwnicę „{name}”?",
+    "delete_cellar_body": "Zostaną też usunięte jej butelki ({bottles}), wpisy w historii ({history}) i zdjęcia etykiet. Tej operacji nie można cofnąć.",
+    "delete_cellar_body_empty": "Piwnica jest pusta. Tej operacji nie można cofnąć.",
+    "delete_cellar_confirm": "Usuń piwnicę",
+    "merge_all_title": "Scalić pary pisowni ({n})?",
+    "merge_all_body": "Liczba butelek, które otrzymają wybraną pisownię: {m}. Pary do sprawdzenia pozostaną bez zmian.",
+    "reanalyze_title": "Przeanalizować to wino ponownie?",
+    "reanalyze_body": "Każde pole znalezione przez analizę zastąpi obecną zawartość formularza.",
+    "analyze_again": "Analizuj ponownie",
+    "action_failed": "Nie udało się: {error}",
+    "position_free": "Pozycja {n} (wolna)",
+    "position_current": "Pozycja {n} (obecna)",
+    "no_free_position": "Brak wolnych pozycji w tym rzędzie",
+    "shelf_n": "Półka {n}",
+    "shelf_stored": "Butelek na półce: {n}",
+    "shelf_empty": "Pusta",
+    "shelf_remove_blocked": "Przenieś te butelki na inną półkę, zanim ją usuniesz.",
+    "err_choose_position": "Wybierz wolną pozycję. Jeśli lista jest pusta, wybierz inną półkę lub inny rząd.",
+    "err_slot_taken_server": "To miejsce jest już zajęte. Wybierz inną pozycję.",
+    "cleanup_check_pair": "Podobna pisownia, ale może to być inna nazwa. Sprawdź przed scaleniem; „Scal wszystko” ją pomija.",
+    "pasted_details": "Skopiowano dane z „{name}”. Sprawdź i zapisz.",
+    "label_uploaded": "Zdjęcie etykiety przesłane.",
+    "label_uploaded_duplicates": "Zdjęcie etykiety przesłane. Możliwe duplikaty poniżej.",
+    "err_select_cellar": "Wybierz piwnicę.",
+    "err_select_shelf": "Wybierz półkę.",
+    "err_select_lane": "Wybierz rząd (przód lub tył).",
+    "err_wine_name_required": "Nazwa wina jest wymagana.",
+    "err_shelf_missing": "Wybrana półka już nie istnieje.",
+    "err_no_back_lane": "Ta półka nie ma tylnego rzędu.",
+    "err_no_front_positions": "Ta półka nie ma pozycji z przodu.",
+    "err_position_out_of_range": "Ta pozycja przekracza pojemność tego rzędu półki.",
+    "err_position_taken": "Ta pozycja jest już zajęta przez „{name}”. Wybierz wolną pozycję.",
+    "err_aging_order": "Rok początku dojrzałości nie może być późniejszy niż rok końca.",
+    "err_aging_end_order": "Rok końca dojrzałości musi być taki sam jak rok początku lub późniejszy.",
+    "err_rating_range": "Ocena musi mieścić się w przedziale od 0 do 5.",
+    "err_shelf_has_bottles": "Nie można usunąć półki, na której są jeszcze butelki. Najpierw przenieś butelki.",
+    "err_shrink_front": "Przedni rząd nie może być mniejszy niż jego ostatnia zajęta pozycja. Najpierw przenieś te butelki.",
+    "err_shrink_back": "Tylny rząd nie może być mniejszy niż jego ostatnia zajęta pozycja. Najpierw przenieś te butelki.",
+    "err_remove_back_lane": "W tylnym rzędzie wciąż są butelki, więc nie można go usunąć. Najpierw je przenieś.",
+    "err_bottle_missing": "Ta butelka już nie istnieje. Mogła zostać usunięta w innym miejscu.",
+    "err_no_entry": "Integracja Wine Cellar Manager nie jest skonfigurowana.",
+    "err_shelf_front_min": "„{shelf}” ma butelkę na przedniej pozycji {n}, więc potrzebuje co najmniej {n} pozycji z przodu.",
+    "err_shelf_back_min": "„{shelf}” ma butelkę na tylnej pozycji {n}, więc potrzebuje co najmniej {n} pozycji z tyłu.",
+    "duplicate_detection_failed": "Wyszukiwanie duplikatów nie powiodło się: "
   }
 };
 
@@ -1496,6 +1952,11 @@ const _WCM_STYLES =
         ".legend-item{display:inline-flex;align-items:center;gap:6px;white-space:nowrap}" +
         ".legend-dot{width:10px;height:10px;border-radius:50%;background:var(--status);flex:0 0 auto}" +
         ".summary-match{padding:2px 10px;border-radius:999px;background:color-mix(in srgb,var(--wcm-accent) 16%,transparent);color:var(--wcm-text);font-weight:500}" +
+        ".summary-match.none{background:color-mix(in srgb,var(--wcm-danger) 14%,transparent)}" +
+        ".toolbar [hidden]{display:none !important}" +
+        ".toolbar-notice{display:flex;align-items:center;gap:8px;padding:6px 6px 6px 14px;border-radius:12px;background:color-mix(in srgb,var(--wcm-peak) 18%,transparent);color:var(--wcm-text);font-size:.88rem;line-height:1.35}" +
+        ".toolbar-notice span{flex:1 1 auto;min-width:0}" +
+        ".empty-state .btn{margin-top:14px}" +
         ".paste-banner{margin-left:auto;display:inline-flex;align-items:center;gap:6px;padding:2px 2px 2px 12px;border-radius:999px;background:color-mix(in srgb,var(--wcm-accent) 16%,transparent);color:var(--wcm-text)}" +
         ".paste-banner .icon-btn{width:28px;height:28px}" +
         ".paste-banner .icon-btn svg{width:16px;height:16px}" +
@@ -1557,6 +2018,10 @@ const _WCM_STYLES =
         ".slot.filled.drag-over{box-shadow:0 0 0 3px var(--wcm-accent)}" +
         ".slot.dimmed{opacity:.22;filter:grayscale(.7)}" +
         ".slot.filled.match{box-shadow:0 0 0 2px var(--wcm-accent),0 0 16px -2px color-mix(in srgb,var(--wcm-accent) 70%,transparent)}" +
+        /* While a search or filter is active, empty slots recede with the
+           non-matching bottles so the matches are what stands out. */
+        ".cellars-grid.filtering .slot.empty{opacity:.3}" +
+        ".cellars-grid.filtering .slot.empty:hover,.cellars-grid.filtering .slot.empty:focus-visible,.cellars-grid.filtering .slot.empty.drag-over{opacity:1}" +
         "@keyframes wcm-breathe{50%{background:color-mix(in srgb,var(--wcm-accent) 14%,transparent)}}" +
 
         /* Compact view: the cabinet seen from the front, one glass bottle end per slot */
@@ -1574,7 +2039,9 @@ const _WCM_STYLES =
         ".compact .slot.filled{padding:0;border:none;background:radial-gradient(circle at 34% 30%,rgba(255,255,255,.6),rgba(255,255,255,0) 32%),radial-gradient(circle,color-mix(in srgb,var(--type) 55%,#000) 0 20%,var(--type) 30% 62%,color-mix(in srgb,var(--type) 62%,#000) 100%);box-shadow:0 0 0 2px var(--wcm-interior),0 0 0 4px var(--status),0 3px 6px 1px rgba(0,0,0,.4)}" +
         ".compact .slot.filled::before{display:none}" +
         ".compact .slot.filled:hover{box-shadow:0 0 0 2px var(--wcm-interior),0 0 0 4px var(--wcm-accent),0 3px 8px 1px rgba(0,0,0,.45)}" +
-        ".compact .slot.filled.match{box-shadow:0 0 0 2px var(--wcm-interior),0 0 0 4px var(--status),0 3px 6px 1px rgba(0,0,0,.4)}" +
+        /* A match keeps its aging ring and gains an accent ring and glow. */
+        ".compact .slot.filled.match{z-index:1;transform:scale(1.18);box-shadow:0 0 0 2px var(--wcm-interior),0 0 0 4px var(--status),0 0 0 6px var(--wcm-interior),0 0 0 8px var(--wcm-accent),0 0 18px 6px color-mix(in srgb,var(--wcm-accent) 60%,transparent)}" +
+        ".compact .lane-back .slot.filled.match{transform:scale(1.06);filter:none}" +
         ".compact .slot.filled.drag-over{box-shadow:0 0 0 2px var(--wcm-interior),0 0 0 4px var(--wcm-accent)}" +
         ".compact .lane-back .slot{transform:scale(.9)}" +
         ".compact .lane-back .slot.filled{filter:brightness(.82)}" +
@@ -1637,8 +2104,7 @@ const _WCM_STYLES =
         ".modal-form input:focus,.modal-form select:focus,.modal-form textarea:focus{border-color:var(--wcm-accent)}" +
         ".grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}" +
         ".grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}" +
-        ".grid-location{display:grid;grid-template-columns:1.3fr 1fr auto;gap:12px;align-items:end}" +
-        ".grid-location .position-field{display:none}" +
+        ".grid-location{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr) minmax(0,1fr);gap:12px;align-items:end}" +
         ".grid-shelf{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:10px}" +
         ".modal-actions{display:flex;align-items:center;justify-content:space-between;gap:12px;width:100%;grid-column:1 / -1;margin-top:8px}" +
         ".left-actions,.right-actions,.helper-actions{display:flex;gap:8px;align-items:center;flex-wrap:wrap}" +
@@ -1675,6 +2141,25 @@ const _WCM_STYLES =
         ".custom-autocomplete-item:hover{background:var(--wcm-tonal)}" +
         ".shelf-editor{display:grid;gap:10px;padding:12px;border:1px solid var(--wcm-divider);border-radius:14px;background:color-mix(in srgb,var(--wcm-text) 3%,transparent)}" +
         ".shelf-editor-head{display:flex;align-items:center;justify-content:space-between;gap:8px}" +
+        ".shelf-row.invalid{box-shadow:0 0 0 2px var(--wcm-danger)}" +
+        ".shelf-stored{position:absolute;top:13px;left:14px;right:96px;font-size:.78rem;font-weight:600;color:var(--wcm-muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}" +
+        ".shelf-remove-hint{margin:8px 0 0;font-size:.8rem;line-height:1.35;color:var(--wcm-muted)}" +
+        ".cleanup-check{font-size:.8rem;line-height:1.35;color:var(--wcm-muted)}" +
+        "[data-image-preview]:empty,[data-duplicate-panel]:empty{display:none}" +
+        ".modal-form .form-error{margin:0}" +
+        ".modal [tabindex='-1']:focus{outline:none}" +
+        ".btn.solid-danger{background:var(--wcm-danger);color:#fff}" +
+        ".btn.solid-danger:hover{filter:brightness(1.08)}" +
+        /* In-dialog confirmation, used instead of window.confirm() */
+        ".dialog-confirm{position:sticky;bottom:0;z-index:2;display:grid;gap:6px;margin-top:14px;padding:16px;border-radius:14px;background:var(--wcm-dialog);box-shadow:inset 0 0 0 2px color-mix(in srgb,var(--wcm-danger) 55%,transparent),0 -10px 24px -14px rgba(0,0,0,.5)}" +
+        ".dialog-confirm.tone-warning{box-shadow:inset 0 0 0 2px color-mix(in srgb,var(--wcm-peak) 65%,transparent),0 -10px 24px -14px rgba(0,0,0,.5)}" +
+        ".dialog-confirm-title{margin:0;font-size:1.02rem;font-weight:600;color:var(--wcm-text)}" +
+        ".dialog-confirm-body{margin:0;font-size:.9rem;line-height:1.4;color:var(--wcm-muted)}" +
+        ".dialog-confirm-error{margin:0;font-size:.88rem;font-weight:600;color:var(--wcm-danger)}" +
+        ".dialog-confirm-body:empty,.dialog-confirm-error:empty{display:none}" +
+        ".dialog-confirm-actions{display:flex;justify-content:flex-end;flex-wrap:wrap;gap:8px;margin-top:6px}" +
+        ".modal.is-confirming .modal-actions,.modal.is-confirming .view-actions{display:none}" +
+        ".wine-view-modal>.dialog-confirm{position:relative;flex:0 0 auto;margin:0 20px 16px}" +
 
         /* Bottle details dialog */
         ".wine-view-modal{padding:0;overflow:hidden;display:flex;flex-direction:column}" +
@@ -1717,7 +2202,9 @@ const _WCM_STYLES =
 
         /* Small screens */
         "@media (max-width:780px){.wrap{padding:10px;gap:10px}.toolbar{padding:8px}.seg{width:100%;flex-wrap:wrap;border-radius:20px}.seg-btn{flex:1 1 auto;padding:0 10px;font-size:.84rem}.toolbar-spacer{display:none}.toolbar-row > .btn{flex:1 1 0}.search{flex-basis:100%}.select-wrap{flex:1 1 30%}.select-wrap select{max-width:none;padding-left:12px;padding-right:30px;font-size:.84rem}.cellars-grid{--slot-w:112px;--slot-h:180px;--slot-gap:8px;gap:14px}.cellars-grid.compact{--slot-w:26px;--slot-h:26px;--slot-gap:9px}.cellar{width:100%;padding:10px}.grid2,.grid3,.grid-shelf,.grid-location{grid-template-columns:1fr}.modal{padding:14px;max-height:94vh}.wine-view-modal{padding:0}.modal-body.split-view{padding:16px;gap:18px}.modal-banner{padding:14px 12px 14px 16px}.modal-banner-title{font-size:1.15rem}.detail-grid{gap:12px}.duplicate-item{grid-template-columns:1fr}.modal-actions,.view-actions{flex-direction:column;align-items:stretch}.left-actions,.right-actions,.helper-actions{width:100%;margin:0}.left-actions .btn,.right-actions .btn,.helper-actions .btn{flex:1}.view-actions .btn{width:100%}}" +
-        "@media (max-width:780px){:host{position:static !important;height:auto !important}.wrap{height:auto !important;overflow:visible !important}.main-scroll-content{overflow-y:visible !important;height:auto !important}}";
+        "@media (max-width:780px){:host{position:static !important;height:auto !important}.wrap{height:auto !important;overflow:visible !important}.main-scroll-content{overflow-y:visible !important;height:auto !important}}" +
+        /* iOS zooms the page into any field whose text is under 16px. */
+        "@media (max-width:780px),(pointer:coarse){.modal-form input,.modal-form select,.modal-form textarea,.search input,.select-wrap select{font-size:16px}}";
 
 // Inline icons, so the card does not depend on HA's icon set being loaded.
 const _WCM_ICONS = {
@@ -1778,6 +2265,33 @@ class WineCellarCard extends HTMLElement {
     this._foundSyntaxDuplicates = [];
     this._duplicateManagerSearching = false;
     this._duplicateManagerHasSearched = false; // Nouvelle variable pour savoir si l'analyse a été lancée
+    // Live search: debounce timer, the match the view last scrolled to, and
+    // the id list the All Bottles table was last drawn with.
+    this._searchTimer = null;
+    this._lastLocatedId = null;
+    this._listSignature = null;
+    // Horizontal scroll of each cabinet, keyed by "view:cellarId", so a
+    // re-render (dialog open/close, save...) keeps the user's place.
+    this._interiorScroll = {};
+    this._onWindowKeydown = null;
+    // Short in-card notice shown in the toolbar (e.g. every slot is taken).
+    this._toolbarNotice = "";
+    // Dialogs: a counter that gives each opened dialog its own identity, the
+    // dialog on screen, the control that opened it, its form as first painted
+    // (to tell whether it has unsaved edits) and a pending in-dialog
+    // confirmation (see _showDialogConfirm).
+    this._modalSeq = 0;
+    this._dialogKey = null;
+    this._dialogOpener = null;
+    this._dialogBaseline = null;
+    this._dialogConfirm = null;
+    this._lastActivator = null;
+    this._dialogListenersBound = false;
+    // Where the form error shows: "save" (next to Save) or "capture" (under
+    // the photo and analysis panel).
+    this._formErrorAt = "save";
+    // Clean-up pairs the user dismissed, so a rescan does not offer them again.
+    this._rejectedCleanup = {};
   }
 
   // A single window-level listener serves every autocomplete panel, and is
@@ -1798,6 +2312,40 @@ class WineCellarCard extends HTMLElement {
     window.addEventListener("click", this._onWindowClick);
   }
 
+  // "/" jumps to the search box, like on most sites, unless the user is
+  // already typing somewhere or a dialog is open. Bound once, removed in
+  // disconnectedCallback.
+  _ensureWindowKeyHandler() {
+    if (this._onWindowKeydown) return;
+
+    var self = this;
+    this._onWindowKeydown = function (e) {
+      // Escape and Tab pressed while focus has slipped out of an open dialog
+      // (after a click on its text, say) still reach the dialog.
+      if ((e.key === "Escape" || e.key === "Tab") && !e.defaultPrevented && self.isConnected &&
+          self.getClientRects().length && self._topDialog()) {
+        var from = e.composedPath ? e.composedPath() : [];
+        if (from.indexOf(self.shadowRoot) === -1) self._onDialogKeydown(e);
+        return;
+      }
+      if (e.key !== "/" || e.ctrlKey || e.metaKey || e.altKey || e.defaultPrevented) return;
+      if (self._modal || self._viewingDuplicateManager) return;
+      if (!self.isConnected || !self.getClientRects().length) return;
+      var target = e.composedPath ? e.composedPath()[0] : e.target;
+      if (target && (target.isContentEditable || /^(INPUT|TEXTAREA|SELECT)$/.test(target.tagName || ""))) return;
+      var input = self.shadowRoot && self.shadowRoot.querySelector("[data-search]");
+      if (!input) return;
+      e.preventDefault();
+      input.focus();
+      input.select();
+    };
+    window.addEventListener("keydown", this._onWindowKeydown);
+  }
+
+  connectedCallback() {
+    if (this._hasRendered) this._ensureWindowKeyHandler();
+  }
+
   // Release everything that outlives the element: the window listener, the
   // pending search debounce, and the barcode scanner.
   disconnectedCallback() {
@@ -1807,6 +2355,16 @@ class WineCellarCard extends HTMLElement {
     }
 
     this._autocompletePanels = [];
+
+    if (this._onWindowKeydown) {
+      window.removeEventListener("keydown", this._onWindowKeydown);
+      this._onWindowKeydown = null;
+    }
+
+    if (this._searchTimer) {
+      clearTimeout(this._searchTimer);
+      this._searchTimer = null;
+    }
 
     if (this._historySearchTimer) {
       clearTimeout(this._historySearchTimer);
@@ -1965,17 +2523,29 @@ class WineCellarCard extends HTMLElement {
     return Number.isFinite(n) ? n : null;
   }
 
-  _setFormError(msg) {
+  // Shows the form error next to what it is about: "save" (the default) next
+  // to the Save button, "capture" under the photo and analysis panel. It is
+  // scrolled into view, and its role="alert" announces it.
+  _setFormError(msg, at) {
     this._formError = msg || "";
-    var errorBox = this.shadowRoot && this.shadowRoot.querySelector(".form-error");
-    if (errorBox) {
-      if (this._formError) {
-        errorBox.textContent = this._formError;
-        errorBox.style.display = "block";
-      } else {
-        errorBox.textContent = "";
-        errorBox.style.display = "none";
-      }
+    this._formErrorAt = at === "capture" ? "capture" : "save";
+    var root = this.shadowRoot;
+    if (!root) return;
+    var boxes = root.querySelectorAll(".form-error");
+    var target = root.querySelector('.form-error[data-error-at="' + this._formErrorAt + '"]') || boxes[0] || null;
+    var self = this;
+    boxes.forEach(function (box) {
+      var show = !!self._formError && box === target;
+      box.textContent = show ? self._formError : "";
+      box.style.display = show ? "block" : "none";
+    });
+    if (target && this._formError && target.closest(".modal")) {
+      // Next to Save, bring the button row into view too (it sits right
+      // below the error), so the message and the button are seen together.
+      var next = target.nextElementSibling;
+      var anchor = next && next.classList.contains("modal-actions") ? next : target;
+      var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      anchor.scrollIntoView({ block: "nearest", behavior: reduce ? "auto" : "smooth" });
     }
   }
 
@@ -2010,6 +2580,29 @@ class WineCellarCard extends HTMLElement {
     this._searchResults = [];
     this._searchMessage = "";
     this._updateSearchResultsPanel();
+  }
+
+  // Server errors reach the card as "code: English text" (see _callWS).
+  // Known ones become a translated sentence; others lose the code prefix.
+  _friendlyError(err) {
+    var raw = err && err.message ? String(err.message) : String(err == null ? "" : err);
+    var known = [
+      [/shelf that still contains bottles/i, "err_shelf_has_bottles"],
+      [/shrink front capacity/i, "err_shrink_front"],
+      [/shrink back capacity/i, "err_shrink_back"],
+      [/remove back lane/i, "err_remove_back_lane"],
+      [/cellar name is required/i, "cellar_name_required"],
+      [/already occupied|position_occupied/i, "err_slot_taken_server"],
+      [/position is out of range/i, "err_position_out_of_range"],
+      [/has no back lane/i, "err_no_back_lane"],
+      [/^([a-z_]+:\s*)?shelf not found/i, "err_shelf_missing"],
+      [/^([a-z_]+:\s*)?bottle not found/i, "err_bottle_missing"],
+      [/^no_entry:/i, "err_no_entry"]
+    ];
+    for (var i = 0; i < known.length; i++) {
+      if (known[i][0].test(raw)) return _T(known[i][1]);
+    }
+    return raw.replace(/^[a-z_]+:\s*/, "") || _T("unknown_error");
   }
 
   // One palette for both themes: every swatch is drawn on a theme surface
@@ -2151,19 +2744,20 @@ class WineCellarCard extends HTMLElement {
   _bottleMatchesFilters(bottle) {
     if (!bottle) return false;
 
-    var search = (this._search || "").toLowerCase().trim();
+    var terms = this._searchTerms();
     var type = this._filterType || "";
     var country = this._filterCountry || "";
     var readyFilter = this._filterReady || "";
 
-    // 1. Protection et Filtre par Âge / Apogée
+    // 1. Age filter, using the same statuses as the colour legend:
+    // "Ready" is any bottle inside its drinking window (Ready + At peak),
+    // "Drink now" is At peak + Past peak.
     if (readyFilter === "ready" || readyFilter === true) {
-      if (!bottle.ready_to_drink) return false;
+      var windowStatus = this._agingStatus(bottle);
+      if (windowStatus !== "ready" && windowStatus !== "peak") return false;
     } else if (readyFilter === "drink_now") {
-      var currentYear = new Date().getFullYear();
-      var rawStop = bottle.aging_end_year;
-      if (rawStop === null || rawStop === undefined || rawStop === "") return false;
-      if (Number(rawStop) !== currentYear) return false;
+      var status = this._agingStatus(bottle);
+      if (status !== "peak" && status !== "past") return false;
     }
     
     // 2. Protection et Filtre par Type de vin
@@ -2175,21 +2769,61 @@ class WineCellarCard extends HTMLElement {
       if (bCountry !== country) return false;
     }
 
-    // 4. Protection et Barre de recherche textuelle globale (Inclusion du cépage et du vignoble)
-    if (search) {
-      var text = [
-        String(bottle.wine_name || ""),
-        String(bottle.producer || ""),   // Vignoble
-        String(bottle.varietal || ""),   // Cépage (Ajouté)
-        String(bottle.region || ""),
-        String(bottle.country || ""),
-        String(bottle.cellar_name || ""),
-        this._getShelfName ? String(this._getShelfName(bottle.cellar_id, bottle.shelf_id) || "") : "",
-        String(bottle.lane || "")
-      ].join(" ").toLowerCase();
-      if (text.indexOf(search) === -1) return false;
+    // 4. Text search: every word of the query must appear somewhere in the
+    // bottle's text, ignoring case and accents ("chateau" finds "Château",
+    // "amarone 2020" finds the 2020 Amarone).
+    if (terms.length) {
+      var text = this._bottleSearchText(bottle);
+      for (var i = 0; i < terms.length; i++) {
+        if (text.indexOf(terms[i]) === -1) return false;
+      }
     }
     return true;
+  }
+
+  // Lower-cases and strips accents so "Château" and "chateau" compare equal.
+  _foldSearchText(value) {
+    return this._normalizeCompareValue(
+      this._str(value).replace(/[œŒ]/g, "oe").replace(/[æÆ]/g, "ae").replace(/ß/g, "ss")
+    );
+  }
+
+  // The folded words of the current query, cached until the query changes.
+  _searchTerms() {
+    var raw = this._search || "";
+    if (this._searchTermsFor !== raw) {
+      this._searchTermsFor = raw;
+      this._searchTermsCache = this._foldSearchText(raw).split(" ").filter(Boolean);
+    }
+    return this._searchTermsCache;
+  }
+
+  _wineTypeLabel(type) {
+    if (!type || type === "unset") return _T("not_specified");
+    if (type === "rosé") return _T("rose");
+    return _T(type);
+  }
+
+  // Everything a user may type to find a bottle: its wine fields, where it
+  // is (cellar, shelf, translated row) and the labels shown on screen.
+  _bottleSearchText(bottle) {
+    var cellars = (this._data && this._data.cellars) || [];
+    var cellar = cellars.find(function (c) { return c.id === bottle.cellar_id; });
+    return this._foldSearchText([
+      bottle.wine_name,
+      bottle.producer,
+      bottle.varietal,
+      bottle.region,
+      bottle.country,
+      bottle.vintage,
+      bottle.wine_type,
+      this._wineTypeLabel(bottle.wine_type),
+      cellar ? cellar.name : bottle.cellar_name,
+      this._getShelfName(bottle.cellar_id, bottle.shelf_id),
+      this._laneLabel(bottle.lane),
+      bottle.notes,
+      bottle.barcode
+    ].map(this._str).join(" "));
   }
 
   // Two-row edit distance with an early exit: once every cell in a row exceeds
@@ -2244,64 +2878,111 @@ class WineCellarCard extends HTMLElement {
     return ((maxLen - dist) / maxLen) * 100;
   }
 
-  _findSyntaxAnomalies() {
+  // Spelling variants worth merging, per field. Values that differ only by
+  // case, accents, spaces or punctuation ("Chateau Ste. Michelle" / "Château
+  // Ste Michelle") are sure to be the same name: those are the only pairs
+  // Merge All touches. A close spelling of a free-text field (at most two
+  // letters apart) is offered as well, marked for checking, to merge one by
+  // one; never for countries, where near-identical names are different
+  // places (Austria / Australia).
+  _computeSyntaxDuplicates() {
     var self = this;
-    try {
-      var bottles = (this._data && this._data.bottles) || [];
-      var fields = ["wine_name", "producer", "varietal", "region", "country"];
-      var duplicatesFound = [];
-      // Below this ratio two strings cannot reach the 72% similarity cut-off,
-      // so the expensive edit-distance check can be skipped outright.
-      var MIN_LENGTH_RATIO = 0.72;
+    var bottles = (this._data && this._data.bottles) || [];
+    var fields = ["wine_name", "producer", "varietal", "region", "country"];
+    var chosen = {};
+    (this._foundSyntaxDuplicates || []).forEach(function (item) {
+      chosen[self._cleanupPairKey(item)] = item.selectedValue;
+    });
 
-      fields.forEach(function(field) {
-        // Group once: value -> bottles. Replaces both the O(n^2) indexOf dedup
-        // and the two full filter() passes previously run per matching pair.
-        var groups = new Map();
-        bottles.forEach(function(b) {
-          var val = String(b[field] || "").trim();
-          if (!val) return;
-          var bucket = groups.get(val);
-          if (bucket) bucket.push(b);
-          else groups.set(val, [b]);
-        });
+    function looseKey(value) {
+      return self._foldSearchText(value).replace(/[^\p{L}\p{N}]+/gu, "");
+    }
+    // The spelling kept by default: the one with accents, then the one with
+    // mixed case (typed with care), then the one more bottles use.
+    function rank(value, count) {
+      var accents = (String(value).normalize("NFD").match(/[̀-ͯ]/g) || []).length;
+      var mixedCase = /\p{Lu}/u.test(value) && /\p{Ll}/u.test(value) ? 1 : 0;
+      return [accents, mixedCase, count, value.length];
+    }
+    function prefer(a, b) {
+      for (var i = 0; i < a.length; i++) {
+        if (a[i] !== b[i]) return a[i] > b[i];
+      }
+      return false;
+    }
 
-        var uniqueValues = Array.from(groups.keys());
-        // Sorting by length lets the inner loop stop as soon as the remaining
-        // candidates are too long to possibly match.
-        uniqueValues.sort(function(a, b) { return a.length - b.length; });
-
-        for (var i = 0; i < uniqueValues.length; i++) {
-          var valA = uniqueValues[i];
-          for (var j = i + 1; j < uniqueValues.length; j++) {
-            var valB = uniqueValues[j];
-
-            if (valA.length < valB.length * MIN_LENGTH_RATIO) break;
-
-            var similarity = self._calculateSimilarity(valA, valB, 72);
-            if (similarity >= 72 && similarity < 100) {
-              duplicatesFound.push({
-                id: field + "_" + i + "_" + j,
-                field: field,
-                valueA: valA,
-                valueB: valB,
-                selectedValue: valA.length >= valB.length ? valA : valB,
-                bottlesA: groups.get(valA) || [],
-                bottlesB: groups.get(valB) || []
-              });
-            }
-          }
-        }
+    var found = [];
+    fields.forEach(function (field) {
+      var groups = new Map();
+      bottles.forEach(function (b) {
+        var val = String(b[field] || "").trim();
+        if (!val) return;
+        if (groups.has(val)) groups.get(val).push(b);
+        else groups.set(val, [b]);
       });
 
-      this._foundSyntaxDuplicates = duplicatesFound;
+      // Sure matches: one cluster per loose key, each other spelling paired
+      // with the preferred one.
+      var clusters = new Map();
+      groups.forEach(function (list, val) {
+        var key = looseKey(val);
+        if (!key) return;
+        if (!clusters.has(key)) clusters.set(key, []);
+        clusters.get(key).push(val);
+      });
+      var heads = [];
+      clusters.forEach(function (values, key) {
+        var best = values[0];
+        values.forEach(function (val) {
+          if (prefer(rank(val, groups.get(val).length), rank(best, groups.get(best).length))) best = val;
+        });
+        heads.push({ key: key, value: best, count: groups.get(best).length });
+        values.forEach(function (val) {
+          if (val === best) return;
+          found.push({ field: field, valueA: val, valueB: best, preferred: best, certain: true, bottlesA: groups.get(val), bottlesB: groups.get(best) });
+        });
+      });
+
+      // Close spellings, to check one by one (not for countries).
+      if (field === "country") return;
+      heads.sort(function (a, b) { return a.key.length - b.key.length; });
+      for (var i = 0; i < heads.length; i++) {
+        if (heads[i].key.length < 6) continue;
+        for (var j = i + 1; j < heads.length; j++) {
+          var shorter = heads[i].key;
+          var longer = heads[j].key;
+          if (longer.length - shorter.length > 2) break;
+          var distance = self._levenshteinDistance(shorter, longer, 2);
+          if (distance > 2 || (longer.length - distance) / longer.length < 0.85) continue;
+          var a = heads[i];
+          var b = heads[j];
+          var keep = a.count > b.count || (a.count === b.count && a.value.length >= b.value.length) ? a.value : b.value;
+          found.push({ field: field, valueA: a.value, valueB: b.value, preferred: keep, certain: false, bottlesA: groups.get(a.value), bottlesB: groups.get(b.value) });
+        }
+      }
+    });
+
+    return found.filter(function (item) {
+      return !self._rejectedCleanup[self._cleanupPairKey(item)];
+    }).map(function (item, index) {
+      var previous = chosen[self._cleanupPairKey(item)];
+      item.id = item.field + "_" + index;
+      item.selectedValue = previous === item.valueA || previous === item.valueB ? previous : item.preferred;
+      return item;
+    });
+  }
+
+  async _findSyntaxAnomalies() {
+    try {
+      await this._loadData(true);
+      this._foundSyntaxDuplicates = this._computeSyntaxDuplicates();
     } catch (err) {
       console.error("Syntax anomaly scanner crashed:", err);
       this._setFormError(_T("scanner_error") + (err.message || err));
     } finally {
       this._duplicateManagerSearching = false;
       this._duplicateManagerHasSearched = true;
-      this.render(true);
+      this.render(false);
     }
   }
 
@@ -2374,38 +3055,44 @@ class WineCellarCard extends HTMLElement {
 
       await this._sendBottleUpdates(payloads);
 
-      this._foundSyntaxDuplicates = this._foundSyntaxDuplicates.filter(i => i.id !== item.id);
+      // Rescan the fresh data: other pairs may involve the same bottles.
       await this._loadData(true);
+      this._foundSyntaxDuplicates = this._computeSyntaxDuplicates();
+      this._clearActionMessage();
       this.render(false);
     } catch(err) {
       this._setFormError(_T("update_failed") + (err.message || err));
     }
   }
 
+  // Merge All applies only the sure pairs (case, accents, spacing,
+  // punctuation); pairs marked for checking are left to the user.
   async _executeMergeAllSyntax() {
     try {
       this._setActionMessage(_T("merging_all_selections"));
 
       var self = this;
-      var items = (this._foundSyntaxDuplicates || []).slice();
-      var payloads = [];
-
+      var items = (this._foundSyntaxDuplicates || []).filter(function (item) { return item.certain; });
+      // One save per bottle carrying every field it is merged on: two
+      // full-record saves of the same bottle would undo each other.
+      var byBottle = new Map();
       items.forEach(function (item) {
-        var bottlesToUpdate =
-          item.selectedValue === item.valueA ? item.bottlesB : item.bottlesA;
+        var bottlesToUpdate = item.selectedValue === item.valueA ? item.bottlesB : item.bottlesA;
         (bottlesToUpdate || []).forEach(function (b) {
-          payloads.push(
-            self._buildBottleSavePayload(b, item.field, item.selectedValue)
-          );
+          var payload = byBottle.get(b.id) || self._buildBottleSavePayload(b);
+          payload[item.field] = item.selectedValue;
+          byBottle.set(b.id, payload);
         });
       });
+      var payloads = Array.from(byBottle.values());
 
       await this._sendBottleUpdates(payloads, function (done, total) {
         self._setActionMessage(_T("merging_all_selections") + " (" + done + "/" + total + ")");
       });
 
-      this._foundSyntaxDuplicates = [];
       await this._loadData(true);
+      this._foundSyntaxDuplicates = this._computeSyntaxDuplicates();
+      this._clearActionMessage();
       this.render(false);
     } catch(err) {
       this._setFormError(_T("global_error") + (err.message || err));
@@ -2445,6 +3132,7 @@ class WineCellarCard extends HTMLElement {
             '<div class="duplicate-item" style="grid-template-columns:1fr auto auto; gap:14px; padding:14px; align-items:center">',
             '  <div style="display:grid; gap:6px">',
             '    <span class="section-label">' + self._escape(label) + '</span>',
+            item.certain ? "" : '    <span class="cleanup-check">' + self._escape(_T("cleanup_check_pair")) + "</span>",
             '    <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px">',
             '      <button class="btn variant' + selA + '" data-select-variant-a="' + self._escape(item.id) + '" type="button">',
             '        <div>' + self._escape(item.valueA) + '</div>',
@@ -2467,9 +3155,9 @@ class WineCellarCard extends HTMLElement {
 
     return [
       '<div class="modal-backdrop" data-close-cleanup-backdrop>',
-      '  <div class="modal small-modal" style="display:flex; flex-direction:column; gap:16px">',
+      '  <div class="modal small-modal" role="dialog" aria-modal="true" aria-labelledby="wcm-cleanup-title" style="display:flex; flex-direction:column; gap:16px">',
       '    <div class="modal-head" style="margin:0">',
-      '      <h3>' + self._t("cleanup_title") + '</h3>',
+      '      <h3 id="wcm-cleanup-title" tabindex="-1" data-dialog-title>' + self._t("cleanup_title") + '</h3>',
       '      <button class="icon-btn" type="button" data-close-cleanup-btn aria-label="' + self._t("close") + '">' + _WCM_ICONS.close + '</button>',
       '    </div>',
       '    <div class="form-error"' + (this._formError ? '' : ' style="display:none"') + '>' + this._escape(this._formError || "") + '</div>',
@@ -2477,7 +3165,7 @@ class WineCellarCard extends HTMLElement {
       '    <button class="btn primary" data-trigger-cleanup-search-btn style="width:100%">' + self._t("cleanup_search_btn") + '</button>',
       content,
       '    <div class="modal-actions" style="margin-top:auto; padding-top:12px; border-top:1px solid color-mix(in srgb,var(--primary-text-color) 8%, transparent)">',
-      '      <button class="btn primary" data-cleanup-merge-all-btn ' + (this._foundSyntaxDuplicates.length ? '' : 'disabled') + '>' + self._t("cleanup_merge_all") + '</button>',
+      '      <button class="btn primary" type="button" data-cleanup-merge-all-btn ' + (this._foundSyntaxDuplicates.some(function (item) { return item.certain; }) ? '' : 'disabled') + '>' + self._t("cleanup_merge_all") + '</button>',
       '      <button class="btn ghost" data-close-cleanup-bottom>' + self._t("close") + '</button>',
       '    </div>',
       '  </div>',
@@ -2486,65 +3174,34 @@ class WineCellarCard extends HTMLElement {
   }
 
 
-  _openBottleModal(bottle, preset) {
-    var self = this;
+  // message: optional notice for the top of the form (e.g. after a paste).
+  // Every opening starts clean: no stale error or notice from before.
+  _openBottleModal(bottle, preset, message) {
     this._formError = "";
-    this._actionMessage = "";
+    this._formErrorAt = "save";
+    this._actionMessage = message || "";
     this._barcodeBuffer = "";
     this._historySearchValue = "";
     this._clearDuplicateState();
     this._clearSearchState();
     this._modal = {
       type: "bottle",
+      uid: ++this._modalSeq,
       bottle: bottle || null,
       preset: preset || {},
       mode: bottle && bottle.id ? "view" : "edit"
     };
-    
+
     this.render(true);
-
-    // ÉCOUTEUR : Attachement direct des fonctions sur le DOM réel généré
-    setTimeout(function() {
-      var root = self.shadowRoot;
-      if (!root) return;
-
-      // Liaison du bouton Modifier
-      var editBtn = root.querySelector("[data-edit-bottle-btn]");
-      if (editBtn) {
-        editBtn.onclick = function(e) {
-          e.preventDefault();
-          e.stopPropagation();
-          self._setBottleModalMode("edit");
-        };
-      }
-
-      // Liaison du bouton Copier (Nettoyage de l'ID pour pouvoir cloner dans un emplacement vide)
-      var copyBtn = root.querySelector("[data-copy-bottle-btn]");
-      if (copyBtn && self._modal && self._modal.bottle) {
-        copyBtn.onclick = function(e) {
-          e.preventDefault();
-          e.stopPropagation();
-          
-          var bData = Object.assign({}, self._modal.bottle);
-          delete bData.id;
-          delete bData.cellar_id;
-          delete bData.shelf_id;
-          delete bData.position;
-          
-          self._copiedBottleData = bData; // Écrit dans la bonne variable globale
-          
-          alert(_T("bottle_copied_to_memory"));
-          self._closeModal();
-        };
-      }
-    }, 40); 
   }
 
   _openCellarModal(cellar) {
     this._formError = "";
+    this._formErrorAt = "save";
     this._actionMessage = "";
     this._modal = {
       type: "cellar",
+      uid: ++this._modalSeq,
       cellar: cellar || null
     };
     this.render(true);
@@ -2552,9 +3209,11 @@ class WineCellarCard extends HTMLElement {
 
   async _closeModal() {
     this._formError = "";
+    this._formErrorAt = "save";
     this._actionMessage = "";
     this._barcodeBuffer = "";
     this._historySearchValue = "";
+    this._dialogConfirm = null;
     this._clearDuplicateState();
     this._clearSearchState();
     this._modal = null;
@@ -2564,10 +3223,410 @@ class WineCellarCard extends HTMLElement {
   _setBottleModalMode(mode) {
     if (this._modal && this._modal.type === "bottle") {
       this._modal.mode = mode;
+      // Switching between details and form starts from the stored bottle:
+      // a cancelled edit does not come back.
+      this._modal.draft = null;
+      this._dialogConfirm = null;
       this._clearFormError();
       this._clearActionMessage();
       this.render(true);
     }
+  }
+
+  // Identity of the open bottle or cellar dialog: which opening it belongs
+  // to and, for a bottle, whether it shows the details or the form.
+  _modalKey() {
+    var m = this._modal;
+    if (!m) return null;
+    if (!m.uid) m.uid = ++this._modalSeq;
+    if (m.type === "cellar") return m.uid + ":cellar";
+    return m.uid + ":" + (m.bottle && m.bottle.id && m.mode === "view" ? "view" : "edit");
+  }
+
+  // Everything in an open bottle or cellar form, shelf rows included.
+  _readModalForm(form) {
+    var values = {};
+    Array.prototype.forEach.call(form.elements, function (el) {
+      if (!el.name || el.type === "file" || el.name === "history_search" || /\[\]$/.test(el.name)) return;
+      if ((el.type === "radio" || el.type === "checkbox") && !el.checked) return;
+      values[el.name] = el.value;
+    });
+    var shelves = Array.prototype.map.call(form.querySelectorAll("[data-shelf-row]"), function (row) {
+      function field(name) {
+        var el = row.querySelector('[name="' + name + '"]');
+        return el ? el.value : "";
+      }
+      return {
+        id: field("shelf_id[]"),
+        name: field("shelf_name[]"),
+        display_order: field("shelf_display_order[]"),
+        capacity_front: field("capacity_front[]"),
+        capacity_back: field("capacity_back[]")
+      };
+    });
+    return { values: values, shelves: shelves };
+  }
+
+  // Called by render() before it rebuilds the page. When the open form is on
+  // screen, what is in it (with its scroll and focused field) is kept, and
+  // the form is drawn back from that instead of the stored bottle or cellar,
+  // so a re-render never loses what the user typed.
+  _captureModalDraft() {
+    var root = this.shadowRoot;
+    var key = this._modalKey();
+    var form = root && key ? root.querySelector("form[data-modal-key]") : null;
+    if (!form || form.getAttribute("data-modal-key") !== key) return;
+    var draft = this._readModalForm(form);
+    draft.key = key;
+    var dialog = form.closest(".modal");
+    draft.scrollTop = dialog ? dialog.scrollTop : 0;
+    draft.focus = null;
+    var active = root.activeElement;
+    if (active && active.name && form.contains(active)) {
+      var named = form.querySelectorAll('[name="' + active.name + '"]');
+      draft.focus = { name: active.name, index: Array.prototype.indexOf.call(named, active), start: null, end: null };
+      try {
+        draft.focus.start = active.selectionStart;
+        draft.focus.end = active.selectionEnd;
+      } catch (err) { /* this control has no text selection */ }
+    }
+    this._modal.draft = draft;
+  }
+
+  _modalDraft() {
+    var m = this._modal;
+    return m && m.draft && m.draft.key === this._modalKey() ? m.draft : null;
+  }
+
+  // The form error box for one place: "save" (next to the Save button) or
+  // "capture" (under the photo and analysis panel).
+  _renderFormError(at) {
+    var show = !!this._formError && (this._formErrorAt || "save") === at;
+    return '<div class="form-error" data-error-at="' + at + '" role="alert"' + (show ? "" : ' style="display:none"') + ">" +
+      (show ? this._escape(this._formError) : "") + "</div>";
+  }
+
+  _renderImagePreview(path) {
+    var src = this._normalizeImagePath(path);
+    if (!src) return "";
+    return '<div class="image-preview"><img src="' + this._escape(src) + '" alt="Label image preview" onerror="this.style.display=\'none\';this.parentElement.innerHTML=\'<div class=&quot;empty-state&quot;>' + _T("image_not_reachable") + '</div>\';"></div>';
+  }
+
+  // In-place updates of the bottle form: no re-render, so nothing typed is lost.
+  _refreshImagePreview(form) {
+    var slot = this.shadowRoot && this.shadowRoot.querySelector("[data-image-preview]");
+    var input = form && form.querySelector('[name="image_path"]');
+    if (slot && input) slot.innerHTML = this._renderImagePreview(input.value);
+  }
+
+  _refreshDuplicatePanel() {
+    var panel = this.shadowRoot && this.shadowRoot.querySelector("[data-duplicate-panel]");
+    if (!panel) return;
+    panel.innerHTML = this._renderDuplicateMatches();
+    this._bindSearchResultButtons();
+  }
+
+  /* Dialogs. The markup gives each one role="dialog", aria-modal and
+     aria-labelledby. Here: focus moves in when it opens, Tab stays inside,
+     Escape or a backdrop tap closes it (asking first, inside the dialog,
+     when its form has unsaved edits), and focus goes back to the control
+     that opened it. */
+
+  _topDialog() {
+    var root = this.shadowRoot;
+    var list = root ? root.querySelectorAll(".modal-backdrop > .modal") : [];
+    return list.length ? list[list.length - 1] : null;
+  }
+
+  _dialogIdentity(dialog) {
+    if (!dialog) return null;
+    if (dialog.closest("[data-close-cleanup-backdrop]")) return "cleanup";
+    return this._modalKey() || "dialog";
+  }
+
+  _focusablesIn(scope) {
+    var list = scope.querySelectorAll('button:not([disabled]),[href],input:not([type="hidden"]):not([disabled]),select:not([disabled]),textarea:not([disabled]),[tabindex]:not([tabindex="-1"])');
+    return Array.prototype.filter.call(list, function (el) {
+      return el.getClientRects().length > 0 && getComputedStyle(el).visibility !== "hidden";
+    });
+  }
+
+  _focusDialogStart(dialog) {
+    if (!dialog) return;
+    var start = dialog.querySelector("[data-dialog-title]") || this._focusablesIn(dialog)[0];
+    if (start) start.focus({ preventScroll: true });
+  }
+
+  // Remembers the control a click lands on in a way that survives a
+  // re-render; the one that opened a dialog gets focus back when it closes.
+  _rememberActivator(target) {
+    var attrs = ["data-edit-bottle", "data-new-bottle", "data-edit-cellar", "data-add-bottle", "data-add-cellar", "data-open-cleanup-tool"];
+    var el = target && target.closest ? target.closest("[" + attrs.join("],[") + "]") : null;
+    if (!el || el.closest(".modal-backdrop")) return;
+    for (var i = 0; i < attrs.length; i++) {
+      if (!el.hasAttribute(attrs[i])) continue;
+      var entry = { attr: attrs[i], value: el.getAttribute(attrs[i]), loc: null };
+      try {
+        // Where the slot is, to find it again once it turns from filled to
+        // empty (Consume, Delete) or back (Save).
+        var slot = el.getAttribute("data-drag-source") || el.getAttribute("data-new-bottle");
+        if (slot) entry.loc = JSON.parse(slot);
+      } catch (err) { /* not a slot */ }
+      this._lastActivator = entry;
+      return;
+    }
+  }
+
+  _findActivator(entry) {
+    var root = this.shadowRoot;
+    if (!root || !entry) return null;
+    var found = null;
+    root.querySelectorAll("[" + entry.attr + "]").forEach(function (el) {
+      if (!found && el.getAttribute(entry.attr) === entry.value && !el.closest(".modal-backdrop")) found = el;
+    });
+    if (!found && entry.loc) {
+      var loc = entry.loc;
+      root.querySelectorAll(".main-scroll-content [data-drag-source], .main-scroll-content [data-new-bottle]").forEach(function (el) {
+        if (found) return;
+        try {
+          var d = JSON.parse(el.getAttribute("data-drag-source") || el.getAttribute("data-new-bottle"));
+          if (d.cellar_id === loc.cellar_id && d.shelf_id === loc.shelf_id && String(d.lane) === String(loc.lane) && Number(d.position) === Number(loc.position)) found = el;
+        } catch (err) { /* not a slot */ }
+      });
+    }
+    return found && found.tabIndex >= 0 ? found : null;
+  }
+
+  // Runs after every paint. A dialog that just opened takes focus (on its
+  // title); a repainted one gets back its scroll, focused field and pending
+  // confirmation; when the last one closes, focus returns to the control
+  // that opened it. The page behind an open dialog is inert.
+  _syncDialog(root) {
+    var dialog = this._topDialog();
+    var key = this._dialogIdentity(dialog);
+    var wasOpen = this._dialogKey !== null;
+
+    root.querySelectorAll(".toolbar, .main-scroll-content").forEach(function (el) {
+      if (dialog) el.setAttribute("inert", "");
+      else el.removeAttribute("inert");
+    });
+
+    if (!dialog) {
+      if (wasOpen) {
+        var opener = this._findActivator(this._dialogOpener);
+        this._dialogKey = null;
+        this._dialogOpener = null;
+        this._dialogBaseline = null;
+        this._dialogConfirm = null;
+        if (opener && !root.activeElement) opener.focus({ preventScroll: true });
+      }
+      return;
+    }
+
+    if (!wasOpen) this._dialogOpener = this._lastActivator;
+    var form = dialog.querySelector("form[data-modal-key]");
+    if (key !== this._dialogKey) {
+      this._dialogKey = key;
+      this._dialogConfirm = null;
+      this._dialogBaseline = form ? JSON.stringify(this._readModalForm(form)) : null;
+      this._focusDialogStart(dialog);
+      return;
+    }
+
+    // The same dialog was repainted.
+    var draft = this._modalDraft();
+    if (draft && form) {
+      dialog.scrollTop = draft.scrollTop || 0;
+      var spot = draft.focus;
+      var field = spot ? form.querySelectorAll('[name="' + spot.name + '"]')[spot.index] : null;
+      if (field) {
+        field.focus({ preventScroll: true });
+        try {
+          if (spot.start !== null && spot.start !== undefined) field.setSelectionRange(spot.start, spot.end);
+        } catch (err) { /* this control has no text selection */ }
+      }
+    }
+    if (this._dialogConfirm) this._paintDialogConfirm(!dialog.contains(root.activeElement));
+    else if (!dialog.contains(root.activeElement)) this._focusDialogStart(dialog);
+  }
+
+  // Escape closes the top dialog (an open suggestion list or confirmation
+  // first) and Tab / Shift+Tab stay inside it. Bound on the shadow root in
+  // the capture phase, ahead of the fields' own key handlers.
+  _onDialogKeydown(e) {
+    var dialog = this._topDialog();
+    if (!dialog || e.isComposing) return;
+    var root = this.shadowRoot;
+    var active = root.activeElement;
+    if (e.key === "Escape" || e.key === "Esc") {
+      e.preventDefault();
+      e.stopPropagation();
+      var panel = active && active.parentElement ? active.parentElement.querySelector(".custom-autocomplete-panel") : null;
+      if (panel && panel.style.display === "block") {
+        panel.style.display = "none";
+        return;
+      }
+      if (this._dialogConfirm) {
+        this._cancelDialogConfirm();
+        return;
+      }
+      this._requestCloseDialog();
+      return;
+    }
+    if (e.key !== "Tab") return;
+    var scope = (this._dialogConfirm && dialog.querySelector(".dialog-confirm")) || dialog;
+    var items = this._focusablesIn(scope);
+    if (!items.length) {
+      e.preventDefault();
+      return;
+    }
+    var first = items[0];
+    var last = items[items.length - 1];
+    if (!active || !scope.contains(active)) {
+      e.preventDefault();
+      (e.shiftKey ? last : first).focus();
+    } else if (!e.shiftKey && active === last) {
+      e.preventDefault();
+      first.focus();
+    } else if (e.shiftKey && (active === first || items.indexOf(active) === -1)) {
+      e.preventDefault();
+      last.focus();
+    }
+  }
+
+  // Escape or a backdrop tap. A form with unsaved edits asks first, inside
+  // the dialog; the X and Cancel buttons still close at once.
+  _requestCloseDialog() {
+    var self = this;
+    var dialog = this._topDialog();
+    if (!dialog) return;
+    if (this._dialogIdentity(dialog) === "cleanup") {
+      this._closeCleanupTool();
+      return;
+    }
+    if (this._isDialogDirty()) {
+      this._showDialogConfirm({
+        tone: "warning",
+        title: _T("discard_title"),
+        body: _T("discard_body"),
+        cancelLabel: _T("keep_editing"),
+        confirmLabel: _T("discard"),
+        onConfirm: function () { return self._closeModal(); }
+      });
+      return;
+    }
+    this._closeModal();
+  }
+
+  _isDialogDirty() {
+    var dialog = this._topDialog();
+    var form = dialog && dialog.querySelector("form[data-modal-key]");
+    if (!form || this._dialogBaseline === null) return false;
+    return JSON.stringify(this._readModalForm(form)) !== this._dialogBaseline;
+  }
+
+  // A confirmation step inside the top dialog, used instead of
+  // window.confirm() (which Home Assistant's app can block or hide): a
+  // title, one line on the consequences, Cancel and the action. onConfirm
+  // may be async; if it throws, the error shows in the strip.
+  _showDialogConfirm(opts) {
+    var root = this.shadowRoot;
+    this._dialogConfirm = Object.assign({
+      tone: "danger",
+      body: "",
+      cancelLabel: _T("cancel"),
+      confirmClass: "solid-danger"
+    }, opts, { returnFocus: root ? root.activeElement : null });
+    this._paintDialogConfirm(true);
+  }
+
+  _cancelDialogConfirm() {
+    var c = this._dialogConfirm;
+    this._dialogConfirm = null;
+    this._paintDialogConfirm(false);
+    var back = c && c.returnFocus;
+    if (back && back.isConnected) back.focus({ preventScroll: true });
+    else this._focusDialogStart(this._topDialog());
+  }
+
+  _paintDialogConfirm(takeFocus) {
+    var self = this;
+    var dialog = this._topDialog();
+    var c = this._dialogConfirm;
+    if (!dialog) return;
+    var old = dialog.querySelector(".dialog-confirm");
+    if (old) old.remove();
+    dialog.classList.toggle("is-confirming", !!c);
+    if (!c) return;
+
+    var box = document.createElement("div");
+    box.className = "dialog-confirm tone-" + (c.tone === "warning" ? "warning" : "danger");
+    box.setAttribute("role", "alertdialog");
+    box.setAttribute("aria-labelledby", "wcm-confirm-title");
+    box.setAttribute("aria-describedby", "wcm-confirm-body");
+    box.innerHTML =
+      '<p class="dialog-confirm-title" id="wcm-confirm-title">' + this._escape(c.title) + "</p>" +
+      '<p class="dialog-confirm-body" id="wcm-confirm-body">' + this._escape(c.body || "") + "</p>" +
+      '<p class="dialog-confirm-error" role="alert"></p>' +
+      '<div class="dialog-confirm-actions">' +
+      '<button class="btn ghost" type="button" data-confirm-cancel>' + this._escape(c.cancelLabel) + "</button>" +
+      '<button class="btn ' + this._escape(c.confirmClass) + '" type="button" data-confirm-ok>' + this._escape(c.confirmLabel) + "</button>" +
+      "</div>";
+    dialog.appendChild(box);
+
+    var ok = box.querySelector("[data-confirm-ok]");
+    var cancel = box.querySelector("[data-confirm-cancel]");
+    box.addEventListener("click", function (e) { e.stopPropagation(); });
+    cancel.addEventListener("click", function (e) {
+      e.preventDefault();
+      self._cancelDialogConfirm();
+    });
+    ok.addEventListener("click", async function (e) {
+      e.preventDefault();
+      if (ok.disabled) return;
+      ok.disabled = true;
+      cancel.disabled = true;
+      try {
+        await c.onConfirm();
+        if (self._dialogConfirm === c) {
+          self._dialogConfirm = null;
+          self._paintDialogConfirm(false);
+        }
+      } catch (err) {
+        console.error("Wine Cellar: confirmed action failed", err);
+        ok.disabled = false;
+        cancel.disabled = false;
+        var live = self._topDialog();
+        var line = live && live.querySelector(".dialog-confirm .dialog-confirm-error");
+        if (line) line.textContent = _T("action_failed", { error: self._friendlyError(err) });
+      }
+    });
+
+    if (takeFocus) {
+      cancel.focus({ preventScroll: true });
+      box.scrollIntoView({ block: "nearest" });
+    }
+  }
+
+  _closeCleanupTool() {
+    this._viewingDuplicateManager = false;
+    this._foundSyntaxDuplicates = [];
+    this._duplicateManagerHasSearched = false;
+    this._rejectedCleanup = {};
+    this._dialogConfirm = null;
+    this._clearFormError();
+    this._clearActionMessage();
+    this.render(false);
+  }
+
+  _cleanupPairKey(item) {
+    return item.field + "|" + [item.valueA, item.valueB].sort().join("|");
+  }
+
+  _bottleTitle(id) {
+    var bottle = ((this._data && this._data.bottles) || []).find(function (b) { return b.id === id; });
+    var name = (bottle && bottle.wine_name) || _T("unnamed_wine");
+    return bottle && bottle.vintage ? name + " " + bottle.vintage : name;
   }
 
   _getSortedShelves(cellar) {
@@ -2653,44 +3712,58 @@ class WineCellarCard extends HTMLElement {
       return '<option value="' + lane.value + '"' + (activeLane === lane.value ? " selected" : "") + ">" + self._escape(self._laneLabel(lane.value)) + "</option>";
     }).join("");
   }
+  // Only free positions are offered (plus the bottle's own slot when it is
+  // edited), so a shelf or row change cannot land on an occupied slot.
   _buildPositionOptions(cellarId, shelfId, lane, selectedPosition) {
+    var self = this;
     var capacity = this._getLaneCapacity(cellarId, shelfId, lane);
-    var options = [];
+    var own = this._modal && this._modal.type === "bottle" && this._modal.bottle && this._modal.bottle.id ? this._modal.bottle : null;
+    var taken = {};
+    ((this._data && this._data.bottles) || []).forEach(function (b) {
+      if (own && b.id === own.id) return;
+      if (b.cellar_id === cellarId && b.shelf_id === shelfId && String(b.lane || "front") === String(lane)) {
+        taken[Number(b.position)] = true;
+      }
+    });
 
-    if (!capacity || capacity < 1) {
-      capacity = 1;
-    }
-
+    var free = [];
     for (var i = 1; i <= capacity; i++) {
-      options.push(
-        '<option value="' + i + '"' + (Number(selectedPosition || 1) === i ? " selected" : "") + ">Position " + i + "</option>"
-      );
+      if (!taken[i]) free.push(i);
     }
-    return options.join("");
+    if (!free.length) {
+      return '<option value="" selected disabled>' + this._escape(_T("no_free_position")) + "</option>";
+    }
+
+    var wanted = Number(selectedPosition);
+    var selected = free.indexOf(wanted) !== -1 ? wanted : free[0];
+    return free.map(function (pos) {
+      var isOwn = !!own && own.cellar_id === cellarId && own.shelf_id === shelfId &&
+        String(own.lane || "front") === String(lane) && Number(own.position) === pos;
+      return '<option value="' + pos + '"' + (pos === selected ? " selected" : "") + ">" +
+        self._escape(_T(isOwn ? "position_current" : "position_free", { n: pos })) + "</option>";
+    }).join("");
   }
 
   _validateBottlePayload(payload) {
-    if (!payload.cellar_id) return "Please select a cellar.";
-    if (!payload.shelf_id) return "Please select a shelf.";
-    if (payload.lane !== "front" && payload.lane !== "back") return "Please select a valid lane.";
-    if (!Number.isInteger(payload.position) || payload.position < 1) return "Position must be a whole number of 1 or greater.";
-    if (!payload.wine_name || !payload.wine_name.trim()) return "Wine name is required.";
+    if (!payload.cellar_id) return _T("err_select_cellar");
+    if (!payload.shelf_id) return _T("err_select_shelf");
+    if (payload.lane !== "front" && payload.lane !== "back") return _T("err_select_lane");
+    if (!Number.isInteger(payload.position) || payload.position < 1) return _T("err_choose_position");
+    if (!payload.wine_name || !payload.wine_name.trim()) return _T("err_wine_name_required");
 
     var shelf = this._getShelfById(payload.cellar_id, payload.shelf_id);
-    if (!shelf) return "Selected shelf could not be found.";
+    if (!shelf) return _T("err_shelf_missing");
 
     var capacity = payload.lane === "back"
       ? Number(shelf.capacity_back || 0)
       : Number(shelf.capacity_front || 0);
 
     if (capacity < 1) {
-      return payload.lane === "back"
-        ? "This shelf does not have a back lane."
-        : "This shelf does not have any front positions.";
+      return payload.lane === "back" ? _T("err_no_back_lane") : _T("err_no_front_positions");
     }
 
     if (payload.position > capacity) {
-      return "Position exceeds the shelf capacity for the selected lane.";
+      return _T("err_position_out_of_range");
     }
 
     var bottles = (this._data && this._data.bottles) ? this._data.bottles : [];
@@ -2705,7 +3778,7 @@ class WineCellarCard extends HTMLElement {
     });
 
     if (conflict) {
-      return 'That position is already occupied by "' + (conflict.wine_name || "another bottle") + '".';
+      return _T("err_position_taken", { name: conflict.wine_name || _T("unnamed_wine") });
     }
 
     if (
@@ -2713,11 +3786,11 @@ class WineCellarCard extends HTMLElement {
       payload.aging_end_year !== null &&
       payload.aging_start_year > payload.aging_end_year
     ) {
-      return "Aging start year cannot be later than aging end year.";
+      return _T("err_aging_order");
     }
 
     if (payload.rating !== null && (payload.rating < 0 || payload.rating > 5)) {
-      return "Rating must be between 0 and 5.";
+      return _T("err_rating_range");
     }
     return "";
   }
@@ -2734,13 +3807,13 @@ class WineCellarCard extends HTMLElement {
     });
 
     if (wineName && !wineName.value.trim()) {
-      wineName.setCustomValidity("Wine name is required.");
+      wineName.setCustomValidity(_T("err_wine_name_required"));
       wineName.reportValidity();
       return false;
     }
 
     if (position && (!Number.isInteger(Number(position.value)) || Number(position.value) < 1)) {
-      position.setCustomValidity("Position must be a whole number of 1 or greater.");
+      position.setCustomValidity(_T("err_choose_position"));
       position.reportValidity();
       return false;
     }
@@ -2748,7 +3821,7 @@ class WineCellarCard extends HTMLElement {
     if (rating && rating.value !== "") {
       var ratingNum = Number(rating.value);
       if (!Number.isFinite(ratingNum) || ratingNum < 0 || ratingNum > 5) {
-        rating.setCustomValidity("Rating must be between 0 and 5.");
+        rating.setCustomValidity(_T("err_rating_range"));
         rating.reportValidity();
         return false;
       }
@@ -2758,7 +3831,7 @@ class WineCellarCard extends HTMLElement {
       var startNum = Number(agingStart.value);
       var endNum = Number(agingEnd.value);
       if (Number.isFinite(startNum) && Number.isFinite(endNum) && startNum > endNum) {
-        agingEnd.setCustomValidity("Aging end year must be equal to or later than aging start year.");
+        agingEnd.setCustomValidity(_T("err_aging_end_order"));
         agingEnd.reportValidity();
         return false;
       }
@@ -2766,8 +3839,13 @@ class WineCellarCard extends HTMLElement {
     return true;
   }
 
+  // Fills the form on screen from a suggestion (autocomplete, history, AI).
+  // Only fields the suggestion actually provides are touched: a missing or
+  // empty value never blanks what is already there. Without overwrite, only
+  // empty fields are filled ("unset" type and "no rating" count as empty).
+  // Returns the names of the fields it changed.
   _applySuggestionToBottleForm(form, suggestion, overwrite) {
-    if (!form || !suggestion) return;
+    if (!form || !suggestion) return [];
 
     var fields = [
       "wine_name",
@@ -2784,25 +3862,36 @@ class WineCellarCard extends HTMLElement {
       "aging_start_year",
       "aging_end_year",
       "rating",
-      "notes"
+      "notes",
+      "saq_url",
+      "barcode"
     ];
+    var changed = [];
 
     fields.forEach(function (name) {
       var el = form.querySelector('[name="' + name + '"]');
       if (!el) return;
-      if (suggestion[name] === undefined || suggestion[name] === null) return;
+      var incomingValue = suggestion[name];
+      if (incomingValue === undefined || incomingValue === null || String(incomingValue).trim() === "") return;
 
       var currentValue = (el.value ?? "").toString().trim();
-      var incomingValue = suggestion[name];
-
-      if (!overwrite && currentValue !== "") {
+      var isEmpty = currentValue === "" ||
+        (el.tagName === "SELECT" && (currentValue === "unset" || (name === "rating" && currentValue === "0")));
+      if (!overwrite && !isEmpty) {
         return;
       }
 
-      el.value = incomingValue == null ? "" : String(incomingValue);
+      var next = String(incomingValue);
+      // A select only takes one of its own options.
+      if (el.tagName === "SELECT" && !Array.prototype.some.call(el.options, function (o) { return o.value === next; })) return;
+      if (el.value === next) return;
+
+      el.value = next;
+      changed.push(name);
       el.dispatchEvent(new Event("input", { bubbles: true }));
       el.dispatchEvent(new Event("change", { bubbles: true }));
     });
+    return changed;
   }
 
 
@@ -2810,7 +3899,7 @@ class WineCellarCard extends HTMLElement {
     var imagePathEl = form.querySelector('[name="image_path"]');
     var imagePath = imagePathEl ? imagePathEl.value.trim() : "";
     if (!imagePath) {
-      this._setFormError(_T("upload_label_first"));
+      this._setFormError(_T("upload_label_first"), "capture");
       return;
     }
 
@@ -2833,7 +3922,7 @@ class WineCellarCard extends HTMLElement {
       }
     } catch (err) {
       console.error("Label analysis failed", err);
-      this._setFormError(_T("label_analysis_failed") + (err && err.message ? err.message : _T("unknown_error")));
+      this._setFormError(_T("label_analysis_failed") + (err && err.message ? err.message : _T("unknown_error")), "capture");
       this._clearActionMessage();
     }
   }
@@ -2951,18 +4040,18 @@ class WineCellarCard extends HTMLElement {
     } catch (err) {
       console.error("Duplicate detection failed", err);
       this._duplicateMatches = [];
-      this._duplicateMessage = "Duplicate detection failed: " + (err && err.message ? err.message : _T("unknown_error"));
+      this._duplicateMessage = _T("duplicate_detection_failed") + (err && err.message ? err.message : _T("unknown_error"));
     }
   }
 
   async _uploadLabelFile(file, form) {
     if (!file) {
-      this._setFormError(_T("no_file_selected"));
+      this._setFormError(_T("no_file_selected"), "capture");
       return;
     }
 
     if (!file.type || !file.type.startsWith("image/")) {
-      this._setFormError(_T("file_not_image"));
+      this._setFormError(_T("file_not_image"), "capture");
       return;
     }
 
@@ -2999,23 +4088,11 @@ class WineCellarCard extends HTMLElement {
       this._duplicateMatches = (result && result.duplicate_matches) ? result.duplicate_matches : [];
       this._duplicateMessage = (result && result.duplicate_message) ? result.duplicate_message : "";
 
-      this._setActionMessage(
-        this._duplicateMatches.length
-          ? "Label image uploaded. Possible duplicates found below."
-          : "Label image uploaded."
-      );
-
-      var modalBottle = this._modal && this._modal.bottle ? this._modal.bottle : {};
-      var modalPreset = this._modal && this._modal.preset ? this._modal.preset : {};
-
-      this._modal = {
-        type: "bottle",
-        bottle: Object.assign({}, modalBottle, { image_path: result.image_path || "" }),
-        preset: Object.assign({}, modalPreset, { image_path: result.image_path || "" }),
-        mode: "edit"
-      };
-
-      this.render(true);
+      this._setActionMessage(this._duplicateMatches.length ? _T("label_uploaded_duplicates") : _T("label_uploaded"));
+      // Updated in place. This used to rebuild the dialog from the stored
+      // bottle, which wiped everything typed before the photo was picked.
+      this._refreshImagePreview(form);
+      this._refreshDuplicatePanel();
     } catch (err) {
       console.error("Label upload failed", err);
 
@@ -3034,7 +4111,7 @@ class WineCellarCard extends HTMLElement {
         }
       }
 
-      this._setFormError(_T("label_upload_failed") + detail);
+      this._setFormError(_T("label_upload_failed") + detail, "capture");
       this._clearActionMessage();
     }
   }
@@ -3052,7 +4129,7 @@ class WineCellarCard extends HTMLElement {
       var position = positionEl ? Number(positionEl.value) : NaN;
 
       if (!cellarId || !shelfId || !lane || !Number.isInteger(position)) {
-        this._setFormError(_T("select_location_before_copy"));
+        this._setFormError(_T("select_location_before_copy"), "capture");
         return;
       }
 
@@ -3072,7 +4149,7 @@ class WineCellarCard extends HTMLElement {
       await this._closeModal();
     } catch (err) {
       console.error("Copy bottle failed", err);
-      this._setFormError(_T("copy_bottle_failed") + (err && err.message ? err.message : _T("unknown_error")));
+      this._setFormError(_T("copy_bottle_failed") + (err && err.message ? err.message : _T("unknown_error")), "capture");
       this._clearActionMessage();
     }
   }
@@ -3085,7 +4162,7 @@ class WineCellarCard extends HTMLElement {
       source = this._searchResults.find(function (b) { return b.bottle_id === sourceBottleId; });
     }
     if (!source) {
-      this._setFormError(_T("source_bottle_not_found"));
+      this._setFormError(_T("source_bottle_not_found"), "capture");
       return;
     }
 
@@ -3172,6 +4249,7 @@ class WineCellarCard extends HTMLElement {
         var savedBottle = this._data.bottles.find((b) => b.id === savedBottleId);
         this._modal = {
           type: "bottle",
+          uid: ++this._modalSeq,
           bottle: savedBottle || null,
           preset: {},
           mode: "view"
@@ -3182,42 +4260,86 @@ class WineCellarCard extends HTMLElement {
       }
     } catch (err) {
       console.error("Bottle save failed", err, payload);
-      this._setFormError(_T("bottle_save_failed") + (err && err.message ? err.message : _T("unknown_error")));
+      this._setFormError(_T("bottle_save_failed") + this._friendlyError(err));
     }
   }
 
   _parseShelvesFromForm(form) {
+    var self = this;
     var shelves = [];
-    form.querySelectorAll("[data-shelf-row]").forEach((row, index) => {
+    var cellarIdEl = form.querySelector('[name="cellar_id"]');
+    var cellarId = this._str(cellarIdEl ? cellarIdEl.value : "").trim();
+    var stored = ((this._data && this._data.bottles) || []).filter(function (b) {
+      return !!cellarId && b.cellar_id === cellarId;
+    });
+    var rows = form.querySelectorAll("[data-shelf-row]");
+    rows.forEach(function (row) { row.classList.remove("invalid"); });
+
+    rows.forEach(function (row, index) {
       var idEl = row.querySelector('[name="shelf_id[]"]');
       var nameEl = row.querySelector('[name="shelf_name[]"]');
       var orderEl = row.querySelector('[name="shelf_display_order[]"]');
       var frontEl = row.querySelector('[name="capacity_front[]"]');
       var backEl = row.querySelector('[name="capacity_back[]"]');
 
-      var front = this._intOrNull(frontEl ? frontEl.value : null);
-      var back = this._intOrNull(backEl ? backEl.value : null);
+      var front = self._intOrNull(frontEl ? frontEl.value : null);
+      var back = self._intOrNull(backEl ? backEl.value : null);
+      var id = self._str(idEl ? idEl.value : "").trim();
+      var name = self._str(nameEl ? nameEl.value : "").trim() || _T("shelf_n", { n: index + 1 });
 
       if (!Number.isInteger(front) || front < 1) {
-        throw new Error(_T("shelf_front_capacity_min"));
+        row.classList.add("invalid");
+        throw Object.assign(new Error(_T("shelf_front_capacity_min")), { userFacing: true });
       }
       if (back === null || back < 0) {
         back = 0;
       }
 
+      // A shelf cannot shrink below a bottle it holds. The server refuses it
+      // too, but only after Save and without saying which shelf.
+      if (id) {
+        var lastFront = 0;
+        var lastBack = 0;
+        stored.forEach(function (b) {
+          if (b.shelf_id !== id) return;
+          var pos = Number(b.position) || 0;
+          if (b.lane === "back") lastBack = Math.max(lastBack, pos);
+          else lastFront = Math.max(lastFront, pos);
+        });
+        if (front < lastFront) {
+          row.classList.add("invalid");
+          throw Object.assign(new Error(_T("err_shelf_front_min", { shelf: name, n: lastFront })), { userFacing: true });
+        }
+        if (back < lastBack) {
+          row.classList.add("invalid");
+          throw Object.assign(new Error(_T("err_shelf_back_min", { shelf: name, n: lastBack })), { userFacing: true });
+        }
+      }
+
+      // 0 is a valid order (the top); only an empty field falls back to the row.
+      var order = self._intOrNull(orderEl ? orderEl.value : null);
       shelves.push({
-        id: this._str(idEl ? idEl.value : "").trim() || undefined,
-        name: this._str(nameEl ? nameEl.value : "").trim() || ("Shelf " + (index + 1)),
-        display_order: this._intOrNull(orderEl ? orderEl.value : null) || index,
+        id: id || undefined,
+        name: name,
+        display_order: order === null ? index : order,
         capacity_front: front,
         capacity_back: back,
-        layout_mode: back > 0 ? "staggered" : "single"
+        layout_mode: back > 0 ? "staggered" : "single",
+        row: index
       });
     });
 
     if (!shelves.length) {
-      throw new Error(_T("add_at_least_one_shelf"));
+      throw Object.assign(new Error(_T("add_at_least_one_shelf")), { userFacing: true });
     }
+
+    // Sent in display order. The server replaces an order of 0 by the row's
+    // index unless that row comes first, so this keeps a shelf moved to the
+    // top with 0 at the top.
+    shelves.sort(function (a, b) {
+      return (a.display_order - b.display_order) || (a.row - b.row);
+    });
+    shelves.forEach(function (s) { delete s.row; });
     return shelves;
   }
 
@@ -3253,40 +4375,63 @@ class WineCellarCard extends HTMLElement {
       await this._loadData(true);
       await this._closeModal();
     } catch (err) {
-      console.error("Cellar save failed", err);
-      this._setFormError(_T("cellar_save_failed") + (err && err.message ? err.message : _T("unknown_error")));
+      // Input mistakes caught in the browser are shown in the dialog only.
+      if (!err || !err.userFacing) console.error("Cellar save failed", err);
+      this._setFormError(_T("cellar_save_failed") + this._friendlyError(err));
     }
   }
 
+  // Delete, Consume and Delete cellar ask inside the dialog first
+  // (window.confirm can be blocked or hidden in the Home Assistant app),
+  // then act and close the dialog. A failure shows in the confirmation.
   async _deleteBottle(id) {
-    if (!confirm(_T("confirm_delete_bottle"))) return;
-    await this._callWS({
-      type: "wine_cellar_manager/delete_bottle",
-      bottle_id: id
+    var self = this;
+    this._showDialogConfirm({
+      title: _T("delete_bottle_title", { name: this._bottleTitle(id) }),
+      body: _T("delete_bottle_body"),
+      confirmLabel: _T("delete"),
+      onConfirm: async function () {
+        await self._callWS({ type: "wine_cellar_manager/delete_bottle", bottle_id: id });
+        await self._loadData(true);
+        await self._closeModal();
+      }
     });
-    await this._loadData(true);
-    await this._closeModal();
   }
 
   async _consumeBottle(id) {
-    if (!confirm(_T("confirm_consume_bottle"))) return;
-    await this._callWS({
-      type: "wine_cellar_manager/consume_bottle",
-      bottle_id: id
+    var self = this;
+    this._showDialogConfirm({
+      tone: "warning",
+      title: _T("consume_bottle_title", { name: this._bottleTitle(id) }),
+      body: _T("consume_bottle_body"),
+      confirmLabel: _T("consume"),
+      confirmClass: "primary",
+      onConfirm: async function () {
+        await self._callWS({ type: "wine_cellar_manager/consume_bottle", bottle_id: id });
+        await self._loadData(true);
+        await self._closeModal();
+      }
     });
-    await this._loadData(true);
-    await this._closeModal();
   }
 
   async _deleteCellar(id) {
-    if (!confirm(_T("confirm_delete_cellar"))) return;
-    await this._callWS({
-      type: "wine_cellar_manager/delete_cellar",
-      cellar_id: id
+    var self = this;
+    var data = this._data || {};
+    var cellar = (data.cellars || []).find(function (c) { return c.id === id; }) || {};
+    var bottles = (data.bottles || []).filter(function (b) { return b.cellar_id === id; }).length;
+    var history = (data.consumed_bottles || []).filter(function (b) { return b.cellar_id === id; }).length;
+    this._showDialogConfirm({
+      title: _T("delete_cellar_title", { name: cellar.name || _T("cellar") }),
+      body: bottles || history ? _T("delete_cellar_body", { bottles: bottles, history: history }) : _T("delete_cellar_body_empty"),
+      confirmLabel: _T("delete_cellar_confirm"),
+      onConfirm: async function () {
+        await self._callWS({ type: "wine_cellar_manager/delete_cellar", cellar_id: id });
+        await self._loadData(true);
+        await self._closeModal();
+      }
     });
-    await this._loadData(true);
-    await this._closeModal();
   }
+
   _renderToolbar() {
     var self = this;
     var data = this._data || { bottles: [] };
@@ -3317,7 +4462,7 @@ class WineCellarCard extends HTMLElement {
     var searchPlaceholder = self._escape(_T("search_placeholder"));
     var filters = this._view === "stats" ? "" : [
       '<div class="filters">',
-      '  <label class="search">' + _WCM_ICONS.search + '<input type="search" data-search placeholder="' + searchPlaceholder + '" aria-label="' + searchPlaceholder + '" value="' + this._escape(this._search || "") + '"></label>',
+      '  <label class="search">' + _WCM_ICONS.search + '<input type="search" data-search enterkeyhint="search" aria-keyshortcuts="/" placeholder="' + searchPlaceholder + '" aria-label="' + searchPlaceholder + '" value="' + this._escape(this._search || "") + '"></label>',
       select("data-age-filter", !!this._filterReady,
         '<option value=""' + (!this._filterReady ? " selected" : "") + ">" + _T("all_ages") + "</option>" +
         '<option value="ready"' + (this._filterReady === "ready" || this._filterReady === true ? " selected" : "") + ">" + self._t("ready_to_drink") + "</option>" +
@@ -3332,6 +4477,8 @@ class WineCellarCard extends HTMLElement {
         uniqueCountries.map(function (c) {
           return '<option value="' + self._escape(c) + '"' + (self._filterCountry === c ? " selected" : "") + ">" + self._escape(c) + "</option>";
         }).join("")),
+      // Shown (and hidden again) live by _applyFiltersInPlace.
+      '  <button class="btn ghost" type="button" data-clear-filters' + (this._hasActiveFilters() ? "" : " hidden") + ">" + _WCM_ICONS.close + "<span>" + self._escape(_T("clear_filters")) + "</span></button>",
       "</div>"
     ].join("");
 
@@ -3346,8 +4493,12 @@ class WineCellarCard extends HTMLElement {
            }).join("") + "</div>",
       '    <span class="toolbar-spacer"></span>',
       '    <button class="btn ghost" type="button" data-open-cleanup-tool>' + _WCM_ICONS.sparkle + "<span>" + self._t("cleanup_btn") + "</span></button>",
-      '    <button class="btn primary" type="button" data-add-cellar>' + _WCM_ICONS.plus + "<span>" + self._escape(_T("add_cellar_short").replace(/^\+\s*/, "")) + "</span></button>",
+      '    <button class="btn" type="button" data-add-cellar>' + _WCM_ICONS.plus + "<span>" + self._escape(_T("add_cellar_short").replace(/^\+\s*/, "")) + "</span></button>",
+      '    <button class="btn primary" type="button" data-add-bottle>' + _WCM_ICONS.plus + "<span>" + self._escape(_T("add_bottle_short").replace(/^\+\s*/, "")) + "</span></button>",
       "  </div>",
+      this._toolbarNotice
+        ? '<div class="toolbar-notice" role="status"><span>' + self._escape(this._toolbarNotice) + '</span><button class="icon-btn" type="button" data-dismiss-notice title="' + self._escape(_T("close")) + '" aria-label="' + self._escape(_T("close")) + '">' + _WCM_ICONS.close + "</button></div>"
+        : "",
       filters,
       showSummary ? this._renderSummary(data) : "",
       "</div>"
@@ -3376,19 +4527,283 @@ class WineCellarCard extends HTMLElement {
 
     var cancelLabel = self._escape(_T("cancel"));
     return [
-      '<div class="summary">',
+      '<div class="summary" aria-live="polite">',
       "<span>" + _T("bottles_count", { n: "<strong>" + bottles.length + "</strong>" }) + "</span>",
       "<span>" + _T("free_slots", { n: "<strong>" + Math.max(0, capacity - bottles.length) + "</strong>" }) + "</span>",
       ["young", "ready", "peak", "past"].map(function (status) {
         return '<span class="legend-item" style="--status:var(--wcm-' + status + ')"><span class="legend-dot"></span>' +
           self._escape(self._agingStatusLabel(status)) + " <strong>" + counts[status] + "</strong></span>";
       }).join(""),
-      this._hasActiveFilters() ? '<span class="summary-match">' + self._escape(matches + _T("bottles_found_suffix")) + "</span>" : "",
+      this._hasActiveFilters() ? '<span class="summary-match' + (matches ? "" : " none") + '">' + self._escape(this._matchSummaryText(matches)) + "</span>" : "",
       this._hasCopiedBottle()
         ? '<span class="paste-banner"><span>' + self._escape(_T("bottle_copied_to_memory")) + '</span><button class="icon-btn" type="button" data-cancel-paste title="' + cancelLabel + '" aria-label="' + cancelLabel + '">' + _WCM_ICONS.close + "</button></span>"
         : "",
       "</div>"
     ].join("");
+  }
+
+  _matchSummaryText(matches) {
+    return matches ? matches + _T("bottles_found_suffix") : _T("search_no_match");
+  }
+
+  // Applies the current search and filters to the page already on screen
+  // instead of rebuilding it: the search box keeps its focus, caret and (on
+  // phones) keyboard, a click that lands mid-update still reaches its target,
+  // and no data is reloaded. opts.locate brings the first match into view
+  // when no match is visible; opts.forceLocate does so even if it is the
+  // same match as last time.
+  _applyFiltersInPlace(opts) {
+    opts = opts || {};
+    var self = this;
+    var root = this.shadowRoot;
+    if (!root || !this._data) return;
+
+    var filtering = this._hasActiveFilters();
+    var matchIds = {};
+    var matches = 0;
+    (this._data.bottles || []).forEach(function (b) {
+      if (self._bottleMatchesFilters(b)) {
+        matchIds[b.id] = true;
+        matches++;
+      }
+    });
+
+    // Toolbar: the Clear filters button and the match count.
+    var clearBtn = root.querySelector(".toolbar [data-clear-filters]");
+    if (clearBtn) clearBtn.hidden = !filtering;
+    var summary = root.querySelector(".toolbar .summary");
+    if (summary) {
+      var pill = summary.querySelector(".summary-match");
+      if (filtering) {
+        if (!pill) {
+          pill = document.createElement("span");
+          pill.className = "summary-match";
+          summary.insertBefore(pill, summary.querySelector(".paste-banner"));
+        }
+        // Only touched when it changes, so screen readers (the summary is a
+        // polite live region) hear each new count once.
+        var text = this._matchSummaryText(matches);
+        if (pill.textContent !== text) pill.textContent = text;
+        pill.classList.toggle("none", !matches);
+      } else if (pill) {
+        pill.remove();
+      }
+    }
+
+    // Cellars and Compact: the same classes a full render would set.
+    var grid = root.querySelector(".main-scroll-content .cellars-grid");
+    if (grid) {
+      grid.classList.toggle("filtering", filtering);
+      grid.querySelectorAll(".slot.filled[data-edit-bottle]").forEach(function (el) {
+        var ok = !!matchIds[el.getAttribute("data-edit-bottle")];
+        el.classList.toggle("dimmed", !ok);
+        el.classList.toggle("match", filtering && ok);
+      });
+      if (opts.locate) this._scrollToFirstMatch(!!opts.forceLocate);
+    }
+
+    // All Bottles: only the table under the toolbar is redrawn, and only
+    // when its rows change, so the search box itself is never replaced.
+    if (this._view === "list") {
+      var main = root.querySelector(".main-scroll-content");
+      var signature = (filtering ? "f:" : "") + Object.keys(matchIds).join(",");
+      if (main && signature !== this._listSignature) {
+        this._listSignature = signature;
+        main.innerHTML = this._renderList(this._data);
+        this._bindListView(main, this._data);
+      }
+    }
+  }
+
+  // A slot counts as on screen when it is entirely inside both its
+  // cabinet's visible width and the visible part of the scroll area.
+  _isSlotOnScreen(el) {
+    var box = el.getBoundingClientRect();
+    var interior = el.closest(".interior");
+    if (interior) {
+      var ib = interior.getBoundingClientRect();
+      if (box.left < ib.left - 1 || box.right > ib.right + 1) return false;
+    }
+    var main = this.shadowRoot.querySelector(".main-scroll-content");
+    var mb = main ? main.getBoundingClientRect() : null;
+    var top = Math.max(0, mb ? mb.top : 0);
+    var bottom = Math.min(window.innerHeight, mb ? mb.bottom : window.innerHeight);
+    return box.top >= top - 1 && box.bottom <= bottom + 1;
+  }
+
+  // Brings the first match into view when none is visible: vertically in the
+  // card's scroll area and sideways inside its cabinet. Focus is left where
+  // it is (usually the search box).
+  _scrollToFirstMatch(force) {
+    var root = this.shadowRoot;
+    // Never move the page behind an open dialog.
+    if (this._modal || this._viewingDuplicateManager) return;
+    var found = root && this._hasActiveFilters() ? root.querySelectorAll(".main-scroll-content .slot.filled.match") : [];
+    if (!found.length) {
+      this._lastLocatedId = null;
+      return;
+    }
+    var first = found[0];
+    var id = first.getAttribute("data-edit-bottle");
+    var main = root.querySelector(".main-scroll-content");
+    var mainScrolls = !!main && main.scrollHeight > main.clientHeight + 1 && getComputedStyle(main).overflowY !== "visible";
+    // Narrow layout (the page scrolls, not the card): scrolling while the
+    // user types fights the browser keeping the caret in view and hides the
+    // search box behind the keyboard, so wait for a pause in typing instead.
+    if (this._locateTimer) {
+      clearTimeout(this._locateTimer);
+      this._locateTimer = null;
+    }
+    if (!force && !mainScrolls) {
+      var self = this;
+      this._locateTimer = setTimeout(function () {
+        self._locateTimer = null;
+        self._scrollToFirstMatch(true);
+      }, 900);
+      return;
+    }
+    // While typing, only move when the first match changes, so the view
+    // does not jump back to it on every keystroke.
+    if (!force && id === this._lastLocatedId) return;
+    this._lastLocatedId = id;
+    for (var i = 0; i < found.length; i++) {
+      if (this._isSlotOnScreen(found[i])) return;
+    }
+
+    var behavior = "smooth";
+    try {
+      if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) behavior = "auto";
+    } catch (err) { /* older browsers */ }
+
+    var box = first.getBoundingClientRect();
+    if (!mainScrolls) {
+      // Narrow layout: the page scrolls rather than the card.
+      if (box.top < 0 || box.bottom > window.innerHeight) {
+        first.scrollIntoView({ block: "center", inline: "center", behavior: behavior });
+        return;
+      }
+    }
+    var interior = first.closest(".interior");
+    if (interior && interior.scrollWidth > interior.clientWidth) {
+      var ib = interior.getBoundingClientRect();
+      if (box.left < ib.left || box.right > ib.right) {
+        interior.scrollTo({ left: interior.scrollLeft + (box.left - ib.left) - (ib.width - box.width) / 2, behavior: behavior });
+      }
+    }
+    if (mainScrolls) {
+      var mb = main.getBoundingClientRect();
+      if (box.top < mb.top || box.bottom > mb.bottom) {
+        main.scrollTo({ top: main.scrollTop + (box.top - mb.top) - (mb.height - box.height) / 2, behavior: behavior });
+      }
+    }
+  }
+
+  // Re-renders, then puts keyboard focus back on a toolbar control, since a
+  // render rebuilds the toolbar and would otherwise drop focus to the page.
+  _renderKeepingFocus(selector) {
+    var self = this;
+    return Promise.resolve(this.render(false)).then(function () {
+      var el = self.shadowRoot && self.shadowRoot.querySelector(selector);
+      if (el) el.focus();
+    });
+  }
+
+  // Resets the search and every filter on the page already on screen.
+  _clearFilters() {
+    var root = this.shadowRoot;
+    if (this._searchTimer) {
+      clearTimeout(this._searchTimer);
+      this._searchTimer = null;
+    }
+    this._search = "";
+    this._filterType = "";
+    this._filterCountry = "";
+    this._filterReady = false;
+    this._lastLocatedId = null;
+    if (this._locateTimer) {
+      clearTimeout(this._locateTimer);
+      this._locateTimer = null;
+    }
+    if (!root) return;
+    var input = root.querySelector("[data-search]");
+    if (input) input.value = "";
+    root.querySelectorAll("[data-type-filter],[data-country-filter],[data-age-filter]").forEach(function (select) {
+      select.value = "";
+      select.classList.remove("filter-active");
+    });
+    this._applyFiltersInPlace();
+  }
+
+  // Sorting, row clicks and Clear filters in the All Bottles table; also
+  // used after the table alone is redrawn by _applyFiltersInPlace.
+  _bindListView(container, data) {
+    var self = this;
+    container.querySelectorAll(".table-wrap th[data-sort]").forEach(function (th) {
+      th.onclick = function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        var clickedCol = th.getAttribute("data-sort");
+        if (self._sortColumn === clickedCol) {
+          self._sortOrder = self._sortOrder === "asc" ? "desc" : "asc";
+        } else {
+          self._sortColumn = clickedCol;
+          self._sortOrder = "asc";
+        }
+        self.render(false); // Ré-afficher localement avec le nouveau tri sans forcer un appel WS
+      };
+    });
+    container.querySelectorAll(".table-wrap tr[data-edit-bottle]").forEach(function (row) {
+      row.onclick = function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        var id = row.getAttribute("data-edit-bottle");
+        var bottle = null;
+        ((data && data.bottles) || []).forEach(function (b) {
+          if (b.id === id) bottle = b;
+        });
+        self._openBottleModal(bottle);
+      };
+    });
+    container.querySelectorAll("[data-clear-filters]").forEach(function (btn) {
+      btn.onclick = function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        self._clearFilters();
+        // From the keyboard, carry on in the search box rather than losing
+        // focus with the button that just went away.
+        var input = e.detail === 0 && self.shadowRoot.querySelector("[data-search]");
+        if (input) input.focus();
+      };
+    });
+  }
+
+  // The first empty slot in display order: cellars, then shelves top to
+  // bottom, the front row before the back row, lowest position first.
+  _findFreeSlot() {
+    var self = this;
+    var data = this._data || {};
+    var cellars = (data.cellars || []).slice().sort(function (a, b) {
+      return (a.display_order || 0) - (b.display_order || 0);
+    });
+    for (var c = 0; c < cellars.length; c++) {
+      var cellar = cellars[c];
+      var slotIndex = self._buildSlotIndex((data.bottles || []).filter(function (b) {
+        return b.cellar_id === cellar.id;
+      }));
+      var shelves = self._getSortedShelves(cellar);
+      for (var s = 0; s < shelves.length; s++) {
+        var shelf = shelves[s];
+        var lanes = [["front", Number(shelf.capacity_front || 0)], ["back", Number(shelf.capacity_back || 0)]];
+        for (var l = 0; l < lanes.length; l++) {
+          for (var pos = 1; pos <= lanes[l][1]; pos++) {
+            if (!slotIndex.has(String(shelf.id) + "|" + lanes[l][0] + "|" + pos)) {
+              return { cellar_id: cellar.id, shelf_id: shelf.id, lane: lanes[l][0], position: pos };
+            }
+          }
+        }
+      }
+    }
+    return null;
   }
 
   _renderBottleSlot(bottle, isDimmed, opts) {
@@ -3562,7 +4977,7 @@ class WineCellarCard extends HTMLElement {
       pasteReady: this._hasCopiedBottle()
     };
 
-    return '<div class="cellars-grid' + (compact ? " compact" : "") + '">' + cellars.map(function (cellar) {
+    return '<div class="cellars-grid' + (compact ? " compact" : "") + (opts.filtering ? " filtering" : "") + '">' + cellars.map(function (cellar) {
       var cellarBottles = (data.bottles || []).filter(function (b) {
         return b.cellar_id === cellar.id;
       });
@@ -3584,7 +4999,7 @@ class WineCellarCard extends HTMLElement {
 
       var editLabel = self._escape(_T("edit_cellar"));
       return (
-        '<section class="cellar">' +
+        '<section class="cellar" data-cellar-id="' + self._escape(cellar.id) + '">' +
         '<header class="cellar-head">' +
         '<div class="cellar-title">' +
         "<h3>" + self._escape(cellar.name) + "</h3>" +
@@ -3637,7 +5052,11 @@ class WineCellarCard extends HTMLElement {
     var bottles = this._filteredBottles(data);
 
     if (!bottles.length) {
-      return '<div class="empty-state">No bottles match the current view.</div>';
+      if (!this._hasActiveFilters()) {
+        return '<div class="empty-state">' + this._escape(_T("no_bottles_yet")) + "</div>";
+      }
+      return '<div class="empty-state"><div>' + this._escape(_T("search_no_match")) + "</div>" +
+        '<button class="btn primary" type="button" data-clear-filters>' + this._escape(_T("clear_filters")) + "</button></div>";
     }
 
     // 1. Définir l'ordre fixe des types de vin pour le regroupement
@@ -4115,12 +5534,12 @@ class WineCellarCard extends HTMLElement {
     }).join('<span class="crumb-sep">›</span>');
 
     return [
-      '<div class="modal-backdrop" data-close-modal>',
-      '  <div class="modal wine-view-modal" role="dialog" aria-modal="true" aria-label="' + _T("wine_details") + '">',
+      '<div class="modal-backdrop" data-dialog-backdrop>',
+      '  <div class="modal wine-view-modal" role="dialog" aria-modal="true" aria-labelledby="wcm-dialog-title">',
       '    <div class="modal-banner" style="--type:' + this._wineSurfaceColor(type) + ";--type-ink:" + this._wineTextColor(type) + '">',
       '      <span class="wine-badge">' + this._escape(wineTypeLabel) + "</span>",
       '      <div class="banner-text">',
-      '        <h2 class="modal-banner-title">' + this._escape(bottle.wine_name || _T("unnamed_wine")) + "</h2>",
+      '        <h2 class="modal-banner-title" id="wcm-dialog-title" tabindex="-1" data-dialog-title>' + this._escape(bottle.wine_name || _T("unnamed_wine")) + "</h2>",
       '        <div class="modal-banner-sub">' + this._escape(similarText) + "</div>",
       "      </div>",
       '      <button class="icon-btn" type="button" data-close-modal aria-label="' + this._escape(_T("close")) + '">' + _WCM_ICONS.close + "</button>",
@@ -4185,8 +5604,12 @@ class WineCellarCard extends HTMLElement {
     var bottle = (this._modal && this._modal.bottle) || {};
     var preset = (this._modal && this._modal.preset) || {};
     var self = this;
+    // What the user already typed (kept across re-renders) comes first.
+    var draft = this._modalDraft();
+    var typed = draft ? draft.values : null;
 
     function v(key, fallback) {
+      if (typed && typed[key] !== undefined) return typed[key];
       if (bottle[key] !== undefined && bottle[key] !== null) return bottle[key];
       if (preset[key] !== undefined && preset[key] !== null) return preset[key];
       return fallback;
@@ -4215,22 +5638,20 @@ class WineCellarCard extends HTMLElement {
     }
 
     var imagePath = v("image_path", "");
-    var previewImagePath = this._normalizeImagePath(imagePath);
 
 
     return [
-      '<div class="modal-backdrop" data-close-modal>',
-      '  <div class="modal" role="dialog" aria-modal="true" aria-label="' + _T("bottle_editor") + '">',
+      '<div class="modal-backdrop" data-dialog-backdrop>',
+      '  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="wcm-dialog-title">',
       '    <div class="modal-head">',
-      "      <h3>" + (bottle.id ? self._t("edit_bottle") : self._t("add_bottle")) + "</h3>",
+      '      <h3 id="wcm-dialog-title" tabindex="-1" data-dialog-title>' + (bottle.id ? self._t("edit_bottle") : self._t("add_bottle")) + "</h3>",
       '      <button class="icon-btn" type="button" data-close-modal aria-label="' + _T("close") + '">' + _WCM_ICONS.close + '</button>',
       "    </div>",
-      '<div class="form-error"' + (this._formError ? '' : ' style="display:none"') + ' role="alert">' + this._escape(this._formError || "") + '</div>',
       '<div class="action-message"' + (this._actionMessage ? '' : ' style="display:none"') + '>' + this._escape(this._actionMessage || "") + '</div>',
-      '    <form class="modal-form" data-save-bottle novalidate>',
+      '    <form class="modal-form" data-save-bottle data-modal-key="' + this._escape(this._modalKey()) + '" novalidate>',
       '      <input type="hidden" name="bottle_id" value="' + self._escape(v("id", "")) + '">',
-      '      <input type="hidden" name="analyzed_flag" value="' + (bottle.analyzed ? "true" : "false") + '">',
-      
+      '      <input type="hidden" name="analyzed_flag" value="' + self._escape(typed && typed.analyzed_flag ? typed.analyzed_flag : (bottle.analyzed ? "true" : "false")) + '">',
+
       '      <!-- ZONE CAPTURE ET ANALYSE DE HAUT DE FORMULAIRE -->',
       '      <div class="analysis-top-panel" style="background:color-mix(in srgb, var(--secondary-background-color) 40%, transparent);padding:14px;border-radius:14px;display:grid;gap:12px;border:1px dashed color-mix(in srgb,var(--primary-text-color) 15%, transparent)">',
       '        <div style="font-weight:700;font-size:0.95rem">' + _T("wine_acquisition_identification") + '</div>',
@@ -4247,8 +5668,9 @@ class WineCellarCard extends HTMLElement {
       '        <button class="btn primary" type="button" data-universal-analyze-btn style="height:40px;font-weight:700">🔍 ' + _T("analyze") + '</button>',
       '      </div>',
 
-      previewImagePath ? '<div class="image-preview"><img src="' + this._escape(previewImagePath) + '" alt="Label image preview" onerror="this.style.display=\'none\';this.parentElement.innerHTML=\'<div class=&quot;empty-state&quot;>' + _T("image_not_reachable") + '</div>\';"></div>' : "",
-      this._renderDuplicateMatches(),
+      this._renderFormError("capture"),
+      '      <div data-image-preview>' + this._renderImagePreview(imagePath) + '</div>',
+      '      <div data-duplicate-panel>' + this._renderDuplicateMatches() + '</div>',
 
       '      <label style="margin-top:8px">' + self._t("search_history") + '<input name="history_search" type="search" placeholder="' + _T("search_history_placeholder") + '" value="' + self._escape(this._historySearchValue || "") + '"></label>',
       '      <div data-history-results>' + this._renderSearchResultsMarkup() + '</div>',
@@ -4306,6 +5728,7 @@ class WineCellarCard extends HTMLElement {
 
       '      </div>',
 
+      this._renderFormError("save"),
       '      <div class="modal-actions">',
       bottle.id
         ? '        <div class="left-actions"><button class="btn warning" type="button" data-consume-bottle="' + self._escape(bottle.id) + '">' + self._t("consume") + '</button><button class="btn danger" type="button" data-delete-bottle="' + self._escape(bottle.id) + '">' + self._t("delete") + '</button></div>'
@@ -4320,22 +5743,35 @@ class WineCellarCard extends HTMLElement {
       "</div>"
     ].join("");
   }
-  _renderShelfEditorRows(shelves) {
+  _renderShelfEditorRows(shelves, cellarId) {
     var self = this;
+    var bottles = ((this._data && this._data.bottles) || []).filter(function (b) {
+      return !!cellarId && b.cellar_id === cellarId;
+    });
+    function value(v, fallback) {
+      return v === undefined || v === null ? fallback : v;
+    }
 
-    return shelves.map(function (s, idx) {
+    return shelves.map(function (s) {
+      // How many bottles the shelf holds: shown on the row, and a shelf that
+      // holds any cannot be removed (the server would refuse it on Save).
+      var stored = s.id ? bottles.filter(function (b) { return b.shelf_id === s.id; }).length : 0;
+      self._shelfRowSeq = (self._shelfRowSeq || 0) + 1;
+      var hintId = "wcm-shelf-hint-" + self._shelfRowSeq;
       return [
         '<div class="shelf-row" data-shelf-row style="border:1px solid color-mix(in srgb,var(--primary-text-color) 8%, transparent);padding:14px;border-radius:12px;margin-bottom:10px;position:relative;background:color-mix(in srgb,var(--secondary-background-color) 30%, transparent);padding-top:34px">',
+        s.id ? '  <span class="shelf-stored">' + self._escape(stored ? _T("shelf_stored", { n: stored }) : _T("shelf_empty")) + "</span>" : "",
         '  <input type="hidden" name="shelf_id[]" value="' + self._escape(s.id || "") + '">',
         '  <div style="margin-bottom:6px">',
         '    <label style="font-size:0.85rem">' + _T("shelf_name") + '<input type="text" name="shelf_name[]" value="' + self._escape(s.name || "") + '" style="padding:6px" required></label>',
         '  </div>',
         '  <div class="grid3" style="gap:8px">',
-        '    <label style="font-size:0.85rem">' + _T("order") + '<input type="number" name="shelf_display_order[]" min="0" value="' + self._escape(s.display_order || 0) + '" style="padding:6px"></label>',
-        '    <label style="font-size:0.85rem">' + _T("front_capacity") + '<input type="number" name="capacity_front[]" min="1" value="' + self._escape(s.capacity_front || 6) + '" style="padding:6px" required></label>',
-        '    <label style="font-size:0.85rem">' + _T("back_capacity") + '<input type="number" name="capacity_back[]" min="0" value="' + self._escape(s.capacity_back || 0) + '" style="padding:6px"></label>',
+        '    <label style="font-size:0.85rem">' + _T("order") + '<input type="number" name="shelf_display_order[]" min="0" value="' + self._escape(value(s.display_order, 0)) + '" style="padding:6px"></label>',
+        '    <label style="font-size:0.85rem">' + _T("front_capacity") + '<input type="number" name="capacity_front[]" min="1" value="' + self._escape(value(s.capacity_front, 6)) + '" style="padding:6px" required></label>',
+        '    <label style="font-size:0.85rem">' + _T("back_capacity") + '<input type="number" name="capacity_back[]" min="0" value="' + self._escape(value(s.capacity_back, 0)) + '" style="padding:6px"></label>',
         '  </div>',
-        '  <button class="btn danger small-btn" type="button" data-remove-shelf style="position:absolute;top:10px;right:10px;padding:4px 8px;font-size:0.75rem">' + _T("remove") + '</button>',
+        stored ? '  <p class="shelf-remove-hint" id="' + hintId + '">' + self._escape(_T("shelf_remove_blocked")) + "</p>" : "",
+        '  <button class="btn danger small-btn" type="button" data-remove-shelf' + (stored ? ' disabled aria-describedby="' + hintId + '"' : "") + ' style="position:absolute;top:10px;right:10px;padding:4px 8px;font-size:0.75rem">' + _T("remove") + '</button>',
         '</div>'
       ].join("");
     }).join("");
@@ -4345,13 +5781,18 @@ class WineCellarCard extends HTMLElement {
     var cellar = (this._modal && this._modal.cellar) || {};
     var self = this;
 
+    // What the user already typed (kept across re-renders) comes first.
+    var draft = this._modalDraft();
+    var typed = draft ? draft.values : null;
+
     function v(key, fallback) {
+      if (typed && typed[key] !== undefined) return typed[key];
       if (cellar[key] !== undefined && cellar[key] !== null) return cellar[key];
       return fallback;
     }
 
     // Extraction et nettoyage de l'attribut de persistance
-    var currentBgColor = cellar.bg_color || "";
+    var currentBgColor = typed ? (typed.bg_color || "") : (cellar.bg_color || "");
 
     var nextDisplayOrder = 0;
     if (!cellar.id && this._data && Array.isArray(this._data.cellars) && this._data.cellars.length) {
@@ -4361,21 +5802,20 @@ class WineCellarCard extends HTMLElement {
     }
 
 
-    var shelves = (cellar.shelves && cellar.shelves.length)
+    var shelves = draft ? draft.shelves : (cellar.shelves && cellar.shelves.length)
       ? self._getSortedShelves(cellar)
       : [
           { id: "", name: _T("shelf_1"), display_order: 0, capacity_front: 6, capacity_back: 0, layout_mode: "single" }
         ];
 
     return [
-      '<div class="modal-backdrop" data-close-modal>',
-      '  <div class="modal small-modal" role="dialog" aria-modal="true" aria-label="' + _T("cellar_editor") + '">',
+      '<div class="modal-backdrop" data-dialog-backdrop>',
+      '  <div class="modal small-modal" role="dialog" aria-modal="true" aria-labelledby="wcm-dialog-title">',
       '    <div class="modal-head">',
-      "      <h3>" + (cellar.id ? _T("edit_cellar") : _T("add_cellar")) + "</h3>",
+      '      <h3 id="wcm-dialog-title" tabindex="-1" data-dialog-title>' + (cellar.id ? _T("edit_cellar") : _T("add_cellar")) + "</h3>",
       '      <button class="icon-btn" type="button" data-close-modal aria-label="' + _T("close") + '">' + _WCM_ICONS.close + '</button>',
       "    </div>",
-      '<div class="form-error"' + (this._formError ? '' : ' style="display:none"') + ' role="alert">' + this._escape(this._formError || "") + '</div>',
-      '    <form class="modal-form" data-save-cellar>',
+      '    <form class="modal-form" data-save-cellar data-modal-key="' + this._escape(this._modalKey()) + '">',
       '      <input type="hidden" name="cellar_id" value="' + self._escape(v("id", "")) + '">',
       '      <label>' + _T("cellar_name") + '<input name="name" value="' + self._escape(v("name", "")) + '" required></label>',
       '      <label>' + _T("display_order") + '<input name="display_order" type="number" min="0" value="' + self._escape(v("display_order", nextDisplayOrder)) + '"></label>',
@@ -4400,9 +5840,10 @@ class WineCellarCard extends HTMLElement {
       '          <button class="btn small-btn" type="button" data-add-shelf-row>' + _T("add_shelf") + '</button>',
       '        </div>',
       '        <div data-shelf-rows>',
-      self._renderShelfEditorRows(shelves),
+      self._renderShelfEditorRows(shelves, cellar.id),
       '        </div>',
       '      </div>',
+      this._renderFormError("save"),
       '      <div class="modal-actions">',
       cellar.id ? '        <button class="btn danger" type="button" data-delete-cellar="' + self._escape(cellar.id) + '">' + _T("delete") + '</button>' : "        <span></span>",
       '        <div class="right-actions"><button class="btn" type="button" data-close-modal>' + _T("cancel") + '</button><button class="btn primary" type="button" data-save-cellar-btn>' + _T("save") + '</button></div>',
@@ -4468,13 +5909,26 @@ class WineCellarCard extends HTMLElement {
     rowsWrap.insertAdjacentHTML("beforeend", this._renderShelfEditorRows([
       {
         id: "",
-        name: "Shelf " + (count + 1),
+        name: _T("shelf_n", { n: count + 1 }),
         display_order: nextOrder,
         capacity_front: 6,
         capacity_back: 0,
         layout_mode: "single"
       }
-    ]));
+    ], ""));
+
+    // Show the new row (on a phone it lands far below the button) and put
+    // the cursor in its name.
+    var row = rowsWrap.lastElementChild;
+    var nameInput = row && row.querySelector('[name="shelf_name[]"]');
+    if (row) {
+      var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      row.scrollIntoView({ block: "nearest", behavior: reduce ? "auto" : "smooth" });
+    }
+    if (nameInput) {
+      nameInput.focus({ preventScroll: true });
+      nameInput.select();
+    }
   }
 
   async render(force) {
@@ -4499,17 +5953,21 @@ class WineCellarCard extends HTMLElement {
 
     try {
       var data = await this._loadData(!!force);
+      // The "every slot is taken" notice goes away once there is room again.
+      if (this._toolbarNotice && this._findFreeSlot()) this._toolbarNotice = "";
       var snapshot = JSON.stringify({
         view: this._view || "cellars",
         modal: this._modal ? {
           type: this._modal.type,
           bottleId: this._modal.bottle ? this._modal.bottle.id : null,
           cellarId: this._modal.cellar ? this._modal.cellar.id : (this._modal.preset ? this._modal.preset.cellar_id : null),
-          mode: this._modal.mode || ""
+          mode: this._modal.mode || "",
+          key: this._modalKey()
         } : null,
         search: this._search || "",
         filterType: this._filterType || "",
         formError: this._formError || "",
+        formErrorAt: this._formErrorAt || "save",
         actionMessage: this._actionMessage || "",
         scannerActive: this._scannerActive,
         duplicateMatches: this._duplicateMatches,
@@ -4526,6 +5984,7 @@ class WineCellarCard extends HTMLElement {
         duplicateManagerSearching: this._duplicateManagerSearching,
         duplicateManagerHasSearched: this._duplicateManagerHasSearched,
         copiedBottle: this._hasCopiedBottle(),
+        toolbarNotice: this._toolbarNotice || "",
         data: data
       });
 
@@ -4538,6 +5997,13 @@ class WineCellarCard extends HTMLElement {
       this._lastSnapshot = snapshot;
       this._hasRendered = true;
       var paintCompleted = false;
+
+      // Keep what is typed in an open form; it is drawn back below.
+      try {
+        this._captureModalDraft();
+      } catch (err) {
+        console.error("Wine Cellar: could not keep the form's values", err);
+      }
 
       var view = this._view || "cellars";
       var body = "";
@@ -4554,6 +6020,24 @@ class WineCellarCard extends HTMLElement {
       var comparisonModal = this._renderImageComparisonModal ? this._renderImageComparisonModal() : "";
       var cleanupModal = this._renderCleanUpModal();
 
+      // Remember how far each overflowing cabinet is scrolled sideways, so
+      // the rebuilt one can be put back where the user left it.
+      var interiorScroll = this._interiorScroll;
+      this.shadowRoot.querySelectorAll(".main-scroll-content .cellar[data-cellar-id]").forEach(function (section) {
+        var interior = section.querySelector(".interior");
+        var grid = section.closest(".cellars-grid");
+        if (!interior || !grid || interior.scrollWidth <= interior.clientWidth) return;
+        interiorScroll[(grid.classList.contains("compact") ? "compact:" : "cellars:") + section.getAttribute("data-cellar-id")] = interior.scrollLeft;
+      });
+
+      // If the user is typing in the search box, give it back its focus and
+      // caret after the rebuild.
+      var focusedSearch = this.shadowRoot.activeElement;
+      var searchCaret = null;
+      if (focusedSearch && focusedSearch.matches && focusedSearch.matches("[data-search]")) {
+        searchCaret = [focusedSearch.selectionStart, focusedSearch.selectionEnd];
+      }
+
       this.shadowRoot.innerHTML =
         "<style>" + _WCM_STYLES + "</style>" +
         '<ha-card><div class="wrap' + (this.config && this.config.background === "wood" ? " wood" : "") + '">' + this._renderToolbar() + '<div class="main-scroll-content">' + body + "</div>" + modal + comparisonModal + cleanupModal + "</div></ha-card>";
@@ -4564,14 +6048,34 @@ class WineCellarCard extends HTMLElement {
       // Panels from the previous render are gone with the old DOM.
       this._autocompletePanels = [];
       this._ensureWindowClickHandler();
+      this._ensureWindowKeyHandler();
+      // This paint already reflects the current search (it is stored on
+      // every keystroke), so a pending live-search update has nothing to add.
+      if (this._searchTimer) {
+        clearTimeout(this._searchTimer);
+        this._searchTimer = null;
+      }
+      var newSearch = searchCaret && !this._modal ? root.querySelector("[data-search]") : null;
+      if (newSearch) {
+        newSearch.focus({ preventScroll: true });
+        try {
+          newSearch.setSelectionRange(searchCaret[0], searchCaret[1]);
+        } catch (err) { /* selection not supported */ }
+      }
+      // The All Bottles table was just rebuilt from the current filters.
+      this._listSignature = null;
 
-      // Récupération et application asynchrone pour laisser le DOM se dessiner
-      // A cabinet wider than the screen scrolls sideways; start it centered,
-      // where the rows are, rather than at its (often empty) left edge.
-      root.querySelectorAll(".cellar .interior").forEach(function (interior) {
-        if (interior.scrollWidth > interior.clientWidth) {
-          interior.scrollLeft = (interior.scrollWidth - interior.clientWidth) / 2;
-        }
+      // A cabinet wider than the screen scrolls sideways. It is put back
+      // where the user left it; the first time it is shown it starts
+      // centered, where the rows are, rather than at its (often empty) left edge.
+      root.querySelectorAll(".main-scroll-content .cellar[data-cellar-id]").forEach(function (section) {
+        var interior = section.querySelector(".interior");
+        var grid = section.closest(".cellars-grid");
+        if (!interior || !grid || interior.scrollWidth <= interior.clientWidth) return;
+        var key = (grid.classList.contains("compact") ? "compact:" : "cellars:") + section.getAttribute("data-cellar-id");
+        interior.scrollLeft = Object.prototype.hasOwnProperty.call(interiorScroll, key)
+          ? interiorScroll[key]
+          : (interior.scrollWidth - interior.clientWidth) / 2;
       });
 
       var savedScroll = window.sessionStorage.getItem("wine_cellar_scroll_top");
@@ -4621,21 +6125,45 @@ class WineCellarCard extends HTMLElement {
       if (search) {
         search.addEventListener("click", function (e) { e.stopPropagation(); });
         search.addEventListener("focus", function (e) { e.stopPropagation(); }, true);
+        // Live search. Results are applied to the page already on screen
+        // (_applyFiltersInPlace), never through a full re-render, so the box
+        // keeps focus and caret and the first click after typing is not lost
+        // to a DOM rebuild.
+        var applySearch = function (force) {
+          if (self._searchTimer) {
+            clearTimeout(self._searchTimer);
+            self._searchTimer = null;
+          }
+          self._search = search.value;
+          self._applyFiltersInPlace({ locate: true, forceLocate: force });
+        };
         search.addEventListener("input", function (e) {
           e.stopPropagation();
           self._search = search.value;
+          if (self._searchTimer) clearTimeout(self._searchTimer);
+          self._searchTimer = setTimeout(function () {
+            self._searchTimer = null;
+            applySearch(false);
+          }, 150);
+        });
+        // The native clear (x) button.
+        search.addEventListener("search", function () {
+          if (!search.value) applySearch(false);
         });
         search.addEventListener("keydown", function (e) {
           e.stopPropagation();
+          if (e.isComposing) return;
           if (e.key === "Enter") {
             e.preventDefault();
-            self._search = search.value;
-            self.render(true);
+            applySearch(true);
+          } else if (e.key === "Escape" && search.value) {
+            e.preventDefault();
+            search.value = "";
+            applySearch(false);
           }
         });
         search.addEventListener("blur", function () {
           self._search = search.value;
-          self.render(true);
         });
       }
 
@@ -4645,7 +6173,8 @@ class WineCellarCard extends HTMLElement {
         typeFilter.addEventListener("change", function (e) {
           e.stopPropagation();
           self._filterType = typeFilter.value;
-          self.render(true);
+          typeFilter.classList.toggle("filter-active", !!typeFilter.value);
+          self._applyFiltersInPlace({ locate: true });
         });
       }
 
@@ -4656,7 +6185,8 @@ class WineCellarCard extends HTMLElement {
         countryFilter.addEventListener("change", function (e) {
           e.stopPropagation();
           self._filterCountry = countryFilter.value;
-          self.render(true);
+          countryFilter.classList.toggle("filter-active", !!countryFilter.value);
+          self._applyFiltersInPlace({ locate: true });
         });
       }
 
@@ -4667,25 +6197,13 @@ class WineCellarCard extends HTMLElement {
         ageFilter.addEventListener("change", function (e) {
           e.stopPropagation();
           self._filterReady = ageFilter.value;
-          self.render(true);
+          ageFilter.classList.toggle("filter-active", !!ageFilter.value);
+          self._applyFiltersInPlace({ locate: true });
         });
       }
 
-      // Écouteur pour le tri interactif des colonnes dans All Bottles et Ready
-      root.querySelectorAll(".table-wrap th[data-sort]").forEach(function(th) {
-        th.onclick = function(e) {
-          e.preventDefault();
-          e.stopPropagation();
-          var clickedCol = th.getAttribute("data-sort");
-          if (self._sortColumn === clickedCol) {
-            self._sortOrder = self._sortOrder === "asc" ? "desc" : "asc";
-          } else {
-            self._sortColumn = clickedCol;
-            self._sortOrder = "asc";
-          }
-          self.render(false); // Ré-afficher localement avec le nouveau tri sans forcer un appel WS
-        };
-      });
+      // Column sorting and rows of All Bottles, and every Clear filters button.
+      this._bindListView(root, data);
 
       var addCellar = root.querySelector("[data-add-cellar]");
       if (addCellar) {
@@ -4701,18 +6219,33 @@ class WineCellarCard extends HTMLElement {
           e.preventDefault();
           e.stopPropagation();
 
-          var firstCellar = data.cellars && data.cellars.length ? data.cellars[0] : null;
-          var firstShelf = firstCellar ? self._getSortedShelves(firstCellar)[0] : null;
-          var firstLane = firstShelf && Number(firstShelf.capacity_front || 0) > 0 ? "front" : "back";
-
+          // Preset the next free slot; when there is none, say so here
+          // instead of opening a form that could only fail on Save.
+          var freeSlot = self._findFreeSlot();
+          if (!freeSlot) {
+            self._toolbarNotice = (data.cellars && data.cellars.length) ? _T("all_slots_full") : _T("add_first_cellar");
+            self._renderKeepingFocus("[data-add-bottle]");
+            return;
+          }
+          self._toolbarNotice = "";
           self._openBottleModal(null, {
-            cellar_id: firstCellar ? firstCellar.id : "",
-            shelf_id: firstShelf ? firstShelf.id : "",
-            lane: firstLane,
-            position: 1,
-            wine_type: "red",
+            cellar_id: freeSlot.cellar_id,
+            shelf_id: freeSlot.shelf_id,
+            lane: freeSlot.lane,
+            position: freeSlot.position,
+            wine_type: "unset",
             rating: 0
           });
+        };
+      }
+
+      var dismissNotice = root.querySelector("[data-dismiss-notice]");
+      if (dismissNotice) {
+        dismissNotice.onclick = function (e) {
+          e.preventDefault();
+          e.stopPropagation();
+          self._toolbarNotice = "";
+          self._renderKeepingFocus("[data-add-bottle]");
         };
       }
 
@@ -4721,6 +6254,7 @@ class WineCellarCard extends HTMLElement {
           e.preventDefault();
           e.stopPropagation();
           var preset = JSON.parse(el.getAttribute("data-new-bottle"));
+          var pastedName = "";
           
           // Sécurité temporelle : Si la copie a plus de 10 minutes (600 000 ms), on l'annule
           if (self._copiedBottleData && self._copyTimestamp && (Date.now() - self._copyTimestamp > 600000)) {
@@ -4734,6 +6268,7 @@ class WineCellarCard extends HTMLElement {
             var targetLane = preset.lane;
             var targetPos = preset.position;
             
+            pastedName = self._copiedBottleData.wine_name || _T("unnamed_wine");
             // Fusion complète des caractéristiques copiées (incluant type, notes et évaluation)
             preset = Object.assign({}, self._copiedBottleData);
             
@@ -4748,13 +6283,9 @@ class WineCellarCard extends HTMLElement {
             self._copyTimestamp = null;
           }
           
-          self._modal = {
-            type: "bottle",
-            bottle: null,
-            preset: preset,
-            mode: "edit"
-          };
-          self.render(true);
+          // Through _openBottleModal, which clears any stale notice or error
+          // (such as the "copied to memory" hint) before the form opens.
+          self._openBottleModal(null, preset, pastedName ? _T("pasted_details", { name: pastedName }) : "");
         };
       });
 
@@ -4923,8 +6454,8 @@ class WineCellarCard extends HTMLElement {
           delete self._copiedBottleData.lane;
           delete self._copiedBottleData.position;
           self._copyTimestamp = Date.now(); // Initialisation indispensable du timestamp
+          // The paste banner on the cellar views says what to do next.
           self._closeModal();
-          self._setActionMessage(_T("bottle_copied_to_memory"));
         };
       }
 
@@ -4932,7 +6463,24 @@ class WineCellarCard extends HTMLElement {
       if (modal) {
         modal.addEventListener("click", function (e) { e.stopPropagation(); });
         modal.addEventListener("mousedown", function (e) { e.stopPropagation(); });
+        // Also covers fields added after this render (new shelf rows).
+        modal.addEventListener("keydown", function (e) { e.stopPropagation(); });
       }
+
+      // A tap on the dim backdrop closes the dialog, asking first when its
+      // form has unsaved edits. Only a press that also started on the
+      // backdrop counts, so a text selection released outside does not.
+      root.querySelectorAll("[data-dialog-backdrop]").forEach(function (backdrop) {
+        backdrop.addEventListener("pointerdown", function (e) {
+          backdrop._pressStartedHere = e.target === backdrop;
+        });
+        backdrop.addEventListener("click", function (e) {
+          if (e.target !== backdrop || backdrop._pressStartedHere === false) return;
+          e.preventDefault();
+          e.stopPropagation();
+          self._requestCloseDialog();
+        });
+      });
       root.querySelectorAll(".modal input, .modal select, .modal textarea, .modal label, .modal button, .modal form").forEach(function (el) {
         el.addEventListener("click", function (e) { e.stopPropagation(); });
         el.addEventListener("mousedown", function (e) { e.stopPropagation(); });
@@ -4998,9 +6546,15 @@ class WineCellarCard extends HTMLElement {
 
         if (wineNameInp) {
           var autocompletePanel = wineNameInp.parentElement.querySelector(".custom-autocomplete-panel");
+          // Pressing a suggestion must not take the focus from the field.
+          if (autocompletePanel) {
+            autocompletePanel.addEventListener("mousedown", function (e) { e.preventDefault(); });
+          }
           wineNameInp.addEventListener("input", function(e) {
             var inputVal = wineNameInp.value.trim().toLowerCase();
-            if (!inputVal || !autocompletePanel) {
+            // Suggestions follow the field being typed in, not values filled
+            // in from elsewhere (a picked suggestion, the analysis...).
+            if (!inputVal || !autocompletePanel || root.activeElement !== wineNameInp) {
               if (autocompletePanel) autocompletePanel.style.display = "none";
               return;
             }
@@ -5025,18 +6579,20 @@ class WineCellarCard extends HTMLElement {
             }).join("");
             autocompletePanel.style.display = "block";
             autocompletePanel.querySelectorAll(".custom-autocomplete-item").forEach(function(item) {
-              var selectSuggestion = function(e) {
+              // Picking a wine fills the fields on screen that are still
+              // empty and keeps everything already typed (no re-render).
+              // Click only: a touchstart also fires when a finger merely
+              // scrolls the list.
+              item.addEventListener("click", function (e) {
                 e.preventDefault();
                 e.stopPropagation();
                 var selectedName = item.getAttribute("data-value");
                 wineNameInp.value = selectedName;
-                autocompletePanel.style.display = "none";
-                var match = allBottles.reverse().find(function(b) {
+                var match = allBottles.slice().reverse().find(function(b) {
                   return String(b.wine_name || "").trim().toLowerCase() === selectedName.toLowerCase();
                 });
                 if (match) {
                   self._applySuggestionToBottleForm(bottleForm, {
-                    wine_name: match.wine_name,
                     producer: match.producer,
                     region: match.region,
                     country: match.country,
@@ -5048,19 +6604,12 @@ class WineCellarCard extends HTMLElement {
                     aging_start_year: match.aging_start_year,
                     aging_end_year: match.aging_end_year,
                     notes: match.notes
-                  }, true);
-                  if (self._modal && self._modal.type === "bottle") {
-                    if (!self._modal.preset) self._modal.preset = {};
-                    self._modal.preset.image_path = match.image_path || "";
-                    if (self._modal.bottle) self._modal.bottle.image_path = match.image_path || "";
-                  }
+                  }, false);
                   self._setActionMessage(_T("details_and_label_applied"));
-                  checkTextDuplicates();
-                  self.render(false);
                 }
-              };
-              item.addEventListener("click", selectSuggestion);
-              item.addEventListener("touchstart", selectSuggestion, { passive: false });
+                autocompletePanel.style.display = "none";
+                checkTextDuplicates();
+              });
             });
           });
           wineNameInp.addEventListener("blur", function() {
@@ -5081,10 +6630,11 @@ class WineCellarCard extends HTMLElement {
 
           var panelEl = targetInp.parentElement.querySelector(".custom-autocomplete-panel");
           if (!panelEl) return;
+          panelEl.addEventListener("mousedown", function (e) { e.preventDefault(); });
 
           targetInp.addEventListener("input", function(e) {
             var valClean = targetInp.value.trim().toLowerCase();
-            if (!valClean) {
+            if (!valClean || root.activeElement !== targetInp) {
               panelEl.style.display = "none";
               return;
             }
@@ -5108,17 +6658,16 @@ class WineCellarCard extends HTMLElement {
             panelEl.style.display = "block";
 
             panelEl.querySelectorAll(".custom-autocomplete-item").forEach(function(itemRow) {
-              var handleSelection = function(evt) {
+              // Click only, as above.
+              itemRow.addEventListener("click", function (evt) {
                 evt.preventDefault();
                 evt.stopPropagation();
                 targetInp.value = itemRow.getAttribute("data-value");
-                panelEl.style.display = "none";
-                if (fieldName === "producer") checkTextDuplicates();
                 targetInp.dispatchEvent(new Event("input", { bubbles: true }));
                 targetInp.dispatchEvent(new Event("change", { bubbles: true }));
-              };
-              itemRow.addEventListener("click", handleSelection);
-              itemRow.addEventListener("touchstart", handleSelection, { passive: false });
+                panelEl.style.display = "none";
+                if (fieldName === "producer") checkTextDuplicates();
+              });
             });
           });
 
@@ -5133,6 +6682,14 @@ class WineCellarCard extends HTMLElement {
           // _ensureWindowClickHandler) so panels are not leaked per render.
           self._autocompletePanels.push({ input: targetInp, panel: panelEl });
         });
+
+        // The label preview follows the image path, however it changes.
+        var imagePathInp = bottleForm.querySelector('[name="image_path"]');
+        if (imagePathInp) {
+          imagePathInp.addEventListener("change", function () {
+            self._refreshImagePreview(bottleForm);
+          });
+        }
       }
 
       var saveBottleBtn = root.querySelector("[data-save-bottle-btn]");
@@ -5217,12 +6774,12 @@ class WineCellarCard extends HTMLElement {
                 }
                 self._setActionMessage(_T("barcode_detected_and_applied"));
               } else {
-                self._setActionMessage(analyzeResult.message || _T("no_barcode_found"));
+                self._setActionMessage((analyzeResult && analyzeResult.message) || _T("no_barcode_found"));
               }
             }
           } catch(err) {
             console.error("Barcode image extraction failed", err);
-            self._setFormError(_T("barcode_extraction_failed"));
+            self._setFormError(_T("barcode_extraction_failed"), "capture");
           }
         };
       }
@@ -5247,21 +6804,15 @@ class WineCellarCard extends HTMLElement {
       // Bouton unique UNIVERSAL ANALYZE avec sécurité anti-réanalyse
       var universalAnalyzeBtn = root.querySelector("[data-universal-analyze-btn]");
       if (universalAnalyzeBtn && bottleForm) {
-        universalAnalyzeBtn.onclick = async function(e) {
-          e.preventDefault(); e.stopPropagation();
-
-          var isAnalyzed = bottleForm.querySelector('[name="analyzed_flag"]').value === "true";
-          if (isAnalyzed) {
-            if (!confirm(_T("confirm_reanalyze"))) {
-              return;
-            }
-          }
-
+        // The result goes straight into the fields on screen, and only into
+        // fields the analysis found: nothing typed is blanked, and there is
+        // no re-render to rebuild the form from stale state.
+        var runAnalyze = async function () {
           var barcodeVal = bottleForm.querySelector('[name="barcode"]').value.trim();
           var labelVal = bottleForm.querySelector('[name="image_path"]').value.trim();
 
           if (!barcodeVal && !labelVal) {
-            self._setFormError(_T("provide_barcode_or_label"));
+            self._setFormError(_T("provide_barcode_or_label"), "capture");
             return;
           }
 
@@ -5276,23 +6827,38 @@ class WineCellarCard extends HTMLElement {
             });
 
             if (result && result.suggestion) {
-              // Sauvegarde les données retournées par l'IA dans l'état du modal avant de rafraîchir le DOM
-              if (self._modal.bottle) {
-                self._modal.bottle = Object.assign({}, self._modal.bottle, result.suggestion, { analyzed: true });
-              } else {
-                self._modal.preset = Object.assign({}, self._modal.preset, result.suggestion, { analyzed: true });
-              }
-
+              self._applySuggestionToBottleForm(bottleForm, result.suggestion, true);
+              var analyzedFlag = bottleForm.querySelector('[name="analyzed_flag"]');
+              if (analyzedFlag) analyzedFlag.value = "true";
               self._setActionMessage(_T("analysis_completed"));
-              
-              // Redessine le formulaire de manière sécurisée en conservant l'état mis à jour
-              self.render(false);
             } else {
-              self._setActionMessage(result.message || _T("no_result_found"));
+              self._setActionMessage((result && result.message) || _T("no_result_found"));
             }
           } catch(err) {
-            self._setFormError(_T("analysis_failed") + (err.message || err));
+            self._setFormError(_T("analysis_failed") + (err.message || err), "capture");
           }
+        };
+
+        universalAnalyzeBtn.onclick = function(e) {
+          e.preventDefault(); e.stopPropagation();
+
+          // A second analysis overwrites fields: ask first, inside the dialog.
+          var analyzedFlag = bottleForm.querySelector('[name="analyzed_flag"]');
+          if (analyzedFlag && analyzedFlag.value === "true") {
+            self._showDialogConfirm({
+              tone: "warning",
+              title: _T("reanalyze_title"),
+              body: _T("reanalyze_body"),
+              confirmLabel: _T("analyze_again"),
+              confirmClass: "primary",
+              onConfirm: function () {
+                self._cancelDialogConfirm();
+                return runAnalyze();
+              }
+            });
+            return;
+          }
+          runAnalyze();
         };
       }
 
@@ -5352,20 +6918,39 @@ class WineCellarCard extends HTMLElement {
         };
       }
 
-      root.querySelectorAll("[data-remove-shelf]").forEach(function (el) {
-        el.onclick = function (e) {
+      // Shelf rows, including rows added after this render, are removed
+      // through one listener on their container. It listens in the capture
+      // phase because each button stops its own click from bubbling.
+      var shelfRowsWrap = root.querySelector("[data-shelf-rows]");
+      if (shelfRowsWrap) {
+        shelfRowsWrap.addEventListener("click", function (e) {
+          var removeBtn = e.target && e.target.closest ? e.target.closest("[data-remove-shelf]") : null;
+          if (!removeBtn || !shelfRowsWrap.contains(removeBtn)) return;
           e.preventDefault();
           e.stopPropagation();
-          var rowsWrap = root.querySelector("[data-shelf-rows]");
-          var rows = rowsWrap ? rowsWrap.querySelectorAll("[data-shelf-row]") : [];
+          if (removeBtn.disabled) return;
+          var rows = shelfRowsWrap.querySelectorAll("[data-shelf-row]");
           if (rows.length <= 1) {
             self._setFormError(_T("cellar_needs_shelf"));
             return;
           }
-          var row = el.closest("[data-shelf-row]");
-          if (row) row.remove();
-        };
-      });
+          var row = removeBtn.closest("[data-shelf-row]");
+          if (!row) return;
+          var hadFocus = root.activeElement === removeBtn;
+          var neighbour = row.nextElementSibling || row.previousElementSibling;
+          row.remove();
+          self._clearFormError();
+          // From the keyboard, carry on at the next Remove button.
+          if (hadFocus) {
+            var nextBtn = neighbour && neighbour.querySelector("[data-remove-shelf]:not([disabled])");
+            var fallback = nextBtn || root.querySelector("[data-add-shelf-row]");
+            if (fallback) fallback.focus();
+          }
+        }, true);
+        shelfRowsWrap.addEventListener("input", function () {
+          self._clearFormError();
+        });
+      }
 
       var saveCellarBtn = root.querySelector("[data-save-cellar-btn]");
       var cellarForm = root.querySelector("[data-save-cellar]");
@@ -5374,37 +6959,37 @@ class WineCellarCard extends HTMLElement {
           e.preventDefault();
           e.stopPropagation();
           await self._saveCellarFromForm(cellarForm);
-          self.render(true);
+          // After a failed save the dialog stays as it is, edits included.
+          if (!self._modal) self.render(true);
         };
       }
 
+      // Consume and Delete ask inside the dialog first (_showDialogConfirm);
+      // the dialog closes once the action is done.
       var consumeBottle = root.querySelector("[data-consume-bottle]");
       if (consumeBottle) {
-        consumeBottle.onclick = async function (e) {
+        consumeBottle.onclick = function (e) {
           e.preventDefault();
           e.stopPropagation();
-          await self._consumeBottle(consumeBottle.getAttribute("data-consume-bottle"));
-          self.render(true);
+          self._consumeBottle(consumeBottle.getAttribute("data-consume-bottle"));
         };
       }
 
       var delBottle = root.querySelector("[data-delete-bottle]");
       if (delBottle) {
-        delBottle.onclick = async function (e) {
+        delBottle.onclick = function (e) {
           e.preventDefault();
           e.stopPropagation();
-          await self._deleteBottle(delBottle.getAttribute("data-delete-bottle"));
-          self.render(true);
+          self._deleteBottle(delBottle.getAttribute("data-delete-bottle"));
         };
       }
 
       var delCellar = root.querySelector("[data-delete-cellar]");
       if (delCellar) {
-        delCellar.onclick = async function (e) {
+        delCellar.onclick = function (e) {
           e.preventDefault();
           e.stopPropagation();
-          await self._deleteCellar(delCellar.getAttribute("data-delete-cellar"));
-          self.render(true);
+          self._deleteCellar(delCellar.getAttribute("data-delete-cellar"));
         };
       }
       var openCleanup = root.querySelector("[data-open-cleanup-tool]");
@@ -5414,6 +6999,7 @@ class WineCellarCard extends HTMLElement {
           self._viewingDuplicateManager = true;
           self._foundSyntaxDuplicates = [];
           self._duplicateManagerHasSearched = false; // Réinitialise l'accueil à chaque ouverture
+          self._rejectedCleanup = {};
           self._clearFormError();
           self._clearActionMessage();
           self.render(true); 
@@ -5421,13 +7007,8 @@ class WineCellarCard extends HTMLElement {
       }
 
       if (this._viewingDuplicateManager) {
-        var closeCleanup = function() {
-          self._viewingDuplicateManager = false;
-          self._foundSyntaxDuplicates = [];
-          self._duplicateManagerHasSearched = false; // Réinitialise à la fermeture
-          self._clearFormError();
-          self._clearActionMessage();
-          self.render(false);
+        var closeCleanup = function () {
+          self._closeCleanupTool();
         };
 
         var closeBtn1 = root.querySelector("[data-close-cleanup-btn]");
@@ -5457,11 +7038,29 @@ class WineCellarCard extends HTMLElement {
 
         var mergeAllBtn = root.querySelector("[data-cleanup-merge-all-btn]");
         if (mergeAllBtn) {
-          mergeAllBtn.onclick = async function(e) {
+          // Asks inside the dialog, saying how much will change. Only the
+          // sure pairs are merged (see _computeSyntaxDuplicates).
+          mergeAllBtn.onclick = function(e) {
             e.preventDefault(); e.stopPropagation();
-            if (confirm(_T("confirm_merge_all"))) {
-              await self._executeMergeAllSyntax();
-            }
+            var sure = (self._foundSyntaxDuplicates || []).filter(function (item) { return item.certain; });
+            if (!sure.length) return;
+            var touched = {};
+            sure.forEach(function (item) {
+              ((item.selectedValue === item.valueA ? item.bottlesB : item.bottlesA) || []).forEach(function (b) {
+                touched[b.id] = true;
+              });
+            });
+            self._showDialogConfirm({
+              tone: "warning",
+              title: _T("merge_all_title", { n: sure.length }),
+              body: _T("merge_all_body", { m: Object.keys(touched).length }),
+              confirmLabel: _T("cleanup_merge_all"),
+              confirmClass: "primary",
+              onConfirm: function () {
+                self._cancelDialogConfirm();
+                return self._executeMergeAllSyntax();
+              }
+            });
           };
         }
 
@@ -5509,11 +7108,26 @@ class WineCellarCard extends HTMLElement {
           btn.onclick = function(e) {
             e.preventDefault(); e.stopPropagation();
             var id = String(btn.getAttribute("data-reject-cleanup"));
+            // Remembered, so a rescan after a merge does not offer it again.
+            var rejected = findDuplicateById(id);
+            if (rejected) self._rejectedCleanup[self._cleanupPairKey(rejected)] = true;
             self._foundSyntaxDuplicates = (self._foundSyntaxDuplicates || [])
               .filter(function (entry) { return String(entry.id) !== id; });
             self.render(false);
           };
         });
+      }
+
+      // Dialog keyboard support, bound once: the shadow root outlives renders.
+      if (!this._dialogListenersBound) {
+        this._dialogListenersBound = true;
+        root.addEventListener("keydown", function (e) { self._onDialogKeydown(e); }, true);
+        root.addEventListener("click", function (e) { self._rememberActivator(e.target); }, true);
+      }
+      try {
+        this._syncDialog(root);
+      } catch (err) {
+        console.error("Wine Cellar: dialog focus update failed", err);
       }
 
       paintCompleted = true;

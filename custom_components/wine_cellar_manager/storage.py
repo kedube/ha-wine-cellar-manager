@@ -273,7 +273,7 @@ class WineCellarStore:
         return {
             "id": cellar_id,
             "name": str(item.get("name") or ""),
-            "display_order": int(item.get("display_order", index) or index),
+            "display_order": self._order_or_default(item.get("display_order"), index),
             "shelves": shelves,
             "bg_color": str(item.get("bg_color") or ""),
         }
@@ -298,7 +298,7 @@ class WineCellarStore:
         return {
             "id": str(item.get("id") or uuid.uuid4().hex),
             "name": str(item.get("name") or f"Shelf {index + 1}"),
-            "display_order": int(item.get("display_order", index) or index),
+            "display_order": self._order_or_default(item.get("display_order"), index),
             "capacity_front": capacity_front,
             "capacity_back": capacity_back,
             "layout_mode": layout_mode,
@@ -346,6 +346,12 @@ class WineCellarStore:
             "alcohol_pct": self._safe_float(item.get("alcohol_pct")),
             "original_bottle_id": str(item.get("original_bottle_id") or ""),
         }
+
+    def _order_or_default(self, value: Any, default: int) -> int:
+        # 0 is a valid order (first position); only a missing or invalid value
+        # falls back to the item's index.
+        order = self._safe_int(value)
+        return default if order is None else order
 
     def _safe_int(self, value: Any) -> int | None:
         if value in (None, ""):
