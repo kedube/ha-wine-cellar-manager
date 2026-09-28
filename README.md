@@ -108,15 +108,17 @@ type: custom:wine-cellar-card
 | Option | Values | Default | Description |
 | --- | --- | --- | --- |
 | `background` | `wood` | Theme | By default the card follows your Home Assistant theme, light or dark. Set to `wood` to use a wood texture background instead. |
+| `interior` | `theme` | Lit | By default every cabinet is drawn as a lit wine fridge (dark back wall, LED-lit shelves, wooden floor) in both light and dark themes. Set to `theme` to keep your Home Assistant theme colors inside the cabinets. |
 
 ```yaml
 type: custom:wine-cellar-card
 background: wood
+interior: theme
 ```
 
 ## Features
 
-- **Unlimited cellars**, each with its own name and a color (picked from swatches) used for the frame of its cabinet, so cellars are easy to tell apart.
+- **Unlimited cellars**, each with its own name and a color (picked from swatches) that sets the finish of its cabinet frame (bordeaux lacquer, oak, olive, azure, slate, or brushed steel for Off White), so cellars are easy to tell apart.
 
   ![Create cellar](images/add_cellar.png)
 
@@ -153,20 +155,27 @@ background: wood
 
 ![Cellar View](images/main_view.png)
 
-This is the default view. It shows a visual representation of all the cellars with useful information about each bottle. Each cellar is drawn as a cabinet whose frame takes the cellar's color. Its header shows how full it is (for example `28 / 40`), and the pencil button at the top right edits it.
+This is the default view. It shows every cellar the way it is physically laid out, with useful information about each bottle. Each cellar is drawn as a lit wine fridge seen at eye level, with a frame in the cellar's finish. Its header shows how full it is (for example `28 / 40`), and the pencil button at the top right edits it.
 
-Shelves appear in the order set within the cellar (can be modified), each with its name, the number of bottles it holds, and a rail underneath. On shelves with front and back rows, the back row sits above the front row, slightly smaller, on a shaded band and staggered into the gaps between the front bottles, representing how a physical shelf is actually configured. The rows are labelled Back and Front, and both are centered on the shelf.
+Shelves appear in the order set within the cellar. Each shelf is a compartment with an LED strip, a wooden floor and a wooden lip at the front that carries the number of each front position.
 
-The bottles are shown as cards. Each card is tinted and capped with the color of the wine type and displays the label image (or a drawn bottle when there is none), the name, the varietal (or region if the country is France), the vintage, and the rating.
+- On shelves with two rows, the back row stands behind the front row: smaller, in shade, and staggered into the gaps between the front bottles, the way a real rack holds them. At rest a back bottle shows its label, status, name and vintage.
+- Tap a shelf's lip, or the **Back row** plate on it, to pull the shelf out: the rows separate and the back row comes forward with every detail. Tap again or press Escape to push it back. Only one shelf is out at a time.
+- A search that finds a bottle in a back row pulls its shelf out by itself.
+- Empty front positions are low "+" outlines on the floor, and empty back positions are faint bottle outlines. Tap either to add a bottle there. While a bottle is being dragged, every empty position becomes a full-size drop target.
+- On a phone, a cellar wider than the screen scrolls sideways. It starts at position 1 and remembers where you left it, and edge fades and "‹ n / n ›" chips show how many bottles are out of view.
 
-A badge on the label shows the drinking window (for example `2025–27`), colored by aging status:
+Each bottle card shows the bottle drawn in its style (Bordeaux, Burgundy, Champagne, a tall Alsace/Riesling bottle, a half bottle for sweet wines, or a Port bottle) in the color of its type. With a label photo, the whole label is shown, never cropped, with a small bottle in the corner. Under it come a status chip with the drinking window, the name, the producer, the vintage and grape (or region for France), and the rating. Identical bottles show a ×N badge, and hovering a bottle outlines every other bottle of the same wine. A bottle with no type or details shows a dashed "?" bottle and a **Needs details** chip.
 
-- **Blue**: too young
-- **Green**: ready to drink
-- **Orange**: peak (current year = last year of aging period)
-- **Red**: past peak
+The status chip pairs a symbol with a color, so it never relies on color alone:
 
-No badge means the aging period is not set. A legend under the filters repeats these colors with the number of bottles in each state.
+- **◷ Too young** (violet)
+- **✓ Ready to drink** (green)
+- **★ At peak**: the current year is the last year of the aging period (amber)
+- **! Past peak** (red)
+- **– No window**: the aging period is not set
+
+A legend under the filters repeats these symbols with the number of bottles in each state.
 
 ![Drag and drop](images/drag_drop.png)
 
@@ -174,12 +183,18 @@ Individual cards can be dragged and dropped at will. Bottles can be moved to an 
 
 ![Bottle View](images/bottle.png)
 
-Clicking on a card opens the Bottle view. This shows detailed information about this particular bottle, including its link. The physical location of the bottle (cellar, shelf, row, position) is also shown, along with a small map of the cellar that highlights the bottle's slot, and a timeline of its drinking window.
+Clicking on a card opens the Bottle view. Its header shows the wine's type, producer, name, vintage and origin, its drinking-window status and its rating. Below, the bottle is shown wearing its label next to the full label photo (tap it to open the photo), or with an **Add label photo** button when there is none.
+
+The location block shows where the bottle is (cellar, shelf, front or back row, position), a small cabinet with the shelf highlighted, and a top view of that shelf. For a back-row bottle it names the bottle in front of it, for example "Behind Barolo (front, position 1) — move it first". It also says how many bottles of this wine you have, with **Find all** to search for every one of them. The drinking-window timeline and the remaining details follow.
+
+- **Show in cellar** closes the view and brings the bottle into view in the Cellar view, pulling its shelf out if it is in a back row.
 
 - **Delete** removes the bottle and all its information, after a confirmation inside the window.
 - **Consume** removes the bottle from the cellar but keeps its information, so it can be reused if a similar bottle is added later.
 - **Edit** opens the edit window (see below).
 - **Copy** temporarily keeps the bottle data in memory and closes the view. A banner confirms the copy and every empty slot pulses; clicking one copies all the fields into that slot, making it quick to add a second similar bottle. The copy can be cancelled from the banner, and expires after 10 minutes.
+
+On phones, Show in cellar, Copy and Delete are in the "…" menu next to Consume and Edit.
 
 ![Edit View](images/edit_bottle.png)
 
@@ -193,13 +208,13 @@ At the top of the Edit window you can upload a label image or a barcode image. S
 
 ![Compact View](images/compact_view.png)
 
-The Compact view has all the features of the Cellar view. The only difference is that each cellar is shown as if looking into an open wine fridge: every bottle is a glass bottle end colored by wine type, circled by its aging status color, with back-row bottles shown darker and nested between the front ones. Hovering a bottle shows its name, vintage, and aging status. It is particularly useful on mobile or for a denser overview of several cellars. If the screen allows it, the card puts cellars side by side. This view is closer to what is typically seen in a cellar manager app.
+The Compact view has all the features of the Cellar view. The only difference is that each cellar is shown as if looking into an open wine fridge: every bottle is a glass bottle end on a wire rack, colored by wine type and circled by its aging status color, with the status symbol in the middle. Back-row bottles are smaller and darker, staggered behind the front ones. Hovering a bottle shows its name, producer, vintage, status and where it is. When a search finds only a few bottles, they pop forward. It is particularly useful on mobile or for a denser overview of several cellars. If the screen allows it, the card puts cellars side by side. This view is closer to what is typically seen in a cellar manager app.
 
 ### All Bottles
 
 ![All Bottles](images/all_bottles.png)
 
-A table of all current bottles, grouped by type. The Location column shows where each bottle is stored (cellar, shelf, row, and position), and sorting by it lists bottles in the order they sit in your cellars. The Aging column shows the drinking window with its status color. Any column can be sorted in ascending or descending order. Clicking a row opens the same Bottle view as the Cellar and Compact views.
+A table of all current bottles, grouped by type. The Location column shows where each bottle is stored (cellar, shelf, row, and position), and sorting by it lists bottles in the order they sit in your cellars. The Aging column shows the drinking window with its status symbol. Any column can be sorted in ascending or descending order. Clicking a row opens the same Bottle view as the Cellar and Compact views.
 
 ### Statistics
 
