@@ -4,9 +4,6 @@ const WCM_TRANSLATIONS = {
     "compact": "Compact",
     "all_bottles": "All Bottles",
     "stats": "Stats",
-    "add_cellar": "Add Cellar",
-    "add_bottle": "Add Bottle",
-    "edit_bottle": "Edit Bottle",
     "ready_to_drink": "Ready to Drink",
     "all_types": "All Types",
     "all_countries": "All Countries",
@@ -20,11 +17,7 @@ const WCM_TRANSLATIONS = {
     "price": "Price",
     "rating": "Rating",
     "notes": "Notes",
-    "aging_start": "Aging start year",
-    "aging_end": "Aging end year",
     "shelf": "Shelf",
-    "lane": "Lane",
-    "position": "Position",
     "front": "Front",
     "back": "Back",
     "consume": "Consume",
@@ -32,7 +25,6 @@ const WCM_TRANSLATIONS = {
     "save": "Save",
     "cancel": "Cancel",
     "close": "Close",
-    "search_history": "Search previous bottles",
     "taste_window_title": "Optimal Drinking Window",
     "serving_temp": "Serving temperature",
     "alcohol_pct": "Alcohol level",
@@ -80,70 +72,20 @@ const WCM_TRANSLATIONS = {
     "physical_location": "Physical Location",
     "copy": "Copy",
     "edit": "Edit",
-    "wine_acquisition_identification": "Wine Acquisition & Identification",
-    "upload_barcode_saq_only": "📁 Upload Barcode (SAQ Only)",
-    "upload_label_photo": "📁 Upload Label Photo",
-    "barcode_number_14_digits": "Barcode Number (14 digits)",
-    "scan_result_or_manual_entry": "Scan result or manual entry",
-    "label_image_path": "Label Image Path",
-    "analyze": "Analyze",
-    "image_not_reachable": "Image not reachable",
-    "search_history_placeholder": "Wine name, producer, region...",
-    "saq_com_url": "SAQ.com URL",
     "cellar": "Cellar",
     "view": "View",
     "shelf_name": "Shelf Name",
-    "order": "Order",
-    "front_capacity": "Front capacity",
-    "back_capacity": "Back capacity",
-    "remove": "Remove",
-    "shelf_1": "Shelf 1",
     "edit_cellar": "Edit cellar",
     "cellar_name": "Name",
-    "display_order": "Display order",
-    "background_color": "Background Color",
-    "default_ha_theme": "Default (HA Theme)",
-    "bordeaux_red": "Bordeaux Red",
-    "oak_brown": "Oak Brown",
-    "olive_green": "Olive Green",
-    "azur_blue": "Azur Blue",
-    "slate_gray": "Slate Gray",
-    "off_white": "Off White",
     "shelves": "Shelves",
     "add_shelf": "Add shelf",
-    "details_and_label_applied": "✨ Wine details and label applied automatically!",
-    "select_barcode_photo": "Select barcode photo...",
-    "reading_barcode_photo": "Reading barcode photo...",
-    "sending_photo_to_ai": "Sending photo to AI...",
-    "ai_extracting_barcode": "AI extracting barcode...",
-    "barcode_detected_and_applied": "Barcode detected and applied!",
     "no_barcode_found": "No barcode found.",
     "barcode_extraction_failed": "Barcode extraction failed.",
-    "select_label_photo": "Select label photo...",
     "confirm_reanalyze": "This wine has already been analyzed successfully. Overwrite the data and run the analysis again?",
     "provide_barcode_or_label": "Please provide a barcode (digits) or upload a label image before running the analysis.",
-    "starting_smart_analysis": "Starting smart analysis...",
-    "analysis_completed": "✨ Analysis completed successfully! Details applied.",
-    "no_result_found": "No result found.",
-    "analysis_failed": "Analysis failed: ",
     "confirm_merge_all": "Do you want to merge and standardize all listed syntaxes?",
     "scanner_error": "Scanner error: ",
-    "upload_label_first": "Please upload or capture a label image first.",
-    "analyzing_label": "Analyzing label...",
-    "label_suggestion_applied": "Label suggestion applied to empty fields.",
-    "no_label_result": "No label result found.",
-    "label_analysis_failed": "Label analysis failed: ",
-    "no_file_selected": "No file selected.",
     "file_not_image": "Selected file is not an image.",
-    "reading_label_image": "Reading label image...",
-    "uploading_label_image": "Uploading label image...",
-    "label_upload_failed": "Label upload failed: ",
-    "select_location_before_copy": "Select cellar, shelf, lane, and position before copying.",
-    "copying_bottle": "Copying existing bottle into current slot...",
-    "copy_bottle_failed": "Copy bottle failed: ",
-    "source_bottle_not_found": "Could not find source bottle.",
-    "bottle_details_copied": "Existing bottle details copied into the form. Review and save.",
-    "bottle_save_failed": "Bottle save failed: ",
     "shelf_front_capacity_min": "Each shelf must have a front capacity of at least 1.",
     "add_at_least_one_shelf": "Add at least one shelf.",
     "cellar_save_failed": "Cellar save failed: ",
@@ -153,14 +95,12 @@ const WCM_TRANSLATIONS = {
     "bottle_copied_to_memory": "Bottle copied to memory. Click an empty slot to paste.",
     "cellar_needs_shelf": "A cellar must have at least one shelf.",
     "unknown_error": "unknown error",
-    "bottle_search_failed": "Bottle search failed: ",
     "bottles_found_suffix": " bottle(s) found.",
     "search_no_match": "No bottles match your search or filters.",
     "clear_filters": "Clear filters",
     "no_bottles_yet": "No bottles in your cellars yet.",
     "add_bottle_short": "+ Bottle",
     "all_slots_full": "Every slot in your cellars is taken. Free a slot, or add a shelf or a cellar, to add a bottle.",
-    "duplicate_warning": "⚠️ Warning: You already have {n} identical bottle(s) in your cellar.",
     "wine_details": "Wine details",
     "cellar_editor": "Cellar editor",
     "bottle_editor": "Bottle editor",
@@ -188,22 +128,10 @@ const WCM_TRANSLATIONS = {
     "delete_cellar_confirm": "Delete cellar",
     "merge_all_title": "Merge {n} spelling pair(s)?",
     "merge_all_body": "{m} bottle(s) will be updated to the selected spelling. Pairs marked for checking are left as they are.",
-    "reanalyze_title": "Analyze this wine again?",
-    "reanalyze_body": "Every field the analysis finds will replace what is in the form now.",
-    "analyze_again": "Analyze again",
     "action_failed": "That did not work: {error}",
-    "err_select_cellar": "Choose a cellar.",
-    "err_select_shelf": "Choose a shelf.",
-    "err_select_lane": "Choose a row (front or back).",
-    "err_choose_position": "Choose a free position. If the list is empty, pick another shelf or row.",
-    "err_wine_name_required": "Wine name is required.",
     "err_shelf_missing": "The selected shelf no longer exists.",
     "err_no_back_lane": "This shelf has no back row.",
-    "err_no_front_positions": "This shelf has no front positions.",
     "err_position_out_of_range": "That position is beyond the shelf's capacity for this row.",
-    "err_position_taken": "That position is already taken by “{name}”. Choose a free position.",
-    "err_aging_order": "The aging start year cannot be later than the aging end year.",
-    "err_aging_end_order": "The aging end year must be the same as or later than the aging start year.",
     "err_rating_range": "Rating must be between 0 and 5.",
     "err_slot_taken_server": "That slot is already taken. Choose another position.",
     "err_shelf_has_bottles": "A shelf that still holds bottles cannot be removed. Move its bottles first.",
@@ -214,16 +142,8 @@ const WCM_TRANSLATIONS = {
     "err_no_entry": "The Wine Cellar Manager integration is not set up.",
     "err_shelf_front_min": "“{shelf}” holds a bottle in front position {n}, so it needs at least {n} front positions.",
     "err_shelf_back_min": "“{shelf}” holds a bottle in back position {n}, so it needs at least {n} back positions.",
-    "position_free": "Position {n} (free)",
-    "position_current": "Position {n} (current)",
-    "no_free_position": "No free position in this row",
     "shelf_n": "Shelf {n}",
-    "shelf_stored": "{n} bottle(s) stored",
     "shelf_empty": "Empty",
-    "shelf_remove_blocked": "Move these bottles to another shelf before removing it.",
-    "label_uploaded": "Label image uploaded.",
-    "label_uploaded_duplicates": "Label image uploaded. Possible duplicates found below.",
-    "duplicate_detection_failed": "Duplicate detection failed: ",
     "pasted_details": "Details copied from “{name}”. Check them and save.",
     "cleanup_check_pair": "Similar spelling, but it may be a different name. Check it before merging; Merge All skips it.",
     "depth_back_row": "Back row",
@@ -268,16 +188,160 @@ const WCM_TRANSLATIONS = {
     "bt_replace_photo": "Replace photo",
     "slot_empty_label": "Empty slot, add a bottle: {loc}",
     "loc_front_pos": "{cellar}, {shelf}, front row, position {pos}",
-    "loc_back_pos": "{cellar}, {shelf}, back row, position {pos}"
+    "loc_back_pos": "{cellar}, {shelf}, back row, position {pos}",
+    "sheet_add_title": "Add bottle",
+    "sheet_editing": "Editing",
+    "sheet_sec_label": "Label",
+    "sheet_sec_wine": "The wine",
+    "sheet_sec_place": "Where it goes",
+    "sheet_more": "More details",
+    "sheet_more_hint": "Region, price, drinking window, rating, notes",
+    "sheet_more_filled": "{n} filled",
+    "sheet_take_photo": "Take photo",
+    "sheet_upload_photo": "Upload label photo",
+    "sheet_choose_library": "Choose from library",
+    "sheet_type_instead": "Type it instead",
+    "sheet_scan_barcode": "Scan SAQ barcode",
+    "sheet_photo_title": "Photograph the label",
+    "sheet_photo_title_plain": "Add a label photo",
+    "sheet_photo_sub_ai": "We'll read the name, producer and vintage for you.",
+    "sheet_photo_sub": "A label photo makes the bottle easy to spot on the shelf.",
+    "sheet_photo_drop": "or drop an image here",
+    "sheet_photo_ready": "Label photo",
+    "sheet_photo_replace": "Replace",
+    "sheet_photo_rotate": "Rotate",
+    "sheet_photo_remove": "Remove",
+    "sheet_photo_read": "Read label",
+    "sheet_st_preparing": "Preparing photo…",
+    "sheet_st_uploading": "Uploading…",
+    "sheet_st_reading": "Reading the label…",
+    "sheet_st_barcode": "Reading the barcode…",
+    "sheet_note_reading": "Reading the label. Keep typing if you like: only empty fields get filled.",
+    "sheet_note_ai_one": "Filled {n} detail from the label. Give it a quick check.",
+    "sheet_note_ai_other": "Filled {n} details from the label. Give them a quick check.",
+    "sheet_note_cellar_one": "Filled {n} detail from {name} in your cellar.",
+    "sheet_note_cellar_other": "Filled {n} details from {name} in your cellar.",
+    "sheet_note_none": "Nothing new found on the label.",
+    "sheet_note_fail": "Couldn't read this label automatically. Fill in the details below.",
+    "undo": "Undo",
+    "undone": "Undone",
+    "sheet_mark_ai": "AI",
+    "sheet_mark_cellar": "From cellar",
+    "sheet_name_ph": "e.g. Barolo, Château Margaux…",
+    "sheet_in_cellar": "{n} in cellar",
+    "sheet_had_before": "Had before",
+    "sheet_dup": "You already have {n} of this wine · {where}",
+    "sheet_type_unset": "Not sure",
+    "sheet_window": "Drinking window",
+    "sheet_from": "From",
+    "sheet_to": "To",
+    "sheet_win_none": "Add the years to see when it will be ready.",
+    "sheet_win_young": "Too young · opens in {y}",
+    "sheet_win_ready": "Ready to drink · until {y}",
+    "sheet_win_peak": "At its peak this year",
+    "sheet_win_past": "Past its peak since {y}",
+    "sheet_rating_none": "None",
+    "sheet_link": "Product link",
+    "sheet_barcode": "Barcode",
+    "sheet_lookup": "Look up",
+    "pick_bottles": "How many bottles",
+    "pick_qty_less": "One bottle fewer",
+    "pick_qty_more": "One more bottle",
+    "pick_free_one": "{n} free",
+    "pick_free_other": "{n} free",
+    "pick_full": "Full",
+    "pick_hint": "Tap a free slot to choose where it goes.",
+    "pick_hint_n": "Fills {n} free slots in order, starting at the one you tap.",
+    "pick_hint_edit": "Tap a free slot to move the bottle there when you save.",
+    "sheet_plan_n": "{n} bottles · {where}",
+    "pick_move_from": "Moves from {from}",
+    "pick_occupied": "Taken · {name}",
+    "pick_slot_free": "{shelf}, {lane}, position {pos}, free",
+    "pick_slot_current": "{shelf}, {lane}, position {pos}, current slot",
+    "pick_no_free": "Every slot is full.",
+    "pick_no_free_sub": "Add a shelf or a cellar to make room, then add the bottle.",
+    "pick_add_shelves_to": "Add shelves to {name}",
+    "pick_new_cellar": "New cellar",
+    "sheet_only_name": "Only the name is required.",
+    "sheet_save_n": "Save {n} bottles",
+    "sheet_save_next": "Save & add another",
+    "sheet_save_changes": "Save changes",
+    "sheet_saving": "Saving…",
+    "sheet_saving_n": "Saving {i} of {n}…",
+    "sheet_saved_one": "Added {name} · {where}",
+    "sheet_saved_n": "Added {n} bottles · {where}",
+    "sheet_saved_edit": "Changes saved",
+    "sheet_err_name": "Give the wine a name.",
+    "sheet_err_year": "Use a 4-digit year.",
+    "sheet_err_window": "The window can't end before it starts.",
+    "sheet_err_no_slot": "Choose a free slot.",
+    "sheet_err_slot_taken": "That slot is taken by “{name}”. Pick another one.",
+    "sheet_err_slot_moved": "That slot was just taken, so we picked the next free one. Tap Save again.",
+    "sheet_err_not_enough_one": "Only {n} free slot in {cellar}.",
+    "sheet_err_not_enough_other": "Only {n} free slots in {cellar}.",
+    "sheet_err_partial_left_one": "Saved {i} of {total}. {error} Save again to add the last one.",
+    "sheet_err_partial_left_other": "Saved {i} of {total}. {error} Save again to add the other {n}.",
+    "sheet_err_number": "Enter a number.",
+    "sheet_err_photo_format": "This photo format isn't supported here. Try a JPEG or PNG.",
+    "sheet_err_photo_upload": "The photo couldn't be uploaded. {error}",
+    "sheet_err_save": "Couldn't save: {error}",
+    "move_action": "Move",
+    "move_moving": "Moving {name}",
+    "move_hint": "Tap an empty slot, or a bottle to swap.",
+    "move_hint_kb": "Esc cancels.",
+    "move_done": "Moved {name} to {where}",
+    "move_swapped": "Swapped {a} and {b}",
+    "move_failed": "Couldn't move the bottle: {error}",
+    "builder_title_new": "New cellar",
+    "builder_name_ph": "e.g. Kitchen wine fridge",
+    "builder_finish": "Frame finish",
+    "builder_quick": "Quick start",
+    "builder_tpl_fridge": "Wine fridge",
+    "builder_tpl_stagger": "Staggered rack",
+    "builder_tpl_rack": "Open rack",
+    "builder_tpl_sub": "{s} shelves × {f}",
+    "builder_tpl_sub2": "{s} shelves × {f} + {b} behind",
+    "builder_shelves_hint": "Top shelf first. The back row sits behind the front row, offset so every label stays visible.",
+    "builder_front_slots": "Front slots",
+    "builder_back_slots": "Back slots",
+    "builder_fewer": "Fewer {lane} slots",
+    "builder_more": "More {lane} slots",
+    "builder_stored": "{n} stored",
+    "builder_up": "Move shelf up",
+    "builder_down": "Move shelf down",
+    "builder_remove": "Remove shelf",
+    "builder_remove_blocked_one": "Move the bottle on this shelf first.",
+    "builder_remove_blocked_other": "Move the {n} bottles on this shelf first.",
+    "builder_min_hint": "A bottle sits in slot {n}.",
+    "builder_preview": "Preview",
+    "builder_legend_stored": "Stored",
+    "builder_legend_free": "Free",
+    "builder_save": "Save cellar",
+    "builder_create": "Create cellar",
+    "builder_saved": "Cellar saved",
+    "sheet_wait_photo": "Waiting for the photo…",
+    "builder_position": "Position among your cellars",
+    "builder_pos_first": "First",
+    "builder_pos_after": "After {name}",
+    "builder_order_failed": "Cellar saved, but the order of the other cellars could not be updated.",
+    "builder_fin_bordeaux": "Bordeaux lacquer",
+    "builder_fin_oak": "Oak",
+    "builder_fin_olive": "Olive",
+    "builder_fin_azure": "Azure",
+    "builder_fin_slate": "Slate",
+    "builder_fin_steel": "Brushed steel",
+    "builder_fin_custom": "Custom",
+    "builder_shelves_one": "{n} shelf",
+    "builder_shelves_other": "{n} shelves",
+    "builder_slots_one": "{n} slot",
+    "builder_slots_other": "{n} slots",
+    "builder_fin_graphite": "Graphite"
   },
   "fr": {
     "cellars": "Celliers",
     "compact": "Compact",
     "all_bottles": "Toutes les bouteilles",
     "stats": "Statistiques",
-    "add_cellar": "Ajouter un cellier",
-    "add_bottle": "Ajouter une bouteille",
-    "edit_bottle": "Modifier la bouteille",
     "ready_to_drink": "Prêt à boire",
     "all_types": "Tous les types",
     "all_countries": "Tous les pays",
@@ -291,11 +355,7 @@ const WCM_TRANSLATIONS = {
     "price": "Prix",
     "rating": "Évaluation",
     "notes": "Notes",
-    "aging_start": "Début de l'apogée",
-    "aging_end": "Fin de l'apogée",
     "shelf": "Tablette",
-    "lane": "Rang",
-    "position": "Position",
     "front": "Avant",
     "back": "Arrière",
     "consume": "Consommer",
@@ -303,7 +363,6 @@ const WCM_TRANSLATIONS = {
     "save": "Enregistrer",
     "cancel": "Annuler",
     "close": "Fermer",
-    "search_history": "Rechercher dans l'historique",
     "taste_window_title": "Fenêtre de dégustation",
     "serving_temp": "Température de service",
     "alcohol_pct": "Degré d'alcool",
@@ -351,70 +410,20 @@ const WCM_TRANSLATIONS = {
     "physical_location": "Emplacement physique",
     "copy": "Copier",
     "edit": "Modifier",
-    "wine_acquisition_identification": "Acquisition et identification du vin",
-    "upload_barcode_saq_only": "📁 Charger code-barres (SAQ seulement)",
-    "upload_label_photo": "📁 Charger photo étiquette",
-    "barcode_number_14_digits": "Numéro du code-barres (14 chiffres)",
-    "scan_result_or_manual_entry": "Résultat du scan ou entrée manuelle",
-    "label_image_path": "Chemin de l'image de l'étiquette",
-    "analyze": "Analyser",
-    "image_not_reachable": "Image non accessible",
-    "search_history_placeholder": "Nom du vin, vignoble, région...",
-    "saq_com_url": "Lien SAQ.com",
     "cellar": "Cellier",
     "view": "Voir",
     "shelf_name": "Nom de la tablette",
-    "order": "Ordre",
-    "front_capacity": "Capacité avant",
-    "back_capacity": "Capacité arrière",
-    "remove": "Supprimer",
-    "shelf_1": "Tablette 1",
     "edit_cellar": "Modifier le cellier",
     "cellar_name": "Nom du cellier",
-    "display_order": "Ordre d'affichage",
-    "background_color": "Couleur d'arrière-plan",
-    "default_ha_theme": "Par défaut (Thème HA)",
-    "bordeaux_red": "Rouge Bordeaux",
-    "oak_brown": "Brun Chêne",
-    "olive_green": "Vert Olive",
-    "azur_blue": "Bleu Azur",
-    "slate_gray": "Gris Ardoise",
-    "off_white": "Blanc cassée",
     "shelves": "Tablettes",
     "add_shelf": "+ Ajouter",
-    "details_and_label_applied": "✨ Caractéristiques et étiquette appliquées automatiquement !",
-    "select_barcode_photo": "Sélectionnez la photo du code-barres...",
-    "reading_barcode_photo": "Lecture de la photo du code-barres...",
-    "sending_photo_to_ai": "Envoi de la photo à l'IA...",
-    "ai_extracting_barcode": "L'IA extrait le code-barres...",
-    "barcode_detected_and_applied": "Code-barres détecté et appliqué !",
     "no_barcode_found": "Aucun code-barres trouvé.",
     "barcode_extraction_failed": "L'extraction du code-barres a échoué.",
-    "select_label_photo": "Sélectionnez la photo de l'étiquette...",
     "confirm_reanalyze": "Ce vin a déjà été analysé avec succès. Voulez-vous écraser les données et relancer l'analyse ?",
     "provide_barcode_or_label": "Veuillez fournir un code-barres (chiffres) ou téléverser une étiquette avant de lancer l'analyse.",
-    "starting_smart_analysis": "Lancement de l'analyse intelligente...",
-    "analysis_completed": "✨ Analyse complétée avec succès ! Caractéristiques appliquées.",
-    "no_result_found": "Aucun résultat trouvé.",
-    "analysis_failed": "L'analyse a échoué : ",
     "confirm_merge_all": "Voulez-vous fusionner et uniformiser toutes les syntaxes listées ?",
     "scanner_error": "Erreur du lecteur : ",
-    "upload_label_first": "Veuillez d'abord téléverser ou photographier une étiquette.",
-    "analyzing_label": "Analyse de l'étiquette...",
-    "label_suggestion_applied": "Suggestion de l'étiquette appliquée aux champs vides.",
-    "no_label_result": "Aucun résultat pour l'étiquette.",
-    "label_analysis_failed": "L'analyse de l'étiquette a échoué : ",
-    "no_file_selected": "Aucun fichier sélectionné.",
     "file_not_image": "Le fichier sélectionné n'est pas une image.",
-    "reading_label_image": "Lecture de l'image de l'étiquette...",
-    "uploading_label_image": "Téléversement de l'image de l'étiquette...",
-    "label_upload_failed": "Le téléversement de l'étiquette a échoué : ",
-    "select_location_before_copy": "Sélectionnez le cellier, la tablette, le rang et la position avant de copier.",
-    "copying_bottle": "Copie de la bouteille existante dans l'emplacement actuel...",
-    "copy_bottle_failed": "La copie de la bouteille a échoué : ",
-    "source_bottle_not_found": "Bouteille source introuvable.",
-    "bottle_details_copied": "Détails de la bouteille copiés dans le formulaire. Vérifiez puis enregistrez.",
-    "bottle_save_failed": "L'enregistrement de la bouteille a échoué : ",
     "shelf_front_capacity_min": "Chaque tablette doit avoir une capacité avant d'au moins 1.",
     "add_at_least_one_shelf": "Ajoutez au moins une tablette.",
     "cellar_save_failed": "L'enregistrement du cellier a échoué : ",
@@ -424,14 +433,12 @@ const WCM_TRANSLATIONS = {
     "bottle_copied_to_memory": "Bouteille copiée en mémoire. Cliquez sur un emplacement vide pour la coller.",
     "cellar_needs_shelf": "Un cellier doit avoir au moins une tablette.",
     "unknown_error": "erreur inconnue",
-    "bottle_search_failed": "La recherche de bouteilles a échoué : ",
     "bottles_found_suffix": " bouteille(s) trouvée(s).",
     "search_no_match": "Aucune bouteille ne correspond à votre recherche ou à vos filtres.",
     "clear_filters": "Effacer les filtres",
     "no_bottles_yet": "Aucune bouteille dans vos celliers pour l'instant.",
     "add_bottle_short": "+ Bouteille",
     "all_slots_full": "Tous les emplacements de vos celliers sont occupés. Libérez un emplacement, ou ajoutez une tablette ou un cellier, pour ajouter une bouteille.",
-    "duplicate_warning": "⚠️ Attention : Vous possédez déjà {n} bouteille(s) identique(s) dans votre cellier.",
     "wine_details": "Détails du vin",
     "cellar_editor": "Éditeur de cellier",
     "bottle_editor": "Éditeur de bouteille",
@@ -459,22 +466,10 @@ const WCM_TRANSLATIONS = {
     "delete_cellar_confirm": "Supprimer le cellier",
     "merge_all_title": "Fusionner {n} paire(s) d'orthographes ?",
     "merge_all_body": "{m} bouteille(s) prendront l'orthographe choisie. Les paires à vérifier ne sont pas modifiées.",
-    "reanalyze_title": "Analyser ce vin à nouveau ?",
-    "reanalyze_body": "Chaque champ trouvé par l'analyse remplacera le contenu actuel du formulaire.",
-    "analyze_again": "Analyser à nouveau",
     "action_failed": "L'opération a échoué : {error}",
-    "err_select_cellar": "Choisissez un cellier.",
-    "err_select_shelf": "Choisissez une tablette.",
-    "err_select_lane": "Choisissez un rang (avant ou arrière).",
-    "err_choose_position": "Choisissez une position libre. Si la liste est vide, choisissez une autre tablette ou un autre rang.",
-    "err_wine_name_required": "Le nom du vin est requis.",
     "err_shelf_missing": "La tablette choisie n'existe plus.",
     "err_no_back_lane": "Cette tablette n'a pas de rang arrière.",
-    "err_no_front_positions": "Cette tablette n'a aucune position avant.",
     "err_position_out_of_range": "Cette position dépasse la capacité de la tablette pour ce rang.",
-    "err_position_taken": "Cette position est déjà occupée par « {name} ». Choisissez une position libre.",
-    "err_aging_order": "L'année de début de l'apogée ne peut pas être postérieure à l'année de fin.",
-    "err_aging_end_order": "L'année de fin de l'apogée doit être égale ou postérieure à l'année de début.",
     "err_rating_range": "L'évaluation doit être comprise entre 0 et 5.",
     "err_slot_taken_server": "Cet emplacement est déjà occupé. Choisissez une autre position.",
     "err_shelf_has_bottles": "Une tablette qui contient encore des bouteilles ne peut pas être retirée. Déplacez d'abord ses bouteilles.",
@@ -485,16 +480,8 @@ const WCM_TRANSLATIONS = {
     "err_no_entry": "L'intégration Wine Cellar Manager n'est pas configurée.",
     "err_shelf_front_min": "« {shelf} » contient une bouteille en position avant {n} : il lui faut au moins {n} positions avant.",
     "err_shelf_back_min": "« {shelf} » contient une bouteille en position arrière {n} : il lui faut au moins {n} positions arrière.",
-    "position_free": "Position {n} (libre)",
-    "position_current": "Position {n} (actuelle)",
-    "no_free_position": "Aucune position libre dans ce rang",
     "shelf_n": "Tablette {n}",
-    "shelf_stored": "{n} bouteille(s) rangée(s)",
     "shelf_empty": "Vide",
-    "shelf_remove_blocked": "Déplacez ces bouteilles vers une autre tablette avant de la retirer.",
-    "label_uploaded": "Image de l'étiquette téléversée.",
-    "label_uploaded_duplicates": "Image de l'étiquette téléversée. Doublons possibles ci-dessous.",
-    "duplicate_detection_failed": "La détection des doublons a échoué : ",
     "pasted_details": "Détails copiés depuis « {name} ». Vérifiez-les puis enregistrez.",
     "cleanup_check_pair": "Orthographe proche, mais il peut s'agir d'un autre nom. Vérifiez avant de fusionner ; « Fusionner tout » l'ignore.",
     "depth_back_row": "Rang arrière",
@@ -539,16 +526,160 @@ const WCM_TRANSLATIONS = {
     "bt_replace_photo": "Remplacer la photo",
     "slot_empty_label": "Emplacement vide, ajouter une bouteille : {loc}",
     "loc_front_pos": "{cellar}, {shelf}, rang avant, position {pos}",
-    "loc_back_pos": "{cellar}, {shelf}, rang arrière, position {pos}"
+    "loc_back_pos": "{cellar}, {shelf}, rang arrière, position {pos}",
+    "sheet_add_title": "Ajouter une bouteille",
+    "sheet_editing": "Modification",
+    "sheet_sec_label": "Étiquette",
+    "sheet_sec_wine": "Le vin",
+    "sheet_sec_place": "Emplacement",
+    "sheet_more": "Plus de détails",
+    "sheet_more_hint": "Région, prix, fenêtre de dégustation, note, notes",
+    "sheet_more_filled": "{n} remplis",
+    "sheet_take_photo": "Prendre une photo",
+    "sheet_upload_photo": "Téléverser une photo",
+    "sheet_choose_library": "Choisir dans la galerie",
+    "sheet_type_instead": "Saisir à la main",
+    "sheet_scan_barcode": "Scanner le code-barres SAQ",
+    "sheet_photo_title": "Photographiez l’étiquette",
+    "sheet_photo_title_plain": "Ajouter une photo de l’étiquette",
+    "sheet_photo_sub_ai": "Nous lirons le nom, le producteur et le millésime pour vous.",
+    "sheet_photo_sub": "Une photo de l’étiquette aide à repérer la bouteille.",
+    "sheet_photo_drop": "ou déposez une image ici",
+    "sheet_photo_ready": "Photo de l’étiquette",
+    "sheet_photo_replace": "Remplacer",
+    "sheet_photo_rotate": "Pivoter",
+    "sheet_photo_remove": "Retirer",
+    "sheet_photo_read": "Lire l’étiquette",
+    "sheet_st_preparing": "Préparation de la photo…",
+    "sheet_st_uploading": "Téléversement…",
+    "sheet_st_reading": "Lecture de l’étiquette…",
+    "sheet_st_barcode": "Lecture du code-barres…",
+    "sheet_note_reading": "Lecture de l’étiquette. Vous pouvez continuer : seuls les champs vides seront remplis.",
+    "sheet_note_ai_one": "{n} détail rempli depuis l’étiquette. Vérifiez-le rapidement.",
+    "sheet_note_ai_other": "{n} détails remplis depuis l’étiquette. Vérifiez-les rapidement.",
+    "sheet_note_cellar_one": "{n} détail rempli depuis {name} de votre cave.",
+    "sheet_note_cellar_other": "{n} détails remplis depuis {name} de votre cave.",
+    "sheet_note_none": "Rien de nouveau trouvé sur l’étiquette.",
+    "sheet_note_fail": "Impossible de lire cette étiquette automatiquement. Complétez les détails ci-dessous.",
+    "undo": "Annuler",
+    "undone": "Annulé",
+    "sheet_mark_ai": "IA",
+    "sheet_mark_cellar": "De la cave",
+    "sheet_name_ph": "ex. Barolo, Château Margaux…",
+    "sheet_in_cellar": "{n} en cave",
+    "sheet_had_before": "Déjà bue",
+    "sheet_dup": "Vous avez déjà {n} bouteille(s) de ce vin · {where}",
+    "sheet_type_unset": "Je ne sais pas",
+    "sheet_window": "Fenêtre de dégustation",
+    "sheet_from": "De",
+    "sheet_to": "À",
+    "sheet_win_none": "Ajoutez les années pour savoir quand la boire.",
+    "sheet_win_young": "Trop jeune · s’ouvre en {y}",
+    "sheet_win_ready": "Prête à boire · jusqu’en {y}",
+    "sheet_win_peak": "À son apogée cette année",
+    "sheet_win_past": "Passée depuis {y}",
+    "sheet_rating_none": "Aucune",
+    "sheet_link": "Lien du produit",
+    "sheet_barcode": "Code-barres",
+    "sheet_lookup": "Rechercher",
+    "pick_bottles": "Combien de bouteilles",
+    "pick_qty_less": "Une bouteille de moins",
+    "pick_qty_more": "Une bouteille de plus",
+    "pick_free_one": "{n} libre",
+    "pick_free_other": "{n} libres",
+    "pick_full": "Pleine",
+    "pick_hint": "Touchez un emplacement libre pour choisir.",
+    "pick_hint_n": "Remplit {n} emplacements libres dans l’ordre, à partir de celui choisi.",
+    "pick_hint_edit": "Touchez un emplacement libre pour y déplacer la bouteille à l’enregistrement.",
+    "sheet_plan_n": "{n} bouteilles · {where}",
+    "pick_move_from": "Déplacée depuis {from}",
+    "pick_occupied": "Occupé · {name}",
+    "pick_slot_free": "{shelf}, {lane}, position {pos}, libre",
+    "pick_slot_current": "{shelf}, {lane}, position {pos}, emplacement actuel",
+    "pick_no_free": "Tous les emplacements sont occupés.",
+    "pick_no_free_sub": "Ajoutez une tablette ou un cellier pour faire de la place.",
+    "pick_add_shelves_to": "Ajouter des tablettes à {name}",
+    "pick_new_cellar": "Nouveau cellier",
+    "sheet_only_name": "Seul le nom est obligatoire.",
+    "sheet_save_n": "Enregistrer {n} bouteilles",
+    "sheet_save_next": "Enregistrer et ajouter",
+    "sheet_save_changes": "Enregistrer",
+    "sheet_saving": "Enregistrement…",
+    "sheet_saving_n": "Enregistrement {i} sur {n}…",
+    "sheet_saved_one": "{name} ajoutée · {where}",
+    "sheet_saved_n": "{n} bouteilles ajoutées · {where}",
+    "sheet_saved_edit": "Modifications enregistrées",
+    "sheet_err_name": "Donnez un nom au vin.",
+    "sheet_err_year": "Utilisez une année à 4 chiffres.",
+    "sheet_err_window": "La fenêtre ne peut pas finir avant de commencer.",
+    "sheet_err_no_slot": "Choisissez un emplacement libre.",
+    "sheet_err_slot_taken": "Cet emplacement est occupé par « {name} ». Choisissez-en un autre.",
+    "sheet_err_slot_moved": "Cet emplacement vient d’être pris : nous avons choisi le suivant. Touchez Enregistrer à nouveau.",
+    "sheet_err_not_enough_one": "Seulement {n} emplacement libre dans {cellar}.",
+    "sheet_err_not_enough_other": "Seulement {n} emplacements libres dans {cellar}.",
+    "sheet_err_partial_left_one": "{i} sur {total} enregistrées. {error} Enregistrez à nouveau pour ajouter la dernière.",
+    "sheet_err_partial_left_other": "{i} sur {total} enregistrées. {error} Enregistrez à nouveau pour ajouter les {n} autres.",
+    "sheet_err_number": "Entrez un nombre.",
+    "sheet_err_photo_format": "Ce format de photo n’est pas pris en charge. Essayez JPEG ou PNG.",
+    "sheet_err_photo_upload": "La photo n’a pas pu être téléversée. {error}",
+    "sheet_err_save": "Enregistrement impossible : {error}",
+    "move_action": "Déplacer",
+    "move_moving": "Déplacement de {name}",
+    "move_hint": "Touchez un emplacement vide, ou une bouteille pour échanger.",
+    "move_hint_kb": "Échap annule.",
+    "move_done": "{name} déplacée vers {where}",
+    "move_swapped": "{a} et {b} échangées",
+    "move_failed": "Déplacement impossible : {error}",
+    "builder_title_new": "Nouveau cellier",
+    "builder_name_ph": "ex. Cave de la cuisine",
+    "builder_finish": "Finition du cadre",
+    "builder_quick": "Démarrage rapide",
+    "builder_tpl_fridge": "Cave à vin",
+    "builder_tpl_stagger": "Casier en quinconce",
+    "builder_tpl_rack": "Casier ouvert",
+    "builder_tpl_sub": "{s} tablettes × {f}",
+    "builder_tpl_sub2": "{s} tablettes × {f} + {b} derrière",
+    "builder_shelves_hint": "Du haut vers le bas. La rangée arrière est derrière la rangée avant, décalée pour garder les étiquettes visibles.",
+    "builder_front_slots": "Emplacements avant",
+    "builder_back_slots": "Emplacements arrière",
+    "builder_fewer": "Moins d’emplacements ({lane})",
+    "builder_more": "Plus d’emplacements ({lane})",
+    "builder_stored": "{n} stockées",
+    "builder_up": "Monter la tablette",
+    "builder_down": "Descendre la tablette",
+    "builder_remove": "Retirer la tablette",
+    "builder_remove_blocked_one": "Déplacez d’abord la bouteille de cette tablette.",
+    "builder_remove_blocked_other": "Déplacez d’abord les {n} bouteilles de cette tablette.",
+    "builder_min_hint": "Une bouteille occupe l’emplacement {n}.",
+    "builder_preview": "Aperçu",
+    "builder_legend_stored": "Stockée",
+    "builder_legend_free": "Libre",
+    "builder_save": "Enregistrer le cellier",
+    "builder_create": "Créer le cellier",
+    "builder_saved": "Cellier enregistré",
+    "sheet_wait_photo": "En attente de la photo…",
+    "builder_position": "Position parmi vos celliers",
+    "builder_pos_first": "En premier",
+    "builder_pos_after": "Après {name}",
+    "builder_order_failed": "Cellier enregistré, mais l’ordre des autres celliers n’a pas pu être mis à jour.",
+    "builder_fin_bordeaux": "Laque bordeaux",
+    "builder_fin_oak": "Chêne",
+    "builder_fin_olive": "Olive",
+    "builder_fin_azure": "Azur",
+    "builder_fin_slate": "Ardoise",
+    "builder_fin_steel": "Acier brossé",
+    "builder_fin_custom": "Personnalisée",
+    "builder_shelves_one": "{n} tablette",
+    "builder_shelves_other": "{n} tablettes",
+    "builder_slots_one": "{n} emplacement",
+    "builder_slots_other": "{n} emplacements",
+    "builder_fin_graphite": "Graphite"
   },
   "de": {
     "cellars": "Weinkeller",
     "compact": "Kompakt",
     "all_bottles": "Alle Flaschen",
     "stats": "Statistik",
-    "add_cellar": "Keller hinzufügen",
-    "add_bottle": "Flasche hinzufügen",
-    "edit_bottle": "Flasche bearbeiten",
     "ready_to_drink": "Trinkreif",
     "all_types": "Alle Sorten",
     "all_countries": "Alle Länder",
@@ -562,11 +693,7 @@ const WCM_TRANSLATIONS = {
     "price": "Preis",
     "rating": "Bewertung",
     "notes": "Notizen",
-    "aging_start": "Trinkreife ab (Jahr)",
-    "aging_end": "Trinkreife bis (Jahr)",
     "shelf": "Regal",
-    "lane": "Reihe",
-    "position": "Position",
     "front": "Vorne",
     "back": "Hinten",
     "consume": "Trinken",
@@ -574,7 +701,6 @@ const WCM_TRANSLATIONS = {
     "save": "Speichern",
     "cancel": "Abbrechen",
     "close": "Schließen",
-    "search_history": "Frühere Flaschen durchsuchen",
     "taste_window_title": "Optimales Trinkfenster",
     "serving_temp": "Serviertemperatur",
     "alcohol_pct": "Alkoholgehalt",
@@ -622,70 +748,20 @@ const WCM_TRANSLATIONS = {
     "physical_location": "Lagerort",
     "copy": "Kopieren",
     "edit": "Bearbeiten",
-    "wine_acquisition_identification": "Weinerfassung und Identifikation",
-    "upload_barcode_saq_only": "📁 Barcode hochladen (nur SAQ)",
-    "upload_label_photo": "📁 Etikettenfoto hochladen",
-    "barcode_number_14_digits": "Barcodenummer (14 Ziffern)",
-    "scan_result_or_manual_entry": "Scanergebnis oder manuelle Eingabe",
-    "label_image_path": "Pfad zum Etikettenbild",
-    "analyze": "Analysieren",
-    "image_not_reachable": "Bild nicht erreichbar",
-    "search_history_placeholder": "Weinname, Erzeuger, Region...",
-    "saq_com_url": "SAQ.com-URL",
     "cellar": "Keller",
     "view": "Ansehen",
     "shelf_name": "Regalname",
-    "order": "Reihenfolge",
-    "front_capacity": "Kapazität vorne",
-    "back_capacity": "Kapazität hinten",
-    "remove": "Entfernen",
-    "shelf_1": "Regal 1",
     "edit_cellar": "Keller bearbeiten",
     "cellar_name": "Name",
-    "display_order": "Anzeigereihenfolge",
-    "background_color": "Hintergrundfarbe",
-    "default_ha_theme": "Standard (HA-Design)",
-    "bordeaux_red": "Bordeauxrot",
-    "oak_brown": "Eichenbraun",
-    "olive_green": "Olivgrün",
-    "azur_blue": "Azurblau",
-    "slate_gray": "Schiefergrau",
-    "off_white": "Cremeweiß",
     "shelves": "Regale",
     "add_shelf": "Regal hinzufügen",
-    "details_and_label_applied": "✨ Weindetails und Etikett automatisch übernommen!",
-    "select_barcode_photo": "Barcodefoto auswählen...",
-    "reading_barcode_photo": "Barcodefoto wird gelesen...",
-    "sending_photo_to_ai": "Foto wird an die KI gesendet...",
-    "ai_extracting_barcode": "KI liest den Barcode...",
-    "barcode_detected_and_applied": "Barcode erkannt und übernommen!",
     "no_barcode_found": "Kein Barcode gefunden.",
     "barcode_extraction_failed": "Barcode-Erkennung fehlgeschlagen.",
-    "select_label_photo": "Etikettenfoto auswählen...",
     "confirm_reanalyze": "Dieser Wein wurde bereits erfolgreich analysiert. Daten überschreiben und Analyse erneut ausführen?",
     "provide_barcode_or_label": "Bitte geben Sie einen Barcode (Ziffern) ein oder laden Sie ein Etikettenbild hoch, bevor Sie die Analyse starten.",
-    "starting_smart_analysis": "Intelligente Analyse wird gestartet...",
-    "analysis_completed": "✨ Analyse erfolgreich abgeschlossen! Details übernommen.",
-    "no_result_found": "Kein Ergebnis gefunden.",
-    "analysis_failed": "Analyse fehlgeschlagen: ",
     "confirm_merge_all": "Möchten Sie alle aufgeführten Schreibweisen zusammenführen und vereinheitlichen?",
     "scanner_error": "Scannerfehler: ",
-    "upload_label_first": "Bitte laden Sie zuerst ein Etikettenbild hoch oder nehmen Sie eines auf.",
-    "analyzing_label": "Etikett wird analysiert...",
-    "label_suggestion_applied": "Etikettenvorschlag auf leere Felder angewendet.",
-    "no_label_result": "Kein Etikettenergebnis gefunden.",
-    "label_analysis_failed": "Etikettenanalyse fehlgeschlagen: ",
-    "no_file_selected": "Keine Datei ausgewählt.",
     "file_not_image": "Die ausgewählte Datei ist kein Bild.",
-    "reading_label_image": "Etikettenbild wird gelesen...",
-    "uploading_label_image": "Etikettenbild wird hochgeladen...",
-    "label_upload_failed": "Hochladen des Etiketts fehlgeschlagen: ",
-    "select_location_before_copy": "Wählen Sie Keller, Regal, Reihe und Position aus, bevor Sie kopieren.",
-    "copying_bottle": "Vorhandene Flasche wird in den aktuellen Platz kopiert...",
-    "copy_bottle_failed": "Kopieren der Flasche fehlgeschlagen: ",
-    "source_bottle_not_found": "Quellflasche nicht gefunden.",
-    "bottle_details_copied": "Flaschendetails ins Formular kopiert. Prüfen und speichern.",
-    "bottle_save_failed": "Speichern der Flasche fehlgeschlagen: ",
     "shelf_front_capacity_min": "Jedes Regal braucht vorne eine Kapazität von mindestens 1.",
     "add_at_least_one_shelf": "Fügen Sie mindestens ein Regal hinzu.",
     "cellar_save_failed": "Speichern des Kellers fehlgeschlagen: ",
@@ -695,14 +771,12 @@ const WCM_TRANSLATIONS = {
     "bottle_copied_to_memory": "Flasche zwischengespeichert. Klicken Sie auf einen leeren Platz zum Einfügen.",
     "cellar_needs_shelf": "Ein Keller muss mindestens ein Regal haben.",
     "unknown_error": "unbekannter Fehler",
-    "bottle_search_failed": "Flaschensuche fehlgeschlagen: ",
     "bottles_found_suffix": " Flasche(n) gefunden.",
     "search_no_match": "Keine Flasche entspricht Ihrer Suche oder Ihren Filtern.",
     "clear_filters": "Filter zurücksetzen",
     "no_bottles_yet": "Noch keine Flaschen in Ihren Kellern.",
     "add_bottle_short": "+ Flasche",
     "all_slots_full": "Alle Plätze in Ihren Kellern sind belegt. Geben Sie einen Platz frei oder fügen Sie ein Regal oder einen Keller hinzu, um eine Flasche hinzuzufügen.",
-    "duplicate_warning": "⚠️ Achtung: Sie haben bereits {n} identische Flasche(n) in Ihrem Keller.",
     "wine_details": "Weindetails",
     "cellar_editor": "Keller-Editor",
     "bottle_editor": "Flaschen-Editor",
@@ -730,34 +804,15 @@ const WCM_TRANSLATIONS = {
     "delete_cellar_confirm": "Keller löschen",
     "merge_all_title": "{n} Schreibweisen-Paar(e) zusammenführen?",
     "merge_all_body": "{m} Flasche(n) erhalten die ausgewählte Schreibweise. Zu prüfende Paare bleiben unverändert.",
-    "reanalyze_title": "Diesen Wein erneut analysieren?",
-    "reanalyze_body": "Jedes von der Analyse gefundene Feld ersetzt den aktuellen Inhalt des Formulars.",
-    "analyze_again": "Erneut analysieren",
     "action_failed": "Das hat nicht geklappt: {error}",
-    "position_free": "Position {n} (frei)",
-    "position_current": "Position {n} (aktuell)",
-    "no_free_position": "Keine freie Position in dieser Reihe",
     "shelf_n": "Regal {n}",
-    "shelf_stored": "{n} Flasche(n) eingelagert",
     "shelf_empty": "Leer",
-    "shelf_remove_blocked": "Verschieben Sie diese Flaschen in ein anderes Regal, bevor Sie es entfernen.",
-    "err_choose_position": "Wählen Sie eine freie Position. Ist die Liste leer, wählen Sie ein anderes Regal oder eine andere Reihe.",
     "err_slot_taken_server": "Dieser Platz ist bereits belegt. Wählen Sie eine andere Position.",
     "cleanup_check_pair": "Ähnliche Schreibweise, aber vielleicht ein anderer Name. Vor dem Zusammenführen prüfen; „Alle zusammenführen“ überspringt dieses Paar.",
     "pasted_details": "Angaben von „{name}“ übernommen. Prüfen und speichern.",
-    "label_uploaded": "Etikettbild hochgeladen.",
-    "label_uploaded_duplicates": "Etikettbild hochgeladen. Mögliche Duplikate siehe unten.",
-    "err_select_cellar": "Wählen Sie einen Keller.",
-    "err_select_shelf": "Wählen Sie ein Regal.",
-    "err_select_lane": "Wählen Sie eine Reihe (vorne oder hinten).",
-    "err_wine_name_required": "Der Weinname ist erforderlich.",
     "err_shelf_missing": "Das gewählte Regal existiert nicht mehr.",
     "err_no_back_lane": "Dieses Regal hat keine hintere Reihe.",
-    "err_no_front_positions": "Dieses Regal hat keine vorderen Positionen.",
     "err_position_out_of_range": "Diese Position liegt außerhalb der Kapazität dieser Reihe.",
-    "err_position_taken": "Diese Position ist bereits durch „{name}“ belegt. Wählen Sie eine freie Position.",
-    "err_aging_order": "Das Startjahr der Trinkreife darf nicht nach dem Endjahr liegen.",
-    "err_aging_end_order": "Das Endjahr der Trinkreife muss gleich oder später als das Startjahr sein.",
     "err_rating_range": "Die Bewertung muss zwischen 0 und 5 liegen.",
     "err_shelf_has_bottles": "Ein Regal mit Flaschen kann nicht entfernt werden. Verschieben Sie zuerst die Flaschen.",
     "err_shrink_front": "Eine vordere Reihe kann nicht kleiner als ihre letzte belegte Position werden. Verschieben Sie zuerst diese Flaschen.",
@@ -767,7 +822,6 @@ const WCM_TRANSLATIONS = {
     "err_no_entry": "Die Integration Wine Cellar Manager ist nicht eingerichtet.",
     "err_shelf_front_min": "„{shelf}“ hat eine Flasche auf der vorderen Position {n} und braucht daher mindestens {n} vordere Positionen.",
     "err_shelf_back_min": "„{shelf}“ hat eine Flasche auf der hinteren Position {n} und braucht daher mindestens {n} hintere Positionen.",
-    "duplicate_detection_failed": "Duplikatsuche fehlgeschlagen: ",
     "depth_back_row": "Hintere Reihe",
     "depth_behind": "Hinter {names}",
     "depth_behind_aria": "hinter {names}",
@@ -810,16 +864,160 @@ const WCM_TRANSLATIONS = {
     "bt_replace_photo": "Foto ersetzen",
     "slot_empty_label": "Freier Platz, Flasche hinzufügen: {loc}",
     "loc_front_pos": "{cellar}, {shelf}, vordere Reihe, Position {pos}",
-    "loc_back_pos": "{cellar}, {shelf}, hintere Reihe, Position {pos}"
+    "loc_back_pos": "{cellar}, {shelf}, hintere Reihe, Position {pos}",
+    "sheet_add_title": "Flasche hinzufügen",
+    "sheet_editing": "Bearbeiten",
+    "sheet_sec_label": "Etikett",
+    "sheet_sec_wine": "Der Wein",
+    "sheet_sec_place": "Lagerplatz",
+    "sheet_more": "Weitere Details",
+    "sheet_more_hint": "Region, Preis, Trinkfenster, Bewertung, Notizen",
+    "sheet_more_filled": "{n} ausgefüllt",
+    "sheet_take_photo": "Foto aufnehmen",
+    "sheet_upload_photo": "Etikettenfoto hochladen",
+    "sheet_choose_library": "Aus Mediathek wählen",
+    "sheet_type_instead": "Lieber eintippen",
+    "sheet_scan_barcode": "SAQ-Barcode scannen",
+    "sheet_photo_title": "Etikett fotografieren",
+    "sheet_photo_title_plain": "Etikettenfoto hinzufügen",
+    "sheet_photo_sub_ai": "Wir lesen Name, Erzeuger und Jahrgang für Sie aus.",
+    "sheet_photo_sub": "Mit Etikettenfoto finden Sie die Flasche im Regal sofort.",
+    "sheet_photo_drop": "oder ein Bild hierher ziehen",
+    "sheet_photo_ready": "Etikettenfoto",
+    "sheet_photo_replace": "Ersetzen",
+    "sheet_photo_rotate": "Drehen",
+    "sheet_photo_remove": "Entfernen",
+    "sheet_photo_read": "Etikett auslesen",
+    "sheet_st_preparing": "Foto wird vorbereitet…",
+    "sheet_st_uploading": "Wird hochgeladen…",
+    "sheet_st_reading": "Etikett wird gelesen…",
+    "sheet_st_barcode": "Barcode wird gelesen…",
+    "sheet_note_reading": "Das Etikett wird gelesen. Tippen Sie ruhig weiter: nur leere Felder werden ausgefüllt.",
+    "sheet_note_ai_one": "{n} Angabe vom Etikett übernommen. Bitte kurz prüfen.",
+    "sheet_note_ai_other": "{n} Angaben vom Etikett übernommen. Bitte kurz prüfen.",
+    "sheet_note_cellar_one": "{n} Angabe von {name} aus Ihrem Keller übernommen.",
+    "sheet_note_cellar_other": "{n} Angaben von {name} aus Ihrem Keller übernommen.",
+    "sheet_note_none": "Auf dem Etikett wurde nichts Neues gefunden.",
+    "sheet_note_fail": "Dieses Etikett konnte nicht automatisch gelesen werden. Bitte füllen Sie die Angaben unten aus.",
+    "undo": "Rückgängig",
+    "undone": "Rückgängig gemacht",
+    "sheet_mark_ai": "KI",
+    "sheet_mark_cellar": "Aus dem Keller",
+    "sheet_name_ph": "z. B. Barolo, Château Margaux…",
+    "sheet_in_cellar": "{n} im Keller",
+    "sheet_had_before": "Schon gehabt",
+    "sheet_dup": "Sie haben bereits {n} Flaschen dieses Weins · {where}",
+    "sheet_type_unset": "Weiß nicht",
+    "sheet_window": "Trinkfenster",
+    "sheet_from": "Ab",
+    "sheet_to": "Bis",
+    "sheet_win_none": "Tragen Sie die Jahre ein, um zu sehen, wann er trinkreif ist.",
+    "sheet_win_young": "Zu jung · trinkreif ab {y}",
+    "sheet_win_ready": "Trinkreif · bis {y}",
+    "sheet_win_peak": "Dieses Jahr auf dem Höhepunkt",
+    "sheet_win_past": "Über dem Höhepunkt seit {y}",
+    "sheet_rating_none": "Keine",
+    "sheet_link": "Produktlink",
+    "sheet_barcode": "Barcode",
+    "sheet_lookup": "Nachschlagen",
+    "pick_bottles": "Anzahl Flaschen",
+    "pick_qty_less": "Eine Flasche weniger",
+    "pick_qty_more": "Eine Flasche mehr",
+    "pick_free_one": "{n} frei",
+    "pick_free_other": "{n} frei",
+    "pick_full": "Voll",
+    "pick_hint": "Tippen Sie auf einen freien Platz, um den Lagerplatz zu wählen.",
+    "pick_hint_n": "Füllt der Reihe nach {n} freie Plätze, beginnend bei dem angetippten.",
+    "pick_hint_edit": "Tippen Sie auf einen freien Platz, um die Flasche beim Speichern dorthin zu stellen.",
+    "sheet_plan_n": "{n} Flaschen · {where}",
+    "pick_move_from": "Wird verschoben von {from}",
+    "pick_occupied": "Belegt · {name}",
+    "pick_slot_free": "{shelf}, {lane}, Position {pos}, frei",
+    "pick_slot_current": "{shelf}, {lane}, Position {pos}, aktueller Platz",
+    "pick_no_free": "Alle Plätze sind belegt.",
+    "pick_no_free_sub": "Fügen Sie ein Regal oder einen Keller hinzu und legen Sie dann die Flasche an.",
+    "pick_add_shelves_to": "Regale zu {name} hinzufügen",
+    "pick_new_cellar": "Neuer Keller",
+    "sheet_only_name": "Nur der Name ist Pflicht.",
+    "sheet_save_n": "{n} Flaschen speichern",
+    "sheet_save_next": "Speichern & nächste",
+    "sheet_save_changes": "Änderungen speichern",
+    "sheet_saving": "Wird gespeichert…",
+    "sheet_saving_n": "Speichere {i} von {n}…",
+    "sheet_saved_one": "{name} hinzugefügt · {where}",
+    "sheet_saved_n": "{n} Flaschen hinzugefügt · {where}",
+    "sheet_saved_edit": "Änderungen gespeichert",
+    "sheet_err_name": "Geben Sie dem Wein einen Namen.",
+    "sheet_err_year": "Verwenden Sie eine vierstellige Jahreszahl.",
+    "sheet_err_window": "Das Fenster kann nicht vor seinem Beginn enden.",
+    "sheet_err_no_slot": "Wählen Sie einen freien Platz.",
+    "sheet_err_slot_taken": "Dieser Platz ist durch „{name}“ belegt. Wählen Sie einen anderen.",
+    "sheet_err_slot_moved": "Dieser Platz wurde gerade belegt, daher haben wir den nächsten freien gewählt. Tippen Sie erneut auf Speichern.",
+    "sheet_err_not_enough_one": "Nur {n} freier Platz in {cellar}.",
+    "sheet_err_not_enough_other": "Nur {n} freie Plätze in {cellar}.",
+    "sheet_err_partial_left_one": "{i} von {total} gespeichert. {error} Speichern Sie erneut, um die letzte hinzuzufügen.",
+    "sheet_err_partial_left_other": "{i} von {total} gespeichert. {error} Speichern Sie erneut, um die übrigen {n} hinzuzufügen.",
+    "sheet_err_number": "Geben Sie eine Zahl ein.",
+    "sheet_err_photo_format": "Dieses Fotoformat wird hier nicht unterstützt. Versuchen Sie JPEG oder PNG.",
+    "sheet_err_photo_upload": "Das Foto konnte nicht hochgeladen werden. {error}",
+    "sheet_err_save": "Speichern fehlgeschlagen: {error}",
+    "move_action": "Umstellen",
+    "move_moving": "{name} wird umgestellt",
+    "move_hint": "Tippen Sie auf einen freien Platz oder auf eine Flasche zum Tauschen.",
+    "move_hint_kb": "Esc bricht ab.",
+    "move_done": "{name} nach {where} umgestellt",
+    "move_swapped": "{a} und {b} getauscht",
+    "move_failed": "Die Flasche konnte nicht umgestellt werden: {error}",
+    "builder_title_new": "Neuer Keller",
+    "builder_name_ph": "z. B. Weinkühlschrank Küche",
+    "builder_finish": "Gehäuse-Finish",
+    "builder_quick": "Schnellstart",
+    "builder_tpl_fridge": "Weinkühlschrank",
+    "builder_tpl_stagger": "Versetztes Regal",
+    "builder_tpl_rack": "Offenes Regal",
+    "builder_tpl_sub": "{s} Regale × {f}",
+    "builder_tpl_sub2": "{s} Regale × {f} + {b} dahinter",
+    "builder_shelves_hint": "Oberstes Regal zuerst. Die hintere Reihe steht versetzt hinter der vorderen, damit jedes Etikett sichtbar bleibt.",
+    "builder_front_slots": "Plätze vorne",
+    "builder_back_slots": "Plätze hinten",
+    "builder_fewer": "Weniger Plätze ({lane})",
+    "builder_more": "Mehr Plätze ({lane})",
+    "builder_stored": "{n} belegt",
+    "builder_up": "Regal nach oben",
+    "builder_down": "Regal nach unten",
+    "builder_remove": "Regal entfernen",
+    "builder_remove_blocked_one": "Stellen Sie zuerst die Flasche auf diesem Regal um.",
+    "builder_remove_blocked_other": "Stellen Sie zuerst die {n} Flaschen auf diesem Regal um.",
+    "builder_min_hint": "Auf Platz {n} steht eine Flasche.",
+    "builder_preview": "Vorschau",
+    "builder_legend_stored": "Belegt",
+    "builder_legend_free": "Frei",
+    "builder_save": "Keller speichern",
+    "builder_create": "Keller anlegen",
+    "builder_saved": "Keller gespeichert",
+    "sheet_wait_photo": "Warte auf das Foto…",
+    "builder_position": "Position unter Ihren Kellern",
+    "builder_pos_first": "An erster Stelle",
+    "builder_pos_after": "Nach {name}",
+    "builder_order_failed": "Keller gespeichert, aber die Reihenfolge der anderen Keller konnte nicht aktualisiert werden.",
+    "builder_fin_bordeaux": "Bordeaux-Lack",
+    "builder_fin_oak": "Eiche",
+    "builder_fin_olive": "Oliv",
+    "builder_fin_azure": "Azur",
+    "builder_fin_slate": "Schiefer",
+    "builder_fin_steel": "Gebürsteter Stahl",
+    "builder_fin_custom": "Eigene Farbe",
+    "builder_shelves_one": "{n} Regal",
+    "builder_shelves_other": "{n} Regale",
+    "builder_slots_one": "{n} Platz",
+    "builder_slots_other": "{n} Plätze",
+    "builder_fin_graphite": "Graphit"
   },
   "es": {
     "cellars": "Bodegas",
     "compact": "Compacto",
     "all_bottles": "Todas las botellas",
     "stats": "Estadísticas",
-    "add_cellar": "Añadir bodega",
-    "add_bottle": "Añadir botella",
-    "edit_bottle": "Editar botella",
     "ready_to_drink": "Listo para beber",
     "all_types": "Todos los tipos",
     "all_countries": "Todos los países",
@@ -833,11 +1031,7 @@ const WCM_TRANSLATIONS = {
     "price": "Precio",
     "rating": "Valoración",
     "notes": "Notas",
-    "aging_start": "Inicio de madurez (año)",
-    "aging_end": "Fin de madurez (año)",
     "shelf": "Estante",
-    "lane": "Fila",
-    "position": "Posición",
     "front": "Delante",
     "back": "Detrás",
     "consume": "Consumir",
@@ -845,7 +1039,6 @@ const WCM_TRANSLATIONS = {
     "save": "Guardar",
     "cancel": "Cancelar",
     "close": "Cerrar",
-    "search_history": "Buscar botellas anteriores",
     "taste_window_title": "Ventana óptima de consumo",
     "serving_temp": "Temperatura de servicio",
     "alcohol_pct": "Graduación alcohólica",
@@ -893,70 +1086,20 @@ const WCM_TRANSLATIONS = {
     "physical_location": "Ubicación física",
     "copy": "Copiar",
     "edit": "Editar",
-    "wine_acquisition_identification": "Adquisición e identificación del vino",
-    "upload_barcode_saq_only": "📁 Subir código de barras (solo SAQ)",
-    "upload_label_photo": "📁 Subir foto de la etiqueta",
-    "barcode_number_14_digits": "Número de código de barras (14 dígitos)",
-    "scan_result_or_manual_entry": "Resultado del escaneo o entrada manual",
-    "label_image_path": "Ruta de la imagen de la etiqueta",
-    "analyze": "Analizar",
-    "image_not_reachable": "Imagen no accesible",
-    "search_history_placeholder": "Nombre del vino, productor, región...",
-    "saq_com_url": "URL de SAQ.com",
     "cellar": "Bodega",
     "view": "Ver",
     "shelf_name": "Nombre del estante",
-    "order": "Orden",
-    "front_capacity": "Capacidad delantera",
-    "back_capacity": "Capacidad trasera",
-    "remove": "Quitar",
-    "shelf_1": "Estante 1",
     "edit_cellar": "Editar bodega",
     "cellar_name": "Nombre",
-    "display_order": "Orden de visualización",
-    "background_color": "Color de fondo",
-    "default_ha_theme": "Predeterminado (tema de HA)",
-    "bordeaux_red": "Rojo burdeos",
-    "oak_brown": "Marrón roble",
-    "olive_green": "Verde oliva",
-    "azur_blue": "Azul celeste",
-    "slate_gray": "Gris pizarra",
-    "off_white": "Blanco roto",
     "shelves": "Estantes",
     "add_shelf": "Añadir estante",
-    "details_and_label_applied": "✨ ¡Detalles del vino y etiqueta aplicados automáticamente!",
-    "select_barcode_photo": "Seleccione la foto del código de barras...",
-    "reading_barcode_photo": "Leyendo la foto del código de barras...",
-    "sending_photo_to_ai": "Enviando la foto a la IA...",
-    "ai_extracting_barcode": "La IA está extrayendo el código de barras...",
-    "barcode_detected_and_applied": "¡Código de barras detectado y aplicado!",
     "no_barcode_found": "No se encontró ningún código de barras.",
     "barcode_extraction_failed": "Error al extraer el código de barras.",
-    "select_label_photo": "Seleccione la foto de la etiqueta...",
     "confirm_reanalyze": "Este vino ya se analizó correctamente. ¿Desea sobrescribir los datos y volver a ejecutar el análisis?",
     "provide_barcode_or_label": "Introduzca un código de barras (dígitos) o suba una imagen de la etiqueta antes de iniciar el análisis.",
-    "starting_smart_analysis": "Iniciando el análisis inteligente...",
-    "analysis_completed": "✨ ¡Análisis completado con éxito! Detalles aplicados.",
-    "no_result_found": "No se encontró ningún resultado.",
-    "analysis_failed": "El análisis falló: ",
     "confirm_merge_all": "¿Desea fusionar y estandarizar todas las sintaxis listadas?",
     "scanner_error": "Error del escáner: ",
-    "upload_label_first": "Primero suba o capture una imagen de la etiqueta.",
-    "analyzing_label": "Analizando la etiqueta...",
-    "label_suggestion_applied": "Sugerencia de la etiqueta aplicada a los campos vacíos.",
-    "no_label_result": "No se encontró ningún resultado para la etiqueta.",
-    "label_analysis_failed": "El análisis de la etiqueta falló: ",
-    "no_file_selected": "No se seleccionó ningún archivo.",
     "file_not_image": "El archivo seleccionado no es una imagen.",
-    "reading_label_image": "Leyendo la imagen de la etiqueta...",
-    "uploading_label_image": "Subiendo la imagen de la etiqueta...",
-    "label_upload_failed": "Error al subir la etiqueta: ",
-    "select_location_before_copy": "Seleccione bodega, estante, fila y posición antes de copiar.",
-    "copying_bottle": "Copiando la botella existente en la posición actual...",
-    "copy_bottle_failed": "Error al copiar la botella: ",
-    "source_bottle_not_found": "No se encontró la botella de origen.",
-    "bottle_details_copied": "Detalles de la botella copiados en el formulario. Revise y guarde.",
-    "bottle_save_failed": "Error al guardar la botella: ",
     "shelf_front_capacity_min": "Cada estante debe tener una capacidad delantera de al menos 1.",
     "add_at_least_one_shelf": "Añada al menos un estante.",
     "cellar_save_failed": "Error al guardar la bodega: ",
@@ -966,14 +1109,12 @@ const WCM_TRANSLATIONS = {
     "bottle_copied_to_memory": "Botella copiada en memoria. Haga clic en una posición vacía para pegar.",
     "cellar_needs_shelf": "Una bodega debe tener al menos un estante.",
     "unknown_error": "error desconocido",
-    "bottle_search_failed": "Error en la búsqueda de botellas: ",
     "bottles_found_suffix": " botella(s) encontrada(s).",
     "search_no_match": "Ninguna botella coincide con su búsqueda o sus filtros.",
     "clear_filters": "Borrar filtros",
     "no_bottles_yet": "Todavía no hay botellas en sus bodegas.",
     "add_bottle_short": "+ Botella",
     "all_slots_full": "Todos los espacios de sus bodegas están ocupados. Libere un espacio, o añada un estante o una bodega, para añadir una botella.",
-    "duplicate_warning": "⚠️ Atención: Ya tiene {n} botella(s) idéntica(s) en su bodega.",
     "wine_details": "Detalles del vino",
     "cellar_editor": "Editor de bodega",
     "bottle_editor": "Editor de botella",
@@ -1001,34 +1142,15 @@ const WCM_TRANSLATIONS = {
     "delete_cellar_confirm": "Eliminar bodega",
     "merge_all_title": "¿Fusionar {n} par(es) de grafías?",
     "merge_all_body": "{m} botella(s) tomarán la grafía seleccionada. Los pares por revisar no se modifican.",
-    "reanalyze_title": "¿Analizar este vino de nuevo?",
-    "reanalyze_body": "Cada campo que encuentre el análisis reemplazará el contenido actual del formulario.",
-    "analyze_again": "Analizar de nuevo",
     "action_failed": "No se pudo completar: {error}",
-    "position_free": "Posición {n} (libre)",
-    "position_current": "Posición {n} (actual)",
-    "no_free_position": "No hay posiciones libres en esta fila",
     "shelf_n": "Estante {n}",
-    "shelf_stored": "{n} botella(s) guardada(s)",
     "shelf_empty": "Vacío",
-    "shelf_remove_blocked": "Mueva estas botellas a otro estante antes de quitarlo.",
-    "err_choose_position": "Elija una posición libre. Si la lista está vacía, elija otro estante u otra fila.",
     "err_slot_taken_server": "Esa posición ya está ocupada. Elija otra.",
     "cleanup_check_pair": "Grafía parecida, pero puede ser otro nombre. Revíselo antes de fusionar; «Fusionar todo» lo omite.",
     "pasted_details": "Datos copiados de «{name}». Revíselos y guarde.",
-    "label_uploaded": "Imagen de la etiqueta subida.",
-    "label_uploaded_duplicates": "Imagen de la etiqueta subida. Posibles duplicados abajo.",
-    "err_select_cellar": "Elija una bodega.",
-    "err_select_shelf": "Elija un estante.",
-    "err_select_lane": "Elija una fila (delante o detrás).",
-    "err_wine_name_required": "El nombre del vino es obligatorio.",
     "err_shelf_missing": "El estante seleccionado ya no existe.",
     "err_no_back_lane": "Este estante no tiene fila trasera.",
-    "err_no_front_positions": "Este estante no tiene posiciones delanteras.",
     "err_position_out_of_range": "Esa posición supera la capacidad de esta fila del estante.",
-    "err_position_taken": "Esa posición ya está ocupada por «{name}». Elija una posición libre.",
-    "err_aging_order": "El año de inicio de madurez no puede ser posterior al año de fin.",
-    "err_aging_end_order": "El año de fin de madurez debe ser igual o posterior al año de inicio.",
     "err_rating_range": "La valoración debe estar entre 0 y 5.",
     "err_shelf_has_bottles": "No se puede quitar un estante que aún tiene botellas. Mueva primero sus botellas.",
     "err_shrink_front": "Una fila delantera no puede ser más pequeña que su última posición ocupada. Mueva primero esas botellas.",
@@ -1038,7 +1160,6 @@ const WCM_TRANSLATIONS = {
     "err_no_entry": "La integración Wine Cellar Manager no está configurada.",
     "err_shelf_front_min": "«{shelf}» tiene una botella en la posición delantera {n}, así que necesita al menos {n} posiciones delanteras.",
     "err_shelf_back_min": "«{shelf}» tiene una botella en la posición trasera {n}, así que necesita al menos {n} posiciones traseras.",
-    "duplicate_detection_failed": "Error al buscar duplicados: ",
     "depth_back_row": "Fila trasera",
     "depth_behind": "Detrás de {names}",
     "depth_behind_aria": "detrás de {names}",
@@ -1081,16 +1202,160 @@ const WCM_TRANSLATIONS = {
     "bt_replace_photo": "Reemplazar foto",
     "slot_empty_label": "Posición libre, añadir una botella: {loc}",
     "loc_front_pos": "{cellar}, {shelf}, fila delantera, posición {pos}",
-    "loc_back_pos": "{cellar}, {shelf}, fila trasera, posición {pos}"
+    "loc_back_pos": "{cellar}, {shelf}, fila trasera, posición {pos}",
+    "sheet_add_title": "Añadir botella",
+    "sheet_editing": "Editando",
+    "sheet_sec_label": "Etiqueta",
+    "sheet_sec_wine": "El vino",
+    "sheet_sec_place": "Dónde va",
+    "sheet_more": "Más detalles",
+    "sheet_more_hint": "Región, precio, ventana de consumo, valoración, notas",
+    "sheet_more_filled": "{n} completados",
+    "sheet_take_photo": "Hacer foto",
+    "sheet_upload_photo": "Subir foto de la etiqueta",
+    "sheet_choose_library": "Elegir de la galería",
+    "sheet_type_instead": "Escribirlo a mano",
+    "sheet_scan_barcode": "Escanear código SAQ",
+    "sheet_photo_title": "Fotografíe la etiqueta",
+    "sheet_photo_title_plain": "Añadir una foto de la etiqueta",
+    "sheet_photo_sub_ai": "Leeremos el nombre, el productor y la añada por usted.",
+    "sheet_photo_sub": "Con una foto de la etiqueta, la botella se reconoce fácilmente en el estante.",
+    "sheet_photo_drop": "o suelte una imagen aquí",
+    "sheet_photo_ready": "Foto de la etiqueta",
+    "sheet_photo_replace": "Reemplazar",
+    "sheet_photo_rotate": "Girar",
+    "sheet_photo_remove": "Quitar",
+    "sheet_photo_read": "Leer etiqueta",
+    "sheet_st_preparing": "Preparando la foto…",
+    "sheet_st_uploading": "Subiendo…",
+    "sheet_st_reading": "Leyendo la etiqueta…",
+    "sheet_st_barcode": "Leyendo el código de barras…",
+    "sheet_note_reading": "Leyendo la etiqueta. Puede seguir escribiendo: solo se rellenan los campos vacíos.",
+    "sheet_note_ai_one": "Se completó {n} dato desde la etiqueta. Revíselo un momento.",
+    "sheet_note_ai_other": "Se completaron {n} datos desde la etiqueta. Revíselos un momento.",
+    "sheet_note_cellar_one": "Se completó {n} dato desde {name} de su bodega.",
+    "sheet_note_cellar_other": "Se completaron {n} datos desde {name} de su bodega.",
+    "sheet_note_none": "No se encontró nada nuevo en la etiqueta.",
+    "sheet_note_fail": "No se pudo leer esta etiqueta automáticamente. Complete los datos abajo.",
+    "undo": "Deshacer",
+    "undone": "Deshecho",
+    "sheet_mark_ai": "IA",
+    "sheet_mark_cellar": "De la bodega",
+    "sheet_name_ph": "p. ej., Barolo, Château Margaux…",
+    "sheet_in_cellar": "{n} en la bodega",
+    "sheet_had_before": "Ya la tuvo",
+    "sheet_dup": "Ya tiene {n} botellas de este vino · {where}",
+    "sheet_type_unset": "No lo sé",
+    "sheet_window": "Ventana de consumo",
+    "sheet_from": "Desde",
+    "sheet_to": "Hasta",
+    "sheet_win_none": "Añada los años para ver cuándo estará listo.",
+    "sheet_win_young": "Demasiado joven · se abre en {y}",
+    "sheet_win_ready": "Listo para beber · hasta {y}",
+    "sheet_win_peak": "En su apogeo este año",
+    "sheet_win_past": "Pasado su apogeo desde {y}",
+    "sheet_rating_none": "Ninguna",
+    "sheet_link": "Enlace del producto",
+    "sheet_barcode": "Código de barras",
+    "sheet_lookup": "Buscar",
+    "pick_bottles": "Cuántas botellas",
+    "pick_qty_less": "Una botella menos",
+    "pick_qty_more": "Una botella más",
+    "pick_free_one": "{n} libre",
+    "pick_free_other": "{n} libres",
+    "pick_full": "Lleno",
+    "pick_hint": "Toque una posición libre para elegir dónde va.",
+    "pick_hint_n": "Ocupa {n} posiciones libres en orden, empezando por la que toque.",
+    "pick_hint_edit": "Toque una posición libre para mover la botella allí al guardar.",
+    "sheet_plan_n": "{n} botellas · {where}",
+    "pick_move_from": "Se mueve desde {from}",
+    "pick_occupied": "Ocupada · {name}",
+    "pick_slot_free": "{shelf}, {lane}, posición {pos}, libre",
+    "pick_slot_current": "{shelf}, {lane}, posición {pos}, posición actual",
+    "pick_no_free": "Todas las posiciones están ocupadas.",
+    "pick_no_free_sub": "Añada un estante o una bodega para hacer sitio y luego añada la botella.",
+    "pick_add_shelves_to": "Añadir estantes a {name}",
+    "pick_new_cellar": "Nueva bodega",
+    "sheet_only_name": "Solo el nombre es obligatorio.",
+    "sheet_save_n": "Guardar {n} botellas",
+    "sheet_save_next": "Guardar y añadir otra",
+    "sheet_save_changes": "Guardar cambios",
+    "sheet_saving": "Guardando…",
+    "sheet_saving_n": "Guardando {i} de {n}…",
+    "sheet_saved_one": "{name} añadida · {where}",
+    "sheet_saved_n": "{n} botellas añadidas · {where}",
+    "sheet_saved_edit": "Cambios guardados",
+    "sheet_err_name": "Ponga un nombre al vino.",
+    "sheet_err_year": "Use un año de 4 cifras.",
+    "sheet_err_window": "La ventana no puede terminar antes de empezar.",
+    "sheet_err_no_slot": "Elija una posición libre.",
+    "sheet_err_slot_taken": "Esa posición la ocupa «{name}». Elija otra.",
+    "sheet_err_slot_moved": "Esa posición se acaba de ocupar, así que elegimos la siguiente libre. Pulse Guardar otra vez.",
+    "sheet_err_not_enough_one": "Solo hay {n} posición libre en {cellar}.",
+    "sheet_err_not_enough_other": "Solo hay {n} posiciones libres en {cellar}.",
+    "sheet_err_partial_left_one": "Guardadas {i} de {total}. {error} Guarde otra vez para añadir la última.",
+    "sheet_err_partial_left_other": "Guardadas {i} de {total}. {error} Guarde otra vez para añadir las otras {n}.",
+    "sheet_err_number": "Introduzca un número.",
+    "sheet_err_photo_format": "Este formato de foto no es compatible aquí. Pruebe con JPEG o PNG.",
+    "sheet_err_photo_upload": "No se pudo subir la foto. {error}",
+    "sheet_err_save": "No se pudo guardar: {error}",
+    "move_action": "Mover",
+    "move_moving": "Moviendo {name}",
+    "move_hint": "Toque una posición vacía o una botella para intercambiarlas.",
+    "move_hint_kb": "Esc cancela.",
+    "move_done": "{name} movida a {where}",
+    "move_swapped": "{a} y {b} intercambiadas",
+    "move_failed": "No se pudo mover la botella: {error}",
+    "builder_title_new": "Nueva bodega",
+    "builder_name_ph": "p. ej., Vinoteca de la cocina",
+    "builder_finish": "Acabado del marco",
+    "builder_quick": "Inicio rápido",
+    "builder_tpl_fridge": "Vinoteca",
+    "builder_tpl_stagger": "Botellero escalonado",
+    "builder_tpl_rack": "Botellero abierto",
+    "builder_tpl_sub": "{s} estantes × {f}",
+    "builder_tpl_sub2": "{s} estantes × {f} + {b} detrás",
+    "builder_shelves_hint": "Primero el estante superior. La fila trasera queda detrás de la delantera, desplazada para que se vean todas las etiquetas.",
+    "builder_front_slots": "Posiciones delanteras",
+    "builder_back_slots": "Posiciones traseras",
+    "builder_fewer": "Menos posiciones ({lane})",
+    "builder_more": "Más posiciones ({lane})",
+    "builder_stored": "{n} ocupadas",
+    "builder_up": "Subir estante",
+    "builder_down": "Bajar estante",
+    "builder_remove": "Quitar estante",
+    "builder_remove_blocked_one": "Primero mueva la botella de este estante.",
+    "builder_remove_blocked_other": "Primero mueva las {n} botellas de este estante.",
+    "builder_min_hint": "Hay una botella en la posición {n}.",
+    "builder_preview": "Vista previa",
+    "builder_legend_stored": "Ocupada",
+    "builder_legend_free": "Libre",
+    "builder_save": "Guardar bodega",
+    "builder_create": "Crear bodega",
+    "builder_saved": "Bodega guardada",
+    "sheet_wait_photo": "Esperando la foto…",
+    "builder_position": "Posición entre sus bodegas",
+    "builder_pos_first": "En primer lugar",
+    "builder_pos_after": "Después de {name}",
+    "builder_order_failed": "Bodega guardada, pero no se pudo actualizar el orden de las demás bodegas.",
+    "builder_fin_bordeaux": "Laca burdeos",
+    "builder_fin_oak": "Roble",
+    "builder_fin_olive": "Oliva",
+    "builder_fin_azure": "Azur",
+    "builder_fin_slate": "Pizarra",
+    "builder_fin_steel": "Acero cepillado",
+    "builder_fin_custom": "Personalizado",
+    "builder_shelves_one": "{n} estante",
+    "builder_shelves_other": "{n} estantes",
+    "builder_slots_one": "{n} posición",
+    "builder_slots_other": "{n} posiciones",
+    "builder_fin_graphite": "Grafito"
   },
   "it": {
     "cellars": "Cantine",
     "compact": "Compatto",
     "all_bottles": "Tutte le bottiglie",
     "stats": "Statistiche",
-    "add_cellar": "Aggiungi cantina",
-    "add_bottle": "Aggiungi bottiglia",
-    "edit_bottle": "Modifica bottiglia",
     "ready_to_drink": "Pronto da bere",
     "all_types": "Tutti i tipi",
     "all_countries": "Tutti i paesi",
@@ -1104,11 +1369,7 @@ const WCM_TRANSLATIONS = {
     "price": "Prezzo",
     "rating": "Valutazione",
     "notes": "Note",
-    "aging_start": "Inizio maturità (anno)",
-    "aging_end": "Fine maturità (anno)",
     "shelf": "Ripiano",
-    "lane": "Fila",
-    "position": "Posizione",
     "front": "Davanti",
     "back": "Dietro",
     "consume": "Consuma",
@@ -1116,7 +1377,6 @@ const WCM_TRANSLATIONS = {
     "save": "Salva",
     "cancel": "Annulla",
     "close": "Chiudi",
-    "search_history": "Cerca bottiglie precedenti",
     "taste_window_title": "Finestra ottimale di consumo",
     "serving_temp": "Temperatura di servizio",
     "alcohol_pct": "Gradazione alcolica",
@@ -1164,70 +1424,20 @@ const WCM_TRANSLATIONS = {
     "physical_location": "Posizione fisica",
     "copy": "Copia",
     "edit": "Modifica",
-    "wine_acquisition_identification": "Acquisizione e identificazione del vino",
-    "upload_barcode_saq_only": "📁 Carica codice a barre (solo SAQ)",
-    "upload_label_photo": "📁 Carica foto dell'etichetta",
-    "barcode_number_14_digits": "Numero del codice a barre (14 cifre)",
-    "scan_result_or_manual_entry": "Risultato della scansione o inserimento manuale",
-    "label_image_path": "Percorso dell'immagine dell'etichetta",
-    "analyze": "Analizza",
-    "image_not_reachable": "Immagine non raggiungibile",
-    "search_history_placeholder": "Nome del vino, produttore, regione...",
-    "saq_com_url": "URL SAQ.com",
     "cellar": "Cantina",
     "view": "Visualizza",
     "shelf_name": "Nome del ripiano",
-    "order": "Ordine",
-    "front_capacity": "Capacità anteriore",
-    "back_capacity": "Capacità posteriore",
-    "remove": "Rimuovi",
-    "shelf_1": "Ripiano 1",
     "edit_cellar": "Modifica cantina",
     "cellar_name": "Nome",
-    "display_order": "Ordine di visualizzazione",
-    "background_color": "Colore di sfondo",
-    "default_ha_theme": "Predefinito (tema HA)",
-    "bordeaux_red": "Rosso bordeaux",
-    "oak_brown": "Marrone quercia",
-    "olive_green": "Verde oliva",
-    "azur_blue": "Blu azzurro",
-    "slate_gray": "Grigio ardesia",
-    "off_white": "Bianco sporco",
     "shelves": "Ripiani",
     "add_shelf": "Aggiungi ripiano",
-    "details_and_label_applied": "✨ Dettagli del vino ed etichetta applicati automaticamente!",
-    "select_barcode_photo": "Seleziona la foto del codice a barre...",
-    "reading_barcode_photo": "Lettura della foto del codice a barre...",
-    "sending_photo_to_ai": "Invio della foto all'IA...",
-    "ai_extracting_barcode": "L'IA sta estraendo il codice a barre...",
-    "barcode_detected_and_applied": "Codice a barre rilevato e applicato!",
     "no_barcode_found": "Nessun codice a barre trovato.",
     "barcode_extraction_failed": "Estrazione del codice a barre non riuscita.",
-    "select_label_photo": "Seleziona la foto dell'etichetta...",
     "confirm_reanalyze": "Questo vino è già stato analizzato con successo. Sovrascrivere i dati ed eseguire di nuovo l'analisi?",
     "provide_barcode_or_label": "Inserisci un codice a barre (cifre) o carica un'immagine dell'etichetta prima di avviare l'analisi.",
-    "starting_smart_analysis": "Avvio dell'analisi intelligente...",
-    "analysis_completed": "✨ Analisi completata con successo! Dettagli applicati.",
-    "no_result_found": "Nessun risultato trovato.",
-    "analysis_failed": "Analisi non riuscita: ",
     "confirm_merge_all": "Vuoi unire e uniformare tutte le sintassi elencate?",
     "scanner_error": "Errore dello scanner: ",
-    "upload_label_first": "Carica o scatta prima un'immagine dell'etichetta.",
-    "analyzing_label": "Analisi dell'etichetta...",
-    "label_suggestion_applied": "Suggerimento dell'etichetta applicato ai campi vuoti.",
-    "no_label_result": "Nessun risultato per l'etichetta.",
-    "label_analysis_failed": "Analisi dell'etichetta non riuscita: ",
-    "no_file_selected": "Nessun file selezionato.",
     "file_not_image": "Il file selezionato non è un'immagine.",
-    "reading_label_image": "Lettura dell'immagine dell'etichetta...",
-    "uploading_label_image": "Caricamento dell'immagine dell'etichetta...",
-    "label_upload_failed": "Caricamento dell'etichetta non riuscito: ",
-    "select_location_before_copy": "Seleziona cantina, ripiano, fila e posizione prima di copiare.",
-    "copying_bottle": "Copia della bottiglia esistente nella posizione corrente...",
-    "copy_bottle_failed": "Copia della bottiglia non riuscita: ",
-    "source_bottle_not_found": "Bottiglia di origine non trovata.",
-    "bottle_details_copied": "Dettagli della bottiglia copiati nel modulo. Controlla e salva.",
-    "bottle_save_failed": "Salvataggio della bottiglia non riuscito: ",
     "shelf_front_capacity_min": "Ogni ripiano deve avere una capacità anteriore di almeno 1.",
     "add_at_least_one_shelf": "Aggiungi almeno un ripiano.",
     "cellar_save_failed": "Salvataggio della cantina non riuscito: ",
@@ -1237,14 +1447,12 @@ const WCM_TRANSLATIONS = {
     "bottle_copied_to_memory": "Bottiglia copiata in memoria. Fai clic su una posizione vuota per incollare.",
     "cellar_needs_shelf": "Una cantina deve avere almeno un ripiano.",
     "unknown_error": "errore sconosciuto",
-    "bottle_search_failed": "Ricerca delle bottiglie non riuscita: ",
     "bottles_found_suffix": " bottiglia/e trovata/e.",
     "search_no_match": "Nessuna bottiglia corrisponde alla ricerca o ai filtri.",
     "clear_filters": "Cancella filtri",
     "no_bottles_yet": "Ancora nessuna bottiglia nelle tue cantine.",
     "add_bottle_short": "+ Bottiglia",
     "all_slots_full": "Tutti i posti delle tue cantine sono occupati. Libera un posto, oppure aggiungi un ripiano o una cantina, per aggiungere una bottiglia.",
-    "duplicate_warning": "⚠️ Attenzione: hai già {n} bottiglia/e identica/che nella tua cantina.",
     "wine_details": "Dettagli del vino",
     "cellar_editor": "Editor cantina",
     "bottle_editor": "Editor bottiglia",
@@ -1272,34 +1480,15 @@ const WCM_TRANSLATIONS = {
     "delete_cellar_confirm": "Elimina cantina",
     "merge_all_title": "Unire {n} coppia/e di grafie?",
     "merge_all_body": "{m} bottiglia/e prenderanno la grafia selezionata. Le coppie da verificare restano invariate.",
-    "reanalyze_title": "Analizzare di nuovo questo vino?",
-    "reanalyze_body": "Ogni campo trovato dall'analisi sostituirà il contenuto attuale del modulo.",
-    "analyze_again": "Analizza di nuovo",
     "action_failed": "Operazione non riuscita: {error}",
-    "position_free": "Posizione {n} (libera)",
-    "position_current": "Posizione {n} (attuale)",
-    "no_free_position": "Nessuna posizione libera in questa fila",
     "shelf_n": "Ripiano {n}",
-    "shelf_stored": "{n} bottiglia/e presenti",
     "shelf_empty": "Vuoto",
-    "shelf_remove_blocked": "Sposta queste bottiglie su un altro ripiano prima di rimuoverlo.",
-    "err_choose_position": "Scegli una posizione libera. Se l'elenco è vuoto, scegli un altro ripiano o un'altra fila.",
     "err_slot_taken_server": "Questa posizione è già occupata. Scegline un'altra.",
     "cleanup_check_pair": "Grafia simile, ma potrebbe essere un altro nome. Verifica prima di unire; «Unisci tutto» la salta.",
     "pasted_details": "Dati copiati da «{name}». Controlla e salva.",
-    "label_uploaded": "Immagine dell'etichetta caricata.",
-    "label_uploaded_duplicates": "Immagine dell'etichetta caricata. Possibili duplicati qui sotto.",
-    "err_select_cellar": "Scegli una cantina.",
-    "err_select_shelf": "Scegli un ripiano.",
-    "err_select_lane": "Scegli una fila (davanti o dietro).",
-    "err_wine_name_required": "Il nome del vino è obbligatorio.",
     "err_shelf_missing": "Il ripiano selezionato non esiste più.",
     "err_no_back_lane": "Questo ripiano non ha una fila posteriore.",
-    "err_no_front_positions": "Questo ripiano non ha posizioni anteriori.",
     "err_position_out_of_range": "Questa posizione supera la capacità di questa fila del ripiano.",
-    "err_position_taken": "Questa posizione è già occupata da «{name}». Scegli una posizione libera.",
-    "err_aging_order": "L'anno di inizio maturità non può essere successivo all'anno di fine.",
-    "err_aging_end_order": "L'anno di fine maturità deve essere uguale o successivo all'anno di inizio.",
     "err_rating_range": "La valutazione deve essere compresa tra 0 e 5.",
     "err_shelf_has_bottles": "Non puoi rimuovere un ripiano che contiene ancora bottiglie. Sposta prima le bottiglie.",
     "err_shrink_front": "Una fila anteriore non può diventare più piccola della sua ultima posizione occupata. Sposta prima quelle bottiglie.",
@@ -1309,7 +1498,6 @@ const WCM_TRANSLATIONS = {
     "err_no_entry": "L'integrazione Wine Cellar Manager non è configurata.",
     "err_shelf_front_min": "«{shelf}» ha una bottiglia nella posizione anteriore {n}, quindi servono almeno {n} posizioni anteriori.",
     "err_shelf_back_min": "«{shelf}» ha una bottiglia nella posizione posteriore {n}, quindi servono almeno {n} posizioni posteriori.",
-    "duplicate_detection_failed": "Ricerca dei duplicati non riuscita: ",
     "depth_back_row": "Fila dietro",
     "depth_behind": "Dietro {names}",
     "depth_behind_aria": "dietro {names}",
@@ -1352,16 +1540,160 @@ const WCM_TRANSLATIONS = {
     "bt_replace_photo": "Sostituisci foto",
     "slot_empty_label": "Posto libero, aggiungi una bottiglia: {loc}",
     "loc_front_pos": "{cellar}, {shelf}, fila davanti, posizione {pos}",
-    "loc_back_pos": "{cellar}, {shelf}, fila dietro, posizione {pos}"
+    "loc_back_pos": "{cellar}, {shelf}, fila dietro, posizione {pos}",
+    "sheet_add_title": "Aggiungi bottiglia",
+    "sheet_editing": "Modifica",
+    "sheet_sec_label": "Etichetta",
+    "sheet_sec_wine": "Il vino",
+    "sheet_sec_place": "Dove va",
+    "sheet_more": "Altri dettagli",
+    "sheet_more_hint": "Regione, prezzo, finestra di consumo, valutazione, note",
+    "sheet_more_filled": "{n} compilati",
+    "sheet_take_photo": "Scatta foto",
+    "sheet_upload_photo": "Carica foto dell’etichetta",
+    "sheet_choose_library": "Scegli dalla galleria",
+    "sheet_type_instead": "Scrivilo a mano",
+    "sheet_scan_barcode": "Scansiona codice SAQ",
+    "sheet_photo_title": "Fotografa l’etichetta",
+    "sheet_photo_title_plain": "Aggiungi una foto dell’etichetta",
+    "sheet_photo_sub_ai": "Leggiamo per te nome, produttore e annata.",
+    "sheet_photo_sub": "Con una foto dell’etichetta la bottiglia si riconosce subito sul ripiano.",
+    "sheet_photo_drop": "o trascina qui un’immagine",
+    "sheet_photo_ready": "Foto dell’etichetta",
+    "sheet_photo_replace": "Sostituisci",
+    "sheet_photo_rotate": "Ruota",
+    "sheet_photo_remove": "Rimuovi",
+    "sheet_photo_read": "Leggi etichetta",
+    "sheet_st_preparing": "Preparazione della foto…",
+    "sheet_st_uploading": "Caricamento…",
+    "sheet_st_reading": "Lettura dell’etichetta…",
+    "sheet_st_barcode": "Lettura del codice a barre…",
+    "sheet_note_reading": "Lettura dell’etichetta. Puoi continuare a scrivere: si compilano solo i campi vuoti.",
+    "sheet_note_ai_one": "Compilato {n} dettaglio dall’etichetta. Dagli un’occhiata veloce.",
+    "sheet_note_ai_other": "Compilati {n} dettagli dall’etichetta. Dai un’occhiata veloce.",
+    "sheet_note_cellar_one": "Compilato {n} dettaglio da {name} nella tua cantina.",
+    "sheet_note_cellar_other": "Compilati {n} dettagli da {name} nella tua cantina.",
+    "sheet_note_none": "Nessuna novità trovata sull’etichetta.",
+    "sheet_note_fail": "Impossibile leggere l’etichetta automaticamente. Compila i dettagli qui sotto.",
+    "undo": "Annulla",
+    "undone": "Annullato",
+    "sheet_mark_ai": "IA",
+    "sheet_mark_cellar": "Dalla cantina",
+    "sheet_name_ph": "es. Barolo, Château Margaux…",
+    "sheet_in_cellar": "{n} in cantina",
+    "sheet_had_before": "Già avuta",
+    "sheet_dup": "Hai già {n} bottiglie di questo vino · {where}",
+    "sheet_type_unset": "Non so",
+    "sheet_window": "Finestra di consumo",
+    "sheet_from": "Dal",
+    "sheet_to": "Al",
+    "sheet_win_none": "Aggiungi gli anni per vedere quando sarà pronto.",
+    "sheet_win_young": "Troppo giovane · pronto dal {y}",
+    "sheet_win_ready": "Pronto da bere · fino al {y}",
+    "sheet_win_peak": "Al culmine quest’anno",
+    "sheet_win_past": "Oltre il culmine dal {y}",
+    "sheet_rating_none": "Nessuna",
+    "sheet_link": "Link del prodotto",
+    "sheet_barcode": "Codice a barre",
+    "sheet_lookup": "Cerca",
+    "pick_bottles": "Quante bottiglie",
+    "pick_qty_less": "Una bottiglia in meno",
+    "pick_qty_more": "Una bottiglia in più",
+    "pick_free_one": "{n} libero",
+    "pick_free_other": "{n} liberi",
+    "pick_full": "Pieno",
+    "pick_hint": "Tocca un posto libero per scegliere dove va.",
+    "pick_hint_n": "Occupa {n} posti liberi in ordine, partendo da quello che tocchi.",
+    "pick_hint_edit": "Tocca un posto libero per spostarci la bottiglia al salvataggio.",
+    "sheet_plan_n": "{n} bottiglie · {where}",
+    "pick_move_from": "Si sposta da {from}",
+    "pick_occupied": "Occupato · {name}",
+    "pick_slot_free": "{shelf}, {lane}, posizione {pos}, libero",
+    "pick_slot_current": "{shelf}, {lane}, posizione {pos}, posto attuale",
+    "pick_no_free": "Tutti i posti sono occupati.",
+    "pick_no_free_sub": "Aggiungi un ripiano o una cantina per fare spazio, poi aggiungi la bottiglia.",
+    "pick_add_shelves_to": "Aggiungi ripiani a {name}",
+    "pick_new_cellar": "Nuova cantina",
+    "sheet_only_name": "Solo il nome è obbligatorio.",
+    "sheet_save_n": "Salva {n} bottiglie",
+    "sheet_save_next": "Salva e aggiungi un’altra",
+    "sheet_save_changes": "Salva modifiche",
+    "sheet_saving": "Salvataggio…",
+    "sheet_saving_n": "Salvataggio {i} di {n}…",
+    "sheet_saved_one": "{name} aggiunta · {where}",
+    "sheet_saved_n": "{n} bottiglie aggiunte · {where}",
+    "sheet_saved_edit": "Modifiche salvate",
+    "sheet_err_name": "Dai un nome al vino.",
+    "sheet_err_year": "Usa un anno di 4 cifre.",
+    "sheet_err_window": "La finestra non può finire prima di iniziare.",
+    "sheet_err_no_slot": "Scegli un posto libero.",
+    "sheet_err_slot_taken": "Quel posto è occupato da «{name}». Scegline un altro.",
+    "sheet_err_slot_moved": "Quel posto è appena stato occupato, quindi abbiamo scelto il successivo libero. Tocca di nuovo Salva.",
+    "sheet_err_not_enough_one": "Solo {n} posto libero in {cellar}.",
+    "sheet_err_not_enough_other": "Solo {n} posti liberi in {cellar}.",
+    "sheet_err_partial_left_one": "Salvate {i} di {total}. {error} Salva di nuovo per aggiungere l’ultima.",
+    "sheet_err_partial_left_other": "Salvate {i} di {total}. {error} Salva di nuovo per aggiungere le altre {n}.",
+    "sheet_err_number": "Inserisci un numero.",
+    "sheet_err_photo_format": "Questo formato di foto non è supportato qui. Prova JPEG o PNG.",
+    "sheet_err_photo_upload": "Impossibile caricare la foto. {error}",
+    "sheet_err_save": "Salvataggio non riuscito: {error}",
+    "move_action": "Sposta",
+    "move_moving": "Spostamento di {name}",
+    "move_hint": "Tocca un posto vuoto o una bottiglia per scambiarle.",
+    "move_hint_kb": "Esc annulla.",
+    "move_done": "{name} spostata in {where}",
+    "move_swapped": "{a} e {b} scambiate",
+    "move_failed": "Impossibile spostare la bottiglia: {error}",
+    "builder_title_new": "Nuova cantina",
+    "builder_name_ph": "es. Cantinetta della cucina",
+    "builder_finish": "Finitura della cornice",
+    "builder_quick": "Avvio rapido",
+    "builder_tpl_fridge": "Cantinetta",
+    "builder_tpl_stagger": "Scaffale sfalsato",
+    "builder_tpl_rack": "Scaffale aperto",
+    "builder_tpl_sub": "{s} ripiani × {f}",
+    "builder_tpl_sub2": "{s} ripiani × {f} + {b} dietro",
+    "builder_shelves_hint": "Prima il ripiano più alto. La fila dietro sta dietro quella davanti, sfalsata perché ogni etichetta resti visibile.",
+    "builder_front_slots": "Posti davanti",
+    "builder_back_slots": "Posti dietro",
+    "builder_fewer": "Meno posti ({lane})",
+    "builder_more": "Più posti ({lane})",
+    "builder_stored": "{n} occupati",
+    "builder_up": "Sposta ripiano su",
+    "builder_down": "Sposta ripiano giù",
+    "builder_remove": "Rimuovi ripiano",
+    "builder_remove_blocked_one": "Prima sposta la bottiglia di questo ripiano.",
+    "builder_remove_blocked_other": "Prima sposta le {n} bottiglie di questo ripiano.",
+    "builder_min_hint": "C’è una bottiglia nel posto {n}.",
+    "builder_preview": "Anteprima",
+    "builder_legend_stored": "Occupato",
+    "builder_legend_free": "Libero",
+    "builder_save": "Salva cantina",
+    "builder_create": "Crea cantina",
+    "builder_saved": "Cantina salvata",
+    "sheet_wait_photo": "In attesa della foto…",
+    "builder_position": "Posizione tra le tue cantine",
+    "builder_pos_first": "In prima posizione",
+    "builder_pos_after": "Dopo {name}",
+    "builder_order_failed": "Cantina salvata, ma non è stato possibile aggiornare l’ordine delle altre cantine.",
+    "builder_fin_bordeaux": "Laccato bordeaux",
+    "builder_fin_oak": "Rovere",
+    "builder_fin_olive": "Oliva",
+    "builder_fin_azure": "Azzurro",
+    "builder_fin_slate": "Ardesia",
+    "builder_fin_steel": "Acciaio spazzolato",
+    "builder_fin_custom": "Personalizzato",
+    "builder_shelves_one": "{n} ripiano",
+    "builder_shelves_other": "{n} ripiani",
+    "builder_slots_one": "{n} posto",
+    "builder_slots_other": "{n} posti",
+    "builder_fin_graphite": "Grafite"
   },
   "nl": {
     "cellars": "Wijnkelders",
     "compact": "Compact",
     "all_bottles": "Alle flessen",
     "stats": "Statistieken",
-    "add_cellar": "Kelder toevoegen",
-    "add_bottle": "Fles toevoegen",
-    "edit_bottle": "Fles bewerken",
     "ready_to_drink": "Drinkklaar",
     "all_types": "Alle soorten",
     "all_countries": "Alle landen",
@@ -1375,11 +1707,7 @@ const WCM_TRANSLATIONS = {
     "price": "Prijs",
     "rating": "Beoordeling",
     "notes": "Notities",
-    "aging_start": "Drinkrijp vanaf (jaar)",
-    "aging_end": "Drinkrijp tot (jaar)",
     "shelf": "Plank",
-    "lane": "Rij",
-    "position": "Positie",
     "front": "Voor",
     "back": "Achter",
     "consume": "Drinken",
@@ -1387,7 +1715,6 @@ const WCM_TRANSLATIONS = {
     "save": "Opslaan",
     "cancel": "Annuleren",
     "close": "Sluiten",
-    "search_history": "Eerdere flessen zoeken",
     "taste_window_title": "Optimaal drinkvenster",
     "serving_temp": "Serveertemperatuur",
     "alcohol_pct": "Alcoholpercentage",
@@ -1435,70 +1762,20 @@ const WCM_TRANSLATIONS = {
     "physical_location": "Fysieke locatie",
     "copy": "Kopiëren",
     "edit": "Bewerken",
-    "wine_acquisition_identification": "Wijnaanwinst en identificatie",
-    "upload_barcode_saq_only": "📁 Barcode uploaden (alleen SAQ)",
-    "upload_label_photo": "📁 Etiketfoto uploaden",
-    "barcode_number_14_digits": "Barcodenummer (14 cijfers)",
-    "scan_result_or_manual_entry": "Scanresultaat of handmatige invoer",
-    "label_image_path": "Pad naar etiketafbeelding",
-    "analyze": "Analyseren",
-    "image_not_reachable": "Afbeelding niet bereikbaar",
-    "search_history_placeholder": "Wijnnaam, producent, regio...",
-    "saq_com_url": "SAQ.com-URL",
     "cellar": "Kelder",
     "view": "Bekijken",
     "shelf_name": "Planknaam",
-    "order": "Volgorde",
-    "front_capacity": "Capaciteit voor",
-    "back_capacity": "Capaciteit achter",
-    "remove": "Verwijderen",
-    "shelf_1": "Plank 1",
     "edit_cellar": "Kelder bewerken",
     "cellar_name": "Naam",
-    "display_order": "Weergavevolgorde",
-    "background_color": "Achtergrondkleur",
-    "default_ha_theme": "Standaard (HA-thema)",
-    "bordeaux_red": "Bordeauxrood",
-    "oak_brown": "Eikenbruin",
-    "olive_green": "Olijfgroen",
-    "azur_blue": "Azuurblauw",
-    "slate_gray": "Leigrijs",
-    "off_white": "Gebroken wit",
     "shelves": "Planken",
     "add_shelf": "Plank toevoegen",
-    "details_and_label_applied": "✨ Wijngegevens en etiket automatisch toegepast!",
-    "select_barcode_photo": "Selecteer de barcodefoto...",
-    "reading_barcode_photo": "Barcodefoto wordt gelezen...",
-    "sending_photo_to_ai": "Foto wordt naar de AI gestuurd...",
-    "ai_extracting_barcode": "AI leest de barcode uit...",
-    "barcode_detected_and_applied": "Barcode gedetecteerd en toegepast!",
     "no_barcode_found": "Geen barcode gevonden.",
     "barcode_extraction_failed": "Uitlezen van de barcode mislukt.",
-    "select_label_photo": "Selecteer de etiketfoto...",
     "confirm_reanalyze": "Deze wijn is al succesvol geanalyseerd. Gegevens overschrijven en de analyse opnieuw uitvoeren?",
     "provide_barcode_or_label": "Voer een barcode (cijfers) in of upload een etiketafbeelding voordat u de analyse start.",
-    "starting_smart_analysis": "Slimme analyse wordt gestart...",
-    "analysis_completed": "✨ Analyse succesvol voltooid! Gegevens toegepast.",
-    "no_result_found": "Geen resultaat gevonden.",
-    "analysis_failed": "Analyse mislukt: ",
     "confirm_merge_all": "Wilt u alle vermelde schrijfwijzen samenvoegen en standaardiseren?",
     "scanner_error": "Scannerfout: ",
-    "upload_label_first": "Upload of maak eerst een etiketafbeelding.",
-    "analyzing_label": "Etiket wordt geanalyseerd...",
-    "label_suggestion_applied": "Etiketsuggestie toegepast op lege velden.",
-    "no_label_result": "Geen etiketresultaat gevonden.",
-    "label_analysis_failed": "Etiketanalyse mislukt: ",
-    "no_file_selected": "Geen bestand geselecteerd.",
     "file_not_image": "Het geselecteerde bestand is geen afbeelding.",
-    "reading_label_image": "Etiketafbeelding wordt gelezen...",
-    "uploading_label_image": "Etiketafbeelding wordt geüpload...",
-    "label_upload_failed": "Uploaden van etiket mislukt: ",
-    "select_location_before_copy": "Selecteer kelder, plank, rij en positie voordat u kopieert.",
-    "copying_bottle": "Bestaande fles wordt naar de huidige plaats gekopieerd...",
-    "copy_bottle_failed": "Kopiëren van fles mislukt: ",
-    "source_bottle_not_found": "Bronfles niet gevonden.",
-    "bottle_details_copied": "Flesgegevens naar het formulier gekopieerd. Controleer en sla op.",
-    "bottle_save_failed": "Opslaan van fles mislukt: ",
     "shelf_front_capacity_min": "Elke plank moet een capaciteit voor van minimaal 1 hebben.",
     "add_at_least_one_shelf": "Voeg minimaal één plank toe.",
     "cellar_save_failed": "Opslaan van kelder mislukt: ",
@@ -1508,14 +1785,12 @@ const WCM_TRANSLATIONS = {
     "bottle_copied_to_memory": "Fles gekopieerd naar geheugen. Klik op een lege plaats om te plakken.",
     "cellar_needs_shelf": "Een kelder moet minimaal één plank hebben.",
     "unknown_error": "onbekende fout",
-    "bottle_search_failed": "Zoeken naar flessen mislukt: ",
     "bottles_found_suffix": " fles(sen) gevonden.",
     "search_no_match": "Geen flessen die overeenkomen met de zoekopdracht of filters.",
     "clear_filters": "Filters wissen",
     "no_bottles_yet": "Nog geen flessen in de kelders.",
     "add_bottle_short": "+ Fles",
     "all_slots_full": "Alle plaatsen in de kelders zijn bezet. Maak een plaats vrij, of voeg een plank of kelder toe, om een fles toe te voegen.",
-    "duplicate_warning": "⚠️ Let op: u heeft al {n} identieke fles(sen) in uw kelder.",
     "wine_details": "Wijngegevens",
     "cellar_editor": "Keldereditor",
     "bottle_editor": "Fleseditor",
@@ -1543,34 +1818,15 @@ const WCM_TRANSLATIONS = {
     "delete_cellar_confirm": "Kelder verwijderen",
     "merge_all_title": "{n} paar/paren schrijfwijzen samenvoegen?",
     "merge_all_body": "{m} fles(sen) krijgen de gekozen schrijfwijze. Paren om te controleren blijven ongewijzigd.",
-    "reanalyze_title": "Deze wijn opnieuw analyseren?",
-    "reanalyze_body": "Elk veld dat de analyse vindt, vervangt de huidige inhoud van het formulier.",
-    "analyze_again": "Opnieuw analyseren",
     "action_failed": "Dat is niet gelukt: {error}",
-    "position_free": "Positie {n} (vrij)",
-    "position_current": "Positie {n} (huidig)",
-    "no_free_position": "Geen vrije positie in deze rij",
     "shelf_n": "Plank {n}",
-    "shelf_stored": "{n} fles(sen) opgeslagen",
     "shelf_empty": "Leeg",
-    "shelf_remove_blocked": "Verplaats deze flessen naar een andere plank voordat u deze verwijdert.",
-    "err_choose_position": "Kies een vrije positie. Is de lijst leeg, kies dan een andere plank of rij.",
     "err_slot_taken_server": "Deze plaats is al bezet. Kies een andere positie.",
     "cleanup_check_pair": "Vergelijkbare schrijfwijze, maar mogelijk een andere naam. Controleer dit vóór het samenvoegen; “Alles samenvoegen” slaat het over.",
     "pasted_details": "Gegevens overgenomen van “{name}”. Controleer en sla op.",
-    "label_uploaded": "Etiketafbeelding geüpload.",
-    "label_uploaded_duplicates": "Etiketafbeelding geüpload. Mogelijke duplicaten hieronder.",
-    "err_select_cellar": "Kies een kelder.",
-    "err_select_shelf": "Kies een plank.",
-    "err_select_lane": "Kies een rij (voor of achter).",
-    "err_wine_name_required": "De wijnnaam is verplicht.",
     "err_shelf_missing": "De gekozen plank bestaat niet meer.",
     "err_no_back_lane": "Deze plank heeft geen achterste rij.",
-    "err_no_front_positions": "Deze plank heeft geen posities vooraan.",
     "err_position_out_of_range": "Die positie valt buiten de capaciteit van deze rij.",
-    "err_position_taken": "Die positie is al bezet door ‘{name}’. Kies een vrije positie.",
-    "err_aging_order": "Het beginjaar van de drinkrijpheid mag niet na het eindjaar liggen.",
-    "err_aging_end_order": "Het eindjaar van de drinkrijpheid moet gelijk zijn aan of later zijn dan het beginjaar.",
     "err_rating_range": "De beoordeling moet tussen 0 en 5 liggen.",
     "err_shelf_has_bottles": "Een plank met flessen kan niet worden verwijderd. Verplaats eerst de flessen.",
     "err_shrink_front": "Een voorste rij kan niet kleiner worden dan de laatst bezette positie. Verplaats eerst die flessen.",
@@ -1580,7 +1836,6 @@ const WCM_TRANSLATIONS = {
     "err_no_entry": "De integratie Wine Cellar Manager is niet ingesteld.",
     "err_shelf_front_min": "‘{shelf}’ heeft een fles op voorste positie {n} en heeft daarom minstens {n} posities vooraan nodig.",
     "err_shelf_back_min": "‘{shelf}’ heeft een fles op achterste positie {n} en heeft daarom minstens {n} posities achteraan nodig.",
-    "duplicate_detection_failed": "Zoeken naar duplicaten mislukt: ",
     "depth_back_row": "Achterste rij",
     "depth_behind": "Achter {names}",
     "depth_behind_aria": "achter {names}",
@@ -1623,16 +1878,160 @@ const WCM_TRANSLATIONS = {
     "bt_replace_photo": "Foto vervangen",
     "slot_empty_label": "Lege plek, fles toevoegen: {loc}",
     "loc_front_pos": "{cellar}, {shelf}, voorste rij, positie {pos}",
-    "loc_back_pos": "{cellar}, {shelf}, achterste rij, positie {pos}"
+    "loc_back_pos": "{cellar}, {shelf}, achterste rij, positie {pos}",
+    "sheet_add_title": "Fles toevoegen",
+    "sheet_editing": "Bewerken",
+    "sheet_sec_label": "Etiket",
+    "sheet_sec_wine": "De wijn",
+    "sheet_sec_place": "Waar hij komt",
+    "sheet_more": "Meer gegevens",
+    "sheet_more_hint": "Regio, prijs, drinkvenster, beoordeling, notities",
+    "sheet_more_filled": "{n} ingevuld",
+    "sheet_take_photo": "Foto maken",
+    "sheet_upload_photo": "Etiketfoto uploaden",
+    "sheet_choose_library": "Kiezen uit bibliotheek",
+    "sheet_type_instead": "Liever typen",
+    "sheet_scan_barcode": "SAQ-barcode scannen",
+    "sheet_photo_title": "Fotografeer het etiket",
+    "sheet_photo_title_plain": "Etiketfoto toevoegen",
+    "sheet_photo_sub_ai": "Wij lezen naam, producent en jaargang voor u uit.",
+    "sheet_photo_sub": "Met een etiketfoto herkent u de fles meteen op de plank.",
+    "sheet_photo_drop": "of sleep hier een afbeelding",
+    "sheet_photo_ready": "Etiketfoto",
+    "sheet_photo_replace": "Vervangen",
+    "sheet_photo_rotate": "Draaien",
+    "sheet_photo_remove": "Verwijderen",
+    "sheet_photo_read": "Etiket uitlezen",
+    "sheet_st_preparing": "Foto voorbereiden…",
+    "sheet_st_uploading": "Uploaden…",
+    "sheet_st_reading": "Etiket wordt gelezen…",
+    "sheet_st_barcode": "Barcode wordt gelezen…",
+    "sheet_note_reading": "Het etiket wordt gelezen. Typ gerust verder: alleen lege velden worden ingevuld.",
+    "sheet_note_ai_one": "{n} gegeven van het etiket ingevuld. Controleer het even.",
+    "sheet_note_ai_other": "{n} gegevens van het etiket ingevuld. Controleer ze even.",
+    "sheet_note_cellar_one": "{n} gegeven ingevuld vanuit {name} in uw kelder.",
+    "sheet_note_cellar_other": "{n} gegevens ingevuld vanuit {name} in uw kelder.",
+    "sheet_note_none": "Niets nieuws gevonden op het etiket.",
+    "sheet_note_fail": "Dit etiket kon niet automatisch worden gelezen. Vul de gegevens hieronder in.",
+    "undo": "Ongedaan maken",
+    "undone": "Ongedaan gemaakt",
+    "sheet_mark_ai": "AI",
+    "sheet_mark_cellar": "Uit de kelder",
+    "sheet_name_ph": "bijv. Barolo, Château Margaux…",
+    "sheet_in_cellar": "{n} in de kelder",
+    "sheet_had_before": "Eerder gehad",
+    "sheet_dup": "U heeft al {n} flessen van deze wijn · {where}",
+    "sheet_type_unset": "Weet ik niet",
+    "sheet_window": "Drinkvenster",
+    "sheet_from": "Vanaf",
+    "sheet_to": "Tot",
+    "sheet_win_none": "Vul de jaren in om te zien wanneer hij klaar is.",
+    "sheet_win_young": "Te jong · drinkklaar vanaf {y}",
+    "sheet_win_ready": "Drinkklaar · tot {y}",
+    "sheet_win_peak": "Dit jaar op zijn hoogtepunt",
+    "sheet_win_past": "Over zijn hoogtepunt sinds {y}",
+    "sheet_rating_none": "Geen",
+    "sheet_link": "Productlink",
+    "sheet_barcode": "Barcode",
+    "sheet_lookup": "Opzoeken",
+    "pick_bottles": "Aantal flessen",
+    "pick_qty_less": "Eén fles minder",
+    "pick_qty_more": "Eén fles meer",
+    "pick_free_one": "{n} vrij",
+    "pick_free_other": "{n} vrij",
+    "pick_full": "Vol",
+    "pick_hint": "Tik op een vrije plek om te kiezen waar hij komt.",
+    "pick_hint_n": "Vult {n} vrije plekken op volgorde, te beginnen bij de plek die u aantikt.",
+    "pick_hint_edit": "Tik op een vrije plek om de fles daarheen te verplaatsen bij opslaan.",
+    "sheet_plan_n": "{n} flessen · {where}",
+    "pick_move_from": "Verplaatst van {from}",
+    "pick_occupied": "Bezet · {name}",
+    "pick_slot_free": "{shelf}, {lane}, positie {pos}, vrij",
+    "pick_slot_current": "{shelf}, {lane}, positie {pos}, huidige plek",
+    "pick_no_free": "Alle plekken zijn bezet.",
+    "pick_no_free_sub": "Voeg een plank of kelder toe om ruimte te maken en voeg dan de fles toe.",
+    "pick_add_shelves_to": "Planken toevoegen aan {name}",
+    "pick_new_cellar": "Nieuwe kelder",
+    "sheet_only_name": "Alleen de naam is verplicht.",
+    "sheet_save_n": "{n} flessen opslaan",
+    "sheet_save_next": "Opslaan & volgende",
+    "sheet_save_changes": "Wijzigingen opslaan",
+    "sheet_saving": "Opslaan…",
+    "sheet_saving_n": "{i} van {n} opslaan…",
+    "sheet_saved_one": "{name} toegevoegd · {where}",
+    "sheet_saved_n": "{n} flessen toegevoegd · {where}",
+    "sheet_saved_edit": "Wijzigingen opgeslagen",
+    "sheet_err_name": "Geef de wijn een naam.",
+    "sheet_err_year": "Gebruik een jaartal van 4 cijfers.",
+    "sheet_err_window": "Het venster kan niet eindigen voordat het begint.",
+    "sheet_err_no_slot": "Kies een vrije plek.",
+    "sheet_err_slot_taken": "Die plek is bezet door „{name}”. Kies een andere.",
+    "sheet_err_slot_moved": "Die plek is net bezet, dus we hebben de volgende vrije gekozen. Tik nogmaals op Opslaan.",
+    "sheet_err_not_enough_one": "Maar {n} vrije plek in {cellar}.",
+    "sheet_err_not_enough_other": "Maar {n} vrije plekken in {cellar}.",
+    "sheet_err_partial_left_one": "{i} van {total} opgeslagen. {error} Sla opnieuw op om de laatste toe te voegen.",
+    "sheet_err_partial_left_other": "{i} van {total} opgeslagen. {error} Sla opnieuw op om de overige {n} toe te voegen.",
+    "sheet_err_number": "Voer een getal in.",
+    "sheet_err_photo_format": "Dit fotoformaat wordt hier niet ondersteund. Probeer JPEG of PNG.",
+    "sheet_err_photo_upload": "De foto kon niet worden geüpload. {error}",
+    "sheet_err_save": "Opslaan mislukt: {error}",
+    "move_action": "Verplaatsen",
+    "move_moving": "{name} verplaatsen",
+    "move_hint": "Tik op een lege plek, of op een fles om te wisselen.",
+    "move_hint_kb": "Esc annuleert.",
+    "move_done": "{name} verplaatst naar {where}",
+    "move_swapped": "{a} en {b} gewisseld",
+    "move_failed": "De fles kon niet worden verplaatst: {error}",
+    "builder_title_new": "Nieuwe kelder",
+    "builder_name_ph": "bijv. Wijnkoelkast keuken",
+    "builder_finish": "Afwerking van de kast",
+    "builder_quick": "Snelle start",
+    "builder_tpl_fridge": "Wijnkoelkast",
+    "builder_tpl_stagger": "Verspringend rek",
+    "builder_tpl_rack": "Open rek",
+    "builder_tpl_sub": "{s} planken × {f}",
+    "builder_tpl_sub2": "{s} planken × {f} + {b} erachter",
+    "builder_shelves_hint": "Bovenste plank eerst. De achterste rij staat verspringend achter de voorste, zodat elk etiket zichtbaar blijft.",
+    "builder_front_slots": "Plekken voor",
+    "builder_back_slots": "Plekken achter",
+    "builder_fewer": "Minder plekken ({lane})",
+    "builder_more": "Meer plekken ({lane})",
+    "builder_stored": "{n} bezet",
+    "builder_up": "Plank omhoog",
+    "builder_down": "Plank omlaag",
+    "builder_remove": "Plank verwijderen",
+    "builder_remove_blocked_one": "Verplaats eerst de fles op deze plank.",
+    "builder_remove_blocked_other": "Verplaats eerst de {n} flessen op deze plank.",
+    "builder_min_hint": "Er staat een fles op plek {n}.",
+    "builder_preview": "Voorbeeld",
+    "builder_legend_stored": "Bezet",
+    "builder_legend_free": "Vrij",
+    "builder_save": "Kelder opslaan",
+    "builder_create": "Kelder aanmaken",
+    "builder_saved": "Kelder opgeslagen",
+    "sheet_wait_photo": "Wachten op de foto…",
+    "builder_position": "Positie tussen uw kelders",
+    "builder_pos_first": "Als eerste",
+    "builder_pos_after": "Na {name}",
+    "builder_order_failed": "Kelder opgeslagen, maar de volgorde van de andere kelders kon niet worden bijgewerkt.",
+    "builder_fin_bordeaux": "Bordeauxlak",
+    "builder_fin_oak": "Eiken",
+    "builder_fin_olive": "Olijf",
+    "builder_fin_azure": "Azuur",
+    "builder_fin_slate": "Leisteen",
+    "builder_fin_steel": "Geborsteld staal",
+    "builder_fin_custom": "Aangepast",
+    "builder_shelves_one": "{n} plank",
+    "builder_shelves_other": "{n} planken",
+    "builder_slots_one": "{n} plek",
+    "builder_slots_other": "{n} plekken",
+    "builder_fin_graphite": "Grafiet"
   },
   "pt": {
     "cellars": "Adegas",
     "compact": "Compacto",
     "all_bottles": "Todas as garrafas",
     "stats": "Estatísticas",
-    "add_cellar": "Adicionar adega",
-    "add_bottle": "Adicionar garrafa",
-    "edit_bottle": "Editar garrafa",
     "ready_to_drink": "Pronto para beber",
     "all_types": "Todos os tipos",
     "all_countries": "Todos os países",
@@ -1646,11 +2045,7 @@ const WCM_TRANSLATIONS = {
     "price": "Preço",
     "rating": "Avaliação",
     "notes": "Notas",
-    "aging_start": "Início da maturidade (ano)",
-    "aging_end": "Fim da maturidade (ano)",
     "shelf": "Prateleira",
-    "lane": "Fila",
-    "position": "Posição",
     "front": "Frente",
     "back": "Trás",
     "consume": "Consumir",
@@ -1658,7 +2053,6 @@ const WCM_TRANSLATIONS = {
     "save": "Salvar",
     "cancel": "Cancelar",
     "close": "Fechar",
-    "search_history": "Pesquisar garrafas anteriores",
     "taste_window_title": "Janela ideal de consumo",
     "serving_temp": "Temperatura de serviço",
     "alcohol_pct": "Teor alcoólico",
@@ -1706,70 +2100,20 @@ const WCM_TRANSLATIONS = {
     "physical_location": "Localização física",
     "copy": "Copiar",
     "edit": "Editar",
-    "wine_acquisition_identification": "Aquisição e identificação do vinho",
-    "upload_barcode_saq_only": "📁 Enviar código de barras (somente SAQ)",
-    "upload_label_photo": "📁 Enviar foto do rótulo",
-    "barcode_number_14_digits": "Número do código de barras (14 dígitos)",
-    "scan_result_or_manual_entry": "Resultado da leitura ou entrada manual",
-    "label_image_path": "Caminho da imagem do rótulo",
-    "analyze": "Analisar",
-    "image_not_reachable": "Imagem inacessível",
-    "search_history_placeholder": "Nome do vinho, produtor, região...",
-    "saq_com_url": "URL do SAQ.com",
     "cellar": "Adega",
     "view": "Ver",
     "shelf_name": "Nome da prateleira",
-    "order": "Ordem",
-    "front_capacity": "Capacidade frontal",
-    "back_capacity": "Capacidade traseira",
-    "remove": "Remover",
-    "shelf_1": "Prateleira 1",
     "edit_cellar": "Editar adega",
     "cellar_name": "Nome",
-    "display_order": "Ordem de exibição",
-    "background_color": "Cor de fundo",
-    "default_ha_theme": "Padrão (tema do HA)",
-    "bordeaux_red": "Vermelho bordô",
-    "oak_brown": "Marrom carvalho",
-    "olive_green": "Verde oliva",
-    "azur_blue": "Azul celeste",
-    "slate_gray": "Cinza ardósia",
-    "off_white": "Branco gelo",
     "shelves": "Prateleiras",
     "add_shelf": "Adicionar prateleira",
-    "details_and_label_applied": "✨ Detalhes do vinho e rótulo aplicados automaticamente!",
-    "select_barcode_photo": "Selecione a foto do código de barras...",
-    "reading_barcode_photo": "Lendo a foto do código de barras...",
-    "sending_photo_to_ai": "Enviando a foto para a IA...",
-    "ai_extracting_barcode": "A IA está extraindo o código de barras...",
-    "barcode_detected_and_applied": "Código de barras detectado e aplicado!",
     "no_barcode_found": "Nenhum código de barras encontrado.",
     "barcode_extraction_failed": "Falha ao extrair o código de barras.",
-    "select_label_photo": "Selecione a foto do rótulo...",
     "confirm_reanalyze": "Este vinho já foi analisado com sucesso. Sobrescrever os dados e executar a análise novamente?",
     "provide_barcode_or_label": "Informe um código de barras (dígitos) ou envie uma imagem do rótulo antes de iniciar a análise.",
-    "starting_smart_analysis": "Iniciando a análise inteligente...",
-    "analysis_completed": "✨ Análise concluída com sucesso! Detalhes aplicados.",
-    "no_result_found": "Nenhum resultado encontrado.",
-    "analysis_failed": "Falha na análise: ",
     "confirm_merge_all": "Deseja mesclar e padronizar todas as sintaxes listadas?",
     "scanner_error": "Erro do leitor: ",
-    "upload_label_first": "Envie ou capture primeiro uma imagem do rótulo.",
-    "analyzing_label": "Analisando o rótulo...",
-    "label_suggestion_applied": "Sugestão do rótulo aplicada aos campos vazios.",
-    "no_label_result": "Nenhum resultado para o rótulo.",
-    "label_analysis_failed": "Falha na análise do rótulo: ",
-    "no_file_selected": "Nenhum arquivo selecionado.",
     "file_not_image": "O arquivo selecionado não é uma imagem.",
-    "reading_label_image": "Lendo a imagem do rótulo...",
-    "uploading_label_image": "Enviando a imagem do rótulo...",
-    "label_upload_failed": "Falha ao enviar o rótulo: ",
-    "select_location_before_copy": "Selecione adega, prateleira, fila e posição antes de copiar.",
-    "copying_bottle": "Copiando a garrafa existente para a posição atual...",
-    "copy_bottle_failed": "Falha ao copiar a garrafa: ",
-    "source_bottle_not_found": "Garrafa de origem não encontrada.",
-    "bottle_details_copied": "Detalhes da garrafa copiados para o formulário. Revise e salve.",
-    "bottle_save_failed": "Falha ao salvar a garrafa: ",
     "shelf_front_capacity_min": "Cada prateleira deve ter capacidade frontal de pelo menos 1.",
     "add_at_least_one_shelf": "Adicione pelo menos uma prateleira.",
     "cellar_save_failed": "Falha ao salvar a adega: ",
@@ -1779,14 +2123,12 @@ const WCM_TRANSLATIONS = {
     "bottle_copied_to_memory": "Garrafa copiada para a memória. Clique em uma posição vazia para colar.",
     "cellar_needs_shelf": "Uma adega deve ter pelo menos uma prateleira.",
     "unknown_error": "erro desconhecido",
-    "bottle_search_failed": "Falha na busca de garrafas: ",
     "bottles_found_suffix": " garrafa(s) encontrada(s).",
     "search_no_match": "Nenhuma garrafa corresponde à pesquisa ou aos filtros.",
     "clear_filters": "Limpar filtros",
     "no_bottles_yet": "Ainda não há garrafas nas suas adegas.",
     "add_bottle_short": "+ Garrafa",
     "all_slots_full": "Todas as posições das suas adegas estão ocupadas. Esvazie uma posição, ou adicione uma prateleira ou uma adega, para adicionar uma garrafa.",
-    "duplicate_warning": "⚠️ Atenção: você já tem {n} garrafa(s) idêntica(s) na sua adega.",
     "wine_details": "Detalhes do vinho",
     "cellar_editor": "Editor de adega",
     "bottle_editor": "Editor de garrafa",
@@ -1814,34 +2156,15 @@ const WCM_TRANSLATIONS = {
     "delete_cellar_confirm": "Excluir adega",
     "merge_all_title": "Mesclar {n} par(es) de grafias?",
     "merge_all_body": "{m} garrafa(s) passarão a usar a grafia selecionada. Os pares a verificar não são alterados.",
-    "reanalyze_title": "Analisar este vinho novamente?",
-    "reanalyze_body": "Cada campo encontrado pela análise substituirá o conteúdo atual do formulário.",
-    "analyze_again": "Analisar novamente",
     "action_failed": "Não foi possível concluir: {error}",
-    "position_free": "Posição {n} (livre)",
-    "position_current": "Posição {n} (atual)",
-    "no_free_position": "Nenhuma posição livre nesta fila",
     "shelf_n": "Prateleira {n}",
-    "shelf_stored": "{n} garrafa(s) guardada(s)",
     "shelf_empty": "Vazia",
-    "shelf_remove_blocked": "Mova estas garrafas para outra prateleira antes de removê-la.",
-    "err_choose_position": "Escolha uma posição livre. Se a lista estiver vazia, escolha outra prateleira ou fila.",
     "err_slot_taken_server": "Essa posição já está ocupada. Escolha outra.",
     "cleanup_check_pair": "Grafia parecida, mas pode ser outro nome. Verifique antes de mesclar; “Mesclar tudo” ignora este par.",
     "pasted_details": "Dados copiados de “{name}”. Verifique e salve.",
-    "label_uploaded": "Imagem do rótulo enviada.",
-    "label_uploaded_duplicates": "Imagem do rótulo enviada. Possíveis duplicatas abaixo.",
-    "err_select_cellar": "Escolha uma adega.",
-    "err_select_shelf": "Escolha uma prateleira.",
-    "err_select_lane": "Escolha uma fila (frente ou trás).",
-    "err_wine_name_required": "O nome do vinho é obrigatório.",
     "err_shelf_missing": "A prateleira selecionada não existe mais.",
     "err_no_back_lane": "Esta prateleira não tem fila de trás.",
-    "err_no_front_positions": "Esta prateleira não tem posições na frente.",
     "err_position_out_of_range": "Essa posição ultrapassa a capacidade desta fila da prateleira.",
-    "err_position_taken": "Essa posição já está ocupada por “{name}”. Escolha uma posição livre.",
-    "err_aging_order": "O ano de início da maturidade não pode ser posterior ao ano final.",
-    "err_aging_end_order": "O ano final da maturidade deve ser igual ou posterior ao ano de início.",
     "err_rating_range": "A avaliação deve estar entre 0 e 5.",
     "err_shelf_has_bottles": "Não é possível remover uma prateleira que ainda tem garrafas. Mova as garrafas primeiro.",
     "err_shrink_front": "Uma fila da frente não pode ficar menor que sua última posição ocupada. Mova essas garrafas primeiro.",
@@ -1851,7 +2174,6 @@ const WCM_TRANSLATIONS = {
     "err_no_entry": "A integração Wine Cellar Manager não está configurada.",
     "err_shelf_front_min": "“{shelf}” tem uma garrafa na posição da frente {n}, então precisa de pelo menos {n} posições na frente.",
     "err_shelf_back_min": "“{shelf}” tem uma garrafa na posição de trás {n}, então precisa de pelo menos {n} posições atrás.",
-    "duplicate_detection_failed": "Falha na busca por duplicatas: ",
     "depth_back_row": "Fila de trás",
     "depth_behind": "Atrás de {names}",
     "depth_behind_aria": "atrás de {names}",
@@ -1894,16 +2216,160 @@ const WCM_TRANSLATIONS = {
     "bt_replace_photo": "Substituir foto",
     "slot_empty_label": "Posição livre, adicionar uma garrafa: {loc}",
     "loc_front_pos": "{cellar}, {shelf}, fila da frente, posição {pos}",
-    "loc_back_pos": "{cellar}, {shelf}, fila de trás, posição {pos}"
+    "loc_back_pos": "{cellar}, {shelf}, fila de trás, posição {pos}",
+    "sheet_add_title": "Adicionar garrafa",
+    "sheet_editing": "Editando",
+    "sheet_sec_label": "Rótulo",
+    "sheet_sec_wine": "O vinho",
+    "sheet_sec_place": "Onde vai ficar",
+    "sheet_more": "Mais detalhes",
+    "sheet_more_hint": "Região, preço, janela de consumo, avaliação, notas",
+    "sheet_more_filled": "{n} preenchidos",
+    "sheet_take_photo": "Tirar foto",
+    "sheet_upload_photo": "Enviar foto do rótulo",
+    "sheet_choose_library": "Escolher da galeria",
+    "sheet_type_instead": "Digitar em vez disso",
+    "sheet_scan_barcode": "Ler código SAQ",
+    "sheet_photo_title": "Fotografe o rótulo",
+    "sheet_photo_title_plain": "Adicionar uma foto do rótulo",
+    "sheet_photo_sub_ai": "Nós lemos o nome, o produtor e a safra para você.",
+    "sheet_photo_sub": "Com uma foto do rótulo, a garrafa é fácil de achar na prateleira.",
+    "sheet_photo_drop": "ou solte uma imagem aqui",
+    "sheet_photo_ready": "Foto do rótulo",
+    "sheet_photo_replace": "Substituir",
+    "sheet_photo_rotate": "Girar",
+    "sheet_photo_remove": "Remover",
+    "sheet_photo_read": "Ler rótulo",
+    "sheet_st_preparing": "Preparando a foto…",
+    "sheet_st_uploading": "Enviando…",
+    "sheet_st_reading": "Lendo o rótulo…",
+    "sheet_st_barcode": "Lendo o código de barras…",
+    "sheet_note_reading": "Lendo o rótulo. Pode continuar digitando: só os campos vazios são preenchidos.",
+    "sheet_note_ai_one": "{n} detalhe preenchido pelo rótulo. Dê uma conferida rápida.",
+    "sheet_note_ai_other": "{n} detalhes preenchidos pelo rótulo. Dê uma conferida rápida.",
+    "sheet_note_cellar_one": "{n} detalhe preenchido a partir de {name} da sua adega.",
+    "sheet_note_cellar_other": "{n} detalhes preenchidos a partir de {name} da sua adega.",
+    "sheet_note_none": "Nada de novo encontrado no rótulo.",
+    "sheet_note_fail": "Não foi possível ler este rótulo automaticamente. Preencha os detalhes abaixo.",
+    "undo": "Desfazer",
+    "undone": "Desfeito",
+    "sheet_mark_ai": "IA",
+    "sheet_mark_cellar": "Da adega",
+    "sheet_name_ph": "ex.: Barolo, Château Margaux…",
+    "sheet_in_cellar": "{n} na adega",
+    "sheet_had_before": "Já teve",
+    "sheet_dup": "Você já tem {n} garrafas deste vinho · {where}",
+    "sheet_type_unset": "Não sei",
+    "sheet_window": "Janela de consumo",
+    "sheet_from": "De",
+    "sheet_to": "Até",
+    "sheet_win_none": "Adicione os anos para ver quando estará pronto.",
+    "sheet_win_young": "Muito novo · pronto a partir de {y}",
+    "sheet_win_ready": "Pronto para beber · até {y}",
+    "sheet_win_peak": "No auge este ano",
+    "sheet_win_past": "Passou do auge desde {y}",
+    "sheet_rating_none": "Nenhuma",
+    "sheet_link": "Link do produto",
+    "sheet_barcode": "Código de barras",
+    "sheet_lookup": "Consultar",
+    "pick_bottles": "Quantas garrafas",
+    "pick_qty_less": "Uma garrafa a menos",
+    "pick_qty_more": "Uma garrafa a mais",
+    "pick_free_one": "{n} livre",
+    "pick_free_other": "{n} livres",
+    "pick_full": "Cheio",
+    "pick_hint": "Toque numa posição livre para escolher onde vai ficar.",
+    "pick_hint_n": "Ocupa {n} posições livres em ordem, a partir da que você tocar.",
+    "pick_hint_edit": "Toque numa posição livre para mover a garrafa para lá ao salvar.",
+    "sheet_plan_n": "{n} garrafas · {where}",
+    "pick_move_from": "Sai de {from}",
+    "pick_occupied": "Ocupada · {name}",
+    "pick_slot_free": "{shelf}, {lane}, posição {pos}, livre",
+    "pick_slot_current": "{shelf}, {lane}, posição {pos}, posição atual",
+    "pick_no_free": "Todas as posições estão ocupadas.",
+    "pick_no_free_sub": "Adicione uma prateleira ou adega para abrir espaço e depois a garrafa.",
+    "pick_add_shelves_to": "Adicionar prateleiras a {name}",
+    "pick_new_cellar": "Nova adega",
+    "sheet_only_name": "Só o nome é obrigatório.",
+    "sheet_save_n": "Salvar {n} garrafas",
+    "sheet_save_next": "Salvar e adicionar outra",
+    "sheet_save_changes": "Salvar alterações",
+    "sheet_saving": "Salvando…",
+    "sheet_saving_n": "Salvando {i} de {n}…",
+    "sheet_saved_one": "{name} adicionada · {where}",
+    "sheet_saved_n": "{n} garrafas adicionadas · {where}",
+    "sheet_saved_edit": "Alterações salvas",
+    "sheet_err_name": "Dê um nome ao vinho.",
+    "sheet_err_year": "Use um ano com 4 dígitos.",
+    "sheet_err_window": "A janela não pode terminar antes de começar.",
+    "sheet_err_no_slot": "Escolha uma posição livre.",
+    "sheet_err_slot_taken": "Essa posição está ocupada por “{name}”. Escolha outra.",
+    "sheet_err_slot_moved": "Essa posição acabou de ser ocupada, então escolhemos a próxima livre. Toque em Salvar de novo.",
+    "sheet_err_not_enough_one": "Só {n} posição livre em {cellar}.",
+    "sheet_err_not_enough_other": "Só {n} posições livres em {cellar}.",
+    "sheet_err_partial_left_one": "{i} de {total} salvas. {error} Salve de novo para adicionar a última.",
+    "sheet_err_partial_left_other": "{i} de {total} salvas. {error} Salve de novo para adicionar as outras {n}.",
+    "sheet_err_number": "Digite um número.",
+    "sheet_err_photo_format": "Este formato de foto não é compatível aqui. Tente JPEG ou PNG.",
+    "sheet_err_photo_upload": "Não foi possível enviar a foto. {error}",
+    "sheet_err_save": "Não foi possível salvar: {error}",
+    "move_action": "Mover",
+    "move_moving": "Movendo {name}",
+    "move_hint": "Toque numa posição vazia ou numa garrafa para trocar.",
+    "move_hint_kb": "Esc cancela.",
+    "move_done": "{name} movida para {where}",
+    "move_swapped": "{a} e {b} trocadas",
+    "move_failed": "Não foi possível mover a garrafa: {error}",
+    "builder_title_new": "Nova adega",
+    "builder_name_ph": "ex.: Adega da cozinha",
+    "builder_finish": "Acabamento da moldura",
+    "builder_quick": "Início rápido",
+    "builder_tpl_fridge": "Adega climatizada",
+    "builder_tpl_stagger": "Rack escalonado",
+    "builder_tpl_rack": "Rack aberto",
+    "builder_tpl_sub": "{s} prateleiras × {f}",
+    "builder_tpl_sub2": "{s} prateleiras × {f} + {b} atrás",
+    "builder_shelves_hint": "Prateleira de cima primeiro. A fila de trás fica atrás da da frente, desencontrada para que todo rótulo apareça.",
+    "builder_front_slots": "Posições na frente",
+    "builder_back_slots": "Posições atrás",
+    "builder_fewer": "Menos posições ({lane})",
+    "builder_more": "Mais posições ({lane})",
+    "builder_stored": "{n} ocupadas",
+    "builder_up": "Subir prateleira",
+    "builder_down": "Descer prateleira",
+    "builder_remove": "Remover prateleira",
+    "builder_remove_blocked_one": "Primeiro mova a garrafa desta prateleira.",
+    "builder_remove_blocked_other": "Primeiro mova as {n} garrafas desta prateleira.",
+    "builder_min_hint": "Há uma garrafa na posição {n}.",
+    "builder_preview": "Pré-visualização",
+    "builder_legend_stored": "Ocupada",
+    "builder_legend_free": "Livre",
+    "builder_save": "Salvar adega",
+    "builder_create": "Criar adega",
+    "builder_saved": "Adega salva",
+    "sheet_wait_photo": "Aguardando a foto…",
+    "builder_position": "Posição entre suas adegas",
+    "builder_pos_first": "Em primeiro lugar",
+    "builder_pos_after": "Depois de {name}",
+    "builder_order_failed": "Adega salva, mas não foi possível atualizar a ordem das outras adegas.",
+    "builder_fin_bordeaux": "Laca bordô",
+    "builder_fin_oak": "Carvalho",
+    "builder_fin_olive": "Oliva",
+    "builder_fin_azure": "Azul-celeste",
+    "builder_fin_slate": "Ardósia",
+    "builder_fin_steel": "Aço escovado",
+    "builder_fin_custom": "Personalizado",
+    "builder_shelves_one": "{n} prateleira",
+    "builder_shelves_other": "{n} prateleiras",
+    "builder_slots_one": "{n} posição",
+    "builder_slots_other": "{n} posições",
+    "builder_fin_graphite": "Grafite"
   },
   "pl": {
     "cellars": "Piwnice",
     "compact": "Kompaktowy",
     "all_bottles": "Wszystkie butelki",
     "stats": "Statystyki",
-    "add_cellar": "Dodaj piwnicę",
-    "add_bottle": "Dodaj butelkę",
-    "edit_bottle": "Edytuj butelkę",
     "ready_to_drink": "Gotowe do picia",
     "all_types": "Wszystkie rodzaje",
     "all_countries": "Wszystkie kraje",
@@ -1917,11 +2383,7 @@ const WCM_TRANSLATIONS = {
     "price": "Cena",
     "rating": "Ocena",
     "notes": "Notatki",
-    "aging_start": "Początek dojrzałości (rok)",
-    "aging_end": "Koniec dojrzałości (rok)",
     "shelf": "Półka",
-    "lane": "Rząd",
-    "position": "Pozycja",
     "front": "Przód",
     "back": "Tył",
     "consume": "Wypij",
@@ -1929,7 +2391,6 @@ const WCM_TRANSLATIONS = {
     "save": "Zapisz",
     "cancel": "Anuluj",
     "close": "Zamknij",
-    "search_history": "Szukaj wcześniejszych butelek",
     "taste_window_title": "Optymalne okno picia",
     "serving_temp": "Temperatura podawania",
     "alcohol_pct": "Zawartość alkoholu",
@@ -1977,70 +2438,20 @@ const WCM_TRANSLATIONS = {
     "physical_location": "Lokalizacja fizyczna",
     "copy": "Kopiuj",
     "edit": "Edytuj",
-    "wine_acquisition_identification": "Pozyskanie i identyfikacja wina",
-    "upload_barcode_saq_only": "📁 Wgraj kod kreskowy (tylko SAQ)",
-    "upload_label_photo": "📁 Wgraj zdjęcie etykiety",
-    "barcode_number_14_digits": "Numer kodu kreskowego (14 cyfr)",
-    "scan_result_or_manual_entry": "Wynik skanowania lub wpis ręczny",
-    "label_image_path": "Ścieżka do zdjęcia etykiety",
-    "analyze": "Analizuj",
-    "image_not_reachable": "Obraz niedostępny",
-    "search_history_placeholder": "Nazwa wina, producent, region...",
-    "saq_com_url": "Adres URL SAQ.com",
     "cellar": "Piwnica",
     "view": "Pokaż",
     "shelf_name": "Nazwa półki",
-    "order": "Kolejność",
-    "front_capacity": "Pojemność z przodu",
-    "back_capacity": "Pojemność z tyłu",
-    "remove": "Usuń",
-    "shelf_1": "Półka 1",
     "edit_cellar": "Edytuj piwnicę",
     "cellar_name": "Nazwa",
-    "display_order": "Kolejność wyświetlania",
-    "background_color": "Kolor tła",
-    "default_ha_theme": "Domyślny (motyw HA)",
-    "bordeaux_red": "Czerwień bordo",
-    "oak_brown": "Brąz dębowy",
-    "olive_green": "Zieleń oliwkowa",
-    "azur_blue": "Błękit lazurowy",
-    "slate_gray": "Szarość łupkowa",
-    "off_white": "Złamana biel",
     "shelves": "Półki",
     "add_shelf": "Dodaj półkę",
-    "details_and_label_applied": "✨ Dane wina i etykieta zastosowane automatycznie!",
-    "select_barcode_photo": "Wybierz zdjęcie kodu kreskowego...",
-    "reading_barcode_photo": "Odczytywanie zdjęcia kodu kreskowego...",
-    "sending_photo_to_ai": "Wysyłanie zdjęcia do AI...",
-    "ai_extracting_barcode": "AI odczytuje kod kreskowy...",
-    "barcode_detected_and_applied": "Kod kreskowy wykryty i zastosowany!",
     "no_barcode_found": "Nie znaleziono kodu kreskowego.",
     "barcode_extraction_failed": "Odczyt kodu kreskowego nie powiódł się.",
-    "select_label_photo": "Wybierz zdjęcie etykiety...",
     "confirm_reanalyze": "To wino zostało już pomyślnie przeanalizowane. Nadpisać dane i uruchomić analizę ponownie?",
     "provide_barcode_or_label": "Podaj kod kreskowy (cyfry) lub wgraj zdjęcie etykiety przed uruchomieniem analizy.",
-    "starting_smart_analysis": "Uruchamianie inteligentnej analizy...",
-    "analysis_completed": "✨ Analiza zakończona pomyślnie! Dane zastosowane.",
-    "no_result_found": "Nie znaleziono wyników.",
-    "analysis_failed": "Analiza nie powiodła się: ",
     "confirm_merge_all": "Czy chcesz scalić i ujednolicić wszystkie wymienione pisownie?",
     "scanner_error": "Błąd skanera: ",
-    "upload_label_first": "Najpierw wgraj lub zrób zdjęcie etykiety.",
-    "analyzing_label": "Analizowanie etykiety...",
-    "label_suggestion_applied": "Sugestia z etykiety zastosowana do pustych pól.",
-    "no_label_result": "Brak wyników dla etykiety.",
-    "label_analysis_failed": "Analiza etykiety nie powiodła się: ",
-    "no_file_selected": "Nie wybrano pliku.",
     "file_not_image": "Wybrany plik nie jest obrazem.",
-    "reading_label_image": "Odczytywanie zdjęcia etykiety...",
-    "uploading_label_image": "Wgrywanie zdjęcia etykiety...",
-    "label_upload_failed": "Wgrywanie etykiety nie powiodło się: ",
-    "select_location_before_copy": "Przed kopiowaniem wybierz piwnicę, półkę, rząd i pozycję.",
-    "copying_bottle": "Kopiowanie istniejącej butelki do bieżącego miejsca...",
-    "copy_bottle_failed": "Kopiowanie butelki nie powiodło się: ",
-    "source_bottle_not_found": "Nie znaleziono butelki źródłowej.",
-    "bottle_details_copied": "Dane butelki skopiowane do formularza. Sprawdź i zapisz.",
-    "bottle_save_failed": "Zapisywanie butelki nie powiodło się: ",
     "shelf_front_capacity_min": "Każda półka musi mieć pojemność z przodu co najmniej 1.",
     "add_at_least_one_shelf": "Dodaj co najmniej jedną półkę.",
     "cellar_save_failed": "Zapisywanie piwnicy nie powiodło się: ",
@@ -2050,14 +2461,12 @@ const WCM_TRANSLATIONS = {
     "bottle_copied_to_memory": "Butelka skopiowana do pamięci. Kliknij puste miejsce, aby wkleić.",
     "cellar_needs_shelf": "Piwnica musi mieć co najmniej jedną półkę.",
     "unknown_error": "nieznany błąd",
-    "bottle_search_failed": "Wyszukiwanie butelek nie powiodło się: ",
     "bottles_found_suffix": " znaleziona(-e) butelka(-ki).",
     "search_no_match": "Żadna butelka nie pasuje do wyszukiwania ani filtrów.",
     "clear_filters": "Wyczyść filtry",
     "no_bottles_yet": "Brak butelek w Twoich piwnicach.",
     "add_bottle_short": "+ Butelka",
     "all_slots_full": "Wszystkie miejsca w Twoich piwnicach są zajęte. Zwolnij miejsce albo dodaj półkę lub piwnicę, aby dodać butelkę.",
-    "duplicate_warning": "⚠️ Uwaga: masz już {n} identyczną(-e) butelkę(-ki) w swojej piwnicy.",
     "wine_details": "Szczegóły wina",
     "cellar_editor": "Edytor piwnicy",
     "bottle_editor": "Edytor butelki",
@@ -2085,34 +2494,15 @@ const WCM_TRANSLATIONS = {
     "delete_cellar_confirm": "Usuń piwnicę",
     "merge_all_title": "Scalić pary pisowni ({n})?",
     "merge_all_body": "Liczba butelek, które otrzymają wybraną pisownię: {m}. Pary do sprawdzenia pozostaną bez zmian.",
-    "reanalyze_title": "Przeanalizować to wino ponownie?",
-    "reanalyze_body": "Każde pole znalezione przez analizę zastąpi obecną zawartość formularza.",
-    "analyze_again": "Analizuj ponownie",
     "action_failed": "Nie udało się: {error}",
-    "position_free": "Pozycja {n} (wolna)",
-    "position_current": "Pozycja {n} (obecna)",
-    "no_free_position": "Brak wolnych pozycji w tym rzędzie",
     "shelf_n": "Półka {n}",
-    "shelf_stored": "Butelek na półce: {n}",
     "shelf_empty": "Pusta",
-    "shelf_remove_blocked": "Przenieś te butelki na inną półkę, zanim ją usuniesz.",
-    "err_choose_position": "Wybierz wolną pozycję. Jeśli lista jest pusta, wybierz inną półkę lub inny rząd.",
     "err_slot_taken_server": "To miejsce jest już zajęte. Wybierz inną pozycję.",
     "cleanup_check_pair": "Podobna pisownia, ale może to być inna nazwa. Sprawdź przed scaleniem; „Scal wszystko” ją pomija.",
     "pasted_details": "Skopiowano dane z „{name}”. Sprawdź i zapisz.",
-    "label_uploaded": "Zdjęcie etykiety przesłane.",
-    "label_uploaded_duplicates": "Zdjęcie etykiety przesłane. Możliwe duplikaty poniżej.",
-    "err_select_cellar": "Wybierz piwnicę.",
-    "err_select_shelf": "Wybierz półkę.",
-    "err_select_lane": "Wybierz rząd (przód lub tył).",
-    "err_wine_name_required": "Nazwa wina jest wymagana.",
     "err_shelf_missing": "Wybrana półka już nie istnieje.",
     "err_no_back_lane": "Ta półka nie ma tylnego rzędu.",
-    "err_no_front_positions": "Ta półka nie ma pozycji z przodu.",
     "err_position_out_of_range": "Ta pozycja przekracza pojemność tego rzędu półki.",
-    "err_position_taken": "Ta pozycja jest już zajęta przez „{name}”. Wybierz wolną pozycję.",
-    "err_aging_order": "Rok początku dojrzałości nie może być późniejszy niż rok końca.",
-    "err_aging_end_order": "Rok końca dojrzałości musi być taki sam jak rok początku lub późniejszy.",
     "err_rating_range": "Ocena musi mieścić się w przedziale od 0 do 5.",
     "err_shelf_has_bottles": "Nie można usunąć półki, na której są jeszcze butelki. Najpierw przenieś butelki.",
     "err_shrink_front": "Przedni rząd nie może być mniejszy niż jego ostatnia zajęta pozycja. Najpierw przenieś te butelki.",
@@ -2122,7 +2512,6 @@ const WCM_TRANSLATIONS = {
     "err_no_entry": "Integracja Wine Cellar Manager nie jest skonfigurowana.",
     "err_shelf_front_min": "„{shelf}” ma butelkę na przedniej pozycji {n}, więc potrzebuje co najmniej {n} pozycji z przodu.",
     "err_shelf_back_min": "„{shelf}” ma butelkę na tylnej pozycji {n}, więc potrzebuje co najmniej {n} pozycji z tyłu.",
-    "duplicate_detection_failed": "Wyszukiwanie duplikatów nie powiodło się: ",
     "depth_back_row": "Tylny rząd",
     "depth_behind": "Za: {names}",
     "depth_behind_aria": "za: {names}",
@@ -2165,7 +2554,158 @@ const WCM_TRANSLATIONS = {
     "bt_replace_photo": "Zamień zdjęcie",
     "slot_empty_label": "Wolne miejsce, dodaj butelkę: {loc}",
     "loc_front_pos": "{cellar}, {shelf}, przedni rząd, pozycja {pos}",
-    "loc_back_pos": "{cellar}, {shelf}, tylny rząd, pozycja {pos}"
+    "loc_back_pos": "{cellar}, {shelf}, tylny rząd, pozycja {pos}",
+    "sheet_add_title": "Dodaj butelkę",
+    "sheet_editing": "Edycja",
+    "sheet_sec_label": "Etykieta",
+    "sheet_sec_wine": "Wino",
+    "sheet_sec_place": "Gdzie ją położyć",
+    "sheet_more": "Więcej szczegółów",
+    "sheet_more_hint": "Region, cena, okno picia, ocena, notatki",
+    "sheet_more_filled": "Wypełnione: {n}",
+    "sheet_take_photo": "Zrób zdjęcie",
+    "sheet_upload_photo": "Wgraj zdjęcie etykiety",
+    "sheet_choose_library": "Wybierz z galerii",
+    "sheet_type_instead": "Wpisz ręcznie",
+    "sheet_scan_barcode": "Zeskanuj kod SAQ",
+    "sheet_photo_title": "Sfotografuj etykietę",
+    "sheet_photo_title_plain": "Dodaj zdjęcie etykiety",
+    "sheet_photo_sub_ai": "Odczytamy za ciebie nazwę, producenta i rocznik.",
+    "sheet_photo_sub": "Zdjęcie etykiety pozwala łatwo wypatrzyć butelkę na półce.",
+    "sheet_photo_drop": "lub upuść tutaj obraz",
+    "sheet_photo_ready": "Zdjęcie etykiety",
+    "sheet_photo_replace": "Zamień",
+    "sheet_photo_rotate": "Obróć",
+    "sheet_photo_remove": "Usuń",
+    "sheet_photo_read": "Odczytaj etykietę",
+    "sheet_st_preparing": "Przygotowywanie zdjęcia…",
+    "sheet_st_uploading": "Wgrywanie…",
+    "sheet_st_reading": "Odczytywanie etykiety…",
+    "sheet_st_barcode": "Odczytywanie kodu kreskowego…",
+    "sheet_note_reading": "Odczytujemy etykietę. Możesz dalej pisać: wypełniamy tylko puste pola.",
+    "sheet_note_ai_one": "Uzupełniono z etykiety: {n}. Rzuć na to okiem.",
+    "sheet_note_ai_other": "Uzupełniono z etykiety: {n}. Rzuć na to okiem.",
+    "sheet_note_cellar_one": "Uzupełniono na podstawie {name} z piwnicy: {n}.",
+    "sheet_note_cellar_other": "Uzupełniono na podstawie {name} z piwnicy: {n}.",
+    "sheet_note_none": "Na etykiecie nie znaleziono nic nowego.",
+    "sheet_note_fail": "Nie udało się automatycznie odczytać etykiety. Uzupełnij dane poniżej.",
+    "undo": "Cofnij",
+    "undone": "Cofnięto",
+    "sheet_mark_ai": "AI",
+    "sheet_mark_cellar": "Z piwnicy",
+    "sheet_name_ph": "np. Barolo, Château Margaux…",
+    "sheet_in_cellar": "W piwnicy: {n}",
+    "sheet_had_before": "Już była",
+    "sheet_dup": "Masz już butelki tego wina ({n}) · {where}",
+    "sheet_type_unset": "Nie wiem",
+    "sheet_window": "Okno picia",
+    "sheet_from": "Od",
+    "sheet_to": "Do",
+    "sheet_win_none": "Dodaj lata, aby zobaczyć, kiedy będzie gotowe.",
+    "sheet_win_young": "Za młode · gotowe od {y}",
+    "sheet_win_ready": "Gotowe do picia · do {y}",
+    "sheet_win_peak": "W szczycie w tym roku",
+    "sheet_win_past": "Po szczycie od {y}",
+    "sheet_rating_none": "Brak",
+    "sheet_link": "Link do produktu",
+    "sheet_barcode": "Kod kreskowy",
+    "sheet_lookup": "Wyszukaj",
+    "pick_bottles": "Ile butelek",
+    "pick_qty_less": "O jedną butelkę mniej",
+    "pick_qty_more": "O jedną butelkę więcej",
+    "pick_free_one": "Wolne: {n}",
+    "pick_free_other": "Wolne: {n}",
+    "pick_full": "Pełna",
+    "pick_hint": "Dotknij wolnego miejsca, aby wybrać, gdzie ją położyć.",
+    "pick_hint_n": "Wypełnia po kolei wolne miejsca ({n}), zaczynając od dotkniętego.",
+    "pick_hint_edit": "Dotknij wolnego miejsca, aby przenieść tam butelkę przy zapisie.",
+    "sheet_plan_n": "Butelki: {n} · {where}",
+    "pick_move_from": "Przenoszona z: {from}",
+    "pick_occupied": "Zajęte · {name}",
+    "pick_slot_free": "{shelf}, {lane}, pozycja {pos}, wolne",
+    "pick_slot_current": "{shelf}, {lane}, pozycja {pos}, obecne miejsce",
+    "pick_no_free": "Wszystkie miejsca są zajęte.",
+    "pick_no_free_sub": "Dodaj półkę lub piwnicę, aby zrobić miejsce, a potem dodaj butelkę.",
+    "pick_add_shelves_to": "Dodaj półki do: {name}",
+    "pick_new_cellar": "Nowa piwnica",
+    "sheet_only_name": "Wymagana jest tylko nazwa.",
+    "sheet_save_n": "Zapisz butelki ({n})",
+    "sheet_save_next": "Zapisz i dodaj kolejną",
+    "sheet_save_changes": "Zapisz zmiany",
+    "sheet_saving": "Zapisywanie…",
+    "sheet_saving_n": "Zapisywanie {i} z {n}…",
+    "sheet_saved_one": "Dodano {name} · {where}",
+    "sheet_saved_n": "Dodano butelki ({n}) · {where}",
+    "sheet_saved_edit": "Zapisano zmiany",
+    "sheet_err_name": "Nadaj winu nazwę.",
+    "sheet_err_year": "Podaj rok w formacie 4-cyfrowym.",
+    "sheet_err_window": "Okno nie może kończyć się przed początkiem.",
+    "sheet_err_no_slot": "Wybierz wolne miejsce.",
+    "sheet_err_slot_taken": "To miejsce zajmuje „{name}”. Wybierz inne.",
+    "sheet_err_slot_moved": "To miejsce zostało właśnie zajęte, więc wybraliśmy następne wolne. Kliknij Zapisz ponownie.",
+    "sheet_err_not_enough_one": "Wolnych miejsc w {cellar}: tylko {n}.",
+    "sheet_err_not_enough_other": "Wolnych miejsc w {cellar}: tylko {n}.",
+    "sheet_err_partial_left_one": "Zapisano {i} z {total}. {error} Zapisz ponownie, aby dodać pozostałe ({n}).",
+    "sheet_err_partial_left_other": "Zapisano {i} z {total}. {error} Zapisz ponownie, aby dodać pozostałe ({n}).",
+    "sheet_err_number": "Podaj liczbę.",
+    "sheet_err_photo_format": "Ten format zdjęcia nie jest tu obsługiwany. Użyj JPEG lub PNG.",
+    "sheet_err_photo_upload": "Nie udało się wgrać zdjęcia. {error}",
+    "sheet_err_save": "Nie udało się zapisać: {error}",
+    "move_action": "Przenieś",
+    "move_moving": "Przenoszenie: {name}",
+    "move_hint": "Dotknij pustego miejsca albo butelki, aby je zamienić.",
+    "move_hint_kb": "Esc anuluje.",
+    "move_done": "Przeniesiono {name}: {where}",
+    "move_swapped": "Zamieniono {a} i {b}",
+    "move_failed": "Nie udało się przenieść butelki: {error}",
+    "builder_title_new": "Nowa piwnica",
+    "builder_name_ph": "np. Chłodziarka w kuchni",
+    "builder_finish": "Wykończenie obudowy",
+    "builder_quick": "Szybki start",
+    "builder_tpl_fridge": "Chłodziarka do wina",
+    "builder_tpl_stagger": "Regał przestawny",
+    "builder_tpl_rack": "Otwarty regał",
+    "builder_tpl_sub": "Półki: {s} × {f}",
+    "builder_tpl_sub2": "Półki: {s} × {f} + {b} z tyłu",
+    "builder_shelves_hint": "Najpierw górna półka. Tylny rząd stoi za przednim, przesunięty, aby każda etykieta była widoczna.",
+    "builder_front_slots": "Miejsca z przodu",
+    "builder_back_slots": "Miejsca z tyłu",
+    "builder_fewer": "Mniej miejsc ({lane})",
+    "builder_more": "Więcej miejsc ({lane})",
+    "builder_stored": "Zajęte: {n}",
+    "builder_up": "Przesuń półkę w górę",
+    "builder_down": "Przesuń półkę w dół",
+    "builder_remove": "Usuń półkę",
+    "builder_remove_blocked_one": "Najpierw przenieś butelki z tej półki ({n}).",
+    "builder_remove_blocked_other": "Najpierw przenieś butelki z tej półki ({n}).",
+    "builder_min_hint": "Na miejscu {n} stoi butelka.",
+    "builder_preview": "Podgląd",
+    "builder_legend_stored": "Zajęte",
+    "builder_legend_free": "Wolne",
+    "builder_save": "Zapisz piwnicę",
+    "builder_create": "Utwórz piwnicę",
+    "builder_saved": "Zapisano piwnicę",
+    "sheet_wait_photo": "Czekamy na zdjęcie…",
+    "builder_position": "Pozycja wśród piwnic",
+    "builder_pos_first": "Na początku",
+    "builder_pos_after": "Po „{name}”",
+    "builder_order_failed": "Zapisano piwnicę, ale nie udało się zmienić kolejności pozostałych piwnic.",
+    "builder_fin_bordeaux": "Lakier bordo",
+    "builder_fin_oak": "Dąb",
+    "builder_fin_olive": "Oliwkowy",
+    "builder_fin_azure": "Lazur",
+    "builder_fin_slate": "Łupek",
+    "builder_fin_steel": "Szczotkowana stal",
+    "builder_fin_custom": "Własny",
+    "builder_shelves_one": "{n} półka",
+    "builder_shelves_other": "{n} półki",
+    "builder_slots_one": "{n} miejsce",
+    "builder_slots_other": "{n} miejsca",
+    "builder_shelves_few": "{n} półki",
+    "builder_shelves_many": "{n} półek",
+    "builder_slots_few": "{n} miejsca",
+    "builder_slots_many": "{n} miejsc",
+    "builder_fin_graphite": "Grafit"
   }
 };
 
@@ -2188,6 +2728,112 @@ function _T(key, vars) {
   }
   return text;
 }
+
+// A count in words that follow the language's plural rules: "1 shelf",
+// "2 shelves", and Polish's 2-4 / 5+ forms. Looks up base_one, base_few,
+// base_many or base_other, and falls back to base_other.
+function _TN(base, n, vars) {
+  var cat = "other";
+  try {
+    cat = new Intl.PluralRules(_wcmLang).select(Number(n));
+  } catch (err) {
+    cat = Number(n) === 1 ? "one" : "other";
+  }
+  var lang = _wcmLang.toLowerCase();
+  var table = WCM_TRANSLATIONS[lang] || WCM_TRANSLATIONS[lang.split(/[-_]/)[0]] || WCM_TRANSLATIONS.en;
+  var key = base + "_" + cat;
+  if (table[key] === undefined && WCM_TRANSLATIONS.en[key] === undefined) key = base + "_other";
+  return _T(key, Object.assign({ n: n }, vars || {}));
+}
+
+// Label photos are shrunk in the browser before they are uploaded: decoded
+// with their EXIF orientation, the long edge capped and re-encoded as JPEG.
+// A 12 MP phone photo becomes a few hundred KB, far below Home Assistant's
+// websocket message limit, and HEIC becomes JPEG wherever the browser can
+// decode it. rotate turns the picture by 90° steps.
+function _wcmLoadImage(src) {
+  return new Promise(function (resolve, reject) {
+    var img = new Image();
+    img.onload = function () { resolve(img); };
+    img.onerror = function () { reject(new Error("decode")); };
+    img.src = src;
+  });
+}
+
+function _wcmDownscaleImage(source, maxEdge, quality, rotate) {
+  var objectUrl = null;
+  function viaImage() {
+    if (typeof source === "string") return _wcmLoadImage(source);
+    objectUrl = URL.createObjectURL(source);
+    return _wcmLoadImage(objectUrl);
+  }
+  var decoded = typeof source !== "string" && window.createImageBitmap
+    ? createImageBitmap(source, { imageOrientation: "from-image" }).catch(viaImage)
+    : viaImage();
+  return decoded.then(function (img) {
+    var w = img.naturalWidth || img.width;
+    var h = img.naturalHeight || img.height;
+    if (!w || !h) throw new Error("decode");
+    var scale = Math.min(1, maxEdge / Math.max(w, h));
+    var dw = Math.round(w * scale);
+    var dh = Math.round(h * scale);
+    var turn = rotate === 90 || rotate === 270;
+    var canvas = document.createElement("canvas");
+    canvas.width = turn ? dh : dw;
+    canvas.height = turn ? dw : dh;
+    var ctx = canvas.getContext("2d");
+    ctx.fillStyle = "#fff";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    if (rotate) {
+      ctx.translate(canvas.width / 2, canvas.height / 2);
+      ctx.rotate((rotate * Math.PI) / 180);
+      ctx.drawImage(img, -dw / 2, -dh / 2, dw, dh);
+    } else {
+      ctx.drawImage(img, 0, 0, dw, dh);
+    }
+    if (img.close) img.close();
+    return new Promise(function (resolve, reject) {
+      canvas.toBlob(function (blob) {
+        if (blob) resolve(blob);
+        else reject(new Error("encode"));
+      }, "image/jpeg", quality);
+    });
+  }).finally(function () {
+    if (objectUrl) URL.revokeObjectURL(objectUrl);
+  });
+}
+
+function _wcmBlobToBase64(blob) {
+  return new Promise(function (resolve, reject) {
+    var reader = new FileReader();
+    reader.onload = function () { resolve(String(reader.result).split(",")[1] || ""); };
+    reader.onerror = function () { reject(new Error("read")); };
+    reader.readAsDataURL(blob);
+  });
+}
+
+// The wine types the add sheet offers, "not sure" last, and the frame
+// finishes of the cellar editor (the cellar colors that draw as a material,
+// see _WCM_MATERIALS; "" is the default graphite frame).
+const _WCM_SHEET_TYPES = ["red", "white", "rosé", "sparkling", "orange", "sweet", "other", "unset"];
+const _WCM_FINISHES = [
+  { value: "", key: "builder_fin_graphite" },
+  { value: "#7b2130", key: "builder_fin_bordeaux" },
+  { value: "#8c6239", key: "builder_fin_oak" },
+  { value: "#556b2f", key: "builder_fin_olive" },
+  { value: "#1e3a8a", key: "builder_fin_azure" },
+  { value: "#374151", key: "builder_fin_slate" },
+  { value: "#fbfbfbff", key: "builder_fin_steel" }
+];
+// Quick starts for a new cellar: shelves, front slots, back slots.
+const _WCM_CELLAR_TEMPLATES = [
+  { key: "builder_tpl_fridge", shelves: 8, front: 6, back: 0 },
+  { key: "builder_tpl_stagger", shelves: 5, front: 6, back: 5 },
+  { key: "builder_tpl_rack", shelves: 4, front: 8, back: 0 }
+];
+// Most slots a shelf row can have in the cellar editor.
+const _WCM_MAX_ROW = 24;
+
 
 // The wooden slats of a shelf floor, converging toward the back wall (the same
 // 3% inset as the floor's clip-path), and the wooden rail of the Compact and
@@ -2294,14 +2940,16 @@ const _WCM_STYLES =
         ".cabinet{--cab-wall-top:#1c1512;--cab-wall-bottom:#0f0b09;--cab-led:rgba(255,214,170,.16);--cab-led-line:rgba(255,224,188,.62);--cab-floor-near:#6b4a31;--cab-floor-far:#3a281b;--cab-ring-gap:#130e0b;--cab-fade:rgba(12,8,6,.94);--cab-inner:rgba(0,0,0,.72);--floor-vig:.5;--floor-dim-far:.38;--floor-dim-near:.14;position:relative;isolation:isolate;max-width:100%;padding:10px;border-radius:15px;background:linear-gradient(180deg,rgba(255,255,255,.24),rgba(255,255,255,0) 12%,rgba(0,0,0,0) 84%,rgba(0,0,0,.32)),linear-gradient(90deg,rgba(0,0,0,.18),rgba(255,255,255,.07) 9%,rgba(255,255,255,0) 40%,rgba(0,0,0,0) 80%,rgba(0,0,0,.16)),var(--mat,linear-gradient(#444,#222));box-shadow:0 0 0 1px var(--mat-edge,rgba(0,0,0,.5)),inset 0 1px 0 rgba(255,255,255,.32),inset 0 -1px 0 rgba(0,0,0,.35),0 24px 40px -22px rgba(0,0,0,.65),0 6px 14px -8px rgba(0,0,0,.4)}" +
         ".cabinet.lit .interior{--wcm-text:#f2ebe4;--wcm-muted:#b9aca2;--wcm-surface:#241c18;--wcm-divider:rgba(255,240,225,.12);--wcm-tonal:rgba(255,240,225,.07);--wcm-tonal-strong:rgba(255,240,225,.13);--wcm-none:#8f837a;color:var(--wcm-text)}" +
         ".cabinet.themed{--cab-wall-top:color-mix(in srgb,var(--wcm-bg) 95%,#000);--cab-wall-bottom:color-mix(in srgb,var(--wcm-bg) 86%,#000);--cab-led:rgba(255,214,170,.14);--cab-led-line:rgba(255,214,170,.5);--cab-floor-near:color-mix(in srgb,#9a7250 55%,var(--wcm-bg));--cab-floor-far:color-mix(in srgb,#6b4a31 45%,var(--wcm-bg));--cab-ring-gap:var(--wcm-bg);--cab-fade:color-mix(in srgb,var(--wcm-bg) 92%,transparent);--cab-inner:rgba(0,0,0,.28);--floor-vig:.16;--floor-dim-far:.06;--floor-dim-near:0}" +
-        ".cabinet.mat-graphite{--mat:linear-gradient(160deg,#4d4742,#2f2a26 45%,#1b1816);--mat-edge:#0c0a09}" +
-        ".cabinet.mat-bordeaux{--mat:linear-gradient(115deg,rgba(255,255,255,0) 30%,rgba(255,235,240,.14) 38%,rgba(255,255,255,0) 46%),linear-gradient(160deg,#a8374c,#7b2130 42%,#511320);--mat-edge:#32070f}" +
-        ".cabinet.mat-oak{--mat:repeating-linear-gradient(91deg,rgba(60,33,12,.16) 0 2px,rgba(0,0,0,0) 2px 9px,rgba(255,226,190,.08) 9px 10px,rgba(0,0,0,0) 10px 17px),repeating-linear-gradient(1deg,rgba(60,33,12,.12) 0 1px,rgba(0,0,0,0) 1px 6px),linear-gradient(160deg,#ad7d50,#8c6239 45%,#634225);--mat-edge:#3a2512}" +
-        ".cabinet.mat-olive{--mat:linear-gradient(115deg,rgba(255,255,255,0) 30%,rgba(245,255,225,.10) 38%,rgba(255,255,255,0) 46%),linear-gradient(160deg,#748d49,#556b2f 45%,#38471d);--mat-edge:#212b11}" +
-        ".cabinet.mat-azure{--mat:linear-gradient(115deg,rgba(255,255,255,0) 30%,rgba(225,235,255,.14) 38%,rgba(255,255,255,0) 46%),linear-gradient(160deg,#3a60c2,#1e3a8a 45%,#132660);--mat-edge:#0a1536}" +
-        ".cabinet.mat-slate{--mat:radial-gradient(rgba(255,255,255,.05) 1px,rgba(0,0,0,0) 1.5px) 0 0/5px 5px,linear-gradient(160deg,#667285,#434d5e 42%,#2a313d);--mat-edge:#151a22}" +
-        ".cabinet.mat-steel{--mat:repeating-linear-gradient(0deg,rgba(255,255,255,.20) 0 1px,rgba(0,0,0,.04) 1px 2px,rgba(0,0,0,0) 2px 3px),linear-gradient(180deg,color-mix(in srgb,#f4f3ef 72%,var(--wcm-surface)),color-mix(in srgb,#d7d5cf 72%,var(--wcm-surface)) 50%,color-mix(in srgb,#b9b6af 72%,var(--wcm-surface)));--mat-edge:color-mix(in srgb,#77746e 75%,var(--wcm-surface))}" +
-        ".cabinet.mat-custom{--mat:linear-gradient(160deg,color-mix(in srgb,var(--cellar) 76%,#fff),var(--cellar) 45%,color-mix(in srgb,var(--cellar) 68%,#000));--mat-edge:color-mix(in srgb,var(--cellar) 48%,#000)}" +
+        /* Frame materials (--mat, --mat-edge): the cabinets' frames, and the finish swatches and cellar chips
+           of the cellar editor and the add sheet. */
+        ".mat-graphite{--mat:linear-gradient(160deg,#4d4742,#2f2a26 45%,#1b1816);--mat-edge:#0c0a09}" +
+        ".mat-bordeaux{--mat:linear-gradient(115deg,rgba(255,255,255,0) 30%,rgba(255,235,240,.14) 38%,rgba(255,255,255,0) 46%),linear-gradient(160deg,#a8374c,#7b2130 42%,#511320);--mat-edge:#32070f}" +
+        ".mat-oak{--mat:repeating-linear-gradient(91deg,rgba(60,33,12,.16) 0 2px,rgba(0,0,0,0) 2px 9px,rgba(255,226,190,.08) 9px 10px,rgba(0,0,0,0) 10px 17px),repeating-linear-gradient(1deg,rgba(60,33,12,.12) 0 1px,rgba(0,0,0,0) 1px 6px),linear-gradient(160deg,#ad7d50,#8c6239 45%,#634225);--mat-edge:#3a2512}" +
+        ".mat-olive{--mat:linear-gradient(115deg,rgba(255,255,255,0) 30%,rgba(245,255,225,.10) 38%,rgba(255,255,255,0) 46%),linear-gradient(160deg,#748d49,#556b2f 45%,#38471d);--mat-edge:#212b11}" +
+        ".mat-azure{--mat:linear-gradient(115deg,rgba(255,255,255,0) 30%,rgba(225,235,255,.14) 38%,rgba(255,255,255,0) 46%),linear-gradient(160deg,#3a60c2,#1e3a8a 45%,#132660);--mat-edge:#0a1536}" +
+        ".mat-slate{--mat:radial-gradient(rgba(255,255,255,.05) 1px,rgba(0,0,0,0) 1.5px) 0 0/5px 5px,linear-gradient(160deg,#667285,#434d5e 42%,#2a313d);--mat-edge:#151a22}" +
+        ".mat-steel{--mat:repeating-linear-gradient(0deg,rgba(255,255,255,.20) 0 1px,rgba(0,0,0,.04) 1px 2px,rgba(0,0,0,0) 2px 3px),linear-gradient(180deg,color-mix(in srgb,#f4f3ef 72%,var(--wcm-surface)),color-mix(in srgb,#d7d5cf 72%,var(--wcm-surface)) 50%,color-mix(in srgb,#b9b6af 72%,var(--wcm-surface)));--mat-edge:color-mix(in srgb,#77746e 75%,var(--wcm-surface))}" +
+        ".mat-custom{--mat:linear-gradient(160deg,color-mix(in srgb,var(--cellar) 76%,#fff),var(--cellar) 45%,color-mix(in srgb,var(--cellar) 68%,#000));--mat-edge:color-mix(in srgb,var(--cellar) 48%,#000)}" +
         ".interior{position:relative;border-radius:8px;background:linear-gradient(var(--cab-wall-top),var(--cab-wall-bottom));overflow-x:auto;overflow-y:hidden;overscroll-behavior-x:contain;scrollbar-width:thin;scrollbar-color:rgba(255,236,214,.28) transparent}" +
         ".cabinet.themed .interior{scrollbar-color:auto}" +
         /* A cabinet that fits never scrolls sideways (the staggered rows' quarter-pitch nudge would otherwise
@@ -2427,8 +3075,8 @@ const _WCM_STYLES =
         ".cellars-grid:not(.compact) .cabinet .slot.empty:hover,.cellars-grid:not(.compact) .cabinet .slot.empty:focus-visible,.cellars-grid:not(.compact) .cabinet .slot.empty.drag-over{border-color:var(--wcm-accent);border-style:solid;color:var(--wcm-text);background:color-mix(in srgb,var(--wcm-accent) 22%,rgba(8,5,3,.5))}" +
         ".cellars-grid:not(.compact) .cabinet .slot.empty:hover .fp-plus,.cellars-grid:not(.compact) .cabinet .slot.empty.drag-over .fp-plus{color:var(--wcm-accent)}" +
         /* While a bottle is dragged, every empty front position grows to a full-size drop target. */
-        ".cellars-grid.dragging:not(.compact) .cabinet .slot.empty.footprint{height:var(--slot-h);margin-bottom:0;border-radius:12px;flex-direction:column;border-style:dashed;border-color:color-mix(in srgb,var(--wcm-accent) 70%,transparent);background:color-mix(in srgb,var(--wcm-accent) 10%,rgba(8,5,3,.35))}" +
-        ".cellars-grid.dragging:not(.compact) .cabinet .slot.empty.ghost{border-color:color-mix(in srgb,var(--wcm-accent) 70%,transparent);background:color-mix(in srgb,var(--wcm-accent) 8%,rgba(8,5,3,.3))}" +
+        ".cellars-grid:is(.dragging,.placing):not(.compact) .cabinet .slot.empty.footprint{height:var(--slot-h);margin-bottom:0;border-radius:12px;flex-direction:column;border-style:dashed;border-color:color-mix(in srgb,var(--wcm-accent) 70%,transparent);background:color-mix(in srgb,var(--wcm-accent) 10%,rgba(8,5,3,.35))}" +
+        ".cellars-grid:is(.dragging,.placing):not(.compact) .cabinet .slot.empty.ghost{border-color:color-mix(in srgb,var(--wcm-accent) 70%,transparent);background:color-mix(in srgb,var(--wcm-accent) 8%,rgba(8,5,3,.3))}" +
         ".cellars-grid:not(.compact) .cabinet.themed .slot.empty.footprint{background:color-mix(in srgb,var(--wcm-surface) 70%,transparent);border-color:color-mix(in srgb,var(--wcm-text) 34%,transparent);box-shadow:0 2px 6px -2px rgba(0,0,0,.25)}" +
         ".cellars-grid:not(.compact) .cabinet.themed .slot.empty.ghost{border-color:color-mix(in srgb,var(--wcm-text) 22%,transparent);background:color-mix(in srgb,var(--wcm-surface) 35%,transparent)}" +
         ".cellars-grid:not(.compact) .cabinet.themed .lane-back .slot.filled::after{background:linear-gradient(180deg,rgba(0,0,0,.06),rgba(0,0,0,.14) 70%)}" +
@@ -2651,55 +3299,18 @@ const _WCM_STYLES =
         ".small-modal{width:min(760px,100%)}" +
         ".modal-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:12px}" +
         ".modal-head h3{margin:0;font-size:1.25rem;font-weight:600}" +
-        ".modal-form{display:grid;gap:12px}" +
-        ".modal-form label{display:grid;gap:6px;font-size:.88rem;color:var(--wcm-muted)}" +
-        ".modal-form input,.modal-form select,.modal-form textarea{width:100%;background:var(--wcm-tonal);border:1px solid transparent;border-radius:10px;padding:10px 12px;color:var(--wcm-text);outline:none}" +
-        ".modal-form input:focus,.modal-form select:focus,.modal-form textarea:focus{border-color:var(--wcm-accent)}" +
-        ".grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}" +
-        ".grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}" +
-        ".grid-location{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr) minmax(0,1fr);gap:12px;align-items:end}" +
-        ".grid-shelf{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:10px}" +
         ".modal-actions{display:flex;align-items:center;justify-content:space-between;gap:12px;width:100%;grid-column:1 / -1;margin-top:8px}" +
-        ".left-actions,.right-actions,.helper-actions{display:flex;gap:8px;align-items:center;flex-wrap:wrap}" +
-        ".left-actions{justify-content:flex-start;margin-right:auto}" +
-        ".right-actions{justify-content:flex-end;margin-left:auto}" +
-        ".image-preview img{max-width:100%;max-height:220px;border-radius:12px;border:1px solid var(--wcm-divider)}" +
         ".form-error{margin-bottom:12px;padding:10px 12px;border-radius:12px;background:var(--wcm-danger);color:#fff;font-size:.92rem;line-height:1.35}" +
         ".action-message{margin-bottom:12px;padding:10px 12px;border-radius:12px;background:color-mix(in srgb,var(--wcm-accent) 14%,transparent);color:var(--wcm-text);font-size:.92rem;line-height:1.35}" +
-        ".field-label{font-size:.88rem;color:var(--wcm-muted);margin-bottom:6px}" +
-        ".swatches{display:flex;flex-wrap:wrap;gap:8px}" +
-        ".modal-form label.swatch{position:relative;display:inline-flex;align-items:center;gap:8px;padding:6px 12px 6px 8px;border-radius:999px;background:var(--wcm-tonal);color:var(--wcm-text);cursor:pointer;border:1px solid transparent}" +
-        ".modal-form label.swatch input{position:absolute;opacity:0;width:1px;height:1px;pointer-events:none}" +
-        ".swatch-chip{width:20px;height:20px;border-radius:6px;background:var(--sw);box-shadow:inset 0 0 0 1px rgba(0,0,0,.2)}" +
-        ".modal-form label.swatch:has(input:checked){border-color:var(--wcm-accent);background:color-mix(in srgb,var(--wcm-accent) 14%,transparent);font-weight:600}" +
-        ".modal-form label.swatch:has(input:focus-visible){outline:2px solid var(--wcm-accent);outline-offset:2px}" +
-        ".duplicate-panel{border:1px solid var(--wcm-divider);border-radius:14px;padding:12px;background:var(--wcm-tonal)}" +
-        ".duplicate-panel h4{margin:0 0 10px 0}" +
-        ".duplicate-info{font-size:.88rem;color:var(--wcm-muted);margin-bottom:10px}" +
         ".duplicate-empty{font-size:.92rem;color:var(--wcm-muted)}" +
-        ".duplicate-list{display:grid;gap:10px}" +
         ".duplicate-item{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center;padding:12px;border-radius:12px;background:var(--wcm-tonal);border:1px solid var(--wcm-divider)}" +
-        ".duplicate-title{font-weight:700}" +
-        ".duplicate-sub{font-size:.84rem;color:var(--wcm-muted)}" +
-        ".duplicate-actions{display:flex;gap:8px;flex-wrap:wrap}" +
         ".variant{display:block;height:auto;white-space:normal;padding:8px 12px;border-radius:10px;text-align:left;border:2px solid transparent;opacity:.8}" +
         ".variant.selected{border-color:var(--wcm-accent);background:color-mix(in srgb,var(--wcm-accent) 12%,transparent);font-weight:700;opacity:1}" +
         ".variant-count{font-size:.75rem;font-weight:400;color:var(--wcm-muted);margin-top:2px}" +
         ".btn.square{width:42px;padding:0;border-radius:12px;font-size:1.2rem;font-weight:700}" +
         ".btn.ok{background:color-mix(in srgb,var(--wcm-ready) 20%,transparent);color:var(--wcm-ready)}" +
         ".section-label{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--wcm-muted)}" +
-        ".custom-autocomplete-panel{display:none;position:absolute;top:100%;left:0;right:0;margin-top:4px;background:var(--wcm-dialog);border:1px solid var(--wcm-divider);border-radius:12px;max-height:200px;overflow-y:auto;z-index:1000;box-shadow:0 8px 20px rgba(0,0,0,.3)}" +
-        ".custom-autocomplete-item{padding:12px 14px;cursor:pointer;border-bottom:1px solid var(--wcm-divider);font-size:.95rem;text-align:left;color:var(--wcm-text)}" +
-        ".custom-autocomplete-item:last-child{border-bottom:none}" +
-        ".custom-autocomplete-item:hover{background:var(--wcm-tonal)}" +
-        ".shelf-editor{display:grid;gap:10px;padding:12px;border:1px solid var(--wcm-divider);border-radius:14px;background:color-mix(in srgb,var(--wcm-text) 3%,transparent)}" +
-        ".shelf-editor-head{display:flex;align-items:center;justify-content:space-between;gap:8px}" +
-        ".shelf-row.invalid{box-shadow:0 0 0 2px var(--wcm-danger)}" +
-        ".shelf-stored{position:absolute;top:13px;left:14px;right:96px;font-size:.78rem;font-weight:600;color:var(--wcm-muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}" +
-        ".shelf-remove-hint{margin:8px 0 0;font-size:.8rem;line-height:1.35;color:var(--wcm-muted)}" +
         ".cleanup-check{font-size:.8rem;line-height:1.35;color:var(--wcm-muted)}" +
-        "[data-image-preview]:empty,[data-duplicate-panel]:empty{display:none}" +
-        ".modal-form .form-error{margin:0}" +
         ".modal [tabindex='-1']:focus{outline:none}" +
         ".btn.solid-danger{background:var(--wcm-danger);color:#fff}" +
         ".btn.solid-danger:hover{filter:brightness(1.08)}" +
@@ -2807,16 +3418,389 @@ const _WCM_STYLES =
         ".bv-actions .btn.bv-quiet:hover{background:var(--wcm-tonal)}" +
         "@media (max-width:820px){.wine-view-modal{--bv-pad:16px}.bv-body{grid-template-columns:minmax(0,1fr);gap:16px;padding-top:16px}.bv-side,.bv-main{display:contents}.bv-hero{order:1;height:220px;padding:12px 14px 10px}.bv-needs{order:2}.bv-location{order:3}.bv-window{order:4}.bv-details{order:5}.bv-extra{order:6}.bv-head{padding:16px 56px 14px var(--bv-pad)}.bv-close-x{top:10px;right:8px}.bv-title{font-size:var(--wcm-fs-lg)}.bv-statusline{margin-top:10px}}" +
         "@media (max-width:820px){.bv-more-toggle{display:inline-flex !important}.bv-menu{display:none;position:absolute;left:12px;bottom:calc(100% + 6px);z-index:5;min-width:220px;flex-direction:column;align-items:stretch;gap:2px;padding:6px;border-radius:14px;background:var(--wcm-dialog);box-shadow:0 0 0 1px var(--wcm-divider),0 16px 32px -8px rgba(0,0,0,.45)}.bv-menu.open{display:flex}.bv-actions .bv-menu .btn{justify-content:flex-start;width:100%;height:44px;border-radius:10px;background:transparent;box-shadow:none;padding:0 12px}.bv-actions .bv-menu .btn:hover,.bv-actions .bv-menu .btn:focus-visible{background:var(--wcm-tonal)}.bv-actions .bv-menu .btn.bv-danger{margin-top:3px;border-top:1px solid var(--wcm-divider);border-radius:0 0 10px 10px;color:var(--wcm-danger)}.bv-actions .bv-close-btn{display:none}.bv-actions .bv-primary{height:44px;padding:0 22px}.bv-actions .bv-more-toggle{order:-1;flex:0 0 44px;width:44px;height:44px;padding:0}}" +
+        /* Wider screens fold the same way when the row does not fit (a long language, a narrow window): _fitBottleFooter sets .is-folded. */
+        ".bv-actions.is-folded .bv-more-toggle{display:inline-flex !important;order:-1;flex:0 0 40px;width:40px;padding:0}" +
+        ".bv-actions.is-folded .bv-menu{display:none;position:absolute;left:12px;bottom:calc(100% + 6px);z-index:5;min-width:220px;flex-direction:column;align-items:stretch;gap:2px;padding:6px;border-radius:14px;background:var(--wcm-dialog);box-shadow:0 0 0 1px var(--wcm-divider),0 16px 32px -8px rgba(0,0,0,.45)}" +
+        ".bv-actions.is-folded .bv-menu.open{display:flex}" +
+        ".bv-actions.is-folded .bv-menu .btn{justify-content:flex-start;width:100%;height:44px;border-radius:10px;background:transparent;box-shadow:none;padding:0 12px}" +
+        ".bv-actions.is-folded .bv-menu .btn:hover,.bv-actions.is-folded .bv-menu .btn:focus-visible{background:var(--wcm-tonal)}" +
+        ".bv-actions.is-folded .bv-menu .btn.bv-danger{margin-top:3px;border-top:1px solid var(--wcm-divider);border-radius:0 0 10px 10px;color:var(--wcm-danger)}" +
         "@media (max-width:600px){.bv-spacer{display:none}.bv-actions .bv-primary{flex:1 1 0}}" +
         "@media (max-width:420px){.bv-hero{height:184px;gap:10px}}" +
         "@media (prefers-reduced-motion:reduce){.bv-plate img,.bv-addphoto{transition:none}.bv-plate a:hover img{transform:none}}" +
 
 
+        /* Add / edit sheet and cellar editor: a header, a scrolling body and a pinned footer. On phones the
+           sheet rises from the bottom; the add sheet opens on a capture step of its own (stage-capture), then
+           shows the whole form (stage-review). */
+        ".sr-only{position:absolute !important;width:1px;height:1px;margin:-1px;padding:0;border:0;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}" +
+        ".only-touch{display:none !important}" +
+        "@media (max-width:600px),(pointer:coarse){.only-fine{display:none !important}span.only-touch{display:inline !important}.btn.only-touch{display:inline-flex !important}}" +
+        ".modal-backdrop.sheet-backdrop{padding:24px;background:rgba(12,9,8,.56)}" +
+        ".modal.sheet{--sheet-field:color-mix(in srgb,var(--wcm-text) 4.5%,transparent);--sheet-field-2:color-mix(in srgb,var(--wcm-text) 8%,transparent);--sheet-line:color-mix(in srgb,var(--wcm-text) 13%,transparent);--sheet-line-2:color-mix(in srgb,var(--wcm-text) 24%,transparent);--sheet-soft:color-mix(in srgb,var(--wcm-text) 2.5%,transparent);--sheet-link:color-mix(in srgb,var(--wcm-accent) 62%,var(--wcm-text));--sheet-err:color-mix(in srgb,var(--wcm-danger) 82%,var(--wcm-text));width:min(1080px,100%);max-height:min(94vh,1000px);padding:0;overflow:hidden;display:flex;flex-direction:column;border-radius:22px;box-shadow:0 30px 70px -20px rgba(0,0,0,.55),0 0 0 1px color-mix(in srgb,var(--wcm-text) 8%,transparent)}" +
+        ".sheet svg{fill:currentColor}" +
+        ".sheet-head{position:relative;flex:0 0 auto;display:flex;align-items:center;gap:14px;padding:20px 14px 16px 22px;border-bottom:1px solid var(--wcm-divider)}" +
+        ".sheet-head::before{content:'';position:absolute;left:0;right:0;top:0;height:4px;background:var(--sheet-type,var(--wcm-accent))}" +
+        ".builder .sheet-head::before{background:var(--mat,var(--wcm-accent))}" +
+        ".sheet-hbottle{width:20px;height:50px;flex:0 0 auto;filter:drop-shadow(0 2px 3px rgba(0,0,0,.25))}" +
+        ".sheet-hbottle .g{fill:var(--sheet-type);stroke:color-mix(in srgb,var(--wcm-text) 35%,transparent);stroke-width:1.2}" +
+        ".sheet-hbottle .l{fill:rgba(255,255,255,.88)}" +
+        ".sheet-hbottle .k{fill:rgba(0,0,0,.35)}" +
+        ".sheet-htext{flex:1 1 auto;min-width:0}" +
+        ".sheet-title{margin:0;font-family:var(--wcm-font-display);font-size:var(--wcm-fs-xl);font-weight:600;line-height:1.15;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}" +
+        ".sheet-dest{display:flex;align-items:center;gap:6px;margin-top:5px;font-size:var(--wcm-fs-sm);color:var(--wcm-muted);min-width:0;font-variant-numeric:tabular-nums}" +
+        ".sheet-dest[hidden]{display:none}" +
+        ".sheet-dest span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}" +
+        ".sheet-dest svg{width:15px;height:15px;flex:0 0 auto;color:var(--sheet-link)}" +
+        ".sheet-form{flex:1 1 auto;min-height:0;display:flex;flex-direction:column;margin:0}" +
+        ".sheet-scroll{flex:1 1 auto;min-height:0;overflow-y:auto;overscroll-behavior:contain}" +
+        ".sheet-grid{display:grid;grid-template-columns:348px minmax(0,1fr);grid-template-rows:auto 1fr;grid-template-areas:'photo main' 'place main';align-items:start;gap:26px 32px;padding:22px 24px 28px}" +
+        ".sheet-photo{grid-area:photo;display:grid;gap:10px;min-width:0}" +
+        ".sheet-main{grid-area:main;display:grid;gap:22px;min-width:0}" +
+        ".sheet-place{grid-area:place;display:grid;gap:12px;min-width:0}" +
+        ".sheet-sec{display:grid;gap:16px;min-width:0}" +
+        ".sheet-main,.sheet-sec,.sheet-fld,.sheet-more-b,.sheet-photo,.sheet-place{grid-template-columns:minmax(0,1fr)}" +
+        ".sheet-sec-t{display:flex;align-items:center;gap:8px;margin:0;font-size:var(--wcm-fs-xs);font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--wcm-muted)}" +
+        ".sheet-sec-t svg{width:16px;height:16px;flex:0 0 auto;color:var(--sheet-link)}" +
+        ".sheet-sec-t svg[viewBox=\"0 0 40 100\"]{width:10px}" +
+        /* Fields. A field filled from the label or the cellar carries a mark and a tint until it is changed. */
+        ".sheet-fld{display:grid;gap:6px;min-width:0;position:relative}" +
+        ".sheet-lrow{display:flex;align-items:center;gap:8px;min-height:20px}" +
+        ".sheet-lbl{font-size:var(--wcm-fs-sm);font-weight:500;color:var(--wcm-muted)}" +
+        ".sheet-req{color:var(--sheet-err);margin-left:3px}" +
+        ".sheet-mark{display:none;margin-left:auto;align-items:center;gap:4px;padding:1px 8px 1px 6px;border-radius:999px;background:color-mix(in srgb,var(--wcm-accent) 13%,transparent);color:var(--sheet-link);font-size:var(--wcm-fs-xs);font-weight:600;white-space:nowrap}" +
+        ".sheet-mark svg{width:12px;height:12px}" +
+        ".sheet-fld.is-filled>.sheet-lrow .sheet-mark{display:inline-flex}" +
+        ".sheet-in{width:100%;height:44px;padding:0 14px;border-radius:12px;border:1px solid var(--sheet-line);background:var(--sheet-field);color:var(--wcm-text);font:inherit;font-size:.9375rem;outline:none;transition:border-color .15s ease,box-shadow .15s ease,background-color .15s ease;-moz-appearance:textfield}" +
+        ".sheet-in::placeholder{color:var(--wcm-muted);opacity:.75}" +
+        ".sheet-sel{position:relative;display:grid;width:min(100%,340px)}" +
+        ".sheet-sel::after{content:'';position:absolute;right:17px;top:50%;width:7px;height:7px;margin-top:-6px;border-right:2px solid var(--wcm-muted);border-bottom:2px solid var(--wcm-muted);transform:rotate(45deg);pointer-events:none}" +
+        "select.sheet-in{appearance:none;-webkit-appearance:none;padding-right:42px;cursor:pointer;text-overflow:ellipsis}" +
+        ".sheet-in:hover{border-color:var(--sheet-line-2)}" +
+        ".sheet-in:focus{border-color:var(--wcm-accent);background:var(--wcm-dialog);box-shadow:0 0 0 3px color-mix(in srgb,var(--wcm-accent) 20%,transparent)}" +
+        ".sheet-in::-webkit-outer-spin-button,.sheet-in::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}" +
+        "textarea.sheet-in{height:auto;min-height:88px;padding:10px 14px;line-height:1.45;resize:vertical}" +
+        ".sheet-in-display{height:52px;font-family:var(--wcm-font-display);font-size:var(--wcm-fs-lg);font-weight:600}" +
+        ".sheet-num{font-variant-numeric:tabular-nums}" +
+        ".sheet-fld.is-filled .sheet-in{border-color:color-mix(in srgb,var(--wcm-accent) 42%,var(--sheet-line));background:color-mix(in srgb,var(--wcm-accent) 6%,var(--sheet-field))}" +
+        ".sheet-fld.is-invalid .sheet-in,.sheet-fld.is-invalid .sheet-types{border-color:var(--wcm-danger);box-shadow:0 0 0 3px color-mix(in srgb,var(--wcm-danger) 15%,transparent)}" +
+        ".sheet-err{display:flex;align-items:center;gap:6px;font-size:var(--wcm-fs-sm);font-weight:500;color:var(--sheet-err)}" +
+        ".sheet-err[hidden]{display:none}" +
+        ".sheet-err svg{width:15px;height:15px;flex:0 0 auto}" +
+        ".sheet-affix{position:relative}" +
+        ".sheet-affix .sheet-in{padding-right:54px}" +
+        ".sheet-affix b{position:absolute;right:13px;top:50%;transform:translateY(-50%);font-size:var(--wcm-fs-sm);font-weight:600;color:var(--wcm-muted);pointer-events:none}" +
+        ".sheet-2{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:14px}" +
+        ".sheet-2.sheet-vint{grid-template-columns:minmax(0,1fr) 124px}" +
+        ".sheet-inline{display:flex;gap:8px}" +
+        ".sheet-inline .btn{height:44px;flex:0 0 auto}" +
+        ".sheet-fld.is-shimmer .sheet-in{color:transparent;background:linear-gradient(100deg,var(--sheet-field) 30%,color-mix(in srgb,var(--wcm-accent) 18%,var(--sheet-field)) 50%,var(--sheet-field) 70%) 0 0/300% 100%;animation:sheet-shimmer 1.3s linear infinite}" +
+        ".sheet-fld.is-shimmer .sheet-in::placeholder{color:transparent}" +
+        ".sheet-fld.is-shimmer .sheet-types{opacity:.55}" +
+        "@keyframes sheet-shimmer{from{background-position:100% 0}to{background-position:0 0}}" +
+        /* Suggestions: wines already in the cellar or drunk before. */
+        ".sheet-combo{position:relative}" +
+        ".sheet-list{position:absolute;z-index:30;left:0;right:0;top:calc(100% + 6px);max-height:300px;overflow-y:auto;padding:6px;border-radius:14px;background:var(--wcm-dialog);border:1px solid var(--sheet-line);box-shadow:0 18px 40px -12px rgba(0,0,0,.45)}" +
+        ".sheet-list[hidden]{display:none}" +
+        ".sheet-opt{display:flex;align-items:center;gap:12px;padding:8px 10px;border-radius:10px;cursor:pointer;min-height:44px}" +
+        ".sheet-opt.is-active,.sheet-opt:hover{background:var(--sheet-field-2)}" +
+        ".sheet-opt-thumb{position:relative;width:28px;height:38px;border-radius:6px;flex:0 0 auto;overflow:hidden;background:radial-gradient(circle at 35% 25%,rgba(255,255,255,.45),rgba(255,255,255,0) 45%),var(--type);box-shadow:inset 0 0 0 1px rgba(0,0,0,.18)}" +
+        ".sheet-opt-thumb img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}" +
+        ".sheet-opt-main{flex:1 1 auto;min-width:0;display:grid;gap:1px}" +
+        ".sheet-opt-t{font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}" +
+        ".sheet-opt-s{font-size:var(--wcm-fs-sm);color:var(--wcm-muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}" +
+        ".sheet-opt-b{flex:0 0 auto;font-size:var(--wcm-fs-xs);font-weight:600;padding:2px 8px;border-radius:999px;background:var(--sheet-field-2);color:var(--wcm-text);font-variant-numeric:tabular-nums;white-space:nowrap}" +
+        ".sheet-opt-b.is-past{background:transparent;color:var(--wcm-muted);box-shadow:inset 0 0 0 1px var(--sheet-line)}" +
+        ".sheet-opt mark{background:none;color:inherit;text-decoration:underline;text-decoration-color:color-mix(in srgb,var(--wcm-accent) 75%,transparent);text-decoration-thickness:2px;text-underline-offset:3px}" +
+        ".sheet-dup{display:flex;align-items:center;gap:7px;font-size:var(--wcm-fs-sm);color:var(--wcm-muted)}" +
+        ".sheet-dup[hidden]{display:none}" +
+        ".sheet-dup svg{width:15px;height:15px;flex:0 0 auto;color:var(--sheet-link)}" +
+        /* Wine type: colour swatches. */
+        ".sheet-types{display:flex;flex-wrap:wrap;gap:8px;border-radius:14px}" +
+        ".sheet-type{position:relative;display:inline-flex;align-items:center;gap:8px;height:36px;padding:0 13px 0 8px;border-radius:999px;border:1px solid var(--sheet-line);color:var(--wcm-text);font-size:var(--wcm-fs-md);font-weight:500;cursor:pointer;user-select:none;transition:border-color .15s ease,background-color .15s ease,box-shadow .15s ease}" +
+        ".sheet-type:hover{border-color:var(--sheet-line-2)}" +
+        ".sheet-type-dot{width:18px;height:18px;border-radius:50%;flex:0 0 auto;background:radial-gradient(circle at 35% 30%,rgba(255,255,255,.55),rgba(255,255,255,0) 45%),var(--sw);box-shadow:inset 0 0 0 1px rgba(0,0,0,.22)}" +
+        ".sheet-type.on{border-color:var(--wcm-accent);background:color-mix(in srgb,var(--wcm-accent) 11%,transparent);box-shadow:inset 0 0 0 1px var(--wcm-accent);font-weight:600}" +
+        ".sheet-type:has(input:focus-visible){outline:2px solid var(--wcm-accent);outline-offset:2px}" +
+        /* More details. */
+        ".sheet-more{border:1px solid var(--sheet-line);border-radius:16px;background:var(--sheet-soft)}" +
+        ".sheet-more>summary{list-style:none;display:flex;align-items:center;gap:12px;padding:14px 16px;cursor:pointer;border-radius:16px;user-select:none}" +
+        ".sheet-more>summary::-webkit-details-marker{display:none}" +
+        ".sheet-more>summary:focus-visible{outline:2px solid var(--wcm-accent);outline-offset:2px}" +
+        ".sheet-more-t{font-weight:600;font-size:.9375rem;white-space:nowrap}" +
+        ".sheet-more-h{flex:1 1 auto;min-width:0;font-size:var(--wcm-fs-sm);color:var(--wcm-muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}" +
+        ".sheet-chev{display:inline-flex;color:var(--wcm-muted);transition:transform .2s ease-out}" +
+        ".sheet-chev svg{width:18px;height:18px}" +
+        ".sheet-more[open] .sheet-chev{transform:rotate(180deg)}" +
+        ".sheet-more-b{display:grid;gap:18px;padding:2px 16px 18px}" +
+        /* Rating stars. */
+        ".sheet-stars{display:flex;align-items:center;gap:2px;flex-wrap:wrap}" +
+        ".sheet-star{display:grid;place-items:center;width:38px;height:38px;border-radius:10px;cursor:pointer;color:color-mix(in srgb,var(--wcm-text) 20%,transparent)}" +
+        ".sheet-star svg{width:27px;height:27px;transition:transform .12s ease-out,color .12s ease-out}" +
+        ".sheet-star.on{color:var(--wcm-star)}" +
+        ".sheet-star.hov{color:color-mix(in srgb,var(--wcm-star) 70%,transparent)}" +
+        ".sheet-star:hover svg{transform:scale(1.12)}" +
+        ".sheet-star:has(input:focus-visible),.sheet-star-none:has(input:focus-visible){outline:2px solid var(--wcm-accent);outline-offset:1px}" +
+        ".sheet-star-none{display:inline-flex;align-items:center;height:30px;padding:0 11px;margin-right:6px;border-radius:999px;border:1px solid var(--sheet-line);font-size:var(--wcm-fs-sm);color:var(--wcm-muted);cursor:pointer}" +
+        ".sheet-star-none.on{border-color:var(--sheet-line-2);color:var(--wcm-text);background:var(--sheet-field)}" +
+        /* Drinking window: the years and a live timeline with the status glyph. */
+        ".sheet-win{display:grid;grid-template-columns:auto minmax(0,1fr);gap:18px;align-items:center}" +
+        ".sheet-win-in{display:flex;align-items:center;gap:6px}" +
+        ".sheet-year{width:82px;text-align:center;padding:0 8px}" +
+        ".sheet-win-dash{color:var(--wcm-muted)}" +
+        ".sheet-tl{display:grid;gap:6px;min-width:0}" +
+        ".sheet-tl-track{position:relative;height:8px;border-radius:4px;background:var(--sheet-field-2)}" +
+        ".sheet-tl-span{position:absolute;top:0;bottom:0;border-radius:4px;background:var(--status)}" +
+        ".sheet-tl-now{position:absolute;top:-4px;bottom:-4px;width:2px;margin-left:-1px;border-radius:1px;background:var(--wcm-text);box-shadow:0 0 0 2px var(--wcm-dialog)}" +
+        ".sheet-tl-scale{position:relative;display:flex;justify-content:space-between;height:16px;font-size:var(--wcm-fs-xs);color:var(--wcm-muted);font-variant-numeric:tabular-nums}" +
+        ".sheet-tl-scale b{position:absolute;top:0;transform:translateX(-50%);font-weight:600;color:var(--wcm-text)}" +
+        ".sheet-tl-st{display:flex;align-items:center;gap:8px;font-size:var(--wcm-fs-sm);font-weight:600}" +
+        ".sheet-tl.is-none .sheet-tl-st{color:var(--wcm-muted);font-weight:500}" +
+        /* The label tile: a camera prompt, or the photo on a dark stage with its tools. */
+        ".sheet-tile{position:relative;display:grid;gap:14px;justify-items:center;text-align:center;padding:18px;border-radius:18px;border:1.5px dashed var(--sheet-line-2);background:radial-gradient(120% 80% at 50% 0%,color-mix(in srgb,var(--wcm-accent) 8%,transparent),rgba(0,0,0,0) 65%),var(--sheet-soft);transition:border-color .15s ease,background-color .15s ease}" +
+        ".sheet-tile.is-drag{border-color:var(--wcm-accent);background:color-mix(in srgb,var(--wcm-accent) 10%,transparent)}" +
+        ".sheet-frame{position:relative;width:100%;height:200px;display:grid;place-items:center;border-radius:12px;overflow:hidden}" +
+        ".sheet-illus{height:160px;width:auto;color:var(--wcm-muted)}" +
+        ".sheet-illus .b{fill:color-mix(in srgb,var(--wcm-text) 4%,transparent);stroke:currentColor;stroke-width:1.5;stroke-linejoin:round}" +
+        ".sheet-illus .k{fill:color-mix(in srgb,var(--wcm-text) 12%,transparent);stroke:currentColor;stroke-width:1.5}" +
+        ".sheet-illus .l{fill:var(--wcm-dialog);stroke:currentColor;stroke-width:1.5}" +
+        ".sheet-illus .t{fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;opacity:.55}" +
+        ".sheet-illus .c{fill:none;stroke:var(--wcm-accent);stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round}" +
+        ".sheet-tile.has-img{border-style:solid;border-color:var(--sheet-line);background:var(--sheet-soft);padding:10px 10px 12px}" +
+        ".sheet-tile.has-img .sheet-frame{height:300px;background:radial-gradient(90% 70% at 50% 40%,#2a221e,#120e0c);box-shadow:inset 0 0 0 1px rgba(255,255,255,.05)}" +
+        ".sheet-img{max-width:calc(100% - 24px);max-height:calc(100% - 24px);object-fit:contain;display:block;border-radius:4px;box-shadow:0 10px 24px -8px rgba(0,0,0,.7)}" +
+        ".sheet-tile-body{display:grid;gap:12px;justify-items:center;width:100%;min-width:0}" +
+        ".sheet-tile-t{font-size:var(--wcm-fs-base);font-weight:600}" +
+        ".sheet-tile-s{font-size:var(--wcm-fs-sm);color:var(--wcm-muted);max-width:32ch;line-height:1.45}" +
+        ".sheet-tile-a{display:grid;gap:8px;width:100%}" +
+        ".sheet-tile-a .btn{width:100%;height:44px}" +
+        ".sheet-tile-drop{font-size:var(--wcm-fs-sm);color:var(--wcm-muted)}" +
+        ".sheet-tools{display:flex;justify-content:center;gap:2px;flex-wrap:wrap}" +
+        ".sheet-tool{display:inline-flex;align-items:center;gap:6px;height:34px;padding:0 11px;border-radius:999px;border:none;background:transparent;color:var(--wcm-text);font:inherit;font-size:var(--wcm-fs-sm);font-weight:500;cursor:pointer}" +
+        ".sheet-tool:hover{background:var(--sheet-field-2)}" +
+        ".sheet-tool svg{width:16px;height:16px;flex:0 0 auto}" +
+        ".sheet-tool.is-accent{color:var(--sheet-link);font-weight:600}" +
+        ".sheet-scan{position:absolute;inset:0;pointer-events:none;display:none}" +
+        ".sheet-tile.is-busy .sheet-scan{display:block;background:linear-gradient(180deg,rgba(0,0,0,0) 0,color-mix(in srgb,var(--wcm-accent) 35%,transparent) 46%,rgba(255,255,255,.75) 50%,color-mix(in srgb,var(--wcm-accent) 35%,transparent) 54%,rgba(0,0,0,0) 100%) 0 0/100% 34% no-repeat;animation:sheet-scan 1.5s ease-in-out infinite alternate}" +
+        "@keyframes sheet-scan{from{background-position:0 -30%}to{background-position:0 130%}}" +
+        ".sheet-busy{position:absolute;left:50%;bottom:12px;transform:translateX(-50%);display:inline-flex;align-items:center;gap:8px;padding:6px 13px 6px 10px;border-radius:999px;background:rgba(18,14,12,.84);color:#f5efe9;font-size:var(--wcm-fs-sm);font-weight:600;white-space:nowrap}" +
+        ".sheet-spin{width:14px;height:14px;flex:0 0 auto;border-radius:50%;border:2px solid rgba(255,255,255,.28);border-top-color:#fff;animation:sheet-spin .8s linear infinite}" +
+        "@keyframes sheet-spin{to{transform:rotate(360deg)}}" +
+        ".sheet-photo-links{display:flex;justify-content:center;gap:2px;flex-wrap:wrap}" +
+        ".sheet-tile.has-img~.sheet-photo-links [data-sheet-instead]{display:none}" +
+        ".sheet-link{display:inline-flex;align-items:center;gap:6px;height:34px;padding:0 11px;border:none;border-radius:999px;background:none;color:var(--sheet-link);font:inherit;font-size:var(--wcm-fs-md);font-weight:600;cursor:pointer}" +
+        ".sheet-link:hover{background:color-mix(in srgb,var(--wcm-accent) 10%,transparent)}" +
+        ".sheet-link svg{width:16px;height:16px;flex:0 0 auto}" +
+        ".sheet-link.is-muted{color:var(--wcm-muted);font-weight:500}" +
+        ".sheet-link:focus-visible,.sheet-tool:focus-visible{outline:2px solid var(--wcm-accent);outline-offset:1px}" +
+        /* The note above the wine's fields (label being read, what was filled, with Undo). */
+        ".sheet-note{display:flex;align-items:center;gap:10px;padding:9px 10px 9px 12px;border-radius:12px;background:color-mix(in srgb,var(--wcm-accent) 9%,transparent);border:1px solid color-mix(in srgb,var(--wcm-accent) 24%,transparent);font-size:var(--wcm-fs-sm);line-height:1.4}" +
+        ".sheet-note[hidden]{display:none}" +
+        ".sheet-note>svg{width:17px;height:17px;flex:0 0 auto;color:var(--sheet-link)}" +
+        ".sheet-note .sheet-spin{border-color:color-mix(in srgb,var(--wcm-accent) 30%,transparent);border-top-color:var(--wcm-accent)}" +
+        ".sheet-note-t{flex:1 1 auto;min-width:0}" +
+        ".sheet-note .sheet-link{height:28px;margin:-4px 0;padding:0 10px}" +
+        ".sheet-note.is-warn{background:color-mix(in srgb,var(--wcm-peak) 11%,transparent);border-color:color-mix(in srgb,var(--wcm-peak) 32%,transparent)}" +
+        ".sheet-note.is-warn>svg{color:color-mix(in srgb,var(--wcm-peak) 70%,var(--wcm-text))}" +
+        /* −/+ steppers (bottle quantity, shelf slots). */
+        ".stepper{display:inline-flex;align-items:center;gap:2px;padding:3px;border-radius:999px;background:var(--sheet-field);border:1px solid var(--sheet-line)}" +
+        ".stepper:focus-within{border-color:var(--wcm-accent)}" +
+        ".stepper-b{display:grid;place-items:center;width:34px;height:34px;padding:0;border:none;border-radius:50%;background:transparent;color:var(--wcm-text);cursor:pointer}" +
+        ".stepper-b svg{width:18px;height:18px}" +
+        ".stepper-b:hover:not(:disabled){background:var(--sheet-field-2)}" +
+        ".stepper-b:disabled{opacity:.3;cursor:default}" +
+        ".stepper-b:focus-visible{outline:2px solid var(--wcm-accent);outline-offset:1px}" +
+        ".stepper-v{display:grid;place-items:center;width:40px;height:34px;padding:0;border:none;background:transparent;color:var(--wcm-text);font:inherit;font-size:var(--wcm-fs-base);font-weight:700;text-align:center;font-variant-numeric:tabular-nums;outline:none;-moz-appearance:textfield}" +
+        ".stepper-v::-webkit-inner-spin-button,.stepper-v::-webkit-outer-spin-button{-webkit-appearance:none;margin:0}" +
+        ".stepper.small .stepper-b{width:30px;height:30px}" +
+        ".stepper.small .stepper-v{width:34px;height:30px;font-size:.9375rem}" +
+        /* A cellar finish drawn as its material (the frame of its cabinet). */
+        ".mat-chip{display:inline-block;flex:0 0 auto;background:var(--mat,#555);box-shadow:inset 0 1px 0 rgba(255,255,255,.4),inset 0 -1px 0 rgba(0,0,0,.25),0 0 0 1px rgba(0,0,0,.16)}" +
+        /* Where it goes: cellar chips, then the cellar as a small cabinet whose free slots are buttons. */
+        ".pk{display:grid;gap:12px;min-width:0}" +
+        ".pk-tabs{display:flex;flex-wrap:wrap;gap:6px}" +
+        ".pk-tab{flex:0 0 auto;display:inline-flex;align-items:center;gap:8px;height:34px;padding:0 12px 0 9px;border-radius:999px;border:1px solid var(--sheet-line);background:transparent;color:var(--wcm-text);font:inherit;font-size:var(--wcm-fs-sm);font-weight:500;cursor:pointer;white-space:nowrap}" +
+        ".pk-tab .mat-chip{width:12px;height:16px;border-radius:3px}" +
+        ".pk-tab:hover:not(:disabled){border-color:var(--sheet-line-2)}" +
+        ".pk-tab-n{color:var(--wcm-muted);font-variant-numeric:tabular-nums}" +
+        ".pk-tab.on{border-color:var(--wcm-accent);background:color-mix(in srgb,var(--wcm-accent) 11%,transparent);box-shadow:inset 0 0 0 1px var(--wcm-accent);font-weight:600}" +
+        ".pk-tab:disabled{opacity:.5;cursor:default}" +
+        ".pk-tab:focus-visible{outline:2px solid var(--wcm-accent);outline-offset:2px}" +
+        /* The picker never grows past its column: its slots shrink with the room (--span is the widest row, in slots), down to a size that stays easy to hit, then its shelves scroll inside it. */
+        ".pk-cab{display:grid;grid-template-columns:minmax(0,1fr);justify-items:center;min-width:0;container-type:inline-size}" +
+        ".cabinet.picker{--slot-w:26px;--slot-gap:8px;--tag-w:38px;display:block;min-width:0;max-width:100%;padding:9px;border-radius:14px}" +
+        "@supports (width:1cqw){.cabinet.picker{--fit:clamp(24px,calc((100cqw - 38px - 2 * var(--tag-w)) / var(--span,1)),34px);--slot-w:calc(var(--fit) * .765);--slot-gap:calc(var(--fit) * .235)}}" +
+        "@media (pointer:fine){@supports (width:1cqw){.cabinet.picker{--fit:clamp(19px,calc((100cqw - 38px - 2 * var(--tag-w)) / var(--span,1)),34px)}}}" +
+        ".cabinet.picker .interior.can-l{-webkit-mask-image:linear-gradient(90deg,transparent,#000 22px);mask-image:linear-gradient(90deg,transparent,#000 22px)}" +
+        ".cabinet.picker .interior.can-r{-webkit-mask-image:linear-gradient(270deg,transparent,#000 22px);mask-image:linear-gradient(270deg,transparent,#000 22px)}" +
+        ".cabinet.picker .interior.can-l.can-r{-webkit-mask-image:linear-gradient(90deg,transparent,#000 22px,#000 calc(100% - 22px),transparent);mask-image:linear-gradient(90deg,transparent,#000 22px,#000 calc(100% - 22px),transparent)}" +
+        ".cabinet.picker::after{inset:9px;border-radius:8px}" +
+        ".cabinet.picker .interior{overflow-x:auto;overflow-y:hidden;border-radius:8px}" +
+        ".cabinet.picker .shelf{padding:8px 10px 0}" +
+        ".cabinet.picker .shelf.two-row .lane-front{margin-top:2px}" +
+        ".cabinet.picker .lane-tag{writing-mode:horizontal-tb;transform:none;justify-self:start;font-size:.6875rem;font-weight:500;letter-spacing:0;text-transform:none}" +
+        ".cabinet.picker .lane-back .mm-dot{transform:scale(.86)}" +
+        ".cabinet.picker .rail{margin:4px -10px 0;height:6px}" +
+        ".mm-head{display:flex;align-items:baseline;gap:6px;padding:0 2px 4px;font-size:var(--wcm-fs-xs);color:var(--wcm-muted);font-variant-numeric:tabular-nums;white-space:nowrap}" +
+        ".mm-head .mm-n{min-width:10px;opacity:.8}" +
+        ".mm-head b{color:var(--wcm-text);font-weight:600;max-width:150px;overflow:hidden;text-overflow:ellipsis}" +
+        ".mm-head .mm-free{margin-left:auto;padding-left:12px}" +
+        "button.mm-dot{display:grid;place-items:center;margin:0;padding:0;background:rgba(255,240,225,.035);color:#fff;font:inherit;font-size:var(--wcm-fs-xs);font-weight:700;line-height:1;font-variant-numeric:tabular-nums;cursor:pointer;transition:transform .15s ease-out,box-shadow .15s ease-out,background-color .15s ease-out}" +
+        "button.mm-dot svg{width:min(15px,62%);height:min(15px,62%)}" +
+        ".mm-dot.free{border:1.5px solid rgba(242,235,228,.4)}" +
+        ".cabinet.picker button.mm-dot.free:not(.sel):not(.queued):not(.own)::after{content:'';width:4px;height:4px;border-radius:50%;background:rgba(242,235,228,.5)}" +
+        ".cabinet.picker.themed button.mm-dot.free:not(.sel):not(.queued):not(.own)::after{background:color-mix(in srgb,var(--wcm-text) 40%,transparent)}" +
+        ".mm-dot.free:hover:not(.sel){border-color:var(--wcm-accent);background:color-mix(in srgb,var(--wcm-accent) 24%,transparent)}" +
+        ".mm-dot.free:focus-visible{outline:2px solid #fff;outline-offset:2px}" +
+        ".mm-dot.own{border:2px solid rgba(255,255,255,.55);background:radial-gradient(circle at 34% 30%,rgba(255,255,255,.45),rgba(255,255,255,0) 38%),var(--type)}" +
+        ".mm-dot.queued{border:2px solid var(--wcm-accent);background:color-mix(in srgb,var(--wcm-accent) 38%,transparent)}" +
+        ".mm-dot.sel{z-index:2;border:none;background:var(--wcm-accent);color:var(--wcm-on-accent);box-shadow:0 0 0 3px color-mix(in srgb,var(--wcm-accent) 35%,transparent),0 0 16px 3px color-mix(in srgb,var(--wcm-accent) 55%,transparent)}" +
+        ".cabinet.picker .lane-front .mm-dot.sel{transform:scale(1.08)}" +
+        ".cabinet.picker .lane-back .mm-dot.sel{transform:scale(.95)}" +
+        "@media (prefers-reduced-motion:no-preference){.mm-dot.sel::before{content:'';position:absolute;inset:-3px;border-radius:50%;box-shadow:0 0 0 2px var(--wcm-accent);animation:sheet-ping 1.8s ease-out infinite}}" +
+        "@keyframes sheet-ping{0%{opacity:.9;transform:scale(1)}100%{opacity:0;transform:scale(1.7)}}" +
+        ".cabinet.picker .mm-dot.filled{cursor:help}" +
+        /* Theme-coloured interiors (card option interior: theme): free slots drawn in the theme's text colour. */
+        ".cabinet.themed .mm-dot:not(.filled){border-color:color-mix(in srgb,var(--wcm-text) 38%,transparent)}" +
+        ".cabinet.themed .mm-dot.free:not(.sel):not(.queued):not(.own){background:color-mix(in srgb,var(--wcm-text) 5%,transparent)}" +
+        ".cabinet.themed .mm-dot.free:focus-visible{outline-color:var(--wcm-text)}" +
+        ".pk-foot{display:grid;gap:10px;min-width:0;padding:12px 14px;border-radius:14px;border:1px solid var(--sheet-line);background:var(--sheet-soft)}" +
+        ".pk-read{min-width:0;display:flex;align-items:center;gap:8px;font-size:var(--wcm-fs-md);font-weight:600;line-height:1.35}" +
+        ".pk-read svg{width:17px;height:17px;flex:0 0 auto;color:var(--sheet-link)}" +
+        ".pk-read.is-peek{color:var(--wcm-muted);font-weight:500}" +
+        ".pk-qty{display:flex;align-items:center;justify-content:space-between;gap:10px;padding-top:10px;border-top:1px solid var(--sheet-line)}" +
+        ".pk-qty-l{font-size:var(--wcm-fs-md);font-weight:500}" +
+        ".pk-hint{font-size:var(--wcm-fs-sm);color:var(--wcm-muted);line-height:1.4}" +
+        ".pk-empty{display:grid;gap:10px;padding:16px;border-radius:14px;background:color-mix(in srgb,var(--wcm-peak) 9%,transparent);border:1px solid color-mix(in srgb,var(--wcm-peak) 30%,transparent)}" +
+        ".pk-empty>svg{width:20px;height:20px;color:color-mix(in srgb,var(--wcm-peak) 70%,var(--wcm-text))}" +
+        ".pk-empty b{display:block;font-size:.9375rem}" +
+        ".pk-empty div>span{font-size:var(--wcm-fs-sm);color:var(--wcm-muted)}" +
+        ".pk-empty-a{display:flex;gap:8px;flex-wrap:wrap}" +
+        /* The pinned footer. */
+        ".sheet-foot{flex:0 0 auto;display:grid;gap:10px;padding:14px 18px 16px 22px;border-top:1px solid var(--wcm-divider);background:var(--wcm-dialog);box-shadow:0 -12px 24px -20px rgba(0,0,0,.4)}" +
+        ".sheet-foot .form-error{margin:0;padding:10px 12px;border-radius:12px;font-size:var(--wcm-fs-md)}" +
+        ".sheet-foot-row{display:flex;align-items:center;gap:10px}" +
+        ".sheet-foot-l{flex:1 1 auto;min-width:0;display:flex;align-items:center;gap:8px;font-size:var(--wcm-fs-sm);color:var(--wcm-muted)}" +
+        ".sheet-foot-l svg{width:16px;height:16px;flex:0 0 auto}" +
+        ".sheet-foot .btn{height:44px;padding:0 20px}" +
+        ".sheet-foot .btn.primary{min-width:128px;font-weight:600}" +
+        ".sheet-danger{display:inline-flex;align-items:center;gap:6px;height:40px;padding:0 12px;border:none;border-radius:999px;background:none;color:var(--sheet-err);font:inherit;font-size:var(--wcm-fs-md);font-weight:600;cursor:pointer}" +
+        ".sheet-danger:hover{background:color-mix(in srgb,var(--wcm-danger) 10%,transparent)}" +
+        ".sheet-danger svg{width:17px;height:17px;flex:0 0 auto}" +
+        ".modal.sheet.is-confirming .sheet-foot{display:none}" +
+        ".modal.sheet>.dialog-confirm{position:relative;flex:0 0 auto;margin:0 18px 16px}" +
+        /* Cellar editor. */
+        ".builder{width:min(1000px,100%)}" +
+        ".cb-hglyph{width:34px;height:44px;border-radius:6px;padding:4px}" +
+        ".cb-hglyph i{display:block;height:100%;border-radius:3px;background:repeating-linear-gradient(#1c1512 0 8px,#8a5f3c 8px 10px),#1c1512;box-shadow:inset 0 2px 4px rgba(0,0,0,.6)}" +
+        ".cb-grid{display:grid;grid-template-columns:minmax(0,1fr) 296px;align-items:start;gap:26px 30px;padding:22px 24px 28px}" +
+        ".cb-main{display:grid;gap:22px;min-width:0}" +
+        ".cb-side{position:sticky;top:0;display:grid;gap:12px;justify-items:center;padding:16px 14px;border-radius:18px;background:var(--sheet-soft);border:1px solid var(--sheet-line)}" +
+        ".cb-side .sheet-sec-t{justify-self:start}" +
+        /* The preview and the row minis fit their box however long a row is: their slots shrink with the room (--span, the widest row). */
+        ".cb-prev{justify-self:stretch;min-width:0;display:grid;grid-template-columns:minmax(0,1fr);justify-items:center;container-type:inline-size}" +
+        ".cabinet.preview{--slot-w:15px;--slot-gap:6px;display:block;min-width:0;max-width:100%}" +
+        "@supports (width:1cqw){.cabinet.preview{--fit:clamp(6px,calc((100cqw - 32px) / var(--span,1)),21px);--slot-w:calc(var(--fit) * .714);--slot-gap:calc(var(--fit) * .286)}}" +
+        ".cabinet.preview .shelf{padding:7px 9px 0}" +
+        ".cabinet.preview .shelf.two-row .lane-front{margin-top:-2px}" +
+        ".cabinet.tiny{--slot-w:9px;--slot-gap:4px;padding:4px;border-radius:7px}" +
+        ".cabinet.tiny::after{inset:4px;border-radius:4px}" +
+        ".cabinet.tiny .shelf{padding:4px 6px 0}" +
+        ".cabinet.tiny .shelf.two-row .lane-front{margin-top:-3px}" +
+        ".cabinet.tiny .mm-dot{border-width:1px}" +
+        ".cabinet.tiny .rail{height:3px;margin:1px -6px 0}" +
+        ".cabinet.preview .interior,.cb-mini .cabinet.tiny .interior{overflow-x:auto;overflow-y:hidden}" +
+        ".cb-mini .cabinet.tiny{min-width:0;max-width:100%}" +
+        "@supports (width:1cqw){.cb-mini .cabinet.tiny{--fit:clamp(5px,calc((100cqw - 20px) / var(--span,1)),13px);--slot-w:calc(var(--fit) * .69);--slot-gap:calc(var(--fit) * .31)}}" +
+        ".cb-legend{display:flex;gap:16px;font-size:var(--wcm-fs-xs);color:var(--wcm-muted)}" +
+        ".cb-legend span{display:inline-flex;align-items:center;gap:6px}" +
+        ".cb-legend i{width:10px;height:10px;border-radius:50%;border:1.5px dashed var(--sheet-line-2)}" +
+        ".cb-legend i.is-stored{background:#7d1f3a;border:none}" +
+        ".cb-sum{font-size:var(--wcm-fs-sm);color:var(--wcm-muted);font-variant-numeric:tabular-nums;text-align:center}" +
+        ".cb-fins{display:flex;flex-wrap:wrap;gap:8px}" +
+        ".cb-fin{display:inline-flex;align-items:center;gap:8px;height:38px;padding:0 13px 0 6px;border-radius:999px;border:1px solid var(--sheet-line);font-size:var(--wcm-fs-sm);font-weight:500;cursor:pointer;user-select:none}" +
+        ".cb-fin .mat-chip{width:26px;height:26px;border-radius:50%}" +
+        ".cb-fin:hover{border-color:var(--sheet-line-2)}" +
+        ".cb-fin.on{border-color:var(--wcm-accent);box-shadow:inset 0 0 0 1px var(--wcm-accent);background:color-mix(in srgb,var(--wcm-accent) 10%,transparent);font-weight:600}" +
+        ".cb-fin:has(input:focus-visible){outline:2px solid var(--wcm-accent);outline-offset:2px}" +
+        ".cb-quick{display:grid;gap:8px}" +
+        ".cb-tpls{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}" +
+        ".cb-tpl{display:flex;align-items:center;gap:12px;text-align:left;padding:10px 12px;border-radius:14px;border:1px solid var(--sheet-line);background:transparent;color:var(--wcm-text);font:inherit;cursor:pointer;min-width:0}" +
+        ".cb-tpl:hover{border-color:var(--sheet-line-2);background:var(--sheet-soft)}" +
+        ".cb-tpl:focus-visible{outline:2px solid var(--wcm-accent);outline-offset:2px}" +
+        ".cb-tpl-t{display:grid;gap:2px;min-width:0}" +
+        ".cb-tpl b{font-size:var(--wcm-fs-md);font-weight:600}" +
+        ".cb-tpl-t span{font-size:var(--wcm-fs-xs);color:var(--wcm-muted);font-variant-numeric:tabular-nums}" +
+        ".cb-shelves{display:grid;gap:10px}" +
+        ".cb-sh-hint{font-size:var(--wcm-fs-sm);color:var(--wcm-muted);margin-top:4px;line-height:1.4}" +
+        ".cb-rows{list-style:none;margin:0;padding:0;display:grid;gap:8px}" +
+        ".cb-row{display:grid;grid-template-columns:auto 28px minmax(0,1fr) auto;align-items:center;gap:10px 12px;padding:10px 10px 10px 6px;border-radius:14px;border:1px solid var(--sheet-line);background:var(--wcm-dialog);transition:border-color .15s ease,box-shadow .15s ease}" +
+        ".cb-row:focus-within{border-color:color-mix(in srgb,var(--wcm-accent) 55%,var(--sheet-line));box-shadow:0 0 0 3px color-mix(in srgb,var(--wcm-accent) 12%,transparent)}" +
+        ".cb-row.is-invalid{border-color:var(--wcm-danger);box-shadow:0 0 0 3px color-mix(in srgb,var(--wcm-danger) 14%,transparent)}" +
+        ".cb-move{display:grid;gap:2px}" +
+        ".cb-ic{display:grid;place-items:center;width:30px;height:26px;padding:0;border:none;border-radius:8px;background:transparent;color:var(--wcm-muted);cursor:pointer}" +
+        ".cb-ic svg{width:18px;height:18px}" +
+        ".cb-ic:hover:not(:disabled):not([aria-disabled=\"true\"]){background:var(--sheet-field-2);color:var(--wcm-text)}" +
+        ".cb-ic:disabled{opacity:.28;cursor:default}" +
+        ".cb-ic[aria-disabled=\"true\"]{opacity:.35;cursor:not-allowed}" +
+        ".cb-ic:focus-visible{outline:2px solid var(--wcm-accent);outline-offset:1px}" +
+        ".cb-rm{width:38px;height:38px;border-radius:10px}" +
+        ".cb-rm:hover:not([aria-disabled=\"true\"]){color:var(--sheet-err);background:color-mix(in srgb,var(--wcm-danger) 10%,transparent)}" +
+        ".cb-idx{display:grid;place-items:center;width:28px;height:28px;border-radius:50%;background:var(--sheet-field-2);font-size:var(--wcm-fs-sm);font-weight:700;font-variant-numeric:tabular-nums}" +
+        ".cb-fields{display:grid;gap:8px;min-width:0}" +
+        ".cb-top{display:flex;align-items:center;gap:10px;min-width:0}" +
+        ".cb-name{height:38px;font-weight:600;flex:1 1 auto;min-width:0}" +
+        ".cb-stored{flex:0 0 auto;display:inline-flex;align-items:center;gap:6px;height:24px;padding:0 10px;border-radius:999px;background:var(--sheet-field-2);font-size:var(--wcm-fs-xs);font-weight:600;color:var(--wcm-text);font-variant-numeric:tabular-nums;white-space:nowrap}" +
+        ".cb-stored i{width:7px;height:7px;border-radius:50%;background:var(--wcm-ready)}" +
+        ".cb-stored.is-empty{background:transparent;box-shadow:inset 0 0 0 1px var(--sheet-line);color:var(--wcm-muted);font-weight:500}" +
+        ".cb-caps{display:flex;align-items:center;gap:8px 18px;flex-wrap:wrap}" +
+        ".cb-cap{display:inline-flex;align-items:center;gap:8px;font-size:var(--wcm-fs-sm);font-weight:500;color:var(--wcm-muted)}" +
+        ".cb-mini{display:none;margin-left:auto;min-width:0}" +
+        ".cb-add{display:flex;align-items:center;justify-content:center;gap:8px;height:48px;border-radius:14px;border:1.5px dashed var(--sheet-line-2);background:transparent;color:var(--sheet-link);font:inherit;font-size:var(--wcm-fs-md);font-weight:600;cursor:pointer}" +
+        ".cb-add svg{width:18px;height:18px}" +
+        ".cb-add:hover{border-color:var(--wcm-accent);background:color-mix(in srgb,var(--wcm-accent) 7%,transparent)}" +
+        ".cb-add:focus-visible{outline:2px solid var(--wcm-accent);outline-offset:2px}" +
+        ".cb-row-err{grid-column:1 / -1}" +
+        /* Toast and move banner, at the bottom of the screen above everything else. */
+        ".wcm-toast,.move-bar{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);z-index:1002;display:flex;align-items:center;gap:12px;width:max-content;max-width:min(620px,calc(100vw - 32px));padding:9px 9px 9px 16px;border-radius:16px;background:#221c19;color:#f5efe9;box-shadow:0 18px 40px -12px rgba(0,0,0,.55),0 0 0 1px rgba(255,255,255,.07);font-size:var(--wcm-fs-md);line-height:1.35}" +
+        ".wcm-toast>svg,.move-bar>svg{width:19px;height:19px;flex:0 0 auto;color:#7fd8a0}" +
+        ".wcm-toast.is-warn>svg{color:#ffb454}" +
+        ".toast-text{flex:1 1 auto;min-width:0}" +
+        ".toast-action{flex:0 0 auto;height:34px;padding:0 12px;border:none;border-radius:10px;background:transparent;color:color-mix(in srgb,var(--wcm-accent) 50%,#fff);font:inherit;font-weight:700;cursor:pointer}" +
+        ".toast-action:hover{background:rgba(255,255,255,.09)}" +
+        ".toast-action:focus-visible,.toast-close:focus-visible{outline:2px solid #fff;outline-offset:1px}" +
+        ".toast-close{display:grid;place-items:center;flex:0 0 auto;width:32px;height:32px;padding:0;border:none;border-radius:50%;background:transparent;color:rgba(245,239,233,.7);cursor:pointer}" +
+        ".toast-close svg{width:16px;height:16px}" +
+        ".move-bar{border:1px solid color-mix(in srgb,var(--wcm-accent) 65%,transparent)}" +
+        ".move-bar>svg{color:color-mix(in srgb,var(--wcm-accent) 55%,#fff)}" +
+        ".move-bar-text{display:grid;gap:1px;min-width:0}" +
+        ".move-bar-text b{font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}" +
+        ".move-bar-text>span{color:rgba(245,239,233,.74);font-size:var(--wcm-fs-sm)}" +
+        "@media (prefers-reduced-motion:no-preference){.wcm-toast:not(.no-anim),.move-bar{animation:wcm-rise .22s ease-out}}" +
+        "@keyframes wcm-rise{from{opacity:0;transform:translate(-50%,10px)}to{opacity:1;transform:translate(-50%,0)}}" +
+        /* Move mode: the lifted bottle, and every free slot a full-size target. */
+        ".cellars-grid.placing .cabinet .slot.empty{border-color:var(--wcm-accent);border-style:solid;color:var(--wcm-text);background:color-mix(in srgb,var(--wcm-accent) 18%,rgba(8,5,3,.42));opacity:1}" +
+        "@media (prefers-reduced-motion:no-preference){.cellars-grid.placing .cabinet .slot.empty{animation:wcm-target 1.8s ease-in-out infinite}}" +
+        "@keyframes wcm-target{0%,100%{box-shadow:0 0 0 0 color-mix(in srgb,var(--wcm-accent) 0%,transparent)}50%{box-shadow:0 0 0 4px color-mix(in srgb,var(--wcm-accent) 30%,transparent)}}" +
+        /* A long press lifts a bottle on touch screens: no text selection or image callout meanwhile. */
+        ".cellars-grid .slot.filled{-webkit-touch-callout:none;-webkit-user-select:none;user-select:none}" +
+        ".cellars-grid.placing .cabinet .slot.filled:not(.lifted){cursor:alias}" +
+        ".cellars-grid.placing .cabinet .slot.filled:not(.lifted):hover,.cellars-grid.placing .cabinet .slot.filled:not(.lifted):focus-visible{box-shadow:0 0 0 2px var(--wcm-accent),0 0 0 6px color-mix(in srgb,var(--wcm-accent) 22%,transparent)}" +
+        ".cellars-grid:not(.compact) .cabinet .slot.filled.lifted,.cellars-grid:not(.compact) .cabinet .lane-back .slot.filled.lifted{z-index:6;filter:none;transform:translateY(-8px) scale(1.05);box-shadow:0 0 0 2px var(--wcm-accent),0 20px 30px -10px rgba(0,0,0,.7)}" +
+        ".cellars-grid.compact .cabinet .slot.filled.lifted{z-index:6;filter:none;transform:scale(1.28);box-shadow:0 0 0 2px var(--cab-ring-gap),0 0 0 4px var(--wcm-accent)}" +
+        /* Phones and small tablets: a bottom sheet. */
+        "@media (max-width:780px){.modal-backdrop.sheet-backdrop{padding:0;align-items:flex-end}.modal.sheet{width:100%;height:94vh;height:94dvh;max-height:none;border-radius:20px 20px 0 0}.sheet-head{padding:16px 8px 12px 16px;gap:12px}.sheet-title{font-size:var(--wcm-fs-lg)}.sheet-in-display{font-size:1.125rem}.sheet-hbottle{height:42px;width:17px}.sheet-grid{grid-template-columns:minmax(0,1fr);grid-template-rows:none;grid-template-areas:'photo' 'main' 'place';gap:24px;padding:16px 16px 28px}.sheet-2{grid-template-columns:minmax(0,1fr)}.sheet-2.sheet-keep{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}.sheet-2.sheet-vint{grid-template-columns:minmax(0,1fr) 108px}.sheet-win{grid-template-columns:minmax(0,1fr);gap:12px}.sheet-foot{padding:10px 12px 12px}.sheet-foot-l{display:none}.sheet-foot .btn{flex:1 1 0;padding:0 12px;min-width:0}.sheet-foot .btn.primary{min-width:0}.sheet:not(.is-edit) .sheet-foot .sheet-cancel{display:none}.sheet-danger{position:relative;flex:0 0 44px;width:44px;height:44px;padding:0;justify-content:center}.sheet-danger svg{width:19px;height:19px}.sheet-danger-t{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}.sheet.is-edit .sheet-foot-row{flex-wrap:wrap}.sheet.is-edit .sheet-foot .btn{flex:1 1 auto}.cb-grid{grid-template-columns:minmax(0,1fr);padding:16px 16px 28px}.cb-side{display:none}.cb-row{grid-template-columns:auto minmax(0,1fr) auto;padding:10px 6px 10px 4px;gap:8px}.cb-idx{display:none}.cb-mini{display:grid;justify-items:end;flex:1 1 96px;container-type:inline-size}.cb-caps{gap:8px 12px}.cb-tpls{grid-template-columns:minmax(0,1fr)}.wcm-toast{bottom:calc(16px + env(safe-area-inset-bottom,0px))}.move-bar{bottom:calc(16px + env(safe-area-inset-bottom,0px))}}" +
+        "@media (max-width:780px){.sheet.stage-capture .sheet-main,.sheet.stage-capture .sheet-place,.sheet.stage-capture .sheet-foot,.sheet.stage-capture .sheet-photo>.sheet-sec-t{display:none}.sheet.stage-capture .sheet-tile{padding:22px 18px 20px}.sheet.stage-capture .sheet-grid{min-height:100%;align-content:center;padding-bottom:40px}.sheet.stage-capture .sheet-photo{width:100%;max-width:520px;justify-self:center}.sheet.stage-capture .sheet-frame{height:min(34vh,280px)}.sheet.stage-capture .sheet-illus{height:min(28vh,220px)}.sheet.stage-capture .sheet-photo-links{padding-top:4px}.sheet.stage-capture .sheet-photo-links [data-sheet-instead]{height:44px;font-size:.9375rem}}" +
+        "@media (max-width:780px){.sheet.stage-review .sheet-tile{grid-template-columns:72px minmax(0,1fr);justify-items:stretch;align-items:center;text-align:left;gap:14px;padding:10px}.sheet.stage-review .sheet-frame{width:72px;height:96px;border-radius:10px}.sheet.stage-review .sheet-tile.is-empty .sheet-frame{background:var(--sheet-field)}.sheet.stage-review .sheet-illus{height:74px}.sheet.stage-review .sheet-img{max-width:100%;max-height:100%;border-radius:2px}.sheet.stage-review .sheet-tile-body{justify-items:start;gap:6px}.sheet.stage-review .sheet-tile-s,.sheet.stage-review .sheet-tile-drop,.sheet.stage-review .sheet-busy{display:none}.sheet.stage-review .sheet-tile-a{display:flex;flex-wrap:wrap;gap:6px}.sheet.stage-review .sheet-tile-a .btn{width:auto;height:36px;padding:0 12px;font-size:var(--wcm-fs-sm)}.sheet.stage-review .sheet-tools{justify-content:flex-start;margin-left:-8px}.sheet.stage-review .sheet-tool{padding:0 8px}.sheet.stage-review [data-sheet-instead]{display:none}.sheet.stage-review .sheet-photo-links{justify-content:flex-start}}" +
+        /* Tablets: the capture step hugs its content instead of floating in a tall sheet. */
+        "@media (min-width:601px) and (max-width:780px){.modal.sheet.stage-capture{height:auto;max-height:94vh;max-height:94dvh}.sheet.stage-capture .sheet-grid{min-height:0;padding-top:24px;padding-bottom:28px}}" +
+        "@media (prefers-reduced-motion:reduce){.sheet-tile.is-busy .sheet-scan,.sheet-fld.is-shimmer .sheet-in,.sheet-spin{animation:none}.sheet-tile.is-busy .sheet-scan{background-position:0 50%}.sheet-chev,button.mm-dot,.cellars-grid .cabinet .slot.lifted{transition:none}}" +
+
         /* Small screens */
-        "@media (max-width:780px){.wrap{padding:10px;gap:10px}.toolbar{padding:8px}.seg{width:100%;flex-wrap:wrap;border-radius:20px}.seg-btn{flex:1 1 auto;padding:0 10px;font-size:.84rem}.toolbar-spacer{display:none}.toolbar-row > .btn{flex:1 1 0}.search{flex-basis:100%}.select-wrap{flex:1 1 30%}.select-wrap select{max-width:none;padding-left:12px;padding-right:30px;font-size:.84rem}.cellars-grid{--slot-w:7rem;--slot-h:11.25rem;--slot-gap:8px;gap:14px}.cellars-grid.compact{--slot-w:26px;--slot-h:26px;--slot-gap:9px}.pull-btn{margin-left:10px;left:10px}.cellar{width:100%;padding:10px}.grid2,.grid3,.grid-shelf,.grid-location{grid-template-columns:1fr}.modal{padding:14px;max-height:94vh}.wine-view-modal{padding:0}.duplicate-item{grid-template-columns:1fr}.modal-actions{flex-direction:column;align-items:stretch}.left-actions,.right-actions,.helper-actions{width:100%;margin:0}.left-actions .btn,.right-actions .btn,.helper-actions .btn{flex:1}}" +
+        "@media (max-width:780px){.wrap{padding:10px;gap:10px}.toolbar{padding:8px}.seg{width:100%;flex-wrap:wrap;border-radius:20px}.seg-btn{flex:1 1 auto;padding:0 10px;font-size:.84rem}.toolbar-spacer{display:none}.toolbar-row > .btn{flex:1 1 0}.search{flex-basis:100%}.select-wrap{flex:1 1 30%}.select-wrap select{max-width:none;padding-left:12px;padding-right:30px;font-size:.84rem}.cellars-grid{--slot-w:7rem;--slot-h:11.25rem;--slot-gap:8px;gap:14px}.cellars-grid.compact{--slot-w:26px;--slot-h:26px;--slot-gap:9px}.pull-btn{margin-left:10px;left:10px}.cellar{width:100%;padding:10px}.modal{padding:14px;max-height:94vh}.wine-view-modal{padding:0}.duplicate-item{grid-template-columns:1fr}.modal-actions{flex-direction:column;align-items:stretch}}" +
         "@media (max-width:780px){:host{position:static !important;height:auto !important}.wrap{height:auto !important;overflow:visible !important}.main-scroll-content{overflow-y:visible !important;height:auto !important}}" +
         /* iOS zooms the page into any field whose text is under 16px. */
-        "@media (max-width:780px),(pointer:coarse){.modal-form input,.modal-form select,.modal-form textarea,.search input,.select-wrap select{font-size:16px}}";
+        "@media (max-width:780px),(pointer:coarse){.sheet-in,.stepper-v,.search input,.select-wrap select{font-size:16px}}";
 
 // Inline icons, so the card does not depend on HA's icon set being loaded.
 // One line-icon family (24px grid, 1.8 stroke, round joins); the fill="none"
@@ -2837,7 +3821,22 @@ const _WCM_ICONS = {
   glass: _wcmLineIcon('<path d="M7.4 3.5h9.2l-.3 5.3a4.3 4.3 0 0 1-8.6 0z"/><path d="M7.6 7.6h8.8"/><path d="M12 13.2v7.3M8.6 20.5h6.8"/>'),
   camera: _wcmLineIcon('<path d="M4 8.6A1.6 1.6 0 0 1 5.6 7h2.1l1.5-2.2h5.6L16.3 7h2.1A1.6 1.6 0 0 1 20 8.6v8.8a1.6 1.6 0 0 1-1.6 1.6H5.6A1.6 1.6 0 0 1 4 17.4z"/><circle cx="12" cy="12.8" r="3.4"/>'),
   noPhoto: _wcmLineIcon('<rect x="3.5" y="4.5" width="17" height="15" rx="2.2"/><circle cx="9" cy="9.8" r="1.6"/><path d="m20.5 15.5-4.3-4.3L6.4 19.5"/><path d="M3 3l18 18"/>'),
+  image: _wcmLineIcon('<rect x="3.5" y="5" width="17" height="14" rx="2.2"/><circle cx="9" cy="10" r="1.6"/><path d="m20.5 16-4.8-4.8L6 19"/>'),
+  keyboard: _wcmLineIcon('<rect x="2.8" y="6" width="18.4" height="12" rx="2"/><path d="M6.5 9.8h.01M10 9.8h.01M13.5 9.8h.01M17 9.8h.01M8 14.2h8"/>'),
+  rotate: _wcmLineIcon('<path d="M19.5 12a7.5 7.5 0 1 1-2.2-5.3"/><path d="M19.8 4.2v4.3h-4.3"/>'),
+  history: _wcmLineIcon('<path d="M4.5 12a7.5 7.5 0 1 0 2.2-5.3L4.5 9"/><path d="M4.5 4.5V9H9"/><path d="M12 8v4.2l2.8 1.8"/>'),
+  move: _wcmLineIcon('<path d="M12 3.5v17M3.5 12h17"/><path d="m9.2 6.3 2.8-2.8 2.8 2.8M9.2 17.7l2.8 2.8 2.8-2.8M6.3 9.2 3.5 12l2.8 2.8M17.7 9.2l2.8 2.8-2.8 2.8"/>'),
+  up: _wcmLineIcon('<path d="m6.5 14.5 5.5-5.5 5.5 5.5"/>'),
+  down: _wcmLineIcon('<path d="m6.5 9.5 5.5 5.5 5.5-5.5"/>'),
+  minus: _wcmLineIcon('<path d="M5.5 12h13"/>'),
+  check: _wcmLineIcon('<path d="m5 12.5 4.5 4.5L19 7.5"/>'),
+  barcode: _wcmLineIcon('<path d="M4.5 6v12M8 6v12M11 6v12M13.5 6v12M17 6v12M19.5 6v12"/>'),
+  info: _wcmLineIcon('<circle cx="12" cy="12" r="8.5"/><path d="M12 11v5M12 7.8h.01"/>'),
+  alert: _wcmLineIcon('<path d="M12 4.2 21 19.5H3z"/><path d="M12 10v4M12 16.8h.01"/>'),
   // Filled glyph-like icons.
+  // A rating star, and the bottle drawn in the add sheet's header.
+  star: '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2.6l2.9 6 6.6.8-4.9 4.6 1.3 6.5L12 17.3l-5.9 3.2 1.3-6.5L2.5 9.4l6.6-.8z"/></svg>',
+  bottle: '<svg viewBox="0 0 40 100" aria-hidden="true" focusable="false"><path d="M16 3h8v20c0 6 9 9 9 20v50a5 5 0 0 1-5 5H12a5 5 0 0 1-5-5V43c0-11 9-14 9-20z"/></svg>',
   more: '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="5" cy="12" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="19" cy="12" r="2"/></svg>',
   expand: '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 4h6v2H7.4l3.8 3.8-1.4 1.4L6 7.4V10H4zm16 0v6h-2V7.4l-3.8 3.8-1.4-1.4L16.6 6H14V4zM4 20v-6h2v2.6l3.8-3.8 1.4 1.4L7.4 18H10v2zm16 0h-6v-2h2.6l-3.8-3.8 1.4-1.4 3.8 3.8V14h2z"/></svg>',
   // Two bottles side by side: identical bottles (×N).
@@ -2915,8 +3914,9 @@ const _WCM_CAPSULES = {
   unset: "#6d6964"
 };
 
-// Cabinet frame: the cellar color (bg_color) picks a material. Any other hex
-// gets a generic finish built from it; no color gets graphite.
+// Cabinet frame: the cellar color (bg_color) picks a material (the finishes
+// the cellar editor offers, _WCM_FINISHES). Any other hex gets a generic
+// finish built from it; no color gets graphite.
 const _WCM_MATERIALS = {
   "#7b2130": "mat-bordeaux",
   "#8c6239": "mat-oak",
@@ -2965,16 +3965,7 @@ class WineCellarCard extends HTMLElement {
     this._actionMessage = "";
     this._scanner = null;
     this._scannerActive = false;
-    this._onWindowClick = null;
-    this._autocompletePanels = [];
     this._scannerTargetId = "wine-barcode-scanner";
-    this._barcodeBuffer = "";
-    this._duplicateMatches = [];
-    this._duplicateMessage = "";
-    this._searchResults = [];
-    this._searchMessage = "";
-    this._historySearchValue = "";
-    this._historySearchTimer = null;
     this._copiedBottleData = null;
     this._sortColumn = "wine_name";
     this._sortOrder = "asc";
@@ -3006,9 +3997,23 @@ class WineCellarCard extends HTMLElement {
     this._dialogConfirm = null;
     this._lastActivator = null;
     this._dialogListenersBound = false;
-    // Where the form error shows: "save" (next to Save) or "capture" (under
-    // the photo and analysis panel).
-    this._formErrorAt = "save";
+    // The add sheet's open suggestion list, and whether the sheet is being
+    // filled by code (a suggestion, the label reading) rather than typed in.
+    this._combo = null;
+    this._sheetFilling = false;
+    // The in-card toast (see _showToast) and the bottles to bring into view
+    // and pulse after the next paint (just added or moved).
+    this._toast = null;
+    this._toastSeq = 0;
+    this._toastShown = 0;
+    this._toastTimer = null;
+    this._pendingPulse = null;
+    // Tap-to-move: the lifted bottle, whether it takes focus on the next
+    // paint, and the long press that lifts one on touch screens.
+    this._moveSource = null;
+    this._moveFocus = false;
+    this._longPressTimer = null;
+    this._longPressFired = false;
     // Clean-up pairs the user dismissed, so a rescan does not offer them again.
     this._rejectedCleanup = {};
     // Shelf depth: the shelf the user pulled out ("cellarId|shelfId"), the
@@ -3031,24 +4036,6 @@ class WineCellarCard extends HTMLElement {
     this._siblingListenersBound = false;
   }
 
-  // A single window-level listener serves every autocomplete panel, and is
-  // removed in disconnectedCallback, so renders cannot accumulate listeners.
-  _ensureWindowClickHandler() {
-    if (this._onWindowClick) return;
-
-    var self = this;
-    this._onWindowClick = function (e) {
-      var panels = self._autocompletePanels || [];
-      for (var i = 0; i < panels.length; i++) {
-        var entry = panels[i];
-        if (entry.panel && e.target !== entry.input) {
-          entry.panel.style.display = "none";
-        }
-      }
-    };
-    window.addEventListener("click", this._onWindowClick);
-  }
-
   // "/" jumps to the search box, like on most sites, unless the user is
   // already typing somewhere or a dialog is open. Bound once, removed in
   // disconnectedCallback.
@@ -3057,12 +4044,29 @@ class WineCellarCard extends HTMLElement {
 
     var self = this;
     this._onWindowKeydown = function (e) {
+      var from = e.composedPath ? e.composedPath() : [];
+      var outside = from.indexOf(self.shadowRoot) === -1;
       // Escape and Tab pressed while focus has slipped out of an open dialog
       // (after a click on its text, say) still reach the dialog.
       if ((e.key === "Escape" || e.key === "Tab") && !e.defaultPrevented && self.isConnected &&
           self.getClientRects().length && self._topDialog()) {
-        var from = e.composedPath ? e.composedPath() : [];
-        if (from.indexOf(self.shadowRoot) === -1) self._onDialogKeydown(e);
+        if (outside) self._onDialogKeydown(e);
+        return;
+      }
+      // Escape also puts a lifted bottle down when focus is elsewhere.
+      if ((e.key === "Escape" || e.key === "Esc") && self._moveSource && outside && !e.defaultPrevented && self.isConnected) {
+        e.preventDefault();
+        self._cancelMove();
+        return;
+      }
+      // Ctrl+Z (Cmd+Z) runs the Undo of the toast on screen, outside text
+      // fields (there it stays the field's own undo).
+      if ((e.key === "z" || e.key === "Z") && (e.ctrlKey || e.metaKey) && !e.shiftKey && !e.altKey && !e.defaultPrevented &&
+          self._toast && self._toast.action && self._toast.action.undo && self.isConnected) {
+        var field = e.composedPath ? e.composedPath()[0] : e.target;
+        if (field && (field.isContentEditable || /^(INPUT|TEXTAREA|SELECT)$/.test(field.tagName || ""))) return;
+        e.preventDefault();
+        self._runToastAction();
         return;
       }
       if (e.key !== "/" || e.ctrlKey || e.metaKey || e.altKey || e.defaultPrevented) return;
@@ -3088,15 +4092,9 @@ class WineCellarCard extends HTMLElement {
   }
 
   // Release everything that outlives the element: the window listener, the
-  // pending search debounce, and the barcode scanner.
+  // pending timers (search debounce, toast, long press), and the barcode
+  // scanner.
   disconnectedCallback() {
-    if (this._onWindowClick) {
-      window.removeEventListener("click", this._onWindowClick);
-      this._onWindowClick = null;
-    }
-
-    this._autocompletePanels = [];
-
     if (this._onWindowKeydown) {
       window.removeEventListener("keydown", this._onWindowKeydown);
       this._onWindowKeydown = null;
@@ -3107,14 +4105,15 @@ class WineCellarCard extends HTMLElement {
       this._searchTimer = null;
     }
 
-    if (this._historySearchTimer) {
-      clearTimeout(this._historySearchTimer);
-      this._historySearchTimer = null;
-    }
+    clearTimeout(this._toastTimer);
+    this._toast = null;
+    clearTimeout(this._longPressTimer);
 
     this._stopScanner();
 
     if (this._cabinetResizeObserver) this._cabinetResizeObserver.disconnect();
+    if (this._pickerObserver) this._pickerObserver.disconnect();
+    if (this._footerObserver) this._footerObserver.disconnect();
     if (this._shelfObserver) this._shelfObserver.disconnect();
 
     this._renderPending = false;
@@ -3267,16 +4266,16 @@ class WineCellarCard extends HTMLElement {
     return Number.isFinite(n) ? n : null;
   }
 
-  // Shows the form error next to what it is about: "save" (the default) next
-  // to the Save button, "capture" under the photo and analysis panel. It is
-  // scrolled into view, and its role="alert" announces it.
-  _setFormError(msg, at) {
+  // Shows the form error of the open dialog, next to its Save button (in the
+  // pinned footer of the add sheet and the cellar editor). It is scrolled
+  // into view, and its role="alert" announces it.
+  _setFormError(msg) {
     this._formError = msg || "";
-    this._formErrorAt = at === "capture" ? "capture" : "save";
     var root = this.shadowRoot;
     if (!root) return;
-    var boxes = root.querySelectorAll(".form-error");
-    var target = root.querySelector('.form-error[data-error-at="' + this._formErrorAt + '"]') || boxes[0] || null;
+    var dialog = this._topDialog();
+    var boxes = (dialog || root).querySelectorAll(".form-error");
+    var target = boxes[0] || null;
     var self = this;
     boxes.forEach(function (box) {
       var show = !!self._formError && box === target;
@@ -3284,13 +4283,13 @@ class WineCellarCard extends HTMLElement {
       box.style.display = show ? "block" : "none";
     });
     if (target && this._formError && target.closest(".modal")) {
-      // Next to Save, bring the button row into view too (it sits right
-      // below the error), so the message and the button are seen together.
+      // Bring the button row into view too (it sits right below the error),
+      // so the message and the button are seen together.
       var next = target.nextElementSibling;
-      var anchor = next && next.classList.contains("modal-actions") ? next : target;
-      var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-      anchor.scrollIntoView({ block: "nearest", behavior: reduce ? "auto" : "smooth" });
+      var anchor = next && next.matches(".modal-actions, .sheet-foot-row") ? next : target;
+      anchor.scrollIntoView({ block: "nearest", behavior: this._prefersReducedMotion() ? "auto" : "smooth" });
     }
+    this._placeToast();
   }
 
   _setActionMessage(msg) {
@@ -3313,17 +4312,6 @@ class WineCellarCard extends HTMLElement {
 
   _clearActionMessage() {
     this._setActionMessage("");
-  }
-
-  _clearDuplicateState() {
-    this._duplicateMatches = [];
-    this._duplicateMessage = "";
-  }
-
-  _clearSearchState() {
-    this._searchResults = [];
-    this._searchMessage = "";
-    this._updateSearchResultsPanel();
   }
 
   // Server errors reach the card as "code: English text" (see _callWS).
@@ -3931,22 +4919,21 @@ class WineCellarCard extends HTMLElement {
   }
 
 
-  // message: optional notice for the top of the form (e.g. after a paste).
-  // Every opening starts clean: no stale error or notice from before.
+  // message: optional note for the top of the add sheet (e.g. after a
+  // paste). Every opening starts clean: no stale error, and no bottle
+  // lifted for a move.
   _openBottleModal(bottle, preset, message) {
     this._formError = "";
-    this._formErrorAt = "save";
-    this._actionMessage = message || "";
-    this._barcodeBuffer = "";
-    this._historySearchValue = "";
-    this._clearDuplicateState();
-    this._clearSearchState();
+    this._actionMessage = "";
+    this._releaseSheetPhoto();
+    this._moveSource = null;
     this._modal = {
       type: "bottle",
       uid: ++this._modalSeq,
       bottle: bottle || null,
       preset: preset || {},
-      mode: bottle && bottle.id ? "view" : "edit"
+      mode: bottle && bottle.id ? "view" : "edit",
+      ui: message ? { note: { kind: "cellar", text: message } } : {}
     };
 
     this.render(true);
@@ -3954,8 +4941,9 @@ class WineCellarCard extends HTMLElement {
 
   _openCellarModal(cellar) {
     this._formError = "";
-    this._formErrorAt = "save";
     this._actionMessage = "";
+    this._releaseSheetPhoto();
+    this._moveSource = null;
     this._modal = {
       type: "cellar",
       uid: ++this._modalSeq,
@@ -3966,23 +4954,23 @@ class WineCellarCard extends HTMLElement {
 
   async _closeModal() {
     this._formError = "";
-    this._formErrorAt = "save";
     this._actionMessage = "";
-    this._barcodeBuffer = "";
-    this._historySearchValue = "";
     this._dialogConfirm = null;
-    this._clearDuplicateState();
-    this._clearSearchState();
+    this._combo = null;
+    this._releaseSheetPhoto();
     this._modal = null;
-    this.render(true);
+    return this.render(true);
   }
 
   _setBottleModalMode(mode) {
     if (this._modal && this._modal.type === "bottle") {
       this._modal.mode = mode;
       // Switching between details and form starts from the stored bottle:
-      // a cancelled edit does not come back.
+      // a cancelled edit does not come back, nor does its photo or notes.
       this._modal.draft = null;
+      this._releaseSheetPhoto();
+      this._modal.photo = null;
+      this._modal.ui = {};
       this._dialogConfirm = null;
       this._clearFormError();
       this._clearActionMessage();
@@ -4000,11 +4988,12 @@ class WineCellarCard extends HTMLElement {
     return m.uid + ":" + (m.bottle && m.bottle.id && m.mode === "view" ? "view" : "edit");
   }
 
-  // Everything in an open bottle or cellar form, shelf rows included.
+  // Everything in an open bottle or cellar form, shelf rows included (in
+  // their order on screen).
   _readModalForm(form) {
     var values = {};
     Array.prototype.forEach.call(form.elements, function (el) {
-      if (!el.name || el.type === "file" || el.name === "history_search" || /\[\]$/.test(el.name)) return;
+      if (!el.name || el.type === "file" || /\[\]$/.test(el.name)) return;
       if ((el.type === "radio" || el.type === "checkbox") && !el.checked) return;
       values[el.name] = el.value;
     });
@@ -4016,7 +5005,6 @@ class WineCellarCard extends HTMLElement {
       return {
         id: field("shelf_id[]"),
         name: field("shelf_name[]"),
-        display_order: field("shelf_display_order[]"),
         capacity_front: field("capacity_front[]"),
         capacity_back: field("capacity_back[]")
       };
@@ -4035,8 +5023,8 @@ class WineCellarCard extends HTMLElement {
     if (!form || form.getAttribute("data-modal-key") !== key) return;
     var draft = this._readModalForm(form);
     draft.key = key;
-    var dialog = form.closest(".modal");
-    draft.scrollTop = dialog ? dialog.scrollTop : 0;
+    var scroller = form.querySelector("[data-dialog-scroll]") || form.closest(".modal");
+    draft.scrollTop = scroller ? scroller.scrollTop : 0;
     draft.focus = null;
     var active = root.activeElement;
     if (active && active.name && form.contains(active)) {
@@ -4053,34 +5041,6 @@ class WineCellarCard extends HTMLElement {
   _modalDraft() {
     var m = this._modal;
     return m && m.draft && m.draft.key === this._modalKey() ? m.draft : null;
-  }
-
-  // The form error box for one place: "save" (next to the Save button) or
-  // "capture" (under the photo and analysis panel).
-  _renderFormError(at) {
-    var show = !!this._formError && (this._formErrorAt || "save") === at;
-    return '<div class="form-error" data-error-at="' + at + '" role="alert"' + (show ? "" : ' style="display:none"') + ">" +
-      (show ? this._escape(this._formError) : "") + "</div>";
-  }
-
-  _renderImagePreview(path) {
-    var src = this._normalizeImagePath(path);
-    if (!src) return "";
-    return '<div class="image-preview"><img src="' + this._escape(src) + '" alt="Label image preview" onerror="this.style.display=\'none\';this.parentElement.innerHTML=\'<div class=&quot;empty-state&quot;>' + _T("image_not_reachable") + '</div>\';"></div>';
-  }
-
-  // In-place updates of the bottle form: no re-render, so nothing typed is lost.
-  _refreshImagePreview(form) {
-    var slot = this.shadowRoot && this.shadowRoot.querySelector("[data-image-preview]");
-    var input = form && form.querySelector('[name="image_path"]');
-    if (slot && input) slot.innerHTML = this._renderImagePreview(input.value);
-  }
-
-  _refreshDuplicatePanel() {
-    var panel = this.shadowRoot && this.shadowRoot.querySelector("[data-duplicate-panel]");
-    if (!panel) return;
-    panel.innerHTML = this._renderDuplicateMatches();
-    this._bindSearchResultButtons();
   }
 
   /* Dialogs. The markup gives each one role="dialog", aria-modal and
@@ -4103,14 +5063,25 @@ class WineCellarCard extends HTMLElement {
 
   _focusablesIn(scope) {
     var list = scope.querySelectorAll('button:not([disabled]),[href],input:not([type="hidden"]):not([disabled]),select:not([disabled]),textarea:not([disabled]),[tabindex]:not([tabindex="-1"])');
+    // Controls out of the Tab order (a roving group's other members) are
+    // not stops either.
     return Array.prototype.filter.call(list, function (el) {
-      return el.getClientRects().length > 0 && getComputedStyle(el).visibility !== "hidden";
+      return el.tabIndex >= 0 && el.getClientRects().length > 0 && getComputedStyle(el).visibility !== "hidden";
     });
   }
 
+  // A dialog opens with focus on its title, or on its first field
+  // ([data-autofocus]) where typing is the next step: with a mouse, or right
+  // after "Save & add another". Not otherwise on touch screens, where it
+  // would pop the keyboard up over the form.
   _focusDialogStart(dialog) {
     if (!dialog) return;
-    var start = dialog.querySelector("[data-dialog-title]") || this._focusablesIn(dialog)[0];
+    var field = dialog.querySelector("[data-autofocus]");
+    var fine = !window.matchMedia || !window.matchMedia("(pointer: coarse)").matches;
+    var wanted = this._modal && this._modal.focusName;
+    if (this._modal) this._modal.focusName = false;
+    var start = (field && field.getClientRects().length && (fine || wanted) ? field : null) ||
+      dialog.querySelector("[data-dialog-title]") || this._focusablesIn(dialog)[0];
     if (start) start.focus({ preventScroll: true });
   }
 
@@ -4193,7 +5164,7 @@ class WineCellarCard extends HTMLElement {
     // The same dialog was repainted.
     var draft = this._modalDraft();
     if (draft && form) {
-      dialog.scrollTop = draft.scrollTop || 0;
+      (form.querySelector("[data-dialog-scroll]") || dialog).scrollTop = draft.scrollTop || 0;
       var spot = draft.focus;
       var field = spot ? form.querySelectorAll('[name="' + spot.name + '"]')[spot.index] : null;
       if (field) {
@@ -4218,9 +5189,9 @@ class WineCellarCard extends HTMLElement {
     if (e.key === "Escape" || e.key === "Esc") {
       e.preventDefault();
       e.stopPropagation();
-      var panel = active && active.parentElement ? active.parentElement.querySelector(".custom-autocomplete-panel") : null;
-      if (panel && panel.style.display === "block") {
-        panel.style.display = "none";
+      var combo = dialog.querySelector('[data-combo][aria-expanded="true"]');
+      if (combo) {
+        this._closeCombo(combo.form);
         return;
       }
       if (dialog.querySelector(".bv-menu.open")) {
@@ -4236,14 +5207,16 @@ class WineCellarCard extends HTMLElement {
     }
     if (e.key !== "Tab") return;
     var scope = (this._dialogConfirm && dialog.querySelector(".dialog-confirm")) || dialog;
-    var items = this._focusablesIn(scope);
+    // A toast shown over the dialog (with View, say) is part of the cycle.
+    var toast = this._dialogConfirm ? null : root.querySelector(".wrap > .wcm-toast");
+    var items = this._focusablesIn(scope).concat(toast ? this._focusablesIn(toast) : []);
     if (!items.length) {
       e.preventDefault();
       return;
     }
     var first = items[0];
     var last = items[items.length - 1];
-    if (!active || !scope.contains(active)) {
+    if (!active || !(scope.contains(active) || (toast && toast.contains(active)))) {
       e.preventDefault();
       (e.shiftKey ? last : first).focus();
     } else if (!e.shiftKey && active === last) {
@@ -4255,8 +5228,8 @@ class WineCellarCard extends HTMLElement {
     }
   }
 
-  // Escape or a backdrop tap. A form with unsaved edits asks first, inside
-  // the dialog; the X and Cancel buttons still close at once.
+  // Escape, a backdrop tap, X or Cancel. A form with unsaved edits asks
+  // first, inside the dialog.
   _requestCloseDialog() {
     var self = this;
     var dialog = this._topDialog();
@@ -4265,24 +5238,16 @@ class WineCellarCard extends HTMLElement {
       this._closeCleanupTool();
       return;
     }
-    if (this._isDialogDirty()) {
-      this._showDialogConfirm({
-        tone: "warning",
-        title: _T("discard_title"),
-        body: _T("discard_body"),
-        cancelLabel: _T("keep_editing"),
-        confirmLabel: _T("discard"),
-        onConfirm: function () { return self._closeModal(); }
-      });
-      return;
-    }
-    this._closeModal();
+    this._confirmDiscard(function () { return self._closeModal(); });
   }
 
+  // Whether the open form differs from how it was first painted. A label
+  // photo still being uploaded or read counts as unsaved work too.
   _isDialogDirty() {
     var dialog = this._topDialog();
     var form = dialog && dialog.querySelector("form[data-modal-key]");
     if (!form || this._dialogBaseline === null) return false;
+    if (this._modal && this._modal.photo && this._modal.photo.busy) return true;
     return JSON.stringify(this._readModalForm(form)) !== this._dialogBaseline;
   }
 
@@ -4442,714 +5407,6 @@ class WineCellarCard extends HTMLElement {
       " • Position " + (bottle.position || "—");
   }
 
-  _buildShelfOptions(cellarId, selectedShelfId) {
-    var cellars = (this._data && this._data.cellars) ? this._data.cellars : [];
-    var cellar = cellars.find(function (c) { return c.id === cellarId; });
-    var shelves = this._getSortedShelves(cellar);
-
-    return shelves.map((shelf) => {
-      return '<option value="' + this._escape(shelf.id) + '"' +
-        (String(selectedShelfId || "") === shelf.id ? " selected" : "") +
-        ">" + this._escape(shelf.name || shelf.id || "Shelf") + "</option>";
-    }).join("");
-  }
-
-  _getLaneCapacity(cellarId, shelfId, lane) {
-    var shelf = this._getShelfById(cellarId, shelfId);
-    if (!shelf) return 0;
-    return lane === "back" ? Number(shelf.capacity_back || 0) : Number(shelf.capacity_front || 0);
-  }
-
-  _buildLaneOptions(cellarId, shelfId, selectedLane) {
-    var self = this; // Déclaration essentielle pour que la fonction map() puisse y accéder
-    var shelf = this._getShelfById(cellarId, shelfId);
-    if (!shelf) return '<option value="front" selected>Front</option>';
-
-    var lanes = [{ value: "front", label: "Front" }];
-    if (Number(shelf.capacity_back || 0) > 0 || shelf.layout_mode === "staggered") {
-      lanes.push({ value: "back", label: "Back" });
-    }
-
-    var activeLane = selectedLane;
-    if (activeLane !== "front" && activeLane !== "back") {
-      activeLane = lanes[0].value;
-    }
-    if (activeLane === "back" && lanes.length === 1) {
-      activeLane = "front";
-    }
-
-    return lanes.map(function (lane) {
-      return '<option value="' + lane.value + '"' + (activeLane === lane.value ? " selected" : "") + ">" + self._escape(self._laneLabel(lane.value)) + "</option>";
-    }).join("");
-  }
-  // Only free positions are offered (plus the bottle's own slot when it is
-  // edited), so a shelf or row change cannot land on an occupied slot.
-  _buildPositionOptions(cellarId, shelfId, lane, selectedPosition) {
-    var self = this;
-    var capacity = this._getLaneCapacity(cellarId, shelfId, lane);
-    var own = this._modal && this._modal.type === "bottle" && this._modal.bottle && this._modal.bottle.id ? this._modal.bottle : null;
-    var taken = {};
-    ((this._data && this._data.bottles) || []).forEach(function (b) {
-      if (own && b.id === own.id) return;
-      if (b.cellar_id === cellarId && b.shelf_id === shelfId && String(b.lane || "front") === String(lane)) {
-        taken[Number(b.position)] = true;
-      }
-    });
-
-    var free = [];
-    for (var i = 1; i <= capacity; i++) {
-      if (!taken[i]) free.push(i);
-    }
-    if (!free.length) {
-      return '<option value="" selected disabled>' + this._escape(_T("no_free_position")) + "</option>";
-    }
-
-    var wanted = Number(selectedPosition);
-    var selected = free.indexOf(wanted) !== -1 ? wanted : free[0];
-    return free.map(function (pos) {
-      var isOwn = !!own && own.cellar_id === cellarId && own.shelf_id === shelfId &&
-        String(own.lane || "front") === String(lane) && Number(own.position) === pos;
-      return '<option value="' + pos + '"' + (pos === selected ? " selected" : "") + ">" +
-        self._escape(_T(isOwn ? "position_current" : "position_free", { n: pos })) + "</option>";
-    }).join("");
-  }
-
-  _validateBottlePayload(payload) {
-    if (!payload.cellar_id) return _T("err_select_cellar");
-    if (!payload.shelf_id) return _T("err_select_shelf");
-    if (payload.lane !== "front" && payload.lane !== "back") return _T("err_select_lane");
-    if (!Number.isInteger(payload.position) || payload.position < 1) return _T("err_choose_position");
-    if (!payload.wine_name || !payload.wine_name.trim()) return _T("err_wine_name_required");
-
-    var shelf = this._getShelfById(payload.cellar_id, payload.shelf_id);
-    if (!shelf) return _T("err_shelf_missing");
-
-    var capacity = payload.lane === "back"
-      ? Number(shelf.capacity_back || 0)
-      : Number(shelf.capacity_front || 0);
-
-    if (capacity < 1) {
-      return payload.lane === "back" ? _T("err_no_back_lane") : _T("err_no_front_positions");
-    }
-
-    if (payload.position > capacity) {
-      return _T("err_position_out_of_range");
-    }
-
-    var bottles = (this._data && this._data.bottles) ? this._data.bottles : [];
-    var conflict = bottles.find(function (b) {
-      return (
-        b.cellar_id === payload.cellar_id &&
-        b.shelf_id === payload.shelf_id &&
-        String(b.lane) === String(payload.lane) &&
-        Number(b.position) === payload.position &&
-        b.id !== payload.bottle_id
-      );
-    });
-
-    if (conflict) {
-      return _T("err_position_taken", { name: conflict.wine_name || _T("unnamed_wine") });
-    }
-
-    if (
-      payload.aging_start_year !== null &&
-      payload.aging_end_year !== null &&
-      payload.aging_start_year > payload.aging_end_year
-    ) {
-      return _T("err_aging_order");
-    }
-
-    if (payload.rating !== null && (payload.rating < 0 || payload.rating > 5)) {
-      return _T("err_rating_range");
-    }
-    return "";
-  }
-
-  _validateBottleForm(form) {
-    var wineName = form.querySelector('[name="wine_name"]');
-    var position = form.querySelector('[name="position"]');
-    var rating = form.querySelector('[name="rating"]');
-    var agingStart = form.querySelector('[name="aging_start_year"]');
-    var agingEnd = form.querySelector('[name="aging_end_year"]');
-
-    [wineName, position, rating, agingStart, agingEnd].forEach(function (el) {
-      if (el) el.setCustomValidity("");
-    });
-
-    if (wineName && !wineName.value.trim()) {
-      wineName.setCustomValidity(_T("err_wine_name_required"));
-      wineName.reportValidity();
-      return false;
-    }
-
-    if (position && (!Number.isInteger(Number(position.value)) || Number(position.value) < 1)) {
-      position.setCustomValidity(_T("err_choose_position"));
-      position.reportValidity();
-      return false;
-    }
-
-    if (rating && rating.value !== "") {
-      var ratingNum = Number(rating.value);
-      if (!Number.isFinite(ratingNum) || ratingNum < 0 || ratingNum > 5) {
-        rating.setCustomValidity(_T("err_rating_range"));
-        rating.reportValidity();
-        return false;
-      }
-    }
-
-    if (agingStart && agingEnd && agingStart.value !== "" && agingEnd.value !== "") {
-      var startNum = Number(agingStart.value);
-      var endNum = Number(agingEnd.value);
-      if (Number.isFinite(startNum) && Number.isFinite(endNum) && startNum > endNum) {
-        agingEnd.setCustomValidity(_T("err_aging_end_order"));
-        agingEnd.reportValidity();
-        return false;
-      }
-    }
-    return true;
-  }
-
-  // Fills the form on screen from a suggestion (autocomplete, history, AI).
-  // Only fields the suggestion actually provides are touched: a missing or
-  // empty value never blanks what is already there. Without overwrite, only
-  // empty fields are filled ("unset" type and "no rating" count as empty).
-  // Returns the names of the fields it changed.
-  _applySuggestionToBottleForm(form, suggestion, overwrite) {
-    if (!form || !suggestion) return [];
-
-    var fields = [
-      "wine_name",
-      "producer",
-      "region",
-      "country",
-      "varietal",
-      "vintage",
-      "wine_type",
-      "price",
-      "serving_temp",
-      "alcohol_pct",
-      "image_path",
-      "aging_start_year",
-      "aging_end_year",
-      "rating",
-      "notes",
-      "saq_url",
-      "barcode"
-    ];
-    var changed = [];
-
-    fields.forEach(function (name) {
-      var el = form.querySelector('[name="' + name + '"]');
-      if (!el) return;
-      var incomingValue = suggestion[name];
-      if (incomingValue === undefined || incomingValue === null || String(incomingValue).trim() === "") return;
-
-      var currentValue = (el.value ?? "").toString().trim();
-      var isEmpty = currentValue === "" ||
-        (el.tagName === "SELECT" && (currentValue === "unset" || (name === "rating" && currentValue === "0")));
-      if (!overwrite && !isEmpty) {
-        return;
-      }
-
-      var next = String(incomingValue);
-      // A select only takes one of its own options.
-      if (el.tagName === "SELECT" && !Array.prototype.some.call(el.options, function (o) { return o.value === next; })) return;
-      if (el.value === next) return;
-
-      el.value = next;
-      changed.push(name);
-      el.dispatchEvent(new Event("input", { bubbles: true }));
-      el.dispatchEvent(new Event("change", { bubbles: true }));
-    });
-    return changed;
-  }
-
-
-  async _analyzeLabelFromForm(form) {
-    var imagePathEl = form.querySelector('[name="image_path"]');
-    var imagePath = imagePathEl ? imagePathEl.value.trim() : "";
-    if (!imagePath) {
-      this._setFormError(_T("upload_label_first"), "capture");
-      return;
-    }
-
-    this._clearFormError();
-    this._setActionMessage(_T("analyzing_label"));
-
-    try {
-      var result = await this._callWS({
-        type: "wine_cellar_manager/unified_analyze",
-        image_path: imagePath,
-        barcode: ""
-      });
-
-      if (result) {
-        var suggestion = result.suggestion || result;
-        this._applySuggestionToBottleForm(form, suggestion, false);
-        this._setActionMessage(_T("label_suggestion_applied"));
-      } else {
-        this._setActionMessage(_T("no_label_result"));
-      }
-    } catch (err) {
-      console.error("Label analysis failed", err);
-      this._setFormError(_T("label_analysis_failed") + (err && err.message ? err.message : _T("unknown_error")), "capture");
-      this._clearActionMessage();
-    }
-  }
-
-  async _searchHistory(query) {
-    this._historySearchValue = query || "";
-
-    if (!query || !query.trim()) {
-      this._searchResults = [];
-      this._searchMessage = "";
-      this._updateSearchResultsPanel();
-      return;
-    }
-
-    try {
-      var result = await this._callWS({
-        type: "wine_cellar_manager/search_bottles",
-        query: query.trim()
-      });
-      // Le backend renvoyant directement le tableau, on valide le type Array
-      this._searchResults = Array.isArray(result) ? result : [];
-      this._searchMessage = this._searchResults.length + _T("bottles_found_suffix");
-      this._updateSearchResultsPanel();
-    } catch (err) {
-      console.error("Bottle search failed", err);
-      this._searchResults = [];
-      this._searchMessage = _T("bottle_search_failed") + (err && err.message ? err.message : _T("unknown_error"));
-      this._updateSearchResultsPanel();
-    }
-  }
-
-  _renderSearchResultsMarkup() {
-    if (!this._searchResults.length && !this._searchMessage) {
-      return "";
-    }
-
-    var self = this;
-    var info = this._searchMessage
-      ? '<div class="duplicate-info">' + this._escape(this._searchMessage) + '</div>'
-      : "";
-
-    if (!this._searchResults.length) {
-      return '<div class="duplicate-panel"><h4>Search previous bottles</h4>' + info + '<div class="duplicate-empty">No matching bottles found.</div></div>';
-    }
-
-    return [
-      '<div class="duplicate-panel">',
-      '  <h4>Search previous bottles</h4>',
-      info,
-      '  <div class="duplicate-list">',
-      this._searchResults.map(function (match) {
-        return (
-          '<div class="duplicate-item">' +
-          '  <div class="duplicate-meta">' +
-          '    <div class="duplicate-title">' + self._escape(match.wine_name || "Unnamed bottle") + '</div>' +
-          '    <div class="duplicate-sub">' +
-                 self._escape((match.producer || "") + (match.vintage ? " • " + match.vintage : "") + (match.cellar_name ? " • " + match.cellar_name : "") + (match.source ? " • " + match.source : "")) +
-          '    </div>' +
-          '  </div>' +
-          '  <div class="duplicate-actions">' +
-          '    <button class="btn small-btn" type="button" data-apply-match="' + self._escape(match.bottle_id) + '">Use details</button>' +
-          '    <button class="btn small-btn" type="button" data-copy-match="' + self._escape(match.bottle_id) + '">Copy to slot</button>' +
-          '  </div>' +
-          '</div>'
-        );
-      }).join(""),
-      '  </div>',
-      '</div>'
-    ].join("");
-  }
-
-  _updateSearchResultsPanel() {
-    var panel = this.shadowRoot && this.shadowRoot.querySelector("[data-history-results]");
-    if (!panel) return;
-    panel.innerHTML = this._renderSearchResultsMarkup();
-    this._bindSearchResultButtons();
-  }
-
-  _bindSearchResultButtons() {
-    var self = this;
-    var root = this.shadowRoot;
-    var bottleForm = root && root.querySelector("[data-save-bottle]");
-    if (!root || !bottleForm) return;
-
-    root.querySelectorAll("[data-apply-match]").forEach(function (el) {
-      el.onclick = function (e) {
-        e.preventDefault();
-        e.stopPropagation();
-        self._applyExistingBottleToForm(el.getAttribute("data-apply-match"), bottleForm);
-      };
-    });
-
-    root.querySelectorAll("[data-copy-match]").forEach(function (el) {
-      el.onclick = async function (e) {
-        e.preventDefault();
-        e.stopPropagation();
-        await self._copyBottleIntoCurrentSlot(el.getAttribute("data-copy-match"), bottleForm);
-      };
-    });
-  }
-
-  async _checkDuplicatesForImage(imagePath) {
-    if (!imagePath) {
-      this._clearDuplicateState();
-      return;
-    }
-
-    try {
-      var result = await this._callWS({
-        type: "wine_cellar_manager/find_label_duplicates",
-        image_path: imagePath
-      });
-      this._duplicateMatches = (result && result.matches) ? result.matches : [];
-      this._duplicateMessage = (result && result.message) ? result.message : "";
-    } catch (err) {
-      console.error("Duplicate detection failed", err);
-      this._duplicateMatches = [];
-      this._duplicateMessage = _T("duplicate_detection_failed") + (err && err.message ? err.message : _T("unknown_error"));
-    }
-  }
-
-  async _uploadLabelFile(file, form) {
-    if (!file) {
-      this._setFormError(_T("no_file_selected"), "capture");
-      return;
-    }
-
-    if (!file.type || !file.type.startsWith("image/")) {
-      this._setFormError(_T("file_not_image"), "capture");
-      return;
-    }
-
-    this._clearFormError();
-    this._setActionMessage(_T("reading_label_image"));
-    this._clearDuplicateState();
-
-    try {
-      var dataUrl = await new Promise(function (resolve, reject) {
-        var reader = new FileReader();
-        reader.onload = function () { resolve(reader.result); };
-        reader.onerror = function () { reject(new Error("File read failed")); };
-        reader.readAsDataURL(file);
-      });
-
-      this._setActionMessage(_T("uploading_label_image"));
-
-      // Extraction de la chaîne Base64 pure en retirant l'en-tête "data:image/...;base64,"
-      var base64Data = dataUrl.split(",")[1] || dataUrl;
-
-      var result = await this._callWS({
-        type: "wine_cellar_manager/upload_label_image",
-        data_base64: base64Data,
-        filename: file.name || "label"
-      });
-
-      var imagePathEl = form.querySelector('[name="image_path"]');
-      if (imagePathEl && result && result.image_path) {
-        imagePathEl.value = result.image_path;
-        imagePathEl.dispatchEvent(new Event("input", { bubbles: true }));
-        imagePathEl.dispatchEvent(new Event("change", { bubbles: true }));
-      }
-
-      this._duplicateMatches = (result && result.duplicate_matches) ? result.duplicate_matches : [];
-      this._duplicateMessage = (result && result.duplicate_message) ? result.duplicate_message : "";
-
-      this._setActionMessage(this._duplicateMatches.length ? _T("label_uploaded_duplicates") : _T("label_uploaded"));
-      // Updated in place. This used to rebuild the dialog from the stored
-      // bottle, which wiped everything typed before the photo was picked.
-      this._refreshImagePreview(form);
-      this._refreshDuplicatePanel();
-    } catch (err) {
-      console.error("Label upload failed", err);
-
-      let detail = _T("unknown_error");
-      if (typeof err === "string") {
-        detail = err;
-      } else if (err && typeof err.message === "string" && err.message) {
-        detail = err.message;
-      } else if (err && typeof err.code === "string" && typeof err.message === "string") {
-        detail = err.code + ": " + err.message;
-      } else {
-        try {
-          detail = JSON.stringify(err);
-        } catch (_) {
-          detail = String(err);
-        }
-      }
-
-      this._setFormError(_T("label_upload_failed") + detail, "capture");
-      this._clearActionMessage();
-    }
-  }
-
-  async _copyBottleIntoCurrentSlot(sourceBottleId, form) {
-    try {
-      var cellarEl = form.querySelector('[name="cellar_id"]');
-      var shelfEl = form.querySelector('[name="shelf_id"]');
-      var laneEl = form.querySelector('[name="lane"]');
-      var positionEl = form.querySelector('[name="position"]');
-
-      var cellarId = cellarEl ? cellarEl.value.trim() : "";
-      var shelfId = shelfEl ? shelfEl.value.trim() : "";
-      var lane = laneEl ? laneEl.value.trim() : "";
-      var position = positionEl ? Number(positionEl.value) : NaN;
-
-      if (!cellarId || !shelfId || !lane || !Number.isInteger(position)) {
-        this._setFormError(_T("select_location_before_copy"), "capture");
-        return;
-      }
-
-      this._clearFormError();
-      this._setActionMessage(_T("copying_bottle"));
-
-      await this._callWS({
-        type: "wine_cellar_manager/copy_bottle",
-        source_bottle_id: sourceBottleId,
-        cellar_id: cellarId,
-        shelf_id: shelfId,
-        lane: lane,
-        position: position
-      });
-
-      await this._loadData(true);
-      await this._closeModal();
-    } catch (err) {
-      console.error("Copy bottle failed", err);
-      this._setFormError(_T("copy_bottle_failed") + (err && err.message ? err.message : _T("unknown_error")), "capture");
-      this._clearActionMessage();
-    }
-  }
-
-  _applyExistingBottleToForm(sourceBottleId, form) {
-    var active = (this._data && this._data.bottles) ? this._data.bottles : [];
-    var consumed = (this._data && this._data.consumed_bottles) ? this._data.consumed_bottles : [];
-    var source = active.concat(consumed).find(function (b) { return b.id === sourceBottleId; });
-    if (!source) {
-      source = this._searchResults.find(function (b) { return b.bottle_id === sourceBottleId; });
-    }
-    if (!source) {
-      this._setFormError(_T("source_bottle_not_found"), "capture");
-      return;
-    }
-
-    this._applySuggestionToBottleForm(form, {
-      wine_name: source.wine_name,
-      producer: source.producer,
-      region: source.region,
-      country: source.country,
-      varietal: source.varietal,
-      vintage: source.vintage,
-      wine_type: source.wine_type,
-      price: source.price,
-      image_path: source.image_path,
-      aging_start_year: source.aging_start_year,
-      aging_end_year: source.aging_end_year,
-      rating: source.rating,
-      notes: source.notes
-    }, true);
-
-    var barcodeEl = form.querySelector('[name="barcode"]');
-    if (barcodeEl) {
-      barcodeEl.value = "";
-    }
-    this._setActionMessage(_T("bottle_details_copied"));
-  }
-
-  async _saveBottleFromForm(form) {
-    if (!this._validateBottleForm(form)) {
-      return;
-    }
-
-    var fd = new FormData(form);
-
-    var payload = {
-      type: "wine_cellar_manager/save_bottle",
-      bottle_id: this._str(fd.get("bottle_id")).trim() || undefined,
-      cellar_id: this._str(fd.get("cellar_id")).trim(),
-      shelf_id: this._str(fd.get("shelf_id")).trim(),
-      lane: this._str(fd.get("lane")).trim() || "front",
-      position: this._intOrNull(fd.get("position")),
-      wine_name: this._str(fd.get("wine_name")).trim(),
-      saq_url: fd.get("saq_url") ? this._str(fd.get("saq_url")).trim() : "",
-      producer: this._str(fd.get("producer")).trim(),
-      region: this._str(fd.get("region")).trim(),
-      country: this._str(fd.get("country")).trim(),
-      varietal: this._str(fd.get("varietal")).trim(),
-      vintage: this._intOrNull(fd.get("vintage")),
-      wine_type: this._str(fd.get("wine_type")).trim() || "other",
-      price: this._floatOrNull(fd.get("price")),
-      serving_temp: this._floatOrNull(fd.get("serving_temp")),
-      alcohol_pct: this._floatOrNull(fd.get("alcohol_pct")),
-      image_path: this._str(fd.get("image_path")).trim(),
-      barcode: this._str(fd.get("barcode")).trim(),
-      aging_start_year: this._intOrNull(fd.get("aging_start_year")),
-      aging_end_year: this._intOrNull(fd.get("aging_end_year")),
-      rating: this._intOrNull(fd.get("rating")),
-      notes: this._str(fd.get("notes")).trim()
-    };
-
-    var validationError = this._validateBottlePayload(payload);
-    if (validationError) {
-      this._setFormError(validationError);
-      return;
-    }
-
-    try {
-      this._clearFormError();
-      this._clearActionMessage();
-      await this._callWS(payload);
-      await this._loadData(true);
-
-      var savedBottleId = payload.bottle_id;
-      if (!savedBottleId && this._data && Array.isArray(this._data.bottles)) {
-        var match = this._data.bottles.find((b) =>
-          b.cellar_id === payload.cellar_id &&
-          b.shelf_id === payload.shelf_id &&
-          String(b.lane) === String(payload.lane) &&
-          Number(b.position) === payload.position
-        );
-        if (match) savedBottleId = match.id;
-      }
-
-      if (savedBottleId && this._data && Array.isArray(this._data.bottles)) {
-        var savedBottle = this._data.bottles.find((b) => b.id === savedBottleId);
-        this._modal = {
-          type: "bottle",
-          uid: ++this._modalSeq,
-          bottle: savedBottle || null,
-          preset: {},
-          mode: "view"
-        };
-        this.render(true);
-      } else {
-        await this._closeModal();
-      }
-    } catch (err) {
-      console.error("Bottle save failed", err, payload);
-      this._setFormError(_T("bottle_save_failed") + this._friendlyError(err));
-    }
-  }
-
-  _parseShelvesFromForm(form) {
-    var self = this;
-    var shelves = [];
-    var cellarIdEl = form.querySelector('[name="cellar_id"]');
-    var cellarId = this._str(cellarIdEl ? cellarIdEl.value : "").trim();
-    var stored = ((this._data && this._data.bottles) || []).filter(function (b) {
-      return !!cellarId && b.cellar_id === cellarId;
-    });
-    var rows = form.querySelectorAll("[data-shelf-row]");
-    rows.forEach(function (row) { row.classList.remove("invalid"); });
-
-    rows.forEach(function (row, index) {
-      var idEl = row.querySelector('[name="shelf_id[]"]');
-      var nameEl = row.querySelector('[name="shelf_name[]"]');
-      var orderEl = row.querySelector('[name="shelf_display_order[]"]');
-      var frontEl = row.querySelector('[name="capacity_front[]"]');
-      var backEl = row.querySelector('[name="capacity_back[]"]');
-
-      var front = self._intOrNull(frontEl ? frontEl.value : null);
-      var back = self._intOrNull(backEl ? backEl.value : null);
-      var id = self._str(idEl ? idEl.value : "").trim();
-      var name = self._str(nameEl ? nameEl.value : "").trim() || _T("shelf_n", { n: index + 1 });
-
-      if (!Number.isInteger(front) || front < 1) {
-        row.classList.add("invalid");
-        throw Object.assign(new Error(_T("shelf_front_capacity_min")), { userFacing: true });
-      }
-      if (back === null || back < 0) {
-        back = 0;
-      }
-
-      // A shelf cannot shrink below a bottle it holds. The server refuses it
-      // too, but only after Save and without saying which shelf.
-      if (id) {
-        var lastFront = 0;
-        var lastBack = 0;
-        stored.forEach(function (b) {
-          if (b.shelf_id !== id) return;
-          var pos = Number(b.position) || 0;
-          if (b.lane === "back") lastBack = Math.max(lastBack, pos);
-          else lastFront = Math.max(lastFront, pos);
-        });
-        if (front < lastFront) {
-          row.classList.add("invalid");
-          throw Object.assign(new Error(_T("err_shelf_front_min", { shelf: name, n: lastFront })), { userFacing: true });
-        }
-        if (back < lastBack) {
-          row.classList.add("invalid");
-          throw Object.assign(new Error(_T("err_shelf_back_min", { shelf: name, n: lastBack })), { userFacing: true });
-        }
-      }
-
-      // 0 is a valid order (the top); only an empty field falls back to the row.
-      var order = self._intOrNull(orderEl ? orderEl.value : null);
-      shelves.push({
-        id: id || undefined,
-        name: name,
-        display_order: order === null ? index : order,
-        capacity_front: front,
-        capacity_back: back,
-        layout_mode: back > 0 ? "staggered" : "single",
-        row: index
-      });
-    });
-
-    if (!shelves.length) {
-      throw Object.assign(new Error(_T("add_at_least_one_shelf")), { userFacing: true });
-    }
-
-    // Sent in display order. The server replaces an order of 0 by the row's
-    // index unless that row comes first, so this keeps a shelf moved to the
-    // top with 0 at the top.
-    shelves.sort(function (a, b) {
-      return (a.display_order - b.display_order) || (a.row - b.row);
-    });
-    shelves.forEach(function (s) { delete s.row; });
-    return shelves;
-  }
-
-  async _saveCellarFromForm(form) {
-    var fd = new FormData(form);
-
-    try {
-      var name = String(fd.get("name") || "").trim();
-      if (!name) {
-        var nameEl = form.querySelector('[name="name"]');
-        if (nameEl) {
-          nameEl.setCustomValidity(_T("cellar_name_required"));
-          nameEl.reportValidity();
-          nameEl.oninput = function () { nameEl.setCustomValidity(""); };
-        }
-        this._setFormError(_T("cellar_name_required"));
-        return;
-      }
-
-      var shelves = this._parseShelvesFromForm(form);
-
-      var selectedBgColor = String(fd.get("bg_color") || "").trim();
-
-      await this._callWS({
-        type: "wine_cellar_manager/save_cellar",
-        cellar_id: fd.get("cellar_id") || undefined,
-        name: name,
-        shelves: shelves,
-        display_order: Number(fd.get("display_order") || 0),
-        bg_color: selectedBgColor
-      });
-
-      await this._loadData(true);
-      await this._closeModal();
-    } catch (err) {
-      // Input mistakes caught in the browser are shown in the dialog only.
-      if (!err || !err.userFacing) console.error("Cellar save failed", err);
-      this._setFormError(_T("cellar_save_failed") + this._friendlyError(err));
-    }
-  }
 
   // Delete, Consume and Delete cellar ask inside the dialog first
   // (window.confirm can be blocked or hidden in the Home Assistant app),
@@ -5609,33 +5866,588 @@ class WineCellarCard extends HTMLElement {
     });
   }
 
-  // The first empty slot in display order: cellars, then shelves top to
-  // bottom, the front row before the back row, lowest position first.
-  _findFreeSlot() {
-    var self = this;
-    var data = this._data || {};
-    var cellars = (data.cellars || []).slice().sort(function (a, b) {
+  _sortedCellars() {
+    return ((this._data && this._data.cellars) || []).slice().sort(function (a, b) {
       return (a.display_order || 0) - (b.display_order || 0);
     });
-    for (var c = 0; c < cellars.length; c++) {
-      var cellar = cellars[c];
-      var slotIndex = self._buildSlotIndex((data.bottles || []).filter(function (b) {
-        return b.cellar_id === cellar.id;
-      }));
-      var shelves = self._getSortedShelves(cellar);
-      for (var s = 0; s < shelves.length; s++) {
-        var shelf = shelves[s];
-        var lanes = [["front", Number(shelf.capacity_front || 0)], ["back", Number(shelf.capacity_back || 0)]];
-        for (var l = 0; l < lanes.length; l++) {
-          for (var pos = 1; pos <= lanes[l][1]; pos++) {
-            if (!slotIndex.has(String(shelf.id) + "|" + lanes[l][0] + "|" + pos)) {
-              return { cellar_id: cellar.id, shelf_id: shelf.id, lane: lanes[l][0], position: pos };
-            }
-          }
+  }
+
+  _cellarById(id) {
+    return ((this._data && this._data.cellars) || []).find(function (c) { return c.id === id; }) || null;
+  }
+
+  // Every slot of a cellar in fill order: shelves top to bottom, the front
+  // row before the back row, lowest position first. A slot is free when it
+  // is empty or holds ownId (the bottle being edited).
+  _slotOrder(cellarId, ownId) {
+    var cellar = this._cellarById(cellarId);
+    if (!cellar) return [];
+    var index = this._buildSlotIndex(((this._data && this._data.bottles) || []).filter(function (b) {
+      return b.cellar_id === cellar.id;
+    }));
+    var out = [];
+    this._getSortedShelves(cellar).forEach(function (shelf) {
+      [["front", Number(shelf.capacity_front || 0)], ["back", Number(shelf.capacity_back || 0)]].forEach(function (lane) {
+        for (var pos = 1; pos <= lane[1]; pos++) {
+          var occupant = index.get(String(shelf.id) + "|" + lane[0] + "|" + pos) || null;
+          out.push({
+            cellar_id: cellar.id,
+            shelf_id: shelf.id,
+            lane: lane[0],
+            position: pos,
+            occupant: occupant,
+            free: !occupant || (!!ownId && occupant.id === ownId)
+          });
         }
-      }
+      });
+    });
+    return out;
+  }
+
+  _slotKey(slot) {
+    return String(slot.shelf_id) + "|" + slot.lane + "|" + Number(slot.position);
+  }
+
+  _sameSlot(a, b) {
+    return !!a && !!b && a.cellar_id === b.cellar_id && String(a.shelf_id) === String(b.shelf_id) &&
+      String(a.lane) === String(b.lane) && Number(a.position) === Number(b.position);
+  }
+
+  // The first empty slot in display order (cellars, then shelves top to
+  // bottom, the front row before the back row), in one cellar when cellarId
+  // is given.
+  _findFreeSlot(cellarId) {
+    var cellars = this._sortedCellars();
+    for (var i = 0; i < cellars.length; i++) {
+      if (cellarId && cellars[i].id !== cellarId) continue;
+      var slot = this._slotOrder(cellars[i].id).find(function (s) { return s.free; });
+      if (slot) return slot;
     }
     return null;
+  }
+
+  // qty free slots of a cellar in fill order, starting at start (included)
+  // and wrapping round to the top of the cellar.
+  _planSlots(cellarId, start, qty) {
+    var order = this._slotOrder(cellarId);
+    var n = order.length;
+    var from = 0;
+    var self = this;
+    if (start) {
+      var at = order.findIndex(function (s) { return self._sameSlot(s, Object.assign({ cellar_id: cellarId }, start)); });
+      if (at >= 0) from = at;
+    }
+    var out = [];
+    for (var k = 0; k < n && out.length < qty; k++) {
+      var slot = order[(from + k) % n];
+      if (slot.free) out.push(slot);
+    }
+    return out;
+  }
+
+  // The first free slot after `after` in its cellar, else anywhere.
+  _nextFreeSlot(cellarId, after) {
+    var self = this;
+    var order = this._slotOrder(cellarId);
+    var n = order.length;
+    var at = after ? order.findIndex(function (s) { return self._sameSlot(s, after); }) : -1;
+    for (var k = 1; k <= n; k++) {
+      var slot = order[(at + k + n) % n];
+      if (slot && slot.free) return slot;
+    }
+    return this._findFreeSlot();
+  }
+
+  // A shelf's name, with its number when another shelf of the cellar has
+  // the same name: "Whites (2)".
+  _shelfLabel(cellar, shelfId) {
+    var shelves = this._getSortedShelves(cellar);
+    var at = shelves.findIndex(function (s) { return String(s.id) === String(shelfId); });
+    if (at < 0) return "";
+    var name = shelves[at].name || _T("shelf_n", { n: at + 1 });
+    var same = shelves.filter(function (s) { return (s.name || "") === (shelves[at].name || ""); }).length;
+    return same > 1 ? name + " (" + (at + 1) + ")" : name;
+  }
+
+  // "Kitchen › Whites (2) › Front · 3" (short: without the row and position).
+  _slotWhere(slot, short) {
+    var cellar = slot && this._cellarById(slot.cellar_id);
+    if (!cellar) return "";
+    var parts = [cellar.name || _T("cellar"), this._shelfLabel(cellar, slot.shelf_id)];
+    if (!short) parts.push(this._laneLabel(slot.lane) + " · " + slot.position);
+    return parts.filter(Boolean).join(" › ");
+  }
+
+  // Where several planned bottles go: "Garage › Top", or "Garage › Top,
+  // Floor" when they spread over more than one shelf.
+  _plannedWhere(slots) {
+    var first = slots && slots[0];
+    var cellar = first && this._cellarById(first.cellar_id);
+    if (!cellar) return "";
+    var self = this;
+    var shelves = [];
+    slots.forEach(function (slot) {
+      var label = self._shelfLabel(cellar, slot.shelf_id);
+      if (label && shelves.indexOf(label) < 0) shelves.push(label);
+    });
+    return [cellar.name || _T("cellar"), shelves.join(", ")].filter(Boolean).join(" › ");
+  }
+
+  // The widest row of a small cabinet, in slots: a staggered shelf is half a
+  // slot wider.
+  _miniSpan(shelves) {
+    var self = this;
+    return (shelves || []).reduce(function (widest, shelf) {
+      var front = Number(shelf.capacity_front || 0);
+      var back = Number(shelf.capacity_back || 0);
+      var extra = !self._isInlineShelf(shelf) && self._isStaggered(shelf) ? 0.5 : 0;
+      return Math.max(widest, Math.max(front, back, 1) + extra);
+    }, 1);
+  }
+
+  // The shelves of a small cabinet (bottle dialog map, slot picker, cellar
+  // editor preview): per shelf an optional head, the back row, the front row
+  // and the rail. opts.dot(shelf, lane, pos, occupant, index) draws a slot,
+  // opts.head(shelf, index) the head and opts.shelfClass(shelf, index) adds
+  // classes.
+  _renderMiniShelves(shelves, slotIndex, opts) {
+    var self = this;
+    return shelves.map(function (shelf, i) {
+      var back = Number(shelf.capacity_back || 0);
+      var front = Number(shelf.capacity_front || 0);
+      var lanes = [["back", back], ["front", front]].map(function (lane) {
+        if (lane[1] <= 0) return "";
+        var dots = [];
+        for (var pos = 1; pos <= lane[1]; pos++) {
+          dots.push(opts.dot(shelf, lane[0], pos, slotIndex.get(String(shelf.id) + "|" + lane[0] + "|" + pos) || null, i));
+        }
+        return '<div class="lane lane-' + lane[0] + '">' +
+          (opts.tags ? '<span class="lane-tag" aria-hidden="true">' + self._escape(self._laneLabel(lane[0])) + "</span>" : "") +
+          '<div class="lane-row">' + dots.join("") + "</div></div>";
+      }).join("");
+      var inline = self._isInlineShelf(shelf);
+      return (
+        '<div class="shelf' + (!inline && self._isStaggered(shelf) ? " staggered" : "") + (inline ? " inline" : "") +
+        (back > 0 && front > 0 ? " two-row" : "") + (opts.shelfClass ? opts.shelfClass(shelf, i) : "") +
+        '" style="--nmax:' + Math.max(front, back, 1) + '">' +
+        (opts.head ? opts.head(shelf, i) : "") + lanes + '<div class="rail"></div></div>'
+      );
+    }).join("");
+  }
+
+  /* Toast: one short in-card message at a time, at the bottom of the screen
+     (above the footer of an open dialog), optionally with one action such as
+     Undo. It survives re-renders and goes away by itself. */
+
+  _showToast(text, opts) {
+    opts = opts || {};
+    var self = this;
+    clearTimeout(this._toastTimer);
+    this._toast = { id: ++this._toastSeq, text: text, kind: opts.kind || "ok", action: opts.action || null };
+    this._toastHold = {};
+    this._toastTimer = setTimeout(function () { self._dismissToast(); }, opts.action ? 8000 : 4500);
+    this._paintToast();
+  }
+
+  _dismissToast() {
+    clearTimeout(this._toastTimer);
+    this._toast = null;
+    this._paintToast();
+  }
+
+  // The toast stays while the pointer is over it or focus is in it, and
+  // goes a few seconds after both have left.
+  _holdToast(why, on) {
+    var self = this;
+    if (!this._toast) return;
+    this._toastHold = this._toastHold || {};
+    this._toastHold[why] = on;
+    clearTimeout(this._toastTimer);
+    if (this._toastHold.pointer || this._toastHold.focus) return;
+    this._toastTimer = setTimeout(function () { self._dismissToast(); }, 4000);
+  }
+
+  _runToastAction() {
+    var toast = this._toast;
+    if (!toast || !toast.action) return;
+    this._dismissToast();
+    toast.action.run();
+  }
+
+  _paintToast() {
+    var self = this;
+    var wrap = this.shadowRoot && this.shadowRoot.querySelector(".wrap");
+    if (!wrap) return;
+    var el = wrap.querySelector(":scope > .wcm-toast");
+    var toast = this._toast;
+    if (!toast) {
+      if (el) el.remove();
+      return;
+    }
+    if (!el || el.getAttribute("data-toast") !== String(toast.id)) {
+      if (el) el.remove();
+      el = document.createElement("div");
+      // Drawn again after a re-render: no second entrance.
+      el.className = "wcm-toast is-" + toast.kind + (this._toastShown === toast.id ? " no-anim" : "");
+      el.setAttribute("role", "status");
+      el.setAttribute("aria-live", "polite");
+      el.setAttribute("data-toast", String(toast.id));
+      el.innerHTML = (toast.kind === "warn" ? _WCM_ICONS.alert : _WCM_ICONS.check) +
+        '<span class="toast-text">' + this._escape(toast.text) + "</span>" +
+        (toast.action ? '<button type="button" class="toast-action"' + (toast.action.undo ? ' aria-keyshortcuts="Control+Z Meta+Z"' : "") + ">" + this._escape(toast.action.label) + "</button>" : "") +
+        '<button type="button" class="toast-close" aria-label="' + this._escape(_T("close")) + '">' + _WCM_ICONS.close + "</button>";
+      wrap.appendChild(el);
+      this._toastShown = toast.id;
+      var action = el.querySelector(".toast-action");
+      if (action) {
+        action.addEventListener("click", function (e) {
+          e.preventDefault();
+          e.stopPropagation();
+          self._runToastAction();
+        });
+      }
+      el.addEventListener("pointerenter", function () { self._holdToast("pointer", true); });
+      el.addEventListener("pointerleave", function () { self._holdToast("pointer", false); });
+      el.addEventListener("focusin", function () { self._holdToast("focus", true); });
+      el.addEventListener("focusout", function (e) {
+        if (!el.contains(e.relatedTarget)) self._holdToast("focus", false);
+      });
+      el.querySelector(".toast-close").addEventListener("click", function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        self._dismissToast();
+      });
+    }
+    this._placeToast();
+  }
+
+  // With a dialog open the toast sits just above its footer (or under its
+  // header while the footer is hidden), never over Save or Cancel; in move
+  // mode, above the move banner.
+  _placeToast() {
+    var root = this.shadowRoot;
+    var el = root && root.querySelector(".wrap > .wcm-toast");
+    if (!el) return;
+    el.style.top = "";
+    el.style.bottom = "";
+    var dialog = this._topDialog();
+    if (dialog) {
+      var foot = dialog.querySelector(".sheet-foot, .bv-actions, .modal-actions");
+      var rect = foot && foot.offsetHeight ? foot.getBoundingClientRect() : null;
+      if (rect && rect.top < window.innerHeight) {
+        el.style.bottom = Math.max(12, Math.round(window.innerHeight - rect.top + 10)) + "px";
+      } else {
+        var head = dialog.querySelector(".sheet-head, .bv-head, .modal-head");
+        el.style.top = Math.max(12, Math.round((head || dialog).getBoundingClientRect().bottom + 10)) + "px";
+      }
+      return;
+    }
+    var bar = root.querySelector(".wrap > .move-bar");
+    if (bar) el.style.bottom = Math.round(window.innerHeight - bar.getBoundingClientRect().top + 10) + "px";
+  }
+
+  /* Tap-to-move. "Move" in the bottle dialog, a long press on a bottle
+     (touch) or M on a focused bottle lifts it; every free slot becomes a
+     target, a banner says what to do, and the next tap on an empty slot
+     moves it there (on a bottle: swaps them). Arrow keys go from slot to
+     slot, Enter drops, Escape or Cancel puts it down. An Undo follows. */
+
+  _startMove(id) {
+    var bottle = ((this._data && this._data.bottles) || []).find(function (b) { return b.id === id; });
+    if (!bottle) return;
+    this._moveSource = {
+      bottle_id: bottle.id,
+      cellar_id: bottle.cellar_id,
+      shelf_id: bottle.shelf_id,
+      lane: bottle.lane,
+      position: Number(bottle.position),
+      name: bottle.wine_name || _T("unnamed_wine")
+    };
+    this._moveFocus = true;
+    var switchView = this._view !== "cellars" && this._view !== "compact";
+    if (switchView) this._view = "cellars";
+    if (this._modal) this._closeModal();
+    else if (switchView) this.render(false);
+    else this._syncMoveMode();
+  }
+
+  _cancelMove() {
+    var source = this._moveSource;
+    this._moveSource = null;
+    this._syncMoveMode();
+    var slot = source && this._slotOfBottle(source.bottle_id);
+    if (slot) slot.focus({ preventScroll: true });
+  }
+
+  _slotOfBottle(id) {
+    var found = null;
+    var root = this.shadowRoot;
+    if (!root) return null;
+    root.querySelectorAll(".main-scroll-content .slot[data-edit-bottle]").forEach(function (el) {
+      if (!found && el.getAttribute("data-edit-bottle") === String(id)) found = el;
+    });
+    return found;
+  }
+
+  // Paints move mode on the page on screen: the lifted bottle, the grids'
+  // "placing" state (free slots become full-size targets) and the banner.
+  _syncMoveMode() {
+    var self = this;
+    var root = this.shadowRoot;
+    var wrap = root && root.querySelector(".wrap");
+    if (!wrap) return;
+    var source = this._moveSource;
+    // Leaving the cellars, or the bottle going away meanwhile, puts it down.
+    var here = this._view === "cellars" || this._view === "compact";
+    var bottles = (this._data && this._data.bottles) || [];
+    if (source && (!here || !bottles.some(function (b) { return b.id === source.bottle_id; }))) {
+      this._moveSource = null;
+      source = null;
+    }
+    var on = !!source && !this._topDialog();
+    root.querySelectorAll(".main-scroll-content .cellars-grid").forEach(function (grid) {
+      grid.classList.toggle("placing", on);
+    });
+    root.querySelectorAll(".slot.lifted").forEach(function (el) { el.classList.remove("lifted"); });
+    var bar = wrap.querySelector(":scope > .move-bar");
+    if (!on) {
+      if (bar) bar.remove();
+      this._placeToast();
+      return;
+    }
+    var lifted = this._slotOfBottle(source.bottle_id);
+    if (lifted) lifted.classList.add("lifted");
+    if (!bar) {
+      bar = document.createElement("div");
+      bar.className = "move-bar";
+      bar.setAttribute("role", "status");
+      bar.setAttribute("aria-live", "polite");
+      wrap.appendChild(bar);
+      bar.innerHTML = _WCM_ICONS.move +
+        '<div class="move-bar-text"><b></b><span>' + this._escape(_T("move_hint")) +
+        '<span class="only-fine"> ' + this._escape(_T("move_hint_kb")) + "</span></span></div>" +
+        '<button type="button" class="toast-action" data-move-cancel>' + this._escape(_T("cancel")) + "</button>";
+      bar.querySelector("[data-move-cancel]").addEventListener("click", function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        self._cancelMove();
+      });
+    }
+    bar.querySelector("b").textContent = _T("move_moving", { name: source.name });
+    this._placeToast();
+    if (this._moveFocus && lifted) {
+      this._moveFocus = false;
+      lifted.focus({ preventScroll: true });
+      lifted.scrollIntoView({ block: "center", inline: "center", behavior: this._prefersReducedMotion() ? "auto" : "smooth" });
+    }
+  }
+
+  // A tap (or Enter) on a slot while a bottle is lifted.
+  _dropMove(el) {
+    var source = this._moveSource;
+    if (!source) return;
+    var target = el.getAttribute("data-new-bottle");
+    var other = el.getAttribute("data-edit-bottle");
+    if (other === source.bottle_id) {
+      this._cancelMove();
+      return;
+    }
+    this._moveSource = null;
+    this._syncMoveMode();
+    if (target) this._relocateBottle(source, JSON.parse(target), null, true);
+    else if (other) this._relocateBottle(source, null, other, true);
+  }
+
+  // Arrow keys in move mode go to the nearest slot in that direction.
+  _moveFocusBy(from, key) {
+    var slots = Array.prototype.filter.call(
+      this.shadowRoot.querySelectorAll(".main-scroll-content .cellars-grid .slot"),
+      function (el) { return el.getClientRects().length > 0; }
+    );
+    var r = from.getBoundingClientRect();
+    var cx = r.left + r.width / 2;
+    var cy = r.top + r.height / 2;
+    var best = null;
+    var bestScore = Infinity;
+    slots.forEach(function (el) {
+      if (el === from) return;
+      var q = el.getBoundingClientRect();
+      var dx = q.left + q.width / 2 - cx;
+      var dy = q.top + q.height / 2 - cy;
+      var along = key === "ArrowRight" ? dx : key === "ArrowLeft" ? -dx : key === "ArrowDown" ? dy : -dy;
+      var across = key === "ArrowRight" || key === "ArrowLeft" ? Math.abs(dy) : Math.abs(dx);
+      if (along < 4) return;
+      var score = along + across * 3;
+      if (score < bestScore) {
+        bestScore = score;
+        best = el;
+      }
+    });
+    if (best) {
+      best.focus({ preventScroll: true });
+      best.scrollIntoView({ block: "nearest", inline: "nearest" });
+    }
+  }
+
+  // Moves a bottle to an empty slot (dest) or swaps it with another bottle
+  // (swapWith), then offers Undo. Used by tap-to-move and drag and drop.
+  async _relocateBottle(source, dest, swapWith, focus) {
+    var self = this;
+    var bottles = (this._data && this._data.bottles) || [];
+    var moving = bottles.find(function (b) { return b.id === source.bottle_id; }) || source;
+    var name = moving.wine_name || source.name || _T("unnamed_wine");
+    var from = { cellar_id: moving.cellar_id, shelf_id: moving.shelf_id, lane: moving.lane || "front", position: Number(moving.position) };
+    var text;
+    var undo;
+    try {
+      if (swapWith) {
+        var other = bottles.find(function (b) { return b.id === swapWith; }) || {};
+        await this._callWS({ type: "wine_cellar_manager/swap_bottles", source_id: String(source.bottle_id), dest_id: String(swapWith) });
+        text = _T("move_swapped", { a: name, b: other.wine_name || _T("unnamed_wine") });
+        undo = function () {
+          return self._callWS({ type: "wine_cellar_manager/swap_bottles", source_id: String(source.bottle_id), dest_id: String(swapWith) });
+        };
+      } else {
+        await this._callWS({
+          type: "wine_cellar_manager/move_bottle",
+          bottle_id: String(source.bottle_id),
+          cellar_id: String(dest.cellar_id),
+          shelf_id: String(dest.shelf_id),
+          lane: String(dest.lane || "front"),
+          position: Math.trunc(Number(dest.position))
+        });
+        text = _T("move_done", { name: name, where: this._slotWhere(dest) });
+        undo = function () {
+          return self._callWS({
+            type: "wine_cellar_manager/move_bottle",
+            bottle_id: String(source.bottle_id),
+            cellar_id: String(from.cellar_id),
+            shelf_id: String(from.shelf_id),
+            lane: String(from.lane),
+            position: from.position
+          });
+        };
+      }
+    } catch (err) {
+      console.error("Wine Cellar: move failed", err);
+      await this._loadData(true);
+      await this.render(true);
+      this._showToast(_T("move_failed", { error: this._friendlyError(err) }), { kind: "warn" });
+      return;
+    }
+    await this._loadData(true);
+    this._pendingPulse = { ids: [source.bottle_id], focus: !!focus };
+    await this.render(true);
+    this._showToast(text, {
+      action: {
+        label: _T("undo"),
+        undo: true,
+        run: async function () {
+          try {
+            await undo();
+          } catch (err) {
+            self._showToast(_T("move_failed", { error: self._friendlyError(err) }), { kind: "warn" });
+            return;
+          }
+          await self._loadData(true);
+          self._pendingPulse = { ids: [source.bottle_id], focus: !!focus };
+          await self.render(true);
+          self._showToast(_T("undone"));
+        }
+      }
+    });
+  }
+
+  // Brings the first of these bottles into view and makes them all pulse.
+  _pulseBottles(ids, focus) {
+    var self = this;
+    ids.forEach(function (id, i) {
+      if (i === 0) {
+        self._gotoBottle(id, { focus: focus });
+        return;
+      }
+      var el = self._slotOfBottle(id);
+      if (!el) return;
+      el.classList.add("located", "pulse");
+      setTimeout(function () { el.classList.remove("pulse"); }, 2300);
+      setTimeout(function () { el.classList.remove("located"); }, 4500);
+    });
+  }
+
+  // Root listeners of move mode, bound once (the shadow root outlives
+  // renders). Capture phase: move mode wins over a slot's own click (open
+  // the bottle, add a bottle here).
+  _bindMoveMode(root) {
+    var self = this;
+    root.addEventListener("click", function (e) {
+      var target = e.target && e.target.closest ? e.target : null;
+      if (!target) return;
+      if (self._longPressFired) {
+        self._longPressFired = false;
+        if (target.closest(".slot")) {
+          e.preventDefault();
+          e.stopPropagation();
+          return;
+        }
+      }
+      if (!self._moveSource || self._modal) return;
+      var slot = target.closest(".main-scroll-content .slot[data-new-bottle], .main-scroll-content .slot[data-edit-bottle]");
+      if (!slot) return;
+      e.preventDefault();
+      e.stopPropagation();
+      self._dropMove(slot);
+    }, true);
+    root.addEventListener("keydown", function (e) {
+      if (self._modal || e.ctrlKey || e.metaKey || e.altKey || e.isComposing) return;
+      var slot = e.target && e.target.closest ? e.target.closest(".main-scroll-content .slot") : null;
+      if (!self._moveSource) {
+        if ((e.key === "m" || e.key === "M") && slot && slot.hasAttribute("data-edit-bottle")) {
+          e.preventDefault();
+          self._startMove(slot.getAttribute("data-edit-bottle"));
+        }
+        return;
+      }
+      if (e.key === "Escape" || e.key === "Esc") {
+        e.preventDefault();
+        e.stopPropagation();
+        self._cancelMove();
+      } else if (slot && /^Arrow(Left|Right|Up|Down)$/.test(e.key)) {
+        e.preventDefault();
+        self._moveFocusBy(slot, e.key);
+      }
+    }, true);
+    // Touch: a long press on a bottle lifts it. A finger that moves (a
+    // scroll) cancels it; the click that follows the press is swallowed.
+    root.addEventListener("pointerdown", function (e) {
+      if (e.pointerType === "mouse" || self._moveSource || self._modal) return;
+      var slot = e.target && e.target.closest ? e.target.closest(".cellars-grid:not(.compact) .slot[data-edit-bottle]") : null;
+      if (!slot) return;
+      var x0 = e.clientX;
+      var y0 = e.clientY;
+      function stop() {
+        clearTimeout(self._longPressTimer);
+        root.removeEventListener("pointermove", onMove, true);
+        root.removeEventListener("pointerup", stop, true);
+        root.removeEventListener("pointercancel", stop, true);
+      }
+      function onMove(ev) {
+        if (Math.abs(ev.clientX - x0) > 8 || Math.abs(ev.clientY - y0) > 8) stop();
+      }
+      stop();
+      root.addEventListener("pointermove", onMove, true);
+      root.addEventListener("pointerup", stop, true);
+      root.addEventListener("pointercancel", stop, true);
+      self._longPressTimer = setTimeout(function () {
+        stop();
+        self._longPressFired = true;
+        setTimeout(function () { self._longPressFired = false; }, 900);
+        if (navigator.vibrate) navigator.vibrate(12);
+        self._startMove(slot.getAttribute("data-edit-bottle"));
+      }, 480);
+    }, true);
+    root.addEventListener("contextmenu", function (e) {
+      if (self._longPressFired && e.target.closest && e.target.closest(".slot")) e.preventDefault();
+    }, true);
   }
 
   _prefersReducedMotion() {
@@ -6145,12 +6957,17 @@ class WineCellarCard extends HTMLElement {
     return _WCM_MATERIALS[String(color || "").toLowerCase()] || (color ? "mat-custom" : "mat-graphite");
   }
 
-  _renderCabinet(cellar, shelvesHtml, extraClass) {
+  // extraClass "mini …" draws a small cabinet (bottle dialog map, slot
+  // picker, cellar editor preview): no scroll fades, not a Cellars-view one.
+  // span (see _miniSpan) lets the slot picker and the editor's previews
+  // size their slots to the room they have.
+  _renderCabinet(cellar, shelvesHtml, extraClass, span) {
     var color = this._safeColor(cellar && cellar.bg_color);
-    var mini = extraClass === "mini";
+    var mini = /(^| )mini( |$)/.test(extraClass || "");
+    var style = (color ? "--cellar:" + color + ";" : "") + (span ? "--span:" + span + ";" : "");
     return (
       '<div class="cabinet ' + this._cabinetMaterial(color) + (this._isLitInterior() ? " lit" : " themed") + (extraClass ? " " + extraClass : "") + '"' +
-      (color ? ' style="--cellar:' + color + '"' : "") +
+      (style ? ' style="' + style + '"' : "") +
       (!mini && cellar ? ' data-cellar-id="' + this._escape(cellar.id) + '"' : "") + ">" +
       '<div class="interior"><div class="shelves">' + shelvesHtml + "</div></div>" +
       (mini ? "" : '<span class="cab-fade cab-fade-l" aria-hidden="true"></span><span class="cab-fade cab-fade-r" aria-hidden="true"></span>') +
@@ -6612,27 +7429,14 @@ class WineCellarCard extends HTMLElement {
     }));
     var shelves = this._getSortedShelves(cellar);
 
-    var shelvesHtml = shelves.map(function (shelf) {
-      var back = Number(shelf.capacity_back || 0);
-      var front = Number(shelf.capacity_front || 0);
-      var lanes = [["back", back], ["front", front]].map(function (lane) {
-        if (lane[1] <= 0) return "";
-        var dots = [];
-        for (var pos = 1; pos <= lane[1]; pos++) {
-          var occupant = slotIndex.get(String(shelf.id) + "|" + lane[0] + "|" + pos);
-          dots.push(occupant
-            ? '<span class="mm-dot filled' + (occupant.id === bottle.id ? " target" : "") + '" style="--type:' + self._wineSurfaceColor(occupant.wine_type) + '"></span>'
-            : '<span class="mm-dot"></span>');
-        }
-        return '<div class="lane lane-' + lane[0] + '"><div class="lane-row">' + dots.join("") + "</div></div>";
-      }).join("");
-      var inline = self._isInlineShelf(shelf);
-      return (
-        '<div class="shelf' + (!inline && self._isStaggered(shelf) ? " staggered" : "") + (inline ? " inline" : "") +
-        (back > 0 && front > 0 ? " two-row" : "") + (shelf.id === bottle.shelf_id ? " current" : "") + '" style="--nmax:' + Math.max(front, back, 1) + '">' +
-        lanes + '<div class="rail"></div></div>'
-      );
-    }).join("");
+    var shelvesHtml = this._renderMiniShelves(shelves, slotIndex, {
+      shelfClass: function (shelf) { return shelf.id === bottle.shelf_id ? " current" : ""; },
+      dot: function (shelf, lane, pos, occupant) {
+        return occupant
+          ? '<span class="mm-dot filled' + (occupant.id === bottle.id ? " target" : "") + '" style="--type:' + self._wineSurfaceColor(occupant.wine_type) + '"></span>'
+          : '<span class="mm-dot"></span>';
+      }
+    });
 
     var map = '<div class="loc-front">' + this._renderCabinet(cellar, shelvesHtml, "mini") + "</div>";
     var at = shelves.findIndex(function (s) { return s.id === bottle.shelf_id; });
@@ -7086,46 +7890,6 @@ class WineCellarCard extends HTMLElement {
     ].join("");
   }
 
-  _renderDuplicateMatches() {
-    if (!this._duplicateMatches.length && !this._duplicateMessage) {
-      return "";
-    }
-
-    var self = this;
-    var info = this._duplicateMessage
-      ? '<div class="duplicate-info">' + this._escape(this._duplicateMessage) + '</div>'
-      : "";
-
-    if (!this._duplicateMatches.length) {
-      return '<div class="duplicate-panel"><h4>Possible duplicates</h4>' + info + '<div class="duplicate-empty">No likely duplicate labels found.</div></div>';
-    }
-
-    return [
-      '<div class="duplicate-panel">',
-      '  <h4>Possible duplicates</h4>',
-      info,
-      '  <div class="duplicate-list">',
-      this._duplicateMatches.map(function (match) {
-        return (
-          '<div class="duplicate-item">' +
-          '  <div class="duplicate-meta">' +
-          '    <div class="duplicate-title">' + self._escape(match.wine_name || "Unnamed bottle") + '</div>' +
-          '    <div class="duplicate-sub">' +
-                 self._escape((match.producer || "") + (match.vintage ? " • " + match.vintage : "") + (match.cellar_name ? " • " + match.cellar_name : "") + (match.source ? " • " + match.source : "")) +
-          '    </div>' +
-          '    <div class="duplicate-sub">Similarity distance: ' + self._escape(match.distance) + '</div>' +
-          '  </div>' +
-          '  <div class="duplicate-actions">' +
-          '    <button class="btn small-btn" type="button" data-apply-match="' + self._escape(match.bottle_id) + '">Use details</button>' +
-          '    <button class="btn small-btn" type="button" data-copy-match="' + self._escape(match.bottle_id) + '">Copy to slot</button>' +
-          '  </div>' +
-          '</div>'
-        );
-      }).join(""),
-      '  </div>',
-      '</div>'
-    ].join("");
-  }
   // Drinking window as a small timeline: the window in its aging color, and a
   // marker for the current year.
   _renderDrinkingWindow(bottle) {
@@ -7162,7 +7926,7 @@ class WineCellarCard extends HTMLElement {
   // wearing its label next to the full label (or a way to add one), a
   // callout when details are missing, where it is (with the location map),
   // the drinking window and the details. Footer: Consume and Edit lead; on
-  // narrow screens Show in cellar, Copy and Delete fold into "More".
+  // narrow screens Show in cellar, Move, Copy and Delete fold into "More".
   _renderBottleViewModal(data) {
     var self = this;
     var bottle = (this._modal && this._modal.bottle) || {};
@@ -7261,7 +8025,8 @@ class WineCellarCard extends HTMLElement {
       '    <div class="view-actions bv-actions">',
       '      <div class="bv-menu" id="wcm-bv-menu">',
       this._isBottleDrawn(bottle)
-        ? '        <button class="btn bv-quiet" type="button" data-locate-bottle="' + id + '">' + _WCM_ICONS.pin + "<span>" + esc(_T("bt_show_in_cellar")) + "</span></button>"
+        ? '        <button class="btn bv-quiet" type="button" data-locate-bottle="' + id + '">' + _WCM_ICONS.pin + "<span>" + esc(_T("bt_show_in_cellar")) + "</span></button>" +
+          '        <button class="btn bv-quiet" type="button" data-move-bottle="' + id + '">' + _WCM_ICONS.move + "<span>" + esc(_T("move_action")) + "</span></button>"
         : "",
       '        <button class="btn bv-quiet" type="button" data-copy-memory-btn>' + _WCM_ICONS.copy + "<span>" + esc(_T("copy")) + "</span></button>",
       '        <button class="btn bv-danger" type="button" data-delete-bottle="' + id + '">' + _WCM_ICONS.trash + "<span>" + esc(_T("delete")) + "</span></button>",
@@ -7293,6 +8058,48 @@ class WineCellarCard extends HTMLElement {
     }
   }
 
+  // Above 820 px the footer shows every action on one row. When they do not
+  // fit (a long language, a narrow window) the secondary ones fold into
+  // "More", as on phones. Checked again whenever the footer changes width.
+  _fitBottleFooter(bar) {
+    var self = this;
+    if (this._footerObserver) this._footerObserver.disconnect();
+    if (!bar) return;
+    if (window.ResizeObserver) {
+      if (!this._footerObserver) {
+        this._footerObserver = new ResizeObserver(function (entries) {
+          entries.forEach(function (entry) { self._foldBottleFooter(entry.target); });
+        });
+      }
+      this._footerObserver.observe(bar);
+    }
+    this._foldBottleFooter(bar);
+    // The display font can arrive after the first check.
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(function () { self._foldBottleFooter(bar); });
+  }
+
+  _foldBottleFooter(bar) {
+    if (!bar.isConnected) return;
+    var wasFolded = bar.classList.contains("is-folded");
+    bar.classList.remove("is-folded");
+    // The last action must end inside the footer's padding.
+    var limit = bar.getBoundingClientRect().right - (parseFloat(getComputedStyle(bar).paddingRight) || 0);
+    var end = 0;
+    Array.prototype.forEach.call(bar.querySelectorAll(".btn"), function (btn) {
+      var r = btn.getBoundingClientRect();
+      if (r.width) end = Math.max(end, r.right);
+    });
+    var fold = end > limit + 0.5;
+    bar.classList.toggle("is-folded", fold);
+    var menu = bar.querySelector(".bv-menu");
+    // Unfolded on a wide screen: an open "More" has nothing left to show.
+    if (wasFolded && !fold && menu && menu.classList.contains("open") && getComputedStyle(menu).position !== "absolute") {
+      var hadFocus = menu.contains(this.shadowRoot.activeElement);
+      this._setBottleMenu(false);
+      if (hadFocus) bar.querySelector("[data-enter-edit]").focus();
+    }
+  }
+
   _renderBottleModal(data) {
     var bottle = (this._modal && this._modal.bottle) || null;
     var mode = (this._modal && this._modal.mode) || "edit";
@@ -7303,335 +8110,2304 @@ class WineCellarCard extends HTMLElement {
     return this._renderBottleEditModal(data);
   }
 
+  /* The add / edit sheet. Photo first (on phones a capture step of its own),
+     then what identifies the wine (name, producer, vintage, type), the rest
+     under "More details", and "Where it goes": a small cabinet to pick the
+     slot, and how many bottles. Save stays pinned at the bottom. Besides the
+     typed values (the dialog draft), the sheet keeps its own state across
+     re-renders in this._modal: ui (phone stage, "More details" open, fields
+     filled from the label or a known wine, the note and its Undo) and photo
+     (the picture being uploaded or read). */
+
   _renderBottleEditModal(data) {
-    var bottle = (this._modal && this._modal.bottle) || {};
-    var preset = (this._modal && this._modal.preset) || {};
     var self = this;
-    // What the user already typed (kept across re-renders) comes first.
+    var m = this._modal;
+    var bottle = m.bottle || {};
+    var preset = m.preset || {};
+    var ui = m.ui || (m.ui = {});
     var draft = this._modalDraft();
     var typed = draft ? draft.values : null;
-
+    var isEdit = !!bottle.id;
     function v(key, fallback) {
       if (typed && typed[key] !== undefined) return typed[key];
       if (bottle[key] !== undefined && bottle[key] !== null) return bottle[key];
       if (preset[key] !== undefined && preset[key] !== null) return preset[key];
       return fallback;
     }
+    function esc(value) { return self._escape(value == null ? "" : value); }
 
-    var cellars = data.cellars || [];
-    var defaultCellarId = v("cellar_id", cellars.length ? cellars[0].id : "");
-    var currentCellarId = String(defaultCellarId || "");
-    var currentShelfId = String(v("shelf_id", "") || "");
-    var cellarForDefaultShelf = cellars.find(function (c) { return c.id === currentCellarId; });
-    var sortedShelves = this._getSortedShelves(cellarForDefaultShelf);
-    if (!currentShelfId && sortedShelves.length) {
-      currentShelfId = sortedShelves[0].id;
+    // Where it goes: the requested slot when it is free, else the next free
+    // one (a bottle being edited keeps its own slot).
+    var ownId = isEdit ? bottle.id : null;
+    var loc = {
+      cellar_id: String(v("cellar_id", "") || ""),
+      shelf_id: String(v("shelf_id", "") || ""),
+      lane: v("lane", "front") === "back" ? "back" : "front",
+      position: Number(v("position", 0)) || 0
+    };
+    if (!this._cellarById(loc.cellar_id)) loc.cellar_id = "";
+    var slotOk = !!loc.cellar_id && this._slotOrder(loc.cellar_id, ownId).some(function (s) { return s.free && self._sameSlot(s, loc); });
+    if (!slotOk && !isEdit) {
+      var next = (loc.cellar_id && this._planSlots(loc.cellar_id, loc, 1)[0]) || this._findFreeSlot();
+      loc = next
+        ? { cellar_id: next.cellar_id, shelf_id: next.shelf_id, lane: next.lane, position: next.position }
+        : { cellar_id: loc.cellar_id || ((this._sortedCellars()[0] || {}).id || ""), shelf_id: "", lane: "front", position: 0 };
+    }
+    var qty = isEdit ? 1 : Math.max(1, parseInt(v("qty", 1), 10) || 1);
+
+    var imagePath = String(v("image_path", "") || "");
+    var photo = m.photo || {};
+    var imgSrc = photo.preview || this._normalizeImagePath(imagePath);
+    if (!ui.stage) ui.stage = isEdit || String(v("wine_name", "") || "").trim() || imgSrc ? "review" : "capture";
+    var type = _WCM_SHEET_TYPES.indexOf(v("wine_type", "unset")) >= 0 ? v("wine_type", "unset") : "other";
+    var wide = !window.matchMedia || window.matchMedia("(min-width: 900px)").matches;
+    var moreOpen = ui.moreOpen !== undefined ? ui.moreOpen : wide;
+
+    function label(name, text, required) {
+      return '<div class="sheet-lrow"><label class="sheet-lbl" for="wcm-f-' + name + '">' + esc(text) +
+        (required ? '<span class="sheet-req" aria-hidden="true">*</span>' : "") + '</label><span class="sheet-mark"></span></div>';
+    }
+    function errorBox(name) {
+      return '<div class="sheet-err" id="wcm-err-' + name + '" data-err-for="' + name + '" hidden></div>';
+    }
+    function combo(name, extraClass, placeholder, required) {
+      return '<div class="sheet-combo"><input id="wcm-f-' + name + '" class="sheet-in' + (extraClass || "") + '" name="' + name + '" value="' + esc(v(name, "")) + '"' +
+        ' autocomplete="off" spellcheck="false" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="wcm-list-' + name + '" data-combo="' + name + '"' +
+        (placeholder ? ' placeholder="' + esc(placeholder) + '"' : "") + (required ? ' required aria-required="true"' : "") +
+        (required && !isEdit ? " data-autofocus" : "") + ">" +
+        '<div class="sheet-list" id="wcm-list-' + name + '" role="listbox" hidden></div></div>';
+    }
+    function field(name, text, inner, extraClass) {
+      return '<div class="sheet-fld' + (extraClass ? " " + extraClass : "") + '" data-f="' + name + '">' + label(name, text) + inner + errorBox(name) + "</div>";
+    }
+    function year(name, placeholder, extraClass) {
+      return '<input id="wcm-f-' + name + '" class="sheet-in sheet-num' + (extraClass ? " " + extraClass : "") + '" name="' + name + '" value="' + esc(v(name, "")) + '"' +
+        ' inputmode="numeric" maxlength="4" autocomplete="off" placeholder="' + esc(placeholder) + '">';
+    }
+    function decimal(name, suffix, step) {
+      return '<div class="sheet-affix"><input id="wcm-f-' + name + '" class="sheet-in sheet-num" type="number" step="' + step + '" min="0" name="' + name + '"' +
+        ' value="' + esc(v(name, "")) + '" inputmode="decimal"><b>' + esc(suffix) + "</b></div>";
     }
 
-    var selectedLane = String(v("lane", "front") || "front");
-    var shelf = this._getShelfById(currentCellarId, currentShelfId);
-    if ((!shelf || !(Number(shelf.capacity_back || 0) > 0)) && selectedLane === "back") {
-      selectedLane = "front";
-    }
+    var title = isEdit ? (bottle.wine_name || _T("unnamed_wine")) : _T("sheet_add_title");
+    var head =
+      '<header class="sheet-head">' +
+      '<svg class="sheet-hbottle" viewBox="0 0 40 100" aria-hidden="true"><path class="g" d="' + _WCM_BOTTLE_PATH + '"/>' +
+      '<rect class="k" x="16" y="3" width="8" height="12" rx="1.5"/><rect class="l" x="10.5" y="56" width="19" height="24" rx="2"/></svg>' +
+      '<div class="sheet-htext"><h2 class="sheet-title" id="wcm-dialog-title" tabindex="-1" data-dialog-title>' + esc(title) + "</h2>" +
+      '<div class="sheet-dest"' + (this._sheetDestText(loc, qty, isEdit) ? "" : " hidden") + ">" + _WCM_ICONS.pin + "<span data-sheet-dest>" + esc(this._sheetDestText(loc, qty, isEdit)) + "</span></div></div>" +
+      '<button class="icon-btn" type="button" data-close-modal aria-label="' + esc(_T("close")) + '">' + _WCM_ICONS.close + "</button>" +
+      "</header>";
 
-    var defaultPosition = Number(v("position", 1) || 1);
-    var maxPosition = this._getLaneCapacity(currentCellarId, currentShelfId, selectedLane);
-    if (maxPosition > 0 && defaultPosition > maxPosition) {
-      defaultPosition = 1;
-    }
+    // 1. The label photo.
+    var photoSec =
+      '<section class="sheet-photo" aria-labelledby="wcm-sheet-photo">' +
+      '<h3 class="sheet-sec-t" id="wcm-sheet-photo">' + _WCM_ICONS.camera + esc(_T("sheet_sec_label")) + "</h3>" +
+      '<div class="' + this._sheetTileClass(imgSrc, photo) + '" data-sheet-tile>' + this._renderSheetTile(imgSrc, photo) + "</div>" +
+      '<input type="file" accept="image/*" capture="environment" data-sheet-file="camera" hidden>' +
+      '<input type="file" accept="image/*" data-sheet-file="library" hidden>' +
+      '<input type="file" accept="image/*" data-sheet-file="barcode" hidden>' +
+      '<div class="sheet-photo-links">' +
+      (isEdit ? "" : '<button type="button" class="sheet-link" data-sheet-instead>' + _WCM_ICONS.keyboard + esc(_T("sheet_type_instead")) + "</button>") +
+      '<button type="button" class="sheet-link is-muted" data-sheet-pick="barcode">' + _WCM_ICONS.barcode + esc(_T("sheet_scan_barcode")) + "</button>" +
+      "</div></section>";
 
-    var imagePath = v("image_path", "");
+    // 2. The wine: identity first, the rest folded under "More details".
+    var types = '<div class="sheet-types" role="radiogroup" aria-labelledby="wcm-l-type">' + _WCM_SHEET_TYPES.map(function (t) {
+      return '<label class="sheet-type' + (t === type ? " on" : "") + '"><input class="sr-only" type="radio" name="wine_type" value="' + esc(t) + '"' + (t === type ? " checked" : "") + ">" +
+        '<span class="sheet-type-dot" style="--sw:' + self._wineSurfaceColor(t) + '"></span>' + esc(t === "unset" ? _T("sheet_type_unset") : self._wineTypeLabel(t)) + "</label>";
+    }).join("") + "</div>";
+    var rating = Math.max(0, Math.min(5, parseInt(v("rating", 0), 10) || 0));
+    var stars = '<div class="sheet-stars" role="radiogroup" aria-labelledby="wcm-l-rating">' +
+      '<label class="sheet-star-none' + (rating ? "" : " on") + '"><input class="sr-only" type="radio" name="rating" value="0"' + (rating ? "" : " checked") + ">" + esc(_T("sheet_rating_none")) + "</label>" +
+      [1, 2, 3, 4, 5].map(function (n) {
+        return '<label class="sheet-star' + (n <= rating ? " on" : "") + '" title="' + esc(_T("bt_stars", { n: n })) + '"><input class="sr-only" type="radio" name="rating" value="' + n + '"' +
+          (n === rating ? " checked" : "") + ' aria-label="' + esc(_T("bt_stars", { n: n })) + '">' + _WCM_ICONS.star + "</label>";
+      }).join("") + "</div>";
 
+    var mainSec =
+      '<div class="sheet-main">' +
+      '<section class="sheet-sec" aria-labelledby="wcm-sheet-wine">' +
+      '<h3 class="sheet-sec-t" id="wcm-sheet-wine">' + _WCM_ICONS.bottle + esc(_T("sheet_sec_wine")) + "</h3>" +
+      '<div class="sheet-note" data-sheet-note hidden></div>' +
+      '<div class="sheet-fld" data-f="wine_name">' + label("wine_name", _T("wine_name"), true) + combo("wine_name", " sheet-in-display", _T("sheet_name_ph"), true) +
+      errorBox("wine_name") + '<div class="sheet-dup" data-sheet-dup hidden></div></div>' +
+      '<div class="sheet-2 sheet-vint">' +
+      field("producer", _T("producer"), combo("producer")) +
+      field("vintage", _T("vintage"), year("vintage", "2019")) +
+      "</div>" +
+      '<div class="sheet-fld" data-f="wine_type"><div class="sheet-lrow"><span class="sheet-lbl" id="wcm-l-type">' + esc(_T("type")) + '</span><span class="sheet-mark"></span></div>' + types + "</div>" +
+      "</section>" +
+      '<details class="sheet-more" data-sheet-more' + (moreOpen ? " open" : "") + ">" +
+      '<summary><span class="sheet-more-t">' + esc(_T("sheet_more")) + '</span><span class="sheet-more-h" data-sheet-more-h>' + esc(_T("sheet_more_hint")) + "</span>" +
+      '<span class="sheet-chev" aria-hidden="true">' + _WCM_ICONS.down + "</span></summary>" +
+      '<div class="sheet-more-b">' +
+      '<div class="sheet-2">' + field("region", _T("region"), combo("region")) + field("country", _T("country"), combo("country")) + "</div>" +
+      '<div class="sheet-2">' + field("varietal", _T("varietal"), combo("varietal")) + field("price", _T("price"), decimal("price", this._currency(), "0.01")) + "</div>" +
+      '<div class="sheet-fld" data-f="window"><div class="sheet-lrow"><span class="sheet-lbl" id="wcm-l-win">' + esc(_T("sheet_window")) + '</span><span class="sheet-mark"></span></div>' +
+      '<div class="sheet-win" role="group" aria-labelledby="wcm-l-win"><div class="sheet-win-in">' +
+      '<label class="sr-only" for="wcm-f-aging_start_year">' + esc(_T("sheet_from")) + "</label>" + year("aging_start_year", _T("sheet_from"), "sheet-year") +
+      '<span class="sheet-win-dash" aria-hidden="true">–</span>' +
+      '<label class="sr-only" for="wcm-f-aging_end_year">' + esc(_T("sheet_to")) + "</label>" + year("aging_end_year", _T("sheet_to"), "sheet-year") +
+      '</div><div data-sheet-win>' + this._renderWindowTimeline(v("aging_start_year", ""), v("aging_end_year", "")) + "</div></div>" + errorBox("window") + "</div>" +
+      '<div class="sheet-fld" data-f="rating"><div class="sheet-lrow"><span class="sheet-lbl" id="wcm-l-rating">' + esc(_T("rating")) + '</span><span class="sheet-mark"></span></div>' + stars + "</div>" +
+      field("notes", _T("notes"), '<textarea id="wcm-f-notes" class="sheet-in" name="notes" rows="3" maxlength="500">' + esc(v("notes", "")) + "</textarea>") +
+      '<div class="sheet-2 sheet-keep">' + field("serving_temp", _T("serving_temp"), decimal("serving_temp", "°C", "0.5")) + field("alcohol_pct", _T("alcohol_pct"), decimal("alcohol_pct", "%", "0.1")) + "</div>" +
+      '<div class="sheet-2">' +
+      field("barcode", _T("sheet_barcode"), '<div class="sheet-inline"><input id="wcm-f-barcode" class="sheet-in sheet-num" name="barcode" value="' + esc(v("barcode", "")) + '" inputmode="numeric" autocomplete="off">' +
+        '<button type="button" class="btn" data-sheet-lookup>' + esc(_T("sheet_lookup")) + "</button></div>") +
+      field("saq_url", _T("sheet_link"), '<input id="wcm-f-saq_url" class="sheet-in" name="saq_url" type="url" inputmode="url" placeholder="https://" value="' + esc(v("saq_url", bottle.url_saq || "")) + '">') +
+      "</div>" +
+      "</div></details>" +
+      "</div>";
 
-    return [
-      '<div class="modal-backdrop" data-dialog-backdrop>',
-      '  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="wcm-dialog-title">',
-      '    <div class="modal-head">',
-      '      <h3 id="wcm-dialog-title" tabindex="-1" data-dialog-title>' + (bottle.id ? self._t("edit_bottle") : self._t("add_bottle")) + "</h3>",
-      '      <button class="icon-btn" type="button" data-close-modal aria-label="' + _T("close") + '">' + _WCM_ICONS.close + '</button>',
-      "    </div>",
-      '<div class="action-message"' + (this._actionMessage ? '' : ' style="display:none"') + '>' + this._escape(this._actionMessage || "") + '</div>',
-      '    <form class="modal-form" data-save-bottle data-modal-key="' + this._escape(this._modalKey()) + '" novalidate>',
-      '      <input type="hidden" name="bottle_id" value="' + self._escape(v("id", "")) + '">',
-      '      <input type="hidden" name="analyzed_flag" value="' + self._escape(typed && typed.analyzed_flag ? typed.analyzed_flag : (bottle.analyzed ? "true" : "false")) + '">',
+    // 3. Where it goes.
+    var placeSec =
+      '<section class="sheet-place" aria-labelledby="wcm-sheet-place">' +
+      '<h3 class="sheet-sec-t" id="wcm-sheet-place">' + _WCM_ICONS.pin + esc(_T("sheet_sec_place")) + "</h3>" +
+      '<div data-sheet-picker>' + this._renderSlotPicker({ cellarId: loc.cellar_id, sel: loc, qty: qty, ownId: ownId, from: isEdit ? bottle : null }) + "</div>" +
+      '<input type="hidden" name="cellar_id" value="' + esc(loc.cellar_id) + '"><input type="hidden" name="shelf_id" value="' + esc(loc.shelf_id) + '">' +
+      '<input type="hidden" name="lane" value="' + esc(loc.lane) + '"><input type="hidden" name="position" value="' + esc(loc.position || "") + '">' +
+      '<input type="hidden" name="qty" value="' + qty + '">' +
+      errorBox("place") +
+      "</section>";
 
-      '      <!-- ZONE CAPTURE ET ANALYSE DE HAUT DE FORMULAIRE -->',
-      '      <div class="analysis-top-panel" style="background:color-mix(in srgb, var(--secondary-background-color) 40%, transparent);padding:14px;border-radius:14px;display:grid;gap:12px;border:1px dashed color-mix(in srgb,var(--primary-text-color) 15%, transparent)">',
-      '        <div style="font-weight:700;font-size:0.95rem">' + _T("wine_acquisition_identification") + '</div>',
-      '        <div class="grid2">',
-      '          <button class="btn small-btn" type="button" data-pick-barcode-btn>' + _T("upload_barcode_saq_only") + '</button>',
-      '          <button class="btn small-btn" type="button" data-pick-label-btn>' + _T("upload_label_photo") + '</button>',
-      '          <input type="file" accept="image/*" data-barcode-file-input style="display:none">',
-      '          <input type="file" accept="image/*" data-label-file-input style="display:none">',
-      '        </div>',
-      '        <div class="grid2">',
-      '          <label style="font-size:0.85rem">' + _T("barcode_number_14_digits") + '<input name="barcode" placeholder="' + _T("scan_result_or_manual_entry") + '" value="' + self._escape(v("barcode", "")) + '"></label>',
-      '          <label style="font-size:0.85rem">' + _T("label_image_path") + '<input name="image_path" placeholder="/local/wine_labels/example.jpg" value="' + self._escape(imagePath) + '"></label>',
-      '        </div>',
-      '        <button class="btn primary" type="button" data-universal-analyze-btn style="height:40px;font-weight:700">🔍 ' + _T("analyze") + '</button>',
-      '      </div>',
+    var foot =
+      '<footer class="sheet-foot">' +
+      '<div class="form-error" role="alert"' + (this._formError ? "" : ' style="display:none"') + ">" + esc(this._formError) + "</div>" +
+      '<div class="sheet-foot-row">' +
+      (isEdit ? '<button type="button" class="sheet-danger" data-delete-bottle="' + esc(bottle.id) + '">' + _WCM_ICONS.trash + '<span class="sheet-danger-t">' + esc(_T("delete")) + "</span></button>" : "") +
+      '<div class="sheet-foot-l">' + (isEdit ? "" : _WCM_ICONS.info + "<span>" + esc(_T("sheet_only_name")) + "</span>") + "</div>" +
+      (isEdit
+        ? '<button type="button" class="btn ghost sheet-cancel" data-cancel-edit>' + esc(_T("cancel")) + "</button>"
+        : '<button type="button" class="btn ghost sheet-cancel" data-close-modal>' + esc(_T("cancel")) + "</button>" +
+          '<button type="button" class="btn" data-sheet-save="next">' + esc(_T("sheet_save_next")) + "</button>") +
+      '<button type="button" class="btn primary" data-sheet-save="done">' + _WCM_ICONS.check + "<span data-sheet-save-label>" +
+      esc(this._sheetSaveLabel(isEdit, qty)) + "</span></button>" +
+      "</div></footer>";
 
-      this._renderFormError("capture"),
-      '      <div data-image-preview>' + this._renderImagePreview(imagePath) + '</div>',
-      '      <div data-duplicate-panel>' + this._renderDuplicateMatches() + '</div>',
-
-      '      <label style="margin-top:8px">' + self._t("search_history") + '<input name="history_search" type="search" placeholder="' + _T("search_history_placeholder") + '" value="' + self._escape(this._historySearchValue || "") + '"></label>',
-      '      <div data-history-results>' + this._renderSearchResultsMarkup() + '</div>',
-      
-      '      <label style="position:relative">' + self._t("wine_name") + '<input name="wine_name" value="' + self._escape(v("wine_name", "")) + '" autocomplete="off" required><div class="custom-autocomplete-panel" style="display:none"></div></label>',
-      '      <div class="grid2">',
-      '        <label style="position:relative">' + self._t("producer") + '<input name="producer" value="' + self._escape(v("producer", "")) + '" autocomplete="off"><div class="custom-autocomplete-panel" style="display:none"></div></label>',
-      '        <label style="position:relative">' + self._t("varietal") + '<input name="varietal" value="' + self._escape(v("varietal", "")) + '" autocomplete="off"><div class="custom-autocomplete-panel" style="display:none"></div></label>',
-      '      </div>',
-      '      <div class="grid2">',
-      '        <label style="position:relative">' + self._t("region") + '<input name="region" value="' + self._escape(v("region", "")) + '" autocomplete="off"><div class="custom-autocomplete-panel" style="display:none"></div></label>',
-      '        <label style="position:relative">' + self._t("country") + '<input name="country" value="' + self._escape(v("country", "")) + '" autocomplete="off"><div class="custom-autocomplete-panel" style="display:none"></div></label>',
-      '      </div>',
-      '      <div class="grid2">',
-      '        <label>' + self._t("vintage") + '<input name="vintage" type="number" value="' + self._escape(v("vintage", "")) + '"></label>',
-      '        <label>' + self._t("type") + '<select name="wine_type">' +
-        ["unset", "red", "white", "rosé", "sparkling", "orange", "sweet", "other"].map(function (t) {
-          var typeKeys = { "unset": "not_specified", "red": "red", "white": "white", "rosé": "rose", "sparkling": "sparkling", "orange": "orange", "sweet": "sweet", "other": "other" };
-          var lbl = _T(typeKeys[t] || t);
-          return '<option value="' + t + '"' + (v("wine_type", "unset") === t ? " selected" : "") + ">" + lbl + "</option>";
-        }).join("") +
-      "</select></label>",
-      '      </div>',
-      '      <div class="grid2">',
-      '        <label>' + self._t("price") + ' (' + self._escape(self._currency()) + ')<input name="price" type="number" step="0.01" min="0" value="' + self._escape(v("price", "")) + '"></label>',
-      '        <label>' + self._t("rating") + '<select name="rating">' +
-        [0, 1, 2, 3, 4, 5].map(function (n) {
-          return '<option value="' + n + '"' + (Number(v("rating", 0)) === n ? " selected" : "") + ">" + (n === 0 ? "—" : "★".repeat(n)) + "</option>";
-        }).join("") +
-      "</select></label>",
-      '      </div>',
-      '      <div class="grid2">',
-      '        <label>' + self._t("serving_temp") + ' (°C)<input name="serving_temp" type="number" step="0.5" value="' + self._escape(v("serving_temp", "")) + '"></label>',
-      '        <label>' + self._t("alcohol_pct") + ' (%)<input name="alcohol_pct" type="number" step="0.1" min="0" max="100" value="' + self._escape(v("alcohol_pct", "")) + '"></label>',
-      '      </div>',
-      '      <div class="grid2">',
-      '        <label>' + self._t("aging_start") + '<input name="aging_start_year" type="number" value="' + self._escape(v("aging_start_year", "")) + '"></label>',
-      '        <label>' + self._t("aging_end") + '<input name="aging_end_year" type="number" value="' + self._escape(v("aging_end_year", "")) + '"></label>',
-      '      </div>',
-      '      <label>' + self._t("notes") + '<textarea name="notes" rows="4" maxlength="500">' + this._escape(v("notes", "")) + '</textarea></label>',
-      '      <label style="margin-top:4px">' + _T("saq_com_url") + '<input name="saq_url" placeholder="https://saq.com..." value="' + self._escape(v("saq_url", bottle.url_saq || "")) + '"></label>',
-      
-      '      <!-- ZONE LOCALISATION DESCENTE TOUT EN BAS AVEC TRADUCTION -->',
-      '      <div style="background:color-mix(in srgb, var(--secondary-background-color) 25%, transparent);padding:12px;border-radius:12px;display:grid;gap:10px;margin-top:4px">',
-      '        <label>' + _T("cellar") + '<select name="cellar_id" data-cellar-select>' +
-          cellars.map(function (c) {
-            return '<option value="' + c.id + '"' + (String(currentCellarId) === c.id ? " selected" : "") + ">" + self._escape(c.name) + "</option>";
-          }).join("") +
-        "</select></label>",
-      '        <div class="grid-location">',
-      '          <label>' + self._t("shelf") + '<select name="shelf_id" data-shelf-select>' + this._buildShelfOptions(currentCellarId, currentShelfId) + "</select></label>",
-      '          <label>' + self._t("lane") + '<select name="lane" data-lane-select>' + this._buildLaneOptions(currentCellarId, currentShelfId, selectedLane) + "</select></label>",
-      '          <label class="position-field">' + self._t("position") + '<select name="position" data-position-select>' + this._buildPositionOptions(currentCellarId, currentShelfId, selectedLane, defaultPosition) + '</select></label>',
-      '        </div>',
-
-      '      </div>',
-
-      this._renderFormError("save"),
-      '      <div class="modal-actions">',
-      bottle.id
-        ? '        <div class="left-actions"><button class="btn warning" type="button" data-consume-bottle="' + self._escape(bottle.id) + '">' + self._t("consume") + '</button><button class="btn danger" type="button" data-delete-bottle="' + self._escape(bottle.id) + '">' + self._t("delete") + '</button></div>'
-        : "        <span></span>",
-      '        <div class="right-actions">',
-      (bottle.id ? '          <button class="btn edit-btn" type="button" data-cancel-edit>' + _T("view") + '</button>' : '          <button class="btn" type="button" data-close-modal>' + self._t("cancel") + '</button>'),
-      '          <button class="btn primary" type="button" data-save-bottle-btn>' + self._t("save") + '</button>',
-      '        </div>',
-      '      </div>',
-      "    </form>",
-      "  </div>",
-      "</div>"
-    ].join("");
+    return (
+      '<div class="modal-backdrop sheet-backdrop" data-dialog-backdrop>' +
+      '<div class="modal sheet' + (isEdit ? " is-edit" : "") + " stage-" + ui.stage + '" role="dialog" aria-modal="true" aria-labelledby="wcm-dialog-title" style="--sheet-type:' + this._wineSurfaceColor(type) + '">' +
+      head +
+      '<form class="sheet-form" data-save-bottle data-modal-key="' + esc(this._modalKey()) + '" novalidate autocomplete="off">' +
+      '<input type="hidden" name="bottle_id" value="' + esc(bottle.id || "") + '">' +
+      '<input type="hidden" name="analyzed_flag" value="' + esc(v("analyzed_flag", bottle.analyzed ? "true" : "false")) + '">' +
+      '<input type="hidden" name="image_path" value="' + esc(imagePath) + '">' +
+      '<div class="sheet-scroll" data-dialog-scroll><div class="sheet-grid">' + photoSec + mainSec + placeSec + "</div></div>" +
+      foot +
+      "</form></div></div>"
+    );
   }
-  _renderShelfEditorRows(shelves, cellarId) {
+
+  _sheetSaveLabel(isEdit, qty) {
+    if (isEdit) return _T("sheet_save_changes");
+    return qty > 1 ? _T("sheet_save_n", { n: qty }) : _T("save");
+  }
+
+  // "Kitchen › Whites (2) › Front · 3", "3 bottles · Kitchen › Whites (2)",
+  // or "Editing · …".
+  _sheetDestText(loc, qty, isEdit) {
+    var dest = "";
+    if (loc && loc.shelf_id) {
+      var planned = qty > 1 && !isEdit ? this._planSlots(loc.cellar_id, loc, qty) : [];
+      dest = qty > 1 ? _T("sheet_plan_n", { n: qty, where: planned.length ? this._plannedWhere(planned) : this._slotWhere(loc, true) }) : this._slotWhere(loc);
+    }
+    return isEdit ? _T("sheet_editing") + (dest ? " · " + dest : "") : dest;
+  }
+
+  // Whether label reading is set up. Assumed until the backend says it is
+  // not (gemini_configured: false); a failed reading only shows a note.
+  _analysisAvailable() {
+    return !(this._data && this._data.gemini_configured === false);
+  }
+
+  _sheetTileClass(src, photo) {
+    return "sheet-tile" + (src ? " has-img" : " is-empty") + (photo && photo.busy ? " is-busy" : "");
+  }
+
+  // The label tile: a camera prompt, or the photo with its tools. Both the
+  // touch (Take photo + Choose from library) and the desktop (Upload + drop)
+  // versions are drawn; the stylesheet shows the right one.
+  _renderSheetTile(src, photo) {
+    var esc = this._escape.bind(this);
+    var ai = this._analysisAvailable();
+    photo = photo || {};
+    var frame = '<div class="sheet-frame">' +
+      (src
+        ? '<img class="sheet-img" src="' + esc(src) + '" alt="' + esc(_T("sheet_photo_ready")) + '" onerror="this.style.visibility=\'hidden\'">'
+        : '<svg class="sheet-illus" viewBox="0 0 120 150" aria-hidden="true">' +
+          '<path class="b" d="M52 6h16v30c0 9 15 13 15 30v72a6 6 0 0 1-6 6H43a6 6 0 0 1-6-6V66c0-17 15-21 15-30z"/>' +
+          '<rect class="k" x="52" y="6" width="16" height="16" rx="2"/><rect class="l" x="44" y="80" width="32" height="38" rx="3"/>' +
+          '<path class="t" d="M50 92h20M53 99h14M55 108h10"/>' +
+          '<path class="c" d="M34 82v-6a4 4 0 0 1 4-4h6M76 72h6a4 4 0 0 1 4 4v6M86 116v6a4 4 0 0 1-4 4h-6M44 126h-6a4 4 0 0 1-4-4v-6"/></svg>') +
+      '<div class="sheet-scan" aria-hidden="true"></div>' +
+      (photo.busy ? '<div class="sheet-busy"><span class="sheet-spin" aria-hidden="true"></span>' + esc(photo.status || "") + "</div>" : "") +
+      "</div>";
+    if (!src) {
+      return frame + '<div class="sheet-tile-body">' +
+        '<div class="sheet-tile-t">' + esc(_T(ai ? "sheet_photo_title" : "sheet_photo_title_plain")) + "</div>" +
+        '<div class="sheet-tile-s">' + esc(_T(ai ? "sheet_photo_sub_ai" : "sheet_photo_sub")) + "</div>" +
+        '<div class="sheet-tile-a">' +
+        '<button type="button" class="btn primary" data-sheet-pick="camera">' + _WCM_ICONS.camera +
+        '<span class="only-touch">' + esc(_T("sheet_take_photo")) + '</span><span class="only-fine">' + esc(_T("sheet_upload_photo")) + "</span></button>" +
+        '<button type="button" class="btn only-touch" data-sheet-pick="library">' + _WCM_ICONS.image + "<span>" + esc(_T("sheet_choose_library")) + "</span></button>" +
+        '<div class="sheet-tile-drop only-fine">' + esc(_T("sheet_photo_drop")) + "</div>" +
+        "</div></div>";
+    }
+    var tools = photo.busy ? "" :
+      '<button type="button" class="sheet-tool" data-sheet-pick="library">' + _WCM_ICONS.image + esc(_T("sheet_photo_replace")) + "</button>" +
+      '<button type="button" class="sheet-tool" data-sheet-rotate>' + _WCM_ICONS.rotate + esc(_T("sheet_photo_rotate")) + "</button>" +
+      '<button type="button" class="sheet-tool" data-sheet-remove>' + _WCM_ICONS.trash + esc(_T("sheet_photo_remove")) + "</button>" +
+      (ai && !photo.read ? '<button type="button" class="sheet-tool is-accent" data-sheet-read>' + _WCM_ICONS.sparkle + esc(_T("sheet_photo_read")) + "</button>" : "");
+    return frame + '<div class="sheet-tile-body"><div class="sheet-tile-t" aria-live="polite">' + esc(photo.busy ? (photo.status || "") : _T("sheet_photo_ready")) + "</div>" +
+      '<div class="sheet-tools">' + tools + "</div></div>";
+  }
+
+  // The slot picker: one chip per cellar with its free slots, and the
+  // cellar as a small cabinet in its own finish where free slots are
+  // buttons and taken ones show their wine. The planned slots are numbered
+  // (1, 2, 3 for three bottles); below, where that is and how many bottles.
+  // o: cellarId, sel (the chosen slot), qty, ownId and from (edit mode).
+  _renderSlotPicker(o) {
     var self = this;
-    var bottles = ((this._data && this._data.bottles) || []).filter(function (b) {
-      return !!cellarId && b.cellar_id === cellarId;
+    var esc = this._escape.bind(this);
+    var cellars = this._sortedCellars();
+    if (!cellars.length) {
+      return '<div class="pk-empty">' + _WCM_ICONS.alert + "<div><b>" + esc(_T("add_first_cellar")) + "</b></div>" +
+        '<div class="pk-empty-a"><button type="button" class="btn primary" data-sheet-new-cellar>' + _WCM_ICONS.plus + "<span>" + esc(_T("pick_new_cellar")) + "</span></button></div></div>";
+    }
+    var cellar = this._cellarById(o.cellarId) || cellars[0];
+    if (!o.ownId && !this._findFreeSlot()) {
+      return '<div class="pk-empty"><div><b>' + esc(_T("pick_no_free")) + "</b><span>" + esc(_T("pick_no_free_sub")) + '</span></div><div class="pk-empty-a">' +
+        '<button type="button" class="btn" data-sheet-edit-cellar="' + esc(cellar.id) + '">' + _WCM_ICONS.plus + "<span>" + esc(_T("pick_add_shelves_to", { name: cellar.name || _T("cellar") })) + "</span></button>" +
+        '<button type="button" class="btn" data-sheet-new-cellar>' + _WCM_ICONS.plus + "<span>" + esc(_T("pick_new_cellar")) + "</span></button></div></div>";
+    }
+    var order = this._slotOrder(cellar.id, o.ownId);
+    var freeCount = order.filter(function (s) { return s.free; }).length;
+    var qty = o.ownId ? 1 : Math.max(1, Math.min(o.qty || 1, freeCount || 1));
+    var plan = o.ownId ? (o.sel && o.sel.shelf_id ? [o.sel] : []) : this._planSlots(cellar.id, o.sel, qty);
+    var planAt = {};
+    plan.forEach(function (s, i) { planAt[self._slotKey(s)] = i + 1; });
+    // The one slot in the Tab order (arrow keys reach the others).
+    var firstFree = order.find(function (s) { return s.free; });
+    var focusKey = plan.length ? this._slotKey(plan[0]) : firstFree ? this._slotKey(firstFree) : "";
+
+    var tabs = '<div class="pk-tabs" role="group" aria-label="' + esc(_T("cellar")) + '">' + cellars.map(function (c) {
+      var free = self._slotOrder(c.id, o.ownId).filter(function (s) { return s.free; }).length;
+      var on = c.id === cellar.id;
+      var color = self._safeColor(c.bg_color);
+      return '<button type="button" aria-pressed="' + on + '" class="pk-tab' + (on ? " on" : "") + '" data-pick-cellar="' + esc(c.id) + '"' + (free || on ? "" : " disabled") + ">" +
+        '<span class="mat-chip ' + self._cabinetMaterial(color) + '"' + (color ? ' style="--cellar:' + color + '"' : "") + "></span>" + esc(c.name || _T("cellar")) +
+        '<span class="pk-tab-n">' + esc(free ? _TN("pick_free", free) : _T("pick_full")) + "</span></button>";
+    }).join("") + "</div>";
+
+    var slotIndex = new Map();
+    order.forEach(function (s) { if (s.occupant) slotIndex.set(self._slotKey(s), s.occupant); });
+    var shelves = this._getSortedShelves(cellar);
+    var shelvesHtml = this._renderMiniShelves(shelves, slotIndex, {
+      tags: true,
+      head: function (shelf, i) {
+        var free = order.filter(function (s) { return s.free && String(s.shelf_id) === String(shelf.id); }).length;
+        return '<div class="mm-head"><span class="mm-n">' + (i + 1) + '</span><b>' + esc(shelf.name || _T("shelf_n", { n: i + 1 })) + '</b><span class="mm-free">' +
+          esc(_TN("pick_free", free)) + "</span></div>";
+      },
+      dot: function (shelf, lane, pos, occupant, i) {
+        var key = String(shelf.id) + "|" + lane + "|" + pos;
+        var own = !!occupant && !!o.ownId && occupant.id === o.ownId;
+        if (occupant && !own) {
+          var wine = [occupant.wine_name || _T("unnamed_wine"), occupant.vintage].filter(Boolean).join(" ");
+          return '<span class="mm-dot filled" style="--type:' + self._wineSurfaceColor(occupant.wine_type) + '" title="' + esc(wine) + '" data-occupant="' + esc(wine) + '"></span>';
+        }
+        var n = planAt[key] || 0;
+        var shelfRef = self._shelfRef(shelf, i + 1);
+        var aria = _T(own ? "pick_slot_current" : "pick_slot_free", { shelf: shelfRef, lane: self._laneLabel(lane), pos: pos });
+        return '<button type="button" class="mm-dot free' + (own ? " own" : "") + (n === 1 ? " sel" : n ? " queued" : "") + '" data-pick-slot="' + esc(key) + '"' +
+          ' aria-label="' + esc(aria) + '" aria-pressed="' + (n ? "true" : "false") + '" tabindex="' + (key === focusKey ? "0" : "-1") + '"' +
+          (own ? ' style="--type:' + self._wineSurfaceColor(occupant.wine_type) + '"' : "") + ">" +
+          (n ? (qty > 1 ? '<span class="mm-num">' + n + "</span>" : _WCM_ICONS.check) : "") + "</button>";
+      }
     });
-    function value(v, fallback) {
-      return v === undefined || v === null ? fallback : v;
+
+    var foot = '<div class="pk-foot"><div class="pk-read" data-pick-read aria-live="polite">' + _WCM_ICONS.pin + "<span data-pick-read-t>" + esc(this._planText(plan, o)) + "</span></div>" +
+      (o.ownId ? "" :
+        '<div class="pk-qty"><span class="pk-qty-l" id="wcm-l-qty">' + esc(_T("pick_bottles")) + '</span><div class="stepper" role="group" aria-labelledby="wcm-l-qty">' +
+        '<button type="button" class="stepper-b" data-pick-qty="-1" aria-label="' + esc(_T("pick_qty_less")) + '"' + (qty <= 1 ? " disabled" : "") + ">" + _WCM_ICONS.minus + "</button>" +
+        '<output class="stepper-v" data-pick-qty-v aria-live="polite">' + qty + "</output>" +
+        '<button type="button" class="stepper-b" data-pick-qty="1" aria-label="' + esc(_T("pick_qty_more")) + '"' + (qty >= freeCount ? " disabled" : "") + ">" + _WCM_ICONS.plus + "</button>" +
+        "</div></div>") +
+      "</div>";
+    var hint = '<div class="pk-hint">' + esc(o.ownId ? _T("pick_hint_edit") : qty > 1 ? _T("pick_hint_n", { n: qty }) : _T("pick_hint")) + "</div>";
+    return '<div class="pk" data-pick-cellar-id="' + esc(cellar.id) + '">' + tabs +
+      '<div class="pk-cab">' + this._renderCabinet(cellar, shelvesHtml, "mini picker", this._miniSpan(shelves)) + "</div>" + foot + hint + "</div>";
+  }
+
+  // "Kitchen › Whites (2) › Front · 3", or for several bottles
+  // "Kitchen › Whites (2) · Front 3, 4 · Back 1".
+  _planText(plan, o) {
+    var self = this;
+    if (!plan || !plan.length || !plan[0].shelf_id) return _T("sheet_err_no_slot");
+    var first = Object.assign({ cellar_id: o && o.cellarId }, plan[0]);
+    if (plan.length === 1) {
+      var text = this._slotWhere(first);
+      var from = o && o.from;
+      if (from && !this._sameSlot(Object.assign({ cellar_id: from.cellar_id }, from), first)) {
+        text += " · " + _T("pick_move_from", { from: this._slotWhere(from) });
+      }
+      return text;
+    }
+    var cellar = this._cellarById(first.cellar_id);
+    var groups = [];
+    var byShelf = {};
+    plan.forEach(function (s) {
+      var name = self._shelfLabel(cellar, s.shelf_id);
+      if (!byShelf[name]) {
+        byShelf[name] = { lanes: {}, order: [] };
+        groups.push(name);
+      }
+      var g = byShelf[name];
+      if (!g.lanes[s.lane]) {
+        g.lanes[s.lane] = [];
+        g.order.push(s.lane);
+      }
+      g.lanes[s.lane].push(s.position);
+    });
+    return (cellar ? (cellar.name || _T("cellar")) + " › " : "") + groups.map(function (name) {
+      var g = byShelf[name];
+      return name + " · " + g.order.map(function (lane) { return self._laneLabel(lane) + " " + g.lanes[lane].join(", "); }).join(" · ");
+    }).join(" — ");
+  }
+
+  // The drinking window as a small timeline, with the status glyph and a
+  // plain sentence.
+  _renderWindowTimeline(from, to) {
+    var esc = this._escape.bind(this);
+    var now = new Date().getFullYear();
+    var start = /^\d{4}$/.test(String(from).trim()) ? Number(from) : null;
+    var stop = /^\d{4}$/.test(String(to).trim()) ? Number(to) : null;
+    if (start === null || stop === null || start > stop) {
+      return '<div class="sheet-tl is-none" style="--status:var(--wcm-none)"><div class="sheet-tl-track"></div>' +
+        '<div class="sheet-tl-st">' + this._bottleGlyph("none") + "<span>" + esc(_T("sheet_win_none")) + "</span></div></div>";
+    }
+    var status = this._agingStatus({ aging_start_year: start, aging_end_year: stop });
+    var lo = Math.min(start, now) - 1;
+    var hi = Math.max(stop, now) + 1;
+    var span = hi - lo + 1;
+    function pct(x) { return ((x / span) * 100).toFixed(2) + "%"; }
+    var nowAt = ((now - lo + 0.5) / span) * 100;
+    var text = status === "young" ? _T("sheet_win_young", { y: start })
+      : status === "ready" ? _T("sheet_win_ready", { y: stop })
+      : status === "peak" ? _T("sheet_win_peak")
+      : _T("sheet_win_past", { y: stop });
+    return '<div class="sheet-tl" style="--status:var(--wcm-' + status + ')">' +
+      '<div class="sheet-tl-track"><span class="sheet-tl-span" style="left:' + pct(start - lo) + ";width:" + pct(stop - start + 1) + '"></span>' +
+      '<span class="sheet-tl-now" style="left:' + nowAt.toFixed(2) + '%"></span></div>' +
+      '<div class="sheet-tl-scale"><span>' + (nowAt < 16 ? "" : lo) + '</span><b style="left:' + nowAt.toFixed(2) + '%">' + now + "</b><span>" + (nowAt > 84 ? "" : hi) + "</span></div>" +
+      '<div class="sheet-tl-st">' + this._bottleGlyph(status) + "<span>" + esc(text) + "</span></div></div>";
+  }
+
+  /* The sheet on screen. These update it in place (no re-render), so what
+     is typed, the focus and the scroll never move. */
+
+  // The sheet's form, if the dialog of modal m is still the one on screen
+  // (an upload or a reading can finish after it was closed or reopened).
+  _liveSheetForm(m) {
+    var root = this.shadowRoot;
+    if (!root || !m || this._modal !== m) return null;
+    var form = root.querySelector("form[data-save-bottle]");
+    return form && form.getAttribute("data-modal-key") === this._modalKey() ? form : null;
+  }
+
+  _sheetField(form, name) {
+    return form.elements.namedItem(name);
+  }
+
+  _sheetFieldBox(form, name) {
+    var key = name === "aging_start_year" || name === "aging_end_year" ? "window" : name;
+    return form.querySelector('.sheet-fld[data-f="' + key + '"]');
+  }
+
+  _sheetLocation(form) {
+    return {
+      cellar_id: this._sheetField(form, "cellar_id").value,
+      shelf_id: this._sheetField(form, "shelf_id").value,
+      lane: this._sheetField(form, "lane").value || "front",
+      position: Number(this._sheetField(form, "position").value) || 0
+    };
+  }
+
+  _syncSheetTypes(form) {
+    var control = this._sheetField(form, "wine_type");
+    form.querySelectorAll(".sheet-type").forEach(function (el) {
+      var input = el.querySelector("input");
+      el.classList.toggle("on", !!input && input.checked);
+    });
+    var sheet = form.closest(".sheet");
+    if (sheet) sheet.style.setProperty("--sheet-type", this._wineSurfaceColor((control && control.value) || "unset"));
+  }
+
+  _syncSheetStars(form, hover) {
+    var value = Number((this._sheetField(form, "rating") || {}).value || 0);
+    form.querySelectorAll(".sheet-star").forEach(function (el, i) {
+      el.classList.toggle("on", hover ? false : i + 1 <= value);
+      el.classList.toggle("hov", !!hover && i + 1 <= hover);
+    });
+    var none = form.querySelector(".sheet-star-none");
+    if (none) none.classList.toggle("on", !value);
+  }
+
+  _syncSheetWindow(form) {
+    var box = form.querySelector("[data-sheet-win]");
+    if (box) box.innerHTML = this._renderWindowTimeline(this._sheetField(form, "aging_start_year").value, this._sheetField(form, "aging_end_year").value);
+  }
+
+  // "More details" says how many of its fields are filled.
+  _syncSheetMore(form) {
+    var self = this;
+    var hint = form.querySelector("[data-sheet-more-h]");
+    if (!hint) return;
+    var n = ["region", "country", "varietal", "price", "aging_start_year", "notes", "serving_temp", "alcohol_pct", "barcode", "saq_url"].filter(function (name) {
+      var el = self._sheetField(form, name);
+      return el && String(el.value || "").trim();
+    }).length;
+    if (Number((this._sheetField(form, "rating") || {}).value || 0) > 0) n++;
+    hint.textContent = n ? _T("sheet_more_filled", { n: n }) : _T("sheet_more_hint");
+  }
+
+  // "You already have 2 of this wine · Kitchen".
+  _syncSheetDuplicate(form) {
+    var self = this;
+    var box = form.querySelector("[data-sheet-dup]");
+    if (!box) return;
+    var name = this._normalizeCompareValue(this._sheetField(form, "wine_name").value);
+    var producer = this._normalizeCompareValue(this._sheetField(form, "producer").value);
+    var ownId = this._sheetField(form, "bottle_id").value;
+    var hits = name ? ((this._data && this._data.bottles) || []).filter(function (b) {
+      var other = self._normalizeCompareValue(b.producer);
+      return b.id !== ownId && self._normalizeCompareValue(b.wine_name) === name && (!producer || !other || other === producer);
+    }) : [];
+    if (!hits.length) {
+      box.hidden = true;
+      return;
+    }
+    var where = [];
+    hits.forEach(function (b) {
+      var cellar = self._cellarById(b.cellar_id);
+      if (cellar && where.indexOf(cellar.name) < 0) where.push(cellar.name);
+    });
+    box.innerHTML = _WCM_ICONS.info + "<span>" + this._escape(_T("sheet_dup", { n: hits.length, where: where.join(", ") })) + "</span>";
+    box.hidden = false;
+  }
+
+  // The header's destination line and the Save button's words.
+  _syncSheetPlace(form) {
+    var m = this._modal;
+    if (!m) return;
+    var isEdit = !!this._sheetField(form, "bottle_id").value;
+    var qty = Number(this._sheetField(form, "qty").value) || 1;
+    var dest = form.closest(".sheet").querySelector("[data-sheet-dest]");
+    if (dest) {
+      dest.textContent = this._sheetDestText(this._sheetLocation(form), qty, isEdit);
+      dest.parentNode.hidden = !dest.textContent;
+    }
+    var label = form.querySelector("[data-sheet-save-label]");
+    if (label && !m.saving) label.textContent = this._sheetSaveLabel(isEdit, qty);
+  }
+
+  _syncSheet(form) {
+    this._syncSheetTypes(form);
+    this._syncSheetStars(form);
+    this._syncSheetWindow(form);
+    this._syncSheetMore(form);
+    this._syncSheetDuplicate(form);
+    this._syncSheetPlace(form);
+  }
+
+  _refreshSheetTile(form) {
+    var tile = form && form.querySelector("[data-sheet-tile]");
+    if (!tile) return;
+    var photo = (this._modal && this._modal.photo) || {};
+    var path = this._sheetField(form, "image_path").value;
+    var src = photo.preview || this._normalizeImagePath(path);
+    tile.className = this._sheetTileClass(src, photo);
+    tile.innerHTML = this._renderSheetTile(src, photo);
+  }
+
+  // Phones: the capture step on its own, then the whole form.
+  _setSheetStage(form, stage) {
+    var m = this._modal;
+    if (!m) return;
+    m.ui = m.ui || {};
+    m.ui.stage = stage;
+    var sheet = form.closest(".sheet");
+    sheet.classList.remove("stage-capture", "stage-review");
+    sheet.classList.add("stage-" + stage);
+    this._placeToast();
+  }
+
+  // Fields filled by the label reading ("ai") or from a wine already in
+  // the cellar ("cellar") carry a mark until the user changes them.
+  _markSheetFields(form, names, source) {
+    var ui = this._modal.ui || (this._modal.ui = {});
+    ui.marks = ui.marks || {};
+    var self = this;
+    names.forEach(function (name) {
+      var box = self._sheetFieldBox(form, name);
+      if (!box) return;
+      ui.marks[name] = source;
+      box.classList.add("is-filled");
+      var mark = box.querySelector(".sheet-mark");
+      if (mark) mark.innerHTML = (source === "ai" ? _WCM_ICONS.sparkle : _WCM_ICONS.history) + self._escape(_T(source === "ai" ? "sheet_mark_ai" : "sheet_mark_cellar"));
+    });
+  }
+
+  _unmarkSheetField(form, name) {
+    var ui = this._modal && this._modal.ui;
+    var box = this._sheetFieldBox(form, name);
+    if (box) box.classList.remove("is-filled", "is-invalid", "is-shimmer");
+    if (ui && ui.marks) {
+      delete ui.marks[name];
+      if (name === "aging_start_year" || name === "aging_end_year") {
+        delete ui.marks.aging_start_year;
+        delete ui.marks.aging_end_year;
+      }
+    }
+  }
+
+  // The note above the wine's fields: label reading in progress, what was
+  // filled (with Undo), or why nothing was.
+  _setSheetNote(form, note) {
+    var ui = this._modal && (this._modal.ui || (this._modal.ui = {}));
+    if (ui) ui.note = note || null;
+    var box = form && form.querySelector("[data-sheet-note]");
+    if (!box) return;
+    if (!note) {
+      box.hidden = true;
+      box.innerHTML = "";
+      return;
+    }
+    box.className = "sheet-note" + (note.kind === "warn" ? " is-warn" : "");
+    var icon = note.spin ? '<span class="sheet-spin" aria-hidden="true"></span>'
+      : note.kind === "warn" ? _WCM_ICONS.alert : note.kind === "cellar" ? _WCM_ICONS.history : _WCM_ICONS.sparkle;
+    box.innerHTML = icon + '<span class="sheet-note-t" role="status">' + this._escape(note.text) + "</span>" +
+      (note.undo ? '<button type="button" class="sheet-link" data-sheet-undo>' + this._escape(_T("undo")) + "</button>" : "");
+    box.hidden = false;
+  }
+
+  _clearSheetErrors(form) {
+    form.querySelectorAll(".sheet-err").forEach(function (el) {
+      el.hidden = true;
+      el.innerHTML = "";
+    });
+    form.querySelectorAll(".is-invalid").forEach(function (el) { el.classList.remove("is-invalid"); });
+    form.querySelectorAll("[aria-invalid]").forEach(function (el) { el.removeAttribute("aria-invalid"); });
+  }
+
+  // An error next to its field (opened, scrolled to and focused). Returns
+  // false so a validator can `return this._sheetFieldError(...)`.
+  _sheetFieldError(form, name, message) {
+    var key = name === "aging_start_year" || name === "aging_end_year" ? "window" : name;
+    var box = form.querySelector('[data-err-for="' + key + '"]');
+    var input = name === "place"
+      ? form.querySelector(".mm-dot.sel, button.mm-dot.free, [data-pick-cellar]")
+      : this._sheetField(form, name);
+    if (input && !input.focus && input.length) input = input[0];
+    var more = box && box.closest("details");
+    if (more && !more.open) more.open = true;
+    if (box) {
+      box.innerHTML = _WCM_ICONS.alert + "<span>" + this._escape(message) + "</span>";
+      box.hidden = false;
+      var wrap = box.closest(".sheet-fld, .cb-row");
+      if (wrap) wrap.classList.add("is-invalid");
+    }
+    if (input && input.setAttribute) {
+      input.setAttribute("aria-invalid", "true");
+      if (box) input.setAttribute("aria-describedby", box.id);
+    }
+    var target = input && input.focus ? input : box;
+    if (target) {
+      target.focus({ preventScroll: true });
+      (box || target).scrollIntoView({ block: "center", behavior: this._prefersReducedMotion() ? "auto" : "smooth" });
+    }
+    return false;
+  }
+
+  // Fills the sheet from a suggestion (a known wine, the label reading).
+  // Only fields the suggestion provides are touched; without overwrite only
+  // empty ones ("not sure" type and no rating count as empty), so what the
+  // user typed always survives. Returns the names of the fields it changed.
+  _applySuggestionToBottleForm(form, suggestion, overwrite) {
+    if (!form || !suggestion) return [];
+    var changed = [];
+    [
+      "wine_name", "producer", "region", "country", "varietal", "vintage", "wine_type", "price", "serving_temp", "alcohol_pct",
+      "image_path", "aging_start_year", "aging_end_year", "rating", "notes", "saq_url", "barcode"
+    ].forEach(function (name) {
+      var incoming = suggestion[name];
+      if (incoming === undefined || incoming === null || String(incoming).trim() === "") return;
+      var control = form.elements.namedItem(name);
+      if (!control) return;
+      var current = String(control.value == null ? "" : control.value).trim();
+      var empty = current === "" || (name === "wine_type" && current === "unset") || (name === "rating" && current === "0");
+      if (!overwrite && !empty) return;
+      var next = String(incoming).trim();
+      if (name === "wine_type") {
+        next = next.toLowerCase() === "rose" ? "rosé" : next.toLowerCase();
+        if (_WCM_SHEET_TYPES.indexOf(next) < 0) next = "other";
+      }
+      if (name === "rating") next = String(Math.max(0, Math.min(5, parseInt(next, 10) || 0)));
+      if (current === next) return;
+      control.value = next;
+      var isGroup = typeof RadioNodeList !== "undefined" && control instanceof RadioNodeList;
+      var target = isGroup ? form.querySelector('[name="' + name + '"]:checked') : control;
+      if (target) {
+        target.dispatchEvent(new Event("input", { bubbles: true }));
+        target.dispatchEvent(new Event("change", { bubbles: true }));
+      }
+      changed.push(name);
+    });
+    return changed;
+  }
+
+  /* Suggestions while typing: the name field offers the wines already in
+     the cellar or drunk before (history), matched on name, producer, region,
+     country, grape or vintage; producer, region, country and grape offer
+     values already used. A listbox driven by the arrow keys, Enter and
+     Escape (which closes only the list). */
+
+  _comboSuggestions(field, query) {
+    var self = this;
+    var data = this._data || {};
+    var consumed = data.consumed_bottles || [];
+    var all = (data.bottles || []).concat(consumed);
+    var q = this._foldSearchText(query);
+    if (!q) return [];
+    function rank(a, b, key) {
+      var sa = self._foldSearchText(a[key]).indexOf(q) === 0 ? 0 : 1;
+      var sb = self._foldSearchText(b[key]).indexOf(q) === 0 ? 0 : 1;
+      return sa - sb || (b.count || b.uses || 0) - (a.count || a.uses || 0) || String(a[key]).localeCompare(String(b[key]));
+    }
+    if (field === "wine_name") {
+      var groups = {};
+      var list = [];
+      all.forEach(function (b) {
+        var name = String(b.wine_name || "").trim();
+        if (!name) return;
+        var hay = self._foldSearchText([name, b.producer, b.region, b.country, b.varietal, b.vintage].join(" "));
+        if (hay.indexOf(q) < 0) return;
+        var key = self._normalizeCompareValue(name) + "|" + self._normalizeCompareValue(b.producer);
+        var group = groups[key];
+        if (!group) {
+          group = groups[key] = { name: name, producer: b.producer || "", vintage: b.vintage || null, type: b.wine_type, image: b.image_path || "", country: b.country || "", count: 0, sample: b };
+          list.push(group);
+        }
+        if (consumed.indexOf(b) < 0) {
+          group.count++;
+          group.sample = b;
+        }
+        if (b.vintage && (!group.vintage || b.vintage > group.vintage)) group.vintage = b.vintage;
+        if (!group.image && b.image_path) group.image = b.image_path;
+      });
+      return list.sort(function (a, b) { return rank(a, b, "name"); }).slice(0, 8);
+    }
+    var seen = {};
+    var out = [];
+    all.forEach(function (b) {
+      var value = String(b[field] || "").trim();
+      if (!value) return;
+      var key = self._foldSearchText(value);
+      if (key.indexOf(q) < 0) return;
+      if (seen[key]) {
+        seen[key].uses++;
+        return;
+      }
+      seen[key] = { value: value, uses: 1 };
+      out.push(seen[key]);
+    });
+    return out.sort(function (a, b) { return rank(a, b, "value"); }).slice(0, 8);
+  }
+
+  // The matching part of a suggestion, underlined.
+  _highlightMatch(text, query) {
+    var s = String(text || "");
+    var q = this._foldSearchText(query);
+    if (!q) return this._escape(s);
+    var flat = "";
+    var map = [];
+    for (var i = 0; i < s.length; i++) {
+      var folded = this._foldSearchText(s[i]) || (s[i] === " " ? " " : "");
+      for (var j = 0; j < folded.length; j++) {
+        flat += folded[j];
+        map.push(i);
+      }
+    }
+    var at = flat.indexOf(q);
+    if (at < 0) return this._escape(s);
+    var a = map[at];
+    var b = map[at + q.length - 1] + 1;
+    return this._escape(s.slice(0, a)) + "<mark>" + this._escape(s.slice(a, b)) + "</mark>" + this._escape(s.slice(b));
+  }
+
+  _openCombo(form, input) {
+    var self = this;
+    var field = input.getAttribute("data-combo");
+    var list = form.querySelector("#wcm-list-" + field);
+    if (!list) return;
+    var items = this._comboSuggestions(field, input.value);
+    // Nothing to offer when the only match is what is already typed.
+    if (field !== "wine_name" && items.length === 1 && this._foldSearchText(items[0].value) === this._foldSearchText(input.value)) items = [];
+    this._combo = { field: field, items: items, active: -1 };
+    if (!items.length) {
+      this._closeCombo(form);
+      return;
+    }
+    var q = input.value;
+    list.innerHTML = items.map(function (item, i) {
+      var id = "wcm-opt-" + field + "-" + i;
+      if (field === "wine_name") {
+        var img = item.image ? self._normalizeImagePath(item.image) : "";
+        var sub = [item.producer, item.vintage, item.country].filter(Boolean).join(" · ");
+        return '<div class="sheet-opt" role="option" id="' + id + '" data-i="' + i + '" aria-selected="false">' +
+          '<span class="sheet-opt-thumb" style="--type:' + self._wineSurfaceColor(item.type) + '">' + (img ? '<img src="' + self._escape(img) + '" alt="" loading="lazy" onerror="this.remove()">' : "") + "</span>" +
+          '<span class="sheet-opt-main"><span class="sheet-opt-t">' + self._highlightMatch(item.name, q) + "</span>" +
+          (sub ? '<span class="sheet-opt-s">' + self._highlightMatch(sub, q) + "</span>" : "") + "</span>" +
+          (item.count
+            ? '<span class="sheet-opt-b">' + self._escape(_T("sheet_in_cellar", { n: item.count })) + "</span>"
+            : '<span class="sheet-opt-b is-past">' + self._escape(_T("sheet_had_before")) + "</span>") +
+          "</div>";
+      }
+      return '<div class="sheet-opt" role="option" id="' + id + '" data-i="' + i + '" aria-selected="false"><span class="sheet-opt-main"><span class="sheet-opt-t">' +
+        self._highlightMatch(item.value, q) + "</span></span></div>";
+    }).join("");
+    list.hidden = false;
+    input.setAttribute("aria-expanded", "true");
+    input.removeAttribute("aria-activedescendant");
+  }
+
+  _closeCombo(form) {
+    if (!form) return;
+    form.querySelectorAll(".sheet-list").forEach(function (list) {
+      list.hidden = true;
+      list.innerHTML = "";
+    });
+    form.querySelectorAll("[data-combo]").forEach(function (input) {
+      input.setAttribute("aria-expanded", "false");
+      input.removeAttribute("aria-activedescendant");
+    });
+    this._combo = null;
+  }
+
+  _moveCombo(form, input, step) {
+    var combo = this._combo;
+    if (!combo || combo.field !== input.getAttribute("data-combo") || !combo.items.length) {
+      this._openCombo(form, input);
+      combo = this._combo;
+      if (!combo) return;
+    }
+    combo.active = (combo.active + step + combo.items.length) % combo.items.length;
+    form.querySelector("#wcm-list-" + combo.field).querySelectorAll(".sheet-opt").forEach(function (opt, i) {
+      opt.classList.toggle("is-active", i === combo.active);
+      opt.setAttribute("aria-selected", i === combo.active ? "true" : "false");
+      if (i === combo.active) opt.scrollIntoView({ block: "nearest" });
+    });
+    input.setAttribute("aria-activedescendant", "wcm-opt-" + combo.field + "-" + combo.active);
+  }
+
+  // Picking a known wine fills only the empty fields (a typed price or note
+  // stays), marks them "From cellar" and offers Undo.
+  _pickCombo(form, index) {
+    var combo = this._combo;
+    if (!combo || !combo.items[index]) return;
+    var item = combo.items[index];
+    var field = combo.field;
+    var input = this._sheetField(form, field);
+    this._closeCombo(form);
+    if (field !== "wine_name") {
+      input.value = item.value;
+      this._unmarkSheetField(form, field);
+      this._syncSheetMore(form);
+      this._syncSheetDuplicate(form);
+      input.focus();
+      return;
+    }
+    var source = item.sample || {};
+    var suggestion = {
+      producer: source.producer, region: source.region, country: source.country, varietal: source.varietal, vintage: source.vintage,
+      wine_type: source.wine_type, price: source.price, image_path: source.image_path, aging_start_year: source.aging_start_year,
+      aging_end_year: source.aging_end_year, serving_temp: source.serving_temp, alcohol_pct: source.alcohol_pct, saq_url: source.saq_url
+    };
+    var before = this._sheetValues(form, Object.keys(suggestion));
+    input.value = item.name;
+    this._sheetFilling = true;
+    var changed;
+    try {
+      changed = this._applySuggestionToBottleForm(form, suggestion, false);
+    } finally {
+      this._sheetFilling = false;
+    }
+    this._afterSheetFill(form, changed, before, "cellar", _TN("sheet_note_cellar", this._filledCount(changed), {
+      name: item.name + (item.vintage ? " " + item.vintage : "")
+    }));
+    input.focus();
+  }
+
+  // How many of the sheet's fields a fill changed, as the user sees them
+  // (the drinking window's two years are one field, the photo is not one).
+  _filledCount(changed) {
+    var seen = {};
+    changed.forEach(function (name) {
+      if (name !== "image_path") seen[/^aging_/.test(name) ? "window" : name] = true;
+    });
+    return Object.keys(seen).length;
+  }
+
+  _sheetValues(form, names) {
+    var self = this;
+    var out = {};
+    names.forEach(function (name) {
+      var el = self._sheetField(form, name);
+      if (el) out[name] = el.value;
+    });
+    return out;
+  }
+
+  // After a fill: marks, the note with Undo, the photo tile if the label
+  // came along, and everything that follows the fields.
+  _afterSheetFill(form, changed, before, source, text) {
+    var ui = this._modal.ui || (this._modal.ui = {});
+    var visible = changed.filter(function (n) { return n !== "image_path"; });
+    if (changed.indexOf("image_path") >= 0) this._refreshSheetTile(form);
+    if (visible.length) {
+      ui.undo = { values: {} };
+      changed.forEach(function (n) { ui.undo.values[n] = before[n]; });
+      this._markSheetFields(form, visible, source);
+      this._setSheetNote(form, { kind: source, text: text, undo: true });
+    } else if (source === "ai") {
+      this._setSheetNote(form, { kind: "info", text: _T("sheet_note_none") });
+    }
+    this._syncSheet(form);
+  }
+
+  _undoSheetFill(form) {
+    var self = this;
+    var ui = this._modal && this._modal.ui;
+    if (!ui || !ui.undo) return;
+    var values = ui.undo.values;
+    this._sheetFilling = true;
+    try {
+      Object.keys(values).forEach(function (name) {
+        var control = self._sheetField(form, name);
+        if (!control) return;
+        var value = values[name] == null ? "" : values[name];
+        if (name === "wine_type" && !value) value = "unset";
+        if (name === "rating" && !value) value = "0";
+        control.value = value;
+        self._unmarkSheetField(form, name);
+      });
+    } finally {
+      this._sheetFilling = false;
+    }
+    if (Object.prototype.hasOwnProperty.call(values, "image_path")) this._refreshSheetTile(form);
+    ui.undo = null;
+    this._setSheetNote(form, null);
+    this._syncSheet(form);
+  }
+
+  /* Photos. A picked or dropped photo is shrunk, uploaded and, when label
+     reading is set up, read straight away. */
+
+  async _handleSheetFile(form, file, kind) {
+    var self = this;
+    var m = this._modal;
+    if (!m || !file) return;
+    this._setFormError("");
+    if (m.ui && m.ui.note && m.ui.note.kind === "warn") this._setSheetNote(form, null);
+    if (file.type && file.type.indexOf("image/") !== 0) {
+      this._setSheetNote(form, { kind: "warn", text: _T("file_not_image") });
+      return;
+    }
+    if (kind === "barcode") {
+      await this._readSheetBarcode(form, file);
+      return;
+    }
+    this._setSheetStage(form, "review");
+    var old = m.photo && m.photo.preview;
+    // A photo picked while this one is still on its way replaces it: what
+    // this one has left to do is dropped (m.photo is no longer photo).
+    var photo = m.photo = this._startSheetUpload({ preview: URL.createObjectURL(file), busy: true, status: _T("sheet_st_preparing") });
+    if (old && old.indexOf("blob:") === 0) URL.revokeObjectURL(old);
+    function current() { return self._modal === m && m.photo === photo; }
+    this._refreshSheetTile(form);
+    try {
+      var blob;
+      try {
+        blob = await _wcmDownscaleImage(file, 1600, 0.82);
+      } catch (err) {
+        throw Object.assign(new Error("format"), { photoFormat: true });
+      }
+      if (!current()) return;
+      var previous = photo.preview;
+      photo.preview = URL.createObjectURL(blob);
+      URL.revokeObjectURL(previous);
+      photo.status = _T("sheet_st_uploading");
+      this._refreshSheetTile(this._liveSheetForm(m));
+      var filename = String(file.name || "label").replace(/\.[a-z0-9]+$/i, "").replace(/[^\w.-]+/g, "_").slice(0, 60) + ".jpg";
+      var result = await this._callWS({ type: "wine_cellar_manager/upload_label_image", data_base64: await _wcmBlobToBase64(blob), filename: filename });
+      if (!current()) return;
+      if (!result || !result.image_path) throw new Error(_T("unknown_error"));
+      var live = this._liveSheetForm(m);
+      if (live) this._sheetField(live, "image_path").value = result.image_path;
+      photo.busy = false;
+      photo.status = "";
+      // Save pressed meanwhile: the bottle is being saved now, no reading.
+      var saving = m.saving;
+      photo.settle();
+      this._refreshSheetTile(live);
+      if (live && !saving && this._analysisAvailable()) await this._analyzeSheet(live, { image_path: result.image_path });
+    } catch (err) {
+      if (!current()) return;
+      if (m.photo && m.photo.preview) URL.revokeObjectURL(m.photo.preview);
+      m.photo = null;
+      var form2 = this._liveSheetForm(m);
+      if (form2) {
+        var pathInput = this._sheetField(form2, "image_path");
+        pathInput.value = pathInput.defaultValue || "";
+        this._refreshSheetTile(form2);
+      }
+      this._setSheetNote(form2, {
+        kind: "warn",
+        text: err && err.photoFormat ? _T("sheet_err_photo_format") : _T("sheet_err_photo_upload", { error: this._friendlyError(err) })
+      });
+    } finally {
+      photo.settle();
+    }
+  }
+
+  // Marks a photo as on its way to the server: photo.uploaded settles once
+  // it is there (or failed, or was replaced), so Save can wait for it
+  // instead of saving the bottle without its picture.
+  _startSheetUpload(photo) {
+    var done;
+    photo.uploading = true;
+    photo.uploaded = new Promise(function (resolve) { done = resolve; });
+    photo.settle = function () {
+      photo.uploading = false;
+      done();
+    };
+    return photo;
+  }
+
+  // A photo of an SAQ barcode: read the digits, then look the wine up.
+  async _readSheetBarcode(form, file) {
+    var self = this;
+    var m = this._modal;
+    this._setSheetStage(form, "review");
+    this._setSheetNote(form, { kind: "info", spin: true, text: _T("sheet_st_barcode") });
+    try {
+      var blob = await _wcmDownscaleImage(file, 2000, 0.88);
+      var filename = "temp_barcode_" + String(file.name || "scan").replace(/\.[a-z0-9]+$/i, "").replace(/[^\w.-]+/g, "_").slice(0, 40) + ".jpg";
+      var upload = await this._callWS({ type: "wine_cellar_manager/upload_label_image", data_base64: await _wcmBlobToBase64(blob), filename: filename });
+      var result = await this._callWS({ type: "wine_cellar_manager/unified_analyze", barcode: "", image_path: (upload && upload.image_path) || "" });
+      var live = this._liveSheetForm(m);
+      if (!live) return;
+      var code = result && result.suggestion && result.suggestion.barcode;
+      if (!code) {
+        this._setSheetNote(live, { kind: "warn", text: (result && result.message) || _T("no_barcode_found") });
+        return;
+      }
+      this._sheetField(live, "barcode").value = code;
+      this._markSheetFields(live, ["barcode"], "ai");
+      this._syncSheetMore(live);
+      await this._analyzeSheet(live, { barcode: code });
+    } catch (err) {
+      console.error("Wine Cellar: barcode reading failed", err);
+      this._setSheetNote(this._liveSheetForm(m), { kind: "warn", text: _T("barcode_extraction_failed") });
+    }
+  }
+
+  // Label reading (or an SAQ lookup by barcode). The fields it may fill
+  // shimmer meanwhile; the user can keep typing, since only fields still
+  // empty when the answer comes are filled.
+  async _analyzeSheet(form, source) {
+    var self = this;
+    var m = this._modal;
+    if (!m || !form) return;
+    // Only the latest reading counts; a label reading also ends when
+    // another photo replaces the one being read.
+    var token = m.readSeq = (m.readSeq || 0) + 1;
+    m.analyzing = true;
+    m.photo = m.photo || {};
+    var photo = m.photo;
+    function outdated() { return self._modal !== m || m.readSeq !== token; }
+    function replaced() { return !!source.image_path && m.photo !== photo; }
+    function clearReading() {
+      var box = self._liveSheetForm(m);
+      if (!box) return;
+      box.querySelectorAll(".is-shimmer").forEach(function (el) { el.classList.remove("is-shimmer"); });
+      self._setSheetNote(box, null);
+    }
+    if (source.image_path) {
+      m.photo.busy = true;
+      m.photo.status = _T("sheet_st_reading");
+      this._refreshSheetTile(form);
+    }
+    this._setSheetNote(form, { kind: "info", spin: true, text: _T("sheet_note_reading") });
+    ["wine_name", "producer", "vintage", "wine_type", "region", "country", "varietal"].forEach(function (name) {
+      var el = self._sheetField(form, name);
+      var box = self._sheetFieldBox(form, name);
+      var empty = name === "wine_type" ? (!el || el.value === "unset") : !(el && String(el.value).trim());
+      if (box && empty) box.classList.add("is-shimmer");
+    });
+    try {
+      var result = await this._callWS({ type: "wine_cellar_manager/unified_analyze", image_path: source.image_path || "", barcode: source.barcode || "" });
+      if (outdated()) return;
+      if (replaced()) {
+        clearReading();
+        return;
+      }
+      var live = this._liveSheetForm(m);
+      if (!live) return;
+      live.querySelectorAll(".is-shimmer").forEach(function (box) { box.classList.remove("is-shimmer"); });
+      var suggestion = result && result.suggestion;
+      if (!suggestion) {
+        this._setSheetNote(live, { kind: "warn", text: (result && result.message) || _T("sheet_note_none") });
+        return;
+      }
+      var before = this._sheetValues(live, Object.keys(suggestion));
+      this._sheetFilling = true;
+      var changed;
+      try {
+        changed = this._applySuggestionToBottleForm(live, suggestion, false);
+      } finally {
+        this._sheetFilling = false;
+      }
+      this._sheetField(live, "analyzed_flag").value = "true";
+      if (m.photo) m.photo.read = true;
+      this._afterSheetFill(live, changed, before, "ai", _TN("sheet_note_ai", this._filledCount(changed)));
+    } catch (err) {
+      console.error("Wine Cellar: label reading failed", err);
+      if (outdated()) return;
+      if (replaced()) {
+        clearReading();
+        return;
+      }
+      var failed = this._liveSheetForm(m);
+      if (failed) failed.querySelectorAll(".is-shimmer").forEach(function (box) { box.classList.remove("is-shimmer"); });
+      this._setSheetNote(failed, { kind: "warn", text: _T("sheet_note_fail") });
+    } finally {
+      if (!outdated()) {
+        m.analyzing = false;
+        if (m.photo === photo) {
+          photo.busy = false;
+          photo.status = "";
+        }
+        this._refreshSheetTile(this._liveSheetForm(m));
+      }
+    }
+  }
+
+  // Turns the label photo a quarter and uploads it again.
+  async _rotateSheetPhoto(form) {
+    var m = this._modal;
+    var path = this._sheetField(form, "image_path").value;
+    var src = (m.photo && m.photo.preview) || this._normalizeImagePath(path);
+    if (!src) return;
+    var photo = m.photo = this._startSheetUpload(Object.assign({}, m.photo || {}, { busy: true, status: _T("sheet_st_uploading") }));
+    var self = this;
+    function current() { return self._modal === m && m.photo === photo; }
+    this._refreshSheetTile(form);
+    try {
+      var blob = await _wcmDownscaleImage(src, 1600, 0.85, 90);
+      if (!current()) return;
+      var previous = photo.preview;
+      photo.preview = URL.createObjectURL(blob);
+      if (previous && previous.indexOf("blob:") === 0) URL.revokeObjectURL(previous);
+      var result = await this._callWS({ type: "wine_cellar_manager/upload_label_image", data_base64: await _wcmBlobToBase64(blob), filename: "label_" + Date.now() + ".jpg" });
+      if (!current()) return;
+      var live = this._liveSheetForm(m);
+      if (live && result && result.image_path) this._sheetField(live, "image_path").value = result.image_path;
+    } catch (err) {
+      if (!current()) return;
+      this._setSheetNote(this._liveSheetForm(m), { kind: "warn", text: _T("sheet_err_photo_upload", { error: this._friendlyError(err) }) });
+    } finally {
+      photo.settle();
+      if (current()) {
+        photo.busy = false;
+        photo.status = "";
+        this._refreshSheetTile(this._liveSheetForm(m));
+      }
+    }
+  }
+
+  _removeSheetPhoto(form) {
+    this._releaseSheetPhoto();
+    this._modal.photo = null;
+    this._sheetField(form, "image_path").value = "";
+    this._refreshSheetTile(form);
+    var pick = form.querySelector('[data-sheet-pick="camera"], [data-sheet-pick="library"]');
+    if (pick) pick.focus();
+  }
+
+  // The preview of a photo not uploaded yet lives in a blob: URL.
+  _releaseSheetPhoto() {
+    var photo = this._modal && this._modal.photo;
+    if (photo && photo.preview && photo.preview.indexOf("blob:") === 0) URL.revokeObjectURL(photo.preview);
+  }
+
+  /* Validation and saving. */
+
+  // Checks the sheet and shows the first problem next to its field.
+  _validateBottleForm(form) {
+    var self = this;
+    this._clearSheetErrors(form);
+    if (!String(this._sheetField(form, "wine_name").value || "").trim()) return this._sheetFieldError(form, "wine_name", _T("sheet_err_name"));
+    var years = ["vintage", "aging_start_year", "aging_end_year"];
+    for (var i = 0; i < years.length; i++) {
+      var year = String(this._sheetField(form, years[i]).value || "").trim();
+      if (year && !/^\d{4}$/.test(year)) return this._sheetFieldError(form, years[i], _T("sheet_err_year"));
+    }
+    var from = String(this._sheetField(form, "aging_start_year").value || "").trim();
+    var to = String(this._sheetField(form, "aging_end_year").value || "").trim();
+    if (from && to && Number(from) > Number(to)) return this._sheetFieldError(form, "aging_end_year", _T("sheet_err_window"));
+    var bad = ["price", "serving_temp", "alcohol_pct"].find(function (name) {
+      var el = self._sheetField(form, name);
+      return el && ((el.validity && el.validity.badInput) || (String(el.value).trim() && !Number.isFinite(Number(el.value))));
+    });
+    if (bad) return this._sheetFieldError(form, bad, _T("sheet_err_number"));
+    if (!this._sheetField(form, "shelf_id").value) return this._sheetFieldError(form, "place", _T("sheet_err_no_slot"));
+    return true;
+  }
+
+  // The slot and the essentials of a bottle about to be saved; "" when fine.
+  _validateBottlePayload(payload) {
+    if (!payload.cellar_id || !payload.shelf_id || (payload.lane !== "front" && payload.lane !== "back") ||
+        !Number.isInteger(payload.position) || payload.position < 1) return _T("sheet_err_no_slot");
+    if (!payload.wine_name || !String(payload.wine_name).trim()) return _T("sheet_err_name");
+    var shelf = this._getShelfById(payload.cellar_id, payload.shelf_id);
+    if (!shelf) return _T("err_shelf_missing");
+    var capacity = payload.lane === "back" ? Number(shelf.capacity_back || 0) : Number(shelf.capacity_front || 0);
+    if (capacity < 1 || payload.position > capacity) return _T("err_position_out_of_range");
+    var conflict = ((this._data && this._data.bottles) || []).find(function (b) {
+      return b.cellar_id === payload.cellar_id && b.shelf_id === payload.shelf_id && String(b.lane) === String(payload.lane) &&
+        Number(b.position) === payload.position && b.id !== payload.bottle_id;
+    });
+    if (conflict) return _T("sheet_err_slot_taken", { name: conflict.wine_name || _T("unnamed_wine") });
+    if (payload.aging_start_year !== null && payload.aging_end_year !== null && payload.aging_start_year > payload.aging_end_year) return _T("sheet_err_window");
+    if (payload.rating !== null && (payload.rating < 0 || payload.rating > 5)) return _T("err_rating_range");
+    return "";
+  }
+
+  // Saves the sheet: one bottle per planned slot (a quantity of 3 fills 3
+  // free slots in order). opts.another keeps the sheet open, cleared, on the
+  // next free slot. The new bottles pulse on the shelves and a toast says
+  // where they went.
+  async _saveBottleFromForm(form, opts) {
+    opts = opts || {};
+    var self = this;
+    var m = this._modal;
+    if (!m || m.saving) return;
+    this._setFormError("");
+    if (!this._validateBottleForm(form)) return;
+    // A label photo still on its way to the server: wait for it, so the
+    // bottle is saved with its picture (and the upload is not lost).
+    if (m.photo && m.photo.uploading) {
+      m.saving = true;
+      form.querySelectorAll("[data-sheet-save]").forEach(function (b) { b.disabled = true; });
+      form.setAttribute("aria-busy", "true");
+      var waitLabel = form.querySelector("[data-sheet-save-label]");
+      if (waitLabel) waitLabel.textContent = _T("sheet_wait_photo");
+      while (m.photo && m.photo.uploading) await m.photo.uploaded;
+      m.saving = false;
+      if (this._modal !== m) return;
+      form = this._liveSheetForm(m) || form;
+      form.removeAttribute("aria-busy");
+      form.querySelectorAll("[data-sheet-save]").forEach(function (b) { b.disabled = false; });
+      this._syncSheetPlace(form);
+      // The upload failed: its note says why; the user decides what next.
+      if (!m.photo) return;
+    }
+    var fd = new FormData(form);
+    function text(key) { return self._str(fd.get(key)).trim(); }
+    var base = {
+      type: "wine_cellar_manager/save_bottle",
+      bottle_id: text("bottle_id") || undefined,
+      cellar_id: text("cellar_id"),
+      shelf_id: text("shelf_id"),
+      lane: text("lane") || "front",
+      position: this._intOrNull(fd.get("position")),
+      wine_name: text("wine_name"),
+      producer: text("producer"),
+      region: text("region"),
+      country: text("country"),
+      varietal: text("varietal"),
+      vintage: this._intOrNull(fd.get("vintage")),
+      wine_type: text("wine_type") || "unset",
+      price: this._floatOrNull(fd.get("price")),
+      serving_temp: this._floatOrNull(fd.get("serving_temp")),
+      alcohol_pct: this._floatOrNull(fd.get("alcohol_pct")),
+      image_path: text("image_path"),
+      barcode: text("barcode"),
+      saq_url: text("saq_url"),
+      aging_start_year: this._intOrNull(fd.get("aging_start_year")),
+      aging_end_year: this._intOrNull(fd.get("aging_end_year")),
+      // "None" is no rating at all, as a bottle never rated has.
+      rating: this._intOrNull(fd.get("rating")) || null,
+      notes: text("notes")
+    };
+    var isEdit = !!base.bottle_id;
+    if (!isEdit) delete base.bottle_id;
+    var qty = isEdit ? 1 : Math.max(1, parseInt(fd.get("qty"), 10) || 1);
+    var start = { cellar_id: base.cellar_id, shelf_id: base.shelf_id, lane: base.lane, position: base.position };
+    var slots = isEdit ? [start] : this._planSlots(base.cellar_id, start, qty);
+    if (!isEdit && slots.length < qty) {
+      var cellar = this._cellarById(base.cellar_id);
+      return this._sheetFieldError(form, "place", _TN("sheet_err_not_enough", slots.length, { cellar: cellar ? cellar.name : "" }));
+    }
+    function at(slot) {
+      return { cellar_id: slot.cellar_id || base.cellar_id, shelf_id: slot.shelf_id, lane: slot.lane, position: Number(slot.position) };
+    }
+    var problem = this._validateBottlePayload(Object.assign({}, base, at(slots[0])));
+    if (problem) return this._sheetFieldError(form, problem === _T("sheet_err_name") ? "wine_name" : "place", problem);
+
+    // Manual entry (no photo) keeps the next sheet on the typing step.
+    var manual = !!(m.ui && m.ui.stage === "review" && !(m.photo && m.photo.preview) && !base.image_path);
+    var buttons = form.querySelectorAll("[data-sheet-save]");
+    var label = form.querySelector("[data-sheet-save-label]");
+    m.saving = true;
+    buttons.forEach(function (b) { b.disabled = true; });
+    form.setAttribute("aria-busy", "true");
+    if (label) label.textContent = _T("sheet_saving");
+    var saved = [];
+    var failure = null;
+    var retries = 0;
+    var lastTaken = null;
+    function taken(err) { return /occupied/i.test(String((err && err.message) || err)); }
+    for (var i = 0; i < slots.length; i++) {
+      if (slots.length > 1 && label) label.textContent = _T("sheet_saving_n", { i: i + 1, n: slots.length });
+      var payload = Object.assign({}, base, at(slots[i]));
+      try {
+        var result = await this._callWS(payload);
+        saved.push(Object.assign({ saved_id: result && result.bottle_id }, payload));
+      } catch (err) {
+        // A later bottle's slot was taken meanwhile (another device): those
+        // slots were picked for the user, so pick the next free ones again
+        // and go on. The first slot is the user's own choice: it only
+        // changes with their say (below).
+        if (i > 0 && !isEdit && taken(err) && retries < 5) {
+          retries++;
+          lastTaken = err;
+          var rest = [];
+          try {
+            await this._loadData(true);
+            rest = this._planSlots(base.cellar_id, at(slots[i]), slots.length - i);
+          } catch (loadErr) {
+            console.error("Wine Cellar: reload during save failed", loadErr);
+          }
+          if (rest.length) {
+            slots = slots.slice(0, i).concat(rest);
+            i--;
+            continue;
+          }
+        }
+        failure = err;
+        break;
+      }
+    }
+    // Fewer free slots were left than bottles to save.
+    if (!failure && saved.length < qty) failure = lastTaken || new Error(_T("unknown_error"));
+    m.saving = false;
+    try {
+      await this._loadData(true);
+    } catch (err) {
+      console.error("Wine Cellar: reload after save failed", err);
     }
 
-    return shelves.map(function (s) {
-      // How many bottles the shelf holds: shown on the row, and a shelf that
-      // holds any cannot be removed (the server would refuse it on Save).
-      var stored = s.id ? bottles.filter(function (b) { return b.shelf_id === s.id; }).length : 0;
-      self._shelfRowSeq = (self._shelfRowSeq || 0) + 1;
-      var hintId = "wcm-shelf-hint-" + self._shelfRowSeq;
-      return [
-        '<div class="shelf-row" data-shelf-row style="border:1px solid color-mix(in srgb,var(--primary-text-color) 8%, transparent);padding:14px;border-radius:12px;margin-bottom:10px;position:relative;background:color-mix(in srgb,var(--secondary-background-color) 30%, transparent);padding-top:34px">',
-        s.id ? '  <span class="shelf-stored">' + self._escape(stored ? _T("shelf_stored", { n: stored }) : _T("shelf_empty")) + "</span>" : "",
-        '  <input type="hidden" name="shelf_id[]" value="' + self._escape(s.id || "") + '">',
-        '  <div style="margin-bottom:6px">',
-        '    <label style="font-size:0.85rem">' + _T("shelf_name") + '<input type="text" name="shelf_name[]" value="' + self._escape(s.name || "") + '" style="padding:6px" required></label>',
-        '  </div>',
-        '  <div class="grid3" style="gap:8px">',
-        '    <label style="font-size:0.85rem">' + _T("order") + '<input type="number" name="shelf_display_order[]" min="0" value="' + self._escape(value(s.display_order, 0)) + '" style="padding:6px"></label>',
-        '    <label style="font-size:0.85rem">' + _T("front_capacity") + '<input type="number" name="capacity_front[]" min="1" value="' + self._escape(value(s.capacity_front, 6)) + '" style="padding:6px" required></label>',
-        '    <label style="font-size:0.85rem">' + _T("back_capacity") + '<input type="number" name="capacity_back[]" min="0" value="' + self._escape(value(s.capacity_back, 0)) + '" style="padding:6px"></label>',
-        '  </div>',
-        stored ? '  <p class="shelf-remove-hint" id="' + hintId + '">' + self._escape(_T("shelf_remove_blocked")) + "</p>" : "",
-        '  <button class="btn danger small-btn" type="button" data-remove-shelf' + (stored ? ' disabled aria-describedby="' + hintId + '"' : "") + ' style="position:absolute;top:10px;right:10px;padding:4px 8px;font-size:0.75rem">' + _T("remove") + '</button>',
-        '</div>'
-      ].join("");
-    }).join("");
+    if (failure && !saved.length) {
+      console.error("Bottle save failed", failure);
+      var live = this._liveSheetForm(m) || form;
+      live.querySelectorAll("[data-sheet-save]").forEach(function (b) { b.disabled = false; });
+      live.removeAttribute("aria-busy");
+      // Taken meanwhile (another device): point at the next free slot.
+      if (!isEdit && /occupied/i.test(String((failure && failure.message) || failure))) {
+        var next = this._planSlots(base.cellar_id, start, 1)[0] || this._findFreeSlot();
+        if (next) {
+          this._sheetField(live, "cellar_id").value = next.cellar_id;
+          this._sheetField(live, "shelf_id").value = next.shelf_id;
+          this._sheetField(live, "lane").value = next.lane;
+          this._sheetField(live, "position").value = next.position;
+        }
+        this._refreshSlotPicker(live);
+        this._setFormError(_T("sheet_err_slot_moved"));
+      } else {
+        this._refreshSlotPicker(live);
+        this._setFormError(_T("sheet_err_save", { error: this._friendlyError(failure) }));
+      }
+      this._syncSheetPlace(live);
+      return;
+    }
+
+    var bottles = (this._data && this._data.bottles) || [];
+    var ids = saved.map(function (p) {
+      if (p.bottle_id) return p.bottle_id;
+      var found = bottles.find(function (b) {
+        return b.cellar_id === p.cellar_id && b.shelf_id === p.shelf_id && String(b.lane) === String(p.lane) && Number(b.position) === p.position;
+      });
+      return found ? found.id : p.saved_id || null;
+    }).filter(Boolean);
+
+    if (isEdit) {
+      var fresh = bottles.find(function (b) { return b.id === base.bottle_id; });
+      this._modal = { type: "bottle", uid: ++this._modalSeq, bottle: fresh || null, preset: {}, mode: "view", ui: {} };
+      await this.render(true);
+      this._showToast(_T("sheet_saved_edit"));
+      return;
+    }
+
+    if (failure) {
+      // Only some were saved: the sheet stays open, all its details kept,
+      // for the ones left, planned on the next free slots.
+      var open = this._liveSheetForm(m) || form;
+      var left = qty - saved.length;
+      var after = this._nextFreeSlot(base.cellar_id, at(saved[saved.length - 1]));
+      open.querySelectorAll("[data-sheet-save]").forEach(function (b) { b.disabled = false; });
+      open.removeAttribute("aria-busy");
+      this._sheetField(open, "qty").value = left;
+      if (after) {
+        this._sheetField(open, "cellar_id").value = after.cellar_id;
+        this._sheetField(open, "shelf_id").value = after.shelf_id;
+        this._sheetField(open, "lane").value = after.lane;
+        this._sheetField(open, "position").value = after.position;
+      }
+      this._refreshSlotPicker(open);
+      this._syncSheetPlace(open);
+      this._setFormError(_TN("sheet_err_partial_left", left, { i: saved.length, total: qty, error: this._friendlyError(failure) }));
+      return;
+    }
+    var where = saved.length > 1 ? this._plannedWhere(saved.map(at)) : this._slotWhere(at(saved[0]));
+    var message = saved.length > 1 ? _T("sheet_saved_n", { n: saved.length, where: where }) : _T("sheet_saved_one", { name: base.wine_name, where: where });
+    var kind = "ok";
+    var view = ids.length ? {
+      label: _T("view"),
+      run: function () {
+        var b = ((self._data && self._data.bottles) || []).find(function (x) { return x.id === ids[0]; });
+        // The next sheet may already hold a new bottle: ask before leaving it.
+        if (b) self._confirmDiscard(function () { self._openBottleModal(b); });
+      }
+    } : null;
+    this._pendingPulse = { ids: ids, focus: false };
+    if (opts.another) {
+      var last = saved[saved.length - 1];
+      var next2 = this._nextFreeSlot(base.cellar_id, at(last));
+      this._openBottleModal(null, Object.assign({ wine_type: "unset", rating: 0 },
+        next2 ? { cellar_id: next2.cellar_id, shelf_id: next2.shelf_id, lane: next2.lane, position: next2.position } : { cellar_id: base.cellar_id }));
+      if (manual) this._modal.ui.stage = "review";
+      this._modal.focusName = true;
+    } else {
+      await this._closeModal();
+    }
+    this._showToast(message, { action: view, kind: kind });
+  }
+
+  /* The slot picker on screen. */
+
+  _refreshSlotPicker(form, focusSelector) {
+    var box = form && form.querySelector("[data-sheet-picker]");
+    if (!box) return;
+    var m = this._modal;
+    var isEdit = !!(m && m.bottle && m.bottle.id);
+    var loc = this._sheetLocation(form);
+    var qty = Number(this._sheetField(form, "qty").value) || 1;
+    var hadFocus = box.contains(this.shadowRoot.activeElement);
+    var before = box.querySelector(".cabinet.picker .interior");
+    var sameCellar = before && box.querySelector("[data-pick-cellar-id]").getAttribute("data-pick-cellar-id") === loc.cellar_id;
+    box.innerHTML = this._renderSlotPicker({ cellarId: loc.cellar_id, sel: loc, qty: qty, ownId: isEdit ? m.bottle.id : null, from: isEdit ? m.bottle : null });
+    this._fitSlotPicker(box, sameCellar ? before.scrollLeft : 0);
+    var shown = box.querySelector("[data-pick-qty-v]");
+    if (shown) this._sheetField(form, "qty").value = shown.textContent;
+    if (focusSelector || hadFocus) {
+      var target = (focusSelector && box.querySelector(focusSelector)) || box.querySelector(".mm-dot.sel") || box.querySelector(".pk-tab.on");
+      if (target && !target.disabled) target.focus({ preventScroll: true });
+    }
+    var error = form.querySelector('[data-err-for="place"]');
+    if (error) error.hidden = true;
+    this._syncSheetPlace(form);
+  }
+
+  // When a row is too wide for the picker's column its shelves scroll
+  // sideways inside it: this keeps where the user had scrolled, brings the
+  // chosen slot into view once the picker is on screen and fades the edge
+  // that hides more slots.
+  _fitSlotPicker(box, scrollLeft) {
+    var self = this;
+    var interior = box && box.querySelector(".cabinet.picker .interior");
+    if (this._pickerObserver) this._pickerObserver.disconnect();
+    if (!interior) return;
+    if (scrollLeft) interior.scrollLeft = scrollLeft;
+    interior.addEventListener("scroll", function () { self._pickerEdges(interior); }, { passive: true });
+    if (window.ResizeObserver) {
+      if (!this._pickerObserver) {
+        this._pickerObserver = new ResizeObserver(function (entries) {
+          entries.forEach(function (entry) { self._revealPickerSlot(entry.target); });
+        });
+      }
+      this._pickerObserver.observe(interior);
+    }
+    this._revealPickerSlot(interior);
+  }
+
+  _revealPickerSlot(interior) {
+    if (!interior.clientWidth) return; // not on screen yet (photo step)
+    var sel = interior.querySelector(".mm-dot.sel") || interior.querySelector(".mm-dot.own");
+    if (!interior._wcmRevealed && sel && interior.scrollWidth > interior.clientWidth + 1) {
+      var box = interior.getBoundingClientRect();
+      var dot = sel.getBoundingClientRect();
+      if (dot.left < box.left + 24 || dot.right > box.right - 24) interior.scrollLeft += dot.left + dot.width / 2 - (box.left + box.width / 2);
+    }
+    interior._wcmRevealed = true;
+    this._pickerEdges(interior);
+  }
+
+  _pickerEdges(interior) {
+    var max = interior.scrollWidth - interior.clientWidth;
+    interior.classList.toggle("can-l", max > 1 && interior.scrollLeft > 1);
+    interior.classList.toggle("can-r", max > 1 && interior.scrollLeft < max - 1);
+  }
+
+  _pickSheetSlot(form, key) {
+    var parts = String(key).split("|");
+    this._sheetField(form, "shelf_id").value = parts[0];
+    this._sheetField(form, "lane").value = parts[1];
+    this._sheetField(form, "position").value = parts[2];
+    this._setFormError("");
+    this._refreshSlotPicker(form, '[data-pick-slot="' + this._cssEscape(key) + '"]');
+  }
+
+  _pickSheetCellar(form, cellarId) {
+    var m = this._modal;
+    var own = m.bottle && m.bottle.id && m.bottle.cellar_id === cellarId ? m.bottle : null;
+    var slot = own || this._findFreeSlot(cellarId);
+    this._sheetField(form, "cellar_id").value = cellarId;
+    this._sheetField(form, "shelf_id").value = slot ? slot.shelf_id : "";
+    this._sheetField(form, "lane").value = slot ? slot.lane : "front";
+    this._sheetField(form, "position").value = slot ? slot.position : "";
+    this._refreshSlotPicker(form, '[data-pick-cellar="' + this._cssEscape(cellarId) + '"]');
+  }
+
+  _cssEscape(value) {
+    return window.CSS && CSS.escape ? CSS.escape(value) : String(value).replace(/["\\]/g, "\\$&");
+  }
+
+  // Arrow keys move between the free slots of the picker (roving focus).
+  _onPickerKey(form, e) {
+    var keys = { ArrowLeft: 1, ArrowRight: 1, ArrowUp: 1, ArrowDown: 1, Home: 1, End: 1 };
+    if (!keys[e.key]) return;
+    var buttons = Array.prototype.slice.call(form.querySelectorAll("button.mm-dot"));
+    var i = buttons.indexOf(e.target);
+    if (i < 0) return;
+    e.preventDefault();
+    var next = null;
+    if (e.key === "ArrowLeft") next = buttons[i - 1];
+    else if (e.key === "ArrowRight") next = buttons[i + 1];
+    else if (e.key === "Home") next = buttons[0];
+    else if (e.key === "End") next = buttons[buttons.length - 1];
+    else {
+      var r = e.target.getBoundingClientRect();
+      var cx = r.left + r.width / 2;
+      var cy = r.top + r.height / 2;
+      var best = Infinity;
+      buttons.forEach(function (b) {
+        if (b === e.target) return;
+        var q = b.getBoundingClientRect();
+        var dy = q.top + q.height / 2 - cy;
+        if (e.key === "ArrowUp" ? dy > -4 : dy < 4) return;
+        var score = Math.abs(dy) * 3 + Math.abs(q.left + q.width / 2 - cx);
+        if (score < best) {
+          best = score;
+          next = b;
+        }
+      });
+    }
+    if (next) {
+      buttons.forEach(function (b) { b.tabIndex = -1; });
+      next.tabIndex = 0;
+      next.focus();
+    }
+  }
+
+  // Everything the sheet does, bound on its form (capture phase: the
+  // dialog's controls stop their own clicks and keys from bubbling).
+  _bindBottleSheet(form) {
+    var self = this;
+    var dupTimer = null;
+    var m = this._modal;
+    form.addEventListener("submit", function (e) { e.preventDefault(); });
+    // A pressed suggestion must not take the focus from its field.
+    form.addEventListener("pointerdown", function (e) {
+      if (e.target.closest && e.target.closest(".sheet-opt")) e.preventDefault();
+    }, true);
+    form.addEventListener("click", function (e) {
+      var t = e.target;
+      var el;
+      if (!t.closest) return;
+      if ((el = t.closest(".sheet-opt"))) {
+        e.preventDefault();
+        self._pickCombo(form, Number(el.getAttribute("data-i")));
+      } else if ((el = t.closest("[data-sheet-pick]"))) {
+        e.preventDefault();
+        var input = form.querySelector('[data-sheet-file="' + el.getAttribute("data-sheet-pick") + '"]');
+        if (input) {
+          input.value = "";
+          input.click();
+        }
+      } else if (t.closest("[data-sheet-instead]")) {
+        e.preventDefault();
+        self._setSheetStage(form, "review");
+        var name = self._sheetField(form, "wine_name");
+        name.focus({ preventScroll: true });
+        name.scrollIntoView({ block: "center" });
+      } else if (t.closest("[data-sheet-rotate]")) {
+        e.preventDefault();
+        self._rotateSheetPhoto(form);
+      } else if (t.closest("[data-sheet-remove]")) {
+        e.preventDefault();
+        self._removeSheetPhoto(form);
+      } else if (t.closest("[data-sheet-read]")) {
+        e.preventDefault();
+        self._analyzeSheet(form, { image_path: self._sheetField(form, "image_path").value });
+      } else if (t.closest("[data-sheet-lookup]")) {
+        e.preventDefault();
+        var code = String(self._sheetField(form, "barcode").value || "").replace(/\D/g, "");
+        if (!code) self._sheetFieldError(form, "barcode", _T("provide_barcode_or_label"));
+        else self._analyzeSheet(form, { barcode: code });
+      } else if (t.closest("[data-sheet-undo]")) {
+        e.preventDefault();
+        self._undoSheetFill(form);
+      } else if ((el = t.closest("[data-pick-cellar]"))) {
+        e.preventDefault();
+        if (!el.disabled) self._pickSheetCellar(form, el.getAttribute("data-pick-cellar"));
+      } else if ((el = t.closest("[data-pick-slot]"))) {
+        e.preventDefault();
+        self._pickSheetSlot(form, el.getAttribute("data-pick-slot"));
+      } else if ((el = t.closest("[data-occupant]"))) {
+        // Touch has no hover: a tap on a taken slot says whose it is.
+        var read = form.querySelector("[data-pick-read]");
+        if (read) {
+          read.classList.add("is-peek");
+          read.querySelector("[data-pick-read-t]").textContent = _T("pick_occupied", { name: el.getAttribute("data-occupant") });
+        }
+      } else if ((el = t.closest("[data-pick-qty]"))) {
+        e.preventDefault();
+        if (el.disabled) return;
+        var qty = self._sheetField(form, "qty");
+        var step = el.getAttribute("data-pick-qty");
+        qty.value = Math.max(1, (Number(qty.value) || 1) + Number(step));
+        self._refreshSlotPicker(form, '[data-pick-qty="' + step + '"]');
+        var again = form.querySelector('[data-pick-qty="' + step + '"]');
+        if (again && again.disabled) {
+          var other = form.querySelector("[data-pick-qty]:not(:disabled)");
+          if (other) other.focus();
+        }
+      } else if ((el = t.closest("[data-sheet-save]"))) {
+        e.preventDefault();
+        self._saveBottleFromForm(form, { another: el.getAttribute("data-sheet-save") === "next" });
+      } else if (t.closest("[data-sheet-new-cellar]")) {
+        e.preventDefault();
+        self._confirmDiscard(function () { self._openCellarModal(); });
+      } else if ((el = t.closest("[data-sheet-edit-cellar]"))) {
+        e.preventDefault();
+        var cellar = self._cellarById(el.getAttribute("data-sheet-edit-cellar"));
+        self._confirmDiscard(function () { self._openCellarModal(cellar); });
+      }
+    }, true);
+    form.addEventListener("input", function (e) {
+      var t = e.target;
+      var name = t.name;
+      if (!name) return;
+      if (!self._sheetFilling) {
+        self._unmarkSheetField(form, name);
+        var error = form.querySelector('[data-err-for="' + (name.indexOf("aging_") === 0 ? "window" : name) + '"]');
+        if (error) error.hidden = true;
+        t.removeAttribute("aria-invalid");
+        if (t.hasAttribute("data-combo")) self._openCombo(form, t);
+      }
+      if (name === "wine_name" || name === "producer") {
+        clearTimeout(dupTimer);
+        dupTimer = setTimeout(function () { self._syncSheetDuplicate(form); }, 150);
+      }
+      if (name === "aging_start_year" || name === "aging_end_year") self._syncSheetWindow(form);
+      self._syncSheetMore(form);
+    }, true);
+    form.addEventListener("change", function (e) {
+      var t = e.target;
+      if (t.hasAttribute("data-sheet-file")) {
+        self._handleSheetFile(form, t.files && t.files[0], t.getAttribute("data-sheet-file"));
+        return;
+      }
+      if (t.name === "wine_type") {
+        if (!self._sheetFilling) self._unmarkSheetField(form, "wine_type");
+        self._syncSheetTypes(form);
+      }
+      if (t.name === "rating") {
+        if (!self._sheetFilling) self._unmarkSheetField(form, "rating");
+        self._syncSheetStars(form);
+        self._syncSheetMore(form);
+      }
+    }, true);
+    form.addEventListener("keydown", function (e) {
+      var t = e.target;
+      if (t.hasAttribute && t.hasAttribute("data-combo")) {
+        var open = !!(self._combo && self._combo.field === t.getAttribute("data-combo") && self._combo.items.length);
+        if (e.key === "ArrowDown" || e.key === "ArrowUp") {
+          e.preventDefault();
+          self._moveCombo(form, t, e.key === "ArrowDown" ? 1 : -1);
+          return;
+        }
+        if (e.key === "Enter" && open && self._combo.active >= 0) {
+          e.preventDefault();
+          self._pickCombo(form, self._combo.active);
+          return;
+        }
+        if (e.key === "Tab" && open) self._closeCombo(form);
+      }
+      if (t.classList && t.classList.contains("mm-dot")) self._onPickerKey(form, e);
+      if (e.key === "Enter" && (e.metaKey || e.ctrlKey)) {
+        e.preventDefault();
+        self._saveBottleFromForm(form, {});
+        return;
+      }
+      if (e.key === "Enter" && t.tagName === "INPUT") e.preventDefault();
+    }, true);
+    form.addEventListener("focusout", function (e) {
+      if (!e.target.hasAttribute || !e.target.hasAttribute("data-combo")) return;
+      setTimeout(function () {
+        var active = self.shadowRoot.activeElement;
+        if (!active || !active.hasAttribute || !active.hasAttribute("data-combo")) self._closeCombo(form);
+      }, 120);
+    }, true);
+    form.addEventListener("mouseover", function (e) {
+      var star = e.target.closest && e.target.closest(".sheet-star");
+      if (star) self._syncSheetStars(form, Array.prototype.indexOf.call(form.querySelectorAll(".sheet-star"), star) + 1);
+      var taken = e.target.closest && e.target.closest("[data-occupant]");
+      var read = form.querySelector("[data-pick-read]");
+      if (taken && read) {
+        read.classList.add("is-peek");
+        read.querySelector("[data-pick-read-t]").textContent = _T("pick_occupied", { name: taken.getAttribute("data-occupant") });
+      }
+    }, true);
+    form.addEventListener("mouseout", function (e) {
+      if (e.target.closest && e.target.closest(".sheet-star")) self._syncSheetStars(form);
+      if (e.target.closest && e.target.closest("[data-occupant]")) {
+        var read = form.querySelector("[data-pick-read]");
+        if (!read) return;
+        read.classList.remove("is-peek");
+        var loc = self._sheetLocation(form);
+        var isEdit = !!(m && m.bottle && m.bottle.id);
+        var plan = isEdit ? [loc] : self._planSlots(loc.cellar_id, loc, Number(self._sheetField(form, "qty").value) || 1);
+        read.querySelector("[data-pick-read-t]").textContent = self._planText(plan, { cellarId: loc.cellar_id, from: isEdit ? m.bottle : null });
+      }
+    }, true);
+    var more = form.querySelector("details[data-sheet-more]");
+    if (more) {
+      more.addEventListener("toggle", function () {
+        if (self._modal === m) (m.ui || (m.ui = {})).moreOpen = more.open;
+      });
+    }
+    // Desktop: drop a photo on the label tile.
+    function tileOf(e) { return e.target.closest && e.target.closest("[data-sheet-tile]"); }
+    function hasFiles(e) { return e.dataTransfer && Array.prototype.indexOf.call(e.dataTransfer.types || [], "Files") >= 0; }
+    form.addEventListener("dragover", function (e) {
+      var tile = tileOf(e);
+      if (tile && hasFiles(e)) {
+        e.preventDefault();
+        tile.classList.add("is-drag");
+      }
+    });
+    form.addEventListener("dragleave", function (e) {
+      var tile = tileOf(e);
+      if (tile && !tile.contains(e.relatedTarget)) tile.classList.remove("is-drag");
+    });
+    form.addEventListener("drop", function (e) {
+      var tile = tileOf(e);
+      if (!tile || !hasFiles(e)) return;
+      e.preventDefault();
+      tile.classList.remove("is-drag");
+      self._handleSheetFile(form, e.dataTransfer.files[0], "library");
+    });
+
+    // What the sheet showed before this paint: marks, the note, and
+    // everything derived from the fields.
+    var ui = m.ui || (m.ui = {});
+    if (ui.marks) {
+      Object.keys(ui.marks).forEach(function (name) { self._markSheetFields(form, [name], ui.marks[name]); });
+    }
+    // A "reading…" note only while the reading is still running.
+    if (ui.note && (!ui.note.spin || m.analyzing)) this._setSheetNote(form, ui.note);
+    this._syncSheet(form);
+  }
+
+  // Runs action now, or after "Discard your changes?" when the open form
+  // has unsaved edits.
+  _confirmDiscard(action) {
+    if (!this._isDialogDirty()) {
+      action();
+      return;
+    }
+    this._showDialogConfirm({
+      tone: "warning",
+      title: _T("discard_title"),
+      body: _T("discard_body"),
+      cancelLabel: _T("keep_editing"),
+      confirmLabel: _T("discard"),
+      onConfirm: function () { return action(); }
+    });
+  }
+
+  // Cancel in the edit form: back to the bottle, asking first when edited.
+  _requestCancelEdit() {
+    var self = this;
+    this._confirmDiscard(function () { self._setBottleModalMode("view"); });
+  }
+
+  /* The cellar editor, a visual builder: name, frame finish (drawn as the
+     material the cabinet gets), quick starts for a new cellar, and one row
+     per shelf with −/+ steppers for its front and back slots, how many
+     bottles it stores, up/down to reorder and Remove (blocked while it holds
+     bottles). A live preview of the cabinet follows every change. Shelves
+     are saved in the order shown. */
+
+  // What a shelf holds: bottle count, last occupied position per row, and
+  // its slots.
+  _shelfOccupancy(shelfId) {
+    var bottles = shelfId ? ((this._data && this._data.bottles) || []).filter(function (b) { return b.shelf_id === shelfId; }) : [];
+    var out = { stored: bottles.length, maxFront: 0, maxBack: 0, index: this._buildSlotIndex(bottles) };
+    bottles.forEach(function (b) {
+      if (b.lane === "back") out.maxBack = Math.max(out.maxBack, Number(b.position) || 0);
+      else out.maxFront = Math.max(out.maxFront, Number(b.position) || 0);
+    });
+    return out;
+  }
+
+  _capacityOf(value, fallback) {
+    var n = parseInt(value, 10);
+    return Number.isFinite(n) ? n : fallback;
+  }
+
+  // The cabinet as it will look: stored bottles in their type color, free
+  // slots as rings. opts.heads adds each shelf's number, name and free count.
+  _renderBuilderCabinet(rows, color, extraClass, opts) {
+    var self = this;
+    opts = opts || {};
+    var index = new Map();
+    var shelves = rows.map(function (row, i) {
+      var occupancy = self._shelfOccupancy(row.id);
+      occupancy.index.forEach(function (bottle, key) { index.set(key, bottle); });
+      return {
+        id: row.id || "new-" + i,
+        name: row.name,
+        stored: occupancy.stored,
+        capacity_front: Math.max(0, self._capacityOf(row.capacity_front, 0)),
+        capacity_back: Math.max(0, self._capacityOf(row.capacity_back, 0))
+      };
+    });
+    var shelvesHtml = this._renderMiniShelves(shelves, index, {
+      head: opts.heads ? function (shelf, i) {
+        var free = Math.max(0, shelf.capacity_front + shelf.capacity_back - shelf.stored);
+        return '<div class="mm-head"><span class="mm-n">' + (i + 1) + "</span><b>" + self._escape(shelf.name || _T("shelf_n", { n: i + 1 })) + '</b><span class="mm-free">' +
+          self._escape(_TN("pick_free", free)) + "</span></div>";
+      } : null,
+      shelfClass: function (shelf, i) { return opts.highlight === i ? " current" : ""; },
+      dot: function (shelf, lane, pos, occupant) {
+        return occupant
+          ? '<span class="mm-dot filled" style="--type:' + self._wineSurfaceColor(occupant.wine_type) + '"></span>'
+          : '<span class="mm-dot"></span>';
+      }
+    });
+    return this._renderCabinet({ bg_color: color }, shelvesHtml, "mini " + extraClass, this._miniSpan(shelves));
+  }
+
+  // "5 shelves · 40 slots · 28 stored".
+  _builderStats(rows) {
+    var self = this;
+    var slots = 0;
+    var stored = 0;
+    rows.forEach(function (row) {
+      slots += Math.max(0, self._capacityOf(row.capacity_front, 0)) + Math.max(0, self._capacityOf(row.capacity_back, 0));
+      stored += self._shelfOccupancy(row.id).stored;
+    });
+    return [_TN("builder_shelves", rows.length), _TN("builder_slots", slots), _T("builder_stored", { n: stored })].join(" · ");
+  }
+
+  _builderRowsFromForm(form) {
+    var self = this;
+    return Array.prototype.map.call(form.querySelectorAll("[data-shelf-row]"), function (row) {
+      function value(name) {
+        var el = row.querySelector('[name="' + name + '"]');
+        return el ? el.value : "";
+      }
+      return {
+        id: value("shelf_id[]"),
+        name: value("shelf_name[]"),
+        capacity_front: self._capacityOf(value("capacity_front[]"), 0),
+        capacity_back: self._capacityOf(value("capacity_back[]"), 0)
+      };
+    });
+  }
+
+  // One shelf row. Its steppers cannot go below the last occupied slot of
+  // their row; Remove is blocked (with the reason) while it holds bottles.
+  _renderShelfEditorRow(shelf, i, color) {
+    var self = this;
+    var esc = this._escape.bind(this);
+    var occupancy = this._shelfOccupancy(shelf.id);
+    var minFront = Math.max(1, occupancy.maxFront);
+    var minBack = occupancy.maxBack;
+    var front = Math.max(minFront, this._capacityOf(shelf.capacity_front, 6));
+    var back = Math.max(minBack, this._capacityOf(shelf.capacity_back, 0));
+    // A row wider than the usual limit (made before it existed) keeps its
+    // width: its own size is its limit.
+    function stepper(lane, value, min) {
+      var max = Math.max(_WCM_MAX_ROW, value);
+      var lower = lane === "front" ? 1 : 0;
+      var hint = min > lower ? ' title="' + esc(_T("builder_min_hint", { n: min })) + '"' : "";
+      var laneWord = _T(lane).toLowerCase();
+      return '<div class="stepper small">' +
+        '<button type="button" class="stepper-b" data-step="-1" aria-label="' + esc(_T("builder_fewer", { lane: laneWord })) + '"' + (value <= min ? " disabled" : "") + hint + ">" + _WCM_ICONS.minus + "</button>" +
+        '<input class="stepper-v" type="number" inputmode="numeric" name="capacity_' + lane + '[]" min="' + min + '" max="' + max + '" value="' + value + '"' +
+        ' aria-label="' + esc(_T(lane === "front" ? "builder_front_slots" : "builder_back_slots")) + '">' +
+        '<button type="button" class="stepper-b" data-step="1" aria-label="' + esc(_T("builder_more", { lane: laneWord })) + '"' + (value >= max ? " disabled" : "") + ">" + _WCM_ICONS.plus + "</button></div>";
+    }
+    return '<li class="cb-row" data-shelf-row data-min-front="' + minFront + '" data-min-back="' + minBack + '" data-stored="' + occupancy.stored + '">' +
+      '<input type="hidden" name="shelf_id[]" value="' + esc(shelf.id || "") + '">' +
+      '<div class="cb-move"><button type="button" class="cb-ic" data-shelf-move="-1" aria-label="' + esc(_T("builder_up")) + '">' + _WCM_ICONS.up + "</button>" +
+      '<button type="button" class="cb-ic" data-shelf-move="1" aria-label="' + esc(_T("builder_down")) + '">' + _WCM_ICONS.down + "</button></div>" +
+      '<span class="cb-idx" aria-hidden="true">' + (i + 1) + "</span>" +
+      '<div class="cb-fields"><div class="cb-top">' +
+      '<input class="sheet-in cb-name" type="text" name="shelf_name[]" value="' + esc(shelf.name || "") + '" aria-label="' + esc(_T("shelf_name")) + '" placeholder="' + esc(_T("shelf_n", { n: i + 1 })) + '">' +
+      '<span class="cb-stored' + (occupancy.stored ? "" : " is-empty") + '">' + (occupancy.stored ? "<i></i>" + esc(_T("builder_stored", { n: occupancy.stored })) : esc(_T("shelf_empty"))) + "</span></div>" +
+      '<div class="cb-caps"><div class="cb-cap"><span>' + esc(_T("front")) + "</span>" + stepper("front", front, minFront) + "</div>" +
+      '<div class="cb-cap"><span>' + esc(_T("back")) + "</span>" + stepper("back", back, minBack) + "</div>" +
+      '<div class="cb-mini" data-shelf-mini aria-hidden="true">' + this._renderBuilderCabinet([{ id: shelf.id, capacity_front: front, capacity_back: back }], color, "tiny") + "</div></div>" +
+      '<div class="sheet-err cb-row-err" hidden></div></div>' +
+      '<button type="button" class="cb-ic cb-rm" data-remove-shelf aria-label="' + esc(_T("builder_remove")) + '"' +
+      (occupancy.stored ? ' aria-disabled="true" title="' + esc(_TN("builder_remove_blocked", occupancy.stored)) + '"' : ' title="' + esc(_T("builder_remove")) + '"') + ">" + _WCM_ICONS.trash + "</button>" +
+      "</li>";
+  }
+
+  _rowMax(input) {
+    return Math.max(_WCM_MAX_ROW, this._capacityOf(input.max, _WCM_MAX_ROW));
+  }
+
+  _renderShelfEditorRows(shelves, color) {
+    var self = this;
+    return (shelves || []).map(function (shelf, i) { return self._renderShelfEditorRow(shelf, i, color); }).join("");
   }
 
   _renderCellarModal() {
-    var cellar = (this._modal && this._modal.cellar) || {};
     var self = this;
-
+    var esc = this._escape.bind(this);
+    var cellar = (this._modal && this._modal.cellar) || {};
+    var isEdit = !!cellar.id;
     // What the user already typed (kept across re-renders) comes first.
     var draft = this._modalDraft();
     var typed = draft ? draft.values : null;
-
-    function v(key, fallback) {
-      if (typed && typed[key] !== undefined) return typed[key];
-      if (cellar[key] !== undefined && cellar[key] !== null) return cellar[key];
-      return fallback;
+    var name = typed ? typed.name || "" : cellar.name || "";
+    var color = typed ? typed.bg_color || "" : cellar.bg_color || "";
+    var rows = draft ? draft.shelves : cellar.shelves && cellar.shelves.length ? this._getSortedShelves(cellar)
+      : [{ id: "", name: _T("shelf_n", { n: 1 }), capacity_front: 6, capacity_back: 0 }];
+    var order = cellar.display_order;
+    if (order === undefined || order === null) {
+      var cellars = (this._data && this._data.cellars) || [];
+      order = cellars.length ? Math.max.apply(null, cellars.map(function (c) { return Number(c.display_order || 0); })) + 1 : 0;
     }
+    // Where the cellar comes among the others: first, or after one of them
+    // by name (a new one comes last).
+    var sorted = this._sortedCellars();
+    var others = sorted.filter(function (c) { return c.id !== cellar.id; });
+    var place = isEdit ? sorted.findIndex(function (c) { return c.id === cellar.id; }) : -1;
+    if (place < 0) place = others.length;
+    var chosenPlace = typed && typed.cellar_position !== undefined ? Number(typed.cellar_position) : place;
+    var finishes = _WCM_FINISHES.slice();
+    var chosen = String(color).toLowerCase();
+    // Any white the older editor stored is drawn as brushed steel: show it
+    // as that finish, not as a custom colour.
+    if (_WCM_MATERIALS[chosen] === "mat-steel") chosen = "#fbfbfbff";
+    if (chosen && !finishes.some(function (f) { return f.value.toLowerCase() === chosen; })) finishes.push({ value: color, key: "builder_fin_custom" });
+    var safe = this._safeColor(color);
 
-    // Extraction et nettoyage de l'attribut de persistance
-    var currentBgColor = typed ? (typed.bg_color || "") : (cellar.bg_color || "");
+    var head = '<header class="sheet-head ' + this._cabinetMaterial(safe) + '" data-builder-head' + (safe ? ' style="--cellar:' + safe + '"' : "") + ">" +
+      '<span class="cb-hglyph mat-chip ' + this._cabinetMaterial(safe) + '" data-builder-glyph' + (safe ? ' style="--cellar:' + safe + '"' : "") + ' aria-hidden="true"><i></i></span>' +
+      '<div class="sheet-htext"><h2 class="sheet-title" id="wcm-dialog-title" tabindex="-1" data-dialog-title>' + esc(_T(isEdit ? "edit_cellar" : "builder_title_new")) + "</h2>" +
+      '<div class="sheet-dest"><span data-builder-sub>' + esc((isEdit ? (cellar.name || "") + " · " : "") + this._builderStats(rows)) + "</span></div></div>" +
+      '<button class="icon-btn" type="button" data-close-modal aria-label="' + esc(_T("close")) + '">' + _WCM_ICONS.close + "</button></header>";
 
-    var nextDisplayOrder = 0;
-    if (!cellar.id && this._data && Array.isArray(this._data.cellars) && this._data.cellars.length) {
-      nextDisplayOrder = Math.max.apply(null, this._data.cellars.map(function (c) {
-        return Number(c.display_order || 0);
-      })) + 1;
-    }
+    var quick = isEdit ? "" :
+      '<div class="cb-quick"><div class="sheet-sec-t">' + esc(_T("builder_quick")) + '</div><div class="cb-tpls">' +
+      _WCM_CELLAR_TEMPLATES.map(function (t, i) {
+        var sub = t.back
+          ? _T("builder_tpl_sub2", { s: t.shelves, f: t.front, b: t.back })
+          : _T("builder_tpl_sub", { s: t.shelves, f: t.front });
+        return '<button type="button" class="cb-tpl" data-shelf-template="' + i + '">' +
+          self._renderBuilderCabinet([{ id: "", capacity_front: Math.min(t.front, 6), capacity_back: Math.min(t.back, 5) }], color, "tiny") +
+          '<span class="cb-tpl-t"><b>' + esc(_T(t.key)) + "</b><span>" + esc(sub) + "</span></span></button>";
+      }).join("") + "</div></div>";
 
+    var main = '<div class="cb-main">' +
+      '<div class="sheet-fld" data-f="name"><div class="sheet-lrow"><label class="sheet-lbl" for="wcm-f-cellar-name">' + esc(_T("cellar_name")) + '<span class="sheet-req" aria-hidden="true">*</span></label></div>' +
+      '<input id="wcm-f-cellar-name" class="sheet-in sheet-in-display" name="name" value="' + esc(name) + '" placeholder="' + esc(_T("builder_name_ph")) + '" required aria-required="true" autocomplete="off"' + (isEdit ? "" : " data-autofocus") + ">" +
+      '<div class="sheet-err" id="wcm-err-name" data-err-for="name" hidden></div></div>' +
+      '<div class="sheet-fld"><div class="sheet-lrow"><span class="sheet-lbl" id="wcm-l-finish">' + esc(_T("builder_finish")) + "</span></div>" +
+      '<div class="cb-fins" role="radiogroup" aria-labelledby="wcm-l-finish">' + finishes.map(function (f) {
+        var value = f.value.toLowerCase();
+        var on = value === chosen;
+        var hex = self._safeColor(f.value);
+        return '<label class="cb-fin' + (on ? " on" : "") + '"><input class="sr-only" type="radio" name="bg_color" value="' + esc(f.value) + '"' + (on ? " checked" : "") + ">" +
+          '<span class="mat-chip ' + self._cabinetMaterial(hex) + '"' + (hex ? ' style="--cellar:' + hex + '"' : "") + "></span>" + esc(_T(f.key)) + "</label>";
+      }).join("") + "</div></div>" +
+      (others.length ?
+        '<div class="sheet-fld cb-pos"><div class="sheet-lrow"><label class="sheet-lbl" for="wcm-f-cellar-pos">' + esc(_T("builder_position")) + "</label></div>" +
+        '<div class="sheet-sel"><select id="wcm-f-cellar-pos" class="sheet-in" name="cellar_position" data-initial="' + place + '">' +
+        [_T("builder_pos_first")].concat(others.map(function (c) { return _T("builder_pos_after", { name: c.name || _T("cellar") }); })).map(function (label, i) {
+          return '<option value="' + i + '"' + (i === chosenPlace ? " selected" : "") + ">" + esc(label) + "</option>";
+        }).join("") + "</select></div></div>" : "") +
+      quick +
+      '<div class="cb-shelves"><div><div class="sheet-sec-t">' + esc(_T("shelves")) + '</div><div class="cb-sh-hint">' + esc(_T("builder_shelves_hint")) + "</div></div>" +
+      '<ol class="cb-rows" data-shelf-rows>' + this._renderShelfEditorRows(rows, color) + "</ol>" +
+      '<button type="button" class="cb-add" data-add-shelf-row>' + _WCM_ICONS.plus + esc(_T("add_shelf")) + "</button>" +
+      '<div class="sheet-err" id="wcm-err-shelves" data-err-for="shelves" hidden></div></div>' +
+      "</div>";
 
-    var shelves = draft ? draft.shelves : (cellar.shelves && cellar.shelves.length)
-      ? self._getSortedShelves(cellar)
-      : [
-          { id: "", name: _T("shelf_1"), display_order: 0, capacity_front: 6, capacity_back: 0, layout_mode: "single" }
-        ];
+    var side = '<aside class="cb-side" aria-label="' + esc(_T("builder_preview")) + '"><div class="sheet-sec-t">' + esc(_T("builder_preview")) + "</div>" +
+      '<div class="cb-prev" data-builder-preview>' + this._renderBuilderCabinet(rows, color, "preview", { heads: true }) + "</div>" +
+      '<div class="cb-legend"><span><i class="is-stored"></i>' + esc(_T("builder_legend_stored")) + "</span><span><i></i>" + esc(_T("builder_legend_free")) + "</span></div>" +
+      '<div class="cb-sum" data-builder-sum>' + esc(this._builderStats(rows)) + "</div></aside>";
 
-    return [
-      '<div class="modal-backdrop" data-dialog-backdrop>',
-      '  <div class="modal small-modal" role="dialog" aria-modal="true" aria-labelledby="wcm-dialog-title">',
-      '    <div class="modal-head">',
-      '      <h3 id="wcm-dialog-title" tabindex="-1" data-dialog-title>' + (cellar.id ? _T("edit_cellar") : _T("add_cellar")) + "</h3>",
-      '      <button class="icon-btn" type="button" data-close-modal aria-label="' + _T("close") + '">' + _WCM_ICONS.close + '</button>',
-      "    </div>",
-      '    <form class="modal-form" data-save-cellar data-modal-key="' + this._escape(this._modalKey()) + '">',
-      '      <input type="hidden" name="cellar_id" value="' + self._escape(v("id", "")) + '">',
-      '      <label>' + _T("cellar_name") + '<input name="name" value="' + self._escape(v("name", "")) + '" required></label>',
-      '      <label>' + _T("display_order") + '<input name="display_order" type="number" min="0" value="' + self._escape(v("display_order", nextDisplayOrder)) + '"></label>',
-      '      <div><div class="field-label">' + _T("background_color") + '</div><div class="swatches" role="radiogroup">' +
-               [
-                 { value: "", label: _T("default_ha_theme") },
-                 { value: "#7b2130", label: _T("bordeaux_red") },
-                 { value: "#8c6239", label: _T("oak_brown") },
-                 { value: "#556b2f", label: _T("olive_green") },
-                 { value: "#1e3a8a", label: _T("azur_blue") },
-                 { value: "#374151", label: _T("slate_gray") },
-                 { value: "#fbfbfbff", label: _T("off_white") }
-               ].map(function(opt) {
-                 var chip = opt.value || "color-mix(in srgb,var(--wcm-text) 18%,var(--wcm-surface))";
-                 return '<label class="swatch"><input type="radio" name="bg_color" value="' + opt.value + '"' + (currentBgColor === opt.value ? " checked" : "") + '><span class="swatch-chip" style="--sw:' + chip + '"></span>' + opt.label + '</label>';
-               }).join("") +
-      '      </div></div>',
-      '      <div class="shelf-editor">',
+    var foot = '<footer class="sheet-foot"><div class="form-error" role="alert"' + (this._formError ? "" : ' style="display:none"') + ">" + esc(this._formError || "") + "</div>" +
+      '<div class="sheet-foot-row">' +
+      (isEdit ? '<button type="button" class="sheet-danger" data-delete-cellar="' + esc(cellar.id) + '">' + _WCM_ICONS.trash + '<span class="sheet-danger-t">' + esc(_T("delete_cellar_confirm")) + "</span></button>" : "") +
+      '<div class="sheet-foot-l"></div>' +
+      '<button type="button" class="btn ghost sheet-cancel" data-close-modal>' + esc(_T("cancel")) + "</button>" +
+      '<button type="button" class="btn primary" data-save-cellar-btn>' + _WCM_ICONS.check + "<span>" + esc(_T(isEdit ? "builder_save" : "builder_create")) + "</span></button>" +
+      "</div></footer>";
 
-      '        <div class="shelf-editor-head">',
-      '          <strong>' + _T("shelves") + '</strong>',
-      '          <button class="btn small-btn" type="button" data-add-shelf-row>' + _T("add_shelf") + '</button>',
-      '        </div>',
-      '        <div data-shelf-rows>',
-      self._renderShelfEditorRows(shelves, cellar.id),
-      '        </div>',
-      '      </div>',
-      this._renderFormError("save"),
-      '      <div class="modal-actions">',
-      cellar.id ? '        <button class="btn danger" type="button" data-delete-cellar="' + self._escape(cellar.id) + '">' + _T("delete") + '</button>' : "        <span></span>",
-      '        <div class="right-actions"><button class="btn" type="button" data-close-modal>' + _T("cancel") + '</button><button class="btn primary" type="button" data-save-cellar-btn>' + _T("save") + '</button></div>',
-      "      </div>",
-      '    </form>',
-      '  </div>',
-      '</div>'
-    ].join("");
+    return '<div class="modal-backdrop sheet-backdrop" data-dialog-backdrop>' +
+      '<div class="modal sheet builder is-edit" role="dialog" aria-modal="true" aria-labelledby="wcm-dialog-title">' + head +
+      '<form class="sheet-form" data-save-cellar data-modal-key="' + esc(this._modalKey()) + '" novalidate autocomplete="off">' +
+      '<input type="hidden" name="cellar_id" value="' + esc(cellar.id || "") + '"><input type="hidden" name="display_order" value="' + esc(order) + '">' +
+      '<div class="sheet-scroll" data-dialog-scroll><div class="cb-grid">' + main + side + "</div></div>" + foot +
+      "</form></div></div>";
   }
 
-  _refreshBottleLocationSelectors(root) {
-    var form = root.querySelector("[data-save-bottle]");
-    if (!form) return;
-
-    var cellarEl = form.querySelector('[name="cellar_id"]');
-    var shelfEl = form.querySelector('[name="shelf_id"]');
-    var laneEl = form.querySelector('[name="lane"]');
-    var positionEl = form.querySelector('[name="position"]');
-
-    if (!cellarEl || !shelfEl || !laneEl || !positionEl) return;
-
-    var cellarId = cellarEl.value || "";
-    var currentShelf = shelfEl.value || "";
-    shelfEl.innerHTML = this._buildShelfOptions(cellarId, currentShelf);
-
-    if (!shelfEl.value) {
-      var firstOption = shelfEl.querySelector("option");
-      if (firstOption) shelfEl.value = firstOption.value;
-    }
-
-    var shelfId = shelfEl.value || "";
-    var currentLane = laneEl.value || "front";
-    laneEl.innerHTML = this._buildLaneOptions(cellarId, shelfId, currentLane);
-
-    if (!laneEl.value) {
-      var firstLane = laneEl.querySelector("option");
-      if (firstLane) laneEl.value = firstLane.value;
-    }
-
-    var lane = laneEl.value || "front";
-    var currentPosition = Number(positionEl.value || 1);
-    positionEl.innerHTML = this._buildPositionOptions(cellarId, shelfId, lane, currentPosition);
-
-    if (!positionEl.value) {
-      var firstPos = positionEl.querySelector("option");
-      if (firstPos) positionEl.value = firstPos.value;
-    }
+  // Adds a shelf row like the last one, shows it and puts the cursor in its
+  // name.
+  _appendShelfRow(form) {
+    var list = form.querySelector("[data-shelf-rows]");
+    if (!list) return;
+    var rows = list.querySelectorAll("[data-shelf-row]");
+    var last = rows[rows.length - 1];
+    var front = last ? this._capacityOf(last.querySelector('[name="capacity_front[]"]').value, 6) : 6;
+    var back = last ? this._capacityOf(last.querySelector('[name="capacity_back[]"]').value, 0) : 0;
+    var color = (form.querySelector('[name="bg_color"]:checked') || {}).value || "";
+    list.insertAdjacentHTML("beforeend", this._renderShelfEditorRow({ id: "", name: _T("shelf_n", { n: rows.length + 1 }), capacity_front: front, capacity_back: back }, rows.length, color));
+    var row = list.lastElementChild;
+    this._syncCellarBuilder(form);
+    var nameInput = row.querySelector('[name="shelf_name[]"]');
+    row.scrollIntoView({ block: "nearest", behavior: this._prefersReducedMotion() ? "auto" : "smooth" });
+    nameInput.focus({ preventScroll: true });
+    nameInput.select();
   }
 
-  _appendShelfRow(root) {
-    var rowsWrap = root.querySelector("[data-shelf-rows]");
-    if (!rowsWrap) return;
+  // Everything that follows the rows: numbers, reorder buttons, stepper
+  // limits, the row minis, the preview, the counts and the finish.
+  _syncCellarBuilder(form) {
+    var self = this;
+    var rows = this._builderRowsFromForm(form);
+    var color = (form.querySelector('[name="bg_color"]:checked') || {}).value || "";
+    var safe = this._safeColor(color);
+    var list = form.querySelectorAll("[data-shelf-row]");
+    var focused = -1;
+    list.forEach(function (row, i) {
+      if (row.contains(self.shadowRoot.activeElement)) focused = i;
+      var index = row.querySelector(".cb-idx");
+      if (index) index.textContent = i + 1;
+      row.querySelector('[data-shelf-move="-1"]').disabled = i === 0;
+      row.querySelector('[data-shelf-move="1"]').disabled = i === list.length - 1;
+      row.querySelector('[name="shelf_name[]"]').placeholder = _T("shelf_n", { n: i + 1 });
+      row.querySelectorAll(".stepper").forEach(function (stepper) {
+        var input = stepper.querySelector("input");
+        var value = self._capacityOf(input.value, 0);
+        var min = self._capacityOf(input.min, 0);
+        stepper.querySelector('[data-step="-1"]').disabled = value <= min;
+        stepper.querySelector('[data-step="1"]').disabled = value >= self._rowMax(input);
+      });
+      var mini = row.querySelector("[data-shelf-mini]");
+      if (mini) mini.innerHTML = self._renderBuilderCabinet([rows[i]], color, "tiny");
+    });
+    var preview = form.querySelector("[data-builder-preview]");
+    if (preview) preview.innerHTML = this._renderBuilderCabinet(rows, color, "preview", { heads: true, highlight: focused });
+    var stats = this._builderStats(rows);
+    var sum = form.querySelector("[data-builder-sum]");
+    if (sum) sum.textContent = stats;
+    var sheet = form.closest(".sheet");
+    var sub = sheet && sheet.querySelector("[data-builder-sub]");
+    if (sub) sub.textContent = (this._sheetField(form, "cellar_id").value ? this._sheetField(form, "name").value + " · " : "") + stats;
+    var glyph = sheet && sheet.querySelector("[data-builder-glyph]");
+    if (glyph) {
+      glyph.className = "cb-hglyph mat-chip " + this._cabinetMaterial(safe);
+      glyph.style.setProperty("--cellar", safe || "");
+    }
+    // The top edge of the editor is the chosen finish too.
+    var head = sheet && sheet.querySelector("[data-builder-head]");
+    if (head) {
+      head.className = "sheet-head " + this._cabinetMaterial(safe);
+      head.style.setProperty("--cellar", safe || "");
+    }
+    form.querySelectorAll(".cb-fin").forEach(function (label) {
+      var input = label.querySelector("input");
+      label.classList.toggle("on", !!input && input.checked);
+    });
+  }
 
-    var count = rowsWrap.querySelectorAll("[data-shelf-row]").length;
-    var existingOrders = Array.from(rowsWrap.querySelectorAll('[name="shelf_display_order[]"]'))
-      .map(function (el) { return Number(el.value); })
-      .filter(function (n) { return Number.isFinite(n); });
+  _builderRowError(form, row, message, focusSelector) {
+    var box = row.querySelector(".cb-row-err");
+    row.classList.add("is-invalid");
+    if (box) {
+      box.innerHTML = _WCM_ICONS.alert + "<span>" + this._escape(message) + "</span>";
+      box.hidden = false;
+    }
+    var target = focusSelector ? row.querySelector(focusSelector) : null;
+    if (target) target.focus({ preventScroll: true });
+    row.scrollIntoView({ block: "center", behavior: this._prefersReducedMotion() ? "auto" : "smooth" });
+    return false;
+  }
 
-    var nextOrder = existingOrders.length
-      ? Math.max.apply(null, existingOrders) + 1
-      : 0;
+  _clearBuilderRowError(row) {
+    if (!row) return;
+    row.classList.remove("is-invalid");
+    var box = row.querySelector(".cb-row-err");
+    if (box) box.hidden = true;
+  }
 
-    rowsWrap.insertAdjacentHTML("beforeend", this._renderShelfEditorRows([
-      {
-        id: "",
-        name: _T("shelf_n", { n: count + 1 }),
-        display_order: nextOrder,
-        capacity_front: 6,
-        capacity_back: 0,
-        layout_mode: "single"
+  // The shelves to save, top first: display_order is the row's place.
+  _parseShelvesFromForm(form) {
+    var self = this;
+    var shelves = [];
+    form.querySelectorAll("[data-shelf-row]").forEach(function (row, i) {
+      function value(name) {
+        var el = row.querySelector('[name="' + name + '"]');
+        return el ? el.value : "";
       }
-    ], ""));
+      var front = self._intOrNull(value("capacity_front[]"));
+      var back = self._intOrNull(value("capacity_back[]"));
+      if (back === null || back < 0) back = 0;
+      shelves.push({
+        id: self._str(value("shelf_id[]")).trim() || undefined,
+        name: self._str(value("shelf_name[]")).trim() || _T("shelf_n", { n: i + 1 }),
+        display_order: i,
+        capacity_front: front,
+        capacity_back: back,
+        layout_mode: back > 0 ? "staggered" : "single"
+      });
+    });
+    return shelves;
+  }
 
-    // Show the new row (on a phone it lands far below the button) and put
-    // the cursor in its name.
-    var row = rowsWrap.lastElementChild;
-    var nameInput = row && row.querySelector('[name="shelf_name[]"]');
-    if (row) {
-      var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-      row.scrollIntoView({ block: "nearest", behavior: reduce ? "auto" : "smooth" });
+  // Checks the editor and shows the first problem where it is.
+  _validateCellarForm(form) {
+    var self = this;
+    this._clearSheetErrors(form);
+    if (!String(this._sheetField(form, "name").value || "").trim()) return this._sheetFieldError(form, "name", _T("cellar_name_required"));
+    var rows = form.querySelectorAll("[data-shelf-row]");
+    if (!rows.length) return this._sheetFieldError(form, "shelves", _T("add_at_least_one_shelf"));
+    for (var i = 0; i < rows.length; i++) {
+      var row = rows[i];
+      var front = this._capacityOf(row.querySelector('[name="capacity_front[]"]').value, 0);
+      var back = this._capacityOf(row.querySelector('[name="capacity_back[]"]').value, 0);
+      var minFront = Number(row.getAttribute("data-min-front")) || 1;
+      var minBack = Number(row.getAttribute("data-min-back")) || 0;
+      var name = row.querySelector('[name="shelf_name[]"]').value || _T("shelf_n", { n: i + 1 });
+      if (front < 1) return self._builderRowError(form, row, _T("shelf_front_capacity_min"), '[name="capacity_front[]"]');
+      if (front < minFront) return self._builderRowError(form, row, _T("err_shelf_front_min", { shelf: name, n: minFront }), '[name="capacity_front[]"]');
+      if (back < minBack) return self._builderRowError(form, row, _T("err_shelf_back_min", { shelf: name, n: minBack }), '[name="capacity_back[]"]');
     }
-    if (nameInput) {
-      nameInput.focus({ preventScroll: true });
-      nameInput.select();
+    return true;
+  }
+
+  // Saves the cellar. A refused save leaves the editor exactly as it is,
+  // every edit included, with the reason next to Save.
+  async _saveCellarFromForm(form) {
+    var m = this._modal;
+    if (!m || m.saving) return;
+    this._setFormError("");
+    if (!this._validateCellarForm(form)) return;
+    var fd = new FormData(form);
+    var button = form.querySelector("[data-save-cellar-btn]");
+    var order = this._cellarOrderPlan(form, fd.get("cellar_id") || "", Number(fd.get("display_order") || 0));
+    m.saving = true;
+    if (button) button.disabled = true;
+    try {
+      await this._callWS({
+        type: "wine_cellar_manager/save_cellar",
+        cellar_id: fd.get("cellar_id") || undefined,
+        name: String(fd.get("name") || "").trim(),
+        shelves: this._parseShelvesFromForm(form),
+        display_order: order.own,
+        bg_color: String(fd.get("bg_color") || "").trim()
+      });
+    } catch (err) {
+      console.error("Cellar save failed", err);
+      m.saving = false;
+      if (button) button.disabled = false;
+      this._setFormError(_T("cellar_save_failed") + this._friendlyError(err));
+      return;
     }
+    // The other cellars that have to shift to make room, each unchanged but
+    // for its order.
+    var reorderFailed = false;
+    for (var i = 0; i < order.others.length; i++) {
+      var other = order.others[i];
+      try {
+        await this._callWS({
+          type: "wine_cellar_manager/save_cellar",
+          cellar_id: other.cellar.id,
+          name: other.cellar.name,
+          shelves: other.cellar.shelves || [],
+          display_order: other.order,
+          bg_color: other.cellar.bg_color || ""
+        });
+      } catch (err) {
+        console.error("Cellar reorder failed", err);
+        reorderFailed = true;
+        break;
+      }
+    }
+    m.saving = false;
+    await this._loadData(true);
+    await this._closeModal();
+    if (reorderFailed) this._showToast(_T("builder_order_failed"), { kind: "warn" });
+    else this._showToast(_T("builder_saved"));
+  }
+
+  // The display_order values that put the cellar where the Position field
+  // says. Unchanged: its own order stays. Otherwise it takes a free number
+  // between its new neighbours when there is one; if not, every cellar is
+  // numbered again in the new order and the ones whose number changes are
+  // listed in others (saved after it).
+  _cellarOrderPlan(form, cellarId, current) {
+    var field = form.querySelector('[name="cellar_position"]');
+    var plan = { own: current, others: [] };
+    if (!field || field.value === field.getAttribute("data-initial")) return plan;
+    var others = this._sortedCellars().filter(function (c) { return c.id !== cellarId; });
+    var at = Math.max(0, Math.min(others.length, Number(field.value) || 0));
+    var before = others[at - 1];
+    var after = others[at];
+    var low = before ? Number(before.display_order || 0) : null;
+    var high = after ? Number(after.display_order || 0) : null;
+    if (low === null && high !== null && high >= 1) { plan.own = high - 1; return plan; }
+    if (high === null && low !== null) { plan.own = low + 1; return plan; }
+    if (low !== null && high !== null && high - low >= 2) { plan.own = low + 1; return plan; }
+    var list = others.slice();
+    list.splice(at, 0, null);
+    list.forEach(function (c, i) {
+      if (c === null) plan.own = i;
+      else if (Number(c.display_order || 0) !== i) plan.others.push({ cellar: c, order: i });
+    });
+    return plan;
+  }
+
+  _bindCellarBuilder(form) {
+    var self = this;
+    var frame = 0;
+    function sync() {
+      cancelAnimationFrame(frame);
+      frame = requestAnimationFrame(function () { self._syncCellarBuilder(form); });
+    }
+    form.addEventListener("submit", function (e) { e.preventDefault(); });
+    form.addEventListener("click", function (e) {
+      var t = e.target;
+      var el;
+      if (!t.closest) return;
+      if ((el = t.closest("[data-step]"))) {
+        e.preventDefault();
+        if (el.disabled) return;
+        var input = el.parentNode.querySelector("input");
+        var value = self._capacityOf(input.value, 0) + Number(el.getAttribute("data-step"));
+        input.value = Math.max(self._capacityOf(input.min, 0), Math.min(self._rowMax(input), value));
+        self._clearBuilderRowError(el.closest(".cb-row"));
+        self._syncCellarBuilder(form);
+        if (el.disabled) {
+          var sibling = el.parentNode.querySelector(".stepper-b:not(:disabled)");
+          if (sibling) sibling.focus();
+        }
+      } else if ((el = t.closest("[data-shelf-move]"))) {
+        e.preventDefault();
+        var row = el.closest("[data-shelf-row]");
+        var step = Number(el.getAttribute("data-shelf-move"));
+        var neighbour = step < 0 ? row.previousElementSibling : row.nextElementSibling;
+        if (!neighbour) return;
+        if (step < 0) row.parentNode.insertBefore(row, neighbour);
+        else row.parentNode.insertBefore(neighbour, row);
+        self._syncCellarBuilder(form);
+        var again = row.querySelector('[data-shelf-move="' + step + '"]');
+        (again && !again.disabled ? again : row.querySelector('[data-shelf-move="' + -step + '"]')).focus();
+      } else if ((el = t.closest("[data-remove-shelf]"))) {
+        e.preventDefault();
+        var target = el.closest("[data-shelf-row]");
+        var stored = Number(target.getAttribute("data-stored")) || 0;
+        if (stored) {
+          self._builderRowError(form, target, _TN("builder_remove_blocked", stored));
+          return;
+        }
+        if (form.querySelectorAll("[data-shelf-row]").length <= 1) {
+          self._builderRowError(form, target, _T("cellar_needs_shelf"));
+          return;
+        }
+        var next = target.nextElementSibling || target.previousElementSibling;
+        target.remove();
+        self._syncCellarBuilder(form);
+        var focusTo = next && next.querySelector("[data-remove-shelf]");
+        if (focusTo) focusTo.focus();
+      } else if (t.closest("[data-add-shelf-row]")) {
+        e.preventDefault();
+        self._appendShelfRow(form);
+      } else if ((el = t.closest("[data-shelf-template]"))) {
+        e.preventDefault();
+        var template = _WCM_CELLAR_TEMPLATES[Number(el.getAttribute("data-shelf-template"))];
+        var color = (form.querySelector('[name="bg_color"]:checked') || {}).value || "";
+        var rows = [];
+        for (var i = 0; i < template.shelves; i++) {
+          rows.push({ id: "", name: _T("shelf_n", { n: i + 1 }), capacity_front: template.front, capacity_back: template.back });
+        }
+        form.querySelector("[data-shelf-rows]").innerHTML = self._renderShelfEditorRows(rows, color);
+        self._syncCellarBuilder(form);
+      } else if (t.closest("[data-save-cellar-btn]")) {
+        e.preventDefault();
+        self._saveCellarFromForm(form);
+      }
+    }, true);
+    form.addEventListener("input", function (e) {
+      var t = e.target;
+      self._clearBuilderRowError(t.closest && t.closest(".cb-row"));
+      if (t.name === "name") {
+        var error = form.querySelector('[data-err-for="name"]');
+        if (error) error.hidden = true;
+        var box = t.closest(".sheet-fld");
+        if (box) box.classList.remove("is-invalid");
+      }
+      sync();
+    }, true);
+    form.addEventListener("change", function (e) {
+      var t = e.target;
+      if (t.classList && t.classList.contains("stepper-v")) {
+        t.value = Math.max(self._capacityOf(t.min, 0), Math.min(self._rowMax(t), self._capacityOf(t.value, self._capacityOf(t.min, 0))));
+      }
+      sync();
+    }, true);
+    // The shelf being edited is lit in the preview.
+    form.addEventListener("focusin", sync, true);
+    form.addEventListener("keydown", function (e) {
+      if (e.key === "Enter" && e.target.tagName === "INPUT") e.preventDefault();
+    }, true);
+    this._syncCellarBuilder(form);
   }
 
   async render(force) {
@@ -7670,14 +10446,8 @@ class WineCellarCard extends HTMLElement {
         search: this._search || "",
         filterType: this._filterType || "",
         formError: this._formError || "",
-        formErrorAt: this._formErrorAt || "save",
         actionMessage: this._actionMessage || "",
         scannerActive: this._scannerActive,
-        duplicateMatches: this._duplicateMatches,
-        duplicateMessage: this._duplicateMessage,
-        searchResults: this._searchResults,
-        searchMessage: this._searchMessage,
-        historySearchValue: this._historySearchValue,
         sortColumn: this._sortColumn || "wine_name",
         sortOrder: this._sortOrder || "asc",
         filterCountry: this._filterCountry || "",
@@ -7722,7 +10492,6 @@ class WineCellarCard extends HTMLElement {
         body = this._renderList(data);
       }
       var modal = this._modal ? (this._modal.type === "bottle" ? this._renderBottleModal(data) : this._renderCellarModal()) : "";
-      var comparisonModal = this._renderImageComparisonModal ? this._renderImageComparisonModal() : "";
       var cleanupModal = this._renderCleanUpModal();
 
       // If the user is typing in the search box, give it back its focus and
@@ -7735,14 +10504,12 @@ class WineCellarCard extends HTMLElement {
 
       this.shadowRoot.innerHTML =
         "<style>" + _WCM_STYLES + "</style>" +
-        '<ha-card><div class="wrap' + (this.config && this.config.background === "wood" ? " wood" : "") + '">' + _WCM_BOTTLE_SHADE + this._renderToolbar() + '<div class="main-scroll-content">' + body + "</div>" + modal + comparisonModal + cleanupModal + "</div></ha-card>";
+        '<ha-card><div class="wrap' + (this.config && this.config.background === "wood" ? " wood" : "") + '">' + _WCM_BOTTLE_SHADE + this._renderToolbar() + '<div class="main-scroll-content">' + body + "</div>" + modal + cleanupModal + "</div></ha-card>";
       
       var self = this;
       var root = this.shadowRoot;
 
-      // Panels from the previous render are gone with the old DOM.
-      this._autocompletePanels = [];
-      this._ensureWindowClickHandler();
+      this._combo = null;
       this._ensureWindowKeyHandler();
       // This paint already reflects the current search (it is stored on
       // every keystroke), so a pending live-search update has nothing to add.
@@ -7776,8 +10543,9 @@ class WineCellarCard extends HTMLElement {
             newScrollContainer.scrollTop = Number(savedScroll);
           }
         };
-        // A bottle about to be shown is scrolled to from where the user was.
-        if (this._pendingGoto || this._pendingLocate) restoreScrollTop();
+        // A bottle about to be shown (located, just added or moved, lifted
+        // for a move) is scrolled to from where the user was.
+        if (this._pendingGoto || this._pendingLocate || this._pendingPulse || (this._moveSource && this._moveFocus)) restoreScrollTop();
         else setTimeout(restoreScrollTop, 10);
       }
 
@@ -8106,28 +10874,14 @@ class WineCellarCard extends HTMLElement {
             self._clearActionMessage();
             self._clearFormError();
 
+            // Onto an empty slot: a move; onto a bottle: a swap (atomic on
+            // the server). Either way an Undo follows.
+            var moving = { bottle_id: String(sourceId) };
             if (targetNew) {
-              // Cas A : Déplacement classique sur un slot vide
-              await self._callWS({
-                type: "wine_cellar_manager/move_bottle",
-                bottle_id: String(sourceId),
-                cellar_id: String(dest.cellar_id),
-                shelf_id: String(dest.shelf_id),
-                lane: String(dest.lane || "front"),
-                position: Math.trunc(destPosition)
-              });
+              await self._relocateBottle(moving, dest, null, false);
             } else if (targetFilled && destId) {
-              // Cas B : Interversion atomique via le serveur Python
-              await self._callWS({
-                type: "wine_cellar_manager/swap_bottles",
-                source_id: String(sourceId),
-                dest_id: String(destId)
-              });
+              await self._relocateBottle(moving, null, String(destId), false);
             }
-
-            await self._loadData(true);
-            self.render(true);
-
           } catch (err) {
             console.error("Drag and drop sequence broke:", err);
           }
@@ -8147,11 +10901,12 @@ class WineCellarCard extends HTMLElement {
         };
       });
 
+      // X and Cancel close like Escape: a changed form asks first.
       root.querySelectorAll("[data-close-modal]").forEach(function (el) {
-        el.onclick = async function (e) {
+        el.onclick = function (e) {
           e.preventDefault();
           e.stopPropagation();
-          await self._closeModal();
+          self._requestCloseDialog();
         };
       });
 
@@ -8169,7 +10924,7 @@ class WineCellarCard extends HTMLElement {
         cancelEditBtn.onclick = function (e) {
           e.preventDefault();
           e.stopPropagation();
-          self._setBottleModalMode("view");
+          self._requestCancelEdit();
         };
       }
 
@@ -8200,6 +10955,14 @@ class WineCellarCard extends HTMLElement {
           e.preventDefault();
           e.stopPropagation();
           self._showInCellar(locateBtn.getAttribute("data-locate-bottle"));
+        };
+      }
+      var moveBtn = root.querySelector("[data-move-bottle]");
+      if (moveBtn) {
+        moveBtn.onclick = function (e) {
+          e.preventDefault();
+          e.stopPropagation();
+          self._startMove(moveBtn.getAttribute("data-move-bottle"));
         };
       }
       var findSimilar = root.querySelector("[data-bv-find-similar]");
@@ -8258,6 +11021,7 @@ class WineCellarCard extends HTMLElement {
           if (moreMenu.classList.contains("open") && !moreMenu.contains(e.target) && !moreToggle.contains(e.target)) self._setBottleMenu(false);
         }, true);
       }
+      this._fitBottleFooter(moreToggle && moreToggle.closest(".bv-actions"));
 
       var modal = root.querySelector(".modal");
       if (modal) {
@@ -8294,475 +11058,12 @@ class WineCellarCard extends HTMLElement {
         });
       });
 
-      var bottleForm = root.querySelector("[data-save-bottle]");
-      if (bottleForm) {
-        var cellarSelect = bottleForm.querySelector('[name="cellar_id"]');
-        var shelfSelect = bottleForm.querySelector('[name="shelf_id"]');
-        var laneSelect = bottleForm.querySelector('[name="lane"]');
-
-        if (cellarSelect) {
-          cellarSelect.addEventListener("change", function (e) {
-            e.stopPropagation();
-            self._refreshBottleLocationSelectors(root);
-          });
-        }
-        if (shelfSelect) {
-          shelfSelect.addEventListener("change", function (e) {
-            e.stopPropagation();
-            self._refreshBottleLocationSelectors(root);
-          });
-        }
-        if (laneSelect) {
-          laneSelect.addEventListener("change", function (e) {
-            e.stopPropagation();
-            self._refreshBottleLocationSelectors(root);
-          });
-        }
-
-        // AJOUT CORRECTEUR : Détection automatique des doublons textuels en cours de frappe
-        var wineNameInp = bottleForm.querySelector('[name="wine_name"]');
-        var producerInp = bottleForm.querySelector('[name="producer"]');
-
-        function checkTextDuplicates() {
-          var tempBottle = {
-            wine_name: wineNameInp ? wineNameInp.value : "",
-            producer: producerInp ? producerInp.value : ""
-          };
-          
-          var count = self._countSimilarBottles(tempBottle);
-          
-          if (count > 0) {
-            var alertMsg = _T("duplicate_warning", { n: count });
-            self._setActionMessage(alertMsg);
-          } else {
-            if (self._actionMessage && self._actionMessage.startsWith("⚠️")) {
-              self._clearActionMessage();
-            }
-          }
-        }
-
-        if (wineNameInp) { wineNameInp.addEventListener("input", checkTextDuplicates); }
-        if (producerInp) { producerInp.addEventListener("input", checkTextDuplicates); }
-
-        if (wineNameInp) {
-          var autocompletePanel = wineNameInp.parentElement.querySelector(".custom-autocomplete-panel");
-          // Pressing a suggestion must not take the focus from the field.
-          if (autocompletePanel) {
-            autocompletePanel.addEventListener("mousedown", function (e) { e.preventDefault(); });
-          }
-          wineNameInp.addEventListener("input", function(e) {
-            var inputVal = wineNameInp.value.trim().toLowerCase();
-            // Suggestions follow the field being typed in, not values filled
-            // in from elsewhere (a picked suggestion, the analysis...).
-            if (!inputVal || !autocompletePanel || root.activeElement !== wineNameInp) {
-              if (autocompletePanel) autocompletePanel.style.display = "none";
-              return;
-            }
-            var active = (self._data && self._data.bottles) ? self._data.bottles : [];
-            var consumed = (self._data && self._data.consumed_bottles) ? self._data.consumed_bottles : [];
-            var allBottles = active.concat(consumed);
-            var uniqueNames = [];
-            allBottles.forEach(function(b) {
-              if (b.wine_name && b.wine_name.trim()) {
-                var nameTrimmed = b.wine_name.trim();
-                if (nameTrimmed.toLowerCase().indexOf(inputVal) !== -1 && uniqueNames.indexOf(nameTrimmed) === -1) {
-                  uniqueNames.push(nameTrimmed);
-                }
-              }
-            });
-            if (uniqueNames.length === 0) {
-              autocompletePanel.style.display = "none";
-              return;
-            }
-            autocompletePanel.innerHTML = uniqueNames.slice(0, 8).map(function(name) {
-              return '<div class="custom-autocomplete-item" data-value="' + self._escape(name) + '">' + self._escape(name) + '</div>';
-            }).join("");
-            autocompletePanel.style.display = "block";
-            autocompletePanel.querySelectorAll(".custom-autocomplete-item").forEach(function(item) {
-              // Picking a wine fills the fields on screen that are still
-              // empty and keeps everything already typed (no re-render).
-              // Click only: a touchstart also fires when a finger merely
-              // scrolls the list.
-              item.addEventListener("click", function (e) {
-                e.preventDefault();
-                e.stopPropagation();
-                var selectedName = item.getAttribute("data-value");
-                wineNameInp.value = selectedName;
-                var match = allBottles.slice().reverse().find(function(b) {
-                  return String(b.wine_name || "").trim().toLowerCase() === selectedName.toLowerCase();
-                });
-                if (match) {
-                  self._applySuggestionToBottleForm(bottleForm, {
-                    producer: match.producer,
-                    region: match.region,
-                    country: match.country,
-                    varietal: match.varietal,
-                    vintage: match.vintage,
-                    wine_type: match.wine_type,
-                    price: match.price,
-                    image_path: match.image_path,
-                    aging_start_year: match.aging_start_year,
-                    aging_end_year: match.aging_end_year,
-                    notes: match.notes
-                  }, false);
-                  self._setActionMessage(_T("details_and_label_applied"));
-                }
-                autocompletePanel.style.display = "none";
-                checkTextDuplicates();
-              });
-            });
-          });
-          wineNameInp.addEventListener("blur", function() {
-            setTimeout(function() {
-              if (autocompletePanel) autocompletePanel.style.display = "none";
-            }, 150);
-          });
-        }
-
-        // Configuration générique de l'autocomplétion sur les autres champs textuels
-        var activeB = (self._data && self._data.bottles) ? self._data.bottles : [];
-        var consumedB = (self._data && self._data.consumed_bottles) ? self._data.consumed_bottles : [];
-        var allBottlesList = activeB.concat(consumedB);
-
-        ["producer", "varietal", "region", "country"].forEach(function(fieldName) {
-          var targetInp = bottleForm.querySelector('[name="' + fieldName + '"]');
-          if (!targetInp) return;
-
-          var panelEl = targetInp.parentElement.querySelector(".custom-autocomplete-panel");
-          if (!panelEl) return;
-          panelEl.addEventListener("mousedown", function (e) { e.preventDefault(); });
-
-          targetInp.addEventListener("input", function(e) {
-            var valClean = targetInp.value.trim().toLowerCase();
-            if (!valClean || root.activeElement !== targetInp) {
-              panelEl.style.display = "none";
-              return;
-            }
-
-            var uniqueMatches = [];
-            allBottlesList.forEach(function(b) {
-              var fieldVal = b[fieldName] && b[fieldName].trim();
-              if (fieldVal && fieldVal.toLowerCase().indexOf(valClean) !== -1 && uniqueMatches.indexOf(fieldVal) === -1) {
-                uniqueMatches.push(fieldVal);
-              }
-            });
-
-            if (uniqueMatches.length === 0) {
-              panelEl.style.display = "none";
-              return;
-            }
-
-            panelEl.innerHTML = uniqueMatches.slice(0, 8).map(function(itemText) {
-              return '<div class="custom-autocomplete-item" data-value="' + self._escape(itemText) + '">' + self._escape(itemText) + '</div>';
-            }).join("");
-            panelEl.style.display = "block";
-
-            panelEl.querySelectorAll(".custom-autocomplete-item").forEach(function(itemRow) {
-              // Click only, as above.
-              itemRow.addEventListener("click", function (evt) {
-                evt.preventDefault();
-                evt.stopPropagation();
-                targetInp.value = itemRow.getAttribute("data-value");
-                targetInp.dispatchEvent(new Event("input", { bubbles: true }));
-                targetInp.dispatchEvent(new Event("change", { bubbles: true }));
-                panelEl.style.display = "none";
-                if (fieldName === "producer") checkTextDuplicates();
-              });
-            });
-          });
-
-          // Fermeture automatique quand le focus quitte le champ de texte
-          targetInp.addEventListener("blur", function() {
-            setTimeout(function() {
-              if (panelEl) panelEl.style.display = "none";
-            }, 150);
-          });
-
-          // Registered on a single shared window listener (see
-          // _ensureWindowClickHandler) so panels are not leaked per render.
-          self._autocompletePanels.push({ input: targetInp, panel: panelEl });
-        });
-
-        // The label preview follows the image path, however it changes.
-        var imagePathInp = bottleForm.querySelector('[name="image_path"]');
-        if (imagePathInp) {
-          imagePathInp.addEventListener("change", function () {
-            self._refreshImagePreview(bottleForm);
-          });
-        }
-      }
-
-      var saveBottleBtn = root.querySelector("[data-save-bottle-btn]");
-      if (saveBottleBtn && bottleForm) {
-        saveBottleBtn.onclick = async function (e) {
-          e.preventDefault();
-          e.stopPropagation();
-          await self._saveBottleFromForm(bottleForm);
-          if (!self._modal) self.render(true);
-        };
-      }
-
-      var historySearchInput = root.querySelector('[name="history_search"]');
-      if (historySearchInput) {
-        historySearchInput.addEventListener("input", function (e) {
-          e.stopPropagation();
-          self._historySearchValue = historySearchInput.value || "";
-          clearTimeout(self._historySearchTimer);
-          self._historySearchTimer = setTimeout(function () {
-            self._searchHistory(self._historySearchValue);
-          }, 300);
-        });
-      }
-
-      this._bindSearchResultButtons();
-
-      // Gestionnaires pour les nouveaux boutons de téléversement du haut de formulaire
-      var pickBarcodeBtn = root.querySelector("[data-pick-barcode-btn]");
-      var barcodeFileInput = root.querySelector("[data-barcode-file-input]");
-      var pickLabelBtn = root.querySelector("[data-pick-label-btn]");
-      var labelFileInput = root.querySelector("[data-label-file-input]");
-
-      if (pickBarcodeBtn && barcodeFileInput && bottleForm) {
-        pickBarcodeBtn.onclick = function(e) {
-          e.preventDefault(); e.stopPropagation();
-          self._clearFormError();
-          self._setActionMessage(_T("select_barcode_photo"));
-          barcodeFileInput.value = "";
-          barcodeFileInput.click();
-        };
-
-        barcodeFileInput.onchange = async function(e) {
-          e.preventDefault(); e.stopPropagation();
-          var file = e.target.files && e.target.files[0];
-          if (!file) return;
-          
-          self._clearFormError();
-          self._setActionMessage(_T("reading_barcode_photo"));
-          
-          try {
-            var dataUrl = await new Promise(function (resolve, reject) {
-              var reader = new FileReader();
-              reader.onload = function () { resolve(reader.result); };
-              reader.onerror = function () { reject(new Error("File read failed")); };
-              reader.readAsDataURL(file);
-            });
-
-            self._setActionMessage(_T("sending_photo_to_ai"));
-            var base64Data = dataUrl.split(",")[1] || dataUrl;
-
-            // Téléversement temporaire sécurisé
-            var uploadResult = await self._callWS({
-              type: "wine_cellar_manager/upload_label_image",
-              data_base64: base64Data,
-              filename: "temp_barcode_" + file.name
-            });
-
-            if (uploadResult && uploadResult.image_path) {
-              self._setActionMessage(_T("ai_extracting_barcode"));
-              // Déclenchement automatique de l'analyse unifiée sur cette image temporelle
-              var analyzeResult = await self._callWS({
-                type: "wine_cellar_manager/unified_analyze",
-                barcode: "",
-                image_path: uploadResult.image_path
-              });
-
-              if (analyzeResult && analyzeResult.suggestion) {
-                self._applySuggestionToBottleForm(bottleForm, analyzeResult.suggestion, true);
-                if (analyzeResult.suggestion.barcode) {
-                  var barcodeInp = bottleForm.querySelector('[name="barcode"]');
-                  if (barcodeInp) barcodeInp.value = analyzeResult.suggestion.barcode;
-                }
-                self._setActionMessage(_T("barcode_detected_and_applied"));
-              } else {
-                self._setActionMessage((analyzeResult && analyzeResult.message) || _T("no_barcode_found"));
-              }
-            }
-          } catch(err) {
-            console.error("Barcode image extraction failed", err);
-            self._setFormError(_T("barcode_extraction_failed"), "capture");
-          }
-        };
-      }
-
-      if (pickLabelBtn && labelFileInput && bottleForm) {
-        pickLabelBtn.onclick = function(e) {
-          e.preventDefault(); e.stopPropagation();
-          self._clearFormError();
-          self._setActionMessage(_T("select_label_photo"));
-          labelFileInput.value = "";
-          labelFileInput.click();
-        };
-
-        labelFileInput.onchange = async function(e) {
-          e.preventDefault(); e.stopPropagation();
-          var file = e.target.files && e.target.files[0];
-          if (!file) return;
-          await self._uploadLabelFile(file, bottleForm);
-        };
-      }
-
-      // Bouton unique UNIVERSAL ANALYZE avec sécurité anti-réanalyse
-      var universalAnalyzeBtn = root.querySelector("[data-universal-analyze-btn]");
-      if (universalAnalyzeBtn && bottleForm) {
-        // The result goes straight into the fields on screen, and only into
-        // fields the analysis found: nothing typed is blanked, and there is
-        // no re-render to rebuild the form from stale state.
-        var runAnalyze = async function () {
-          var barcodeVal = bottleForm.querySelector('[name="barcode"]').value.trim();
-          var labelVal = bottleForm.querySelector('[name="image_path"]').value.trim();
-
-          if (!barcodeVal && !labelVal) {
-            self._setFormError(_T("provide_barcode_or_label"), "capture");
-            return;
-          }
-
-          self._clearFormError();
-          self._setActionMessage(_T("starting_smart_analysis"));
-
-          try {
-            var result = await self._callWS({
-              type: "wine_cellar_manager/unified_analyze",
-              barcode: barcodeVal,
-              image_path: labelVal
-            });
-
-            if (result && result.suggestion) {
-              self._applySuggestionToBottleForm(bottleForm, result.suggestion, true);
-              var analyzedFlag = bottleForm.querySelector('[name="analyzed_flag"]');
-              if (analyzedFlag) analyzedFlag.value = "true";
-              self._setActionMessage(_T("analysis_completed"));
-            } else {
-              self._setActionMessage((result && result.message) || _T("no_result_found"));
-            }
-          } catch(err) {
-            self._setFormError(_T("analysis_failed") + (err.message || err), "capture");
-          }
-        };
-
-        universalAnalyzeBtn.onclick = function(e) {
-          e.preventDefault(); e.stopPropagation();
-
-          // A second analysis overwrites fields: ask first, inside the dialog.
-          var analyzedFlag = bottleForm.querySelector('[name="analyzed_flag"]');
-          if (analyzedFlag && analyzedFlag.value === "true") {
-            self._showDialogConfirm({
-              tone: "warning",
-              title: _T("reanalyze_title"),
-              body: _T("reanalyze_body"),
-              confirmLabel: _T("analyze_again"),
-              confirmClass: "primary",
-              onConfirm: function () {
-                self._cancelDialogConfirm();
-                return runAnalyze();
-              }
-            });
-            return;
-          }
-          runAnalyze();
-        };
-      }
-
-      // Écouteurs pour la bulle comparative d'images (Pop-up de choix)
-      var keepLocalBtn = root.querySelector("[data-keep-local-img-btn]");
-      var keepOfficialBtn = root.querySelector("[data-keep-official-img-btn]");
-
-      if (keepLocalBtn) {
-        keepLocalBtn.onclick = async function(e) {
-          e.preventDefault(); e.stopPropagation();
-          // L'utilisateur garde sa photo : on demande au serveur d'effacer l'image officielle temporaire
-          try {
-            await self._callWS({
-              type: "wine_cellar_manager/cleanup_temp_image",
-              action: "keep_local",
-              local_path: self._imageComparisonData.local_path || "",
-              official_path: self._imageComparisonData.official_path || ""
-            });
-          } catch(err) { console.error(err); }
-          self._imageComparisonData = null;
-          self.render(true);
-        };
-      }
-
-      if (keepOfficialBtn) {
-        keepOfficialBtn.onclick = async function(e) {
-          e.preventDefault();
-          e.stopPropagation();
-
-          try {
-            var result = await self._callWS({
-              type: "wine_cellar_manager/cleanup_temp_image",
-              action: "keep_official",
-              local_path: self._imageComparisonData.local_path || "",
-              official_path: self._imageComparisonData.official_path || ""
-            });
-
-            if (result && result.new_image_path) {
-              bottleForm.querySelector('[name="image_path"]').value = result.new_image_path;
-            } else if (self._imageComparisonData.official_path) {
-              bottleForm.querySelector('[name="image_path"]').value = self._imageComparisonData.official_path;
-            }
-          } catch (err) {
-            console.error(err);
-          }
-
-          self._imageComparisonData = null;
-          self.render(true);
-        };
-      }
-      var addShelfBtn = root.querySelector("[data-add-shelf-row]");
-      if (addShelfBtn) {
-        addShelfBtn.onclick = function (e) {
-          e.preventDefault();
-          e.stopPropagation();
-          self._appendShelfRow(root);
-        };
-      }
-
-      // Shelf rows, including rows added after this render, are removed
-      // through one listener on their container. It listens in the capture
-      // phase because each button stops its own click from bubbling.
-      var shelfRowsWrap = root.querySelector("[data-shelf-rows]");
-      if (shelfRowsWrap) {
-        shelfRowsWrap.addEventListener("click", function (e) {
-          var removeBtn = e.target && e.target.closest ? e.target.closest("[data-remove-shelf]") : null;
-          if (!removeBtn || !shelfRowsWrap.contains(removeBtn)) return;
-          e.preventDefault();
-          e.stopPropagation();
-          if (removeBtn.disabled) return;
-          var rows = shelfRowsWrap.querySelectorAll("[data-shelf-row]");
-          if (rows.length <= 1) {
-            self._setFormError(_T("cellar_needs_shelf"));
-            return;
-          }
-          var row = removeBtn.closest("[data-shelf-row]");
-          if (!row) return;
-          var hadFocus = root.activeElement === removeBtn;
-          var neighbour = row.nextElementSibling || row.previousElementSibling;
-          row.remove();
-          self._clearFormError();
-          // From the keyboard, carry on at the next Remove button.
-          if (hadFocus) {
-            var nextBtn = neighbour && neighbour.querySelector("[data-remove-shelf]:not([disabled])");
-            var fallback = nextBtn || root.querySelector("[data-add-shelf-row]");
-            if (fallback) fallback.focus();
-          }
-        }, true);
-        shelfRowsWrap.addEventListener("input", function () {
-          self._clearFormError();
-        });
-      }
-
-      var saveCellarBtn = root.querySelector("[data-save-cellar-btn]");
-      var cellarForm = root.querySelector("[data-save-cellar]");
-      if (saveCellarBtn && cellarForm) {
-        saveCellarBtn.onclick = async function (e) {
-          e.preventDefault();
-          e.stopPropagation();
-          await self._saveCellarFromForm(cellarForm);
-          // After a failed save the dialog stays as it is, edits included.
-          if (!self._modal) self.render(true);
-        };
-      }
+      // The add / edit sheet and the cellar editor bind their own controls.
+      var sheetForm = root.querySelector("form[data-save-bottle]");
+      if (sheetForm) this._bindBottleSheet(sheetForm);
+      this._fitSlotPicker(sheetForm && sheetForm.querySelector("[data-sheet-picker]"));
+      var cellarForm = root.querySelector("form[data-save-cellar]");
+      if (cellarForm) this._bindCellarBuilder(cellarForm);
 
       // Consume and Delete ask inside the dialog first (_showDialogConfirm);
       // the dialog closes once the action is done.
@@ -8923,6 +11224,7 @@ class WineCellarCard extends HTMLElement {
         this._dialogListenersBound = true;
         root.addEventListener("keydown", function (e) { self._onDialogKeydown(e); }, true);
         root.addEventListener("click", function (e) { self._rememberActivator(e.target); }, true);
+        this._bindMoveMode(root);
       }
       this._bindSiblingRings(root);
       try {
@@ -8931,10 +11233,11 @@ class WineCellarCard extends HTMLElement {
         console.error("Wine Cellar: dialog focus update failed", err);
       }
 
-      // "Add label photo" opened the form: go to its photo button.
+      // "Add label photo" or "Replace photo" opened the form: go to the
+      // button that picks a photo.
       if (this._modal && this._modal.focusLabelPhoto && this._modal.mode === "edit") {
         this._modal.focusLabelPhoto = false;
-        var photoBtn = root.querySelector("[data-pick-label-btn]");
+        var photoBtn = root.querySelector('.sheet-tile [data-sheet-pick="library"]:not(.only-touch), .sheet-tile [data-sheet-pick="camera"]');
         if (photoBtn) {
           photoBtn.scrollIntoView({ block: "center" });
           photoBtn.focus({ preventScroll: true });
@@ -8956,7 +11259,16 @@ class WineCellarCard extends HTMLElement {
           this._pendingLocate = false;
           this._scrollToFirstMatch(true);
         }
+        // Bottles just added or moved: brought into view, pulsing.
+        if (this._pendingPulse) {
+          var pulse = this._pendingPulse;
+          this._pendingPulse = null;
+          this._pulseBottles(pulse.ids, pulse.focus);
+        }
       }
+      // Move mode and the toast outlive the page they were drawn on.
+      this._syncMoveMode();
+      this._paintToast();
 
       paintCompleted = true;
     } catch (err) {

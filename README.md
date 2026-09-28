@@ -179,7 +179,9 @@ A legend under the filters repeats these symbols with the number of bottles in e
 
 ![Drag and drop](images/drag_drop.png)
 
-Individual cards can be dragged and dropped at will. Bottles can be moved to an empty slot or swapped; the slot under the pointer is highlighted before you let go. This works on PC, tablet, or mobile, and mirrors how people physically interact with a cellar. It also works in the Compact view.
+Individual cards can be dragged and dropped at will. Bottles can be moved to an empty slot or swapped; the slot under the pointer is highlighted before you let go. It also works in the Compact view.
+
+A bottle can also be moved without dragging: tap **Move** in the Bottle view (in the "…" menu on phones, or when the buttons don't fit), long-press a bottle on a touch screen, or press M on a focused bottle. The bottle lifts, every free slot becomes a target, and a banner says "Tap an empty slot, or a bottle to swap". With the keyboard, the arrow keys go from slot to slot, Enter drops and Escape puts it back. After every move or swap, including one made by drag and drop, a toast offers **Undo**. It stays while you hover or focus it, and Ctrl/Cmd+Z (outside text fields) runs it.
 
 ![Bottle View](images/bottle.png)
 
@@ -198,11 +200,13 @@ On phones, Show in cellar, Copy and Delete are in the "…" menu next to Consume
 
 ![Edit View](images/edit_bottle.png)
 
-In the Edit window, each field can be filled at will, with only Name being required. Autocomplete (based on existing and consumed wines) is active for name, producer, varietal, region, and country. You can also search the history by typing any of the main fields, and select a suggestion to auto-fill the bottle.
+**+ Bottle**, or a tap on an empty slot, opens the Add sheet. The sheet starts with the label: on a phone this is a step of its own (**Take photo**, **Choose from library**, **Type it instead** or **Scan SAQ barcode**); on a computer, upload a label photo or drop an image on it. The photo is shrunk in the browser (to about 1600 px) before it is uploaded. When Gemini is set up, the label is read straight away: the fields it may fill shimmer while it reads, and you can keep typing, because only fields that are still empty get filled. Filled fields carry an "AI" mark, and a note offers Undo. Pressing Save while the photo is still uploading waits for it, so the bottle is saved with its picture. A barcode photo is read for its digits and the wine is then looked up on SAQ.com; the barcode image is deleted afterwards to save storage.
 
-![Search previous entries](images/previous.png)
+The name, producer, vintage and type (color chips) come first. Region, country, grape, price, the drinking window (with a live timeline and status), rating (tap the stars), notes, serving temperature, alcohol, barcode and product link are under **More details**. Typing a name suggests wines already in your cellar or drunk before ("2 in cellar", "Had before"); picking one fills the empty fields and marks them "From cellar", with Undo. Only the name is required, and errors appear next to their field.
 
-At the top of the Edit window you can upload a label image or a barcode image. Selecting **Analyze** with a label image has Gemini read the label and fill the bottle fields. If there is no label but there is a barcode image, **Analyze** asks Gemini to extract the barcode number. Once a barcode number exists (extracted by Gemini or entered manually), **Analyze** has Gemini look up the wine on SAQ.com and fill the bottle fields. The barcode image is then deleted to save storage.
+**Where it goes** is a small drawing of the cellar in its frame finish. Chips switch cellars and show how many slots are free. The next free slot is already chosen; tap any free slot to change it, and taken slots show which wine is there. On long rows the slots get smaller and the shelves scroll sideways inside the drawing. **How many bottles** adds several identical bottles at once: they fill the next free slots in order, numbered in the drawing, and the button reads "Save 3 bottles". If one of those slots is taken in the meantime, the next free one is used; if the cellar runs out of room, the sheet stays open for the bottles left. **Save & add another** saves and keeps the sheet open, cleared, on the next free slot. A toast confirms where the bottles went, with a View button, and the new bottles pulse on their shelf.
+
+Editing a bottle uses the same sheet, with Replace, Rotate, Remove and Read label for the photo. Closing a sheet with changes (X, Cancel, Escape or a tap outside) asks first.
 
 ### Compact view
 
@@ -227,7 +231,7 @@ Information and statistics for the current inventory, including total value and 
 The header switches between the four views and offers three buttons:
 
 - **+ Bottle**: opens the Add window on the next free slot (cellars in order, shelves top to bottom, front row before back). If every slot is taken, the header says so instead.
-- **+ Cellar**: opens a window to create and configure a new cellar. It is the same window used to edit a cellar. Each shelf shows how many bottles it holds, and a shelf that still holds bottles can't be removed.
+- **+ Cellar**: opens the cellar builder, which is also used to edit a cellar (pencil button). It shows a live preview of the cabinet. Pick the frame finish (Graphite, Bordeaux lacquer, Oak, Olive, Azure, Slate or Brushed steel) and the cellar's position among your cellars. A new cellar can start from a template (Wine fridge 8 × 6, Staggered rack 5 × 6 + 5 behind, Open rack 4 × 8). Each shelf has a name, −/+ steppers for its front and back slots (up to 24; they can't go below a slot that holds a bottle), how many bottles it stores, and up/down arrows to reorder it. Remove is blocked, with the reason, while a shelf holds bottles. If Home Assistant refuses a save, the builder keeps every edit and says why next to Save.
 - **Clean-Up**: analyzes the whole inventory and identifies possible duplicates (for instance, similar but not identical names, or misspelled varietals). For each case, it proposes a fix and lets you decide which entry to keep.
 
   ![Cleanup tool](images/cleanup.png)
@@ -255,7 +259,7 @@ Every view except Statistics has filtering options. While any filter is active, 
 - **Theme aware**: all surfaces, text, and accents come from the active Home Assistant theme, so the card follows light mode, dark mode, and custom themes.
 - **Compact header**: the header stays anchored on larger screens, and extra padding is dropped on small phone screens.
 - **Scroll position**: your scroll position is kept after minor interface refreshes.
-- **Keyboard support**: bottles and empty slots can be reached with Tab and opened with Enter or Space. Windows keep keyboard focus inside them, close with Escape, and return focus to where you were. Closing a window with unsaved changes asks first.
+- **Keyboard support**: bottles and empty slots can be reached with Tab and opened with Enter or Space. Windows keep keyboard focus inside them, close with Escape, and return focus to where you were. Closing a window with unsaved changes asks first. Moving a bottle works from the keyboard (M, arrow keys, Enter, Escape), and the slot picker in the Add sheet is one Tab stop driven by the arrow keys.
 
 ## Notes
 
