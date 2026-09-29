@@ -118,9 +118,9 @@ interior: theme
 
 ## Features
 
-- **Unlimited cellars**, each with its own name and a color (picked from swatches) that sets the finish of its cabinet frame (bordeaux lacquer, oak, olive, azure, slate, or brushed steel for Off White), so cellars are easy to tell apart.
+- **Unlimited cellars**, each with its own name and a cabinet frame finish (graphite, bordeaux lacquer, oak, olive, azure, slate, or brushed steel), so cellars are easy to tell apart. The cellar builder shows a live preview while you set up the shelves.
 
-  ![Create cellar](images/add_cellar.png)
+  ![Cellar builder](images/add_cellar.png)
 
 - **Per-shelf layout**: each shelf can have a front and/or back row and its own number of bottles per row, and can be named individually. This matches cellars that have, for example, sliding racks at the top and fixed shelves at the bottom.
 
@@ -153,7 +153,7 @@ interior: theme
 
 ### Cellar view
 
-![Cellar View](images/main_view.png)
+![Cellar view](images/main_view.png)
 
 This is the default view. It shows every cellar the way it is physically laid out, with useful information about each bottle. Each cellar is drawn as a lit wine fridge seen at eye level, with a frame in the cellar's finish. Its header shows how full it is (for example `28 / 40`), and the pencil button at the top right edits it.
 
@@ -177,13 +177,13 @@ The status chip pairs a symbol with a color, so it never relies on color alone:
 
 The status chips next to the search repeat these symbols with the number of bottles in each state, and filter by them (see [Filters](#filters)).
 
-![Drag and drop](images/drag_drop.png)
-
 Individual cards can be dragged and dropped at will. Bottles can be moved to an empty slot or swapped; the slot under the pointer is highlighted before you let go. It also works in the Compact view.
+
+![Moving a bottle](images/drag_drop.png)
 
 A bottle can also be moved without dragging: tap **Move** in the Bottle view (in the "…" menu on phones, or when the buttons don't fit), long-press a bottle on a touch screen, or press M on a focused bottle. The bottle lifts, every free slot becomes a target, and a banner says "Tap an empty slot, or a bottle to swap". With the keyboard, the arrow keys go from slot to slot, Enter drops and Escape puts it back. After every move or swap, including one made by drag and drop, a toast offers **Undo**. It stays while you hover or focus it, and Ctrl/Cmd+Z (outside text fields) runs it.
 
-![Bottle View](images/bottle.png)
+![Bottle view](images/bottle.png)
 
 Clicking on a card opens the Bottle view. Its header shows the wine's type, producer, name, vintage and origin, its drinking-window status and its rating. Below, the bottle is shown wearing its label next to the full label photo (tap it to open the photo), or with an **Add label photo** button when there is none.
 
@@ -198,7 +198,7 @@ The location block shows where the bottle is (cellar, shelf, front or back row, 
 
 On phones, Show in cellar, Copy and Delete are in the "…" menu next to Consume and Edit.
 
-![Edit View](images/edit_bottle.png)
+![Add and edit sheet](images/edit_bottle.png)
 
 **+ Bottle**, or a tap on an empty slot, opens the Add sheet. The sheet starts with the label: on a phone this is a step of its own (**Take photo**, **Choose from library**, **Type it instead** or **Scan SAQ barcode**); on a computer, upload a label photo or drop an image on it. The photo is shrunk in the browser (to about 1600 px) before it is uploaded. When Gemini is set up, the label is read straight away: the fields it may fill shimmer while it reads, and you can keep typing, because only fields that are still empty get filled. Filled fields carry an "AI" mark, and a note offers Undo. Pressing Save while the photo is still uploading waits for it, so the bottle is saved with its picture. A barcode photo is read for its digits and the wine is then looked up on SAQ.com; the barcode image is deleted afterwards to save storage.
 
@@ -210,7 +210,7 @@ Editing a bottle uses the same sheet, with Replace, Rotate, Remove and Read labe
 
 ### Compact view
 
-![Compact View](images/compact_view.png)
+![Compact view](images/compact_view.png)
 
 The Compact view has all the features of the Cellar view. The only difference is that each cellar is shown as if looking into an open wine fridge: every bottle is a glass bottle end on a wire rack, colored by wine type and circled by its aging status color, with the status symbol in the middle. Back-row bottles are smaller and darker, staggered behind the front ones. Hovering a bottle shows its name, producer, vintage, status and where it is. When a search finds only a few bottles, they pop forward. It is particularly useful on mobile or for a denser overview of several cellars. If the screen allows it, the card puts cellars side by side. This view is closer to what is typically seen in a cellar manager app.
 

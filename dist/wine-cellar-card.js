@@ -24,7 +24,7 @@ const WCM_TRANSLATIONS = {
     "close": "Close",
     "serving_temp": "Serving temperature",
     "alcohol_pct": "Alcohol level",
-    "not_specified": "Not Specified",
+    "not_specified": "Not specified",
     "cleanup_btn": "Clean-Up",
     "cleanup_title": "Duplicate Search & Clean-Up Tool",
     "cleanup_search_btn": "Search for Duplicates",
