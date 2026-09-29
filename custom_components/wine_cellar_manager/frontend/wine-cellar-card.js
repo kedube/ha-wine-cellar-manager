@@ -4,9 +4,6 @@ const WCM_TRANSLATIONS = {
     "compact": "Compact",
     "all_bottles": "All Bottles",
     "stats": "Stats",
-    "ready_to_drink": "Ready to Drink",
-    "all_types": "All Types",
-    "all_countries": "All Countries",
     "wine_name": "Wine name",
     "producer": "Producer",
     "varietal": "Varietal",
@@ -25,7 +22,6 @@ const WCM_TRANSLATIONS = {
     "save": "Save",
     "cancel": "Cancel",
     "close": "Close",
-    "taste_window_title": "Optimal Drinking Window",
     "serving_temp": "Serving temperature",
     "alcohol_pct": "Alcohol level",
     "not_specified": "Not Specified",
@@ -42,9 +38,7 @@ const WCM_TRANSLATIONS = {
     "global_error": "Error: ",
     "bottle_s": "bottle(s)",
     "cellar_name_required": "Cellar name is required.",
-    "search_placeholder": "Search wine, producer, region...",
     "add_cellar_short": "+ Cellar",
-    "all_ages": "All ages",
     "drink_now": "Drink now",
     "red": "Red",
     "white": "White",
@@ -55,7 +49,6 @@ const WCM_TRANSLATIONS = {
     "other": "Other",
     "wine": "Wine",
     "region_varietal": "Region/Varietal",
-    "aging": "Aging",
     "total_bottles": "Total Bottles",
     "different_wines": "Different Wines",
     "average_age": "Average Age",
@@ -63,7 +56,6 @@ const WCM_TRANSLATIONS = {
     "total_value": "Total Value",
     "distribution_by_type": "Distribution by Type",
     "top_countries_of_origin": "Top Countries of Origin",
-    "bottles_ready_to_drink_by_year": "Bottles Ready to Drink by Year",
     "unnamed_wine": "Unnamed Wine",
     "drinking_window": "Drinking Window",
     "from_prefix": "From ",
@@ -89,14 +81,10 @@ const WCM_TRANSLATIONS = {
     "shelf_front_capacity_min": "Each shelf must have a front capacity of at least 1.",
     "add_at_least_one_shelf": "Add at least one shelf.",
     "cellar_save_failed": "Cellar save failed: ",
-    "confirm_delete_bottle": "Permanently delete this bottle? This cannot be undone.",
-    "confirm_consume_bottle": "Mark this bottle as consumed and move it to history?",
     "confirm_delete_cellar": "Delete this cellar and all its bottles?",
     "bottle_copied_to_memory": "Bottle copied to memory. Click an empty slot to paste.",
     "cellar_needs_shelf": "A cellar must have at least one shelf.",
     "unknown_error": "unknown error",
-    "bottles_found_suffix": " bottle(s) found.",
-    "search_no_match": "No bottles match your search or filters.",
     "clear_filters": "Clear filters",
     "no_bottles_yet": "No bottles in your cellars yet.",
     "add_bottle_short": "+ Bottle",
@@ -105,8 +93,6 @@ const WCM_TRANSLATIONS = {
     "cellar_editor": "Cellar editor",
     "bottle_editor": "Bottle editor",
     "unknown_cellar": "Unknown cellar",
-    "bottles_count": "{n} bottles",
-    "free_slots": "{n} free",
     "status_young": "Too young",
     "status_ready": "Ready",
     "status_peak": "At peak",
@@ -120,8 +106,6 @@ const WCM_TRANSLATIONS = {
     "discard": "Discard",
     "delete_bottle_title": "Delete “{name}”?",
     "delete_bottle_body": "The bottle is removed for good and does not go to your history. This cannot be undone.",
-    "consume_bottle_title": "Mark “{name}” as consumed?",
-    "consume_bottle_body": "It leaves its slot and moves to your history.",
     "delete_cellar_title": "Delete the cellar “{name}”?",
     "delete_cellar_body": "This also deletes its {bottles} bottle(s), {history} history entry(ies) and their label photos. This cannot be undone.",
     "delete_cellar_body_empty": "The cellar is empty. This cannot be undone.",
@@ -335,16 +319,105 @@ const WCM_TRANSLATIONS = {
     "builder_shelves_other": "{n} shelves",
     "builder_slots_one": "{n} slot",
     "builder_slots_other": "{n} slots",
-    "builder_fin_graphite": "Graphite"
+    "builder_fin_graphite": "Graphite",
+    "find_placeholder": "Search wine, producer, vintage, cellar…",
+    "find_placeholder_short": "Search your cellar…",
+    "find_search_label": "Search bottles",
+    "find_views_label": "View",
+    "find_tab_bottles": "Bottles",
+    "find_filters": "Filters",
+    "find_filters_n_one": "Filters, {n} selected",
+    "find_filters_n_other": "Filters, {n} selected",
+    "find_clear_all": "Clear all",
+    "find_clear_search": "Clear search",
+    "find_status_group": "Drinking status",
+    "find_type_group": "Wine type",
+    "find_country_group": "Country",
+    "find_cellar_group": "Cellar",
+    "find_drink_now_hint": "At peak or past peak: open these first",
+    "find_remove": "Remove filter: {x}",
+    "find_matches_one": "{n} match",
+    "find_matches_other": "{n} matches",
+    "find_no_match": "No match",
+    "find_in_cellar": "in {name}",
+    "find_in_cellars_one": "in {n} cellar",
+    "find_in_cellars_other": "in {n} cellars",
+    "find_more_n": "+{n} more",
+    "find_more_label": "Show all {n} matches in All Bottles",
+    "find_step_hint": "next match",
+    "find_matches_label": "Matching bottles",
+    "find_no_results_q": "No bottle matches “{q}”",
+    "find_no_results_f": "No bottle matches these filters",
+    "find_did_you_mean": "Did you mean {x}?",
+    "find_try_other": "Check the spelling, or search by producer, vintage or cellar.",
+    "find_found_one": "{n} bottle found",
+    "find_found_other": "{n} bottles found",
+    "find_found_none": "No bottle found",
+    "find_state_match": "matching",
+    "find_state_other": "not matching",
+    "find_show_one": "Show {n} bottle",
+    "find_show_other": "Show {n} bottles",
+    "find_crumb_shelf": "{name} (shelf {n})",
+    "find_crumb_back": "Back #{pos}",
+    "find_crumb_front": "Front #{pos}",
+    "find_crumb_pos": "#{pos}",
+    "consume_done": "Enjoyed {name}",
+    "consume_restored": "{name} is back in its slot",
+    "consume_failed": "Couldn't mark {name} as consumed: {error}",
+    "consume_undo_taken": "Couldn't put {name} back: its slot is taken now. It stays under Recently enjoyed, in Stats.",
+    "consume_undo_failed": "Couldn't put {name} back: {error}",
+    "delete_done": "{name} deleted",
+    "delete_failed": "Couldn't delete {name}: {error}",
+    "list_empty_body": "Add your first bottle: snap its label and pick its slot.",
+    "list_sort_by": "Sort by",
+    "list_reverse": "Reverse order",
+    "list_title_one": "{n} bottle",
+    "list_title_other": "{n} bottles",
+    "list_title_of_one": "{shown} of {n} bottle",
+    "list_title_of_other": "{shown} of {n} bottles",
+    "stats_empty_title": "No statistics yet",
+    "stats_empty_body": "Add bottles to see what to drink, when, and what your cellar holds.",
+    "stats_free_one": "{n} free slot",
+    "stats_free_other": "{n} free slots",
+    "stats_producers_one": "{n} producer",
+    "stats_producers_other": "{n} producers",
+    "stats_oldest": "Oldest vintage {y}",
+    "stats_per_bottle": "≈ {v} per bottle",
+    "stats_open_hint": "Opens All Bottles showing only these bottles.",
+    "stats_window_title": "Drinking window",
+    "stats_window_sub": "Bottles inside their drinking window, year by year",
+    "stats_window_none": "No bottle has a drinking window in the coming years.",
+    "stats_window_caption": "Bottles inside their drinking window per year, by wine type",
+    "stats_now": "now",
+    "stats_year_bottles_one": "{year}: {n} bottle",
+    "stats_year_bottles_other": "{year}: {n} bottles",
+    "stats_now_empty": "Nothing to hurry: no bottle is at or past its peak.",
+    "stats_now_all_one": "See {n} bottle in All Bottles",
+    "stats_now_all_other": "See all {n} in All Bottles",
+    "stats_bottle_word_one": "bottle",
+    "stats_bottle_word_other": "bottles",
+    "ready_to_drink": "Ready to drink",
+    "find_ready_to_drink_hint": "Ready or at peak: good to open now",
+    "toast_undo_keys": "Press {keys} to undo",
+    "stats_recent_title": "Recently enjoyed",
+    "stats_recent_sub": "Marked as enjoyed by mistake? Put the bottle back in its slot.",
+    "stats_recent_on": "Enjoyed {date}",
+    "stats_put_back": "Put back",
+    "stats_put_back_label": "Put {name} back in its slot",
+    "stats_recent_taken": "Its slot is taken",
+    "stats_recent_gone": "Its shelf no longer exists",
+    "err_consumed_missing": "This bottle is no longer in the history. It may have been put back or deleted elsewhere.",
+    "consume_undo_noshelf": "Couldn't put {name} back: its shelf no longer exists.",
+    "find_words_unfiltered_one": "{n} bottle matches “{q}” without the filters.",
+    "find_words_unfiltered_other": "{n} bottles match “{q}” without the filters.",
+    "list_sorted_asc": "sorted ascending",
+    "list_sorted_desc": "sorted descending"
   },
   "fr": {
     "cellars": "Celliers",
     "compact": "Compact",
     "all_bottles": "Toutes les bouteilles",
     "stats": "Statistiques",
-    "ready_to_drink": "Prêt à boire",
-    "all_types": "Tous les types",
-    "all_countries": "Tous les pays",
     "wine_name": "Nom du vin",
     "producer": "Vignoble",
     "varietal": "Cépage",
@@ -363,7 +436,6 @@ const WCM_TRANSLATIONS = {
     "save": "Enregistrer",
     "cancel": "Annuler",
     "close": "Fermer",
-    "taste_window_title": "Fenêtre de dégustation",
     "serving_temp": "Température de service",
     "alcohol_pct": "Degré d'alcool",
     "not_specified": "Non spécifié",
@@ -371,18 +443,16 @@ const WCM_TRANSLATIONS = {
     "cleanup_title": "Outil de recherche et nettoyage de doublons",
     "cleanup_search_btn": "Rechercher les doublons",
     "cleanup_merge_all": "Fusionner tout",
-    "cleanup_no_duplicates": "Aucun doublon de syntaxe détecté !",
+    "cleanup_no_duplicates": "Aucun doublon de syntaxe détecté !",
     "cleanup_searching": "Analyse de la cave en cours...",
     "cleanup_welcome": "Cliquez sur le bouton ci-dessus pour lancer la recherche et l'analyse de votre cave.",
     "updating_field": "Mise à jour du champ en cours...",
-    "update_failed": "Erreur lors de la mise à jour : ",
+    "update_failed": "Erreur lors de la mise à jour : ",
     "merging_all_selections": "Fusion de tous les choix en cours...",
-    "global_error": "Erreur globale : ",
+    "global_error": "Erreur globale : ",
     "bottle_s": "bouteille(s)",
     "cellar_name_required": "Le nom du cellier est requis.",
-    "search_placeholder": "Rechercher vin, vignoble, région...",
     "add_cellar_short": "+ Cellier",
-    "all_ages": "Tous les âges",
     "drink_now": "Boire maintenant",
     "red": "Rouge",
     "white": "Blanc",
@@ -393,7 +463,6 @@ const WCM_TRANSLATIONS = {
     "other": "Autre",
     "wine": "Vin",
     "region_varietal": "Région / Cépage",
-    "aging": "Apogée",
     "total_bottles": "Bouteilles au total",
     "different_wines": "Vins différents",
     "average_age": "Âge moyen",
@@ -401,7 +470,6 @@ const WCM_TRANSLATIONS = {
     "total_value": "Valeur totale",
     "distribution_by_type": "Distribution par type",
     "top_countries_of_origin": "Top des pays d'origine",
-    "bottles_ready_to_drink_by_year": "Bouteilles prêtes à boire par année",
     "unnamed_wine": "Nom inconnu",
     "drinking_window": "Apogée",
     "from_prefix": "De ",
@@ -419,22 +487,18 @@ const WCM_TRANSLATIONS = {
     "add_shelf": "+ Ajouter",
     "no_barcode_found": "Aucun code-barres trouvé.",
     "barcode_extraction_failed": "L'extraction du code-barres a échoué.",
-    "confirm_reanalyze": "Ce vin a déjà été analysé avec succès. Voulez-vous écraser les données et relancer l'analyse ?",
+    "confirm_reanalyze": "Ce vin a déjà été analysé avec succès. Voulez-vous écraser les données et relancer l'analyse ?",
     "provide_barcode_or_label": "Veuillez fournir un code-barres (chiffres) ou téléverser une étiquette avant de lancer l'analyse.",
-    "confirm_merge_all": "Voulez-vous fusionner et uniformiser toutes les syntaxes listées ?",
-    "scanner_error": "Erreur du lecteur : ",
+    "confirm_merge_all": "Voulez-vous fusionner et uniformiser toutes les syntaxes listées ?",
+    "scanner_error": "Erreur du lecteur : ",
     "file_not_image": "Le fichier sélectionné n'est pas une image.",
     "shelf_front_capacity_min": "Chaque tablette doit avoir une capacité avant d'au moins 1.",
     "add_at_least_one_shelf": "Ajoutez au moins une tablette.",
-    "cellar_save_failed": "L'enregistrement du cellier a échoué : ",
-    "confirm_delete_bottle": "Supprimer définitivement cette bouteille ? Cette action est irréversible.",
-    "confirm_consume_bottle": "Marquer cette bouteille comme consommée et la déplacer dans l'historique ?",
-    "confirm_delete_cellar": "Supprimer ce cellier et toutes ses bouteilles ?",
+    "cellar_save_failed": "L'enregistrement du cellier a échoué : ",
+    "confirm_delete_cellar": "Supprimer ce cellier et toutes ses bouteilles ?",
     "bottle_copied_to_memory": "Bouteille copiée en mémoire. Cliquez sur un emplacement vide pour la coller.",
     "cellar_needs_shelf": "Un cellier doit avoir au moins une tablette.",
     "unknown_error": "erreur inconnue",
-    "bottles_found_suffix": " bouteille(s) trouvée(s).",
-    "search_no_match": "Aucune bouteille ne correspond à votre recherche ou à vos filtres.",
     "clear_filters": "Effacer les filtres",
     "no_bottles_yet": "Aucune bouteille dans vos celliers pour l'instant.",
     "add_bottle_short": "+ Bouteille",
@@ -443,30 +507,26 @@ const WCM_TRANSLATIONS = {
     "cellar_editor": "Éditeur de cellier",
     "bottle_editor": "Éditeur de bouteille",
     "unknown_cellar": "Cellier inconnu",
-    "bottles_count": "{n} bouteilles",
-    "free_slots": "{n} libres",
     "status_young": "Trop jeune",
     "status_ready": "Prêt",
     "status_peak": "À l'apogée",
     "status_past": "Apogée passée",
     "location": "Emplacement",
     "no_shelves": "Aucune tablette configurée.",
-    "add_first_cellar": "Ajoutez un premier cellier pour commencer !",
-    "discard_title": "Abandonner vos modifications ?",
+    "add_first_cellar": "Ajoutez un premier cellier pour commencer !",
+    "discard_title": "Abandonner vos modifications ?",
     "discard_body": "Ce que vous avez saisi dans ce formulaire sera perdu.",
     "keep_editing": "Continuer la saisie",
     "discard": "Abandonner",
-    "delete_bottle_title": "Supprimer « {name} » ?",
+    "delete_bottle_title": "Supprimer « {name} » ?",
     "delete_bottle_body": "La bouteille est supprimée définitivement et ne va pas dans l'historique. Cette action est irréversible.",
-    "consume_bottle_title": "Marquer « {name} » comme consommée ?",
-    "consume_bottle_body": "Elle libère son emplacement et passe dans l'historique.",
-    "delete_cellar_title": "Supprimer le cellier « {name} » ?",
+    "delete_cellar_title": "Supprimer le cellier « {name} » ?",
     "delete_cellar_body": "Cela supprime aussi ses {bottles} bouteille(s), {history} entrée(s) d'historique et leurs photos d'étiquette. Cette action est irréversible.",
     "delete_cellar_body_empty": "Le cellier est vide. Cette action est irréversible.",
     "delete_cellar_confirm": "Supprimer le cellier",
-    "merge_all_title": "Fusionner {n} paire(s) d'orthographes ?",
+    "merge_all_title": "Fusionner {n} paire(s) d'orthographes ?",
     "merge_all_body": "{m} bouteille(s) prendront l'orthographe choisie. Les paires à vérifier ne sont pas modifiées.",
-    "action_failed": "L'opération a échoué : {error}",
+    "action_failed": "L'opération a échoué : {error}",
     "err_shelf_missing": "La tablette choisie n'existe plus.",
     "err_no_back_lane": "Cette tablette n'a pas de rang arrière.",
     "err_position_out_of_range": "Cette position dépasse la capacité de la tablette pour ce rang.",
@@ -478,12 +538,12 @@ const WCM_TRANSLATIONS = {
     "err_remove_back_lane": "Le rang arrière contient encore des bouteilles et ne peut pas être retiré. Déplacez-les d'abord.",
     "err_bottle_missing": "Cette bouteille n'existe plus. Elle a peut-être été supprimée ailleurs.",
     "err_no_entry": "L'intégration Wine Cellar Manager n'est pas configurée.",
-    "err_shelf_front_min": "« {shelf} » contient une bouteille en position avant {n} : il lui faut au moins {n} positions avant.",
-    "err_shelf_back_min": "« {shelf} » contient une bouteille en position arrière {n} : il lui faut au moins {n} positions arrière.",
+    "err_shelf_front_min": "« {shelf} » contient une bouteille en position avant {n} : il lui faut au moins {n} positions avant.",
+    "err_shelf_back_min": "« {shelf} » contient une bouteille en position arrière {n} : il lui faut au moins {n} positions arrière.",
     "shelf_n": "Tablette {n}",
     "shelf_empty": "Vide",
-    "pasted_details": "Détails copiés depuis « {name} ». Vérifiez-les puis enregistrez.",
-    "cleanup_check_pair": "Orthographe proche, mais il peut s'agir d'un autre nom. Vérifiez avant de fusionner ; « Fusionner tout » l'ignore.",
+    "pasted_details": "Détails copiés depuis « {name} ». Vérifiez-les puis enregistrez.",
+    "cleanup_check_pair": "Orthographe proche, mais il peut s'agir d'un autre nom. Vérifiez avant de fusionner ; « Fusionner tout » l'ignore.",
     "depth_back_row": "Rang arrière",
     "depth_behind": "Derrière {names}",
     "depth_behind_aria": "derrière {names}",
@@ -554,7 +614,7 @@ const WCM_TRANSLATIONS = {
     "sheet_st_uploading": "Téléversement…",
     "sheet_st_reading": "Lecture de l’étiquette…",
     "sheet_st_barcode": "Lecture du code-barres…",
-    "sheet_note_reading": "Lecture de l’étiquette. Vous pouvez continuer : seuls les champs vides seront remplis.",
+    "sheet_note_reading": "Lecture de l’étiquette. Vous pouvez continuer : seuls les champs vides seront remplis.",
     "sheet_note_ai_one": "{n} détail rempli depuis l’étiquette. Vérifiez-le rapidement.",
     "sheet_note_ai_other": "{n} détails remplis depuis l’étiquette. Vérifiez-les rapidement.",
     "sheet_note_cellar_one": "{n} détail rempli depuis {name} de votre cave.",
@@ -613,8 +673,8 @@ const WCM_TRANSLATIONS = {
     "sheet_err_year": "Utilisez une année à 4 chiffres.",
     "sheet_err_window": "La fenêtre ne peut pas finir avant de commencer.",
     "sheet_err_no_slot": "Choisissez un emplacement libre.",
-    "sheet_err_slot_taken": "Cet emplacement est occupé par « {name} ». Choisissez-en un autre.",
-    "sheet_err_slot_moved": "Cet emplacement vient d’être pris : nous avons choisi le suivant. Touchez Enregistrer à nouveau.",
+    "sheet_err_slot_taken": "Cet emplacement est occupé par « {name} ». Choisissez-en un autre.",
+    "sheet_err_slot_moved": "Cet emplacement vient d’être pris : nous avons choisi le suivant. Touchez Enregistrer à nouveau.",
     "sheet_err_not_enough_one": "Seulement {n} emplacement libre dans {cellar}.",
     "sheet_err_not_enough_other": "Seulement {n} emplacements libres dans {cellar}.",
     "sheet_err_partial_left_one": "{i} sur {total} enregistrées. {error} Enregistrez à nouveau pour ajouter la dernière.",
@@ -622,14 +682,14 @@ const WCM_TRANSLATIONS = {
     "sheet_err_number": "Entrez un nombre.",
     "sheet_err_photo_format": "Ce format de photo n’est pas pris en charge. Essayez JPEG ou PNG.",
     "sheet_err_photo_upload": "La photo n’a pas pu être téléversée. {error}",
-    "sheet_err_save": "Enregistrement impossible : {error}",
+    "sheet_err_save": "Enregistrement impossible : {error}",
     "move_action": "Déplacer",
     "move_moving": "Déplacement de {name}",
     "move_hint": "Touchez un emplacement vide, ou une bouteille pour échanger.",
     "move_hint_kb": "Échap annule.",
     "move_done": "{name} déplacée vers {where}",
     "move_swapped": "{a} et {b} échangées",
-    "move_failed": "Déplacement impossible : {error}",
+    "move_failed": "Déplacement impossible : {error}",
     "builder_title_new": "Nouveau cellier",
     "builder_name_ph": "ex. Cave de la cuisine",
     "builder_finish": "Finition du cadre",
@@ -673,16 +733,105 @@ const WCM_TRANSLATIONS = {
     "builder_shelves_other": "{n} tablettes",
     "builder_slots_one": "{n} emplacement",
     "builder_slots_other": "{n} emplacements",
-    "builder_fin_graphite": "Graphite"
+    "builder_fin_graphite": "Graphite",
+    "find_placeholder": "Rechercher vin, producteur, millésime, cellier…",
+    "find_placeholder_short": "Rechercher dans la cave…",
+    "find_search_label": "Rechercher des bouteilles",
+    "find_views_label": "Affichage",
+    "find_tab_bottles": "Bouteilles",
+    "find_filters": "Filtres",
+    "find_filters_n_one": "Filtres, {n} sélectionné",
+    "find_filters_n_other": "Filtres, {n} sélectionnés",
+    "find_clear_all": "Tout effacer",
+    "find_clear_search": "Effacer la recherche",
+    "find_status_group": "Maturité",
+    "find_type_group": "Type de vin",
+    "find_country_group": "Pays",
+    "find_cellar_group": "Cellier",
+    "find_drink_now_hint": "À l'apogée ou apogée passée : à ouvrir en premier",
+    "find_remove": "Retirer le filtre : {x}",
+    "find_matches_one": "{n} résultat",
+    "find_matches_other": "{n} résultats",
+    "find_no_match": "Aucun résultat",
+    "find_in_cellar": "dans {name}",
+    "find_in_cellars_one": "dans {n} cellier",
+    "find_in_cellars_other": "dans {n} celliers",
+    "find_more_n": "+{n} autres",
+    "find_more_label": "Voir les {n} résultats dans Toutes les bouteilles",
+    "find_step_hint": "résultat suivant",
+    "find_matches_label": "Bouteilles correspondantes",
+    "find_no_results_q": "Aucune bouteille ne correspond à « {q} »",
+    "find_no_results_f": "Aucune bouteille ne correspond à ces filtres",
+    "find_did_you_mean": "Vouliez-vous dire {x} ?",
+    "find_try_other": "Vérifiez l'orthographe, ou cherchez par producteur, millésime ou cellier.",
+    "find_found_one": "{n} bouteille trouvée",
+    "find_found_other": "{n} bouteilles trouvées",
+    "find_found_none": "Aucune bouteille trouvée",
+    "find_state_match": "correspond",
+    "find_state_other": "ne correspond pas",
+    "find_show_one": "Voir {n} bouteille",
+    "find_show_other": "Voir {n} bouteilles",
+    "find_crumb_shelf": "{name} (tablette {n})",
+    "find_crumb_back": "Arrière #{pos}",
+    "find_crumb_front": "Avant #{pos}",
+    "find_crumb_pos": "#{pos}",
+    "consume_done": "Dégustée : {name}",
+    "consume_restored": "De retour à sa place : {name}",
+    "consume_failed": "Impossible de marquer {name} comme consommée : {error}",
+    "consume_undo_taken": "Impossible de remettre {name} : son emplacement est désormais occupé. Elle reste dans Dégustées récemment, dans les statistiques.",
+    "consume_undo_failed": "Impossible de remettre {name} : {error}",
+    "delete_done": "Bouteille supprimée : {name}",
+    "delete_failed": "Impossible de supprimer {name} : {error}",
+    "list_empty_body": "Ajoutez votre première bouteille : photographiez l'étiquette et choisissez son emplacement.",
+    "list_sort_by": "Trier par",
+    "list_reverse": "Inverser l'ordre",
+    "list_title_one": "{n} bouteille",
+    "list_title_other": "{n} bouteilles",
+    "list_title_of_one": "{shown} sur {n} bouteille",
+    "list_title_of_other": "{shown} sur {n} bouteilles",
+    "stats_empty_title": "Pas encore de statistiques",
+    "stats_empty_body": "Ajoutez des bouteilles pour voir quoi boire, quand, et ce que contient votre cave.",
+    "stats_free_one": "{n} place libre",
+    "stats_free_other": "{n} places libres",
+    "stats_producers_one": "{n} producteur",
+    "stats_producers_other": "{n} producteurs",
+    "stats_oldest": "Plus ancien millésime : {y}",
+    "stats_per_bottle": "≈ {v} par bouteille",
+    "stats_open_hint": "Ouvre Toutes les bouteilles en ne montrant que celles-ci.",
+    "stats_window_title": "Fenêtre de dégustation",
+    "stats_window_sub": "Bouteilles dans leur fenêtre de dégustation, année par année",
+    "stats_window_none": "Aucune bouteille n'a de fenêtre de dégustation dans les années à venir.",
+    "stats_window_caption": "Bouteilles dans leur fenêtre de dégustation par année et par type de vin",
+    "stats_now": "en cours",
+    "stats_year_bottles_one": "{year} : {n} bouteille",
+    "stats_year_bottles_other": "{year} : {n} bouteilles",
+    "stats_now_empty": "Rien ne presse : aucune bouteille n'est à son apogée ou au-delà.",
+    "stats_now_all_one": "Voir {n} bouteille dans Toutes les bouteilles",
+    "stats_now_all_other": "Voir les {n} dans Toutes les bouteilles",
+    "stats_bottle_word_one": "bouteille",
+    "stats_bottle_word_other": "bouteilles",
+    "ready_to_drink": "Prêt à boire",
+    "find_ready_to_drink_hint": "Prêtes ou à l'apogée : bonnes à ouvrir",
+    "toast_undo_keys": "Appuyez sur {keys} pour annuler",
+    "stats_recent_title": "Dégustées récemment",
+    "stats_recent_sub": "Marquée comme dégustée par erreur ? Remettez la bouteille à sa place.",
+    "stats_recent_on": "Dégustée le {date}",
+    "stats_put_back": "Remettre",
+    "stats_put_back_label": "Remettre {name} à sa place",
+    "stats_recent_taken": "Sa place est prise",
+    "stats_recent_gone": "Sa tablette n'existe plus",
+    "err_consumed_missing": "Cette bouteille n'est plus dans l'historique. Elle a peut-être été remise ou supprimée ailleurs.",
+    "consume_undo_noshelf": "Impossible de remettre {name} : sa tablette n'existe plus.",
+    "find_words_unfiltered_one": "{n} bouteille correspond à « {q} » sans les filtres.",
+    "find_words_unfiltered_other": "{n} bouteilles correspondent à « {q} » sans les filtres.",
+    "list_sorted_asc": "tri croissant",
+    "list_sorted_desc": "tri décroissant"
   },
   "de": {
     "cellars": "Weinkeller",
     "compact": "Kompakt",
     "all_bottles": "Alle Flaschen",
     "stats": "Statistik",
-    "ready_to_drink": "Trinkreif",
-    "all_types": "Alle Sorten",
-    "all_countries": "Alle Länder",
     "wine_name": "Weinname",
     "producer": "Erzeuger",
     "varietal": "Rebsorte",
@@ -701,7 +850,6 @@ const WCM_TRANSLATIONS = {
     "save": "Speichern",
     "cancel": "Abbrechen",
     "close": "Schließen",
-    "taste_window_title": "Optimales Trinkfenster",
     "serving_temp": "Serviertemperatur",
     "alcohol_pct": "Alkoholgehalt",
     "not_specified": "Nicht angegeben",
@@ -718,9 +866,7 @@ const WCM_TRANSLATIONS = {
     "global_error": "Fehler: ",
     "bottle_s": "Flasche(n)",
     "cellar_name_required": "Der Kellername ist erforderlich.",
-    "search_placeholder": "Wein, Erzeuger, Region suchen...",
     "add_cellar_short": "+ Keller",
-    "all_ages": "Alle Jahrgänge",
     "drink_now": "Jetzt trinken",
     "red": "Rot",
     "white": "Weiß",
@@ -731,7 +877,6 @@ const WCM_TRANSLATIONS = {
     "other": "Sonstige",
     "wine": "Wein",
     "region_varietal": "Region/Rebsorte",
-    "aging": "Trinkreife",
     "total_bottles": "Flaschen gesamt",
     "different_wines": "Verschiedene Weine",
     "average_age": "Durchschnittsalter",
@@ -739,7 +884,6 @@ const WCM_TRANSLATIONS = {
     "total_value": "Gesamtwert",
     "distribution_by_type": "Verteilung nach Typ",
     "top_countries_of_origin": "Top-Herkunftsländer",
-    "bottles_ready_to_drink_by_year": "Trinkreife Flaschen nach Jahr",
     "unnamed_wine": "Unbenannter Wein",
     "drinking_window": "Trinkfenster",
     "from_prefix": "Von ",
@@ -765,14 +909,10 @@ const WCM_TRANSLATIONS = {
     "shelf_front_capacity_min": "Jedes Regal braucht vorne eine Kapazität von mindestens 1.",
     "add_at_least_one_shelf": "Fügen Sie mindestens ein Regal hinzu.",
     "cellar_save_failed": "Speichern des Kellers fehlgeschlagen: ",
-    "confirm_delete_bottle": "Diese Flasche endgültig löschen? Dies kann nicht rückgängig gemacht werden.",
-    "confirm_consume_bottle": "Diese Flasche als getrunken markieren und in den Verlauf verschieben?",
     "confirm_delete_cellar": "Diesen Keller und alle seine Flaschen löschen?",
     "bottle_copied_to_memory": "Flasche zwischengespeichert. Klicken Sie auf einen leeren Platz zum Einfügen.",
     "cellar_needs_shelf": "Ein Keller muss mindestens ein Regal haben.",
     "unknown_error": "unbekannter Fehler",
-    "bottles_found_suffix": " Flasche(n) gefunden.",
-    "search_no_match": "Keine Flasche entspricht Ihrer Suche oder Ihren Filtern.",
     "clear_filters": "Filter zurücksetzen",
     "no_bottles_yet": "Noch keine Flaschen in Ihren Kellern.",
     "add_bottle_short": "+ Flasche",
@@ -781,8 +921,6 @@ const WCM_TRANSLATIONS = {
     "cellar_editor": "Keller-Editor",
     "bottle_editor": "Flaschen-Editor",
     "unknown_cellar": "Unbekannter Keller",
-    "bottles_count": "{n} Flaschen",
-    "free_slots": "{n} frei",
     "status_young": "Zu jung",
     "status_ready": "Trinkreif",
     "status_peak": "Auf dem Höhepunkt",
@@ -796,8 +934,6 @@ const WCM_TRANSLATIONS = {
     "discard": "Verwerfen",
     "delete_bottle_title": "„{name}“ löschen?",
     "delete_bottle_body": "Die Flasche wird endgültig entfernt und nicht in den Verlauf übernommen. Dies kann nicht rückgängig gemacht werden.",
-    "consume_bottle_title": "„{name}“ als getrunken markieren?",
-    "consume_bottle_body": "Sie gibt ihren Platz frei und wandert in den Verlauf.",
     "delete_cellar_title": "Keller „{name}“ löschen?",
     "delete_cellar_body": "Damit werden auch seine {bottles} Flasche(n), {history} Verlaufseintrag/-einträge und deren Etikettenfotos gelöscht. Dies kann nicht rückgängig gemacht werden.",
     "delete_cellar_body_empty": "Der Keller ist leer. Dies kann nicht rückgängig gemacht werden.",
@@ -1011,16 +1147,105 @@ const WCM_TRANSLATIONS = {
     "builder_shelves_other": "{n} Regale",
     "builder_slots_one": "{n} Platz",
     "builder_slots_other": "{n} Plätze",
-    "builder_fin_graphite": "Graphit"
+    "builder_fin_graphite": "Graphit",
+    "find_placeholder": "Wein, Erzeuger, Jahrgang, Keller suchen…",
+    "find_placeholder_short": "Im Keller suchen…",
+    "find_search_label": "Flaschen suchen",
+    "find_views_label": "Ansicht",
+    "find_tab_bottles": "Flaschen",
+    "find_filters": "Filter",
+    "find_filters_n_one": "Filter, {n} ausgewählt",
+    "find_filters_n_other": "Filter, {n} ausgewählt",
+    "find_clear_all": "Alles zurücksetzen",
+    "find_clear_search": "Suche löschen",
+    "find_status_group": "Trinkreife",
+    "find_type_group": "Weinart",
+    "find_country_group": "Land",
+    "find_cellar_group": "Keller",
+    "find_drink_now_hint": "Auf oder über dem Höhepunkt: zuerst öffnen",
+    "find_remove": "Filter entfernen: {x}",
+    "find_matches_one": "{n} Treffer",
+    "find_matches_other": "{n} Treffer",
+    "find_no_match": "Kein Treffer",
+    "find_in_cellar": "in {name}",
+    "find_in_cellars_one": "in {n} Keller",
+    "find_in_cellars_other": "in {n} Kellern",
+    "find_more_n": "+{n} weitere",
+    "find_more_label": "Alle {n} Treffer unter „Alle Flaschen“ zeigen",
+    "find_step_hint": "nächster Treffer",
+    "find_matches_label": "Passende Flaschen",
+    "find_no_results_q": "Keine Flasche passt zu „{q}“",
+    "find_no_results_f": "Keine Flasche passt zu diesen Filtern",
+    "find_did_you_mean": "Meinten Sie {x}?",
+    "find_try_other": "Prüfen Sie die Schreibweise oder suchen Sie nach Erzeuger, Jahrgang oder Keller.",
+    "find_found_one": "{n} Flasche gefunden",
+    "find_found_other": "{n} Flaschen gefunden",
+    "find_found_none": "Keine Flasche gefunden",
+    "find_state_match": "passt",
+    "find_state_other": "passt nicht",
+    "find_show_one": "{n} Flasche zeigen",
+    "find_show_other": "{n} Flaschen zeigen",
+    "find_crumb_shelf": "{name} (Regal {n})",
+    "find_crumb_back": "Hinten #{pos}",
+    "find_crumb_front": "Vorne #{pos}",
+    "find_crumb_pos": "#{pos}",
+    "consume_done": "Getrunken: {name}",
+    "consume_restored": "Wieder an ihrem Platz: {name}",
+    "consume_failed": "{name} konnte nicht als getrunken markiert werden: {error}",
+    "consume_undo_taken": "{name} konnte nicht zurückgestellt werden: Der Platz ist inzwischen belegt. Die Flasche bleibt unter „Zuletzt getrunken“ in der Statistik.",
+    "consume_undo_failed": "{name} konnte nicht zurückgestellt werden: {error}",
+    "delete_done": "Gelöscht: {name}",
+    "delete_failed": "{name} konnte nicht gelöscht werden: {error}",
+    "list_empty_body": "Fügen Sie Ihre erste Flasche hinzu: Etikett fotografieren und Platz wählen.",
+    "list_sort_by": "Sortieren nach",
+    "list_reverse": "Reihenfolge umkehren",
+    "list_title_one": "{n} Flasche",
+    "list_title_other": "{n} Flaschen",
+    "list_title_of_one": "{shown} von {n} Flasche",
+    "list_title_of_other": "{shown} von {n} Flaschen",
+    "stats_empty_title": "Noch keine Statistik",
+    "stats_empty_body": "Fügen Sie Flaschen hinzu, um zu sehen, was Sie wann trinken sollten und was Ihr Keller enthält.",
+    "stats_free_one": "{n} freier Platz",
+    "stats_free_other": "{n} freie Plätze",
+    "stats_producers_one": "{n} Erzeuger",
+    "stats_producers_other": "{n} Erzeuger",
+    "stats_oldest": "Ältester Jahrgang: {y}",
+    "stats_per_bottle": "≈ {v} pro Flasche",
+    "stats_open_hint": "Öffnet „Alle Flaschen“ mit nur diesen Flaschen.",
+    "stats_window_title": "Trinkfenster",
+    "stats_window_sub": "Flaschen in ihrem Trinkfenster, Jahr für Jahr",
+    "stats_window_none": "Keine Flasche hat ein Trinkfenster in den kommenden Jahren.",
+    "stats_window_caption": "Flaschen im Trinkfenster pro Jahr, nach Weinart",
+    "stats_now": "jetzt",
+    "stats_year_bottles_one": "{year}: {n} Flasche",
+    "stats_year_bottles_other": "{year}: {n} Flaschen",
+    "stats_now_empty": "Nichts eilt: Keine Flasche ist auf oder über dem Höhepunkt.",
+    "stats_now_all_one": "{n} Flasche unter „Alle Flaschen“ zeigen",
+    "stats_now_all_other": "Alle {n} unter „Alle Flaschen“ zeigen",
+    "stats_bottle_word_one": "Flasche",
+    "stats_bottle_word_other": "Flaschen",
+    "ready_to_drink": "Bereit zum Trinken",
+    "find_ready_to_drink_hint": "Trinkreif oder auf dem Höhepunkt: gut zum Öffnen",
+    "toast_undo_keys": "Mit {keys} rückgängig machen",
+    "stats_recent_title": "Zuletzt getrunken",
+    "stats_recent_sub": "Versehentlich als getrunken markiert? Stellen Sie die Flasche an ihren Platz zurück.",
+    "stats_recent_on": "Getrunken am {date}",
+    "stats_put_back": "Zurückstellen",
+    "stats_put_back_label": "{name} an ihren Platz zurückstellen",
+    "stats_recent_taken": "Ihr Platz ist belegt",
+    "stats_recent_gone": "Ihr Regal existiert nicht mehr",
+    "err_consumed_missing": "Diese Flasche ist nicht mehr im Verlauf. Sie wurde möglicherweise an anderer Stelle zurückgestellt oder gelöscht.",
+    "consume_undo_noshelf": "{name} konnte nicht zurückgestellt werden: Das Regal existiert nicht mehr.",
+    "find_words_unfiltered_one": "{n} Flasche passt ohne die Filter zu „{q}“.",
+    "find_words_unfiltered_other": "{n} Flaschen passen ohne die Filter zu „{q}“.",
+    "list_sorted_asc": "aufsteigend sortiert",
+    "list_sorted_desc": "absteigend sortiert"
   },
   "es": {
     "cellars": "Bodegas",
     "compact": "Compacto",
     "all_bottles": "Todas las botellas",
     "stats": "Estadísticas",
-    "ready_to_drink": "Listo para beber",
-    "all_types": "Todos los tipos",
-    "all_countries": "Todos los países",
     "wine_name": "Nombre del vino",
     "producer": "Productor",
     "varietal": "Variedad",
@@ -1039,7 +1264,6 @@ const WCM_TRANSLATIONS = {
     "save": "Guardar",
     "cancel": "Cancelar",
     "close": "Cerrar",
-    "taste_window_title": "Ventana óptima de consumo",
     "serving_temp": "Temperatura de servicio",
     "alcohol_pct": "Graduación alcohólica",
     "not_specified": "No especificado",
@@ -1056,9 +1280,7 @@ const WCM_TRANSLATIONS = {
     "global_error": "Error: ",
     "bottle_s": "botella(s)",
     "cellar_name_required": "El nombre de la bodega es obligatorio.",
-    "search_placeholder": "Buscar vino, productor, región...",
     "add_cellar_short": "+ Bodega",
-    "all_ages": "Todas las edades",
     "drink_now": "Beber ahora",
     "red": "Tinto",
     "white": "Blanco",
@@ -1069,7 +1291,6 @@ const WCM_TRANSLATIONS = {
     "other": "Otro",
     "wine": "Vino",
     "region_varietal": "Región/Variedad",
-    "aging": "Madurez",
     "total_bottles": "Botellas totales",
     "different_wines": "Vinos diferentes",
     "average_age": "Edad media",
@@ -1077,7 +1298,6 @@ const WCM_TRANSLATIONS = {
     "total_value": "Valor total",
     "distribution_by_type": "Distribución por tipo",
     "top_countries_of_origin": "Principales países de origen",
-    "bottles_ready_to_drink_by_year": "Botellas listas para beber por año",
     "unnamed_wine": "Vino sin nombre",
     "drinking_window": "Ventana de consumo",
     "from_prefix": "De ",
@@ -1103,14 +1323,10 @@ const WCM_TRANSLATIONS = {
     "shelf_front_capacity_min": "Cada estante debe tener una capacidad delantera de al menos 1.",
     "add_at_least_one_shelf": "Añada al menos un estante.",
     "cellar_save_failed": "Error al guardar la bodega: ",
-    "confirm_delete_bottle": "¿Eliminar esta botella de forma permanente? Esta acción no se puede deshacer.",
-    "confirm_consume_bottle": "¿Marcar esta botella como consumida y moverla al historial?",
     "confirm_delete_cellar": "¿Eliminar esta bodega y todas sus botellas?",
     "bottle_copied_to_memory": "Botella copiada en memoria. Haga clic en una posición vacía para pegar.",
     "cellar_needs_shelf": "Una bodega debe tener al menos un estante.",
     "unknown_error": "error desconocido",
-    "bottles_found_suffix": " botella(s) encontrada(s).",
-    "search_no_match": "Ninguna botella coincide con su búsqueda o sus filtros.",
     "clear_filters": "Borrar filtros",
     "no_bottles_yet": "Todavía no hay botellas en sus bodegas.",
     "add_bottle_short": "+ Botella",
@@ -1119,8 +1335,6 @@ const WCM_TRANSLATIONS = {
     "cellar_editor": "Editor de bodega",
     "bottle_editor": "Editor de botella",
     "unknown_cellar": "Bodega desconocida",
-    "bottles_count": "{n} botellas",
-    "free_slots": "{n} libres",
     "status_young": "Demasiado joven",
     "status_ready": "Listo",
     "status_peak": "En su apogeo",
@@ -1134,8 +1348,6 @@ const WCM_TRANSLATIONS = {
     "discard": "Descartar",
     "delete_bottle_title": "¿Eliminar «{name}»?",
     "delete_bottle_body": "La botella se elimina definitivamente y no pasa al historial. Esta acción no se puede deshacer.",
-    "consume_bottle_title": "¿Marcar «{name}» como consumida?",
-    "consume_bottle_body": "Libera su posición y pasa al historial.",
     "delete_cellar_title": "¿Eliminar la bodega «{name}»?",
     "delete_cellar_body": "También se eliminarán sus {bottles} botella(s), {history} entrada(s) del historial y sus fotos de etiqueta. Esta acción no se puede deshacer.",
     "delete_cellar_body_empty": "La bodega está vacía. Esta acción no se puede deshacer.",
@@ -1349,16 +1561,105 @@ const WCM_TRANSLATIONS = {
     "builder_shelves_other": "{n} estantes",
     "builder_slots_one": "{n} posición",
     "builder_slots_other": "{n} posiciones",
-    "builder_fin_graphite": "Grafito"
+    "builder_fin_graphite": "Grafito",
+    "find_placeholder": "Buscar vino, productor, añada, bodega…",
+    "find_placeholder_short": "Buscar en la bodega…",
+    "find_search_label": "Buscar botellas",
+    "find_views_label": "Vista",
+    "find_tab_bottles": "Botellas",
+    "find_filters": "Filtros",
+    "find_filters_n_one": "Filtros, {n} seleccionado",
+    "find_filters_n_other": "Filtros, {n} seleccionados",
+    "find_clear_all": "Quitar todo",
+    "find_clear_search": "Borrar búsqueda",
+    "find_status_group": "Estado de consumo",
+    "find_type_group": "Tipo de vino",
+    "find_country_group": "País",
+    "find_cellar_group": "Bodega",
+    "find_drink_now_hint": "En su apogeo o pasadas: ábralas primero",
+    "find_remove": "Quitar filtro: {x}",
+    "find_matches_one": "{n} resultado",
+    "find_matches_other": "{n} resultados",
+    "find_no_match": "Sin resultados",
+    "find_in_cellar": "en {name}",
+    "find_in_cellars_one": "en {n} bodega",
+    "find_in_cellars_other": "en {n} bodegas",
+    "find_more_n": "+{n} más",
+    "find_more_label": "Ver los {n} resultados en Todas las botellas",
+    "find_step_hint": "siguiente resultado",
+    "find_matches_label": "Botellas que coinciden",
+    "find_no_results_q": "Ninguna botella coincide con «{q}»",
+    "find_no_results_f": "Ninguna botella coincide con estos filtros",
+    "find_did_you_mean": "¿Quiso decir {x}?",
+    "find_try_other": "Revise la ortografía o busque por productor, añada o bodega.",
+    "find_found_one": "{n} botella encontrada",
+    "find_found_other": "{n} botellas encontradas",
+    "find_found_none": "Ninguna botella encontrada",
+    "find_state_match": "coincide",
+    "find_state_other": "no coincide",
+    "find_show_one": "Mostrar {n} botella",
+    "find_show_other": "Mostrar {n} botellas",
+    "find_crumb_shelf": "{name} (estante {n})",
+    "find_crumb_back": "Detrás #{pos}",
+    "find_crumb_front": "Delante #{pos}",
+    "find_crumb_pos": "#{pos}",
+    "consume_done": "Disfrutada: {name}",
+    "consume_restored": "De vuelta en su posición: {name}",
+    "consume_failed": "No se pudo marcar {name} como consumida: {error}",
+    "consume_undo_taken": "No se pudo devolver {name}: su posición ya está ocupada. Sigue en Disfrutadas recientemente, en Estadísticas.",
+    "consume_undo_failed": "No se pudo devolver {name}: {error}",
+    "delete_done": "Eliminada: {name}",
+    "delete_failed": "No se pudo eliminar {name}: {error}",
+    "list_empty_body": "Añada su primera botella: fotografíe la etiqueta y elija su posición.",
+    "list_sort_by": "Ordenar por",
+    "list_reverse": "Invertir orden",
+    "list_title_one": "{n} botella",
+    "list_title_other": "{n} botellas",
+    "list_title_of_one": "{shown} de {n} botella",
+    "list_title_of_other": "{shown} de {n} botellas",
+    "stats_empty_title": "Aún no hay estadísticas",
+    "stats_empty_body": "Añada botellas para ver qué beber, cuándo, y qué guarda su bodega.",
+    "stats_free_one": "{n} posición libre",
+    "stats_free_other": "{n} posiciones libres",
+    "stats_producers_one": "{n} productor",
+    "stats_producers_other": "{n} productores",
+    "stats_oldest": "Añada más antigua: {y}",
+    "stats_per_bottle": "≈ {v} por botella",
+    "stats_open_hint": "Abre Todas las botellas mostrando solo estas.",
+    "stats_window_title": "Ventana de consumo",
+    "stats_window_sub": "Botellas dentro de su ventana de consumo, año por año",
+    "stats_window_none": "Ninguna botella tiene ventana de consumo en los próximos años.",
+    "stats_window_caption": "Botellas dentro de su ventana de consumo por año y tipo de vino",
+    "stats_now": "ahora",
+    "stats_year_bottles_one": "{year}: {n} botella",
+    "stats_year_bottles_other": "{year}: {n} botellas",
+    "stats_now_empty": "Nada urgente: ninguna botella está en su apogeo ni lo ha pasado.",
+    "stats_now_all_one": "Ver {n} botella en Todas las botellas",
+    "stats_now_all_other": "Ver las {n} en Todas las botellas",
+    "stats_bottle_word_one": "botella",
+    "stats_bottle_word_other": "botellas",
+    "ready_to_drink": "Listo para beber",
+    "find_ready_to_drink_hint": "Listas o en su apogeo: buenas para abrir",
+    "toast_undo_keys": "Pulse {keys} para deshacer",
+    "stats_recent_title": "Disfrutadas recientemente",
+    "stats_recent_sub": "¿Marcada como disfrutada por error? Devuelva la botella a su posición.",
+    "stats_recent_on": "Disfrutada el {date}",
+    "stats_put_back": "Devolver",
+    "stats_put_back_label": "Devolver {name} a su posición",
+    "stats_recent_taken": "Su posición está ocupada",
+    "stats_recent_gone": "Su estante ya no existe",
+    "err_consumed_missing": "Esta botella ya no está en el historial. Puede que se haya devuelto o eliminado en otro lugar.",
+    "consume_undo_noshelf": "No se pudo devolver {name}: su estante ya no existe.",
+    "find_words_unfiltered_one": "{n} botella coincide con «{q}» sin los filtros.",
+    "find_words_unfiltered_other": "{n} botellas coinciden con «{q}» sin los filtros.",
+    "list_sorted_asc": "orden ascendente",
+    "list_sorted_desc": "orden descendente"
   },
   "it": {
     "cellars": "Cantine",
     "compact": "Compatto",
     "all_bottles": "Tutte le bottiglie",
     "stats": "Statistiche",
-    "ready_to_drink": "Pronto da bere",
-    "all_types": "Tutti i tipi",
-    "all_countries": "Tutti i paesi",
     "wine_name": "Nome del vino",
     "producer": "Produttore",
     "varietal": "Vitigno",
@@ -1377,7 +1678,6 @@ const WCM_TRANSLATIONS = {
     "save": "Salva",
     "cancel": "Annulla",
     "close": "Chiudi",
-    "taste_window_title": "Finestra ottimale di consumo",
     "serving_temp": "Temperatura di servizio",
     "alcohol_pct": "Gradazione alcolica",
     "not_specified": "Non specificato",
@@ -1394,9 +1694,7 @@ const WCM_TRANSLATIONS = {
     "global_error": "Errore: ",
     "bottle_s": "bottiglia/e",
     "cellar_name_required": "Il nome della cantina è obbligatorio.",
-    "search_placeholder": "Cerca vino, produttore, regione...",
     "add_cellar_short": "+ Cantina",
-    "all_ages": "Tutte le età",
     "drink_now": "Da bere ora",
     "red": "Rosso",
     "white": "Bianco",
@@ -1407,7 +1705,6 @@ const WCM_TRANSLATIONS = {
     "other": "Altro",
     "wine": "Vino",
     "region_varietal": "Regione/Vitigno",
-    "aging": "Maturità",
     "total_bottles": "Bottiglie totali",
     "different_wines": "Vini diversi",
     "average_age": "Età media",
@@ -1415,7 +1712,6 @@ const WCM_TRANSLATIONS = {
     "total_value": "Valore totale",
     "distribution_by_type": "Distribuzione per tipo",
     "top_countries_of_origin": "Principali paesi di origine",
-    "bottles_ready_to_drink_by_year": "Bottiglie pronte da bere per anno",
     "unnamed_wine": "Vino senza nome",
     "drinking_window": "Finestra di consumo",
     "from_prefix": "Dal ",
@@ -1441,14 +1737,10 @@ const WCM_TRANSLATIONS = {
     "shelf_front_capacity_min": "Ogni ripiano deve avere una capacità anteriore di almeno 1.",
     "add_at_least_one_shelf": "Aggiungi almeno un ripiano.",
     "cellar_save_failed": "Salvataggio della cantina non riuscito: ",
-    "confirm_delete_bottle": "Eliminare definitivamente questa bottiglia? L'operazione non può essere annullata.",
-    "confirm_consume_bottle": "Segnare questa bottiglia come consumata e spostarla nella cronologia?",
     "confirm_delete_cellar": "Eliminare questa cantina e tutte le sue bottiglie?",
     "bottle_copied_to_memory": "Bottiglia copiata in memoria. Fai clic su una posizione vuota per incollare.",
     "cellar_needs_shelf": "Una cantina deve avere almeno un ripiano.",
     "unknown_error": "errore sconosciuto",
-    "bottles_found_suffix": " bottiglia/e trovata/e.",
-    "search_no_match": "Nessuna bottiglia corrisponde alla ricerca o ai filtri.",
     "clear_filters": "Cancella filtri",
     "no_bottles_yet": "Ancora nessuna bottiglia nelle tue cantine.",
     "add_bottle_short": "+ Bottiglia",
@@ -1457,8 +1749,6 @@ const WCM_TRANSLATIONS = {
     "cellar_editor": "Editor cantina",
     "bottle_editor": "Editor bottiglia",
     "unknown_cellar": "Cantina sconosciuta",
-    "bottles_count": "{n} bottiglie",
-    "free_slots": "{n} liberi",
     "status_young": "Troppo giovane",
     "status_ready": "Pronto",
     "status_peak": "Al culmine",
@@ -1472,8 +1762,6 @@ const WCM_TRANSLATIONS = {
     "discard": "Scarta",
     "delete_bottle_title": "Eliminare «{name}»?",
     "delete_bottle_body": "La bottiglia viene eliminata definitivamente e non passa nella cronologia. L'operazione non può essere annullata.",
-    "consume_bottle_title": "Segnare «{name}» come consumata?",
-    "consume_bottle_body": "Libera la sua posizione e passa nella cronologia.",
     "delete_cellar_title": "Eliminare la cantina «{name}»?",
     "delete_cellar_body": "Verranno eliminate anche le sue {bottles} bottiglia/e, {history} voce/i della cronologia e le foto delle etichette. L'operazione non può essere annullata.",
     "delete_cellar_body_empty": "La cantina è vuota. L'operazione non può essere annullata.",
@@ -1687,16 +1975,105 @@ const WCM_TRANSLATIONS = {
     "builder_shelves_other": "{n} ripiani",
     "builder_slots_one": "{n} posto",
     "builder_slots_other": "{n} posti",
-    "builder_fin_graphite": "Grafite"
+    "builder_fin_graphite": "Grafite",
+    "find_placeholder": "Cerca vino, produttore, annata, cantina…",
+    "find_placeholder_short": "Cerca in cantina…",
+    "find_search_label": "Cerca bottiglie",
+    "find_views_label": "Vista",
+    "find_tab_bottles": "Bottiglie",
+    "find_filters": "Filtri",
+    "find_filters_n_one": "Filtri, {n} selezionato",
+    "find_filters_n_other": "Filtri, {n} selezionati",
+    "find_clear_all": "Rimuovi tutto",
+    "find_clear_search": "Cancella ricerca",
+    "find_status_group": "Stato di consumo",
+    "find_type_group": "Tipo di vino",
+    "find_country_group": "Paese",
+    "find_cellar_group": "Cantina",
+    "find_drink_now_hint": "Al culmine o oltre: da aprire per prime",
+    "find_remove": "Rimuovi filtro: {x}",
+    "find_matches_one": "{n} risultato",
+    "find_matches_other": "{n} risultati",
+    "find_no_match": "Nessun risultato",
+    "find_in_cellar": "in {name}",
+    "find_in_cellars_one": "in {n} cantina",
+    "find_in_cellars_other": "in {n} cantine",
+    "find_more_n": "+{n} altre",
+    "find_more_label": "Vedi tutti i {n} risultati in Tutte le bottiglie",
+    "find_step_hint": "risultato successivo",
+    "find_matches_label": "Bottiglie corrispondenti",
+    "find_no_results_q": "Nessuna bottiglia corrisponde a «{q}»",
+    "find_no_results_f": "Nessuna bottiglia corrisponde a questi filtri",
+    "find_did_you_mean": "Forse cercavi {x}?",
+    "find_try_other": "Controlla l’ortografia o cerca per produttore, annata o cantina.",
+    "find_found_one": "{n} bottiglia trovata",
+    "find_found_other": "{n} bottiglie trovate",
+    "find_found_none": "Nessuna bottiglia trovata",
+    "find_state_match": "corrisponde",
+    "find_state_other": "non corrisponde",
+    "find_show_one": "Mostra {n} bottiglia",
+    "find_show_other": "Mostra {n} bottiglie",
+    "find_crumb_shelf": "{name} (ripiano {n})",
+    "find_crumb_back": "Dietro #{pos}",
+    "find_crumb_front": "Davanti #{pos}",
+    "find_crumb_pos": "#{pos}",
+    "consume_done": "Gustata: {name}",
+    "consume_restored": "Di nuovo al suo posto: {name}",
+    "consume_failed": "Impossibile segnare {name} come consumata: {error}",
+    "consume_undo_taken": "Impossibile rimettere {name} al suo posto: ora è occupato. Resta in Bevute di recente, nelle statistiche.",
+    "consume_undo_failed": "Impossibile rimettere {name} al suo posto: {error}",
+    "delete_done": "Eliminata: {name}",
+    "delete_failed": "Impossibile eliminare {name}: {error}",
+    "list_empty_body": "Aggiungi la prima bottiglia: fotografa l’etichetta e scegli il posto.",
+    "list_sort_by": "Ordina per",
+    "list_reverse": "Inverti ordine",
+    "list_title_one": "{n} bottiglia",
+    "list_title_other": "{n} bottiglie",
+    "list_title_of_one": "{shown} di {n} bottiglia",
+    "list_title_of_other": "{shown} di {n} bottiglie",
+    "stats_empty_title": "Ancora nessuna statistica",
+    "stats_empty_body": "Aggiungi bottiglie per vedere cosa bere, quando, e cosa contiene la tua cantina.",
+    "stats_free_one": "{n} posto libero",
+    "stats_free_other": "{n} posti liberi",
+    "stats_producers_one": "{n} produttore",
+    "stats_producers_other": "{n} produttori",
+    "stats_oldest": "Annata più vecchia: {y}",
+    "stats_per_bottle": "≈ {v} a bottiglia",
+    "stats_open_hint": "Apre Tutte le bottiglie mostrando solo queste.",
+    "stats_window_title": "Finestra di consumo",
+    "stats_window_sub": "Bottiglie nella loro finestra di consumo, anno per anno",
+    "stats_window_none": "Nessuna bottiglia ha una finestra di consumo nei prossimi anni.",
+    "stats_window_caption": "Bottiglie nella finestra di consumo per anno e tipo di vino",
+    "stats_now": "ora",
+    "stats_year_bottles_one": "{year}: {n} bottiglia",
+    "stats_year_bottles_other": "{year}: {n} bottiglie",
+    "stats_now_empty": "Niente di urgente: nessuna bottiglia è al culmine o oltre.",
+    "stats_now_all_one": "Vedi {n} bottiglia in Tutte le bottiglie",
+    "stats_now_all_other": "Vedi tutte le {n} in Tutte le bottiglie",
+    "stats_bottle_word_one": "bottiglia",
+    "stats_bottle_word_other": "bottiglie",
+    "ready_to_drink": "Pronto da bere",
+    "find_ready_to_drink_hint": "Pronte o al culmine: buone da aprire",
+    "toast_undo_keys": "Premi {keys} per annullare",
+    "stats_recent_title": "Bevute di recente",
+    "stats_recent_sub": "Segnata come bevuta per errore? Rimetti la bottiglia al suo posto.",
+    "stats_recent_on": "Bevuta il {date}",
+    "stats_put_back": "Rimetti",
+    "stats_put_back_label": "Rimetti {name} al suo posto",
+    "stats_recent_taken": "Il suo posto è occupato",
+    "stats_recent_gone": "Il suo ripiano non esiste più",
+    "err_consumed_missing": "Questa bottiglia non è più nella cronologia. Potrebbe essere stata rimessa o eliminata altrove.",
+    "consume_undo_noshelf": "Impossibile rimettere {name} al suo posto: il suo ripiano non esiste più.",
+    "find_words_unfiltered_one": "{n} bottiglia corrisponde a «{q}» senza i filtri.",
+    "find_words_unfiltered_other": "{n} bottiglie corrispondono a «{q}» senza i filtri.",
+    "list_sorted_asc": "ordine crescente",
+    "list_sorted_desc": "ordine decrescente"
   },
   "nl": {
     "cellars": "Wijnkelders",
     "compact": "Compact",
     "all_bottles": "Alle flessen",
     "stats": "Statistieken",
-    "ready_to_drink": "Drinkklaar",
-    "all_types": "Alle soorten",
-    "all_countries": "Alle landen",
     "wine_name": "Wijnnaam",
     "producer": "Producent",
     "varietal": "Druivensoort",
@@ -1715,7 +2092,6 @@ const WCM_TRANSLATIONS = {
     "save": "Opslaan",
     "cancel": "Annuleren",
     "close": "Sluiten",
-    "taste_window_title": "Optimaal drinkvenster",
     "serving_temp": "Serveertemperatuur",
     "alcohol_pct": "Alcoholpercentage",
     "not_specified": "Niet opgegeven",
@@ -1732,9 +2108,7 @@ const WCM_TRANSLATIONS = {
     "global_error": "Fout: ",
     "bottle_s": "fles(sen)",
     "cellar_name_required": "De keldernaam is verplicht.",
-    "search_placeholder": "Zoek wijn, producent, regio...",
     "add_cellar_short": "+ Kelder",
-    "all_ages": "Alle leeftijden",
     "drink_now": "Nu drinken",
     "red": "Rood",
     "white": "Wit",
@@ -1745,7 +2119,6 @@ const WCM_TRANSLATIONS = {
     "other": "Overig",
     "wine": "Wijn",
     "region_varietal": "Regio/Druivensoort",
-    "aging": "Drinkrijpheid",
     "total_bottles": "Totaal flessen",
     "different_wines": "Verschillende wijnen",
     "average_age": "Gemiddelde leeftijd",
@@ -1753,7 +2126,6 @@ const WCM_TRANSLATIONS = {
     "total_value": "Totale waarde",
     "distribution_by_type": "Verdeling per type",
     "top_countries_of_origin": "Top landen van herkomst",
-    "bottles_ready_to_drink_by_year": "Drinkklare flessen per jaar",
     "unnamed_wine": "Naamloze wijn",
     "drinking_window": "Drinkvenster",
     "from_prefix": "Van ",
@@ -1779,14 +2151,10 @@ const WCM_TRANSLATIONS = {
     "shelf_front_capacity_min": "Elke plank moet een capaciteit voor van minimaal 1 hebben.",
     "add_at_least_one_shelf": "Voeg minimaal één plank toe.",
     "cellar_save_failed": "Opslaan van kelder mislukt: ",
-    "confirm_delete_bottle": "Deze fles definitief verwijderen? Dit kan niet ongedaan worden gemaakt.",
-    "confirm_consume_bottle": "Deze fles markeren als gedronken en naar de geschiedenis verplaatsen?",
     "confirm_delete_cellar": "Deze kelder en alle flessen erin verwijderen?",
     "bottle_copied_to_memory": "Fles gekopieerd naar geheugen. Klik op een lege plaats om te plakken.",
     "cellar_needs_shelf": "Een kelder moet minimaal één plank hebben.",
     "unknown_error": "onbekende fout",
-    "bottles_found_suffix": " fles(sen) gevonden.",
-    "search_no_match": "Geen flessen die overeenkomen met de zoekopdracht of filters.",
     "clear_filters": "Filters wissen",
     "no_bottles_yet": "Nog geen flessen in de kelders.",
     "add_bottle_short": "+ Fles",
@@ -1795,8 +2163,6 @@ const WCM_TRANSLATIONS = {
     "cellar_editor": "Keldereditor",
     "bottle_editor": "Fleseditor",
     "unknown_cellar": "Onbekende kelder",
-    "bottles_count": "{n} flessen",
-    "free_slots": "{n} vrij",
     "status_young": "Te jong",
     "status_ready": "Drinkklaar",
     "status_peak": "Op hoogtepunt",
@@ -1810,8 +2176,6 @@ const WCM_TRANSLATIONS = {
     "discard": "Verwerpen",
     "delete_bottle_title": "“{name}” verwijderen?",
     "delete_bottle_body": "De fles wordt definitief verwijderd en komt niet in de geschiedenis. Dit kan niet ongedaan worden gemaakt.",
-    "consume_bottle_title": "“{name}” markeren als gedronken?",
-    "consume_bottle_body": "De plaats komt vrij en de fles gaat naar de geschiedenis.",
     "delete_cellar_title": "Kelder “{name}” verwijderen?",
     "delete_cellar_body": "Hiermee worden ook de {bottles} fles(sen), {history} geschiedenisitem(s) en hun etiketfoto's verwijderd. Dit kan niet ongedaan worden gemaakt.",
     "delete_cellar_body_empty": "De kelder is leeg. Dit kan niet ongedaan worden gemaakt.",
@@ -2025,16 +2389,105 @@ const WCM_TRANSLATIONS = {
     "builder_shelves_other": "{n} planken",
     "builder_slots_one": "{n} plek",
     "builder_slots_other": "{n} plekken",
-    "builder_fin_graphite": "Grafiet"
+    "builder_fin_graphite": "Grafiet",
+    "find_placeholder": "Zoek wijn, producent, jaargang, kelder…",
+    "find_placeholder_short": "Zoeken in kelder…",
+    "find_search_label": "Flessen zoeken",
+    "find_views_label": "Weergave",
+    "find_tab_bottles": "Flessen",
+    "find_filters": "Filters",
+    "find_filters_n_one": "Filters, {n} geselecteerd",
+    "find_filters_n_other": "Filters, {n} geselecteerd",
+    "find_clear_all": "Alles wissen",
+    "find_clear_search": "Zoekopdracht wissen",
+    "find_status_group": "Drinkrijpheid",
+    "find_type_group": "Wijnsoort",
+    "find_country_group": "Land",
+    "find_cellar_group": "Kelder",
+    "find_drink_now_hint": "Op of over hun hoogtepunt: open deze eerst",
+    "find_remove": "Filter verwijderen: {x}",
+    "find_matches_one": "{n} treffer",
+    "find_matches_other": "{n} treffers",
+    "find_no_match": "Geen treffer",
+    "find_in_cellar": "in {name}",
+    "find_in_cellars_one": "in {n} kelder",
+    "find_in_cellars_other": "in {n} kelders",
+    "find_more_n": "+{n} meer",
+    "find_more_label": "Alle {n} treffers tonen in Alle flessen",
+    "find_step_hint": "volgende treffer",
+    "find_matches_label": "Gevonden flessen",
+    "find_no_results_q": "Geen fles gevonden voor „{q}”",
+    "find_no_results_f": "Geen fles past bij deze filters",
+    "find_did_you_mean": "Bedoelde u {x}?",
+    "find_try_other": "Controleer de spelling of zoek op producent, jaargang of kelder.",
+    "find_found_one": "{n} fles gevonden",
+    "find_found_other": "{n} flessen gevonden",
+    "find_found_none": "Geen fles gevonden",
+    "find_state_match": "past",
+    "find_state_other": "past niet",
+    "find_show_one": "{n} fles tonen",
+    "find_show_other": "{n} flessen tonen",
+    "find_crumb_shelf": "{name} (plank {n})",
+    "find_crumb_back": "Achter #{pos}",
+    "find_crumb_front": "Voor #{pos}",
+    "find_crumb_pos": "#{pos}",
+    "consume_done": "Gedronken: {name}",
+    "consume_restored": "Weer op zijn plek: {name}",
+    "consume_failed": "{name} kon niet als gedronken worden gemarkeerd: {error}",
+    "consume_undo_taken": "{name} kon niet worden teruggezet: de plek is intussen bezet. De fles blijft bij Onlangs gedronken, in Statistieken.",
+    "consume_undo_failed": "{name} kon niet worden teruggezet: {error}",
+    "delete_done": "Verwijderd: {name}",
+    "delete_failed": "{name} kon niet worden verwijderd: {error}",
+    "list_empty_body": "Voeg uw eerste fles toe: fotografeer het etiket en kies een plek.",
+    "list_sort_by": "Sorteren op",
+    "list_reverse": "Volgorde omkeren",
+    "list_title_one": "{n} fles",
+    "list_title_other": "{n} flessen",
+    "list_title_of_one": "{shown} van {n} fles",
+    "list_title_of_other": "{shown} van {n} flessen",
+    "stats_empty_title": "Nog geen statistieken",
+    "stats_empty_body": "Voeg flessen toe om te zien wat u wanneer drinkt en wat uw kelder bevat.",
+    "stats_free_one": "{n} vrije plek",
+    "stats_free_other": "{n} vrije plekken",
+    "stats_producers_one": "{n} producent",
+    "stats_producers_other": "{n} producenten",
+    "stats_oldest": "Oudste jaargang: {y}",
+    "stats_per_bottle": "≈ {v} per fles",
+    "stats_open_hint": "Opent Alle flessen met alleen deze flessen.",
+    "stats_window_title": "Drinkvenster",
+    "stats_window_sub": "Flessen binnen hun drinkvenster, per jaar",
+    "stats_window_none": "Geen enkele fles heeft een drinkvenster in de komende jaren.",
+    "stats_window_caption": "Flessen binnen hun drinkvenster per jaar, per wijnsoort",
+    "stats_now": "nu",
+    "stats_year_bottles_one": "{year}: {n} fles",
+    "stats_year_bottles_other": "{year}: {n} flessen",
+    "stats_now_empty": "Niets dringends: geen enkele fles is op of over zijn hoogtepunt.",
+    "stats_now_all_one": "{n} fles tonen in Alle flessen",
+    "stats_now_all_other": "Alle {n} tonen in Alle flessen",
+    "stats_bottle_word_one": "fles",
+    "stats_bottle_word_other": "flessen",
+    "ready_to_drink": "Klaar om te drinken",
+    "find_ready_to_drink_hint": "Drinkklaar of op hun hoogtepunt: goed om te openen",
+    "toast_undo_keys": "Druk op {keys} om ongedaan te maken",
+    "stats_recent_title": "Onlangs gedronken",
+    "stats_recent_sub": "Per ongeluk als gedronken gemarkeerd? Zet de fles terug op haar plek.",
+    "stats_recent_on": "Gedronken op {date}",
+    "stats_put_back": "Terugzetten",
+    "stats_put_back_label": "{name} terugzetten op haar plek",
+    "stats_recent_taken": "Haar plek is bezet",
+    "stats_recent_gone": "Haar plank bestaat niet meer",
+    "err_consumed_missing": "Deze fles staat niet meer in de geschiedenis. Mogelijk is ze elders teruggezet of verwijderd.",
+    "consume_undo_noshelf": "{name} kon niet worden teruggezet: de plank bestaat niet meer.",
+    "find_words_unfiltered_one": "{n} fles past bij „{q}” zonder de filters.",
+    "find_words_unfiltered_other": "{n} flessen passen bij „{q}” zonder de filters.",
+    "list_sorted_asc": "oplopend gesorteerd",
+    "list_sorted_desc": "aflopend gesorteerd"
   },
   "pt": {
     "cellars": "Adegas",
     "compact": "Compacto",
     "all_bottles": "Todas as garrafas",
     "stats": "Estatísticas",
-    "ready_to_drink": "Pronto para beber",
-    "all_types": "Todos os tipos",
-    "all_countries": "Todos os países",
     "wine_name": "Nome do vinho",
     "producer": "Produtor",
     "varietal": "Casta",
@@ -2053,7 +2506,6 @@ const WCM_TRANSLATIONS = {
     "save": "Salvar",
     "cancel": "Cancelar",
     "close": "Fechar",
-    "taste_window_title": "Janela ideal de consumo",
     "serving_temp": "Temperatura de serviço",
     "alcohol_pct": "Teor alcoólico",
     "not_specified": "Não especificado",
@@ -2070,9 +2522,7 @@ const WCM_TRANSLATIONS = {
     "global_error": "Erro: ",
     "bottle_s": "garrafa(s)",
     "cellar_name_required": "O nome da adega é obrigatório.",
-    "search_placeholder": "Pesquisar vinho, produtor, região...",
     "add_cellar_short": "+ Adega",
-    "all_ages": "Todas as idades",
     "drink_now": "Beber agora",
     "red": "Tinto",
     "white": "Branco",
@@ -2083,7 +2533,6 @@ const WCM_TRANSLATIONS = {
     "other": "Outro",
     "wine": "Vinho",
     "region_varietal": "Região/Casta",
-    "aging": "Maturidade",
     "total_bottles": "Total de garrafas",
     "different_wines": "Vinhos diferentes",
     "average_age": "Idade média",
@@ -2091,7 +2540,6 @@ const WCM_TRANSLATIONS = {
     "total_value": "Valor total",
     "distribution_by_type": "Distribuição por tipo",
     "top_countries_of_origin": "Principais países de origem",
-    "bottles_ready_to_drink_by_year": "Garrafas prontas para beber por ano",
     "unnamed_wine": "Vinho sem nome",
     "drinking_window": "Janela de consumo",
     "from_prefix": "De ",
@@ -2117,14 +2565,10 @@ const WCM_TRANSLATIONS = {
     "shelf_front_capacity_min": "Cada prateleira deve ter capacidade frontal de pelo menos 1.",
     "add_at_least_one_shelf": "Adicione pelo menos uma prateleira.",
     "cellar_save_failed": "Falha ao salvar a adega: ",
-    "confirm_delete_bottle": "Excluir esta garrafa permanentemente? Isso não pode ser desfeito.",
-    "confirm_consume_bottle": "Marcar esta garrafa como consumida e movê-la para o histórico?",
     "confirm_delete_cellar": "Excluir esta adega e todas as suas garrafas?",
     "bottle_copied_to_memory": "Garrafa copiada para a memória. Clique em uma posição vazia para colar.",
     "cellar_needs_shelf": "Uma adega deve ter pelo menos uma prateleira.",
     "unknown_error": "erro desconhecido",
-    "bottles_found_suffix": " garrafa(s) encontrada(s).",
-    "search_no_match": "Nenhuma garrafa corresponde à pesquisa ou aos filtros.",
     "clear_filters": "Limpar filtros",
     "no_bottles_yet": "Ainda não há garrafas nas suas adegas.",
     "add_bottle_short": "+ Garrafa",
@@ -2133,8 +2577,6 @@ const WCM_TRANSLATIONS = {
     "cellar_editor": "Editor de adega",
     "bottle_editor": "Editor de garrafa",
     "unknown_cellar": "Adega desconhecida",
-    "bottles_count": "{n} garrafas",
-    "free_slots": "{n} livres",
     "status_young": "Muito novo",
     "status_ready": "Pronto",
     "status_peak": "No auge",
@@ -2148,8 +2590,6 @@ const WCM_TRANSLATIONS = {
     "discard": "Descartar",
     "delete_bottle_title": "Excluir “{name}”?",
     "delete_bottle_body": "A garrafa é excluída definitivamente e não vai para o histórico. Isso não pode ser desfeito.",
-    "consume_bottle_title": "Marcar “{name}” como consumida?",
-    "consume_bottle_body": "Ela libera sua posição e vai para o histórico.",
     "delete_cellar_title": "Excluir a adega “{name}”?",
     "delete_cellar_body": "Isso também exclui suas {bottles} garrafa(s), {history} registro(s) do histórico e as fotos dos rótulos. Isso não pode ser desfeito.",
     "delete_cellar_body_empty": "A adega está vazia. Isso não pode ser desfeito.",
@@ -2363,16 +2803,105 @@ const WCM_TRANSLATIONS = {
     "builder_shelves_other": "{n} prateleiras",
     "builder_slots_one": "{n} posição",
     "builder_slots_other": "{n} posições",
-    "builder_fin_graphite": "Grafite"
+    "builder_fin_graphite": "Grafite",
+    "find_placeholder": "Pesquisar vinho, produtor, safra, adega…",
+    "find_placeholder_short": "Pesquisar na adega…",
+    "find_search_label": "Pesquisar garrafas",
+    "find_views_label": "Visualização",
+    "find_tab_bottles": "Garrafas",
+    "find_filters": "Filtros",
+    "find_filters_n_one": "Filtros, {n} selecionado",
+    "find_filters_n_other": "Filtros, {n} selecionados",
+    "find_clear_all": "Limpar tudo",
+    "find_clear_search": "Limpar pesquisa",
+    "find_status_group": "Estado de consumo",
+    "find_type_group": "Tipo de vinho",
+    "find_country_group": "País",
+    "find_cellar_group": "Adega",
+    "find_drink_now_hint": "No auge ou passadas: abra estas primeiro",
+    "find_remove": "Remover filtro: {x}",
+    "find_matches_one": "{n} resultado",
+    "find_matches_other": "{n} resultados",
+    "find_no_match": "Nenhum resultado",
+    "find_in_cellar": "em {name}",
+    "find_in_cellars_one": "em {n} adega",
+    "find_in_cellars_other": "em {n} adegas",
+    "find_more_n": "+{n} mais",
+    "find_more_label": "Ver os {n} resultados em Todas as garrafas",
+    "find_step_hint": "próximo resultado",
+    "find_matches_label": "Garrafas correspondentes",
+    "find_no_results_q": "Nenhuma garrafa corresponde a “{q}”",
+    "find_no_results_f": "Nenhuma garrafa corresponde a estes filtros",
+    "find_did_you_mean": "Você quis dizer {x}?",
+    "find_try_other": "Verifique a grafia ou pesquise por produtor, safra ou adega.",
+    "find_found_one": "{n} garrafa encontrada",
+    "find_found_other": "{n} garrafas encontradas",
+    "find_found_none": "Nenhuma garrafa encontrada",
+    "find_state_match": "corresponde",
+    "find_state_other": "não corresponde",
+    "find_show_one": "Mostrar {n} garrafa",
+    "find_show_other": "Mostrar {n} garrafas",
+    "find_crumb_shelf": "{name} (prateleira {n})",
+    "find_crumb_back": "Trás #{pos}",
+    "find_crumb_front": "Frente #{pos}",
+    "find_crumb_pos": "#{pos}",
+    "consume_done": "Apreciada: {name}",
+    "consume_restored": "De volta à sua posição: {name}",
+    "consume_failed": "Não foi possível marcar {name} como consumida: {error}",
+    "consume_undo_taken": "Não foi possível devolver {name}: a posição agora está ocupada. Ela continua em Apreciadas recentemente, nas Estatísticas.",
+    "consume_undo_failed": "Não foi possível devolver {name}: {error}",
+    "delete_done": "Excluída: {name}",
+    "delete_failed": "Não foi possível excluir {name}: {error}",
+    "list_empty_body": "Adicione sua primeira garrafa: fotografe o rótulo e escolha a posição.",
+    "list_sort_by": "Ordenar por",
+    "list_reverse": "Inverter ordem",
+    "list_title_one": "{n} garrafa",
+    "list_title_other": "{n} garrafas",
+    "list_title_of_one": "{shown} de {n} garrafa",
+    "list_title_of_other": "{shown} de {n} garrafas",
+    "stats_empty_title": "Ainda sem estatísticas",
+    "stats_empty_body": "Adicione garrafas para ver o que beber, quando, e o que sua adega guarda.",
+    "stats_free_one": "{n} posição livre",
+    "stats_free_other": "{n} posições livres",
+    "stats_producers_one": "{n} produtor",
+    "stats_producers_other": "{n} produtores",
+    "stats_oldest": "Safra mais antiga: {y}",
+    "stats_per_bottle": "≈ {v} por garrafa",
+    "stats_open_hint": "Abre Todas as garrafas mostrando só estas.",
+    "stats_window_title": "Janela de consumo",
+    "stats_window_sub": "Garrafas dentro da janela de consumo, ano a ano",
+    "stats_window_none": "Nenhuma garrafa tem janela de consumo nos próximos anos.",
+    "stats_window_caption": "Garrafas dentro da janela de consumo por ano e tipo de vinho",
+    "stats_now": "agora",
+    "stats_year_bottles_one": "{year}: {n} garrafa",
+    "stats_year_bottles_other": "{year}: {n} garrafas",
+    "stats_now_empty": "Nada urgente: nenhuma garrafa está no auge ou passou dele.",
+    "stats_now_all_one": "Ver {n} garrafa em Todas as garrafas",
+    "stats_now_all_other": "Ver as {n} em Todas as garrafas",
+    "stats_bottle_word_one": "garrafa",
+    "stats_bottle_word_other": "garrafas",
+    "ready_to_drink": "Pronto para beber",
+    "find_ready_to_drink_hint": "Prontas ou no auge: boas para abrir",
+    "toast_undo_keys": "Pressione {keys} para desfazer",
+    "stats_recent_title": "Apreciadas recentemente",
+    "stats_recent_sub": "Marcada como apreciada por engano? Devolva a garrafa à sua posição.",
+    "stats_recent_on": "Apreciada em {date}",
+    "stats_put_back": "Devolver",
+    "stats_put_back_label": "Devolver {name} à sua posição",
+    "stats_recent_taken": "A posição está ocupada",
+    "stats_recent_gone": "A prateleira não existe mais",
+    "err_consumed_missing": "Esta garrafa não está mais no histórico. Ela pode ter sido devolvida ou removida em outro lugar.",
+    "consume_undo_noshelf": "Não foi possível devolver {name}: a prateleira não existe mais.",
+    "find_words_unfiltered_one": "{n} garrafa corresponde a “{q}” sem os filtros.",
+    "find_words_unfiltered_other": "{n} garrafas correspondem a “{q}” sem os filtros.",
+    "list_sorted_asc": "ordem crescente",
+    "list_sorted_desc": "ordem decrescente"
   },
   "pl": {
     "cellars": "Piwnice",
     "compact": "Kompaktowy",
     "all_bottles": "Wszystkie butelki",
     "stats": "Statystyki",
-    "ready_to_drink": "Gotowe do picia",
-    "all_types": "Wszystkie rodzaje",
-    "all_countries": "Wszystkie kraje",
     "wine_name": "Nazwa wina",
     "producer": "Producent",
     "varietal": "Szczep",
@@ -2391,7 +2920,6 @@ const WCM_TRANSLATIONS = {
     "save": "Zapisz",
     "cancel": "Anuluj",
     "close": "Zamknij",
-    "taste_window_title": "Optymalne okno picia",
     "serving_temp": "Temperatura podawania",
     "alcohol_pct": "Zawartość alkoholu",
     "not_specified": "Nie określono",
@@ -2408,9 +2936,7 @@ const WCM_TRANSLATIONS = {
     "global_error": "Błąd: ",
     "bottle_s": "butelka(-ki)",
     "cellar_name_required": "Nazwa piwnicy jest wymagana.",
-    "search_placeholder": "Szukaj wina, producenta, regionu...",
     "add_cellar_short": "+ Piwnica",
-    "all_ages": "Wszystkie roczniki",
     "drink_now": "Pij teraz",
     "red": "Czerwone",
     "white": "Białe",
@@ -2421,7 +2947,6 @@ const WCM_TRANSLATIONS = {
     "other": "Inne",
     "wine": "Wino",
     "region_varietal": "Region/Szczep",
-    "aging": "Dojrzałość",
     "total_bottles": "Łącznie butelek",
     "different_wines": "Różnych win",
     "average_age": "Średni wiek",
@@ -2429,7 +2954,6 @@ const WCM_TRANSLATIONS = {
     "total_value": "Łączna wartość",
     "distribution_by_type": "Podział według rodzaju",
     "top_countries_of_origin": "Najczęstsze kraje pochodzenia",
-    "bottles_ready_to_drink_by_year": "Butelki gotowe do picia według roku",
     "unnamed_wine": "Wino bez nazwy",
     "drinking_window": "Okno picia",
     "from_prefix": "Od ",
@@ -2455,14 +2979,10 @@ const WCM_TRANSLATIONS = {
     "shelf_front_capacity_min": "Każda półka musi mieć pojemność z przodu co najmniej 1.",
     "add_at_least_one_shelf": "Dodaj co najmniej jedną półkę.",
     "cellar_save_failed": "Zapisywanie piwnicy nie powiodło się: ",
-    "confirm_delete_bottle": "Trwale usunąć tę butelkę? Tej operacji nie można cofnąć.",
-    "confirm_consume_bottle": "Oznaczyć tę butelkę jako wypitą i przenieść do historii?",
     "confirm_delete_cellar": "Usunąć tę piwnicę i wszystkie jej butelki?",
     "bottle_copied_to_memory": "Butelka skopiowana do pamięci. Kliknij puste miejsce, aby wkleić.",
     "cellar_needs_shelf": "Piwnica musi mieć co najmniej jedną półkę.",
     "unknown_error": "nieznany błąd",
-    "bottles_found_suffix": " znaleziona(-e) butelka(-ki).",
-    "search_no_match": "Żadna butelka nie pasuje do wyszukiwania ani filtrów.",
     "clear_filters": "Wyczyść filtry",
     "no_bottles_yet": "Brak butelek w Twoich piwnicach.",
     "add_bottle_short": "+ Butelka",
@@ -2471,8 +2991,6 @@ const WCM_TRANSLATIONS = {
     "cellar_editor": "Edytor piwnicy",
     "bottle_editor": "Edytor butelki",
     "unknown_cellar": "Nieznana piwnica",
-    "bottles_count": "{n} butelek",
-    "free_slots": "{n} wolnych",
     "status_young": "Za młode",
     "status_ready": "Gotowe",
     "status_peak": "W szczycie",
@@ -2486,8 +3004,6 @@ const WCM_TRANSLATIONS = {
     "discard": "Odrzuć",
     "delete_bottle_title": "Usunąć „{name}”?",
     "delete_bottle_body": "Butelka zostanie trwale usunięta i nie trafi do historii. Tej operacji nie można cofnąć.",
-    "consume_bottle_title": "Oznaczyć „{name}” jako wypitą?",
-    "consume_bottle_body": "Zwolni swoje miejsce i trafi do historii.",
     "delete_cellar_title": "Usunąć piwnicę „{name}”?",
     "delete_cellar_body": "Zostaną też usunięte jej butelki ({bottles}), wpisy w historii ({history}) i zdjęcia etykiet. Tej operacji nie można cofnąć.",
     "delete_cellar_body_empty": "Piwnica jest pusta. Tej operacji nie można cofnąć.",
@@ -2705,7 +3221,125 @@ const WCM_TRANSLATIONS = {
     "builder_shelves_many": "{n} półek",
     "builder_slots_few": "{n} miejsca",
     "builder_slots_many": "{n} miejsc",
-    "builder_fin_graphite": "Grafit"
+    "builder_fin_graphite": "Grafit",
+    "find_placeholder": "Szukaj wina, producenta, rocznika, piwnicy…",
+    "find_placeholder_short": "Szukaj w piwnicy…",
+    "find_search_label": "Szukaj butelek",
+    "find_views_label": "Widok",
+    "find_tab_bottles": "Butelki",
+    "find_filters": "Filtry",
+    "find_filters_n_one": "Filtry, wybrane: {n}",
+    "find_filters_n_other": "Filtry, wybrane: {n}",
+    "find_clear_all": "Wyczyść wszystko",
+    "find_clear_search": "Wyczyść wyszukiwanie",
+    "find_status_group": "Gotowość do picia",
+    "find_type_group": "Rodzaj wina",
+    "find_country_group": "Kraj",
+    "find_cellar_group": "Piwnica",
+    "find_drink_now_hint": "W szczycie lub po nim: otwórz je najpierw",
+    "find_remove": "Usuń filtr: {x}",
+    "find_matches_one": "{n} wynik",
+    "find_matches_other": "{n} wyniku",
+    "find_no_match": "Brak wyników",
+    "find_in_cellar": "w piwnicy {name}",
+    "find_in_cellars_one": "w {n} piwnicy",
+    "find_in_cellars_other": "w {n} piwnicy",
+    "find_more_n": "+{n} więcej",
+    "find_more_label": "Pokaż wszystkie wyniki ({n}) w widoku Wszystkie butelki",
+    "find_step_hint": "następny wynik",
+    "find_matches_label": "Pasujące butelki",
+    "find_no_results_q": "Żadna butelka nie pasuje do „{q}”",
+    "find_no_results_f": "Żadna butelka nie pasuje do tych filtrów",
+    "find_did_you_mean": "Czy chodziło o {x}?",
+    "find_try_other": "Sprawdź pisownię albo szukaj po producencie, roczniku lub piwnicy.",
+    "find_found_one": "Znaleziono {n} butelkę",
+    "find_found_other": "Znaleziono {n} butelki",
+    "find_found_none": "Nie znaleziono butelek",
+    "find_state_match": "pasuje",
+    "find_state_other": "nie pasuje",
+    "find_show_one": "Pokaż {n} butelkę",
+    "find_show_other": "Pokaż {n} butelki",
+    "find_crumb_shelf": "{name} (półka {n})",
+    "find_crumb_back": "Tył #{pos}",
+    "find_crumb_front": "Przód #{pos}",
+    "find_crumb_pos": "#{pos}",
+    "find_filters_n_few": "Filtry, wybrane: {n}",
+    "find_filters_n_many": "Filtry, wybrane: {n}",
+    "find_matches_few": "{n} wyniki",
+    "find_matches_many": "{n} wyników",
+    "find_in_cellars_few": "w {n} piwnicach",
+    "find_in_cellars_many": "w {n} piwnicach",
+    "find_found_few": "Znaleziono {n} butelki",
+    "find_found_many": "Znaleziono {n} butelek",
+    "find_show_few": "Pokaż {n} butelki",
+    "find_show_many": "Pokaż {n} butelek",
+    "consume_done": "Wypita: {name}",
+    "consume_restored": "Znów na swoim miejscu: {name}",
+    "consume_failed": "Nie udało się oznaczyć {name} jako wypitej: {error}",
+    "consume_undo_taken": "Nie udało się odłożyć {name}: to miejsce jest już zajęte. Butelka zostaje w sekcji Ostatnio wypite, w statystykach.",
+    "consume_undo_failed": "Nie udało się odłożyć {name}: {error}",
+    "delete_done": "Usunięto: {name}",
+    "delete_failed": "Nie udało się usunąć {name}: {error}",
+    "list_empty_body": "Dodaj pierwszą butelkę: zrób zdjęcie etykiety i wybierz miejsce.",
+    "list_sort_by": "Sortuj według",
+    "list_reverse": "Odwróć kolejność",
+    "list_title_one": "{n} butelka",
+    "list_title_other": "{n} butelki",
+    "list_title_of_one": "{shown} z {n} butelki",
+    "list_title_of_other": "{shown} z {n} butelek",
+    "stats_empty_title": "Brak statystyk",
+    "stats_empty_body": "Dodaj butelki, aby zobaczyć, co i kiedy pić oraz co jest w piwnicy.",
+    "stats_free_one": "{n} wolne miejsce",
+    "stats_free_other": "{n} wolnego miejsca",
+    "stats_producers_one": "Producenci: {n}",
+    "stats_producers_other": "Producenci: {n}",
+    "stats_oldest": "Najstarszy rocznik: {y}",
+    "stats_per_bottle": "≈ {v} za butelkę",
+    "stats_open_hint": "Otwiera widok Wszystkie butelki tylko z tymi butelkami.",
+    "stats_window_title": "Okno picia",
+    "stats_window_sub": "Butelki w oknie picia, rok po roku",
+    "stats_window_none": "Żadna butelka nie ma okna picia w najbliższych latach.",
+    "stats_window_caption": "Butelki w oknie picia według roku i rodzaju wina",
+    "stats_now": "teraz",
+    "stats_year_bottles_one": "{year}: {n} butelka",
+    "stats_year_bottles_other": "{year}: {n} butelki",
+    "stats_now_empty": "Nic pilnego: żadna butelka nie jest w szczycie ani po nim.",
+    "stats_now_all_one": "Pokaż w widoku Wszystkie butelki ({n})",
+    "stats_now_all_other": "Pokaż w widoku Wszystkie butelki ({n})",
+    "stats_bottle_word_one": "butelka",
+    "stats_bottle_word_other": "butelki",
+    "list_title_few": "{n} butelki",
+    "list_title_many": "{n} butelek",
+    "list_title_of_few": "{shown} z {n} butelek",
+    "list_title_of_many": "{shown} z {n} butelek",
+    "stats_free_few": "{n} wolne miejsca",
+    "stats_free_many": "{n} wolnych miejsc",
+    "stats_producers_few": "Producenci: {n}",
+    "stats_producers_many": "Producenci: {n}",
+    "stats_year_bottles_few": "{year}: {n} butelki",
+    "stats_year_bottles_many": "{year}: {n} butelek",
+    "stats_now_all_few": "Pokaż w widoku Wszystkie butelki ({n})",
+    "stats_now_all_many": "Pokaż w widoku Wszystkie butelki ({n})",
+    "stats_bottle_word_few": "butelki",
+    "stats_bottle_word_many": "butelek",
+    "ready_to_drink": "Gotowe do picia",
+    "find_ready_to_drink_hint": "Gotowe lub w szczycie: dobre do otwarcia",
+    "toast_undo_keys": "Naciśnij {keys}, aby cofnąć",
+    "stats_recent_title": "Ostatnio wypite",
+    "stats_recent_sub": "Oznaczona jako wypita przez pomyłkę? Odłóż butelkę na jej miejsce.",
+    "stats_recent_on": "Wypita {date}",
+    "stats_put_back": "Odłóż",
+    "stats_put_back_label": "Odłóż {name} na jej miejsce",
+    "stats_recent_taken": "Jej miejsce jest zajęte",
+    "stats_recent_gone": "Jej półka już nie istnieje",
+    "err_consumed_missing": "Tej butelki nie ma już w historii. Mogła zostać odłożona lub usunięta w innym miejscu.",
+    "consume_undo_noshelf": "Nie udało się odłożyć {name}: jej półka już nie istnieje.",
+    "find_words_unfiltered_one": "{n} butelka pasuje do „{q}” bez filtrów.",
+    "find_words_unfiltered_few": "{n} butelki pasują do „{q}” bez filtrów.",
+    "find_words_unfiltered_many": "{n} butelek pasuje do „{q}” bez filtrów.",
+    "find_words_unfiltered_other": "{n} butelki pasuje do „{q}” bez filtrów.",
+    "list_sorted_asc": "sortowanie rosnąco",
+    "list_sorted_desc": "sortowanie malejąco"
   }
 };
 
@@ -2731,11 +3365,14 @@ function _T(key, vars) {
 
 // A count in words that follow the language's plural rules: "1 shelf",
 // "2 shelves", and Polish's 2-4 / 5+ forms. Looks up base_one, base_few,
-// base_many or base_other, and falls back to base_other.
+// base_many or base_other, and falls back to base_other. The rules are made
+// once per language (the live filter counts on every keystroke).
+const _wcmPluralRules = {};
 function _TN(base, n, vars) {
   var cat = "other";
   try {
-    cat = new Intl.PluralRules(_wcmLang).select(Number(n));
+    var rules = _wcmPluralRules[_wcmLang] || (_wcmPluralRules[_wcmLang] = new Intl.PluralRules(_wcmLang));
+    cat = rules.select(Number(n));
   } catch (err) {
     cat = Number(n) === 1 ? "one" : "other";
   }
@@ -2816,6 +3453,35 @@ function _wcmBlobToBase64(blob) {
 // finishes of the cellar editor (the cellar colors that draw as a material,
 // see _WCM_MATERIALS; "" is the default graphite frame).
 const _WCM_SHEET_TYPES = ["red", "white", "rosé", "sparkling", "orange", "sweet", "other", "unset"];
+// The facets a search can be narrowed by (see _filterModel), the status
+// presets _setFacet accepts, and how many result chips the strip shows.
+const _WCM_FACETS = ["status", "type", "country", "cellar"];
+const _WCM_STATUS_PRESETS = { drink_now: ["peak", "past"], ready_to_drink: ["ready", "peak"] };
+const _WCM_WHERE_CHIPS = 24;
+// All Bottles sorts by these columns (the header buttons, and the select of
+// narrow screens), each with its label.
+const _WCM_LIST_SORTS = ["wine_name", "producer", "vintage", "location", "aging", "rating", "price", "region_varietal"];
+const _WCM_LIST_SORT_LABELS = {
+  wine_name: "wine", producer: "producer", vintage: "vintage", location: "location",
+  aging: "drinking_window", rating: "rating", price: "price", region_varietal: "region_varietal"
+};
+// Stats: the drinking-window chart covers this year and the next 10, like
+// the integration's own statistics; up to 6 countries and 6 bottles to drink.
+const _WCM_STATS_YEARS = 10;
+const _WCM_STATS_COUNTRIES = 6;
+const _WCM_STATS_DRINK_NOW = 6;
+// Recently enjoyed (Stats): how many of the last bottles marked as consumed.
+const _WCM_STATS_RECENT = 5;
+
+// A round step for chart ticks: about `target` steps up to max, each 1, 2 or
+// 5 times a power of ten (34 bottles: steps of 10 up to 40).
+function _wcmNiceStep(max, target) {
+  if (!(max > 0)) return 1;
+  var raw = max / (target || 4);
+  var magnitude = Math.pow(10, Math.floor(Math.log10(raw)));
+  var n = raw / magnitude;
+  return Math.max(1, (n <= 1 ? 1 : n <= 2 ? 2 : n <= 5 ? 5 : 10) * magnitude);
+}
 const _WCM_FINISHES = [
   { value: "", key: "builder_fin_graphite" },
   { value: "#7b2130", key: "builder_fin_bordeaux" },
@@ -2886,38 +3552,165 @@ const _WCM_STYLES =
         ".icon-btn svg{width:20px;height:20px;fill:currentColor}" +
         ".btn:focus-visible,.icon-btn:focus-visible,.seg-btn:focus-visible,.slot:focus-visible{outline:2px solid var(--wcm-accent);outline-offset:2px}" +
 
-        /* Toolbar */
-        ".toolbar{flex:0 0 auto;display:grid;gap:10px;padding:10px;background:var(--wcm-surface);border:1px solid var(--wcm-border);border-radius:var(--wcm-radius);box-shadow:var(--ha-card-box-shadow,none)}" +
-        ".toolbar-row{display:flex;align-items:center;gap:8px;flex-wrap:wrap}" +
-        ".toolbar-spacer{flex:1 1 auto}" +
-        ".seg{display:inline-flex;gap:2px;padding:3px;border-radius:999px;background:var(--wcm-tonal);max-width:100%;overflow-x:auto;scrollbar-width:none}" +
+        /* Toolbar: row 1 holds the views, the inventory and the actions; row 2 the search, Filters and the
+           status chips (the legend of the glyphs, which also filter). Under them, while in use: the filters
+           panel and the strip of results. */
+        ".toolbar{flex:0 0 auto;display:flex;flex-direction:column;gap:12px;min-width:0;padding:12px 14px;background:var(--wcm-surface);border:1px solid var(--wcm-border);border-radius:calc(var(--wcm-radius) + 2px);box-shadow:var(--ha-card-box-shadow,none);--wcm-accent-ink:color-mix(in srgb,var(--wcm-accent) 62%,var(--wcm-text))}" +
+        ".toolbar [hidden]{display:none !important}" +
+        /* Row 1 wraps rather than cutting anything: where the views, the inventory and the actions do not
+           fit on one line (long languages, tablets), what does not fit goes to a second line, the actions
+           kept at its end. */
+        ".tb-row{display:flex;flex-wrap:wrap;align-items:center;gap:8px;min-width:0}" +
+        ".seg{flex:0 0 auto;display:inline-flex;gap:2px;padding:3px;border-radius:999px;background:var(--wcm-tonal);max-width:100%;overflow-x:auto;scrollbar-width:none}" +
         ".seg::-webkit-scrollbar{display:none}" +
-        ".seg-btn{border:none;background:transparent;color:var(--wcm-muted);font-size:.9rem;font-weight:500;height:34px;padding:0 16px;border-radius:999px;cursor:pointer;white-space:nowrap;transition:background-color .15s ease,color .15s ease}" +
+        ".seg-btn{border:none;background:transparent;color:var(--wcm-muted);font-size:var(--wcm-fs-md);font-weight:500;height:34px;padding:0 16px;border-radius:999px;cursor:pointer;white-space:nowrap;transition:background-color .18s ease-out,color .18s ease-out}" +
         ".seg-btn:hover{color:var(--wcm-text)}" +
         ".seg-btn.active{background:var(--wcm-accent);color:var(--wcm-on-accent)}" +
-        ".filters{display:flex;gap:8px;flex-wrap:wrap;align-items:center}" +
-        ".search{position:relative;flex:1 1 260px;min-width:0;display:flex;align-items:center}" +
-        ".search svg{position:absolute;left:13px;width:18px;height:18px;color:var(--wcm-muted);pointer-events:none}" +
-        ".search input{width:100%;height:40px;padding:0 14px 0 38px;border-radius:999px;border:1px solid transparent;background:var(--wcm-tonal);color:var(--wcm-text);font-size:.92rem;outline:none}" +
-        ".search input:focus{border-color:var(--wcm-accent);background:transparent}" +
-        ".select-wrap{position:relative;display:inline-flex;flex:0 1 auto;min-width:0;color:var(--wcm-text)}" +
-        ".select-wrap::after{content:'';position:absolute;right:15px;top:50%;width:6px;height:6px;margin-top:-5px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:rotate(45deg);pointer-events:none;opacity:.6}" +
-        ".select-wrap select{appearance:none;-webkit-appearance:none;width:100%;height:40px;max-width:220px;padding:0 36px 0 16px;border-radius:999px;border:1px solid transparent;background:var(--wcm-tonal);color:var(--wcm-text);font-size:.9rem;cursor:pointer;text-overflow:ellipsis;outline:none}" +
-        ".select-wrap select:focus-visible{border-color:var(--wcm-accent)}" +
-        ".select-wrap select.filter-active{background:color-mix(in srgb,var(--wcm-accent) 16%,transparent);border-color:var(--wcm-accent);font-weight:600}" +
-        "select option{background:var(--wcm-dialog);color:var(--wcm-text);font-weight:normal}" +
-        ".summary{display:flex;align-items:center;gap:6px 16px;flex-wrap:wrap;font-size:.84rem;color:var(--wcm-muted);padding:0 4px}" +
-        ".summary strong{color:var(--wcm-text);font-weight:600}" +
-        ".legend-item{display:inline-flex;align-items:center;gap:6px;white-space:nowrap}" +
-                ".summary-match{padding:2px 10px;border-radius:999px;background:color-mix(in srgb,var(--wcm-accent) 16%,transparent);color:var(--wcm-text);font-weight:500}" +
-        ".summary-match.none{background:color-mix(in srgb,var(--wcm-danger) 14%,transparent)}" +
-        ".toolbar [hidden]{display:none !important}" +
+        ".tab-short{display:none}" +
+        ".tb-inv{flex:1 0 auto;padding:0 6px;text-align:right;font-size:var(--wcm-fs-sm);color:var(--wcm-muted);white-space:nowrap;font-variant-numeric:tabular-nums}" +
+        ".tb-inv strong{color:var(--wcm-text);font-weight:600}" +
+        ".tb-inv>span{white-space:nowrap}" +
+        ".tb-inv i{display:inline-block;width:3px;height:3px;margin:0 8px;border-radius:50%;background:currentColor;vertical-align:middle;opacity:.7}" +
+        ".tb-actions{flex:0 0 auto;display:flex;align-items:center;gap:6px;margin-left:auto}" +
+        ".btn.tb-quiet{background:transparent;color:var(--wcm-muted);padding:0 12px}" +
+        ".btn.tb-quiet:hover{background:var(--wcm-tonal);color:var(--wcm-text)}" +
+        ".btn.tb-outline{background:transparent;box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--wcm-text) 22%,transparent)}" +
+        ".btn.tb-outline:hover{background:var(--wcm-tonal)}" +
+        ".tb-actions .btn.primary{padding:0 18px 0 14px;font-weight:600;box-shadow:0 1px 2px rgba(0,0,0,.18),0 4px 12px -6px color-mix(in srgb,var(--wcm-accent) 80%,transparent)}" +
         ".toolbar-notice{display:flex;align-items:center;gap:8px;padding:6px 6px 6px 14px;border-radius:12px;background:color-mix(in srgb,var(--wcm-peak) 18%,transparent);color:var(--wcm-text);font-size:.88rem;line-height:1.35}" +
         ".toolbar-notice span{flex:1 1 auto;min-width:0}" +
-        ".empty-state .btn{margin-top:14px}" +
+        /* Row 2: the search (340-470px) and the chips beside it; when the chips do not fit there (long
+           languages) they take a row of their own, still one line. Clear all keeps its room while hidden,
+           so typing never moves the rows. */
+        ".tb-find-row{display:flex;flex-wrap:wrap;align-items:center;gap:10px 12px;min-width:0}" +
+        ".tb-find{flex:1 1 300px;min-width:300px;max-width:470px;display:flex;align-items:center;gap:8px}" +
+        ".tb-find-row.chips-below .tb-find{max-width:none}" +
+        ".tb-search{position:relative;flex:1 1 auto;min-width:0;display:flex;align-items:center;height:42px;border-radius:999px;background:var(--wcm-tonal);cursor:text;transition:background-color .18s ease-out,box-shadow .18s ease-out}" +
+        ".tb-search:hover{box-shadow:inset 0 0 0 1px var(--wcm-divider)}" +
+        ".tb-search:focus-within{background:var(--wcm-surface);box-shadow:inset 0 0 0 1.5px var(--wcm-accent),0 0 0 4px color-mix(in srgb,var(--wcm-accent) 16%,transparent)}" +
+        ".tb-search > svg{position:absolute;left:14px;width:19px;height:19px;color:var(--wcm-muted);pointer-events:none}" +
+        ".tb-search input{flex:1 1 auto;min-width:0;width:100%;height:100%;border:0;background:transparent;color:var(--wcm-text);padding:0 6px 0 42px;font-size:.9375rem;outline:none;-webkit-appearance:none;appearance:none}" +
+        ".tb-search input::-webkit-search-cancel-button,.tb-search input::-webkit-search-decoration{-webkit-appearance:none;display:none}" +
+        ".tb-search input::placeholder{color:var(--wcm-muted);opacity:1}" +
+        ".tb-kbd{flex:0 0 auto;margin-right:12px;min-width:22px;height:22px;display:inline-flex;align-items:center;justify-content:center;border-radius:6px;font:600 .75rem/1 ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--wcm-muted);box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--wcm-text) 20%,transparent),inset 0 -1px 0 color-mix(in srgb,var(--wcm-text) 20%,transparent)}" +
+        ".tb-search.has-value .tb-kbd,.tb-search:focus-within .tb-kbd{display:none}" +
+        ".tb-x{display:none;flex:0 0 auto;width:32px;height:32px;margin-right:5px;padding:0;border:0;border-radius:50%;background:transparent;color:var(--wcm-muted);cursor:pointer;align-items:center;justify-content:center}" +
+        ".tb-x svg{width:18px;height:18px}" +
+        ".tb-x:hover{background:var(--wcm-tonal-strong);color:var(--wcm-text)}" +
+        ".tb-search.has-value .tb-x{display:inline-flex}" +
+        ".tb-filter-btn{position:relative;flex:0 0 auto;display:inline-flex;align-items:center;gap:7px;height:42px;padding:0 14px 0 12px;border:0;border-radius:999px;background:var(--wcm-tonal);color:var(--wcm-text);font:inherit;font-size:var(--wcm-fs-md);font-weight:500;cursor:pointer;transition:background-color .18s ease-out,box-shadow .18s ease-out}" +
+        ".tb-filter-btn svg{width:18px;height:18px}" +
+        ".tb-filter-btn:hover{background:var(--wcm-tonal-strong)}" +
+        ".tb-filter-btn[aria-expanded=\"true\"]{background:color-mix(in srgb,var(--wcm-accent) 14%,var(--wcm-surface));box-shadow:inset 0 0 0 1.5px var(--wcm-accent)}" +
+        ".tb-badge{min-width:20px;height:20px;padding:0 6px;border-radius:999px;background:color-mix(in srgb,var(--wcm-accent) 72%,#000);color:#fff;font-size:.75rem;font-weight:700;display:inline-flex;align-items:center;justify-content:center;font-variant-numeric:tabular-nums}" +
+        ".tb-badge:empty{display:none}" +
+        /* Chips: one row that scrolls sideways (fading at the edge that has more); Clear all stays outside it,
+           always in reach. */
+        ".tb-facets{flex:0 0 auto;max-width:100%;min-width:0;display:flex;align-items:center;gap:6px}" +
+        "@media (min-width:1101px){.toolbar .tb-facets > .tb-clear[hidden]{display:inline-flex !important;visibility:hidden}}" +
+        ".tb-chips{flex:0 1 auto;min-width:0;display:flex;align-items:center;gap:6px;overflow-x:auto;overscroll-behavior-x:contain;scrollbar-width:none;padding:3px;margin:-3px}" +
+        ".tb-chips::-webkit-scrollbar{display:none}" +
+        ".x-fade.more-r{-webkit-mask-image:linear-gradient(90deg,#000 calc(100% - 32px),transparent);mask-image:linear-gradient(90deg,#000 calc(100% - 32px),transparent)}" +
+        ".x-fade.more-l{-webkit-mask-image:linear-gradient(90deg,transparent,#000 32px);mask-image:linear-gradient(90deg,transparent,#000 32px)}" +
+        ".x-fade.more-l.more-r{-webkit-mask-image:linear-gradient(90deg,transparent,#000 32px,#000 calc(100% - 32px),transparent);mask-image:linear-gradient(90deg,transparent,#000 32px,#000 calc(100% - 32px),transparent)}" +
+        ".tb-group{flex:0 0 auto;display:flex;align-items:center;gap:6px}" +
+        ".tb-sep{flex:0 0 auto;width:1px;height:20px;margin:0 4px;background:var(--wcm-divider)}" +
+        ".fchip{flex:0 0 auto;display:inline-flex;align-items:center;gap:7px;height:32px;padding:0 12px 0 6px;border:0;border-radius:999px;background:var(--wcm-tonal);color:var(--wcm-text);font:inherit;font-size:var(--wcm-fs-sm);font-weight:500;line-height:1;cursor:pointer;white-space:nowrap;transition:background-color .18s ease-out,box-shadow .18s ease-out,opacity .18s ease-out}" +
+        ".fchip:hover{background:var(--wcm-tonal-strong)}" +
+        ".fchip[aria-pressed=\"true\"]{background:color-mix(in srgb,var(--wcm-accent) 15%,var(--wcm-surface));box-shadow:inset 0 0 0 1.5px var(--wcm-accent);font-weight:600}" +
+        /* Small numbers: a darker grey than --wcm-muted, so they keep 4.5:1 on the tonal chip. */
+        ".fchip .n{font-variant-numeric:tabular-nums;color:color-mix(in srgb,var(--wcm-text) 72%,var(--wcm-surface));font-weight:600}" +
+        ".fchip[aria-pressed=\"true\"] .n{color:var(--wcm-text)}" +
+        ".fchip.is-zero{opacity:.45;cursor:default}" +
+        ".fchip.is-zero:hover{background:var(--wcm-tonal)}" +
+        ".fchip.plain{padding-left:12px}" +
+        ".fchip .bt-glyph{width:20px;height:20px}" +
+        ".fchip .bt-glyph svg{width:12px;height:12px}" +
+        ".bt-glyph.is-soon{background:linear-gradient(135deg,color-mix(in srgb,var(--wcm-peak) 85%,#000),var(--wcm-past))}" +
+        ".bt-glyph.is-drinkable{background:linear-gradient(135deg,color-mix(in srgb,var(--wcm-ready) 70%,#000),var(--wcm-ready))}" +
+        ".bt-glyph.is-soon svg,.bt-glyph.is-drinkable svg{width:13px;height:13px}" +
+        ".fchip.token{gap:6px;padding:0 4px 0 10px;background:color-mix(in srgb,var(--wcm-accent) 15%,var(--wcm-surface));box-shadow:inset 0 0 0 1.5px var(--wcm-accent);font-weight:600}" +
+        ".fchip.token .x{width:22px;height:22px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;opacity:.75}" +
+        ".fchip.token .x svg{width:14px;height:14px}" +
+        ".fchip.token:hover .x{background:color-mix(in srgb,var(--wcm-text) 12%,transparent);opacity:1}" +
+        ".fp-swatch{width:14px;height:14px;flex:0 0 auto;border-radius:4px;background:var(--type);box-shadow:inset 0 0 0 1px rgba(0,0,0,.18),inset 0 1px 0 rgba(255,255,255,.3)}" +
+        ".fp-cdot{width:12px;height:12px;flex:0 0 auto;border-radius:3px;background:var(--cellar,var(--wcm-tonal-strong));box-shadow:inset 0 0 0 1px rgba(0,0,0,.2)}" +
+        ".tb-clear{flex:0 0 auto;height:32px;padding:0 10px;border:0;border-radius:999px;background:transparent;color:var(--wcm-accent-ink);font:inherit;font-size:var(--wcm-fs-sm);font-weight:600;cursor:pointer;white-space:nowrap}" +
+        ".tb-clear:hover{background:color-mix(in srgb,var(--wcm-accent) 12%,transparent)}" +
+        ".fchip:focus-visible,.tb-filter-btn:focus-visible,.tb-x:focus-visible,.tb-clear:focus-visible,.wchip:focus-visible,.wmore:focus-visible,.find-suggest:focus-visible,.toolbar .btn:focus-visible,.toolbar .seg-btn:focus-visible{outline:2px solid var(--wcm-accent-ink);outline-offset:2px}" +
+        /* Filters panel: under the toolbar on wider screens; a bottom sheet on phones (see the small-screen
+           rules). */
+        ".tb-panel{display:grid;gap:10px;padding-top:12px;border-top:1px solid var(--wcm-divider)}" +
+        ".fp-head,.fp-foot,.fp-group.fp-status,.fp-scrim{display:none}" +
+        ".fp-body{display:grid;gap:10px}" +
+        ".fp-group{display:grid;grid-template-columns:120px minmax(0,1fr);gap:8px 12px;align-items:start}" +
+        ".fp-label{padding-top:9px;font-size:var(--wcm-fs-xs);font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--wcm-muted)}" +
+        ".fp-chips{display:flex;flex-wrap:wrap;gap:6px;min-width:0}" +
+        /* Result strip: how many bottles match, where, and each one as a chip that takes you to it. */
+        ".tb-where{display:flex;align-items:center;gap:14px;min-width:0;padding-top:12px;border-top:1px solid var(--wcm-divider)}" +
+        ".wh-head{flex:0 0 auto;display:grid;gap:2px;padding-left:2px;line-height:1.15}" +
+        ".wh-count{font-size:var(--wcm-fs-sm);font-weight:500;color:var(--wcm-text);white-space:nowrap}" +
+        ".wh-n{margin-right:5px;font-family:var(--wcm-font-display);font-size:var(--wcm-fs-xl);font-weight:600;line-height:1;vertical-align:-3px;font-variant-numeric:tabular-nums lining-nums}" +
+        ".wh-sub{font-size:var(--wcm-fs-xs);color:var(--wcm-muted);white-space:nowrap}" +
+        ".wh-scroll{position:relative;flex:1 1 auto;min-width:0;display:flex;gap:8px;overflow-x:auto;overscroll-behavior-x:contain;scrollbar-width:none;padding:3px 28px 3px 3px;margin:-3px 0;scroll-padding:0 28px}" +
+        ".wh-scroll::-webkit-scrollbar{display:none}" +
+        ".wchip{position:relative;flex:0 0 auto;display:flex;align-items:center;gap:10px;height:50px;max-width:320px;padding:0 14px 0 10px;border-radius:12px;border:1px solid var(--wcm-divider);background:var(--wcm-surface);color:var(--wcm-text);cursor:pointer;text-align:left;font:inherit;box-shadow:0 1px 2px rgba(0,0,0,.06);transition:border-color .18s ease-out,box-shadow .18s ease-out}" +
+        ".wchip:hover{border-color:color-mix(in srgb,var(--wcm-accent) 55%,var(--wcm-divider));box-shadow:0 6px 16px -8px rgba(0,0,0,.35)}" +
+        ".wchip.is-current{border-color:var(--wcm-accent);box-shadow:0 0 0 1px var(--wcm-accent),0 6px 16px -8px color-mix(in srgb,var(--wcm-accent) 70%,transparent)}" +
+        ".wchip .bt-bottle{flex:0 0 auto;width:auto;height:36px;filter:drop-shadow(0 1px 1px rgba(0,0,0,.25))}" +
+        ".wchip-t{display:grid;gap:3px;min-width:0}" +
+        ".wchip-name{font-family:var(--wcm-font-display);font-size:.9375rem;font-weight:600;line-height:1.1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}" +
+        ".wchip-vin{font-weight:500;color:var(--wcm-muted);font-variant-numeric:tabular-nums lining-nums}" +
+        ".wchip-crumb{font-size:var(--wcm-fs-xs);line-height:1.1;color:var(--wcm-muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}" +
+        ".wchip-crumb b{font-weight:600;color:var(--wcm-text)}" +
+        ".cs-short{display:none}" +
+        ".cs-part::before{content:'\\203A\\200B';content:'\\203A\\200B' / '';margin:0 .3em;opacity:.6}" +
+        ".wchip .bt-glyph{width:18px;height:18px;margin-left:2px}" +
+        ".wchip .bt-glyph svg{width:11px;height:11px}" +
+        ".wmore{flex:0 0 auto;align-self:center;height:34px;padding:0 14px;border:0;border-radius:999px;background:var(--wcm-tonal);color:var(--wcm-text);font:inherit;font-size:var(--wcm-fs-sm);font-weight:600;cursor:pointer;white-space:nowrap}" +
+        ".wmore:hover{background:var(--wcm-tonal-strong)}" +
+        ".wmore.is-current{box-shadow:inset 0 0 0 1.5px var(--wcm-accent)}" +
+        ".wh-hint{flex:0 0 auto;display:inline-flex;align-items:center;gap:6px;font-size:var(--wcm-fs-xs);color:var(--wcm-muted);white-space:nowrap}" +
+        ".wh-hint kbd{min-width:22px;height:22px;display:inline-flex;align-items:center;justify-content:center;border-radius:6px;font:600 .75rem/1 ui-monospace,SFMono-Regular,Menlo,monospace;box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--wcm-text) 20%,transparent),inset 0 -1px 0 color-mix(in srgb,var(--wcm-text) 20%,transparent)}" +
+        "@media (hover:none){.tb-kbd,.wh-hint{display:none}}" +
+        /* No results: what was looked for, the closest spellings in the cellar, and a way back. */
+        ".find-empty{flex:1 1 auto;display:flex;align-items:center;gap:14px;min-width:0;flex-wrap:wrap}" +
+        ".find-empty-ico{width:42px;height:42px;flex:0 0 auto;border-radius:50%;display:grid;place-items:center;background:var(--wcm-tonal);color:var(--wcm-muted)}" +
+        ".find-empty-ico svg{width:22px;height:22px}" +
+        ".find-empty-t{display:grid;gap:3px;min-width:0;flex:1 1 240px}" +
+        ".find-empty-title{font-weight:600;font-size:.9375rem;color:var(--wcm-text);overflow-wrap:anywhere}" +
+        ".find-empty-sub{font-size:var(--wcm-fs-sm);color:var(--wcm-muted);line-height:1.4}" +
+        ".find-suggest{border:0;background:none;padding:0 1px;color:var(--wcm-accent-ink);font:inherit;font-weight:600;cursor:pointer;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px;border-radius:4px}" +
+        ".find-empty-actions{display:flex;flex-wrap:wrap;gap:8px}" +
+        ".find-empty-actions .btn{margin-top:0}" +
+        ".find-empty-actions .btn svg{width:16px;height:16px}" +
+        ".empty-state .find-empty{flex-direction:column;justify-content:center;text-align:center;gap:12px;max-width:520px;margin:0 auto}" +
+        ".empty-state .find-empty-t{flex:0 0 auto;justify-items:center}" +
+        ".empty-state .find-empty-actions{justify-content:center}" +
+        ".paste-row{display:flex}" +
+        ".paste-row .paste-banner{margin-left:0}" +
         ".paste-banner{margin-left:auto;display:inline-flex;align-items:center;gap:6px;padding:2px 2px 2px 12px;border-radius:999px;background:color-mix(in srgb,var(--wcm-accent) 16%,transparent);color:var(--wcm-text)}" +
         ".paste-banner .icon-btn{width:28px;height:28px}" +
         ".paste-banner .icon-btn svg{width:16px;height:16px}" +
+        /* Tablets: the search and the chips each take a row of their own. */
+        "@media (max-width:1100px){.tb-find-row{flex-direction:column;align-items:stretch}.tb-find{flex:0 0 auto;max-width:none;min-width:0}.tb-facets{flex:0 0 auto}}" +
+        "@media (max-width:900px){.tab-long{display:none}.tab-short{display:inline}.tb-actions .btn.tb-quiet,.tb-actions .btn.tb-outline{width:40px;padding:0}.tb-actions .btn.tb-quiet .tb-lbl,.tb-actions .btn.tb-outline .tb-lbl{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}}" +
+        /* Where the page scrolls (phones, tablets), the toolbar sticks under the dashboard header with only
+           its search row showing; the rows above it are clipped while it is stuck (see _layoutToolbar). The
+           chips then sit above the search. Not on short screens (a phone held sideways): there the pinned
+           rows would take half the screen, so the toolbar scrolls away with the page. */
+        "@media (max-width:600px),(max-width:780px) and (min-height:501px){.toolbar{position:sticky;top:calc(var(--header-height,56px) + env(safe-area-inset-top,0px) - var(--tb-stick,0px));z-index:6}}" +
+        "@media (max-width:780px){.toolbar{padding:10px;gap:10px}.toolbar.is-stuck{box-shadow:0 14px 28px -18px rgba(0,0,0,.55),0 1px 0 var(--wcm-divider)}.toolbar.is-stuck:not(.sheet-open){clip-path:inset(var(--tb-clip,0px) -40px -60px -40px)}.tb-find-row{flex-direction:column-reverse;gap:10px}.tb-kbd{display:none}.tb-where{padding-top:10px;gap:10px}.wh-n{font-size:var(--wcm-fs-lg)}.wh-sub{display:none}.wchip{height:46px;max-width:232px;padding:0 10px 0 9px;gap:8px}.wchip:only-child{flex:1 1 auto;min-width:0;max-width:none}.cs-full{display:none}.cs-short{display:inline}.wchip .bt-glyph,.wh-hint{display:none}.find-empty{gap:10px}}" +
+        /* Phones: views on their own row, then the inventory and actions, the chips, and the search with
+           Filters. The filters open as a bottom sheet. */
+        "@media (max-width:600px){.toolbar{padding:8px 10px;gap:8px}.tb-find-row{gap:8px}.tb-row{flex-wrap:wrap;row-gap:8px}.tb-row .seg{flex:1 1 100%;min-width:0}.tb-row .seg-btn{flex:1 1 auto;min-width:0;height:32px;padding:0 6px;font-size:var(--wcm-fs-sm);overflow:hidden;text-overflow:ellipsis}.tb-inv{flex:1 1 0;min-width:0;text-align:left;padding:0 2px;white-space:normal;line-height:1.25;font-size:var(--wcm-fs-xs)}.tb-inv i{margin:0 5px}.tb-actions .btn{height:36px}.tb-actions .btn.tb-quiet,.tb-actions .btn.tb-outline{width:36px}.tb-actions .btn.primary{padding:0 14px 0 10px}.tb-find{gap:6px}.tb-search{height:40px}.tb-filter-btn{width:40px;height:40px;padding:0;justify-content:center}.tb-filter-btn .tb-lbl{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}.tb-filter-btn .tb-badge{position:absolute;top:-4px;right:-4px;min-width:18px;height:18px;padding:0 5px;box-shadow:0 0 0 2px var(--wcm-surface)}.fchip{gap:5px;padding:0 10px 0 5px}.fchip .bt-glyph{width:18px;height:18px}.tb-sep{margin:0 2px}.tb-clear{padding:0 6px}}" +
+        "@media (max-width:600px){.fp-scrim{display:block;position:fixed;inset:0;z-index:20;background:rgba(0,0,0,.45)}.tb-panel{position:fixed;left:0;right:0;bottom:0;z-index:21;display:flex;flex-direction:column;gap:0;max-height:82vh;max-height:82dvh;padding:0;border:0;border-radius:20px 20px 0 0;background:var(--wcm-dialog);color:var(--wcm-text);box-shadow:0 -18px 48px rgba(0,0,0,.4)}.fp-head{display:flex;align-items:center;gap:8px;position:relative;flex:0 0 auto;padding:22px 16px 12px;border-bottom:1px solid var(--wcm-divider)}.fp-grip{position:absolute;top:8px;left:50%;width:40px;height:4px;margin-left:-20px;border-radius:2px;background:color-mix(in srgb,var(--wcm-text) 25%,transparent)}.fp-title{margin:0 auto 0 0;font-size:var(--wcm-fs-lg);font-weight:600;outline:none}.fp-body{flex:1 1 auto;min-height:0;overflow:auto;overscroll-behavior:contain;gap:16px;padding:14px 16px}.fp-group.fp-status{display:grid}.fp-group{grid-template-columns:minmax(0,1fr);gap:8px}.fp-label{padding-top:0}.fp-body .fchip{height:36px}.fp-foot{display:flex;flex:0 0 auto;padding:10px 16px calc(12px + env(safe-area-inset-bottom,0px));border-top:1px solid var(--wcm-divider)}.fp-foot .btn{flex:1 1 auto;height:44px}}" +
+        "@media (prefers-reduced-motion:no-preference) and (max-width:600px){.tb-panel{animation:wcm-sheet-up .22s ease-out}.fp-scrim{animation:wcm-fade .2s ease-out}}" +
+        "@keyframes wcm-sheet-up{from{transform:translateY(24px);opacity:.4}to{transform:none;opacity:1}}" +
+        "@keyframes wcm-fade{from{opacity:0}}" +
+        "@media (prefers-reduced-motion:reduce){.toolbar *{transition:none !important}}" +
+        "select option{background:var(--wcm-dialog);color:var(--wcm-text);font-weight:normal}" +
+        ".empty-state .btn{margin-top:14px}" +
 
         /* Cellars: each cellar is drawn as a lit wine cabinet seen at eye level. Its frame is a material
            chosen from the cellar color; inside, every shelf is a compartment with an LED strip, a receding
@@ -3265,33 +4058,201 @@ const _WCM_STYLES =
         "@media (prefers-reduced-motion:reduce){.cabinet .slot,.cabinet .slot::after,.cab-fade,.pull-btn,.pull-btn svg,.cellars-grid:not(.compact) .cabinet .shelf::before,.cellars-grid:not(.compact) .cabinet .lane,.cellars-grid:not(.compact) .cabinet .lane-tag{transition:none !important}.slot.empty.paste-ready,.slot.pulse{animation:none}}" +
 
 
-        /* All bottles table */
-        ".table-wrap{overflow:auto;background:var(--wcm-surface);border:1px solid var(--wcm-border);border-radius:var(--wcm-radius);box-shadow:var(--ha-card-box-shadow,none)}" +
-        ".table-wrap table{width:100%;border-collapse:collapse;font-size:.9rem}" +
-        ".table-wrap th,.table-wrap td{padding:10px 12px;border-bottom:1px solid var(--wcm-divider);text-align:left;vertical-align:middle}" +
-        ".table-wrap th{font-size:.74rem;font-weight:600;text-transform:uppercase;letter-spacing:.05em;color:var(--wcm-muted);cursor:pointer;user-select:none;white-space:nowrap}" +
-        ".table-wrap th:hover{color:var(--wcm-text)}" +
-        ".table-wrap tr[data-edit-bottle]{cursor:pointer;transition:background-color .12s ease}" +
-        ".table-wrap tr[data-edit-bottle]:hover{background:var(--wcm-tonal)}" +
-        ".type-group-header{padding:16px 12px 8px !important;font-weight:700;font-size:.95rem}" +
-        ".type-chip{display:inline-flex;align-items:center;gap:8px}" +
-        ".type-dot{width:12px;height:12px;border-radius:4px;background:var(--type);box-shadow:inset 0 0 0 1px rgba(0,0,0,.18);flex:0 0 auto}" +
-        ".group-count{color:var(--wcm-muted);font-weight:500}" +
-        ".age-text{display:inline-flex;align-items:center;gap:7px;white-space:nowrap;font-variant-numeric:tabular-nums}" +
-        ".stars{color:var(--wcm-star);letter-spacing:1px;white-space:nowrap}" +
-        ".loc-main{font-weight:500;white-space:nowrap}" +
-        ".loc-sub{font-size:.78rem;color:var(--wcm-muted);white-space:nowrap}" +
+        /* All Bottles: one panel, its title (how many bottles it shows) and, on narrow widths, a sort select;
+           a table grouped by type or cellar, with sortable headers. At 700px of its own width or less the
+           rows become cards. Rows that do not match the search are hidden in place. */
+        ".bl,.st{--wcm-accent-ink:color-mix(in srgb,var(--wcm-accent) 62%,var(--wcm-text))}" +
+        ".bl{container:bl / inline-size;background:var(--wcm-surface);border:1px solid var(--wcm-border);border-radius:var(--wcm-radius);box-shadow:var(--ha-card-box-shadow,none);overflow:clip}" +
+        ".bl [hidden]{display:none !important}" +
+        ".bl-bar{display:flex;align-items:center;gap:10px 14px;min-height:60px;padding:12px 16px 12px 20px;border-bottom:1px solid var(--wcm-divider)}" +
+        ".bl-title:focus{outline:none}" +
+        ".bl-title:focus-visible{outline:2px solid var(--wcm-accent-ink);outline-offset:4px;border-radius:4px}" +
+        ".bl-title{flex:1 1 auto;min-width:0;margin:0;font-family:var(--wcm-font-display);font-size:1.1875rem;font-weight:600;line-height:1.25;color:var(--wcm-text);font-variant-numeric:lining-nums}" +
+        ".bl-sortbox{display:none;flex:0 0 auto;align-items:center;gap:6px}" +
+        ".bl-sortbox select{appearance:none;-webkit-appearance:none;height:36px;max-width:11rem;padding:0 30px 0 14px;border:1px solid var(--wcm-divider);border-radius:999px;background-color:var(--wcm-tonal);background-image:linear-gradient(45deg,transparent 50%,currentColor 50%),linear-gradient(135deg,currentColor 50%,transparent 50%);background-position:calc(100% - 17px) 50%,calc(100% - 12px) 50%;background-size:5px 5px;background-repeat:no-repeat;color:var(--wcm-text);font-size:var(--wcm-fs-md);text-overflow:ellipsis}" +
+        ".bl-dir svg{width:20px;height:20px;transition:transform .18s ease-out}" +
+        ".bl-dir[aria-pressed=\"true\"]{background:var(--wcm-tonal)}" +
+        ".bl-dir[aria-pressed=\"true\"] svg{transform:scaleX(-1)}" +
+        /* A table drawn as a grid: every row is a grid on the same column tracks (thumbnail, wine, location,
+           vintage, region, rating, window, price). The fixed tracks are as wide as their header in this
+           language (character counts set by _renderList: --n-* the label, --w-* its longest word, --n-cost
+           the longest price); wine, location and region share the rest. Widths never come from the rows,
+           so a row off screen skips its layout (content-visibility) and the columns never shift as rows
+           come into view. Explicit table roles (_renderList) keep the table semantics. */
+        ".bl-table{display:block;width:100%;font-size:var(--wcm-fs-md);--bw-thumb:56px;--bw-vin:max(64px,calc(var(--n-vin,7) * .6rem + 44px));--bw-rate:max(100px,calc(var(--n-rate,6) * .6rem + 44px));--bw-win:max(136px,calc(var(--n-win,15) * .6rem + 44px));--bw-price:max(calc(var(--n-cost,8) * .55rem + 34px),calc(var(--n-price,5) * .6rem + 44px));--bl-cols:var(--bw-thumb) minmax(0,40fr) minmax(0,36fr) var(--bw-vin) minmax(0,24fr) var(--bw-rate) var(--bw-win) var(--bw-price)}" +
+        ".bl-table thead,.bl-table tbody,.bl-table .bl-ghead,.bl-table .bl-ghead th{display:block}" +
+        ".bl-table thead tr,.bl-row{display:grid;grid-template-columns:var(--bl-cols);align-items:center}" +
+        ".bl-table tr{border-bottom:1px solid var(--wcm-divider)}" +
+        ".bl-table th,.bl-table td{display:block;min-width:0;padding:10px 12px;text-align:left}" +
+        ".bl-row{content-visibility:auto;contain-intrinsic-size:auto 65px}" +
+        ".bl-row>td{overflow-wrap:anywhere}" +
+        ".bl-table thead{position:sticky;top:0;z-index:2;background:var(--wcm-surface)}" +
+        ".bl-table thead th{padding:12px 6px;font-size:var(--wcm-fs-xs);font-weight:700;letter-spacing:.07em;line-height:1.3;text-transform:uppercase;color:var(--wcm-muted);white-space:nowrap}" +
+        ".bl-sort{display:inline-flex;align-items:center;gap:4px;margin:-4px 0;text-align:left;padding:4px 6px;border:0;border-radius:6px;background:none;color:inherit;font:inherit;letter-spacing:inherit;text-transform:inherit;cursor:pointer}" +
+        ".bl-sort:hover{color:var(--wcm-text);background:var(--wcm-tonal)}" +
+        ".bl-sort svg{width:14px;height:14px;flex:0 0 auto;opacity:0;transition:opacity .15s}" +
+        ".bl-sort:hover svg{opacity:.45}" +
+        ".bl-sort.on{color:var(--wcm-text)}" +
+        ".bl-sort.on svg{opacity:1}" +
+        ".bl-sep{margin:0 8px;opacity:.5}" +
+        ".bl-ghead th{padding:22px 20px 8px;font-family:var(--wcm-font-display);font-size:1.0625rem;font-weight:600;letter-spacing:0;text-transform:none;color:var(--wcm-text)}" +
+        ".bl-glabel{display:inline-flex;align-items:center;gap:10px}" +
+        ".bl-swatch{width:14px;height:14px;flex:0 0 auto;border-radius:4px;background:var(--type);box-shadow:inset 0 0 0 1px rgba(0,0,0,.2)}" +
+        ".bl-gn{display:inline-block;min-width:22px;padding:2px 8px;border-radius:999px;background:var(--wcm-tonal);font-family:var(--ha-font-family-body,inherit);font-size:var(--wcm-fs-xs);font-weight:700;line-height:1.35;text-align:center;color:color-mix(in srgb,var(--wcm-text) 72%,var(--wcm-surface));font-variant-numeric:tabular-nums;vertical-align:.12em}" +
+        ".bl-row{cursor:pointer;transition:background-color .15s}" +
+        ".bl-row:hover{background:color-mix(in srgb,var(--wcm-text) 4%,transparent)}" +
+        ".bl-row:has(.bl-name:focus-visible){background:color-mix(in srgb,var(--wcm-accent) 9%,transparent)}" +
+        ".bl-table .c-thumb{padding-left:20px;padding-right:4px}" +
+        ".wthumb{position:relative;display:grid;place-items:center;flex:0 0 auto;width:32px;height:44px;border-radius:7px;overflow:hidden;background:linear-gradient(160deg,color-mix(in srgb,var(--type) 30%,var(--wcm-surface)),color-mix(in srgb,var(--type) 12%,var(--wcm-surface)));box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--wcm-text) 10%,transparent),0 1px 2px rgba(0,0,0,.12)}" +
+        ".wthumb .bt-bottle{position:absolute;top:8%;left:50%;width:auto;height:84%;transform:translateX(-50%);filter:drop-shadow(0 1px 1px rgba(0,0,0,.25))}" +
+        ".wthumb img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}" +
+        ".bl-name{display:block;margin:0;padding:0;border:0;border-radius:4px;background:none;color:var(--wcm-text);font-family:var(--wcm-font-display);font-size:var(--wcm-fs-base);font-weight:600;line-height:1.25;text-align:left;cursor:pointer}" +
+        ".bl-name:focus-visible,.bl-sort:focus-visible,.bl-locate:focus-visible,.bl-dir:focus-visible,.bl-sortbox select:focus-visible,.st button:focus-visible{outline:2px solid var(--wcm-accent-ink);outline-offset:2px}" +
+        ".bl-sub{display:block;margin-top:2px;font-size:var(--wcm-fs-sm);color:var(--wcm-muted)}" +
+        ".bl-m{display:none}" +
+        ".bl-loc{display:flex;align-items:center;gap:6px;min-width:0}" +
+        ".bl-crumb{min-width:0;overflow:hidden;font-size:var(--wcm-fs-sm);color:var(--wcm-muted);white-space:nowrap;text-overflow:ellipsis}" +
+        ".bl-table .bl-crumb{white-space:normal}" +
+        ".bl-crumb b{font-weight:600;color:var(--wcm-text)}" +
+        ".bl-crumb .cs-full{display:inline}" +
+        ".bl-crumb .cs-short{display:none}" +
+        ".bl-locate{position:relative;z-index:1;display:grid;place-items:center;flex:0 0 auto;width:32px;height:32px;margin:-6px -4px -6px 2px;padding:0;border:0;border-radius:50%;background:transparent;color:var(--wcm-muted);cursor:pointer;transition:background-color .15s,color .15s}" +
+        ".bl-locate:hover{background:var(--wcm-tonal-strong);color:var(--wcm-accent-ink)}" +
+        ".bl-row .bl-locate{opacity:.55}" +
+        ".bl-row:hover .bl-locate,.bl-row .bl-locate:focus-visible{opacity:1}" +
+        ".bl-dash{color:var(--wcm-muted);opacity:.6}" +
+        ".bl-table .c-vin,.bl-table .c-price{white-space:nowrap;font-variant-numeric:tabular-nums}" +
+        ".bl-table .c-rv{color:var(--wcm-muted)}" +
+        ".bl-table .c-price{padding-right:20px;text-align:right}" +
+        ".bl-table thead .c-price{padding-right:14px;text-align:right}" +
+        ".wstars{color:var(--wcm-star);letter-spacing:1.5px;white-space:nowrap}" +
+        ".wstars .off{color:var(--wcm-text);opacity:.18}" +
+        ".wpill{--status:var(--wcm-none);--ink:color-mix(in srgb,var(--status) 52%,var(--wcm-text));display:inline-flex;align-items:center;gap:6px;height:24px;padding:0 10px 0 5px;border-radius:999px;background:color-mix(in srgb,var(--status) 13%,transparent);box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--status) 28%,transparent);color:var(--ink);font-size:var(--wcm-fs-sm);font-weight:600;white-space:nowrap;font-variant-numeric:tabular-nums lining-nums}" +
+        ".wpill.is-young{--status:var(--wcm-young)}" +
+        ".wpill.is-ready{--status:var(--wcm-ready)}" +
+        ".wpill.is-peak{--status:var(--wcm-peak)}" +
+        ".wpill.is-past{--status:var(--wcm-past)}" +
+        ".wpill.is-none{background:transparent;box-shadow:inset 0 0 0 1px var(--wcm-divider);color:var(--wcm-muted);font-weight:500}" +
+        ".wpill .bt-glyph{width:16px;height:16px}" +
+        ".wpill .bt-glyph svg{width:10px;height:10px}" +
+        ".wpill-l+.wpill-y::before{content:'·';margin:0 5px 0 0;opacity:.7}" +
+        ".wpill-l+.wpill-y{font-weight:500}" +
+        ".bl-empty{padding:36px 24px 44px}" +
+        ".bl-empty .find-empty{flex-direction:column;justify-content:center;gap:12px;max-width:520px;margin:0 auto;text-align:center}" +
+        ".bl-empty .find-empty-t{flex:0 0 auto;justify-items:center}" +
+        ".bl-empty .find-empty-actions{justify-content:center}" +
+        ".bl-start{display:grid;justify-items:center;gap:8px;max-width:460px;margin:0 auto;padding:44px 24px 48px;text-align:center}" +
+        ".bl-start-art{display:grid;place-items:center;width:96px;height:96px;margin-bottom:6px;border-radius:50%;background:radial-gradient(closest-side,color-mix(in srgb,var(--wcm-accent) 16%,transparent),color-mix(in srgb,var(--wcm-accent) 5%,transparent) 70%,transparent);color:var(--wcm-accent-ink)}" +
+        ".bl-start-art svg{width:48px;height:48px;fill:currentColor}" +
+        ".bl-start-sub{margin:0 0 10px;font-size:var(--wcm-fs-md);line-height:1.5;color:var(--wcm-muted)}" +
+        "@container bl (max-width:1080px){.bl-table .c-rv{display:none}.bl-table{--bl-cols:var(--bw-thumb) minmax(0,52fr) minmax(0,48fr) var(--bw-vin) var(--bw-rate) var(--bw-win) var(--bw-price)}}" +
+        "@container bl (max-width:440px){.bl-crumb .cs-full{display:none}.bl-crumb .cs-short{display:inline}}" +
+        "@container bl (max-width:900px){.bl-table{--bw-rate:max(96px,calc(var(--w-rate,6) * .6rem + 36px));--bw-win:max(136px,calc(var(--w-win,8) * .6rem + 36px));--bw-price:max(calc(var(--n-cost,8) * .55rem + 22px),calc(var(--w-price,5) * .6rem + 36px));--bl-cols:var(--bw-thumb) minmax(0,44fr) minmax(0,56fr) var(--bw-rate) var(--bw-win) var(--bw-price)}.bl-table .c-vin{display:none}.bl-crumb .cs-full{display:none}.bl-crumb .cs-short{display:inline}.bl-table .bl-m{display:inline}.bl-table thead th{white-space:normal}.bl-row>td{padding-left:9px;padding-right:9px}.bl-table thead th{padding-left:3px;padding-right:3px}}" +
+        "@container bl (max-width:700px){.bl-sortbox{display:inline-flex}.bl-bar{padding-left:16px}.bl-table thead{display:none}.bl-ghead th{padding:18px 16px 8px}.bl-row{display:grid;grid-template-columns:48px minmax(0,1fr) auto;grid-template-areas:'thumb wine price' 'thumb loc loc' 'thumb win rate';align-items:center;gap:4px 12px;padding:14px 16px;border-bottom:1px solid var(--wcm-divider);content-visibility:auto;contain-intrinsic-size:auto 118px}.bl-row>td{padding:0}.bl-table .c-thumb{grid-area:thumb;align-self:start;width:auto;padding:0}.bl-row .wthumb{width:48px;height:66px;border-radius:9px}.bl-table .c-wine{grid-area:wine}.bl-table .c-price{grid-area:price;align-self:start;padding:1px 0 0;font-weight:600}.bl-table .c-loc{grid-area:loc}.bl-table .c-win{grid-area:win;justify-self:start;margin-top:3px}.bl-table .c-rate{grid-area:rate;justify-self:end;margin-top:3px}.bl-table .c-vin,.bl-table .c-rv,.bl-dash{display:none}.bl-table .bl-m{display:inline}.bl-name{font-size:1.0625rem}.bl-row .bl-locate{opacity:1}.wstars{font-size:var(--wcm-fs-sm)}.bl-title{font-size:1.0625rem}.bl-bar{flex-wrap:wrap}.bl-sortbox{max-width:100%;margin-left:auto}.bl-sortbox select{min-width:0;max-width:calc(100% - 42px)}}" +
+        "@media (max-width:780px),(max-height:500px){.bl-table thead{position:static}}" +
+        "@media (max-width:780px){.bl-sortbox select{font-size:16px}}" +
+        "@media (hover:none){.bl-row .bl-locate{opacity:1}}" +
 
-        /* Statistics */
-        ".stats-summary-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;margin-bottom:16px}" +
-        ".stats-card{background:var(--wcm-surface);border:1px solid var(--wcm-border);border-radius:var(--wcm-radius);padding:16px;text-align:center;box-shadow:var(--ha-card-box-shadow,none)}" +
-        ".stats-card-label{font-size:.78rem;text-transform:uppercase;letter-spacing:.06em;color:var(--wcm-muted);margin-bottom:6px}" +
-        ".stats-card-value{font-size:1.6rem;font-weight:700;color:var(--wcm-text)}" +
-        ".stats-charts-split{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px}" +
-        ".stats-panel{background:var(--wcm-surface);border:1px solid var(--wcm-border);border-radius:var(--wcm-radius);padding:16px;box-shadow:var(--ha-card-box-shadow,none)}" +
-        ".stats-panel h4{margin:0 0 14px 0;font-size:1.05rem;font-weight:600}" +
-        ".chart-full-width{margin-bottom:10px}" +
-        "@media (max-width:900px){.stats-charts-split{grid-template-columns:1fr}}" +
+        /* Stats: figures, the drinking window (vertical bars; one row per year where the chart is narrow), the
+           bottles to drink now, the types donut and the countries. */
+        ".st{container:st / inline-size;display:grid;gap:16px}" +
+        ".st-kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}" +
+        ".st-kpis.is-three{grid-template-columns:repeat(3,minmax(0,1fr))}" +
+        ".st-kpi,.st-panel{min-width:0;background:var(--wcm-surface);border:1px solid var(--wcm-border);border-radius:var(--wcm-radius);box-shadow:var(--ha-card-box-shadow,none)}" +
+        /* A figure: its label beside the icon, then the value across the whole tile (never under the icon),
+           sized to its length (--chars, set by _renderStats) so a long total fits a narrow tile. */
+        ".st-kpi{position:relative;container-type:inline-size;display:grid;grid-template-columns:minmax(0,1fr) auto;grid-template-rows:auto 1fr auto;gap:2px 10px;padding:18px 20px 16px;overflow:hidden;--kpi-max:1.875rem}" +
+        ".st-kpi-ico{grid-column:2;grid-row:1;align-self:start;display:grid;place-items:center;width:36px;height:36px;border-radius:12px;background:color-mix(in srgb,var(--wcm-accent) 12%,transparent);color:var(--wcm-accent-ink)}" +
+        ".st-kpi-ico svg{width:20px;height:20px}" +
+        ".st-kpi-l{grid-column:1;grid-row:1;align-self:center;font-size:var(--wcm-fs-xs);font-weight:700;letter-spacing:.07em;line-height:1.15;text-transform:uppercase;color:var(--wcm-muted);overflow-wrap:break-word;-webkit-hyphens:auto;hyphens:auto}" +
+        ".st-kpi-v{grid-column:1 / -1;grid-row:2;align-self:end;margin-top:6px;overflow:hidden;font-size:clamp(1rem,calc(100cqi / var(--chars,4) * 1.6),var(--kpi-max));font-weight:700;letter-spacing:-.01em;line-height:1.1;color:var(--wcm-text);white-space:nowrap;text-overflow:ellipsis;font-variant-numeric:tabular-nums lining-nums}" +
+        ".st-kpi-v small{margin-left:5px;font-size:var(--wcm-fs-md);font-weight:500;letter-spacing:0;color:var(--wcm-muted)}" +
+        ".st-kpi-na{color:var(--wcm-muted)}" +
+        ".st-kpi-s{grid-column:1 / -1;grid-row:3;font-size:var(--wcm-fs-sm);line-height:1.3;color:var(--wcm-muted)}" +
+        ".st-main{display:grid;grid-template-columns:minmax(0,1.9fr) minmax(300px,1fr);gap:16px;align-items:stretch}" +
+        ".st-pair{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px}" +
+        ".st-panel{display:flex;flex-direction:column;padding:20px 22px}" +
+        ".st-head{margin-bottom:16px}" +
+        ".st-title{display:flex;align-items:center;gap:10px;margin:0;font-family:var(--wcm-font-display);font-size:var(--wcm-fs-lg);font-weight:600;line-height:1.25;color:var(--wcm-text)}" +
+        ".st-sub{margin:3px 0 0;font-size:var(--wcm-fs-sm);color:var(--wcm-muted)}" +
+        ".st-quiet{margin:auto 0;padding:24px 0;font-size:var(--wcm-fs-md);color:var(--wcm-muted);text-align:center}" +
+        ".st-chart{display:flex;flex:1 1 auto;flex-direction:column;margin:0}" +
+        ".st-plot{position:relative;flex:1 1 auto;min-height:250px;padding:22px 0 0 34px}" +
+        ".st-grid{position:absolute;top:22px;right:0;bottom:30px;left:34px;pointer-events:none}" +
+        ".st-grid span{position:absolute;right:0;bottom:calc(var(--at) * 100%);left:0;border-top:1px dashed color-mix(in srgb,var(--wcm-text) 14%,transparent)}" +
+        ".st-grid span.is-base{border-top:1px solid color-mix(in srgb,var(--wcm-text) 30%,transparent)}" +
+        ".st-grid em{position:absolute;top:-.62em;right:calc(100% + 8px);font-size:var(--wcm-fs-xs);font-style:normal;line-height:1.2;color:var(--wcm-muted);font-variant-numeric:tabular-nums}" +
+        ".st-bars{display:flex;gap:clamp(4px,.9cqi,14px);height:100%;margin:0;padding:0;list-style:none}" +
+        ".st-col{position:relative;display:flex;flex:1 1 0;flex-direction:column;min-width:0}" +
+        ".st-col.is-now::before{content:'';position:absolute;inset:-22px -3px 0;border-radius:10px;background:color-mix(in srgb,var(--wcm-accent) 9%,transparent);box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--wcm-accent) 22%,transparent)}" +
+        ".st-track{position:relative;display:flex;flex:1 1 auto;justify-content:center}" +
+        ".st-stack{position:absolute;bottom:0;display:flex;flex-direction:column-reverse;width:min(100%,46px);height:calc(var(--h) * 100%);overflow:hidden;border-radius:6px 6px 2px 2px}" +
+        ".st-stack i{flex:0 0 calc(var(--v) * 100%);min-height:2px;background:var(--type)}" +
+        ".st-stack i+i{box-shadow:inset 0 -1.5px 0 var(--wcm-surface)}" +
+        ".st-total{position:absolute;right:0;bottom:calc(var(--h) * 100% + 4px);left:0;font-size:var(--wcm-fs-xs);font-weight:700;text-align:center;color:var(--wcm-text);font-variant-numeric:tabular-nums}" +
+        ".st-yr{position:relative;display:flex;flex:0 0 30px;flex-direction:column;align-items:center;padding-top:7px;font-size:var(--wcm-fs-xs);font-weight:600;line-height:1.1;color:var(--wcm-muted);font-variant-numeric:tabular-nums}" +
+        ".st-yr em{font-size:.625rem;font-style:normal;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--wcm-accent-ink)}" +
+        ".st-col.is-now .st-yr{font-weight:800;color:var(--wcm-text)}" +
+        ".st-bars:hover .st-col:not(:hover) .st-stack{opacity:.55}" +
+        ".st-stack{transition:opacity .15s}" +
+        ".st-legend{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:14px;padding-top:14px;border-top:1px solid var(--wcm-divider);font-size:var(--wcm-fs-sm);color:var(--wcm-muted)}" +
+        ".st-legend span{display:inline-flex;align-items:center;gap:7px}" +
+        ".st-legend i,.st-leg i{width:10px;height:10px;flex:0 0 auto;border-radius:3px;background:var(--type);box-shadow:inset 0 0 0 1px rgba(0,0,0,.18)}" +
+        ".st-now-list{display:grid;gap:2px;margin:0 -10px;padding:0;list-style:none}" +
+        ".st-now-item{position:relative;display:flex;align-items:center;gap:12px;padding:9px 10px;border-radius:12px;transition:background-color .15s}" +
+        ".st-now-item:hover{background:var(--wcm-tonal)}" +
+        ".st-now-item .wthumb{width:34px;height:47px}" +
+        ".st-now-t{display:grid;flex:1 1 auto;grid-template-columns:minmax(0,1fr);gap:3px;min-width:0;justify-items:start}" +
+        ".st-now-name{max-width:100%;overflow:hidden;margin:0;padding:0;border:0;border-radius:4px;background:none;color:var(--wcm-text);font-family:var(--wcm-font-display);font-size:var(--wcm-fs-base);font-weight:600;line-height:1.25;text-align:left;white-space:nowrap;text-overflow:ellipsis;cursor:pointer}" +
+        ".st-now-name::after{content:'';position:absolute;inset:0}" +
+        ".st-now-vin{font-family:var(--ha-font-family-body,inherit);font-size:var(--wcm-fs-sm);font-weight:500;color:var(--wcm-muted)}" +
+        ".st-now-loc{display:flex;align-items:center;gap:5px;max-width:100%;min-width:0}" +
+        ".st-now-item .wpill{max-width:100%;height:22px;margin-top:2px;font-size:var(--wcm-fs-xs)}" +
+        ".st-now-item .wpill-l{min-width:0;overflow:hidden;text-overflow:ellipsis}" +
+        ".st-now-item .bl-locate{margin:0}" +
+        ".st-hist-list{display:grid;gap:2px;margin:0 -10px;padding:0;list-style:none}" +
+        ".st-hist-item{display:flex;align-items:center;gap:12px;padding:9px 10px;border-radius:12px}" +
+        ".st-hist-item .wthumb{width:34px;height:47px}" +
+        ".st-hist-name{max-width:100%;overflow:hidden;font-family:var(--wcm-font-display);font-size:var(--wcm-fs-base);font-weight:600;line-height:1.25;white-space:nowrap;text-overflow:ellipsis}" +
+        ".st-hist-sub{display:flex;flex-wrap:wrap;align-items:center;gap:2px 10px;max-width:100%;min-width:0;font-size:var(--wcm-fs-sm);color:var(--wcm-muted)}" +
+        ".st-hist-sub .st-now-loc{flex:0 1 auto}" +
+        ".st-putback{flex:0 0 auto}" +
+        ".st-putback svg{width:17px;height:17px}" +
+        ".st-hist-note{flex:0 1 auto;max-width:40%;font-size:var(--wcm-fs-sm);color:var(--wcm-muted);text-align:right}" +
+        ".st-more{display:inline-flex;align-items:center;align-self:flex-start;gap:4px;margin:12px 0 0 -8px;padding:6px 8px;border:0;border-radius:8px;background:none;color:var(--wcm-accent-ink);font:inherit;font-size:var(--wcm-fs-md);font-weight:600;cursor:pointer}" +
+        ".st-more:hover{background:var(--wcm-tonal)}" +
+        ".st-more svg{width:16px;height:16px}" +
+        ".st-types{display:grid;grid-template-columns:auto minmax(0,1fr);align-items:center;gap:24px}" +
+        ".st-donut{position:relative;width:172px;height:172px}" +
+        ".st-donut svg{display:block;width:100%;height:100%}" +
+        ".st-donut-c{position:absolute;inset:0;display:grid;place-content:center;text-align:center;pointer-events:none}" +
+        ".st-donut-c strong{font-size:1.875rem;font-weight:700;line-height:1;color:var(--wcm-text);font-variant-numeric:tabular-nums}" +
+        ".st-donut-c span{margin-top:4px;font-size:var(--wcm-fs-xs);letter-spacing:.08em;text-transform:uppercase;color:var(--wcm-muted)}" +
+        ".st-legs{display:grid;gap:2px}" +
+        ".st-leg{display:grid;grid-template-columns:12px minmax(0,1fr) auto 3.2em;align-items:center;gap:10px;width:100%;min-height:36px;padding:4px 8px;border:0;border-radius:8px;background:transparent;color:var(--wcm-text);font:inherit;font-size:var(--wcm-fs-md);text-align:left;cursor:pointer}" +
+        ".st-leg:hover,.st-country:hover{background:var(--wcm-tonal)}" +
+        ".st-leg i{width:12px;height:12px;border-radius:4px}" +
+        ".st-leg span{overflow:hidden;white-space:nowrap;text-overflow:ellipsis}" +
+        ".st-leg b{font-weight:700;font-variant-numeric:tabular-nums}" +
+        ".st-leg em{font-style:normal;text-align:right;color:var(--wcm-muted);font-variant-numeric:tabular-nums}" +
+        ".st-countries{display:grid;gap:4px;margin:0 -8px}" +
+        ".st-country{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:6px 12px;width:100%;padding:8px;border:0;border-radius:10px;background:transparent;color:var(--wcm-text);font:inherit;font-size:var(--wcm-fs-md);text-align:left;cursor:pointer}" +
+        ".st-country.is-none{cursor:default;color:var(--wcm-muted)}" +
+        ".st-country.is-none:hover{background:transparent}" +
+        ".st-country b{overflow:hidden;font-weight:600;white-space:nowrap;text-overflow:ellipsis}" +
+        ".st-country em{font-style:normal;font-weight:700;font-variant-numeric:tabular-nums}" +
+        ".st-bar{grid-column:1 / -1;height:8px;overflow:hidden;border-radius:999px;background:var(--wcm-tonal-strong)}" +
+        ".st-bar span{display:block;width:calc(var(--p) * 100%);height:100%;border-radius:inherit;background:linear-gradient(90deg,color-mix(in srgb,var(--wcm-accent) 65%,var(--wcm-surface)),var(--wcm-accent))}" +
+        ".st-country.is-none .st-bar span{background:color-mix(in srgb,var(--wcm-text) 30%,transparent)}" +
+        "@container st (max-width:1080px){.st-main{grid-template-columns:minmax(0,1fr)}.st-bars{gap:clamp(4px,1.3cqi,14px)}}" +
+        /* Rows instead of columns where the chart is 520px wide or less: the report is one column there,
+           so that is a report (container st) of 566px or less. One container, one layout pass. */
+        "@container st (max-width:566px){.st-plot{flex:none;height:auto;min-height:0;padding:0 0 22px}.st-grid{top:0;right:40px;bottom:22px;left:62px}.st-grid span{top:0;right:auto;bottom:0;left:calc(var(--at) * 100%);border-top:0;border-left:1px dashed color-mix(in srgb,var(--wcm-text) 14%,transparent)}.st-grid span.is-base{border-top:0;border-left:1px solid color-mix(in srgb,var(--wcm-text) 30%,transparent)}.st-grid em{top:calc(100% + 5px);right:auto;left:0;transform:translateX(-50%)}.st-bars{flex-direction:column;gap:6px;height:auto}.st-col{flex-direction:row-reverse;align-items:center;min-height:26px}.st-col.is-now::before{inset:-3px -6px}.st-track{flex:1 1 auto;height:18px;margin-right:40px;justify-content:flex-start}.st-stack{position:relative;flex-direction:row;width:calc(var(--h) * 100%);height:100%;border-radius:2px 6px 6px 2px}.st-stack i{flex-basis:calc(var(--v) * 100%)}.st-stack i+i{box-shadow:inset 1.5px 0 0 var(--wcm-surface)}.st-total{top:50%;right:auto;bottom:auto;left:calc(var(--h) * 100% + 6px);transform:translateY(-50%);text-align:left}.st-yr{flex:0 0 62px;flex-direction:row;align-items:baseline;gap:5px;padding:0;font-size:var(--wcm-fs-sm)}.st-bars:hover .st-col:not(:hover) .st-stack{opacity:1}}" +
+        "@container st (max-width:1000px){.st-kpis,.st-kpis.is-three{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}}" +
+        "@container st (max-width:760px){.st-pair{grid-template-columns:minmax(0,1fr)}.st-kpi{--kpi-max:var(--wcm-fs-xl)}}" +
+        /* Narrow: the crosshair goes up beside the name, so the status and window line has the item's width. */
+        "@container st (max-width:520px){.st-now-item .bl-locate{position:absolute;top:6px;right:4px}.st-now-name{max-width:calc(100% - 34px)}.st-now-loc .cs-full{display:none}.st-now-loc .cs-short{display:inline}.st{gap:12px}.st-kpi{padding:14px 14px 12px;--kpi-max:var(--wcm-fs-lg)}.st-kpi-ico{width:30px;height:30px;border-radius:10px}.st-kpi-ico svg{width:17px;height:17px}.st-kpi-l{font-size:.6875rem}.st-panel{padding:16px}.st-types{grid-template-columns:minmax(0,1fr);justify-items:center;gap:12px}.st-legs{width:100%}.st-title{font-size:1.125rem}}" +
+        "@media (prefers-reduced-motion:reduce){.bl-row,.bl-dir svg,.bl-locate,.st-stack,.st-now-item{transition:none}}" +
 
         /* Dialogs */
         ".modal-backdrop{position:fixed;inset:0;background:rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;padding:16px;z-index:999}" +
@@ -3766,6 +4727,7 @@ const _WCM_STYLES =
         ".wcm-toast>svg,.move-bar>svg{width:19px;height:19px;flex:0 0 auto;color:#7fd8a0}" +
         ".wcm-toast.is-warn>svg{color:#ffb454}" +
         ".toast-text{flex:1 1 auto;min-width:0}" +
+        ".toast-kbd{flex:0 0 auto;padding:2px 6px;border-radius:6px;box-shadow:inset 0 0 0 1px rgba(245,239,233,.3);color:rgba(245,239,233,.75);font:600 .75rem/1.2 ui-monospace,SFMono-Regular,Menlo,monospace}" +
         ".toast-action{flex:0 0 auto;height:34px;padding:0 12px;border:none;border-radius:10px;background:transparent;color:color-mix(in srgb,var(--wcm-accent) 50%,#fff);font:inherit;font-weight:700;cursor:pointer}" +
         ".toast-action:hover{background:rgba(255,255,255,.09)}" +
         ".toast-action:focus-visible,.toast-close:focus-visible{outline:2px solid #fff;outline-offset:1px}" +
@@ -3796,11 +4758,31 @@ const _WCM_STYLES =
         "@media (min-width:601px) and (max-width:780px){.modal.sheet.stage-capture{height:auto;max-height:94vh;max-height:94dvh}.sheet.stage-capture .sheet-grid{min-height:0;padding-top:24px;padding-bottom:28px}}" +
         "@media (prefers-reduced-motion:reduce){.sheet-tile.is-busy .sheet-scan,.sheet-fld.is-shimmer .sheet-in,.sheet-spin{animation:none}.sheet-tile.is-busy .sheet-scan{background-position:0 50%}.sheet-chev,button.mm-dot,.cellars-grid .cabinet .slot.lifted{transition:none}}" +
 
+        /* While a search or filter is on: each cellar's match badge (a cellar without a match fades) and, on
+           each shelf, its number and its match count. */
+        ".cellar>*{transition:opacity .2s ease-out}" +
+        ".cellar-hits{flex:0 0 auto;display:inline-flex;align-items:center;gap:6px;height:26px;padding:0 11px;border-radius:999px;font-size:var(--wcm-fs-xs);font-weight:600;white-space:nowrap;font-variant-numeric:tabular-nums;background:color-mix(in srgb,var(--wcm-accent) 15%,transparent);color:var(--wcm-text);box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--wcm-accent) 45%,transparent)}" +
+        ".cellar-hits::before{content:\"\";width:7px;height:7px;border-radius:50%;background:var(--wcm-accent);box-shadow:0 0 0 3px color-mix(in srgb,var(--wcm-accent) 22%,transparent)}" +
+        ".cellar-hits.none{background:var(--wcm-tonal);color:var(--wcm-muted);box-shadow:none}" +
+        ".cellar-hits.none::before{display:none}" +
+        ".cellar-hits[hidden]{display:none}" +
+        /* The drawing fades, not the header that says why ("No match"), which stays readable. */
+        ".cellars-grid.filtering .cellar.no-hits>:not(.cellar-head){opacity:.45}" +
+        ".cellars-grid.filtering .cellar.no-hits:hover>*,.cellars-grid.filtering .cellar.no-hits:focus-within>*{opacity:.85}" +
+        ".cellars-grid.filtering .cellar.no-hits .cellar-title h3{color:var(--wcm-muted)}" +
+        ".shelf-no{display:inline-flex;align-items:center;justify-content:center;flex:0 0 auto;min-width:18px;height:18px;margin-right:7px;padding:0 5px;border-radius:5px;font-size:.6875rem;font-weight:600;line-height:1;font-variant-numeric:tabular-nums;color:var(--wcm-muted);background:color-mix(in srgb,var(--wcm-text) 10%,transparent)}" +
+        ".shelf-hits{display:inline-flex;align-items:center;justify-content:center;flex:0 0 auto;min-width:20px;height:18px;margin-left:8px;padding:0 6px;border-radius:999px;background:color-mix(in srgb,var(--wcm-accent) 72%,#000);color:#fff;font-size:.6875rem;font-weight:700;line-height:1;font-variant-numeric:tabular-nums}" +
+        ".shelf-hits[hidden]{display:none}" +
+        ".cellars-grid.filtering .shelf.no-hits .shelf-name{opacity:.55}" +
+        "@media (prefers-reduced-motion:reduce){.cellar>*{transition:none}}" +
+
         /* Small screens */
-        "@media (max-width:780px){.wrap{padding:10px;gap:10px}.toolbar{padding:8px}.seg{width:100%;flex-wrap:wrap;border-radius:20px}.seg-btn{flex:1 1 auto;padding:0 10px;font-size:.84rem}.toolbar-spacer{display:none}.toolbar-row > .btn{flex:1 1 0}.search{flex-basis:100%}.select-wrap{flex:1 1 30%}.select-wrap select{max-width:none;padding-left:12px;padding-right:30px;font-size:.84rem}.cellars-grid{--slot-w:7rem;--slot-h:11.25rem;--slot-gap:8px;gap:14px}.cellars-grid.compact{--slot-w:26px;--slot-h:26px;--slot-gap:9px}.pull-btn{margin-left:10px;left:10px}.cellar{width:100%;padding:10px}.modal{padding:14px;max-height:94vh}.wine-view-modal{padding:0}.duplicate-item{grid-template-columns:1fr}.modal-actions{flex-direction:column;align-items:stretch}}" +
-        "@media (max-width:780px){:host{position:static !important;height:auto !important}.wrap{height:auto !important;overflow:visible !important}.main-scroll-content{overflow-y:visible !important;height:auto !important}}" +
+        "@media (max-width:780px){.wrap{padding:10px;gap:10px}.cellars-grid{--slot-w:7rem;--slot-h:11.25rem;--slot-gap:8px;gap:14px}.cellars-grid.compact{--slot-w:26px;--slot-h:26px;--slot-gap:9px}.pull-btn{margin-left:10px;left:10px}.cellar{width:100%;padding:10px}.modal{padding:14px;max-height:94vh}.wine-view-modal{padding:0}.duplicate-item{grid-template-columns:1fr}.modal-actions{flex-direction:column;align-items:stretch}}" +
+        /* The page scrolls, not the card, on small and on short screens (a phone held sideways), so the
+           cellars get the whole screen once the toolbar has scrolled away. */
+        "@media (max-width:780px),(max-height:500px){:host{position:static !important;height:auto !important}.wrap{height:auto !important;overflow:visible !important}.main-scroll-content{overflow-y:visible !important;height:auto !important}}" +
         /* iOS zooms the page into any field whose text is under 16px. */
-        "@media (max-width:780px),(pointer:coarse){.sheet-in,.stepper-v,.search input,.select-wrap select{font-size:16px}}";
+        "@media (max-width:780px),(pointer:coarse){.sheet-in,.stepper-v,.tb-search input{font-size:16px}}";
 
 // Inline icons, so the card does not depend on HA's icon set being loaded.
 // One line-icon family (24px grid, 1.8 stroke, round joins); the fill="none"
@@ -3833,6 +4815,19 @@ const _WCM_ICONS = {
   barcode: _wcmLineIcon('<path d="M4.5 6v12M8 6v12M11 6v12M13.5 6v12M17 6v12M19.5 6v12"/>'),
   info: _wcmLineIcon('<circle cx="12" cy="12" r="8.5"/><path d="M12 11v5M12 7.8h.01"/>'),
   alert: _wcmLineIcon('<path d="M12 4.2 21 19.5H3z"/><path d="M12 10v4M12 16.8h.01"/>'),
+  tune: _wcmLineIcon('<path d="M4 7h9M17 7h3M4 17h3M11 17h9"/><circle cx="15" cy="7" r="2"/><circle cx="9" cy="17" r="2"/>'),
+  cabinetPlus: _wcmLineIcon('<rect x="3.5" y="3.5" width="12" height="17" rx="2"/><path d="M3.5 9.3h12M3.5 14.7h12M19.8 8.5v6M16.8 11.5h6"/>'),
+  searchOff: _wcmLineIcon('<circle cx="10.8" cy="10.8" r="6.3"/><path d="m20 20-4.6-4.6M8.2 10.8h5.2"/>'),
+  right: _wcmLineIcon('<path d="m9.5 6.5 5.5 5.5-5.5 5.5"/>'),
+  // "Show in cellar": a crosshair on the bottle's spot.
+  crosshair: _wcmLineIcon('<circle cx="12" cy="12" r="6.5"/><circle cx="12" cy="12" r="1.6"/><path d="M12 2.8v3.4M12 17.8v3.4M2.8 12h3.4M17.8 12h3.4"/>'),
+  sortDir: _wcmLineIcon('<path d="M8 4.5v15M4.8 7.7 8 4.5l3.2 3.2"/><path d="M16 19.5v-15M12.8 16.3l3.2 3.2 3.2-3.2"/>'),
+  // Stats figures: bottles, wines, age, value; and the report itself.
+  wineBottle: _wcmLineIcon('<path d="M10 2.8h4v5.4c0 1.3 2.8 2.2 2.8 5.6v6.2a1.5 1.5 0 0 1-1.5 1.5H8.7a1.5 1.5 0 0 1-1.5-1.5v-6.2c0-3.4 2.8-4.3 2.8-5.6z"/><path d="M7.2 14.2h9.6"/>'),
+  grapes: _wcmLineIcon('<circle cx="9.3" cy="10" r="2.2"/><circle cx="14.7" cy="10" r="2.2"/><circle cx="12" cy="14.3" r="2.2"/><circle cx="9.3" cy="18.4" r="1.9"/><circle cx="14.7" cy="18.4" r="1.9"/><path d="M12 7.8V3.5M12 5.3c1.4-1.6 3.4-1.8 5-1.2"/>'),
+  clock: _wcmLineIcon('<circle cx="12" cy="12" r="8.3"/><path d="M12 7.3V12l3.2 2"/>'),
+  coins: _wcmLineIcon('<ellipse cx="12" cy="6.5" rx="6.5" ry="2.7"/><path d="M5.5 6.5v5.5c0 1.5 2.9 2.7 6.5 2.7s6.5-1.2 6.5-2.7V6.5M5.5 12v5.5c0 1.5 2.9 2.7 6.5 2.7s6.5-1.2 6.5-2.7V12"/>'),
+  chart: _wcmLineIcon('<path d="M4 20.5h16"/><rect x="5.5" y="11" width="3" height="7" rx=".8"/><rect x="10.5" y="6" width="3" height="12" rx=".8"/><rect x="15.5" y="13.5" width="3" height="4.5" rx=".8"/>'),
   // Filled glyph-like icons.
   // A rating star, and the bottle drawn in the add sheet's header.
   star: '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2.6l2.9 6 6.6.8-4.9 4.6 1.3 6.5L12 17.3l-5.9 3.2 1.3-6.5L2.5 9.4l6.6-.8z"/></svg>',
@@ -3864,6 +4859,37 @@ const _WCM_GLYPHS = {
   none: '<svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4.5 8h7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>',
   needs: '<svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5.6 6a2.5 2.5 0 1 1 3.6 2.2c-.8.4-1.2.9-1.2 1.7v.4" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/><circle cx="8" cy="13" r="1.2" fill="currentColor"/></svg>'
 };
+
+// Icons repeated on every row of All Bottles (where a bottle stands, "Show in
+// cellar") are painted by CSS, as a mask of the line icon in the text color,
+// instead of an inline SVG per row: hundreds fewer nodes to build and lay out.
+function _wcmIconMask(svg) {
+  return 'url("data:image/svg+xml,' + encodeURIComponent(svg.replace("<svg ", '<svg xmlns="http://www.w3.org/2000/svg" ')) + '")';
+}
+const _WCM_ICON_STYLES =
+  ".bl-loc::before,.st-now-loc::before,.bl-locate::before{content:'';flex:0 0 auto;background:currentColor;-webkit-mask:var(--wcm-icon) center/contain no-repeat;mask:var(--wcm-icon) center/contain no-repeat}" +
+  ".bl-loc::before,.st-now-loc::before{--wcm-icon:" + _wcmIconMask(_WCM_ICONS.pin) + ";width:15px;height:15px;color:var(--wcm-muted)}" +
+  ".bl-locate::before{--wcm-icon:" + _wcmIconMask(_WCM_ICONS.crosshair) + ";width:18px;height:18px}" +
+  ".bt-glyph:empty::before{content:'';width:10px;height:10px;background:currentColor;-webkit-mask:var(--wcm-glyph) center/contain no-repeat;mask:var(--wcm-glyph) center/contain no-repeat}" +
+  ["young", "ready", "peak", "past", "none", "needs"].map(function (status) {
+    return ".bt-glyph.is-" + status + ":empty::before{--wcm-glyph:" + _wcmIconMask(_WCM_GLYPHS[status]) + "}";
+  }).join("");
+
+// The card's styles as one constructed sheet, parsed once and shared by every
+// render and every card on the page (null until first used; false where the
+// browser cannot adopt sheets, and each render then carries a <style>).
+let _wcmSheet = null;
+function _wcmStyleSheet() {
+  if (_wcmSheet === null) {
+    try {
+      _wcmSheet = new CSSStyleSheet();
+      _wcmSheet.replaceSync(_WCM_STYLES + _WCM_ICON_STYLES);
+    } catch (err) {
+      _wcmSheet = false;
+    }
+  }
+  return _wcmSheet;
+}
 
 // Bottle silhouettes on one 48x128 viewBox. Every bottle ends at y=125, so a
 // half bottle stands visibly shorter next to full ones. glass = outline,
@@ -3953,7 +4979,13 @@ class WineCellarCard extends HTMLElement {
     this._hass = null;
     this._data = null;
     this._search = "";
-    this._filterType = "";
+    // Filters besides the search words: each facet is a set of values (see
+    // _filterModel); the Filters panel, open or not; and the match that
+    // Enter-stepping and the result strip are at (-1: none yet).
+    this._facets = { status: new Set(), type: new Set(), country: new Set(), cellar: new Set() };
+    this._filterPanelOpen = false;
+    this._matchCursor = -1;
+    this._liveTimer = null;
     this._view = "cellars";
     this._modal = null;
     this._hasRendered = false;
@@ -3969,21 +5001,19 @@ class WineCellarCard extends HTMLElement {
     this._copiedBottleData = null;
     this._sortColumn = "wine_name";
     this._sortOrder = "asc";
-    this._filterCountry = "";
-    this._filterReady = false;
     this._viewingDuplicateManager = false;
     this._foundSyntaxDuplicates = [];
     this._duplicateManagerSearching = false;
     this._duplicateManagerHasSearched = false; // Nouvelle variable pour savoir si l'analyse a été lancée
-    // Live search: debounce timer, the match the view last scrolled to, and
-    // the id list the All Bottles table was last drawn with.
+    // Live search: debounce timer and the match the view last scrolled to.
     this._searchTimer = null;
     this._lastLocatedId = null;
-    this._listSignature = null;
     // Horizontal scroll of each cabinet, keyed by "view:cellarId", so a
     // re-render (dialog open/close, save...) keeps the user's place.
     this._interiorScroll = {};
     this._onWindowKeydown = null;
+    this._onWindowResize = null;
+    this._onWindowScroll = null;
     // Short in-card notice shown in the toolbar (e.g. every slot is taken).
     this._toolbarNotice = "";
     // Dialogs: a counter that gives each opened dialog its own identity, the
@@ -4008,6 +5038,8 @@ class WineCellarCard extends HTMLElement {
     this._toastShown = 0;
     this._toastTimer = null;
     this._pendingPulse = null;
+    // A Consume on its way to the server (a second press waits for it).
+    this._consuming = false;
     // Tap-to-move: the lifted bottle, whether it takes focus on the next
     // paint, and the long press that lifts one on touch screens.
     this._moveSource = null;
@@ -4036,10 +5068,13 @@ class WineCellarCard extends HTMLElement {
     this._siblingListenersBound = false;
   }
 
-  // "/" jumps to the search box, like on most sites, unless the user is
-  // already typing somewhere or a dialog is open. Bound once, removed in
-  // disconnectedCallback.
-  _ensureWindowKeyHandler() {
+  // Window listeners, bound while the card is on the page (from
+  // connectedCallback and each paint) and removed in disconnectedCallback:
+  // the keyboard shortcuts below ("/" jumps to the search box, like on most
+  // sites, unless the user is already typing somewhere or a dialog is open),
+  // and resize and scroll, which keep the pinned toolbar and the filters
+  // sheet in step with the screen.
+  _ensureWindowListeners() {
     if (this._onWindowKeydown) return;
 
     var self = this;
@@ -4069,8 +5104,16 @@ class WineCellarCard extends HTMLElement {
         self._runToastAction();
         return;
       }
+      // The filters sheet of phones is modal: Escape closes it wherever
+      // focus has gone, and "/" waits until it is closed.
+      var sheetOpen = self._filterPanelOpen && self._isFilterSheet();
+      if ((e.key === "Escape" || e.key === "Esc") && sheetOpen && outside && !e.defaultPrevented && self.isConnected) {
+        e.preventDefault();
+        self._setFilterPanel(false);
+        return;
+      }
       if (e.key !== "/" || e.ctrlKey || e.metaKey || e.altKey || e.defaultPrevented) return;
-      if (self._modal || self._viewingDuplicateManager) return;
+      if (self._modal || self._viewingDuplicateManager || sheetOpen) return;
       if (!self.isConnected || !self.getClientRects().length) return;
       var target = e.composedPath ? e.composedPath()[0] : e.target;
       if (target && (target.isContentEditable || /^(INPUT|TEXTAREA|SELECT)$/.test(target.tagName || ""))) return;
@@ -4080,30 +5123,64 @@ class WineCellarCard extends HTMLElement {
       input.focus();
       input.select();
     };
+    this._onWindowResize = function () {
+      clearTimeout(self._resizeTimer);
+      self._resizeTimer = setTimeout(function () {
+        self._resizeTimer = null;
+        self._layoutToolbar();
+        self._syncFilterSheet();
+      }, 100);
+    };
+    // Scrolling anywhere (Home Assistant scrolls the page or its own view
+    // container): clip the pinned toolbar, once per frame.
+    this._onWindowScroll = function () {
+      if (self._scrollFrame) return;
+      self._scrollFrame = requestAnimationFrame(function () {
+        self._scrollFrame = 0;
+        self._clipToolbar();
+      });
+    };
     window.addEventListener("keydown", this._onWindowKeydown);
+    window.addEventListener("resize", this._onWindowResize);
+    window.addEventListener("scroll", this._onWindowScroll, { capture: true, passive: true });
   }
 
   connectedCallback() {
     if (this._hasRendered) {
-      this._ensureWindowKeyHandler();
-      // The cabinet observers were let go when the card left the page.
-      if (this.shadowRoot) this._observeCabinets();
+      this._ensureWindowListeners();
+      // The cabinet and toolbar observers were let go when the card left the
+      // page.
+      if (this.shadowRoot) {
+        this._observeCabinets();
+        this._observeToolbar();
+      }
     }
   }
 
-  // Release everything that outlives the element: the window listener, the
-  // pending timers (search debounce, toast, long press), and the barcode
-  // scanner.
+  // Release everything that outlives the element: the window listeners, the
+  // pending timers (search debounce, match announcement, toast, long press),
+  // and the barcode scanner.
   disconnectedCallback() {
     if (this._onWindowKeydown) {
       window.removeEventListener("keydown", this._onWindowKeydown);
+      window.removeEventListener("resize", this._onWindowResize);
+      window.removeEventListener("scroll", this._onWindowScroll, { capture: true, passive: true });
       this._onWindowKeydown = null;
+      this._onWindowResize = null;
+      this._onWindowScroll = null;
     }
+    clearTimeout(this._resizeTimer);
+    if (this._scrollFrame) cancelAnimationFrame(this._scrollFrame);
+    if (this._refitFrame) cancelAnimationFrame(this._refitFrame);
+    this._scrollFrame = 0;
+    this._refitFrame = 0;
 
     if (this._searchTimer) {
       clearTimeout(this._searchTimer);
       this._searchTimer = null;
     }
+    clearTimeout(this._liveTimer);
+    clearTimeout(this._locateTimer);
 
     clearTimeout(this._toastTimer);
     this._toast = null;
@@ -4115,6 +5192,7 @@ class WineCellarCard extends HTMLElement {
     if (this._pickerObserver) this._pickerObserver.disconnect();
     if (this._footerObserver) this._footerObserver.disconnect();
     if (this._shelfObserver) this._shelfObserver.disconnect();
+    if (this._toolbarObserver) this._toolbarObserver.disconnect();
 
     this._renderPending = false;
     this._renderPendingForce = false;
@@ -4176,7 +5254,16 @@ class WineCellarCard extends HTMLElement {
   async _loadData(force) {
     if (!this._hass) return { cellars: [], bottles: [], consumed_bottles: [] };
     if (!this._data || force) {
-      this._data = await this._callWS({ type: "wine_cellar_manager/data" });
+      var fresh = await this._callWS({ type: "wine_cellar_manager/data" });
+      // A reload that brings the same data keeps the object already loaded,
+      // so everything worked out from it (matches, search text, facet
+      // values, Stats) stays valid; _dataVersion counts real changes.
+      var json = JSON.stringify(fresh);
+      if (!this._data || json !== this._dataJson) {
+        this._data = fresh;
+        this._dataJson = json;
+        this._dataVersion = (this._dataVersion || 0) + 1;
+      }
     }
     return this._data || { cellars: [], bottles: [], consumed_bottles: [] };
   }
@@ -4329,6 +5416,7 @@ class WineCellarCard extends HTMLElement {
       [/has no back lane/i, "err_no_back_lane"],
       [/^([a-z_]+:\s*)?shelf not found/i, "err_shelf_missing"],
       [/^([a-z_]+:\s*)?bottle not found/i, "err_bottle_missing"],
+      [/^([a-z_]+:\s*)?consumed bottle not found/i, "err_consumed_missing"],
       [/^no_entry:/i, "err_no_entry"]
     ];
     for (var i = 0; i < known.length; i++) {
@@ -4413,7 +5501,7 @@ class WineCellarCard extends HTMLElement {
   }
 
   _hasActiveFilters() {
-    return !!((this._search || "").trim() || this._filterType || this._filterCountry || this._filterReady);
+    return this._searchTerms().length > 0 || this._facetCount() > 0;
   }
 
   // A copied bottle is pasted by clicking an empty slot; it expires after
@@ -4460,77 +5548,290 @@ class WineCellarCard extends HTMLElement {
     return (this._hass && this._hass.config && this._hass.config.currency) || "CAD";
   }
 
+  // A price in the Home Assistant currency; "—" when there is none (a
+  // missing price is not a price of 0).
   _formatPrice(value) {
-    var num = Number(value);
+    var num = value === null || value === undefined || value === "" ? NaN : Number(value);
     if (!Number.isFinite(num)) return "—";
-    return new Intl.NumberFormat(undefined, {
-      style: "currency",
-      currency: this._currency(),
-      maximumFractionDigits: 2
-    }).format(num);
-  }
-
-  _formatStars(rating) {
-    var n = Number(rating);
-    if (!Number.isFinite(n) || n <= 0) return "Not rated";
-    return "★".repeat(n) + "☆".repeat(Math.max(0, 5 - n));
-  }
-
-  _filteredBottles(data) {
-    var self = this;
-    var bottles = (data && data.bottles || []);
-    if (!Array.isArray(bottles)) bottles = [];
-    
-    return bottles.filter(function(b) {
-      return self._bottleMatchesFilters(b);
-    });
-  }
-
-  _bottleMatchesFilters(bottle) {
-    if (!bottle) return false;
-
-    var terms = this._searchTerms();
-    var type = this._filterType || "";
-    var country = this._filterCountry || "";
-    var readyFilter = this._filterReady || "";
-
-    // 1. Age filter, using the same statuses as the colour legend:
-    // "Ready" is any bottle inside its drinking window (Ready + At peak),
-    // "Drink now" is At peak + Past peak.
-    if (readyFilter === "ready" || readyFilter === true) {
-      var windowStatus = this._agingStatus(bottle);
-      if (windowStatus !== "ready" && windowStatus !== "peak") return false;
-    } else if (readyFilter === "drink_now") {
-      var status = this._agingStatus(bottle);
-      if (status !== "peak" && status !== "past") return false;
+    // One formatter per currency: building one costs more than formatting
+    // (All Bottles and Stats format every price).
+    var currency = this._currency();
+    if (!this._priceFormat || this._priceFormat.currency !== currency) {
+      this._priceFormat = {
+        currency: currency,
+        format: new Intl.NumberFormat(undefined, { style: "currency", currency: currency, maximumFractionDigits: 2 })
+      };
     }
-    
-    // 2. Protection et Filtre par Type de vin
-    if (type && (bottle.wine_type || "") !== type) return false;
-    
-    // 3. Protection et Filtre par Pays d'origine
-    if (country) {
-      var bCountry = String(bottle.country || "").trim();
-      if (bCountry !== country) return false;
-    }
+    return this._priceFormat.format.format(num);
+  }
 
-    // 4. Text search: every word of the query must appear somewhere in the
-    // bottle's text, ignoring case and accents ("chateau" finds "Château",
-    // "amarone 2020" finds the 2020 Amarone).
-    if (terms.length) {
-      var text = this._bottleSearchText(bottle);
-      for (var i = 0; i < terms.length; i++) {
-        if (text.indexOf(terms[i]) === -1) return false;
-      }
+  /* Filters. A search is its words plus four facets (drinking status, wine
+     type, country, cellar), each a set of values: a bottle passes a facet
+     when the set is empty or holds the bottle's value (OR within a facet),
+     and it has to pass every facet and contain every word (AND across).
+     Changes are applied to the page on screen (_applyFiltersInPlace), never
+     through a re-render. Elsewhere in the card (the Stats view, say), use
+     _setFacet / _toggleFacet / _clearFilters. */
+
+  // The value a bottle has for one facet. A type outside the known list
+  // counts as "other" (no type at all as "unset"); countries compare folded,
+  // so "France", "france " and "FRANCE" are one country.
+  _facetValue(bottle, name) {
+    if (name === "status") return this._agingStatus(bottle);
+    if (name === "type") return this._typeKey(bottle.wine_type);
+    if (name === "country") return this._countryKey(bottle.country);
+    return String(bottle.cellar_id == null ? "" : bottle.cellar_id);
+  }
+
+  _typeKey(type) {
+    if (!type) return "unset";
+    return _WCM_SHEET_TYPES.indexOf(type) === -1 ? "other" : type;
+  }
+
+  _countryKey(country) {
+    return this._foldSearchText(country);
+  }
+
+  _passesFacets(bottle) {
+    var facets = this._facets;
+    for (var i = 0; i < _WCM_FACETS.length; i++) {
+      var set = facets[_WCM_FACETS[i]];
+      if (set.size && !set.has(this._facetValue(bottle, _WCM_FACETS[i]))) return false;
     }
     return true;
   }
 
+  // Every search word appears somewhere in the bottle's text, ignoring case
+  // and accents ("chateau" finds "Château", "amarone 2020" finds the 2020
+  // Amarone).
+  _matchesTerms(bottle, terms) {
+    if (!terms.length) return true;
+    var text = this._bottleSearchText(bottle);
+    for (var i = 0; i < terms.length; i++) {
+      if (text.indexOf(terms[i]) === -1) return false;
+    }
+    return true;
+  }
+
+  _bottleMatchesFilters(bottle) {
+    return !!bottle && this._passesFacets(bottle) && this._matchesTerms(bottle, this._searchTerms());
+  }
+
+  // How many facet values are selected, over every facet or the named ones.
+  _facetCount(names) {
+    var facets = this._facets;
+    return (names || _WCM_FACETS).reduce(function (sum, name) { return sum + facets[name].size; }, 0);
+  }
+
+  _facetKey() {
+    var facets = this._facets;
+    return _WCM_FACETS.map(function (name) { return Array.from(facets[name]).sort().join(","); }).join("|");
+  }
+
+  // What the toolbar and the views show about the current filters, from one
+  // pass over the bottles, kept until the data, the language, the search or
+  // a facet changes: the matching bottles in the order they stand in the
+  // cellars; for each facet value, how many bottles it would show under the
+  // other filters (the counts on the chips) and how many exist at all; the
+  // matches per cellar and per shelf; each country's most common spelling.
+  _filterModel() {
+    var self = this;
+    var data = this._data || {};
+    var bottles = data.bottles || [];
+    var terms = this._searchTerms();
+    var key = _wcmLang + "\u0001" + terms.join(" ") + "\u0001" + this._facetKey();
+    var cache = this._filterCache;
+    if (cache && cache.data === data && cache.bottles === bottles && cache.key === key) return cache.model;
+
+    var facets = this._facets;
+    var active = _WCM_FACETS.filter(function (name) { return facets[name].size > 0; });
+    var model = {
+      filtering: terms.length > 0 || active.length > 0,
+      total: bottles.length,
+      hits: [],
+      ids: new Set(),
+      counts: { status: {}, type: {}, country: {}, cellar: {} },
+      present: { status: {}, type: {}, country: {} },
+      countryLabel: {},
+      perCellar: {},
+      perShelf: {}
+    };
+    function bump(map, value) { map[value] = (map[value] || 0) + 1; }
+    var spellings = {};
+    // Each bottle's facet values, worked out once per data load.
+    var known = this._facetValueCache;
+    if (!known || known.bottles !== bottles) known = this._facetValueCache = { bottles: bottles, values: new Map() };
+    bottles.forEach(function (b) {
+      var values = known.values.get(b);
+      if (!values) {
+        values = {
+          status: self._agingStatus(b),
+          type: self._typeKey(b.wine_type),
+          country: self._countryKey(b.country),
+          cellar: String(b.cellar_id == null ? "" : b.cellar_id)
+        };
+        known.values.set(b, values);
+      }
+      bump(model.present.status, values.status);
+      bump(model.present.type, values.type);
+      if (values.country) {
+        bump(model.present.country, values.country);
+        bump(spellings[values.country] || (spellings[values.country] = {}), String(b.country).trim());
+      }
+      if (!self._matchesTerms(b, terms)) return;
+      // A bottle failing a single facet still counts for that facet's values.
+      var failed = null;
+      for (var i = 0; i < active.length; i++) {
+        if (facets[active[i]].has(values[active[i]])) continue;
+        if (failed) return;
+        failed = active[i];
+      }
+      if (failed) {
+        bump(model.counts[failed], values[failed]);
+        return;
+      }
+      _WCM_FACETS.forEach(function (name) { bump(model.counts[name], values[name]); });
+      if (!model.filtering) return;
+      model.hits.push(b);
+      model.ids.add(String(b.id));
+      bump(model.perCellar, values.cellar);
+      bump(model.perShelf, values.cellar + "|" + String(b.shelf_id));
+    });
+
+    // Physical order: cellar, shelf from the top, back row before front row, position.
+    if (model.hits.length > 1) {
+      var cellarAt = {};
+      var shelfAt = {};
+      this._sortedCellars().forEach(function (c, ci) {
+        cellarAt[c.id] = ci;
+        self._getSortedShelves(c).forEach(function (s, si) { shelfAt[c.id + "|" + s.id] = si; });
+      });
+      var ranked = model.hits.map(function (b) {
+        var c = cellarAt[b.cellar_id];
+        var s = shelfAt[b.cellar_id + "|" + b.shelf_id];
+        return {
+          b: b,
+          r: (c === undefined ? 999 : c) * 1e6 + (s === undefined ? 999 : s) * 1e3 + (b.lane === "back" ? 0 : 500) + (Number(b.position) || 0)
+        };
+      });
+      ranked.sort(function (a, b) { return a.r - b.r; });
+      model.hits = ranked.map(function (x) { return x.b; });
+    }
+
+    Object.keys(spellings).forEach(function (k) { model.countryLabel[k] = self._commonSpelling(spellings[k]); });
+
+    this._filterCache = { data: data, bottles: bottles, key: key, model: model };
+    return model;
+  }
+
+  // Folded words of the cellar's wine names, producers, grapes and regions
+  // (three letters or more, no bare numbers), each with its most frequent
+  // spelling; the vocabulary "Did you mean" draws from.
+  _searchVocabulary() {
+    var self = this;
+    var bottles = (this._data && this._data.bottles) || [];
+    if (this._vocabCache && this._vocabCache.bottles === bottles) return this._vocabCache.words;
+    var words = new Map();
+    bottles.forEach(function (b) {
+      [b.wine_name, b.producer, b.varietal, b.region].forEach(function (field) {
+        self._str(field).split(/[\s,;/()]+/).forEach(function (raw) {
+          var word = raw.replace(/^[.\-'"’]+|[.\-'"’]+$/g, "");
+          var key = self._foldSearchText(word);
+          if (key.length < 3 || /^\d+$/.test(key)) return;
+          var entry = words.get(key);
+          if (!entry) words.set(key, entry = { spellings: {}, n: 0 });
+          entry.n++;
+          entry.spellings[word] = (entry.spellings[word] || 0) + 1;
+        });
+      });
+    });
+    words.forEach(function (entry) {
+      var best = "";
+      Object.keys(entry.spellings).forEach(function (s) {
+        if (!best || entry.spellings[s] > entry.spellings[best]) best = s;
+      });
+      entry.text = best;
+    });
+    this._vocabCache = { bottles: bottles, words: words };
+    return words;
+  }
+
+  // Up to three corrected searches that do find something: every word that
+  // matches no bottle at all is swapped for one of the closest words of the
+  // cellar (edit distance on folded text, a longer word's start counting
+  // too), all such words at once, the other words kept as typed; the
+  // closest combinations first.
+  _suggestSearch() {
+    var self = this;
+    var bottles = (this._data && this._data.bottles) || [];
+    var terms = this._searchTerms();
+    if (!terms.length || !bottles.length) return [];
+    var key = this._search + "\u0001" + this._facetKey();
+    if (this._suggestCache && this._suggestCache.bottles === bottles && this._suggestCache.key === key) return this._suggestCache.list;
+    var words = String(this._search || "").trim().split(/\s+/);
+    if (words.length !== terms.length) words = terms.slice();
+    var vocab = this._searchVocabulary();
+    // Each word's choices: itself when it matches, else its closest words.
+    var typos = 0;
+    var choices = terms.map(function (term, i) {
+      if (bottles.some(function (b) { return self._bottleSearchText(b).indexOf(term) !== -1; })) return [{ text: words[i], d: 0 }];
+      typos++;
+      var max = term.length <= 4 ? 1 : (term.length <= 7 ? 2 : 3);
+      var near = [];
+      vocab.forEach(function (entry, word) {
+        var d = self._levenshteinDistance(term, word, max);
+        if (word.length > term.length + 1) d = Math.min(d, self._levenshteinDistance(term, word.slice(0, term.length), max) + 0.5);
+        if (d <= max) near.push({ text: entry.text, d: d, n: entry.n });
+      });
+      near.sort(function (a, b) { return (a.d - b.d) || (b.n - a.n); });
+      return near.slice(0, typos > 1 ? 3 : 5);
+    });
+    var combos = [{ words: [], d: 0 }];
+    choices.forEach(function (list) {
+      var next = [];
+      combos.forEach(function (combo) {
+        list.forEach(function (choice) { next.push({ words: combo.words.concat(choice.text), d: combo.d + choice.d }); });
+      });
+      combos = next.slice(0, 60);
+    });
+    combos.sort(function (a, b) { return a.d - b.d; });
+    var found = [];
+    var seen = {};
+    combos.forEach(function (combo) {
+      if (!typos || found.length >= 3) return;
+      var query = combo.words.join(" ");
+      var folded = self._foldSearchText(query);
+      if (seen[folded]) return;
+      seen[folded] = true;
+      var t = folded.split(" ").filter(Boolean);
+      if (bottles.some(function (b) { return self._passesFacets(b) && self._matchesTerms(b, t); })) found.push(query);
+    });
+    this._suggestCache = { bottles: bottles, key: key, list: found };
+    return found;
+  }
+
+  // The most common of a country's spellings ({spelling: count}) names it
+  // ("France" over "france"); on a tie, a capitalized one.
+  _commonSpelling(counts) {
+    var best = "";
+    var most = 0;
+    Object.keys(counts || {}).forEach(function (s) {
+      var n = counts[s];
+      if (n > most || (n === most && /^\p{Lu}/u.test(s) && !/^\p{Lu}/u.test(best))) {
+        most = n;
+        best = s;
+      }
+    });
+    return best;
+  }
+
   // Lower-cases and strips accents so "Château" and "chateau" compare equal.
   _foldSearchText(value) {
-    return this._normalizeCompareValue(
-      this._str(value).replace(/[œŒ]/g, "oe").replace(/[æÆ]/g, "ae").replace(/ß/g, "ss")
-    );
+    var text = this._str(value);
+    // Plain ASCII (most names) has no ligature or accent to fold.
+    if (!/[^\x00-\x7f]/.test(text)) return text.toLowerCase().replace(/\s+/g, " ").trim();
+    // Curly and modifier apostrophes match a typed ' (d’Esclans, d'Esclans).
+    return this._normalizeCompareValue(text.replace(/[œŒ]/g, "oe").replace(/[æÆ]/g, "ae").replace(/ß/g, "ss").replace(/[\u2018\u2019\u02bc\u00b4]/g, "'"));
   }
 
   // The folded words of the current query, cached until the query changes.
@@ -4551,10 +5852,17 @@ class WineCellarCard extends HTMLElement {
 
   // Everything a user may type to find a bottle: its wine fields, where it
   // is (cellar, shelf, translated row) and the labels shown on screen.
+  // Folded once per bottle, and kept until the data or the language changes.
   _bottleSearchText(bottle) {
+    var cache = this._searchTextCache;
+    if (!cache || cache.data !== this._data || cache.lang !== _wcmLang) {
+      cache = this._searchTextCache = { data: this._data, lang: _wcmLang, texts: new Map() };
+    }
+    var text = cache.texts.get(bottle);
+    if (text !== undefined) return text;
     var cellars = (this._data && this._data.cellars) || [];
     var cellar = cellars.find(function (c) { return c.id === bottle.cellar_id; });
-    return this._foldSearchText([
+    text = this._foldSearchText([
       bottle.wine_name,
       bottle.producer,
       bottle.varietal,
@@ -4569,6 +5877,8 @@ class WineCellarCard extends HTMLElement {
       bottle.notes,
       bottle.barcode
     ].map(this._str).join(" "));
+    cache.texts.set(bottle, text);
+    return text;
   }
 
   // Two-row edit distance with an early exit: once every cell in a row exceeds
@@ -5100,6 +6410,17 @@ class WineCellarCard extends HTMLElement {
         var slot = el.getAttribute("data-drag-source") || el.getAttribute("data-new-bottle");
         if (slot) entry.loc = JSON.parse(slot);
       } catch (err) { /* not a slot */ }
+      // A bottle of All Bottles or of Drink now: the ones listed after and
+      // before it, and the list's own place for focus, in case it has gone
+      // when the dialog closes (Consume, Delete).
+      if (attrs[i] === "data-edit-bottle" && !el.classList.contains("slot") && el.closest(".main-scroll-content")) {
+        var list = Array.prototype.filter.call(el.closest(".main-scroll-content").querySelectorAll("[data-edit-bottle]"), function (b) {
+          return !b.closest("[hidden]");
+        });
+        var at = list.indexOf(el);
+        entry.near = [list[at + 1], list[at - 1]].filter(Boolean).map(function (b) { return b.getAttribute("data-edit-bottle"); });
+        entry.home = el.closest("[data-list]") ? "[data-list-title]" : '.toolbar [data-view="' + (this._view || "stats") + '"]';
+      }
       this._lastActivator = entry;
       return;
     }
@@ -5122,7 +6443,14 @@ class WineCellarCard extends HTMLElement {
         } catch (err) { /* not a slot */ }
       });
     }
-    return found && found.tabIndex >= 0 ? found : null;
+    if (!found && entry.near) {
+      entry.near.forEach(function (id) {
+        if (!found) found = root.querySelector('.main-scroll-content [data-edit-bottle="' + (window.CSS && CSS.escape ? CSS.escape(id) : id) + '"]');
+      });
+    }
+    if (found && found.tabIndex >= 0) return found;
+    // Its list's heading (focusable from script) or the view's tab.
+    return entry.home ? root.querySelector(entry.home) : null;
   }
 
   // Runs after every paint. A dialog that just opened takes focus (on its
@@ -5396,51 +6724,117 @@ class WineCellarCard extends HTMLElement {
     return _T("front");
   }
 
-  _formatBottleLocation(bottle) {
-    var cellars = (this._data && this._data.cellars) ? this._data.cellars : [];
-    var cellar = cellars.find(function(c) { return c.id === bottle.cellar_id; });
-    var cellarName = cellar ? (cellar.name || "Cellar") : _T("unknown_cellar");
-    var shelfName = this._getShelfName(bottle.cellar_id, bottle.shelf_id) || "Unknown shelf";
-    return cellarName +
-      " • " + shelfName +
-      " • " + this._laneLabel(bottle.lane) +
-      " • Position " + (bottle.position || "—");
-  }
-
-
-  // Delete, Consume and Delete cellar ask inside the dialog first
-  // (window.confirm can be blocked or hidden in the Home Assistant app),
-  // then act and close the dialog. A failure shows in the confirmation.
+  // Delete asks inside the dialog first (it is permanent; window.confirm can
+  // be blocked or hidden in the Home Assistant app), then closes the dialog
+  // and says it is done. A failure closes the question and says why.
   async _deleteBottle(id) {
     var self = this;
+    var name = this._bottleTitle(id);
     this._showDialogConfirm({
-      title: _T("delete_bottle_title", { name: this._bottleTitle(id) }),
+      title: _T("delete_bottle_title", { name: name }),
       body: _T("delete_bottle_body"),
       confirmLabel: _T("delete"),
       onConfirm: async function () {
-        await self._callWS({ type: "wine_cellar_manager/delete_bottle", bottle_id: id });
-        await self._loadData(true);
+        try {
+          await self._callWS({ type: "wine_cellar_manager/delete_bottle", bottle_id: id });
+        } catch (err) {
+          self._cancelDialogConfirm();
+          self._showToast(_T("delete_failed", { name: name, error: self._friendlyError(err) }), { kind: "warn" });
+          return;
+        }
         await self._closeModal();
+        self._showToast(_T("delete_done", { name: name }), { icon: "trash" });
       }
     });
   }
 
+  // Consume acts at once: the bottle goes to the history, the dialog closes
+  // and a toast offers Undo (also Ctrl+Z), which puts the very same bottle
+  // back in its slot (restore_consumed_bottle). Once the toast has gone,
+  // Stats › Recently enjoyed still offers Put back.
   async _consumeBottle(id) {
     var self = this;
-    this._showDialogConfirm({
-      tone: "warning",
-      title: _T("consume_bottle_title", { name: this._bottleTitle(id) }),
-      body: _T("consume_bottle_body"),
-      confirmLabel: _T("consume"),
-      confirmClass: "primary",
-      onConfirm: async function () {
-        await self._callWS({ type: "wine_cellar_manager/consume_bottle", bottle_id: id });
-        await self._loadData(true);
-        await self._closeModal();
+    if (this._consuming) return;
+    var name = this._bottleTitle(id);
+    var button = this.shadowRoot && this.shadowRoot.querySelector("[data-consume-bottle]");
+    if (button) button.disabled = true;
+    this._consuming = true;
+    var result;
+    try {
+      result = await this._callWS({ type: "wine_cellar_manager/consume_bottle", bottle_id: id });
+    } catch (err) {
+      if (button && button.isConnected) button.disabled = false;
+      this._showToast(_T("consume_failed", { name: name, error: this._friendlyError(err) }), { kind: "warn" });
+      return;
+    } finally {
+      this._consuming = false;
+    }
+    // Only this bottle's dialog closes: one opened on another bottle while
+    // the call ran (it can be slow) stays open, edits and all.
+    var modal = this._modal;
+    if (modal && modal.type === "bottle" && modal.bottle && String(modal.bottle.id) === String(id)) {
+      await this._closeModal();
+    } else {
+      await this._loadData(true);
+      await this.render(false);
+    }
+    var consumedId = result && result.consumed_id;
+    this._showToast(_T("consume_done", { name: name }), consumedId ? {
+      icon: "glass",
+      action: {
+        label: _T("undo"),
+        undo: true,
+        run: function () { return self._undoConsume(consumedId, name); }
       }
-    });
+    } : { icon: "glass" });
   }
 
+  // Undo of Consume, and Put back in Stats › Recently enjoyed. If the slot
+  // was filled meanwhile (or its shelf is gone), the bottle stays in the
+  // history and the toast says so. opts.near: history entries to give focus
+  // to (Put back leaves the list).
+  async _undoConsume(consumedId, name, opts) {
+    opts = opts || {};
+    var self = this;
+    var root = this.shadowRoot;
+    // Focus that was on the toast's button (now gone), on a slot or a bottle
+    // of a list (redrawn below) goes to the bottle; focus in the search box
+    // stays there.
+    var active = root && root.activeElement;
+    var focus = !active || active.classList.contains("slot") || !!(active.matches && active.matches(".main-scroll-content [data-edit-bottle], [data-restore-consumed]"));
+    var result;
+    try {
+      result = await this._callWS({ type: "wine_cellar_manager/restore_consumed_bottle", consumed_id: String(consumedId) });
+    } catch (err) {
+      var raw = err && err.message ? err.message : "";
+      var text = /already occupied|position_occupied|out of range|no back lane/i.test(raw) ? _T("consume_undo_taken", { name: name })
+        : /shelf not found|cellar not found/i.test(raw) ? _T("consume_undo_noshelf", { name: name })
+        : _T("consume_undo_failed", { name: name, error: this._friendlyError(err) });
+      this._showToast(text, { kind: "warn" });
+      return;
+    }
+    var id = result && result.bottle_id ? String(result.bottle_id) : "";
+    var view = this._view || "cellars";
+    if (id && (view === "cellars" || view === "compact")) this._pendingPulse = { ids: [id], focus: focus };
+    await this.render(true);
+    if (focus && view !== "cellars" && view !== "compact") {
+      // All Bottles and Stats: the bottle's name where it is listed, else the
+      // next Put back, else the list's title or the view's tab.
+      var near = (opts.near || []).map(function (n) { return '[data-restore-consumed="' + self._cssEscape(n) + '"]'; });
+      var candidates = (id ? ['.main-scroll-content [data-edit-bottle="' + this._cssEscape(id) + '"]'] : []).concat(near, ["[data-list-title]", '.toolbar [data-view="' + view + '"]']);
+      for (var i = 0; i < candidates.length; i++) {
+        var el = root.querySelector(candidates[i]);
+        if (el && el.getClientRects().length) {
+          el.focus({ preventScroll: i > 0 });
+          break;
+        }
+      }
+    }
+    this._showToast(_T("consume_restored", { name: name }));
+  }
+
+  // Delete cellar asks inside the dialog first, then acts and closes the
+  // dialog; a failure shows in the question.
   async _deleteCellar(id) {
     var self = this;
     var data = this._data || {};
@@ -5459,118 +6853,350 @@ class WineCellarCard extends HTMLElement {
     });
   }
 
+  // Two calm rows: the views (arrow keys move between them), the inventory
+  // and the actions; then the search, Filters and the status chips. Under
+  // them the filters panel (a bottom sheet on phones) and the strip of
+  // results, both filled in place as filters change.
   _renderToolbar() {
     var self = this;
-    var data = this._data || { bottles: [] };
+    var data = this._data || { bottles: [], cellars: [] };
+    var view = this._view || "cellars";
+    var finding = view !== "stats";
+    function esc(value) { return self._escape(value); }
 
-    // Extraction dynamique des pays uniques présents dans la cave
-    var countriesSet = new Set();
-    (data.bottles || []).forEach(function(b) {
-      var c = String(b.country || "").trim();
-      if (c) countriesSet.add(c);
-    });
-    var uniqueCountries = Array.from(countriesSet).sort();
+    var tabs = [["cellars", _T("cellars")], ["compact", _T("compact")], ["list", _T("all_bottles")], ["stats", _T("stats")]].map(function (v) {
+      var on = view === v[0];
+      // "All Bottles" becomes "Bottles" where room is short.
+      var label = v[0] === "list"
+        ? '<span class="tab-long">' + esc(v[1]) + '</span><span class="tab-short">' + esc(_T("find_tab_bottles")) + "</span>"
+        : esc(v[1]);
+      return '<button class="seg-btn' + (on ? " active" : "") + '" type="button" role="tab" id="wcm-tab-' + v[0] + '" aria-selected="' + on + '"' +
+        ' aria-controls="wcm-view" tabindex="' + (on ? "0" : "-1") + '" data-view="' + v[0] + '">' + label + "</button>";
+    }).join("");
 
-    var views = [
-      { key: "cellars", label: self._t("cellars") },
-      { key: "compact", label: self._t("compact") },
-      { key: "list", label: self._t("all_bottles") },
-      { key: "stats", label: self._t("stats") }
+    var capacity = this._cellarCapacity();
+    var total = (data.bottles || []).length;
+    var cleanup = esc(_T("cleanup_btn"));
+    var html = [
+      '<div class="toolbar" data-toolbar>',
+      '<div class="tb-row">',
+      '<div class="seg" role="tablist" aria-label="' + esc(_T("find_views_label")) + '">' + tabs + "</div>",
+      // Each part keeps its number and words together; a narrow row breaks
+      // between the two parts only.
+      '<span class="tb-inv"><span>' + _TN("list_title", total, { n: "<strong>" + total + "</strong>" }) + '</span><i aria-hidden="true"></i><span>' +
+        _TN("stats_free", Math.max(0, capacity - total), { n: "<strong>" + Math.max(0, capacity - total) + "</strong>" }) + "</span></span>",
+      '<div class="tb-actions">',
+      '<button class="btn tb-quiet" type="button" data-open-cleanup-tool title="' + cleanup + '">' + _WCM_ICONS.sparkle + '<span class="tb-lbl">' + cleanup + "</span></button>",
+      '<button class="btn tb-outline" type="button" data-add-cellar aria-label="' + esc(_T("builder_title_new")) + '" title="' + esc(_T("builder_title_new")) + '">' +
+        _WCM_ICONS.cabinetPlus + '<span class="tb-lbl">' + esc(_T("add_cellar_short").replace(/^\+\s*/, "")) + "</span></button>",
+      '<button class="btn primary" type="button" data-add-bottle title="' + esc(_T("sheet_add_title")) + '">' + _WCM_ICONS.plus +
+        '<span class="tb-lbl">' + esc(_T("add_bottle_short").replace(/^\+\s*/, "")) + "</span></button>",
+      "</div>",
+      "</div>"
     ];
-    var types = [
-      ["red", "red"], ["white", "white"], ["rosé", "rose"], ["sparkling", "sparkling"],
-      ["orange", "orange"], ["sweet", "sweet"], ["other", "other"]
-    ];
-
-    function select(attr, active, optionsHtml) {
-      return '<span class="select-wrap"><select ' + attr + (active ? ' class="filter-active"' : "") + ">" + optionsHtml + "</select></span>";
+    if (this._toolbarNotice) {
+      html.push('<div class="toolbar-notice" role="status"><span>' + esc(this._toolbarNotice) + '</span><button class="icon-btn" type="button" data-dismiss-notice title="' +
+        esc(_T("close")) + '" aria-label="' + esc(_T("close")) + '">' + _WCM_ICONS.close + "</button></div>");
     }
 
-    var searchPlaceholder = self._escape(_T("search_placeholder"));
-    var filters = this._view === "stats" ? "" : [
-      '<div class="filters">',
-      '  <label class="search">' + _WCM_ICONS.search + '<input type="search" data-search enterkeyhint="search" aria-keyshortcuts="/" placeholder="' + searchPlaceholder + '" aria-label="' + searchPlaceholder + '" value="' + this._escape(this._search || "") + '"></label>',
-      select("data-age-filter", !!this._filterReady,
-        '<option value=""' + (!this._filterReady ? " selected" : "") + ">" + _T("all_ages") + "</option>" +
-        '<option value="ready"' + (this._filterReady === "ready" || this._filterReady === true ? " selected" : "") + ">" + self._t("ready_to_drink") + "</option>" +
-        '<option value="drink_now"' + (this._filterReady === "drink_now" ? " selected" : "") + ">" + _T("drink_now") + "</option>"),
-      select("data-type-filter", !!this._filterType,
-        '<option value="">' + self._t("all_types") + "</option>" +
-        types.map(function (t) {
-          return '<option value="' + t[0] + '"' + (self._filterType === t[0] ? " selected" : "") + ">" + _T(t[1]) + "</option>";
-        }).join("")),
-      select("data-country-filter", !!this._filterCountry,
-        '<option value="">' + self._t("all_countries") + "</option>" +
-        uniqueCountries.map(function (c) {
-          return '<option value="' + self._escape(c) + '"' + (self._filterCountry === c ? " selected" : "") + ">" + self._escape(c) + "</option>";
-        }).join("")),
-      // Shown (and hidden again) live by _applyFiltersInPlace.
-      '  <button class="btn ghost" type="button" data-clear-filters' + (this._hasActiveFilters() ? "" : " hidden") + ">" + _WCM_ICONS.close + "<span>" + self._escape(_T("clear_filters")) + "</span></button>",
-      "</div>"
-    ].join("");
+    if (finding) {
+      var model = this._filterModel();
+      var q = this._search || "";
+      var open = !!this._filterPanelOpen;
+      var where = this._whereStripHtml(model);
+      var phone = typeof window !== "undefined" && window.innerWidth <= 600;
+      html.push(
+        '<div class="tb-find-row">',
+        '<div class="tb-find">',
+        '<label class="tb-search' + (q ? " has-value" : "") + '">' + _WCM_ICONS.search +
+          '<input type="search" data-search enterkeyhint="search" autocomplete="off" autocapitalize="off" spellcheck="false" aria-keyshortcuts="/"' +
+          ' placeholder="' + esc(_T(phone ? "find_placeholder_short" : "find_placeholder")) + '" aria-label="' + esc(_T("find_search_label")) + '" value="' + esc(q) + '">' +
+          '<kbd class="tb-kbd" aria-hidden="true">/</kbd>' +
+          '<button class="tb-x" type="button" data-find-clear="search" tabindex="-1" aria-label="' + esc(_T("find_clear_search")) + '">' + _WCM_ICONS.close + "</button>" +
+        "</label>",
+        '<button class="tb-filter-btn" type="button" data-filter-toggle aria-controls="wcm-filters" aria-expanded="' + open + '" aria-label="' + esc(this._filtersButtonLabel()) + '">' +
+          _WCM_ICONS.tune + '<span class="tb-lbl">' + esc(_T("find_filters")) + '</span><span class="tb-badge" data-filter-count aria-hidden="true">' +
+          (this._facetCount(["type", "country", "cellar"]) || "") + "</span></button>",
+        "</div>",
+        '<div class="tb-facets" data-facets>' + this._renderSummary() + "</div>",
+        "</div>",
+        '<div class="fp-scrim" data-filter-scrim hidden></div>',
+        '<div class="tb-panel" id="wcm-filters" data-filter-panel role="region" aria-label="' + esc(_T("find_filters")) + '"' + (open ? "" : " hidden") + ">" +
+          (open ? this._renderFilterPanel() : "") + "</div>",
+        '<div class="tb-where" data-where-strip role="region" aria-label="' + esc(_T("find_matches_label")) + '"' + (where ? "" : " hidden") + ">" + where + "</div>"
+      );
+    }
 
-    var showSummary = this._view === "cellars" || this._view === "compact";
-
-    return [
-      '<div class="toolbar">',
-      '  <div class="toolbar-row">',
-      '    <div class="seg" role="tablist">' + views.map(function (v) {
-             var active = self._view === v.key;
-             return '<button class="seg-btn' + (active ? " active" : "") + '" type="button" role="tab" aria-selected="' + active + '" data-view="' + v.key + '">' + v.label + "</button>";
-           }).join("") + "</div>",
-      '    <span class="toolbar-spacer"></span>',
-      '    <button class="btn ghost" type="button" data-open-cleanup-tool>' + _WCM_ICONS.sparkle + "<span>" + self._t("cleanup_btn") + "</span></button>",
-      '    <button class="btn" type="button" data-add-cellar>' + _WCM_ICONS.plus + "<span>" + self._escape(_T("add_cellar_short").replace(/^\+\s*/, "")) + "</span></button>",
-      '    <button class="btn primary" type="button" data-add-bottle>' + _WCM_ICONS.plus + "<span>" + self._escape(_T("add_bottle_short").replace(/^\+\s*/, "")) + "</span></button>",
-      "  </div>",
-      this._toolbarNotice
-        ? '<div class="toolbar-notice" role="status"><span>' + self._escape(this._toolbarNotice) + '</span><button class="icon-btn" type="button" data-dismiss-notice title="' + self._escape(_T("close")) + '" aria-label="' + self._escape(_T("close")) + '">' + _WCM_ICONS.close + "</button></div>"
-        : "",
-      filters,
-      showSummary ? this._renderSummary(data) : "",
-      "</div>"
-    ].join("");
+    if (this._hasCopiedBottle()) {
+      var cancelLabel = esc(_T("cancel"));
+      html.push('<div class="paste-row"><span class="paste-banner"><span>' + esc(_T("bottle_copied_to_memory")) + '</span><button class="icon-btn" type="button" data-cancel-paste title="' +
+        cancelLabel + '" aria-label="' + cancelLabel + '">' + _WCM_ICONS.close + "</button></span></div>");
+    }
+    // The number of matches, read out once typing pauses (_announceMatches).
+    html.push('<span class="sr-only" role="status" aria-live="polite" data-find-live></span>', "</div>");
+    return html.join("");
   }
 
-  // Inventory line under the filters: totals plus a legend of the aging colors
-  // (with counts), so the rings and badges on the bottles explain themselves.
-  _renderSummary(data) {
+  _filtersButtonLabel() {
+    var n = this._facetCount(["type", "country", "cellar"]);
+    return n ? _TN("find_filters_n", n) : _T("find_filters");
+  }
+
+  // The status chips beside the search: the legend of the glyphs drawn on
+  // the bottles, each with how many bottles it would show, and the fastest
+  // filter (press one or several). Two presets come first: Drink now (At
+  // peak and Past peak) and Ready to drink (Ready and At peak).
+  // Then the type, country and cellar filters in use, as tokens that remove
+  // themselves, and Clear all outside the scrolling row, always in reach.
+  _renderSummary() {
     var self = this;
-    var bottles = (data && data.bottles) || [];
-    var counts = { young: 0, ready: 0, peak: 0, past: 0 };
-    var matches = 0;
-    bottles.forEach(function (b) {
-      var status = self._agingStatus(b);
-      if (counts[status] !== undefined) counts[status]++;
-      if (self._bottleMatchesFilters(b)) matches++;
+    var model = this._filterModel();
+    var facets = this._facets;
+    function esc(value) { return self._escape(value); }
+    var html = [
+      '<div class="tb-chips x-fade" data-chips>',
+      '<div class="tb-group" role="group" aria-label="' + esc(_T("find_status_group")) + '">',
+      this._statusChip("drink_now", model, ""),
+      this._statusChip("ready_to_drink", model, ""),
+      '<span class="tb-sep" aria-hidden="true"></span>'
+    ];
+    ["young", "ready", "peak", "past", "none"].forEach(function (status) {
+      if (status === "none" && !model.present.status.none && !facets.status.has("none")) return;
+      html.push(self._statusChip(status, model, ""));
     });
+    html.push("</div>");
 
-    var capacity = 0;
-    ((data && data.cellars) || []).forEach(function (c) {
-      (c.shelves || []).forEach(function (s) {
-        capacity += Number(s.capacity_front || 0) + Number(s.capacity_back || 0);
+    // The panel shows these itself while it is open.
+    var tokens = [];
+    var token = function (name, value, label, lead) {
+      tokens.push('<button type="button" class="fchip token" data-facet="' + name + '" data-value="' + esc(value) + '" data-key="tok:' + name + ":" + esc(value) + '"' +
+          ' aria-label="' + esc(_T("find_remove", { x: label })) + '">' + lead + '<span class="fchip-l">' + esc(label) + '</span><span class="x" aria-hidden="true">' + _WCM_ICONS.close + "</span></button>");
+    };
+    if (!this._filterPanelOpen) {
+      facets.type.forEach(function (type) {
+        token("type", type, self._wineTypeLabel(type), '<span class="fp-swatch" style="--type:' + self._wineSurfaceColor(type) + '"></span>');
       });
-    });
-
-    var cancelLabel = self._escape(_T("cancel"));
-    return [
-      '<div class="summary" aria-live="polite">',
-      "<span>" + _T("bottles_count", { n: "<strong>" + bottles.length + "</strong>" }) + "</span>",
-      "<span>" + _T("free_slots", { n: "<strong>" + Math.max(0, capacity - bottles.length) + "</strong>" }) + "</span>",
-      ["young", "ready", "peak", "past"].map(function (status) {
-        return '<span class="legend-item">' + self._bottleGlyph(status) +
-          self._escape(self._agingStatusLabel(status)) + " <strong>" + counts[status] + "</strong></span>";
-      }).join(""),
-      this._hasActiveFilters() ? '<span class="summary-match' + (matches ? "" : " none") + '">' + self._escape(this._matchSummaryText(matches)) + "</span>" : "",
-      this._hasCopiedBottle()
-        ? '<span class="paste-banner"><span>' + self._escape(_T("bottle_copied_to_memory")) + '</span><button class="icon-btn" type="button" data-cancel-paste title="' + cancelLabel + '" aria-label="' + cancelLabel + '">' + _WCM_ICONS.close + "</button></span>"
-        : "",
-      "</div>"
-    ].join("");
+      facets.country.forEach(function (key) {
+        token("country", key, model.countryLabel[key] || key, "");
+      });
+      facets.cellar.forEach(function (id) {
+        var cellar = self._cellarById(id);
+        var color = cellar && self._safeColor(cellar.bg_color);
+        token("cellar", id, cellar ? (cellar.name || _T("cellar")) : _T("unknown_cellar"), '<span class="fp-cdot"' + (color ? ' style="--cellar:' + color + '"' : "") + "></span>");
+      });
+      if (tokens.length) html.push('<span class="tb-sep" aria-hidden="true"></span>' + tokens.join(""));
+    }
+    html.push("</div>");
+    html.push('<button type="button" class="tb-clear" data-find-clear="all" data-key="clear"' + (model.filtering ? "" : " hidden") + ">" + esc(_T("find_clear_all")) + "</button>");
+    return html.join("");
   }
 
-  _matchSummaryText(matches) {
-    return matches ? matches + _T("bottles_found_suffix") : _T("search_no_match");
+  // One status chip, or a preset of statuses ("drink_now", "ready_to_drink";
+  // pressed when exactly its statuses are on). keyPrefix tells the panel's
+  // chips from the toolbar's, to give focus back after a repaint.
+  _statusChip(status, model, keyPrefix) {
+    var facets = this._facets;
+    var preset = _WCM_STATUS_PRESETS[status];
+    var n;
+    var pressed;
+    var label;
+    var glyph;
+    var title = "";
+    if (preset) {
+      n = preset.reduce(function (sum, s) { return sum + (model.counts.status[s] || 0); }, 0);
+      pressed = facets.status.size === preset.length && preset.every(function (s) { return facets.status.has(s); });
+      label = _T(status);
+      glyph = '<i class="bt-glyph ' + (status === "drink_now" ? "is-soon" : "is-drinkable") + '" aria-hidden="true">' + _WCM_ICONS.glass + "</i>";
+      title = _T(status === "drink_now" ? "find_drink_now_hint" : "find_ready_to_drink_hint");
+    } else {
+      n = model.counts.status[status] || 0;
+      pressed = facets.status.has(status);
+      label = status === "none" ? _T("bt_no_window") : this._agingStatusLabel(status);
+      glyph = this._bottleGlyph(status);
+    }
+    var zero = !n && !pressed;
+    return '<button type="button" class="fchip' + (zero ? " is-zero" : "") + '" data-facet="status" data-value="' + status + '" data-key="' + keyPrefix + "status:" + status + '"' +
+      ' aria-pressed="' + pressed + '"' + (zero ? ' aria-disabled="true"' : "") + (title ? ' title="' + this._escape(title) + '"' : "") + ">" +
+      glyph + '<span class="fchip-l">' + this._escape(label) + '</span><span class="n">' + n + "</span></button>";
+  }
+
+  // The Filters panel: wine types with their colors, countries (most bottles
+  // first), cellars; on phones also the status chips, with Clear all at the
+  // top and "Show N bottles" at the bottom of the sheet.
+  _renderFilterPanel() {
+    var self = this;
+    var model = this._filterModel();
+    var facets = this._facets;
+    function esc(value) { return self._escape(value); }
+    function chip(name, value, label, n, lead) {
+      var pressed = facets[name].has(value);
+      var zero = !n && !pressed;
+      return '<button type="button" class="fchip' + (lead ? "" : " plain") + (zero ? " is-zero" : "") + '" data-facet="' + name + '" data-value="' + esc(value) + '"' +
+        ' data-key="p:' + name + ":" + esc(value) + '" aria-pressed="' + pressed + '"' + (zero ? ' aria-disabled="true"' : "") + ">" +
+        (lead || "") + '<span class="fchip-l">' + esc(label) + '</span><span class="n">' + (n || 0) + "</span></button>";
+    }
+    function group(id, label, chips, extra) {
+      if (!chips.length) return "";
+      return '<div class="fp-group' + (extra || "") + '" role="group" aria-labelledby="wcm-fp-' + id + '"><div class="fp-label" id="wcm-fp-' + id + '">' + esc(label) + "</div>" +
+        '<div class="fp-chips">' + chips.join("") + "</div></div>";
+    }
+    var status = ["drink_now", "ready_to_drink", "young", "ready", "peak", "past", "none"].filter(function (s) {
+      return s !== "none" || model.present.status.none || facets.status.has("none");
+    }).map(function (s) { return self._statusChip(s, model, "p:"); });
+    var types = _WCM_SHEET_TYPES.filter(function (t) { return model.present.type[t] || facets.type.has(t); }).map(function (t) {
+      return chip("type", t, self._wineTypeLabel(t), model.counts.type[t], '<span class="fp-swatch" style="--type:' + self._wineSurfaceColor(t) + '"></span>');
+    });
+    var countryKeys = Object.keys(model.present.country);
+    facets.country.forEach(function (key) { if (countryKeys.indexOf(key) === -1) countryKeys.push(key); });
+    var countries = countryKeys.sort(function (a, b) {
+      return ((model.present.country[b] || 0) - (model.present.country[a] || 0)) || String(model.countryLabel[a] || a).localeCompare(String(model.countryLabel[b] || b));
+    }).map(function (key) { return chip("country", key, model.countryLabel[key] || key, model.counts.country[key], ""); });
+    var cellars = this._sortedCellars().map(function (c) {
+      var color = self._safeColor(c.bg_color);
+      return chip("cellar", String(c.id), c.name || _T("cellar"), model.counts.cellar[String(c.id)], '<span class="fp-cdot"' + (color ? ' style="--cellar:' + color + '"' : "") + "></span>");
+    });
+    var shown = model.filtering ? model.hits.length : model.total;
+    return '<div class="fp-head"><span class="fp-grip" aria-hidden="true"></span><h2 class="fp-title" id="wcm-fp-title" tabindex="-1">' + esc(_T("find_filters")) + "</h2>" +
+      (model.filtering ? '<button type="button" class="tb-clear" data-find-clear="all" data-key="p:clear">' + esc(_T("find_clear_all")) + "</button>" : "") + "</div>" +
+      '<div class="fp-body">' +
+      group("status", _T("find_status_group"), status, " fp-status") +
+      group("type", _T("find_type_group"), types) +
+      group("country", _T("find_country_group"), countries) +
+      (cellars.length > 1 ? group("cellar", _T("find_cellar_group"), cellars) : "") +
+      "</div>" +
+      '<div class="fp-foot"><button type="button" class="btn primary" data-filter-close data-key="p:done">' + esc(_TN("find_show", shown)) + "</button></div>";
+  }
+
+  // Where a bottle stands, as a result chip names it: "Kitchen › Reds
+  // (shelf 3) › Back #1", with "Shelf 3" in place of the shelf on phones;
+  // text is the same place in words, for screen readers.
+  _bottlePlace(bottle) {
+    var self = this;
+    var cellar = this._cellarById(bottle.cellar_id);
+    var shelves = cellar ? this._getSortedShelves(cellar) : [];
+    var n = 0;
+    var shelf = null;
+    for (var i = 0; i < shelves.length; i++) {
+      if (String(shelves[i].id) === String(bottle.shelf_id)) {
+        n = i + 1;
+        shelf = shelves[i];
+        break;
+      }
+    }
+    var numbered = n ? _T("shelf_n", { n: n }) : (shelf && shelf.name) || _T("shelf");
+    var full = numbered;
+    if (shelf && shelf.name) {
+      full = n && this._foldSearchText(shelf.name) !== this._foldSearchText(numbered) ? _T("find_crumb_shelf", { name: shelf.name, n: n }) : shelf.name;
+    }
+    var pos = bottle.position || "—";
+    var twoRows = !!shelf && Number(shelf.capacity_front || 0) > 0 && Number(shelf.capacity_back || 0) > 0;
+    var slot = twoRows ? _T(bottle.lane === "back" ? "find_crumb_back" : "find_crumb_front", { pos: pos }) : _T("find_crumb_pos", { pos: pos });
+    // The "›" between the parts is drawn by CSS (.cs-part::before), with a
+    // break opportunity after it where the text may wrap (a narrow table);
+    // result chips keep the place on one line.
+    function esc(value) { return self._escape(value); }
+    // Short parts ("Shelf 4", "Back #1") never break inside.
+    function keep(text) { return String(text).replace(/ /g, "\u00a0"); }
+    return {
+      html: "<b>" + esc(cellar ? (cellar.name || _T("cellar")) : _T("unknown_cellar")) + "</b>" +
+        '<span class="cs-part cs-full">' + esc(full) + '</span><span class="cs-part cs-short">' + esc(keep(numbered)) + '</span><span class="cs-part">' + esc(keep(slot)) + "</span>",
+      text: this._slotLocationText(cellar, shelf ? this._shelfRef(shelf, n) : _T("shelf"), bottle.lane, pos)
+    };
+  }
+
+  // One result chip: the bottle drawn in its type color, its name and
+  // vintage, where it stands and its status glyph.
+  _whereChip(bottle, current, tabbable) {
+    var status = this._agingStatus(bottle);
+    var name = bottle.wine_name || _T("unnamed_wine");
+    var place = this._bottlePlace(bottle);
+    var label = [name + (bottle.vintage ? " " + bottle.vintage : ""), place.text, status !== "none" ? this._agingStatusLabel(status) : ""].filter(Boolean).join(", ");
+    return '<button type="button" class="wchip' + (current ? " is-current" : "") + '" data-goto="' + this._escape(bottle.id) + '" data-key="goto:' + this._escape(bottle.id) + '"' +
+      ' tabindex="' + (tabbable ? "0" : "-1") + '"' + (current ? ' aria-current="true"' : "") +
+      ' aria-label="' + this._escape(label) + '" title="' + this._escape(label) + '" style="--type:' + this._wineSurfaceColor(bottle.wine_type || "unset") + '">' +
+      this._bottleArtSvg(bottle, { variant: "tag" }) +
+      '<span class="wchip-t"><span class="wchip-name">' + this._escape(name) + (bottle.vintage ? ' <span class="wchip-vin">' + this._escape(bottle.vintage) + "</span>" : "") + "</span>" +
+      '<span class="wchip-crumb">' + place.html + "</span></span>" +
+      (status !== "none" ? this._bottleGlyph(status) : "") +
+      "</button>";
+  }
+
+  // "7 matches", the number set apart.
+  _matchCountHtml(n) {
+    return this._escape(_TN("find_matches", n, { n: "\u0001" })).replace("\u0001", '<span class="wh-n">' + n + "</span>");
+  }
+
+  // The strip under the toolbar while a search or filter is on: how many
+  // bottles match and in which cellars, then the first of them as chips
+  // (click or Enter: go to the bottle; arrow keys move along); with no
+  // match, the empty state. Not in All Bottles, which is the result itself.
+  // "" hides the strip.
+  _whereStripHtml(model) {
+    var self = this;
+    var view = this._view || "cellars";
+    if (!model.filtering || view === "stats") return "";
+    // All Bottles is the result itself: its title says how many.
+    if (view === "list") return "";
+    var hits = model.hits;
+    var count = this._matchCountHtml(hits.length);
+    if (!hits.length) return this._renderNoResults();
+    var cellarIds = [];
+    hits.forEach(function (b) { if (cellarIds.indexOf(b.cellar_id) === -1) cellarIds.push(b.cellar_id); });
+    var where = cellarIds.length === 1
+      ? _T("find_in_cellar", { name: (this._cellarById(cellarIds[0]) || {}).name || _T("cellar") })
+      : _TN("find_in_cellars", cellarIds.length);
+    var cursor = this._matchCursor;
+    var shown = hits.slice(0, _WCM_WHERE_CHIPS);
+    var tabbable = cursor >= 0 && cursor < shown.length ? cursor : 0;
+    var chips = shown.map(function (b, i) { return self._whereChip(b, i === cursor, i === tabbable); }).join("");
+    if (hits.length > shown.length) {
+      chips += '<button type="button" class="wmore" data-find-more data-key="more" tabindex="-1" title="' + this._escape(_T("find_more_label", { n: hits.length })) + '"' +
+        ' aria-label="' + this._escape(_T("find_more_label", { n: hits.length })) + '">' + this._escape(_T("find_more_n", { n: hits.length - shown.length })) + "</button>";
+    }
+    return '<div class="wh-head"><span class="wh-count">' + count + '</span><span class="wh-sub">' + this._escape(where) + "</span></div>" +
+      '<div class="wh-scroll x-fade" data-where-chips>' + chips + "</div>" +
+      (hits.length > 1 ? '<span class="wh-hint" aria-hidden="true"><kbd>↵</kbd>' + this._escape(_T("find_step_hint")) + "</span>" : "");
+  }
+
+  // Nothing passes the filters: says what was looked for, offers the
+  // closest spellings found in the cellar ("Did you mean Barolo?") and a
+  // way back (Clear search, Clear filters).
+  _renderNoResults() {
+    var self = this;
+    function esc(value) { return self._escape(value); }
+    var q = String(this._search || "").trim();
+    var title = q ? _T("find_no_results_q", { q: q.length > 40 ? q.slice(0, 40) + "…" : q }) : _T("find_no_results_f");
+    var sub = "";
+    // The words find bottles, only not with the filters on: say so, rather
+    // than suggest a spelling.
+    var terms = q && this._facetCount() ? this._searchTerms() : [];
+    var words = terms.length ? ((this._data && this._data.bottles) || []).filter(function (b) { return self._matchesTerms(b, terms); }).length : 0;
+    if (words) {
+      sub = esc(_TN("find_words_unfiltered", words, { q: q.length > 40 ? q.slice(0, 40) + "…" : q }));
+    } else if (q) {
+      var suggestions = this._suggestSearch();
+      sub = suggestions.length
+        ? esc(_T("find_did_you_mean", { x: "\u0001" })).replace("\u0001", this._orList(suggestions.map(function (s) {
+            return '<button type="button" class="find-suggest" data-find-suggest="' + esc(s) + '">' + esc(s) + "</button>";
+          })))
+        : esc(_T("find_try_other"));
+    }
+    var actions = (q ? '<button type="button" class="btn small-btn" data-find-clear="search" data-key="empty:search">' + _WCM_ICONS.close + "<span>" + esc(_T("find_clear_search")) + "</span></button>" : "") +
+      (this._facetCount() ? '<button type="button" class="btn small-btn" data-find-clear="filters" data-key="empty:filters">' + _WCM_ICONS.close + "<span>" + esc(_T("clear_filters")) + "</span></button>" : "");
+    return '<div class="find-empty"><span class="find-empty-ico" aria-hidden="true">' + _WCM_ICONS.searchOff + "</span>" +
+      '<div class="find-empty-t"><div class="find-empty-title">' + esc(title) + "</div>" + (sub ? '<div class="find-empty-sub">' + sub + "</div>" : "") + "</div>" +
+      '<div class="find-empty-actions">' + actions + "</div></div>";
+  }
+
+  // Pieces of markup as "A, B or C" in the card's language.
+  _orList(parts) {
+    if (parts.length < 2) return parts.join("");
+    try {
+      var text = new Intl.ListFormat(_wcmLang, { type: "disjunction" }).format(parts.map(function (p, i) { return "\u0002" + i + "\u0003"; }));
+      return this._escape(text).replace(/\u0002(\d+)\u0003/g, function (m, i) { return parts[Number(i)]; });
+    } catch (err) {
+      return parts.join(", ");
+    }
   }
 
   // Applies the current search and filters to the page already on screen
@@ -5581,72 +7207,188 @@ class WineCellarCard extends HTMLElement {
   // same match as last time.
   _applyFiltersInPlace(opts) {
     opts = opts || {};
-    var self = this;
     var root = this.shadowRoot;
     if (!root || !this._data) return;
+    var model = this._filterModel();
+    var filtering = model.filtering;
 
-    var filtering = this._hasActiveFilters();
-    var matchIds = {};
-    var matches = 0;
-    (this._data.bottles || []).forEach(function (b) {
-      if (self._bottleMatchesFilters(b)) {
-        matchIds[b.id] = true;
-        matches++;
-      }
-    });
-
-    // Toolbar: the Clear filters button and the match count.
-    var clearBtn = root.querySelector(".toolbar [data-clear-filters]");
-    if (clearBtn) clearBtn.hidden = !filtering;
-    var summary = root.querySelector(".toolbar .summary");
-    if (summary) {
-      var pill = summary.querySelector(".summary-match");
-      if (filtering) {
-        if (!pill) {
-          pill = document.createElement("span");
-          pill.className = "summary-match";
-          summary.insertBefore(pill, summary.querySelector(".paste-banner"));
-        }
-        // Only touched when it changes, so screen readers (the summary is a
-        // polite live region) hear each new count once.
-        var text = this._matchSummaryText(matches);
-        if (pill.textContent !== text) pill.textContent = text;
-        pill.classList.toggle("none", !matches);
-      } else if (pill) {
-        pill.remove();
-      }
+    // A new result set starts Enter-stepping from its first match.
+    var signature = (filtering ? "f:" : "") + model.hits.map(function (b) { return b.id; }).join(",");
+    if (signature !== this._matchSignature) {
+      this._matchSignature = signature;
+      this._matchCursor = -1;
     }
 
-    // Cellars and Compact: the same classes a full render would set.
+    // Toolbar: chips, the Filters count and panel, the result strip; never
+    // the search box itself.
+    this._paintFindBar(model);
+
+    // Cellars and Compact: the same classes and labels a full render sets.
     var grid = root.querySelector(".main-scroll-content .cellars-grid");
     if (grid) {
       grid.classList.toggle("filtering", filtering);
+      var yes = " · " + _T("find_state_match");
+      var no = " · " + _T("find_state_other");
       grid.querySelectorAll(".slot.filled[data-edit-bottle]").forEach(function (el) {
-        var ok = !!matchIds[el.getAttribute("data-edit-bottle")];
+        var ok = !filtering || model.ids.has(el.getAttribute("data-edit-bottle"));
+        var state = filtering ? (ok ? 1 : 2) : 0;
+        if (el._findState === state) return;
+        el._findState = state;
         el.classList.toggle("dimmed", !ok);
         el.classList.toggle("match", filtering && ok);
+        var label = el.getAttribute("aria-label") || "";
+        var base = label.endsWith(yes) ? label.slice(0, -yes.length) : (label.endsWith(no) ? label.slice(0, -no.length) : label);
+        var next = filtering ? base + (ok ? yes : no) : base;
+        if (next !== label) {
+          el.setAttribute("aria-label", next);
+          if (el.hasAttribute("title")) el.setAttribute("title", next);
+        }
       });
+      this._paintMatchCounts(grid, model);
       // Shelves with a back-row match pull out, and wide cabinets slide to
       // their first match, before the first match is brought into view.
       this._syncDepth();
       if (opts.locate) this._scrollToFirstMatch(!!opts.forceLocate);
     }
 
-    // All Bottles: only the table under the toolbar is redrawn, and only
-    // when its rows change, so the search box itself is never replaced.
-    if (this._view === "list") {
-      var main = root.querySelector(".main-scroll-content");
-      var signature = (filtering ? "f:" : "") + Object.keys(matchIds).join(",");
-      if (main && signature !== this._listSignature) {
-        this._listSignature = signature;
-        main.innerHTML = this._renderList(this._data);
-        this._bindListView(main, this._data);
+    // All Bottles: rows that do not match hide, counts follow.
+    if (this._view === "list") this._paintList(model);
+    this._announceMatches(model);
+  }
+
+  // The toolbar's live parts: status chips and tokens, the Filters count,
+  // the open panel and the result strip. Every read (focus, scroll) comes
+  // before the first write, so a keystroke costs no extra layout.
+  _paintFindBar(model) {
+    var root = this.shadowRoot;
+    var bar = root && root.querySelector(".toolbar");
+    if (!bar) return;
+    var swaps = [];
+    function swap(el, html, scrollSel) {
+      if (el && el._html !== html) swaps.push({ el: el, html: html, scrollSel: scrollSel });
+    }
+    swap(bar.querySelector("[data-facets]"), this._renderSummary(), "[data-chips]");
+    if (this._filterPanelOpen) swap(bar.querySelector("[data-filter-panel]"), this._renderFilterPanel(), ".fp-body");
+    var where = bar.querySelector("[data-where-strip]");
+    var whereHtml = where ? this._whereStripHtml(model) : "";
+    swap(where, whereHtml, "[data-where-chips]");
+
+    var active = root.activeElement;
+    swaps.forEach(function (job) {
+      var scroller = job.el.querySelector(job.scrollSel);
+      job.left = scroller ? scroller.scrollLeft : 0;
+      job.top = scroller ? scroller.scrollTop : 0;
+      job.key = active && job.el.contains(active) ? (active.getAttribute("data-key") || "") : null;
+    });
+
+    if (where) where.hidden = !whereHtml;
+    var badge = bar.querySelector("[data-filter-count]");
+    var count = String(this._facetCount(["type", "country", "cellar"]) || "");
+    if (badge && badge.textContent !== count) badge.textContent = count;
+    var toggle = bar.querySelector("[data-filter-toggle]");
+    if (toggle) {
+      toggle.setAttribute("aria-label", this._filtersButtonLabel());
+      toggle.setAttribute("aria-expanded", this._filterPanelOpen ? "true" : "false");
+    }
+    var self = this;
+    swaps.forEach(function (job) { self._swapHtml(job); });
+    this._refitToolbarSoon();
+  }
+
+  // Replaces an element's markup (job from _paintFindBar), puts back the
+  // scroll of its scroller and gives focus back to the control that had it
+  // (same data-key).
+  _swapHtml(job) {
+    var el = job.el;
+    el.innerHTML = job.html;
+    el._html = job.html;
+    if (job.left || job.top) {
+      var scroller = el.querySelector(job.scrollSel);
+      if (scroller) {
+        scroller.scrollLeft = job.left;
+        scroller.scrollTop = job.top;
       }
     }
+    if (job.key === null) return;
+    var again = null;
+    if (job.key) {
+      el.querySelectorAll("[data-key]").forEach(function (candidate) {
+        if (!again && candidate.getAttribute("data-key") === job.key && !candidate.hidden) again = candidate;
+      });
+    }
+    // In the sheet, focus has to stay inside it.
+    if (!again && el.closest("[data-filter-panel]")) again = el.closest("[data-filter-panel]").querySelector(".fp-title");
+    if (again) again.focus({ preventScroll: true });
+  }
+
+  // The chips' edge fades and the search placeholder depend on the new
+  // layout: measured in the next frame, which lays the page out anyway.
+  _refitToolbarSoon() {
+    var self = this;
+    if (this._refitFrame) return;
+    this._refitFrame = requestAnimationFrame(function () {
+      self._refitFrame = 0;
+      self._layoutToolbar();
+    });
+  }
+
+  // Edge fades on a row that scrolls sideways, on the sides with more.
+  _updateFades(el) {
+    this._paintFades(el, el.scrollWidth - el.clientWidth, el.scrollLeft);
+  }
+
+  _paintFades(el, max, left) {
+    el.classList.toggle("more-l", max > 1 && left > 1);
+    el.classList.toggle("more-r", max > 1 && left < max - 1);
+  }
+
+  _hitsText(n) {
+    return n ? _TN("find_matches", n) : _T("find_no_match");
+  }
+
+  // Each cellar's match badge ("5 matches", "No match": that cellar fades)
+  // and each shelf's match count, on the page on screen.
+  _paintMatchCounts(grid, model) {
+    var self = this;
+    var filtering = model.filtering;
+    grid.querySelectorAll(".cellar[data-cellar-id]").forEach(function (section) {
+      var n = model.perCellar[section.getAttribute("data-cellar-id")] || 0;
+      section.classList.toggle("no-hits", filtering && !n);
+      var badge = section.querySelector(".cellar-hits");
+      if (!badge) return;
+      var text = self._hitsText(n);
+      if (badge.textContent !== text) badge.textContent = text;
+      badge.hidden = !filtering;
+      badge.classList.toggle("none", !n);
+    });
+    grid.querySelectorAll(".shelf[data-shelf-key]").forEach(function (shelf) {
+      var n = model.perShelf[shelf.getAttribute("data-shelf-key")] || 0;
+      shelf.classList.toggle("no-hits", filtering && !n);
+      var badge = shelf.querySelector(".shelf-hits");
+      if (!badge) return;
+      badge.hidden = !(filtering && n);
+      var text = String(n);
+      if (badge.firstChild && badge.firstChild.textContent !== text) {
+        badge.firstChild.textContent = text;
+        badge.lastChild.textContent = self._hitsText(n);
+      }
+    });
+  }
+
+  // The number of matches for screen readers, once typing pauses.
+  _announceMatches(model) {
+    var self = this;
+    var text = model.filtering ? (model.hits.length ? _TN("find_found", model.hits.length) : _T("find_found_none")) : "";
+    clearTimeout(this._liveTimer);
+    this._liveTimer = setTimeout(function () {
+      self._liveTimer = null;
+      var live = self.shadowRoot && self.shadowRoot.querySelector("[data-find-live]");
+      if (live && live.textContent !== text) live.textContent = text;
+    }, 700);
   }
 
   // A slot counts as on screen when it is entirely inside both its
-  // cabinet's visible width and the visible part of the scroll area.
+  // cabinet's visible width and the part of the screen the cellars show in.
   _isSlotOnScreen(el) {
     var box = el.getBoundingClientRect();
     var interior = el.closest(".interior");
@@ -5654,11 +7396,25 @@ class WineCellarCard extends HTMLElement {
       var ib = interior.getBoundingClientRect();
       if (box.left < ib.left - 1 || box.right > ib.right + 1) return false;
     }
-    var main = this.shadowRoot.querySelector(".main-scroll-content");
-    var mb = main ? main.getBoundingClientRect() : null;
-    var top = Math.max(0, mb ? mb.top : 0);
-    var bottom = Math.min(window.innerHeight, mb ? mb.bottom : window.innerHeight);
-    return box.top >= top - 1 && box.bottom <= bottom + 1;
+    var band = this._visibleBand();
+    return box.top >= band.top - 1 && box.bottom <= band.bottom + 1;
+  }
+
+  // The part of the screen the cellars show in, top and bottom: the card's
+  // own scroll area; or, where the page scrolls, the window under Home
+  // Assistant's header and under the toolbar while it is pinned there.
+  _visibleBand() {
+    var root = this.shadowRoot;
+    var main = root && root.querySelector(".main-scroll-content");
+    var mainScrolls = !!main && main.scrollHeight > main.clientHeight + 1 && getComputedStyle(main).overflowY !== "visible";
+    if (mainScrolls) {
+      var mb = main.getBoundingClientRect();
+      return { top: Math.max(0, mb.top), bottom: Math.min(window.innerHeight, mb.bottom), page: false };
+    }
+    var top = parseFloat(getComputedStyle(this).getPropertyValue("--header-height")) || 56;
+    var bar = root && root.querySelector(".toolbar");
+    if (bar && getComputedStyle(bar).position === "sticky") top = Math.max(top, bar.getBoundingClientRect().bottom);
+    return { top: top, bottom: window.innerHeight, page: true };
   }
 
   // Brings the first match into view when none is visible: vertically in the
@@ -5707,9 +7463,11 @@ class WineCellarCard extends HTMLElement {
 
     var box = first.getBoundingClientRect();
     if (!mainScrolls) {
-      // Narrow layout: the page scrolls rather than the card.
-      if (box.top < 0 || box.bottom > window.innerHeight) {
-        first.scrollIntoView({ block: "center", inline: "center", behavior: behavior });
+      // Narrow layout: the page scrolls rather than the card; the match goes
+      // to the middle of what the header and pinned toolbar leave free.
+      var band = this._visibleBand();
+      if (box.top < band.top || box.bottom > band.bottom) {
+        this._scrollIntoBand(first, band, "center", behavior);
         this._settleScrollOn(first);
         return;
       }
@@ -5775,16 +7533,25 @@ class WineCellarCard extends HTMLElement {
   _centerSlot(el) {
     var root = this.shadowRoot;
     var main = root && root.querySelector(".main-scroll-content");
-    var mainScrolls = !!main && main.scrollHeight > main.clientHeight + 1 && getComputedStyle(main).overflowY !== "visible";
     var box = el.getBoundingClientRect();
-    var mb = mainScrolls ? main.getBoundingClientRect() : null;
-    var top = Math.max(0, mb ? mb.top : 0);
-    var bottom = Math.min(window.innerHeight, mb ? mb.bottom : window.innerHeight);
+    var band = this._visibleBand();
+    var top = band.top;
+    var bottom = band.bottom;
     var margin = Math.max(16, (bottom - top - box.height) / 4);
     if (box.top >= top + margin && box.bottom <= bottom - margin) return;
     var behavior = this._prefersReducedMotion() ? "auto" : "smooth";
-    if (mainScrolls) main.scrollTo({ top: main.scrollTop + (box.top - top) - (bottom - top - box.height) / 2, behavior: behavior });
-    else el.scrollIntoView({ block: "center", inline: "nearest", behavior: behavior });
+    if (!band.page) main.scrollTo({ top: main.scrollTop + (box.top - top) - (bottom - top - box.height) / 2, behavior: behavior });
+    else this._scrollIntoBand(el, band, "nearest", behavior);
+  }
+
+  // scrollIntoView aimed at the free band (_visibleBand): where the page
+  // scrolls (whichever element scrolls it), a scroll margin as tall as what
+  // covers the top (header, pinned toolbar) centers the element in what is
+  // left.
+  _scrollIntoBand(el, band, inline, behavior) {
+    if (band.page) el.style.scrollMarginTop = Math.max(0, Math.round(band.top)) + "px";
+    el.scrollIntoView({ block: "center", inline: inline, behavior: behavior });
+    if (band.page) el.style.scrollMarginTop = "";
   }
 
   // Re-renders, then puts keyboard focus back on a toolbar control, since a
@@ -5797,73 +7564,405 @@ class WineCellarCard extends HTMLElement {
     });
   }
 
-  // Resets the search and every filter on the page already on screen.
-  _clearFilters() {
+  // Clears the search words ("search"), the facets ("filters") or both
+  // (the default), on the page already on screen.
+  _clearFilters(what) {
+    what = what || "all";
     var root = this.shadowRoot;
     if (this._searchTimer) {
       clearTimeout(this._searchTimer);
       this._searchTimer = null;
     }
-    this._search = "";
-    this._filterType = "";
-    this._filterCountry = "";
-    this._filterReady = false;
+    if (what !== "filters") this._search = "";
+    if (what !== "search") {
+      var facets = this._facets;
+      _WCM_FACETS.forEach(function (name) { facets[name].clear(); });
+    }
     this._lastLocatedId = null;
     if (this._locateTimer) {
       clearTimeout(this._locateTimer);
       this._locateTimer = null;
     }
-    if (!root) return;
-    var input = root.querySelector("[data-search]");
-    if (input) input.value = "";
-    root.querySelectorAll("[data-type-filter],[data-country-filter],[data-age-filter]").forEach(function (select) {
-      select.value = "";
-      select.classList.remove("filter-active");
-    });
+    var input = root && root.querySelector("[data-search]");
+    if (input && what !== "filters") {
+      input.value = "";
+      input.parentNode.classList.remove("has-value");
+    }
     this._applyFiltersInPlace();
   }
 
-  // Sorting, row clicks and Clear filters in the All Bottles table; also
-  // used after the table alone is redrawn by _applyFiltersInPlace.
-  _bindListView(container, data) {
+  // Searches for a suggested spelling ("Did you mean …").
+  _setSearch(value) {
+    var input = this.shadowRoot && this.shadowRoot.querySelector("[data-search]");
+    this._search = String(value || "");
+    if (input) {
+      input.value = this._search;
+      input.parentNode.classList.toggle("has-value", !!this._search);
+    }
+    this._applyFiltersInPlace({ locate: true });
+    if (input) input.focus({ preventScroll: true });
+  }
+
+  // Sets one facet's values ([] or "" clears it) and applies the result. The
+  // status facet also takes "drink_now" (At peak + Past peak) and
+  // "ready_to_drink" (Ready + At peak); countries may be spelled any way.
+  _setFacet(name, values) {
     var self = this;
-    container.querySelectorAll(".table-wrap th[data-sort]").forEach(function (th) {
-      th.onclick = function (e) {
-        e.preventDefault();
-        e.stopPropagation();
-        var clickedCol = th.getAttribute("data-sort");
-        if (self._sortColumn === clickedCol) {
-          self._sortOrder = self._sortOrder === "asc" ? "desc" : "asc";
-        } else {
-          self._sortColumn = clickedCol;
-          self._sortOrder = "asc";
+    var set = this._facets[name];
+    if (!set) return;
+    set.clear();
+    [].concat(values == null ? [] : values).forEach(function (value) {
+      if (value === "" || value == null) return;
+      if (name === "status" && _WCM_STATUS_PRESETS[value]) {
+        _WCM_STATUS_PRESETS[value].forEach(function (s) { set.add(s); });
+      } else {
+        set.add(self._facetInput(name, value));
+      }
+    });
+    this._applyFiltersInPlace({ locate: true });
+  }
+
+  _toggleFacet(name, value) {
+    var set = this._facets[name];
+    if (!set) return;
+    if (name === "status" && _WCM_STATUS_PRESETS[value]) {
+      // A preset replaces the statuses, or clears them when it is on.
+      var preset = _WCM_STATUS_PRESETS[value];
+      var on = set.size === preset.length && preset.every(function (s) { return set.has(s); });
+      set.clear();
+      if (!on) preset.forEach(function (s) { set.add(s); });
+    } else {
+      value = this._facetInput(name, value);
+      if (set.has(value)) set.delete(value);
+      else set.add(value);
+    }
+    this._applyFiltersInPlace({ locate: true });
+  }
+
+  _facetInput(name, value) {
+    if (name === "type") return this._typeKey(value);
+    if (name === "country") return this._countryKey(value);
+    return String(value);
+  }
+
+  // Enter / Shift+Enter in the search: the next or previous match, in the
+  // order the bottles stand in the cellars.
+  _stepMatch(dir) {
+    var view = this._view || "cellars";
+    if (view !== "cellars" && view !== "compact") return;
+    var hits = this._filterModel().hits;
+    if (!hits.length) return;
+    var n = hits.length;
+    var at = this._matchCursor < 0 ? (dir > 0 ? 0 : n - 1) : (this._matchCursor + dir + n) % n;
+    this._matchCursor = at;
+    this._gotoBottle(hits[at].id, {});
+  }
+
+  // After a bottle is brought into view: its result chip is the current one
+  // (and the one Tab reaches), scrolled into the strip's view.
+  _markWhereChip(id) {
+    var root = this.shadowRoot;
+    var hits = this._filterModel().hits;
+    for (var i = 0; i < hits.length; i++) {
+      if (String(hits[i].id) === String(id)) {
+        this._matchCursor = i;
+        break;
+      }
+    }
+    var strip = root && root.querySelector("[data-where-chips]");
+    if (!strip) return;
+    var current = null;
+    // A match past the chips shown makes "+N more" the current one.
+    var more = strip.querySelector("[data-find-more]");
+    var beyond = !!more && this._matchCursor >= _WCM_WHERE_CHIPS && String((hits[this._matchCursor] || {}).id) === String(id);
+    strip.querySelectorAll(".wchip,[data-find-more]").forEach(function (chip) {
+      var on = chip === more ? beyond : chip.getAttribute("data-goto") === String(id);
+      chip.classList.toggle("is-current", on);
+      if (on) chip.setAttribute("aria-current", "true");
+      else chip.removeAttribute("aria-current");
+      if (on) current = chip;
+    });
+    if (!current) return;
+    strip.querySelectorAll("[data-goto],[data-find-more]").forEach(function (el) { el.tabIndex = el === current ? 0 : -1; });
+    var left = current.offsetLeft;
+    var right = left + current.offsetWidth;
+    if (left < strip.scrollLeft || right > strip.scrollLeft + strip.clientWidth - 28) {
+      strip.scrollTo({ left: Math.max(0, left - 40), behavior: this._prefersReducedMotion() ? "auto" : "smooth" });
+    }
+  }
+
+  // Phones get the filters as a bottom sheet (see the small-screen styles).
+  _isFilterSheet() {
+    try {
+      return window.matchMedia("(max-width: 600px)").matches;
+    } catch (err) {
+      return false;
+    }
+  }
+
+  // Opens or closes the Filters panel: under the toolbar on wider screens, a
+  // modal bottom sheet on phones.
+  _setFilterPanel(open) {
+    var root = this.shadowRoot;
+    var bar = root && root.querySelector(".toolbar");
+    var panel = bar && bar.querySelector("[data-filter-panel]");
+    this._filterPanelOpen = !!open && !!panel;
+    if (!panel) return;
+    if (this._filterPanelOpen) {
+      var html = this._renderFilterPanel();
+      panel.innerHTML = html;
+      panel._html = html;
+    }
+    panel.hidden = !this._filterPanelOpen;
+    // The tokens under the search give way to the panel's own chips.
+    this._paintFindBar(this._filterModel());
+    this._syncFilterSheet(open ? "open" : "close");
+  }
+
+  // Keeps the panel's role in step with the screen: on phones it is a modal
+  // dialog (focus starts inside, Tab stays in it, the page behind is inert,
+  // Escape or a tap outside closes it and focus returns to Filters).
+  _syncFilterSheet(reason) {
+    var root = this.shadowRoot;
+    var bar = root && root.querySelector(".toolbar");
+    var panel = bar && bar.querySelector("[data-filter-panel]");
+    if (!panel) return;
+    var sheet = !!this._filterPanelOpen && this._isFilterSheet();
+    if (sheet) {
+      panel.setAttribute("role", "dialog");
+      panel.setAttribute("aria-modal", "true");
+      panel.setAttribute("aria-labelledby", "wcm-fp-title");
+      panel.removeAttribute("aria-label");
+    } else {
+      panel.setAttribute("role", "region");
+      panel.removeAttribute("aria-modal");
+      panel.removeAttribute("aria-labelledby");
+      panel.setAttribute("aria-label", _T("find_filters"));
+    }
+    var scrim = bar.querySelector("[data-filter-scrim]");
+    if (scrim) scrim.hidden = !sheet;
+    bar.classList.toggle("sheet-open", sheet);
+    var dialogOpen = !!this._topDialog();
+    Array.prototype.forEach.call(bar.children, function (el) {
+      if (el === panel || el === scrim || el.hasAttribute("data-find-live")) return;
+      if (sheet) el.setAttribute("inert", "");
+      else el.removeAttribute("inert");
+    });
+    var main = root.querySelector(".main-scroll-content");
+    if (main && !dialogOpen) {
+      if (sheet) main.setAttribute("inert", "");
+      else main.removeAttribute("inert");
+    }
+    var toggle = bar.querySelector("[data-filter-toggle]");
+    if (reason === "open" && sheet) {
+      var start = panel.querySelector(".fp-title");
+      if (start) start.focus({ preventScroll: true });
+    } else if (reason === "close" && toggle) {
+      var active = root.activeElement;
+      if (!active || !active.isConnected || panel.contains(active) || active === toggle) toggle.focus({ preventScroll: true });
+    }
+  }
+
+  // Clicks on the finding controls, wherever they are drawn (toolbar, result
+  // strip, empty states). Bound once on the shadow root.
+  _onFindClick(e) {
+    var target = e.target && e.target.closest
+      ? e.target.closest("[data-facet],[data-find-clear],[data-find-suggest],[data-goto],[data-find-more],[data-filter-toggle],[data-filter-close],[data-filter-scrim]")
+      : null;
+    if (!target || target.closest(".modal-backdrop")) return;
+    e.preventDefault();
+    e.stopPropagation();
+    var root = this.shadowRoot;
+    if (target.hasAttribute("data-facet")) {
+      if (target.getAttribute("aria-disabled") === "true") return;
+      // A token removes itself: focus goes on to the token that takes its
+      // place (or the one before), else to Filters, never to the page.
+      var tokens = target.classList.contains("token") ? Array.prototype.slice.call(root.querySelectorAll("[data-facets] .token")) : null;
+      var at = tokens ? tokens.indexOf(target) : -1;
+      this._toggleFacet(target.getAttribute("data-facet"), target.getAttribute("data-value"));
+      if (tokens && (!root.activeElement || !root.activeElement.isConnected)) {
+        var left = root.querySelectorAll("[data-facets] .token");
+        var next = left[Math.min(at, left.length - 1)] || root.querySelector(".toolbar [data-filter-toggle]");
+        if (next) next.focus({ preventScroll: true });
+      }
+    } else if (target.hasAttribute("data-find-clear")) {
+      var inPanel = !!target.closest("[data-filter-panel]");
+      this._clearFilters(target.getAttribute("data-find-clear"));
+      // From the keyboard, carry on in the search box (in the sheet, on its
+      // title) rather than losing focus with a button that went away.
+      if (e.detail === 0 || (inPanel && !target.isConnected)) {
+        var next = inPanel ? root.querySelector("[data-filter-panel] .fp-title") : root.querySelector("[data-search]");
+        if (next && (!target.isConnected || !target.getClientRects().length || !inPanel)) next.focus({ preventScroll: true });
+      }
+    } else if (target.hasAttribute("data-find-suggest")) {
+      this._setSearch(target.getAttribute("data-find-suggest"));
+    } else if (target.hasAttribute("data-goto")) {
+      this._gotoBottle(target.getAttribute("data-goto"), { focus: e.detail === 0 });
+    } else if (target.hasAttribute("data-find-more")) {
+      this._openList();
+    } else if (target.hasAttribute("data-filter-toggle")) {
+      this._setFilterPanel(!this._filterPanelOpen);
+    } else {
+      this._setFilterPanel(false);
+    }
+  }
+
+  // Keys of the finding controls: arrows between the view tabs and along the
+  // result chips, Escape out of the Filters panel, Tab kept inside the sheet.
+  _onFindKeydown(e) {
+    var target = e.target;
+    if (!target || !target.closest || e.defaultPrevented) return;
+    var root = this.shadowRoot;
+    var key = e.key;
+    var list = null;
+    if (target.matches('.toolbar [role="tab"]')) {
+      list = Array.prototype.slice.call(target.parentNode.querySelectorAll('[role="tab"]'));
+    } else if (target.closest("[data-where-chips]")) {
+      list = Array.prototype.slice.call(target.closest("[data-where-chips]").querySelectorAll("[data-goto],[data-find-more]"));
+      if (key === "ArrowUp") {
+        var input = root.querySelector("[data-search]");
+        if (input) {
+          e.preventDefault();
+          input.focus();
         }
-        self.render(false); // Ré-afficher localement avec le nouveau tri sans forcer un appel WS
-      };
-    });
-    container.querySelectorAll(".table-wrap tr[data-edit-bottle]").forEach(function (row) {
-      row.onclick = function (e) {
+        return;
+      }
+    }
+    if (list && (key === "ArrowRight" || key === "ArrowLeft" || key === "Home" || key === "End")) {
+      var at = list.indexOf(target);
+      var next = key === "Home" ? list[0] : key === "End" ? list[list.length - 1] : list[(at + (key === "ArrowRight" ? 1 : -1) + list.length) % list.length];
+      if (next) {
         e.preventDefault();
-        e.stopPropagation();
-        var id = row.getAttribute("data-edit-bottle");
-        var bottle = null;
-        ((data && data.bottles) || []).forEach(function (b) {
-          if (b.id === id) bottle = b;
-        });
-        self._openBottleModal(bottle);
-      };
-    });
-    container.querySelectorAll("[data-clear-filters]").forEach(function (btn) {
-      btn.onclick = function (e) {
+        list.forEach(function (el) { el.tabIndex = el === next ? 0 : -1; });
+        next.focus();
+      }
+      return;
+    }
+    if (!this._filterPanelOpen) return;
+    var panel = root.querySelector("[data-filter-panel]");
+    if (!panel) return;
+    var sheet = panel.getAttribute("aria-modal") === "true";
+    if ((key === "Escape" || key === "Esc") && (sheet || panel.contains(target) || target.hasAttribute("data-filter-toggle"))) {
+      e.preventDefault();
+      e.stopPropagation();
+      this._setFilterPanel(false);
+      return;
+    }
+    if (key === "Tab" && sheet) {
+      var items = this._focusablesIn(panel);
+      if (!items.length) return;
+      var first = items[0];
+      var last = items[items.length - 1];
+      var active = root.activeElement;
+      if (!panel.contains(active) || (e.shiftKey && active === first) || (e.shiftKey && active === panel.querySelector(".fp-title"))) {
         e.preventDefault();
-        e.stopPropagation();
-        self._clearFilters();
-        // From the keyboard, carry on in the search box rather than losing
-        // focus with the button that just went away.
-        var input = e.detail === 0 && self.shadowRoot.querySelector("[data-search]");
-        if (input) input.focus();
-      };
+        (e.shiftKey ? last : first).focus();
+      } else if (!e.shiftKey && active === last) {
+        e.preventDefault();
+        first.focus();
+      }
+    }
+  }
+
+  // The long search placeholder where it fits, else the short one, so no
+  // language ever shows it cut off.
+  _fitSearchPlaceholder(input) {
+    var text = this._searchPlaceholderFor(input);
+    if (text && input.placeholder !== text) input.placeholder = text;
+  }
+
+  // Which placeholder fits the box as it is now laid out ("" when unknown).
+  // Only reads (measured on a canvas), so callers can batch their writes.
+  _searchPlaceholderFor(input) {
+    var width = input ? input.clientWidth : 0;
+    if (!width) return "";
+    if (input._fitWidth === width && input._fitLang === _wcmLang) return input._fitText;
+    var long = _T("find_placeholder");
+    var style = getComputedStyle(input);
+    var room = width - (parseFloat(style.paddingLeft) || 0) - (parseFloat(style.paddingRight) || 0) - 4;
+    var ctx = this._measureCtx || (this._measureCtx = document.createElement("canvas").getContext("2d"));
+    var fits = true;
+    if (ctx) {
+      ctx.font = style.fontStyle + " " + style.fontWeight + " " + style.fontSize + " " + style.fontFamily;
+      fits = ctx.measureText(long).width <= room;
+    }
+    input._fitWidth = width;
+    input._fitLang = _wcmLang;
+    input._fitText = fits ? long : _T("find_placeholder_short");
+    return input._fitText;
+  }
+
+  // The toolbar's measures (the placeholder that fits, the chips' edge
+  // fades, how far the pinned toolbar slides up) are taken by a
+  // ResizeObserver, which reports once the page is laid out and whenever the
+  // toolbar, the search box or a chip row changes size: a render never forces
+  // a layout of the whole page just for them.
+  _observeToolbar() {
+    var self = this;
+    var bar = this.shadowRoot && this.shadowRoot.querySelector(".toolbar");
+    if (!bar) return;
+    if (!window.ResizeObserver) {
+      this._layoutToolbar();
+      return;
+    }
+    if (!this._toolbarObserver) {
+      this._toolbarObserver = new ResizeObserver(function () {
+        if (self.isConnected) self._layoutToolbar();
+      });
+    }
+    this._toolbarObserver.disconnect();
+    this._toolbarObserver.observe(bar);
+    bar.querySelectorAll("[data-search], .x-fade").forEach(function (el) { self._toolbarObserver.observe(el); });
+  }
+
+  // Where the page scrolls (phones, tablets) the toolbar sticks under the
+  // dashboard header with only its search row showing: --tb-stick is how far
+  // it slides up under the header. Also refits the placeholder and the
+  // chips' edge fades.
+  _layoutToolbar() {
+    var self = this;
+    var root = this.shadowRoot;
+    var bar = root && root.querySelector(".toolbar");
+    if (!bar) return;
+    // Every measure first, then the changes, so this adds no layout pass.
+    var input = bar.querySelector("[data-search]");
+    var placeholder = this._searchPlaceholderFor(input);
+    var fades = Array.prototype.map.call(bar.querySelectorAll(".x-fade"), function (el) {
+      return { el: el, max: el.scrollWidth - el.clientWidth, left: el.scrollLeft };
     });
+    var find = bar.querySelector(".tb-find");
+    var facets = bar.querySelector("[data-facets]");
+    // Chips that went to a line of their own leave the search the whole row.
+    var below = !!find && !!facets && facets.offsetTop >= find.offsetTop + find.offsetHeight - 2;
+    var pinned = !!find && getComputedStyle(bar).position === "sticky";
+    var stick = pinned ? Math.max(0, find.offsetTop - 8) + "px" : "";
+    if (placeholder && input.placeholder !== placeholder) input.placeholder = placeholder;
+    if (find && find.parentNode.classList.contains("chips-below") !== below) find.parentNode.classList.toggle("chips-below", below);
+    fades.forEach(function (f) { self._paintFades(f.el, f.max, f.left); });
+    if (!pinned) {
+      bar.style.removeProperty("--tb-stick");
+      bar.style.removeProperty("--tb-clip");
+      bar.classList.remove("is-stuck");
+      return;
+    }
+    if (bar.style.getPropertyValue("--tb-stick") !== stick) bar.style.setProperty("--tb-stick", stick);
+    this._clipToolbar();
+  }
+
+  // While the toolbar is stuck, the rows that slid under the header are
+  // clipped away, so a translucent (or missing) header never shows them and
+  // they take no taps.
+  _clipToolbar() {
+    var root = this.shadowRoot;
+    var bar = root && root.querySelector(".toolbar");
+    if (!bar) return;
+    var stick = parseFloat(bar.style.getPropertyValue("--tb-stick")) || 0;
+    if (!stick) return;
+    var header = parseFloat(getComputedStyle(this).getPropertyValue("--header-height")) || 56;
+    var clip = Math.max(0, Math.min(stick, header - bar.getBoundingClientRect().top));
+    var value = Math.round(clip) + "px";
+    if (bar.style.getPropertyValue("--tb-clip") !== value) bar.style.setProperty("--tb-clip", value);
+    bar.classList.toggle("is-stuck", clip > 0);
   }
 
   _sortedCellars() {
@@ -6037,13 +8136,15 @@ class WineCellarCard extends HTMLElement {
 
   /* Toast: one short in-card message at a time, at the bottom of the screen
      (above the footer of an open dialog), optionally with one action such as
-     Undo. It survives re-renders and goes away by itself. */
+     Undo. It survives re-renders and goes away by itself. opts: kind ("ok"
+     or "warn"), icon (a _WCM_ICONS name instead of the check mark) and
+     action ({ label, run, undo: Ctrl+Z runs it too }). */
 
   _showToast(text, opts) {
     opts = opts || {};
     var self = this;
     clearTimeout(this._toastTimer);
-    this._toast = { id: ++this._toastSeq, text: text, kind: opts.kind || "ok", action: opts.action || null };
+    this._toast = { id: ++this._toastSeq, text: text, kind: opts.kind || "ok", icon: opts.icon || "", action: opts.action || null };
     this._toastHold = {};
     this._toastTimer = setTimeout(function () { self._dismissToast(); }, opts.action ? 8000 : 4500);
     this._paintToast();
@@ -6092,9 +8193,14 @@ class WineCellarCard extends HTMLElement {
       el.setAttribute("role", "status");
       el.setAttribute("aria-live", "polite");
       el.setAttribute("data-toast", String(toast.id));
-      el.innerHTML = (toast.kind === "warn" ? _WCM_ICONS.alert : _WCM_ICONS.check) +
-        '<span class="toast-text">' + this._escape(toast.text) + "</span>" +
-        (toast.action ? '<button type="button" class="toast-action"' + (toast.action.undo ? ' aria-keyshortcuts="Control+Z Meta+Z"' : "") + ">" + this._escape(toast.action.label) + "</button>" : "") +
+      // An Undo says its shortcut: read out with the message, and shown
+      // beside the button where there is a keyboard.
+      var undo = toast.action && toast.action.undo;
+      var keys = /Mac|iPhone|iPad/.test(navigator.platform || navigator.userAgent || "") ? "⌘Z" : "Ctrl+Z";
+      el.innerHTML = (toast.kind === "warn" ? _WCM_ICONS.alert : _WCM_ICONS[toast.icon] || _WCM_ICONS.check) +
+        '<span class="toast-text">' + this._escape(toast.text) + (undo ? '<span class="sr-only"> ' + this._escape(_T("toast_undo_keys", { keys: keys })) + "</span>" : "") + "</span>" +
+        (undo ? '<kbd class="toast-kbd only-fine" aria-hidden="true">' + this._escape(keys) + "</kbd>" : "") +
+        (toast.action ? '<button type="button" class="toast-action"' + (undo ? ' aria-keyshortcuts="Control+Z Meta+Z"' : "") + ">" + this._escape(toast.action.label) + "</button>" : "") +
         '<button type="button" class="toast-close" aria-label="' + this._escape(_T("close")) + '">' + _WCM_ICONS.close + "</button>";
       wrap.appendChild(el);
       this._toastShown = toast.id;
@@ -6238,7 +8344,7 @@ class WineCellarCard extends HTMLElement {
     if (this._moveFocus && lifted) {
       this._moveFocus = false;
       lifted.focus({ preventScroll: true });
-      lifted.scrollIntoView({ block: "center", inline: "center", behavior: this._prefersReducedMotion() ? "auto" : "smooth" });
+      this._scrollIntoBand(lifted, this._visibleBand(), "center", this._prefersReducedMotion() ? "auto" : "smooth");
     }
   }
 
@@ -6490,8 +8596,11 @@ class WineCellarCard extends HTMLElement {
   }
 
   // The bottle as inline SVG. opts.variant is "card", "mini" (the corner of a
-  // card showing a label photo) or "hero" (the bottle dialog); with
-  // opts.labelImage the photo is printed on the bottle's paper label.
+  // card showing a label photo), "hero" (the bottle dialog), "tag" (a search
+  // result chip: the silhouette only) or "thumb" (a list thumbnail: the
+  // silhouette and a plain label, the fewest shapes, as it is drawn once per
+  // row); with opts.labelImage the photo is printed on the bottle's paper
+  // label.
   _bottleArtSvg(bottle, opts) {
     opts = opts || {};
     bottle = bottle || {};
@@ -6510,6 +8619,20 @@ class WineCellarCard extends HTMLElement {
         '<path class="bt-glass" d="' + shape.glass + '"/>' +
         '<path class="bt-rim" d="' + shape.glass + '"/>' +
         '<text class="bt-q" x="24" y="' + (lab[1] + lab[3] / 2 + 7) + '" text-anchor="middle">?</text>';
+    } else if (opts.variant === "tag") {
+      // A result chip shows only the silhouette: glass, capsule, shading.
+      body =
+        '<path class="bt-glass" d="' + shape.glass + '"/>' +
+        '<path class="bt-cap" d="' + shape.cap + '"/>' +
+        '<path d="' + shape.glass + '" fill="url(#wcm-bt-shade)"/>' +
+        '<path class="bt-rim" d="' + shape.glass + '"/>';
+    } else if (opts.variant === "thumb") {
+      body =
+        '<path class="bt-glass" d="' + shape.glass + '"/>' +
+        '<rect class="bt-paper" ' + labelBox + ' rx="1.2"/>' +
+        '<path class="bt-cap" d="' + shape.cap + '"/>' +
+        '<path d="' + shape.glass + '" fill="url(#wcm-bt-shade)"/>' +
+        '<path class="bt-rim" d="' + shape.glass + '"/>';
     } else {
       var ink;
       if (opts.labelImage) {
@@ -6550,9 +8673,12 @@ class WineCellarCard extends HTMLElement {
     );
   }
 
-  // The status glyph on its status color (see _WCM_GLYPHS).
-  _bottleGlyph(status) {
-    return '<i class="bt-glyph is-' + status + '" aria-hidden="true">' + (_WCM_GLYPHS[status] || _WCM_GLYPHS.none) + "</i>";
+  // The status glyph on its status color (see _WCM_GLYPHS). painted: the
+  // glyph is drawn by CSS instead of an inline SVG (for lists that repeat it
+  // on every row; see _WCM_ICON_STYLES).
+  _bottleGlyph(status, painted) {
+    if (!_WCM_GLYPHS[status]) status = "none";
+    return '<i class="bt-glyph is-' + status + '" aria-hidden="true">' + (painted ? "" : _WCM_GLYPHS[status]) + "</i>";
   }
 
   // France shows the region, everything else the grape, each falling back to
@@ -6618,7 +8744,9 @@ class WineCellarCard extends HTMLElement {
       needs ? _T("bt_needs_details") : "",
       twins > 1 ? _T("bt_identical", { n: twins }) : "",
       opts.location,
-      opts.behind
+      opts.behind,
+      // Kept last: the live filter swaps it in place (_applyFiltersInPlace).
+      opts.matchNote
     ].filter(Boolean).join(" · ");
 
     var classes = "slot filled" + (opts.compact ? "" : " bt" + (needs ? " bt-needs" : "")) +
@@ -6811,7 +8939,7 @@ class WineCellarCard extends HTMLElement {
         slotsHtml.push(this._renderEmptySlot(cellar, shelf, lane, pos, opts));
         continue;
       }
-      var matches = this._bottleMatchesFilters(bottle);
+      var matches = !opts.filtering || opts.model.ids.has(String(bottle.id));
       var blockers = lane === "back" ? this._frontBlockers(shelf, pos, slotIndex) : [];
       slotsHtml.push(this._renderBottleSlot(bottle, !matches, {
         compact: opts.compact,
@@ -6819,7 +8947,8 @@ class WineCellarCard extends HTMLElement {
         location: this._slotLocationText(cellar, opts.shelfRef, lane, pos),
         behind: blockers.length
           ? _T("depth_behind_aria", { names: blockers.map(function (b) { return b.bottle.wine_name || _T("unnamed_wine"); }).join(" & ") })
-          : ""
+          : "",
+        matchNote: opts.filtering ? _T(matches ? "find_state_match" : "find_state_other") : ""
       }));
     }
 
@@ -6865,13 +8994,16 @@ class WineCellarCard extends HTMLElement {
     for (var f = 1; f <= front; f++) {
       if (slotIndex.has(String(shelf.id) + "|front|" + f)) frontFilled++;
     }
+    // While a search or filter is on, how many of its bottles match.
+    var hits = opts.filtering ? (opts.model.perShelf[key] || 0) : 0;
     var classes = "shelf" +
       (!inline && this._isStaggered(shelf) ? " staggered" : "") +
       (inline ? " inline" : "") +
       (twoRow ? " two-row" : " one-row") +
       (front > 0 && !frontFilled ? " front-empty" : "") +
       (open ? " open" : "") +
-      (auto ? " auto-open" : "");
+      (auto ? " auto-open" : "") +
+      (opts.filtering && !hits ? " no-hits" : "");
 
     var pull = "";
     if (canPull) {
@@ -6904,10 +9036,18 @@ class WineCellarCard extends HTMLElement {
       return opts.compact ? "" : '<button type="button" class="hs-chip" data-hs="' + dir + '" hidden></button>';
     }
 
+    // The shelf's number (the result strip says "Reds (shelf 3)") and its
+    // match count, which the live filter keeps current. A shelf named after
+    // its number ("Shelf 3") does not show the number twice.
+    var shelfName = shelf.name || (_T("shelf") + " " + (index + 1));
+    var numbered = this._foldSearchText(shelfName) === this._foldSearchText(_T("shelf_n", { n: index + 1 })) ||
+      this._foldSearchText(shelfName) === this._foldSearchText(_T("shelf") + " " + (index + 1));
     return (
       '<div class="' + classes + '" role="group" aria-label="' + esc(shelfRef) + '" data-shelf-key="' + esc(key) + '" style="--nmax:' + Math.max(front, back, 1) + sizes + '">' +
       '<div class="shelf-head">' +
-      '<span class="sh-l">' + scrollChip(-1) + '<span class="shelf-name">' + esc(shelf.name || (_T("shelf") + " " + (index + 1))) + "</span></span>" +
+      '<span class="sh-l">' + scrollChip(-1) + (numbered ? "" : '<span class="shelf-no" aria-hidden="true">' + (index + 1) + "</span>") +
+      '<span class="shelf-name">' + esc(shelfName) + "</span>" +
+      '<span class="shelf-hits"' + (hits ? "" : " hidden") + '><b aria-hidden="true">' + hits + '</b><span class="sr-only">' + esc(this._hitsText(hits)) + "</span></span></span>" +
       '<span class="sh-r"><span class="shelf-count' + (front + back > 0 && stored >= front + back ? " is-full" : "") + '"><b>' + stored + "</b> / " + (front + back) + "</span>" + scrollChip(1) + "</span>" +
       "</div>" +
       (front + back === 0 && !opts.compact ? '<div class="shelf-noslots">' + esc(_T("depth_no_slots")) + "</div>" : "") +
@@ -6987,9 +9127,11 @@ class WineCellarCard extends HTMLElement {
     }
 
     var search = this._searchDepth();
+    var model = this._filterModel();
     var opts = {
       compact: compact,
-      filtering: this._hasActiveFilters(),
+      filtering: model.filtering,
+      model: model,
       pasteReady: this._hasCopiedBottle(),
       autoOpen: search.autoOpen
     };
@@ -7016,14 +9158,17 @@ class WineCellarCard extends HTMLElement {
         return self._renderShelf(cellar, shelf, index, slotIndex, opts);
       }).join("");
 
+      // While filtering: the cellar's match badge; a cellar without one fades.
+      var hits = opts.filtering ? (model.perCellar[String(cellar.id)] || 0) : 0;
       var editLabel = self._escape(_T("edit_cellar"));
       return (
-        '<section class="cellar" data-cellar-id="' + self._escape(cellar.id) + '">' +
+        '<section class="cellar' + (opts.filtering && !hits ? " no-hits" : "") + '" data-cellar-id="' + self._escape(cellar.id) + '">' +
         '<header class="cellar-head">' +
         '<div class="cellar-title">' +
         "<h3>" + self._escape(cellar.name) + "</h3>" +
         '<div class="cellar-sub"><span class="meter"><span style="width:' + fill + '%"></span></span><span>' + stored + " / " + capacity + "</span></div>" +
         "</div>" +
+        '<span class="cellar-hits' + (hits ? "" : " none") + '"' + (opts.filtering ? "" : " hidden") + ">" + self._escape(self._hitsText(hits)) + "</span>" +
         '<button class="icon-btn" type="button" data-edit-cellar="' + self._escape(cellar.id) + '" title="' + editLabel + '" aria-label="' + editLabel + '">' + _WCM_ICONS.pencil + "</button>" +
         "</header>" +
         (shelfHtml ? self._renderCabinet(cellar, shelfHtml) : '<div class="empty-state">' + self._escape(_T("no_shelves")) + "</div>") +
@@ -7042,13 +9187,10 @@ class WineCellarCard extends HTMLElement {
     var self = this;
     var ids = [];
     var backHits = [];
-    if (this._hasActiveFilters()) {
-      ((this._data && this._data.bottles) || []).forEach(function (b) {
-        if (!self._bottleMatchesFilters(b)) return;
-        ids.push(b.id);
-        if (b.lane === "back") backHits.push(b);
-      });
-    }
+    this._filterModel().hits.forEach(function (b) {
+      ids.push(b.id);
+      if (b.lane === "back") backHits.push(b);
+    });
     var sig = ids.join(",");
     if (!this._pushedBack || this._pushedBack.sig !== sig) this._pushedBack = { sig: sig, keys: {} };
     var autoOpen = new Set();
@@ -7333,7 +9475,8 @@ class WineCellarCard extends HTMLElement {
 
   // Brings a bottle's slot into view, vertically and inside its cabinet; a
   // back-row bottle has its shelf pulled out first. The slot pulses, is shown
-  // even if the current filter dims it, and takes focus.
+  // even if the current filter dims it, and takes focus (opts.focus); its
+  // result chip, if it has one, becomes the current one.
   _gotoBottle(id, opts) {
     opts = opts || {};
     var root = this.shadowRoot;
@@ -7348,7 +9491,7 @@ class WineCellarCard extends HTMLElement {
     if (shelf && !shelf.classList.contains("open") && !shelf.classList.contains("auto-open")) {
       this._setShelfOpen(shelf.getAttribute("data-shelf-key"), { instant: true });
     }
-    el.scrollIntoView({ block: "center", inline: "center", behavior: this._prefersReducedMotion() ? "auto" : "smooth" });
+    this._scrollIntoBand(el, this._visibleBand(), "center", this._prefersReducedMotion() ? "auto" : "smooth");
     this._settleScrollOn(el);
     el.classList.remove("pulse");
     void el.offsetWidth;
@@ -7356,25 +9499,8 @@ class WineCellarCard extends HTMLElement {
     setTimeout(function () { el.classList.remove("pulse"); }, 2300);
     setTimeout(function () { el.classList.remove("located"); }, 4500);
     if (opts.focus) el.focus({ preventScroll: true });
+    this._markWhereChip(id);
     return true;
-  }
-
-  // Whether the Cellars view draws this bottle, so "Show in cellar" has
-  // somewhere to go: its cellar and shelf exist, its position is inside the
-  // shelf's capacity for its row, and it is the bottle drawn in that slot.
-  _isBottleDrawn(bottle) {
-    var bottles = (this._data && this._data.bottles) || [];
-    var id = bottle && bottle.id;
-    var live = bottles.find(function (b) { return b.id === id; });
-    var cellar = live && ((this._data && this._data.cellars) || []).find(function (c) { return c.id === live.cellar_id; });
-    if (!cellar) return false;
-    var shelf = this._getSortedShelves(cellar).find(function (s) { return String(s.id) === String(live.shelf_id); });
-    var lane = live.lane === "back" || live.lane === "front" ? live.lane : "";
-    var pos = Number(live.position);
-    if (!shelf || !lane || Math.floor(pos) !== pos || pos < 1 || pos > Number(shelf["capacity_" + lane] || 0)) return false;
-    var drawn = this._buildSlotIndex(bottles.filter(function (b) { return b.cellar_id === cellar.id; }))
-      .get(String(shelf.id) + "|" + lane + "|" + pos);
-    return !!drawn && drawn.id === id;
   }
 
   // Hovering or focusing a bottle rings every other bottle of the same wine
@@ -7525,369 +9651,804 @@ class WineCellarCard extends HTMLElement {
     return '<div class="plan-hint">' + icon + "<span>" + hint + "</span></div>";
   }
 
+  /* All Bottles. Every bottle is drawn once, grouped by wine type (sorted by
+     location: by cellar, in the order the bottles stand), and the search and
+     filters hide rows in place (_paintList), so typing never rebuilds the
+     table. A row has one tab stop, its name, which opens the bottle; the whole
+     row is its click target, and the crosshair beside the location (for the
+     mouse and screen readers; from the keyboard, the bottle dialog has the
+     same button) shows the bottle in its cellar. Below 700 px of width the
+     rows become cards, sorted with a select and a direction toggle. */
   _renderList(data) {
     var self = this;
-    var bottles = this._filteredBottles(data);
+    var bottles = (data && data.bottles) || [];
+    function esc(value) { return self._escape(value); }
 
+    // Nothing yet: a way to start (the first bottle, or first a cellar).
     if (!bottles.length) {
-      if (!this._hasActiveFilters()) {
-        return '<div class="empty-state">' + this._escape(_T("no_bottles_yet")) + "</div>";
-      }
-      return '<div class="empty-state"><div>' + this._escape(_T("search_no_match")) + "</div>" +
-        '<button class="btn primary" type="button" data-clear-filters>' + this._escape(_T("clear_filters")) + "</button></div>";
+      var hasCellars = !!(data && data.cellars && data.cellars.length);
+      return '<section class="bl bl-none" aria-labelledby="bl-title">' +
+        '<div class="bl-start"><span class="bl-start-art" aria-hidden="true">' + _WCM_ICONS.bottle + "</span>" +
+        '<h2 class="bl-title" id="bl-title">' + esc(_T("no_bottles_yet")) + "</h2>" +
+        '<p class="bl-start-sub">' + esc(_T(hasCellars ? "list_empty_body" : "add_first_cellar")) + "</p>" +
+        '<button type="button" class="btn primary" data-list-add>' + _WCM_ICONS.plus + "<span>" +
+        esc(_T(hasCellars ? "sheet_add_title" : "builder_title_new")) + "</span></button></div></section>";
     }
 
-    // 1. Définir l'ordre fixe des types de vin pour le regroupement
-    var allowedTypes = ["unset", "red", "white", "rosé", "sparkling", "orange", "sweet", "other"];
-    
-    // 2. Structurer le dictionnaire de regroupement
-    var groups = {};
-    allowedTypes.forEach(function(t) { groups[t] = []; });
+    var col = _WCM_LIST_SORTS.indexOf(this._sortColumn) === -1 ? "wine_name" : this._sortColumn;
+    var desc = this._sortOrder === "desc";
+    var model = this._filterModel();
+    var drawn = this._drawnBottleIds();
+    var groups = this._listGroups(bottles, col, desc);
+    var visible = model.filtering ? model.hits.length : bottles.length;
 
-    // 3. Répartir les bouteilles dans leur groupe respectif
-    bottles.forEach(function(b) {
-      var t = b.wine_type || "other";
-      if (!groups[t]) t = "other";
-      groups[t].push(b);
-    });
-
-    // Physical order (cellar, shelf, back/front, position) for the Location
-    // column, so sorting by it walks the cellars the way they are displayed.
-    var cellarInfo = {};
-    var shelfOrder = {};
-    (data.cellars || []).slice().sort(function (a, b) {
-      return (a.display_order || 0) - (b.display_order || 0);
-    }).forEach(function (cellar, ci) {
-      cellarInfo[cellar.id] = { order: ci, name: cellar.name || _T("cellar") };
-      self._getSortedShelves(cellar).forEach(function (shelf, si) { shelfOrder[shelf.id] = si; });
-    });
-    function pad(n) { return String(n == null ? 999 : n).padStart(3, "0"); }
-    function locationKey(b) {
-      var c = cellarInfo[b.cellar_id];
-      return pad(c ? c.order : null) + pad(shelfOrder[b.shelf_id]) + (b.lane === "back" ? "0" : "1") + pad(Number(b.position) || 0);
+    function sortButton(key) {
+      var on = col === key;
+      // The button sorted by says so itself: Wine and Producer share a header.
+      return '<button type="button" class="bl-sort' + (on ? " on" : "") + '" data-list-sort-col="' + key + '">' +
+        esc(_T(_WCM_LIST_SORT_LABELS[key])) + (on ? '<span class="sr-only">, ' + esc(_T(desc ? "list_sorted_desc" : "list_sorted_asc")) + "</span>" : "") +
+        (on && desc ? _WCM_ICONS.down : _WCM_ICONS.up) + "</button>";
     }
+    function th(cls, keys, inner) {
+      var sorted = keys.indexOf(col) !== -1;
+      return '<th scope="col" role="columnheader" class="' + cls + '"' + (sorted ? ' aria-sort="' + (desc ? "descending" : "ascending") + '"' : "") + ">" + inner + "</th>";
+    }
+    // The fixed columns are as wide as their header in this language (in
+    // characters: the whole label, and its longest word where headers wrap)
+    // and as the longest price; the table's CSS turns these into widths.
+    function chars(key, word) {
+      var text = String(_T(_WCM_LIST_SORT_LABELS[key]));
+      return word ? Math.max.apply(null, text.split(/[\s/]+/).map(function (w) { return w.length; })) : text.length;
+    }
+    var cost = 1;
+    bottles.forEach(function (b) {
+      if (self._hasPrice(b)) cost = Math.max(cost, self._formatPrice(b.price).length);
+    });
+    var widths = "--n-vin:" + chars("vintage") + ";--n-rate:" + chars("rating") + ";--n-win:" + chars("aging") + ";--n-price:" + chars("price") +
+      ";--w-rate:" + chars("rating", true) + ";--w-win:" + chars("aging", true) + ";--w-price:" + chars("price", true) + ";--n-cost:" + cost;
 
-    // 4. Déterminer la clé de tri selon la colonne active
-    var col = this._sortColumn || "wine_name";
-    var order = this._sortOrder === "desc" ? -1 : 1;
+    var html = [
+      '<section class="bl" data-list aria-labelledby="bl-title">',
+      '<div class="bl-bar">',
+      '<h2 class="bl-title" id="bl-title" data-list-title tabindex="-1">' + esc(this._listTitle(visible, bottles.length, model.filtering)) + "</h2>",
+      '<div class="bl-sortbox" data-list-sortbox' + (visible ? "" : " hidden") + ">",
+      '<select data-list-sort aria-label="' + esc(_T("list_sort_by")) + '">' + _WCM_LIST_SORTS.map(function (key) {
+        return '<option value="' + key + '"' + (key === col ? " selected" : "") + ">" + esc(_T(_WCM_LIST_SORT_LABELS[key])) + "</option>";
+      }).join("") + "</select>",
+      '<button type="button" class="icon-btn bl-dir" data-list-dir aria-pressed="' + desc + '" aria-label="' + esc(_T("list_reverse")) + '" title="' +
+        esc(_T("list_reverse")) + '">' + _WCM_ICONS.sortDir + "</button>",
+      "</div></div>",
+      '<div class="bl-empty" data-list-empty' + (visible ? " hidden>" : ">" + this._renderNoResults()) + "</div>",
+      // Roles spelled out: the rows are drawn as grids (see the CSS).
+      '<table class="bl-table" role="table" aria-labelledby="bl-title" data-list-table style="' + widths + '"' + (visible ? "" : " hidden") + ">",
+      '<thead role="rowgroup"><tr role="row">',
+      '<th scope="col" role="columnheader" class="c-thumb"><span class="sr-only">' + esc(_T("sheet_sec_label")) + "</span></th>",
+      th("c-wine", ["wine_name", "producer"], sortButton("wine_name") + '<span class="bl-sep" aria-hidden="true">/</span><wbr>' + sortButton("producer")),
+      th("c-loc", ["location"], sortButton("location")),
+      th("c-vin", ["vintage"], sortButton("vintage")),
+      th("c-rv", ["region_varietal"], sortButton("region_varietal")),
+      th("c-rate", ["rating"], sortButton("rating")),
+      th("c-win", ["aging"], sortButton("aging")),
+      th("c-price", ["price"], sortButton("price")),
+      "</tr></thead>"
+    ];
 
-    // 5. Fonction de tri interne pour chaque groupe
-    function sortGroup(arr) {
-      arr.sort(function(a, b) {
-        var valA = "", valB = "";
-        
-        if (col === "wine_name" || col === "producer" || col === "vintage" || col === "rating" || col === "notes") {
-          valA = a[col];
-          valB = b[col];
-        } else if (col === "region_varietal") {
-          var cA = String(a.country || "").trim().toLowerCase();
-          valA = cA === "france" ? (a.region || "") : (a.varietal || "");
-          var cB = String(b.country || "").trim().toLowerCase();
-          valB = cB === "france" ? (b.region || "") : (b.varietal || "");
-        } else if (col === "price") {
-          valA = a.price != null ? Number(a.price) : 0;
-          valB = b.price != null ? Number(b.price) : 0;
-        } else if (col === "location") {
-          valA = locationKey(a);
-          valB = locationKey(b);
-        } else if (col === "aging") {
-          valA = (a.aging_start_year || 0) + "-" + (a.aging_end_year || 0);
-          valB = (b.aging_start_year || 0) + "-" + (b.aging_end_year || 0);
-        }
-
-        if (valA == null) valA = "";
-        if (valB == null) valB = "";
-
-        if (typeof valA === "number" && typeof valB === "number") {
-          return (valA - valB) * order;
-        }
-        return String(valA).localeCompare(String(valB), undefined, { numeric: true, sensitivity: "base" }) * order;
+    groups.forEach(function (group) {
+      var shown = 0;
+      var rows = group.rows.map(function (b) {
+        var on = !model.filtering || model.ids.has(String(b.id));
+        if (on) shown++;
+        return self._listRow(b, on, drawn.has(String(b.id)));
       });
-    }
-
-    // Appliquer le tri sur chaque groupe
-    allowedTypes.forEach(function(t) {
-      sortGroup(groups[t]);
+      html.push(
+        '<tbody role="rowgroup" data-group="' + esc(group.key) + '"' + (shown ? "" : " hidden") + ">",
+        '<tr class="bl-ghead" role="row"><th colspan="8" scope="rowgroup" role="rowheader"><span class="bl-glabel"><span class="bl-swatch" style="--type:' + group.color + '"></span>' +
+          esc(group.label) + ' <span class="bl-gn" data-group-n>' + shown + "</span></span></th></tr>",
+        rows.join(""),
+        "</tbody>"
+      );
     });
-
-    // Indicateurs visuels de direction du tri pour les th
-    function sortIndicator(columnName) {
-      if (self._sortColumn !== columnName) return "";
-      return self._sortOrder === "asc" ? " ▲" : " ▼";
-    }
-
-    // 6. Construire le tableau HTML traduit dynamiquement via _t
-    var typeLabels = {
-      "unset": _T("not_specified"),
-      "red": _T("red"),
-      "white": _T("white"),
-      "rosé": _T("rose"),
-      "sparkling": _T("sparkling"),
-      "orange": "Orange",
-      "sweet": _T("sweet"),
-      "other": _T("other")
-    };
-
-    var html = [];
-    html.push('<div class="table-wrap"><table>');
-    html.push('<thead><tr>');
-    html.push('<th data-sort="wine_name">' + _T("wine") + sortIndicator("wine_name") + '</th>');
-    html.push('<th data-sort="location">' + _T("location") + sortIndicator("location") + '</th>');
-    html.push('<th data-sort="producer">' + self._t("producer") + sortIndicator("producer") + '</th>');
-    html.push('<th data-sort="vintage">' + self._t("vintage") + sortIndicator("vintage") + '</th>');
-    html.push('<th data-sort="region_varietal">' + _T("region_varietal") + sortIndicator("region_varietal") + '</th>');
-    html.push('<th data-sort="rating">' + self._t("rating") + sortIndicator("rating") + '</th>');
-    html.push('<th data-sort="aging">' + _T("aging") + sortIndicator("aging") + '</th>');
-    html.push('<th data-sort="price">' + _T("price") + sortIndicator("price") + '</th>');
-    html.push('</tr></thead><tbody>');
-
-    // 7. Parcourir les groupes et ajouter les lignes
-    allowedTypes.forEach(function(t) {
-      var groupBottles = groups[t];
-      if (!groupBottles.length) return;
-
-      var labelText = typeLabels[t] || t;
-
-      // Ligne d'entête du groupe de type traduit
-      html.push('<tr><td colspan="8" class="type-group-header"><span class="type-chip" style="--type:' + self._wineSurfaceColor(t) + '"><span class="type-dot"></span>' + self._escape(labelText) + ' <span class="group-count">' + groupBottles.length + '</span></span></td></tr>');
-
-      // Lignes de bouteilles pour ce groupe
-      groupBottles.forEach(function(b) {
-        var countryClean = String(b.country || "").trim().toLowerCase();
-        var regionVarietal = countryClean === "france" ? (b.region || "—") : (b.varietal || "—");
-        var stars = Number(b.rating) > 0 ? "★".repeat(Math.min(5, Math.trunc(Number(b.rating)))) : "—";
-        
-        // Détermination de la couleur d'âge
-        var ageStatus = self._agingStatus(b);
-        var ageRange = (b.aging_start_year || "-") + " → " + (b.aging_end_year || "-");
-
-        html.push('<tr data-edit-bottle="' + self._escape(b.id) + '">');
-        var cellar = cellarInfo[b.cellar_id];
-        var place = [
-          self._getShelfName(b.cellar_id, b.shelf_id),
-          self._laneLabel(b.lane),
-          "#" + (b.position || "—")
-        ].filter(Boolean).join(" · ");
-
-        html.push('<td>' + self._escape(b.wine_name) + '</td>');
-        html.push('<td><div class="loc-main">' + self._escape(cellar ? cellar.name : _T("unknown_cellar")) + '</div><div class="loc-sub">' + self._escape(place) + '</div></td>');
-        html.push('<td>' + self._escape(b.producer || "—") + '</td>');
-        html.push('<td>' + self._escape(b.vintage || "—") + '</td>');
-        html.push('<td>' + self._escape(regionVarietal) + '</td>');
-        html.push('<td>' + (Number(b.rating) > 0 ? '<span class="stars">' + self._escape(stars) + '</span>' : stars) + '</td>');
-        html.push('<td><span class="age-text" title="' + self._escape(self._agingStatusLabel(ageStatus)) + '">' + self._bottleGlyph(ageStatus) + self._escape(ageRange) + '</span></td>');
-        html.push('<td>' + self._escape(self._formatPrice(b.price)) + '</td>');
-        html.push('</tr>');
-      });
-    });
-
-    html.push('</tbody></table></div>');
+    html.push("</table></section>");
     return html.join("");
+  }
+
+  // "43 bottles", or "7 of 43 bottles" while a search or filter is on: the
+  // list's title is the one place that says how many bottles it shows.
+  _listTitle(visible, total, filtering) {
+    return filtering ? _TN("list_title_of", total, { shown: visible }) : _TN("list_title", total);
+  }
+
+  // One bottle of All Bottles: its label (or its silhouette), the name that
+  // opens it, the producer, where it stands, the vintage, region or grape,
+  // stars, the drinking window with its status and the price. Cells with
+  // nothing to show hold a dash in the table and nothing in the cards.
+  _listRow(bottle, visible, drawn) {
+    var self = this;
+    function esc(value) { return self._escape(value); }
+    var dash = '<span class="bl-dash" aria-hidden="true">—</span>';
+    var id = esc(bottle.id);
+    var name = bottle.wine_name || _T("unnamed_wine");
+    var producer = this._str(bottle.producer).trim();
+    var vintage = this._listKey(bottle, "vintage");
+    var origin = this._listKey(bottle, "region_varietal");
+    var stars = this._starsHtml(bottle.rating);
+    var price = this._hasPrice(bottle) ? this._formatPrice(bottle.price) : "";
+    var sub = producer ? esc(producer) + (vintage ? '<span class="bl-m"> · ' + vintage + "</span>" : "") : (vintage ? '<span class="bl-m">' + vintage + "</span>" : "");
+    var locate = drawn
+      ? '<button type="button" class="bl-locate" data-list-locate="' + id + '" tabindex="-1" aria-label="' + esc(_T("bt_show_in_cellar") + ": " + this._bottleTitle(bottle.id)) +
+        '" title="' + esc(_T("bt_show_in_cellar")) + '"></button>'
+      : "";
+    return '<tr class="bl-row" role="row" data-bottle-row="' + id + '"' + (visible ? "" : " hidden") + ">" +
+      '<td role="cell" class="c-thumb">' + this._bottleThumb(bottle) + "</td>" +
+      '<td role="cell" class="c-wine"><button type="button" class="bl-name" data-edit-bottle="' + id + '">' + esc(name) + "</button>" +
+        (sub ? '<span class="bl-sub">' + sub + "</span>" : "") + "</td>" +
+      '<td role="cell" class="c-loc"><span class="bl-loc"><span class="bl-crumb">' + this._bottlePlace(bottle).html + "</span>" + locate + "</span></td>" +
+      '<td role="cell" class="c-vin">' + (vintage ? esc(vintage) : dash) + "</td>" +
+      '<td role="cell" class="c-rv">' + (origin ? esc(origin) : dash) + "</td>" +
+      '<td role="cell" class="c-rate">' + (stars || dash) + "</td>" +
+      '<td role="cell" class="c-win">' + this._statusPill(bottle, false) + "</td>" +
+      '<td role="cell" class="c-price">' + (price ? esc(price) : dash) + "</td>" +
+      "</tr>";
+  }
+
+  // The rows of All Bottles in groups, each sorted. By type (red first, no
+  // type last), or, sorted by location, by cellar in the order the cellars
+  // stand (reversed along with the rows when descending).
+  _listGroups(bottles, col, desc) {
+    var self = this;
+    var compare = this._listCompare(col, desc);
+    var groups = [];
+    var byKey = {};
+    function group(key, label, color) {
+      if (!byKey[key]) {
+        byKey[key] = { key: key, label: label, color: color, rows: [] };
+        groups.push(byKey[key]);
+      }
+      return byKey[key];
+    }
+    if (col === "location") {
+      this._sortedCellars().forEach(function (c) {
+        group("c:" + c.id, c.name || _T("cellar"), self._safeColor(c.bg_color) || "var(--wcm-muted)");
+      });
+      bottles.forEach(function (b) {
+        (byKey["c:" + b.cellar_id] || group("c:?", _T("unknown_cellar"), "var(--wcm-muted)")).rows.push(b);
+      });
+      if (desc) groups.reverse();
+    } else {
+      _WCM_SHEET_TYPES.forEach(function (t) { group(t, self._wineTypeLabel(t), self._wineSurfaceColor(t)); });
+      bottles.forEach(function (b) { byKey[self._typeKey(b.wine_type)].rows.push(b); });
+    }
+    groups.forEach(function (g) { g.rows.sort(compare); });
+    return groups.filter(function (g) { return g.rows.length; });
+  }
+
+  // The value a bottle is sorted by in one column, or null when it has none
+  // (those rows go last, whichever the direction). Location is the order the
+  // bottles stand in: cellar, shelf from the top, back row before the front
+  // row, position. The drinking window sorts by urgency: past peak, at peak,
+  // ready, too young, each by the year the window ends.
+  _listKey(bottle, col) {
+    var text;
+    if (col === "wine_name" || col === "producer") {
+      text = this._str(bottle[col]).trim();
+      return text || null;
+    }
+    if (col === "region_varietal") {
+      text = this._str(String(bottle.country || "").trim().toLowerCase() === "france" ? bottle.region : bottle.varietal).trim();
+      return text || null;
+    }
+    if (col === "vintage" || col === "rating") {
+      var n = Number(bottle[col]);
+      return bottle[col] !== null && bottle[col] !== "" && Number.isFinite(n) && n > 0 ? n : null;
+    }
+    if (col === "price") return this._hasPrice(bottle) ? Number(bottle.price) : null;
+    if (col === "aging") {
+      var status = this._agingStatus(bottle);
+      if (status === "none") return null;
+      return { past: 0, peak: 1, ready: 2, young: 3 }[status] * 1e8 + Number(bottle.aging_end_year) * 1e4 + Number(bottle.aging_start_year);
+    }
+    // location
+    var at = this._listPlaces();
+    var c = at.cellar[bottle.cellar_id];
+    var s = at.shelf[bottle.cellar_id + "|" + bottle.shelf_id];
+    return (c === undefined ? 999 : c) * 1e7 + (s === undefined ? 999 : s) * 1e4 + (bottle.lane === "back" ? 0 : 5000) + (Number(bottle.position) || 0);
+  }
+
+  // Each cellar's and shelf's place in the order they are drawn, per data.
+  _listPlaces() {
+    var self = this;
+    var cellars = (this._data && this._data.cellars) || [];
+    if (this._placeCache && this._placeCache.cellars === cellars) return this._placeCache;
+    var at = { cellars: cellars, cellar: {}, shelf: {} };
+    this._sortedCellars().forEach(function (c, ci) {
+      at.cellar[c.id] = ci;
+      self._getSortedShelves(c).forEach(function (s, si) { at.shelf[c.id + "|" + s.id] = si; });
+    });
+    this._placeCache = at;
+    return at;
+  }
+
+  // Sort order of one column. Ties go by name, then by location.
+  _listCompare(col, desc) {
+    var self = this;
+    var collator = this._collator();
+    var keys = new Map();
+    function key(b, c) {
+      var cached = keys.get(b);
+      if (!cached) keys.set(b, cached = {});
+      if (!(c in cached)) cached[c] = self._listKey(b, c);
+      return cached[c];
+    }
+    function cmp(a, b, c, reverse) {
+      var x = key(a, c);
+      var y = key(b, c);
+      if (x === null || y === null) return x === y ? 0 : (x === null ? 1 : -1);
+      var d = typeof x === "number" ? x - y : collator.compare(x, y);
+      return reverse ? -d : d;
+    }
+    return function (a, b) {
+      return cmp(a, b, col, desc) || (col !== "wine_name" ? cmp(a, b, "wine_name", false) : 0) || (col !== "location" ? cmp(a, b, "location", false) : 0);
+    };
+  }
+
+  _collator() {
+    if (!this._collatorCache || this._collatorCache.lang !== _wcmLang) {
+      var collator;
+      try {
+        collator = new Intl.Collator(_wcmLang, { numeric: true, sensitivity: "base" });
+      } catch (err) {
+        collator = new Intl.Collator(undefined, { numeric: true, sensitivity: "base" });
+      }
+      this._collatorCache = { lang: _wcmLang, collator: collator };
+    }
+    return this._collatorCache.collator;
+  }
+
+  // Applies the search and filters to All Bottles on screen: rows that do
+  // not match hide, each group's count and the title follow, and with no
+  // match the empty state (did you mean, clear) takes the table's place.
+  _paintList(model) {
+    var root = this.shadowRoot;
+    var list = root && root.querySelector(".main-scroll-content [data-list]");
+    if (!list) return;
+    var filtering = model.filtering;
+    var ids = model.ids;
+    var visible = 0;
+    list.querySelectorAll("tbody[data-group]").forEach(function (group) {
+      var shown = 0;
+      var rows = group.rows;
+      for (var i = 1; i < rows.length; i++) {
+        var on = !filtering || ids.has(rows[i].getAttribute("data-bottle-row"));
+        if (rows[i].hidden === on) rows[i].hidden = !on;
+        if (on) shown++;
+      }
+      visible += shown;
+      if (group.hidden === !!shown) group.hidden = !shown;
+      var count = group.querySelector("[data-group-n]");
+      if (count && count.textContent !== String(shown)) count.textContent = String(shown);
+    });
+    var title = list.querySelector("[data-list-title]");
+    var text = this._listTitle(visible, model.total, filtering);
+    if (title && title.textContent !== text) title.textContent = text;
+    var none = visible === 0;
+    ["[data-list-table]", "[data-list-sortbox]"].forEach(function (sel) {
+      var el = list.querySelector(sel);
+      if (el && el.hidden !== none) el.hidden = none;
+    });
+    var empty = list.querySelector("[data-list-empty]");
+    if (!empty) return;
+    if (empty.hidden === none) empty.hidden = !none;
+    if (!none) return;
+    var html = this._renderNoResults();
+    if (empty._html !== html) {
+      empty.innerHTML = html;
+      empty._html = html;
+    }
+  }
+
+  // All Bottles' own controls: the column headers and, on narrow screens,
+  // the sort select and direction; the crosshair of a row; the empty state's
+  // button. (The names open their bottle through [data-edit-bottle].)
+  _bindListView(root) {
+    var self = this;
+    var list = root.querySelector(".main-scroll-content [data-list]") || root.querySelector(".main-scroll-content .bl-none");
+    if (!list) return;
+    list.addEventListener("click", function (e) {
+      var target = e.target && e.target.closest ? e.target.closest("[data-list-sort-col],[data-list-dir],[data-list-locate],[data-list-add]") : null;
+      if (!target) {
+        // A click anywhere else on a row opens its bottle, through the name
+        // (the row's one tab stop, which focus returns to).
+        var row = e.target && e.target.closest ? e.target.closest("tr[data-bottle-row]") : null;
+        var name = row && !e.target.closest("button,a,input,select") ? row.querySelector("[data-edit-bottle]") : null;
+        if (name) name.click();
+        return;
+      }
+      e.preventDefault();
+      e.stopPropagation();
+      if (target.hasAttribute("data-list-sort-col")) {
+        var col = target.getAttribute("data-list-sort-col");
+        self._sortOrder = self._sortColumn === col && self._sortOrder !== "desc" ? "desc" : "asc";
+        self._sortColumn = col;
+        self._renderKeepingFocus('[data-list-sort-col="' + col + '"]');
+      } else if (target.hasAttribute("data-list-dir")) {
+        self._sortOrder = self._sortOrder === "desc" ? "asc" : "desc";
+        self._renderKeepingFocus("[data-list-dir]");
+      } else if (target.hasAttribute("data-list-locate")) {
+        self._showInCellar(target.getAttribute("data-list-locate"));
+      } else {
+        var add = root.querySelector(self._data && self._data.cellars && self._data.cellars.length ? ".toolbar [data-add-bottle]" : ".toolbar [data-add-cellar]");
+        if (add) add.click();
+      }
+    });
+    var select = list.querySelector("[data-list-sort]");
+    if (select) {
+      select.addEventListener("change", function (e) {
+        e.stopPropagation();
+        self._sortColumn = select.value;
+        self._sortOrder = "asc";
+        self._renderKeepingFocus("[data-list-sort]");
+      });
+    }
+  }
+
+  // The bottles the Cellars view draws: in a slot inside its shelf's
+  // capacity, and the one drawn there. Kept per data load; only these can be
+  // shown in their cellar.
+  _drawnBottleIds() {
+    var data = this._data || {};
+    var bottles = data.bottles || [];
+    if (this._drawnCache && this._drawnCache.bottles === bottles && this._drawnCache.cellars === data.cellars) return this._drawnCache.ids;
+    var self = this;
+    var ids = new Set();
+    (data.cellars || []).forEach(function (cellar) {
+      var index = self._buildSlotIndex(bottles.filter(function (b) { return b.cellar_id === cellar.id; }));
+      (cellar.shelves || []).forEach(function (shelf) {
+        ["front", "back"].forEach(function (lane) {
+          for (var pos = 1; pos <= Number(shelf["capacity_" + lane] || 0); pos++) {
+            var drawn = index.get(String(shelf.id) + "|" + lane + "|" + pos);
+            if (drawn) ids.add(String(drawn.id));
+          }
+        });
+      });
+    });
+    this._drawnCache = { bottles: bottles, cellars: data.cellars, ids: ids };
+    return ids;
+  }
+
+  // Whether the Cellars view draws this bottle, so "Show in cellar" has
+  // somewhere to go.
+  _isBottleDrawn(bottle) {
+    return !!bottle && this._drawnBottleIds().has(String(bottle.id));
+  }
+
+  // A small label thumbnail: the photo when there is one, else the bottle
+  // drawn in its type's colors. A photo that fails to load leaves the tile in
+  // the type's color.
+  _bottleThumb(bottle) {
+    var image = bottle.image_path ? this._normalizeImagePath(bottle.image_path) : "";
+    return '<span class="wthumb" style="--type:' + this._wineSurfaceColor(bottle.wine_type || "unset") + '">' +
+      (image ? '<img src="' + this._escape(image) + '" alt="" loading="lazy" decoding="async" onerror="this.remove()">' : this._bottleArtSvg(bottle, { variant: "thumb" })) +
+      "</span>";
+  }
+
+  // The drinking window as a pill: the status glyph and color, the years,
+  // and the status in words (shown with withLabel, else for screen readers
+  // and as the tooltip).
+  _statusPill(bottle, withLabel) {
+    var status = this._agingStatus(bottle);
+    if (status === "none") {
+      return '<span class="wpill is-none">' + this._bottleGlyph("none", true) + "<span>" + this._escape(_T("bt_no_window")) + "</span></span>";
+    }
+    var label = this._agingStatusLabel(status);
+    var start = Number(bottle.aging_start_year);
+    var stop = Number(bottle.aging_end_year);
+    var years = start === stop ? String(start) : start + "–" + stop;
+    return '<span class="wpill is-' + status + '" title="' + this._escape(label + " · " + years) + '">' + this._bottleGlyph(status, true) +
+      (withLabel ? '<span class="wpill-l">' + this._escape(label) + "</span>" : '<span class="sr-only">' + this._escape(label) + ", </span>") +
+      '<span class="wpill-y">' + years + "</span></span>";
+  }
+
+  _starsHtml(rating) {
+    var n = Math.max(0, Math.min(5, Math.round(Number(rating) || 0)));
+    if (!n) return "";
+    return '<span class="wstars" role="img" aria-label="' + this._escape(_T("bt_stars", { n: n })) + '">' + "★".repeat(n) +
+      '<span class="off">' + "★".repeat(5 - n) + "</span></span>";
+  }
+
+  _hasPrice(bottle) {
+    var value = bottle && bottle.price;
+    return value !== null && value !== undefined && value !== "" && Number.isFinite(Number(value));
+  }
+
+  /* Stats, as a "what to drink" report, worked out from the bottles on hand
+     (so it always agrees with the other views): four figures with context,
+     the drinking window year by year, the bottles to open now and where they
+     are, then the types and the countries, whose items open All Bottles
+     filtered to them. */
+  _statsModel(data) {
+    var self = this;
+    var bottles = (data && data.bottles) || [];
+    var now = new Date().getFullYear();
+    // Worked out once per data load (and language, and year).
+    var cache = this._statsCache;
+    if (cache && cache.bottles === bottles && cache.cellars === (data && data.cellars) && cache.lang === _wcmLang && cache.now === now) return cache.model;
+    var wines = new Set();
+    var producers = new Set();
+    var ageSum = 0;
+    var aged = 0;
+    var oldest = null;
+    var value = 0;
+    var priced = 0;
+    var years = [];
+    for (var y = now; y <= now + _WCM_STATS_YEARS; y++) years.push({ year: y, total: 0, types: {} });
+    var types = {};
+    var countries = {};
+    var drinkNow = [];
+    var spellings = {};
+    bottles.forEach(function (b) {
+      // Spelling and accents do not make another wine or producer.
+      var producer = self._foldSearchText(b.producer);
+      wines.add(self._foldSearchText(b.wine_name) + "|" + producer);
+      if (producer) producers.add(producer);
+      // A vintage after this year (a typo, an en-primeur) has no age yet.
+      var vintage = self._listKey(b, "vintage");
+      if (vintage && vintage <= now) {
+        ageSum += now - vintage;
+        aged++;
+        if (oldest === null || vintage < oldest) oldest = vintage;
+      }
+      if (self._hasPrice(b)) {
+        value += Number(b.price);
+        priced++;
+      }
+      var type = self._typeKey(b.wine_type);
+      types[type] = (types[type] || 0) + 1;
+      var country = self._countryKey(b.country);
+      countries[country] = (countries[country] || 0) + 1;
+      if (country) {
+        var spelled = spellings[country] || (spellings[country] = {});
+        var label = String(b.country).trim();
+        spelled[label] = (spelled[label] || 0) + 1;
+      }
+      var status = self._agingStatus(b);
+      if (status === "none") return;
+      if (status === "peak" || status === "past") drinkNow.push(b);
+      var from = Math.max(Number(b.aging_start_year), now);
+      var to = Math.min(Number(b.aging_end_year), now + _WCM_STATS_YEARS);
+      for (var year = from; year <= to; year++) {
+        var row = years[year - now];
+        row.total++;
+        row.types[type] = (row.types[type] || 0) + 1;
+      }
+    });
+    // Most urgent first: past peak (the longest past first), then at peak.
+    drinkNow.sort(function (a, b) {
+      var pa = self._agingStatus(a) === "past" ? 0 : 1;
+      var pb = self._agingStatus(b) === "past" ? 0 : 1;
+      return (pa - pb) || (Number(a.aging_end_year) - Number(b.aging_end_year)) || (Number(a.aging_start_year) - Number(b.aging_start_year)) ||
+        self._collator().compare(self._str(a.wine_name), self._str(b.wine_name));
+    });
+    var countryList = Object.keys(countries).map(function (key) {
+      return { key: key, label: key ? self._commonSpelling(spellings[key]) || key : "", count: countries[key] };
+    }).sort(function (a, b) {
+      return (b.count - a.count) || ((a.key ? 0 : 1) - (b.key ? 0 : 1)) || self._collator().compare(a.label, b.label);
+    });
+    var capacity = this._cellarCapacity();
+    var model = {
+      now: now,
+      total: bottles.length,
+      free: Math.max(0, capacity - bottles.length),
+      capacity: capacity,
+      wines: wines.size,
+      producers: producers.size,
+      averageAge: aged ? Math.round(ageSum / aged * 10) / 10 : null,
+      oldest: oldest,
+      value: value,
+      priced: priced,
+      years: years,
+      types: _WCM_SHEET_TYPES.filter(function (t) { return types[t]; }).map(function (t) { return { type: t, count: types[t] }; }),
+      countries: countryList.slice(0, _WCM_STATS_COUNTRIES),
+      drinkNow: drinkNow
+    };
+    this._statsCache = { bottles: bottles, cellars: data && data.cellars, lang: _wcmLang, now: now, model: model };
+    return model;
   }
 
   _renderStats(data) {
     var self = this;
-    var st = (data && data.stats) ? data.stats : null;
-
-    if (!st || !st.taste_window) {
-      return '<div class="empty-state">No statistical data available yet. Please add bottles with drinking windows.</div>';
+    function esc(value) { return self._escape(value); }
+    var m = this._statsModel(data);
+    if (!m.total) {
+      // No bottle left: what was drunk last can still be put back.
+      return '<div class="st" data-stats><section class="st-none" aria-labelledby="st-none-t"><div class="bl-start"><span class="bl-start-art" aria-hidden="true">' + _WCM_ICONS.chart + "</span>" +
+        '<h2 class="bl-title" id="st-none-t">' + esc(_T("stats_empty_title")) + '</h2><p class="bl-start-sub">' + esc(_T("stats_empty_body")) + "</p></div></section>" +
+        this._renderRecentlyEnjoyed(data) + "</div>";
     }
-
-    // --- CHART 1 : REPAIRED SVG DONUT FOR WINE TYPES ---
-    var allowedTypes = ["unset", "red", "white", "rosé", "sparkling", "orange", "sweet", "other"];
-    var typeCounts = {};
-    allowedTypes.forEach(function(t) { typeCounts[t] = 0; });
-    
-    (data.bottles || []).forEach(function(b) {
-      var t = b.wine_type || "other";
-      if (typeCounts[t] !== undefined) typeCounts[t]++;
-      else typeCounts["other"]++;
-    });
-
-    var totalB = st.total_bottles || 1;
-    var pieRadius = 50;
-    var pieCircumference = 2 * Math.PI * pieRadius;
-    var currentAngle = -90; // Commencer le premier arc tout en haut
-    
-    var donutSegmentsHtml = [];
-    var donutLegendHtml = [];
-    var globalLegendHtml = []; // Pour le graphique du bas
-
-    // Dictionnaire de traduction respectant les majuscules pour les statistiques
-    var typeLabels = {
-      "unset": _T("not_specified"),
-      "red": _T("red"),
-      "white": _T("white"),
-      "rosé": _T("rose"),
-      "sparkling": _T("sparkling"),
-      "orange": "Orange",
-      "sweet": _T("sweet"),
-      "other": _T("other")
-    };
-
-    allowedTypes.forEach(function(t) {
-      var count = typeCounts[t];
-      var color = self._wineSurfaceColor(t);
-      var labelText = typeLabels[t] || t;
-      
-      // Construire la légende globale horizontale (utilisée sous le graphique du bas)
-      globalLegendHtml.push(
-        '<div style="display:flex;align-items:center;gap:6px;font-size:0.82rem;white-space:nowrap">' +
-        '  <span style="display:inline-block;width:10px;height:10px;border-radius:2px;background:' + color + '"></span>' +
-        '  <span>' + self._escape(labelText) + '</span>' +
-        '</div>'
-      );
-
-      if (count === 0) return;
-      
-      var percentage = (count / totalB) * 100;
-      var strokeDashArray = (percentage / 100) * pieCircumference;
-
-      donutSegmentsHtml.push(
-        '<circle cx="80" cy="80" r="' + pieRadius + '" fill="transparent" ' +
-        ' stroke="' + color + '" stroke-width="18" ' +
-        ' stroke-dasharray="' + strokeDashArray + ' ' + (pieCircumference - strokeDashArray) + '" ' +
-        ' stroke-dashoffset="0" ' +
-        ' transform="rotate(' + currentAngle + ' 80 80)"></circle>'
-      );
-
-      currentAngle += (percentage / 100) * 360;
-
-      donutLegendHtml.push(
-        '<div style="display:flex;align-items:center;gap:8px;font-size:0.88rem;margin-bottom:4px">' +
-        '  <span style="display:inline-block;width:12px;height:12px;border-radius:3px;background:' + color + ';border:1px solid rgba(255,255,255,0.1)"></span>' +
-        '  <span style="font-weight:600">' + self._escape(labelText) + '</span>' +
-        '  <span style="color:var(--secondary-text-color)">(' + count + ' — ' + Math.round(percentage) + '%)</span>' +
-        '</div>'
-      );
-    });
-
-    // --- CHART 2 : HORIZONTAL BARS FOR COUNTRIES ---
-    var topCountries = st.top_countries || [];
-    var maxCountryCount = topCountries.length ? Math.max.apply(null, topCountries.map(function(c) { return c.count; })) : 1;
-    
-    var countriesHtml = topCountries.map(function(c) {
-      var barPct = (c.count / maxCountryCount) * 100;
-      return [
-        '<div style="margin-bottom:10px">',
-        '  <div style="display:flex;justify-content:space-between;font-size:0.85rem;font-weight:600;margin-bottom:4px">',
-        '    <span>' + self._escape(c.country) + '</span>',
-        '    <span style="margin-left:auto;color:var(--secondary-text-color)">' + c.count + '</span>',
-        '  </div>',
-        '  <div style="width:100%;height:10px;background:var(--wcm-tonal-strong);border-radius:5px;overflow:hidden">',
-        '    <div style="width:' + barPct + '%;height:100%;background:var(--wcm-accent);border-radius:5px"></div>',
-        '  </div>',
-        '</div>'
-      ].join("");
-    }).join("");
-
-    if (!countriesHtml) {
-      countriesHtml = '<div class="empty-state" style="padding:10px">No countries listed.</div>';
+    if (!this._statsNumber || this._statsNumber.lang !== _wcmLang) {
+      this._statsNumber = { lang: _wcmLang, format: new Intl.NumberFormat(_wcmLang, { maximumFractionDigits: 1 }) };
     }
-
-    // --- CHART 3 : STACKED VERTICAL BARS (TASTING WINDOW) ---
-    var tasteWindow = st.taste_window || {};
-    var years = Object.keys(tasteWindow).sort();
-    
-    var maxYearTotal = 1;
-    years.forEach(function(y) {
-      var yearTotal = 0;
-      allowedTypes.forEach(function(t) {
-        yearTotal += (tasteWindow[y][t] || 0);
-      });
-      if (yearTotal > maxYearTotal) maxYearTotal = yearTotal;
-    });
-
-    var svgWidth = 800;
-    var svgHeight = 220;
-    var chartTopPadding = 15;
-    var chartBottomPadding = 25;
-    var chartLeftPadding = 35;
-    var chartRightPadding = 15;
-    
-    var graphHeight = svgHeight - chartTopPadding - chartBottomPadding;
-    var graphWidth = svgWidth - chartLeftPadding - chartRightPadding;
-    
-    var barWidth = Math.max(15, Math.floor(graphWidth / (years.length || 1)) - 16);
-    var xStep = graphWidth / (years.length || 1);
-
-    var svgContent = [];
-
-    // Lignes de repère Y
-    for (var l = 1; l <= 3; l++) {
-      var yVal = Math.round((maxYearTotal / 3) * l);
-      var yPos = svgHeight - chartBottomPadding - ((yVal / maxYearTotal) * graphHeight);
-      svgContent.push('<line x1="' + chartLeftPadding + '" y1="' + yPos + '" x2="' + (svgWidth - chartRightPadding) + '" y2="' + yPos + '" stroke="color-mix(in srgb, var(--primary-text-color) 8%, transparent)" stroke-dasharray="4,4" />');
-      svgContent.push('<text x="' + (chartLeftPadding - 8) + '" y="' + (yPos + 4) + '" fill="var(--secondary-text-color)" font-size="10" text-anchor="end">' + yVal + '</text>');
+    var number = this._statsNumber.format;
+    // chars: how long the value reads, in digits, for its size (see the CSS).
+    function kpi(icon, label, valueHtml, sub, chars) {
+      return '<div class="st-kpi" style="--chars:' + Math.max(4, chars) + '"><span class="st-kpi-ico" aria-hidden="true">' + _WCM_ICONS[icon] + '</span><span class="st-kpi-l">' + esc(label) + "</span>" +
+        '<span class="st-kpi-v">' + valueHtml + '</span><span class="st-kpi-s">' + (sub ? esc(sub) : "&nbsp;") + "</span></div>";
     }
-    svgContent.push('<line x1="' + chartLeftPadding + '" y1="' + (svgHeight - chartBottomPadding) + '" x2="' + (svgWidth - chartRightPadding) + '" y2="' + (svgHeight - chartBottomPadding) + '" stroke="color-mix(in srgb, var(--primary-text-color) 20%, transparent)" stroke-width="1.5" />');
-
-    // Génération des rectangles empilés sans texte numérique dessus
-    years.forEach(function(year, idx) {
-      var xPos = chartLeftPadding + (idx * xStep) + (xStep - barWidth) / 2;
-      var currentYOffset = 0;
-
-      svgContent.push('<text x="' + (xPos + barWidth / 2) + '" y="' + (svgHeight - 8) + '" fill="var(--primary-text-color)" font-size="11" font-weight="600" text-anchor="middle">' + year + '</text>');
-
-      allowedTypes.forEach(function(t) {
-        var count = tasteWindow[year][t] || 0;
-        if (count === 0) return;
-
-        var barHeight = (count / maxYearTotal) * graphHeight;
-        var yPos = svgHeight - chartBottomPadding - barHeight - currentYOffset;
-        var color = self._wineSurfaceColor(t);
-
-        svgContent.push(
-          '<rect x="' + xPos + '" y="' + yPos + '" width="' + barWidth + '" height="' + barHeight + '" ' +
-          ' fill="' + color + '" rx="2" style="transition:all 0.2s ease" />'
-        );
-
-        currentYOffset += barHeight;
-      });
-    });
-
-
-    return [
-      '<div class="stats-summary-grid">',
-      '  <div class="stats-card"><div class="stats-card-label">' + _T("total_bottles") + '</div><div class="stats-card-value">' + (st.total_bottles || 0) + '</div></div>',
-      '  <div class="stats-card"><div class="stats-card-label">' + _T("different_wines") + '</div><div class="stats-card-value">' + (st.unique_wines_count || 0) + '</div></div>',
-      '  <div class="stats-card"><div class="stats-card-label">' + _T("average_age") + '</div><div class="stats-card-value">' + (st.average_age || 0) + ' <span style="font-size:0.9rem;font-weight:normal;color:var(--secondary-text-color)">' + _T("years") + '</span></div></div>',
-      '  <div class="stats-card"><div class="stats-card-label">' + _T("total_value") + '</div><div class="stats-card-value">' + self._formatPrice(st.total_value || 0) + '</div></div>',
-      '</div>',
-      
-      '<div class="stats-charts-split">',
-      '  <div class="stats-panel">',
-      '    <h4>' + _T("distribution_by_type") + '</h4>',
-      '    <div style="display:flex;align-items:center;justify-content:center;gap:24px;flex-wrap:wrap;padding:10px 0">',
-      '      <svg width="160" height="160" viewBox="0 0 160 160">',
-               donutSegmentsHtml.join(""),
-      '        <circle cx="80" cy="80" r="34" fill="var(--wcm-surface)"></circle>',
-      '        <text x="80" y="86" text-anchor="middle" font-weight="bold" font-size="14" fill="var(--primary-text-color)">' + (st.total_bottles || 0) + '</text>',
-      '      </svg>',
-      '      <div style="display:flex;flex-direction:column;justify-content:center">',
-               donutLegendHtml.join(""),
-      '      </div>',
-      '    </div>',
-      '  </div>',
-      '  <div class="stats-panel">',
-      '    <h4>' + _T("top_countries_of_origin") + '</h4>',
-      '    <div style="padding:4px 0">' + countriesHtml + '</div>',
-      '  </div>',
-      '</div>',
-
-      '<div class="stats-panel chart-full-width">',
-      '  <h4>' + self._t("taste_window_title") + ' (' + _T("bottles_ready_to_drink_by_year") + ')</h4>',
-      '  <div style="width:100%;overflow-x:auto;padding-top:4px;margin-bottom:12px">',
-      '    <svg width="' + svgWidth + '" height="' + svgHeight + '" viewBox="0 0 ' + svgWidth + ' ' + svgHeight + '" style="display:block;margin:0 auto">',
-             svgContent.join(""),
-      '    </svg>',
-      '  </div>',
-      '  <!-- Horizontal Color Legend for Stacked Chart -->',
-      '  <div style="display:flex;gap:12px 16px;flex-wrap:wrap;justify-content:center;border-top:1px solid color-mix(in srgb,var(--primary-text-color) 8%, transparent);padding-top:12px;margin-top:4px">',
-           globalLegendHtml.join(""),
-      '  </div>',
-      '</div>'
+    var total = number.format(m.total);
+    var wines = number.format(m.wines);
+    var age = m.averageAge === null ? "" : number.format(m.averageAge);
+    var value = m.priced ? this._formatPrice(m.value) : "";
+    var kpis = [
+      kpi("wineBottle", _T("total_bottles"), esc(total), m.capacity ? _TN("stats_free", m.free) : "", total.length),
+      kpi("grapes", _T("different_wines"), esc(wines), _TN("stats_producers", m.producers), wines.length),
+      // The unit is set smaller: it counts for about half its letters.
+      kpi("clock", _T("average_age"), age ? esc(age) + "<small>" + esc(_T("years")) + "</small>" : '<span class="st-kpi-na">—</span>',
+        m.oldest ? _T("stats_oldest", { y: m.oldest }) : "", age.length + _T("years").length / 2),
+      m.priced ? kpi("coins", _T("total_value"), esc(value), _T("stats_per_bottle", { v: this._formatPrice(m.value / m.priced) }), value.length) : ""
     ].join("");
+
+    // The report says its language, so its figures' labels hyphenate by its
+    // rules (see .st-kpi-l).
+    return '<div class="st" data-stats lang="' + esc(_wcmLang) + '">' +
+      '<div class="st-kpis' + (m.priced ? "" : " is-three") + '">' + kpis + "</div>" +
+      '<div class="st-main">' + this._renderDrinkChart(m) + this._renderDrinkNow(m) + "</div>" +
+      '<div class="st-pair">' + this._renderTypeDonut(m) + this._renderCountryBars(m) + "</div>" +
+      this._renderRecentlyEnjoyed(data) +
+      '<p class="sr-only" id="st-open-hint">' + esc(_T("stats_open_hint")) + "</p>" +
+      "</div>";
+  }
+
+  // The bottles marked as enjoyed last, the latest first, each with Put
+  // back (to the slot it left, while that slot is free): the way back from a
+  // Consume made by mistake once its toast has gone.
+  _renderRecentlyEnjoyed(data) {
+    var self = this;
+    function esc(value) { return self._escape(value); }
+    var history = ((data && data.consumed_bottles) || []).slice().sort(function (a, b) {
+      return String(b.consumed_at || "").localeCompare(String(a.consumed_at || ""));
+    }).slice(0, _WCM_STATS_RECENT);
+    if (!history.length) return "";
+    var taken = {};
+    ((data && data.bottles) || []).forEach(function (b) {
+      taken[b.cellar_id + "|" + b.shelf_id + "|" + (b.lane === "back" ? "back" : "front") + "|" + Number(b.position)] = true;
+    });
+    var now = new Date();
+    var items = history.map(function (b) {
+      var name = b.wine_name || _T("unnamed_wine");
+      var title = b.vintage ? name + " " + b.vintage : name;
+      var lane = b.lane === "back" ? "back" : "front";
+      var shelf = self._getShelfById(b.cellar_id, b.shelf_id);
+      var pos = Number(b.position) || 0;
+      var fits = !!shelf && pos >= 1 && pos <= Number(shelf["capacity_" + lane] || 0);
+      var free = fits && !taken[b.cellar_id + "|" + b.shelf_id + "|" + lane + "|" + pos];
+      var when = "";
+      var at = b.consumed_at ? new Date(b.consumed_at) : null;
+      if (at && !isNaN(at.getTime())) {
+        try {
+          when = at.toLocaleDateString(_wcmLang, at.getFullYear() === now.getFullYear() ? { day: "numeric", month: "short" } : { day: "numeric", month: "short", year: "numeric" });
+        } catch (err) {
+          when = at.toISOString().slice(0, 10);
+        }
+      }
+      var action = free
+        ? '<button type="button" class="btn small-btn st-putback" data-restore-consumed="' + esc(b.id) + '" data-name="' + esc(title) + '" aria-label="' + esc(_T("stats_put_back_label", { name: title })) + '">' +
+          _WCM_ICONS.history + "<span>" + esc(_T("stats_put_back")) + "</span></button>"
+        : '<span class="st-hist-note">' + esc(_T(fits ? "stats_recent_taken" : "stats_recent_gone")) + "</span>";
+      return '<li class="st-hist-item">' + self._bottleThumb(b) +
+        '<span class="st-now-t"><span class="st-hist-name">' + esc(name) + (b.vintage ? ' <span class="st-now-vin">' + esc(b.vintage) + "</span>" : "") + "</span>" +
+        '<span class="st-hist-sub">' + esc(when ? _T("stats_recent_on", { date: when }) : _T("stats_recent_title")) +
+        (fits ? ' <span class="st-now-loc"><span class="bl-crumb">' + self._bottlePlace(b).html + "</span></span>" : "") + "</span></span>" +
+        action + "</li>";
+    }).join("");
+    return '<section class="st-panel st-hist" aria-labelledby="st-hist-t"><div class="st-head"><h3 class="st-title" id="st-hist-t">' + esc(_T("stats_recent_title")) + "</h3>" +
+      '<p class="st-sub">' + esc(_T("stats_recent_sub")) + '</p></div><ul class="st-hist-list">' + items + "</ul></section>";
+  }
+
+  // Bottles inside their drinking window, year by year from this year, each
+  // year's bar stacked by type. Ticks are round numbers, drawn to scale.
+  // Wide: vertical bars; narrow: one row per year (container query). A table
+  // gives screen readers the same numbers.
+  _renderDrinkChart(m) {
+    var self = this;
+    function esc(value) { return self._escape(value); }
+    var head = '<div class="st-head"><h3 class="st-title" id="st-dw-t">' + esc(_T("stats_window_title")) + '</h3><p class="st-sub">' + esc(_T("stats_window_sub")) + "</p></div>";
+    var max = 0;
+    var present = {};
+    m.years.forEach(function (row) {
+      if (row.total > max) max = row.total;
+      Object.keys(row.types).forEach(function (t) { present[t] = true; });
+    });
+    if (!max) {
+      return '<section class="st-panel st-dw" aria-labelledby="st-dw-t">' + head + '<p class="st-quiet">' + esc(_T("stats_window_none")) + "</p></section>";
+    }
+    var step = _wcmNiceStep(max, 4);
+    var top = Math.max(step, Math.ceil(max / step) * step);
+    var order = _WCM_SHEET_TYPES.filter(function (t) { return present[t]; });
+    var grid = "";
+    for (var tick = 0; tick <= top; tick += step) {
+      grid += '<span class="' + (tick ? "" : "is-base") + '" data-tick="' + tick + '" style="--at:' + (tick / top).toFixed(4) + '"><em>' + tick + "</em></span>";
+    }
+    // Screen readers get the same numbers as one sentence per year.
+    var said = [];
+    var bars = m.years.map(function (row) {
+      var isNow = row.year === m.now;
+      var parts = [];
+      var segs = order.map(function (t) {
+        var n = row.types[t] || 0;
+        if (!n) return "";
+        parts.push(self._wineTypeLabel(t) + " " + n);
+        return '<i style="--type:' + self._wineSurfaceColor(t) + ";--v:" + (n / row.total).toFixed(4) + '"></i>';
+      }).join("");
+      var tip = _TN("stats_year_bottles", row.total, { year: row.year }) + (parts.length ? " · " + parts.join(" · ") : "");
+      said.push(_TN("stats_year_bottles", row.total, { year: row.year + (isNow ? " (" + _T("stats_now") + ")" : "") }) + (parts.length ? " — " + parts.join(", ") : ""));
+      return '<li class="st-col' + (isNow ? " is-now" : "") + '" data-year="' + row.year + '" data-total="' + row.total + '" style="--h:' + (row.total / top).toFixed(4) + '" title="' + esc(tip) + '">' +
+        '<span class="st-track">' + (row.total ? '<span class="st-stack">' + segs + "</span>" : "") + '<b class="st-total">' + row.total + "</b></span>" +
+        '<span class="st-yr"><span>' + row.year + "</span>" + (isNow ? "<em>" + esc(_T("stats_now")) + "</em>" : "") + "</span></li>";
+    }).join("");
+    var legend = order.map(function (t) {
+      return '<span><i style="--type:' + self._wineSurfaceColor(t) + '"></i>' + esc(self._wineTypeLabel(t)) + "</span>";
+    }).join("");
+    var table = '<ol class="sr-only st-said" aria-label="' + esc(_T("stats_window_caption")) + '">' +
+      said.map(function (text) { return "<li>" + esc(text) + "</li>"; }).join("") + "</ol>";
+    return '<section class="st-panel st-dw" aria-labelledby="st-dw-t">' + head +
+      '<figure class="st-chart" data-chart data-top="' + top + '" data-step="' + step + '">' +
+      '<div class="st-plot" aria-hidden="true"><div class="st-grid">' + grid + '</div><ol class="st-bars">' + bars + "</ol></div>" +
+      '<figcaption class="st-legend" aria-hidden="true">' + legend + "</figcaption>" + table + "</figure></section>";
+  }
+
+  // At peak and past peak, the most urgent first, each with where it stands:
+  // a click opens the bottle, the crosshair shows it in its cellar, and the
+  // footer opens them all in All Bottles.
+  _renderDrinkNow(m) {
+    var self = this;
+    function esc(value) { return self._escape(value); }
+    var drawn = this._drawnBottleIds();
+    var list = m.drinkNow.slice(0, _WCM_STATS_DRINK_NOW);
+    var body;
+    if (!list.length) {
+      body = '<p class="st-quiet">' + esc(_T("stats_now_empty")) + "</p>";
+    } else {
+      body = '<ul class="st-now-list">' + list.map(function (b) {
+        var id = esc(b.id);
+        return '<li class="st-now-item">' + self._bottleThumb(b) +
+          '<span class="st-now-t"><button type="button" class="st-now-name" data-edit-bottle="' + id + '">' + esc(b.wine_name || _T("unnamed_wine")) +
+          (b.vintage ? ' <span class="st-now-vin">' + esc(b.vintage) + "</span>" : "") + "</button>" +
+          '<span class="st-now-loc"><span class="bl-crumb">' + self._bottlePlace(b).html + "</span></span>" +
+          self._statusPill(b, true) + "</span>" +
+          (drawn.has(String(b.id))
+            ? '<button type="button" class="bl-locate" data-stats-locate="' + id + '" aria-label="' + esc(_T("bt_show_in_cellar") + ": " + self._bottleTitle(b.id)) +
+              '" title="' + esc(_T("bt_show_in_cellar")) + '"></button>'
+            : "") +
+          "</li>";
+      }).join("") + "</ul>" +
+      '<button type="button" class="st-more" data-stats-facet="status" data-value="drink_now" aria-describedby="st-open-hint">' +
+        esc(_TN("stats_now_all", m.drinkNow.length)) + _WCM_ICONS.right + "</button>";
+    }
+    return '<section class="st-panel st-now" aria-labelledby="st-now-t"><div class="st-head"><h3 class="st-title" id="st-now-t">' + esc(_T("drink_now")) +
+      (m.drinkNow.length ? ' <span class="bl-gn">' + m.drinkNow.length + "</span>" : "") + '</h3><p class="st-sub">' + esc(_T("find_drink_now_hint")) + "</p></div>" + body + "</section>";
+  }
+
+  // Wine types: a donut with the total in its middle, and a legend whose
+  // rows open All Bottles on that type.
+  _renderTypeDonut(m) {
+    var self = this;
+    function esc(value) { return self._escape(value); }
+    var r = 64;
+    var c = 2 * Math.PI * r;
+    var gap = m.types.length > 1 ? 2.2 : 0;
+    var at = 0;
+    var arcs = m.types.map(function (item) {
+      var len = item.count / m.total * c;
+      var dash = Math.max(0.5, len - gap);
+      var arc = '<circle cx="86" cy="86" r="' + r + '" fill="none" stroke="' + self._wineSurfaceColor(item.type) + '" stroke-width="22" stroke-dasharray="' +
+        dash.toFixed(2) + " " + (c - dash).toFixed(2) + '" stroke-dashoffset="' + (-at).toFixed(2) + '" transform="rotate(-90 86 86)"/>';
+      at += len;
+      return arc;
+    }).join("");
+    var summary = m.types.map(function (item) { return self._wineTypeLabel(item.type) + " " + item.count; }).join(", ");
+    // Whole percentages that add up to 100 (largest remainders get the rest).
+    var pct = m.types.map(function (item) { return item.count / m.total * 100; });
+    var whole = pct.map(Math.floor);
+    var rest = 100 - whole.reduce(function (a, b) { return a + b; }, 0);
+    pct.map(function (p, i) { return i; }).sort(function (a, b) { return (pct[b] - whole[b]) - (pct[a] - whole[a]); }).slice(0, rest).forEach(function (i) { whole[i]++; });
+    var rows = m.types.map(function (item, i) {
+      return '<button type="button" class="st-leg" data-stats-facet="type" data-value="' + esc(item.type) + '" aria-describedby="st-open-hint">' +
+        '<i style="--type:' + self._wineSurfaceColor(item.type) + '"></i><span>' + esc(self._wineTypeLabel(item.type)) + "</span><b>" + item.count +
+        "</b><em>" + whole[i] + "%</em></button>";
+    }).join("");
+    return '<section class="st-panel" aria-labelledby="st-type-t"><div class="st-head"><h3 class="st-title" id="st-type-t">' + esc(_T("distribution_by_type")) + "</h3></div>" +
+      '<div class="st-types"><div class="st-donut"><svg viewBox="0 0 172 172" role="img" aria-label="' + esc(_T("distribution_by_type") + ": " + summary) + '">' +
+      '<circle cx="86" cy="86" r="' + r + '" fill="none" stroke="var(--wcm-tonal)" stroke-width="22"/>' + arcs + "</svg>" +
+      '<span class="st-donut-c" aria-hidden="true"><strong>' + m.total + "</strong><span>" + esc(_TN("stats_bottle_word", m.total)) + "</span></span></div>" +
+      '<div class="st-legs">' + rows + "</div></div></section>";
+  }
+
+  // The countries with the most bottles, as bars that open All Bottles on
+  // that country. Bottles with no country count as "Not specified".
+  _renderCountryBars(m) {
+    var self = this;
+    function esc(value) { return self._escape(value); }
+    var max = m.countries.reduce(function (most, item) { return Math.max(most, item.count); }, 1);
+    var rows = m.countries.map(function (item) {
+      var inner = "<b>" + esc(item.key ? item.label : _T("not_specified")) + '</b><em>' + item.count + '</em><span class="st-bar"><span style="--p:' + (item.count / max).toFixed(4) + '"></span></span>';
+      return item.key
+        ? '<button type="button" class="st-country" data-stats-facet="country" data-value="' + esc(item.key) + '" aria-describedby="st-open-hint">' + inner + "</button>"
+        : '<div class="st-country is-none">' + inner + "</div>";
+    }).join("");
+    return '<section class="st-panel" aria-labelledby="st-country-t"><div class="st-head"><h3 class="st-title" id="st-country-t">' + esc(_T("top_countries_of_origin")) + "</h3></div>" +
+      '<div class="st-countries">' + rows + "</div></section>";
+  }
+
+  // Stats' controls: a type, a country or "all to drink now" opens All
+  // Bottles filtered to it (search and other filters cleared first); the
+  // crosshair of a bottle to drink shows it in its cellar.
+  _bindStatsView(root) {
+    var self = this;
+    var stats = root.querySelector(".main-scroll-content [data-stats]");
+    if (!stats) return;
+    stats.addEventListener("click", function (e) {
+      var target = e.target && e.target.closest ? e.target.closest("[data-stats-facet],[data-stats-locate],[data-restore-consumed]") : null;
+      if (!target) return;
+      e.preventDefault();
+      e.stopPropagation();
+      if (target.hasAttribute("data-restore-consumed")) {
+        // Focus goes on to the entry after it (or before) once it has left.
+        var buttons = Array.prototype.slice.call(stats.querySelectorAll("[data-restore-consumed]"));
+        var at = buttons.indexOf(target);
+        var near = [buttons[at + 1], buttons[at - 1]].filter(Boolean).map(function (b) { return b.getAttribute("data-restore-consumed"); });
+        if (target.disabled) return;
+        target.disabled = true;
+        self._undoConsume(target.getAttribute("data-restore-consumed"), target.getAttribute("data-name"), { near: near }).then(function () {
+          if (target.isConnected) target.disabled = false;
+        });
+        return;
+      }
+      if (target.hasAttribute("data-stats-locate")) {
+        self._showInCellar(target.getAttribute("data-stats-locate"));
+        return;
+      }
+      self._showFacetInList(target.getAttribute("data-stats-facet"), target.getAttribute("data-value"));
+    });
+  }
+
+  // All Bottles with only this facet value on (a type, a country, a status
+  // preset).
+  _showFacetInList(name, value) {
+    this._clearFilters("all");
+    this._setFacet(name, value);
+    return this._openList();
+  }
+
+  // All Bottles from a link elsewhere in the card (a Stats figure, "+N
+  // more"): it opens at its top, whichever scrolls (the card, or the page
+  // under Home Assistant's header), with focus on its title, which says how
+  // many bottles it shows.
+  _openList() {
+    var self = this;
+    var root = this.shadowRoot;
+    var main = root && root.querySelector(".main-scroll-content");
+    if (main) main.scrollTop = 0;
+    this._view = "list";
+    return Promise.resolve(this.render(false)).then(function () {
+      if (self._visibleBand().page) {
+        var header = parseFloat(getComputedStyle(self).getPropertyValue("--header-height")) || 56;
+        self.style.scrollMarginTop = header + "px";
+        self.scrollIntoView({ block: "start", behavior: "auto" });
+        self.style.scrollMarginTop = "";
+      }
+      var title = root.querySelector("[data-list-title]");
+      if (title) title.focus({ preventScroll: true });
+    });
+  }
+
+  // Every slot of every cellar, front and back.
+  _cellarCapacity() {
+    var capacity = 0;
+    ((this._data && this._data.cellars) || []).forEach(function (c) {
+      (c.shelves || []).forEach(function (s) {
+        capacity += Number(s.capacity_front || 0) + Number(s.capacity_back || 0);
+      });
+    });
+    return capacity;
   }
 
   // Drinking window as a small timeline: the window in its aging color, and a
@@ -10410,6 +12971,17 @@ class WineCellarCard extends HTMLElement {
     this._syncCellarBuilder(form);
   }
 
+  // The styles of a render: the shared sheet, adopted once, or else a
+  // <style> at the top of the markup.
+  _styleTag() {
+    var sheet = _wcmStyleSheet();
+    if (sheet && "adoptedStyleSheets" in this.shadowRoot) {
+      if (this.shadowRoot.adoptedStyleSheets[0] !== sheet) this.shadowRoot.adoptedStyleSheets = [sheet];
+      return "";
+    }
+    return "<style>" + _WCM_STYLES + _WCM_ICON_STYLES + "</style>";
+  }
+
   async render(force) {
     if (!this.shadowRoot || !this._hass) return;
 
@@ -10444,14 +13016,12 @@ class WineCellarCard extends HTMLElement {
           key: this._modalKey()
         } : null,
         search: this._search || "",
-        filterType: this._filterType || "",
+        facets: this._facetKey(),
         formError: this._formError || "",
         actionMessage: this._actionMessage || "",
         scannerActive: this._scannerActive,
         sortColumn: this._sortColumn || "wine_name",
         sortOrder: this._sortOrder || "asc",
-        filterCountry: this._filterCountry || "",
-        filterReady: this._filterReady,
         config: this.config || null,
         viewingDuplicateManager: this._viewingDuplicateManager,
         foundSyntaxDuplicates: this._foundSyntaxDuplicates,
@@ -10459,7 +13029,8 @@ class WineCellarCard extends HTMLElement {
         duplicateManagerHasSearched: this._duplicateManagerHasSearched,
         copiedBottle: this._hasCopiedBottle(),
         toolbarNotice: this._toolbarNotice || "",
-        data: data
+        // The data by version (see _loadData): no need to serialize it again.
+        data: data === this._data ? this._dataVersion || 0 : JSON.stringify(data)
       });
 
       if (this._hasRendered && snapshot === this._lastSnapshot) {
@@ -10487,7 +13058,7 @@ class WineCellarCard extends HTMLElement {
       } else if (view === "compact") {
         body = this._renderCellars(data, "compact");
       } else if (view === "stats") {
-        body = this._renderStats ? this._renderStats(data) : '<div class="empty-state">Stats loading...</div>';
+        body = this._renderStats(data);
       } else {
         body = this._renderList(data);
       }
@@ -10502,15 +13073,18 @@ class WineCellarCard extends HTMLElement {
         searchCaret = [focusedSearch.selectionStart, focusedSearch.selectionEnd];
       }
 
+      // Stats has no search row, so no Filters panel either.
+      if (view === "stats") this._filterPanelOpen = false;
       this.shadowRoot.innerHTML =
-        "<style>" + _WCM_STYLES + "</style>" +
-        '<ha-card><div class="wrap' + (this.config && this.config.background === "wood" ? " wood" : "") + '">' + _WCM_BOTTLE_SHADE + this._renderToolbar() + '<div class="main-scroll-content">' + body + "</div>" + modal + cleanupModal + "</div></ha-card>";
-      
+        this._styleTag() +
+        '<ha-card><div class="wrap' + (this.config && this.config.background === "wood" ? " wood" : "") + '">' + _WCM_BOTTLE_SHADE + this._renderToolbar() +
+        '<div class="main-scroll-content" id="wcm-view" role="tabpanel" aria-labelledby="wcm-tab-' + view + '">' + body + "</div>" + modal + cleanupModal + "</div></ha-card>";
+
       var self = this;
       var root = this.shadowRoot;
 
       this._combo = null;
-      this._ensureWindowKeyHandler();
+      this._ensureWindowListeners();
       // This paint already reflects the current search (it is stored on
       // every keystroke), so a pending live-search update has nothing to add.
       if (this._searchTimer) {
@@ -10524,8 +13098,6 @@ class WineCellarCard extends HTMLElement {
           newSearch.setSelectionRange(searchCaret[0], searchCaret[1]);
         } catch (err) { /* selection not supported */ }
       }
-      // The All Bottles table was just rebuilt from the current filters.
-      this._listSignature = null;
 
       // Cabinets wider than the screen: overflow policy and each one's
       // remembered sideways scroll; then what the search does to the shelves
@@ -10604,56 +13176,72 @@ class WineCellarCard extends HTMLElement {
         };
       }
 
+      // View tabs. From the keyboard, focus stays on the tab just chosen.
       root.querySelectorAll("[data-view]").forEach(function (el) {
         el.onclick = function (e) {
           e.preventDefault();
           e.stopPropagation();
-          self._view = el.getAttribute("data-view");
+          var next = el.getAttribute("data-view");
+          var byKeyboard = e.detail === 0;
+          self._view = next;
           // Si on clique sur l'onglet Stats, on force un appel serveur (true) pour avoir des calculs 100% frais
-          var forceRefresh = (self._view === "stats");
-          self.render(forceRefresh);
+          Promise.resolve(self.render(next === "stats")).then(function () {
+            var tab = byKeyboard && root.querySelector('.toolbar [data-view="' + next + '"]');
+            if (tab) tab.focus({ preventScroll: true });
+          });
         };
       });
 
       var search = root.querySelector("[data-search]");
       if (search) {
+        var searchBox = search.parentNode;
         search.addEventListener("click", function (e) { e.stopPropagation(); });
         search.addEventListener("focus", function (e) { e.stopPropagation(); }, true);
         // Live search. Results are applied to the page already on screen
         // (_applyFiltersInPlace), never through a full re-render, so the box
         // keeps focus and caret and the first click after typing is not lost
         // to a DOM rebuild.
-        var applySearch = function (force) {
+        var applySearch = function (locate) {
           if (self._searchTimer) {
             clearTimeout(self._searchTimer);
             self._searchTimer = null;
           }
           self._search = search.value;
-          self._applyFiltersInPlace({ locate: true, forceLocate: force });
+          self._applyFiltersInPlace({ locate: locate });
         };
         search.addEventListener("input", function (e) {
           e.stopPropagation();
           self._search = search.value;
+          searchBox.classList.toggle("has-value", !!search.value);
           if (self._searchTimer) clearTimeout(self._searchTimer);
           self._searchTimer = setTimeout(function () {
             self._searchTimer = null;
-            applySearch(false);
-          }, 150);
+            applySearch(true);
+          }, 120);
         });
-        // The native clear (x) button.
-        search.addEventListener("search", function () {
-          if (!search.value) applySearch(false);
-        });
+        // Enter / Shift+Enter: the next or previous match; Escape clears
+        // the words, then the other filters; ArrowDown goes to the results.
         search.addEventListener("keydown", function (e) {
           e.stopPropagation();
           if (e.isComposing) return;
           if (e.key === "Enter") {
             e.preventDefault();
-            applySearch(true);
-          } else if (e.key === "Escape" && search.value) {
-            e.preventDefault();
-            search.value = "";
-            applySearch(false);
+            if (self._searchTimer || self._search !== search.value) applySearch(false);
+            self._stepMatch(e.shiftKey ? -1 : 1);
+          } else if (e.key === "Escape" || e.key === "Esc") {
+            if (search.value) {
+              e.preventDefault();
+              self._clearFilters("search");
+            } else if (self._facetCount()) {
+              e.preventDefault();
+              self._clearFilters("filters");
+            }
+          } else if (e.key === "ArrowDown") {
+            var chip = root.querySelector('[data-where-chips] [tabindex="0"]');
+            if (chip) {
+              e.preventDefault();
+              chip.focus();
+            }
           }
         });
         search.addEventListener("blur", function () {
@@ -10661,43 +13249,9 @@ class WineCellarCard extends HTMLElement {
         });
       }
 
-      var typeFilter = root.querySelector("[data-type-filter]");
-      if (typeFilter) {
-        typeFilter.addEventListener("click", function (e) { e.stopPropagation(); });
-        typeFilter.addEventListener("change", function (e) {
-          e.stopPropagation();
-          self._filterType = typeFilter.value;
-          typeFilter.classList.toggle("filter-active", !!typeFilter.value);
-          self._applyFiltersInPlace({ locate: true });
-        });
-      }
-
-      // Écouteur pour le nouveau sélecteur de filtrage par Pays
-      var countryFilter = root.querySelector("[data-country-filter]");
-      if (countryFilter) {
-        countryFilter.addEventListener("click", function (e) { e.stopPropagation(); });
-        countryFilter.addEventListener("change", function (e) {
-          e.stopPropagation();
-          self._filterCountry = countryFilter.value;
-          countryFilter.classList.toggle("filter-active", !!countryFilter.value);
-          self._applyFiltersInPlace({ locate: true });
-        });
-      }
-
-      // Écouteur pour le nouveau menu déroulant de filtrage par Âge
-      var ageFilter = root.querySelector("[data-age-filter]");
-      if (ageFilter) {
-        ageFilter.addEventListener("click", function (e) { e.stopPropagation(); });
-        ageFilter.addEventListener("change", function (e) {
-          e.stopPropagation();
-          self._filterReady = ageFilter.value;
-          ageFilter.classList.toggle("filter-active", !!ageFilter.value);
-          self._applyFiltersInPlace({ locate: true });
-        });
-      }
-
-      // Column sorting and rows of All Bottles, and every Clear filters button.
-      this._bindListView(root, data);
+      // All Bottles' sorting and crosshairs; Stats' links to the list.
+      this._bindListView(root);
+      this._bindStatsView(root);
 
       var addCellar = root.querySelector("[data-add-cellar]");
       if (addCellar) {
@@ -11065,8 +13619,8 @@ class WineCellarCard extends HTMLElement {
       var cellarForm = root.querySelector("form[data-save-cellar]");
       if (cellarForm) this._bindCellarBuilder(cellarForm);
 
-      // Consume and Delete ask inside the dialog first (_showDialogConfirm);
-      // the dialog closes once the action is done.
+      // Consume acts at once (Undo in the toast); Delete asks inside the
+      // dialog first. The dialog closes once the action is done.
       var consumeBottle = root.querySelector("[data-consume-bottle]");
       if (consumeBottle) {
         consumeBottle.onclick = function (e) {
@@ -11225,6 +13779,14 @@ class WineCellarCard extends HTMLElement {
         root.addEventListener("keydown", function (e) { self._onDialogKeydown(e); }, true);
         root.addEventListener("click", function (e) { self._rememberActivator(e.target); }, true);
         this._bindMoveMode(root);
+        // The finding controls (chips, tokens, result strip, Filters, empty
+        // states) are redrawn in place, so they are handled here, once.
+        root.addEventListener("click", function (e) { self._onFindClick(e); });
+        root.addEventListener("keydown", function (e) { self._onFindKeydown(e); });
+        root.addEventListener("scroll", function (e) {
+          var el = e.target;
+          if (el && el.classList && el.classList.contains("x-fade")) self._updateFades(el);
+        }, true);
       }
       this._bindSiblingRings(root);
       try {
@@ -11232,6 +13794,11 @@ class WineCellarCard extends HTMLElement {
       } catch (err) {
         console.error("Wine Cellar: dialog focus update failed", err);
       }
+      // The Filters sheet (phones) after the dialogs, which set the page's
+      // inert state; then the pinned toolbar's measures, taken once the new
+      // page is laid out.
+      this._syncFilterSheet();
+      this._observeToolbar();
 
       // "Add label photo" or "Replace photo" opened the form: go to the
       // button that picks a photo.

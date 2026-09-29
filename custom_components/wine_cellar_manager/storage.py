@@ -600,6 +600,11 @@ class WineCellarStore:
         async with self._lock:
             return await self._async_consume_bottle_unlocked(bottle_id)
 
+    async def async_restore_consumed_bottle(self, consumed_id: str) -> str:
+        """Put a consumed bottle back in the slot it was taken from."""
+        async with self._lock:
+            return await self._async_restore_consumed_bottle_unlocked(consumed_id)
+
     async def async_copy_bottle(self, **kwargs: Any) -> str:
         """Copy a bottle into an active slot."""
         async with self._lock:
@@ -926,6 +931,50 @@ class WineCellarStore:
 
         await self.async_save(data)
         return source["id"]
+
+    async def _async_restore_consumed_bottle_unlocked(self, consumed_id: str) -> str:
+        """Move a consumed record back to the active bottles (undo of consume).
+
+        The bottle returns to the slot it left, with its original id when no
+        active bottle has taken that id since, and keeps everything else it
+        had (created_at, label photo, notes). The slot must still be free.
+        """
+        data = await self.async_load()
+        consumed = data["consumed_bottles"]
+
+        record = None
+        record_index = None
+        for index, bottle in enumerate(consumed):
+            if bottle.get("id") == consumed_id:
+                record = dict(bottle)
+                record_index = index
+                break
+
+        if record is None or record_index is None:
+            raise ValueError("Consumed bottle not found")
+
+        self._validate_slot_available(
+            data,
+            bottle_id=None,
+            cellar_id=str(record.get("cellar_id") or ""),
+            shelf_id=str(record.get("shelf_id") or ""),
+            lane=str(record.get("lane") or LANE_FRONT),
+            position=int(record.get("position", 0) or 0),
+        )
+
+        original_id = str(record.get("original_bottle_id") or "")
+        active_ids = {bottle.get("id") for bottle in data["bottles"]}
+        if original_id and original_id not in active_ids:
+            record["id"] = original_id
+        record["consumed_at"] = ""
+        record["original_bottle_id"] = ""
+        record["updated_at"] = _utcnow()
+
+        del consumed[record_index]
+        data["bottles"].append(self._normalize_bottle(record))
+
+        await self.async_save(data)
+        return record["id"]
 
     async def _async_copy_bottle_unlocked(
         self,

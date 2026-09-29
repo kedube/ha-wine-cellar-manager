@@ -20,6 +20,7 @@ from .const import (
     WS_TYPE_FIND_LABEL_DUPLICATES,
     WS_TYPE_GET_DATA,
     WS_TYPE_MOVE_BOTTLE,
+    WS_TYPE_RESTORE_BOTTLE,
     WS_TYPE_SAVE_BOTTLE,
     WS_TYPE_SAVE_CELLAR,
     WS_TYPE_SEARCH_BOTTLES,
@@ -179,6 +180,7 @@ def async_register_websockets(hass: HomeAssistant) -> None:
     websocket_api.async_register_command(hass, ws_delete_cellar)
     websocket_api.async_register_command(hass, ws_save_bottle)
     websocket_api.async_register_command(hass, ws_consume_bottle)
+    websocket_api.async_register_command(hass, ws_restore_consumed_bottle)
     websocket_api.async_register_command(hass, ws_delete_bottle)
     websocket_api.async_register_command(hass, ws_copy_bottle)
     websocket_api.async_register_command(hass, ws_move_bottle)
@@ -413,10 +415,34 @@ async def ws_consume_bottle(hass: HomeAssistant, connection: websocket_api.Activ
     entry = entries[0]
     store = hass.data[DOMAIN][entry.entry_id]["store"]
     try:
-        await store.async_consume_bottle(msg["bottle_id"])
-        connection.send_result(msg["id"], {"status": "success"})
+        consumed_id = await store.async_consume_bottle(msg["bottle_id"])
+        # The history record's id lets the card undo this (restore_consumed_bottle).
+        connection.send_result(msg["id"], {"status": "success", "consumed_id": consumed_id})
     except Exception as err:
         connection.send_error(msg["id"], "consume_failed", str(err))
+
+
+@websocket_api.websocket_command({vol.Required("type"): WS_TYPE_RESTORE_BOTTLE, vol.Required("consumed_id"): str})
+@websocket_api.async_response
+async def ws_restore_consumed_bottle(
+    hass: HomeAssistant,
+    connection: websocket_api.ActiveConnection,
+    msg: dict[str, Any],
+) -> None:
+    """Handle the undo of a consume: put the bottle back in its slot."""
+    entries = hass.config_entries.async_entries(DOMAIN)
+    if not entries:
+        connection.send_error(msg["id"], "no_entry", "Integration entry not found")
+        return
+    entry = entries[0]
+    store = hass.data[DOMAIN][entry.entry_id]["store"]
+    try:
+        bottle_id = await store.async_restore_consumed_bottle(msg["consumed_id"])
+        connection.send_result(msg["id"], {"status": "success", "bottle_id": bottle_id})
+    except Exception as err:
+        connection.send_error(msg["id"], "restore_failed", str(err))
+
+
 @websocket_api.websocket_command({vol.Required("type"): WS_TYPE_DELETE_BOTTLE, vol.Required("bottle_id"): str})
 @websocket_api.async_response
 async def ws_delete_bottle(hass: HomeAssistant, connection: websocket_api.ActiveConnection, msg: dict[str, Any]) -> None:

@@ -170,12 +170,12 @@ Each bottle card shows the bottle drawn in its style (Bordeaux, Burgundy, Champa
 The status chip pairs a symbol with a color, so it never relies on color alone:
 
 - **◷ Too young** (violet)
-- **✓ Ready to drink** (green)
+- **✓ Ready** (green)
 - **★ At peak**: the current year is the last year of the aging period (amber)
 - **! Past peak** (red)
 - **– No window**: the aging period is not set
 
-A legend under the filters repeats these symbols with the number of bottles in each state.
+The status chips next to the search repeat these symbols with the number of bottles in each state, and filter by them (see [Filters](#filters)).
 
 ![Drag and drop](images/drag_drop.png)
 
@@ -191,8 +191,8 @@ The location block shows where the bottle is (cellar, shelf, front or back row, 
 
 - **Show in cellar** closes the view and brings the bottle into view in the Cellar view, pulling its shelf out if it is in a back row.
 
-- **Delete** removes the bottle and all its information, after a confirmation inside the window.
-- **Consume** removes the bottle from the cellar but keeps its information, so it can be reused if a similar bottle is added later.
+- **Delete** removes the bottle and all its information, after a confirmation inside the window (it cannot be undone).
+- **Consume** removes the bottle from the cellar at once and keeps its information in the history, so it can be reused if a similar bottle is added later. A message offers **Undo** (Ctrl/Cmd+Z works too), which puts the same bottle back in its slot. Later, **Recently enjoyed** in Statistics can still put it back. If its slot has been filled since, the bottle stays in the history.
 - **Edit** opens the edit window (see below).
 - **Copy** temporarily keeps the bottle data in memory and closes the view. A banner confirms the copy and every empty slot pulses; clicking one copies all the fields into that slot, making it quick to add a second similar bottle. The copy can be cancelled from the banner, and expires after 10 minutes.
 
@@ -218,17 +218,30 @@ The Compact view has all the features of the Cellar view. The only difference is
 
 ![All Bottles](images/all_bottles.png)
 
-A table of all current bottles, grouped by type. The Location column shows where each bottle is stored (cellar, shelf, row, and position), and sorting by it lists bottles in the order they sit in your cellars. The Aging column shows the drinking window with its status symbol. Any column can be sorted in ascending or descending order. Clicking a row opens the same Bottle view as the Cellar and Compact views.
+A list of all current bottles. Each row shows the label photo (or the bottle drawn in its style), the wine and its producer, where it is (cellar › shelf › row #position) with a button that shows it in the cellar, the vintage, region or grape, the rating, the drinking window with its status symbol, and the price.
+
+- Click a column header to sort by name, producer, location, vintage, region or grape, rating, drinking window (most urgent first: past peak, at peak, ready, too young) or price. Bottles missing that value always go last.
+- Rows are grouped by wine type. Sorted by location, they are grouped by cellar and listed in the order they sit on the shelves.
+- The search and filters apply as you type, and the title says how many bottles match (for example "7 of 43 bottles").
+- On phones and narrow panels, the rows become cards with a Sort menu and a direction button.
+
+Clicking a bottle opens the same Bottle view as the Cellar and Compact views.
 
 ### Statistics
 
 ![Statistics](images/stats.png)
 
-Information and statistics for the current inventory, including total value and how many bottles reach their peak in each upcoming year.
+A "what to drink" report on the current inventory:
+
+- **Summary**: number of bottles and free slots, different wines and producers, average age and oldest vintage, and total value with the value per bottle (hidden when no bottle has a price).
+- **Drinking window**: how many bottles are inside their drinking window each year, from this year to ten years ahead, by wine type. This year is highlighted.
+- **Drink now**: the bottles at or past their peak, most urgent first, with where each one is.
+- **Distribution by type** and **Top countries of origin**: click a type or a country to see those bottles in All Bottles.
+- **Recently enjoyed**: the last bottles you consumed, with **Put back** to return one to its slot.
 
 ### Header controls
 
-The header switches between the four views and offers three buttons:
+The first row of the header switches between the four views (the arrow keys move between them), shows how many bottles you have and how many slots are free, and offers three buttons:
 
 - **+ Bottle**: opens the Add window on the next free slot (cellars in order, shelves top to bottom, front row before back). If every slot is taken, the header says so instead.
 - **+ Cellar**: opens the cellar builder, which is also used to edit a cellar (pencil button). It shows a live preview of the cabinet. Pick the frame finish (Graphite, Bordeaux lacquer, Oak, Olive, Azure, Slate or Brushed steel) and the cellar's position among your cellars. A new cellar can start from a template (Wine fridge 8 × 6, Staggered rack 5 × 6 + 5 behind, Open rack 4 × 8). Each shelf has a name, −/+ steppers for its front and back slots (up to 24; they can't go below a slot that holds a bottle), how many bottles it stores, and up/down arrows to reorder it. Remove is blocked, with the reason, while a shelf holds bottles. If Home Assistant refuses a save, the builder keeps every edit and says why next to Save.
@@ -240,16 +253,13 @@ The header switches between the four views and offers three buttons:
 
 ![Filters](images/filter.png)
 
-Every view except Statistics has filtering options. While any filter is active, matching bottles stay highlighted, the others fade, and the header shows how many bottles match. Under the filters, a summary line gives the number of bottles, the free slots, and how many bottles are in each aging state.
+The second row of the header holds the search, a **Filters** button and the status chips. They work in the Cellar, Compact and All Bottles views. While anything is active, matching bottles stay highlighted, the others fade, and **Clear all** resets everything.
 
-- **Search**: filters as you type. Every word must match somewhere in the name, producer, varietal, region, country, vintage, type, cellar, shelf, row or notes, and accents are ignored (`chateau` finds `Château`). If no match is on screen, the first one scrolls into view. Press `/` to jump to the search box and Escape to clear it. **Clear filters** resets the search and every filter.
-- **Aging**: shows bottles that are **Ready to drink** (the current year falls within their aging period) or to **Drink now** (bottles in their final peak year, or past it).
+- **Search**: filters as you type. Every word must match somewhere in the name, producer, varietal, region, country, vintage, type, cellar, shelf, row or notes, and accents are ignored (`chateau` finds `Château`). If no match is on screen, the first one scrolls into view. Press `/` to jump to the search box. Escape clears the words, and a second Escape clears the filters. With no match, the card suggests a close spelling ("Did you mean Barolo?").
+- **Status chips**: each chip shows a status symbol and how many bottles it would show with the other filters, and several can be pressed together. **Drink now** shows bottles at their peak or past it. **Ready to drink** shows bottles inside their drinking window (Ready or At peak).
+- **Filters**: wine type, country (different spellings of the same country are merged) and cellar. Active choices show as removable chips next to the status chips. On a phone, Filters opens from the bottom of the screen with a "Show N bottles" button.
 
-  ![Aging filter](images/aging.gif)
-
-- **Type** and **Country**: filter by wine type or country of origin.
-
-  ![Filtering by type](images/type.png)
+While a search or filter is active, a strip under the header says how many bottles match and in how many cellars, and lists each one with its exact place (for example `Kitchen › Reds (shelf 3) › Back #1`). Click one to jump to the bottle; a bottle in a back row gets its shelf pulled out. Enter and Shift+Enter in the search box step through the matches, and the down arrow moves into the list. Each cellar shows how many of its bottles match (cellars with none fade), and each shelf shows its own count.
 
 ### Layout details
 
@@ -257,9 +267,9 @@ Every view except Statistics has filtering options. While any filter is active, 
 - **Mobile friendly**: cellars scale to the full screen width in portrait mode. A cabinet wider than the screen scrolls sideways as a whole, opens centered on its bottles, and keeps each shelf's name in view while scrolling.
 - **Landscape and wide screens**: multiple cellars are shown side by side on mobile in landscape, tablets, or wider monitors when there is room.
 - **Theme aware**: all surfaces, text, and accents come from the active Home Assistant theme, so the card follows light mode, dark mode, and custom themes.
-- **Compact header**: the header stays anchored on larger screens, and extra padding is dropped on small phone screens.
+- **Compact header**: the header stays anchored on larger screens. On phones it is shorter, and while you scroll only the search row stays pinned at the top.
 - **Scroll position**: your scroll position is kept after minor interface refreshes.
-- **Keyboard support**: bottles and empty slots can be reached with Tab and opened with Enter or Space. Windows keep keyboard focus inside them, close with Escape, and return focus to where you were. Closing a window with unsaved changes asks first. Moving a bottle works from the keyboard (M, arrow keys, Enter, Escape), and the slot picker in the Add sheet is one Tab stop driven by the arrow keys.
+- **Keyboard support**: bottles and empty slots can be reached with Tab and opened with Enter or Space. Windows keep keyboard focus inside them, close with Escape, and return focus to where you were. Closing a window with unsaved changes asks first. Moving a bottle works from the keyboard (M, arrow keys, Enter, Escape), and the slot picker in the Add sheet is one Tab stop driven by the arrow keys. The view tabs and the search results under the header also move with the arrow keys.
 
 ## Notes
 
