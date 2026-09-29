@@ -109,11 +109,13 @@ type: custom:wine-cellar-card
 | --- | --- | --- | --- |
 | `background` | `wood` | Theme | By default the card follows your Home Assistant theme, light or dark. Set to `wood` to use a wood texture background instead. |
 | `interior` | `theme` | Lit | By default every cabinet is drawn as a lit wine fridge (dark back wall, LED-lit shelves, wooden floor) in both light and dark themes. Set to `theme` to keep your Home Assistant theme colors inside the cabinets. |
+| `empty_rows` | `condensed` | Full size | By default an empty position is a full-size outline in both rows, so every shelf keeps its shape. Set to `condensed` to draw a row that holds no bottles (front or back) as a strip of low "+" outlines, so shelves take less room. |
 
 ```yaml
 type: custom:wine-cellar-card
 background: wood
 interior: theme
+empty_rows: condensed
 ```
 
 ## Features
@@ -159,10 +161,8 @@ This is the default view. It shows every cellar the way it is physically laid ou
 
 Shelves appear in the order set within the cellar. Each shelf is a compartment with an LED strip, a wooden floor and a wooden lip at the front that carries the number of each front position.
 
-- On shelves with two rows, the back row stands behind the front row: smaller, in shade, and staggered into the gaps between the front bottles, the way a real rack holds them. At rest a back bottle shows its label, status, name and vintage.
-- Tap a shelf's lip, or the **Back row** plate on it, to pull the shelf out: the rows separate and the back row comes forward with every detail. Tap again or press Escape to push it back. Only one shelf is out at a time.
-- A search that finds a bottle in a back row pulls its shelf out by itself.
-- Empty front positions are low "+" outlines on the floor, and empty back positions are faint bottle outlines. Tap either to add a bottle there. While a bottle is being dragged, every empty position becomes a full-size drop target.
+- On shelves with two rows, the back row stands behind the front row, and both rows are drawn the same way: same size, in full view, with every detail. On a staggered shelf the back row sits half a position to the side, in the gaps between the front bottles, the way a real rack holds them.
+- Empty positions are faint bottle outlines with their number, in both rows. Tap one to add a bottle there. To save room, the `empty_rows: condensed` [card option](#card-options) draws a row that holds no bottles, front or back, as a strip of low "+" outlines.
 - On a phone, a cellar wider than the screen scrolls sideways. It starts at position 1 and remembers where you left it, and edge fades and "‹ n / n ›" chips show how many bottles are out of view.
 
 Each bottle card shows the bottle drawn in its style (Bordeaux, Burgundy, Champagne, a tall Alsace/Riesling bottle, a half bottle for sweet wines, or a Port bottle) in the color of its type. With a label photo, the whole label is shown, never cropped, with a small bottle in the corner. Under it come a status chip with the drinking window, the name, the producer, the vintage and grape (or region for France), and the rating. Identical bottles show a ×N badge, and hovering a bottle outlines every other bottle of the same wine. A bottle with no type or details shows a dashed "?" bottle and a **Needs details** chip.
@@ -189,7 +189,7 @@ Clicking on a card opens the Bottle view. Its header shows the wine's type, prod
 
 The location block shows where the bottle is (cellar, shelf, front or back row, position), a small cabinet with the shelf highlighted, and a top view of that shelf. For a back-row bottle it names the bottle in front of it, for example "Behind Barolo (front, position 1) — move it first". It also says how many bottles of this wine you have, with **Find all** to search for every one of them. The drinking-window timeline and the remaining details follow.
 
-- **Show in cellar** closes the view and brings the bottle into view in the Cellar view, pulling its shelf out if it is in a back row.
+- **Show in cellar** closes the view and brings the bottle into view in the Cellar view.
 
 - **Delete** removes the bottle and all its information, after a confirmation inside the window (it cannot be undone).
 - **Consume** removes the bottle from the cellar at once and keeps its information in the history, so it can be reused if a similar bottle is added later. A message offers **Undo** (Ctrl/Cmd+Z works too), which puts the same bottle back in its slot. Later, **Recently enjoyed** in Statistics can still put it back. If its slot has been filled since, the bottle stays in the history.
@@ -259,7 +259,7 @@ The second row of the header holds the search, a **Filters** button and the stat
 - **Status chips**: each chip shows a status symbol and how many bottles it would show with the other filters, and several can be pressed together. **Drink now** shows bottles at their peak or past it. **Ready to drink** shows bottles inside their drinking window (Ready or At peak).
 - **Filters**: wine type, country (different spellings of the same country are merged) and cellar. Active choices show as removable chips next to the status chips. On a phone, Filters opens from the bottom of the screen with a "Show N bottles" button.
 
-While a search or filter is active, a strip under the header says how many bottles match and in how many cellars, and lists each one with its exact place (for example `Kitchen › Reds (shelf 3) › Back #1`). Click one to jump to the bottle; a bottle in a back row gets its shelf pulled out. Enter and Shift+Enter in the search box step through the matches, and the down arrow moves into the list. Each cellar shows how many of its bottles match (cellars with none fade), and each shelf shows its own count.
+While a search or filter is active, a strip under the header says how many bottles match and in how many cellars, and lists each one with its exact place (for example `Kitchen › Reds (shelf 3) › Back #1`). Click one to jump to the bottle. Enter and Shift+Enter in the search box step through the matches, and the down arrow moves into the list. Each cellar shows how many of its bottles match (cellars with none fade), and each shelf shows its own count.
 
 ### Layout details
 

@@ -130,7 +130,6 @@ const WCM_TRANSLATIONS = {
     "shelf_empty": "Empty",
     "pasted_details": "Details copied from “{name}”. Check them and save.",
     "cleanup_check_pair": "Similar spelling, but it may be a different name. Check it before merging; Merge All skips it.",
-    "depth_back_row": "Back row",
     "depth_behind": "Behind {names}",
     "depth_behind_aria": "behind {names}",
     "depth_move_first": "move it first",
@@ -143,8 +142,6 @@ const WCM_TRANSLATIONS = {
     "depth_more_right": "{count} more to the right",
     "depth_more_slots_left": "More slots to the left",
     "depth_more_slots_right": "More slots to the right",
-    "depth_pull": "Pull out {shelf} to see its back row ({count} bottles)",
-    "depth_push": "Push {shelf} back in",
     "depth_shelf_named": "Shelf {n} · {name}",
     "depth_plan_back": "Back · wall",
     "depth_plan_front": "Front · door",
@@ -544,7 +541,6 @@ const WCM_TRANSLATIONS = {
     "shelf_empty": "Vide",
     "pasted_details": "Détails copiés depuis « {name} ». Vérifiez-les puis enregistrez.",
     "cleanup_check_pair": "Orthographe proche, mais il peut s'agir d'un autre nom. Vérifiez avant de fusionner ; « Fusionner tout » l'ignore.",
-    "depth_back_row": "Rang arrière",
     "depth_behind": "Derrière {names}",
     "depth_behind_aria": "derrière {names}",
     "depth_move_first": "à déplacer d’abord",
@@ -557,8 +553,6 @@ const WCM_TRANSLATIONS = {
     "depth_more_right": "{count} de plus à droite",
     "depth_more_slots_left": "Autres emplacements à gauche",
     "depth_more_slots_right": "Autres emplacements à droite",
-    "depth_pull": "Sortir la tablette {shelf} pour voir le rang arrière ({count} bouteilles)",
-    "depth_push": "Rentrer la tablette {shelf}",
     "depth_shelf_named": "Tablette {n} · {name}",
     "depth_plan_back": "Arrière · paroi",
     "depth_plan_front": "Avant · porte",
@@ -958,7 +952,6 @@ const WCM_TRANSLATIONS = {
     "err_no_entry": "Die Integration Wine Cellar Manager ist nicht eingerichtet.",
     "err_shelf_front_min": "„{shelf}“ hat eine Flasche auf der vorderen Position {n} und braucht daher mindestens {n} vordere Positionen.",
     "err_shelf_back_min": "„{shelf}“ hat eine Flasche auf der hinteren Position {n} und braucht daher mindestens {n} hintere Positionen.",
-    "depth_back_row": "Hintere Reihe",
     "depth_behind": "Hinter {names}",
     "depth_behind_aria": "hinter {names}",
     "depth_move_first": "zuerst herausnehmen",
@@ -971,8 +964,6 @@ const WCM_TRANSLATIONS = {
     "depth_more_right": "{count} weitere rechts",
     "depth_more_slots_left": "Weitere Plätze links",
     "depth_more_slots_right": "Weitere Plätze rechts",
-    "depth_pull": "{shelf} herausziehen, um die hintere Reihe zu sehen ({count} Flaschen)",
-    "depth_push": "{shelf} wieder einschieben",
     "depth_shelf_named": "Regal {n} · {name}",
     "depth_plan_back": "Hinten · Rückwand",
     "depth_plan_front": "Vorne · Tür",
@@ -1372,7 +1363,6 @@ const WCM_TRANSLATIONS = {
     "err_no_entry": "La integración Wine Cellar Manager no está configurada.",
     "err_shelf_front_min": "«{shelf}» tiene una botella en la posición delantera {n}, así que necesita al menos {n} posiciones delanteras.",
     "err_shelf_back_min": "«{shelf}» tiene una botella en la posición trasera {n}, así que necesita al menos {n} posiciones traseras.",
-    "depth_back_row": "Fila trasera",
     "depth_behind": "Detrás de {names}",
     "depth_behind_aria": "detrás de {names}",
     "depth_move_first": "sáquela primero",
@@ -1385,8 +1375,6 @@ const WCM_TRANSLATIONS = {
     "depth_more_right": "{count} más a la derecha",
     "depth_more_slots_left": "Más posiciones a la izquierda",
     "depth_more_slots_right": "Más posiciones a la derecha",
-    "depth_pull": "Sacar {shelf} para ver la fila trasera ({count} botellas)",
-    "depth_push": "Volver a meter {shelf}",
     "depth_shelf_named": "Estante {n} · {name}",
     "depth_plan_back": "Detrás · pared",
     "depth_plan_front": "Delante · puerta",
@@ -1786,7 +1774,6 @@ const WCM_TRANSLATIONS = {
     "err_no_entry": "L'integrazione Wine Cellar Manager non è configurata.",
     "err_shelf_front_min": "«{shelf}» ha una bottiglia nella posizione anteriore {n}, quindi servono almeno {n} posizioni anteriori.",
     "err_shelf_back_min": "«{shelf}» ha una bottiglia nella posizione posteriore {n}, quindi servono almeno {n} posizioni posteriori.",
-    "depth_back_row": "Fila dietro",
     "depth_behind": "Dietro {names}",
     "depth_behind_aria": "dietro {names}",
     "depth_move_first": "spostala prima",
@@ -1799,8 +1786,6 @@ const WCM_TRANSLATIONS = {
     "depth_more_right": "Altre {count} a destra",
     "depth_more_slots_left": "Altri posti a sinistra",
     "depth_more_slots_right": "Altri posti a destra",
-    "depth_pull": "Estrai {shelf} per vedere la fila dietro ({count} bottiglie)",
-    "depth_push": "Rimetti dentro {shelf}",
     "depth_shelf_named": "Ripiano {n} · {name}",
     "depth_plan_back": "Dietro · parete",
     "depth_plan_front": "Davanti · porta",
@@ -2200,7 +2185,6 @@ const WCM_TRANSLATIONS = {
     "err_no_entry": "De integratie Wine Cellar Manager is niet ingesteld.",
     "err_shelf_front_min": "‘{shelf}’ heeft een fles op voorste positie {n} en heeft daarom minstens {n} posities vooraan nodig.",
     "err_shelf_back_min": "‘{shelf}’ heeft een fles op achterste positie {n} en heeft daarom minstens {n} posities achteraan nodig.",
-    "depth_back_row": "Achterste rij",
     "depth_behind": "Achter {names}",
     "depth_behind_aria": "achter {names}",
     "depth_move_first": "eerst weghalen",
@@ -2213,8 +2197,6 @@ const WCM_TRANSLATIONS = {
     "depth_more_right": "Nog {count} rechts",
     "depth_more_slots_left": "Meer plekken links",
     "depth_more_slots_right": "Meer plekken rechts",
-    "depth_pull": "{shelf} uittrekken om de achterste rij te zien ({count} flessen)",
-    "depth_push": "{shelf} terugschuiven",
     "depth_shelf_named": "Plank {n} · {name}",
     "depth_plan_back": "Achter · wand",
     "depth_plan_front": "Voor · deur",
@@ -2614,7 +2596,6 @@ const WCM_TRANSLATIONS = {
     "err_no_entry": "A integração Wine Cellar Manager não está configurada.",
     "err_shelf_front_min": "“{shelf}” tem uma garrafa na posição da frente {n}, então precisa de pelo menos {n} posições na frente.",
     "err_shelf_back_min": "“{shelf}” tem uma garrafa na posição de trás {n}, então precisa de pelo menos {n} posições atrás.",
-    "depth_back_row": "Fila de trás",
     "depth_behind": "Atrás de {names}",
     "depth_behind_aria": "atrás de {names}",
     "depth_move_first": "retire-a primeiro",
@@ -2627,8 +2608,6 @@ const WCM_TRANSLATIONS = {
     "depth_more_right": "Mais {count} à direita",
     "depth_more_slots_left": "Mais posições à esquerda",
     "depth_more_slots_right": "Mais posições à direita",
-    "depth_pull": "Puxar {shelf} para ver a fila de trás ({count} garrafas)",
-    "depth_push": "Empurrar {shelf} de volta",
     "depth_shelf_named": "Prateleira {n} · {name}",
     "depth_plan_back": "Atrás · parede",
     "depth_plan_front": "Frente · porta",
@@ -3028,7 +3007,6 @@ const WCM_TRANSLATIONS = {
     "err_no_entry": "Integracja Wine Cellar Manager nie jest skonfigurowana.",
     "err_shelf_front_min": "„{shelf}” ma butelkę na przedniej pozycji {n}, więc potrzebuje co najmniej {n} pozycji z przodu.",
     "err_shelf_back_min": "„{shelf}” ma butelkę na tylnej pozycji {n}, więc potrzebuje co najmniej {n} pozycji z tyłu.",
-    "depth_back_row": "Tylny rząd",
     "depth_behind": "Za: {names}",
     "depth_behind_aria": "za: {names}",
     "depth_move_first": "najpierw ją wyjmij",
@@ -3041,8 +3019,6 @@ const WCM_TRANSLATIONS = {
     "depth_more_right": "Więcej po prawej: {count}",
     "depth_more_slots_left": "Więcej miejsc po lewej",
     "depth_more_slots_right": "Więcej miejsc po prawej",
-    "depth_pull": "Wysuń {shelf}, aby zobaczyć tylny rząd (butelki: {count})",
-    "depth_push": "Wsuń z powrotem {shelf}",
     "depth_shelf_named": "Półka {n} · {name}",
     "depth_plan_back": "Tył · ściana",
     "depth_plan_front": "Przód · drzwi",
@@ -3785,22 +3761,21 @@ const _WCM_STYLES =
         ".shelf.staggered .lane-front .lane-row,.shelf.staggered .lip-row{position:relative;left:calc(var(--pitch) / -4)}" +
         ".shelf.staggered .lip-row{padding:0 calc(var(--pitch) / 4)}" +
         ".shelf.inline :is(.lane-row,.lip-row){justify-content:flex-start;justify-self:center;width:calc(var(--nmax) * var(--pitch) - var(--slot-gap))}" +
-        /* Cellars view: a shelf compartment. At rest the back row stands behind the front row (smaller, in
-           shade, partly covered); pulled out (the lip, its plate, or a back-row search hit) the rows separate
-           over a deeper floor.
+        /* Cellars view: a shelf compartment. On a two-row shelf the back row stands behind the front row at
+           the same size, both rows in full view; a staggered shelf sets the rows half a slot apart, the way a
+           rack holds them.
            Shelves out of view skip layout and paint (content-visibility). Their stand-in height is the one
-           the shelf last had (--ish-c at rest, --ish-o pulled out; set by _rememberShelfHeights), else the
-           height the rows below add up to (head 20px + rows + lip), so a re-render or a jump to a bottle
-           never moves what is on screen. */
-        ".cellars-grid:not(.compact) .cabinet .shelf{--bs:.86;--band:8.75rem;--ov:calc((var(--slot-h) - var(--band)) * var(--bs));--row-gap:0px;--lip-h:26px;--floor-h:calc(var(--slot-h) * .34);--rw:calc(var(--nmax) * var(--pitch) - var(--slot-gap));padding:9px 10px 0;background:radial-gradient(46% 2px at 50% 5px,var(--cab-led-line),rgba(0,0,0,0)),linear-gradient(180deg,rgba(0,0,0,.62) 0,rgba(0,0,0,.18) 5px,rgba(0,0,0,0) 10px),radial-gradient(62% 120px at 50% 0,var(--cab-led),rgba(0,0,0,0)),radial-gradient(34% 44px at 50% 0,var(--cab-led),rgba(0,0,0,0)),linear-gradient(90deg,rgba(0,0,0,.45),rgba(0,0,0,0) 48px,rgba(0,0,0,0) calc(100% - 48px),rgba(0,0,0,.45)),linear-gradient(var(--cab-wall-top),var(--cab-wall-bottom));content-visibility:auto;contain-intrinsic-size:auto calc(var(--rw) + 20px + 2 * var(--tag-w)) auto var(--ish-c,calc(var(--slot-h) + var(--lip-h) + 18px))}" +
+           the shelf last had (--ish, set by _rememberShelfHeights), else the height the rows below add up to
+           (head 20px + rows + lip), so a re-render or a jump to a bottle never moves what is on screen. */
+        ".cellars-grid:not(.compact) .cabinet .shelf{--row-gap:0px;--lip-h:26px;--floor-h:calc(var(--slot-h) * .34);--rw:calc(var(--nmax) * var(--pitch) - var(--slot-gap));padding:9px 10px 0;background:radial-gradient(46% 2px at 50% 5px,var(--cab-led-line),rgba(0,0,0,0)),linear-gradient(180deg,rgba(0,0,0,.62) 0,rgba(0,0,0,.18) 5px,rgba(0,0,0,0) 10px),radial-gradient(62% 120px at 50% 0,var(--cab-led),rgba(0,0,0,0)),radial-gradient(34% 44px at 50% 0,var(--cab-led),rgba(0,0,0,0)),linear-gradient(90deg,rgba(0,0,0,.45),rgba(0,0,0,0) 48px,rgba(0,0,0,0) calc(100% - 48px),rgba(0,0,0,.45)),linear-gradient(var(--cab-wall-top),var(--cab-wall-bottom));content-visibility:auto;contain-intrinsic-size:auto calc(var(--rw) + 20px + 2 * var(--tag-w)) auto var(--ish,calc(var(--slot-h) + var(--lip-h) + 18px))}" +
         ".cellars-grid:not(.compact) .cabinet .shelf.staggered{--rw:calc(var(--nmax) * var(--pitch) - var(--slot-gap) + var(--pitch) / 2)}" +
-        ".cellars-grid:not(.compact) .cabinet .shelf.two-row{--floor-h:calc(var(--slot-h) - var(--ov));contain-intrinsic-size:auto calc(var(--rw) + 20px + 2 * var(--tag-w)) auto var(--ish-c,calc(var(--slot-h) * (1 + var(--bs)) - var(--ov) + 44px))}" +
-        /* An empty front row is only as tall as its footprints (or, on a two-row shelf, its Front tag). */
-        ".cellars-grid:not(.compact) .cabinet .shelf.one-row.front-empty{contain-intrinsic-size:auto calc(var(--rw) + 20px + 2 * var(--tag-w)) auto var(--ish-c,calc(var(--slot-h) * .3 + 50px))}" +
-        ".cellars-grid:not(.compact) .cabinet .shelf.two-row.front-empty{contain-intrinsic-size:auto calc(var(--rw) + 20px + 2 * var(--tag-w)) auto var(--ish-c,calc(var(--slot-h) * var(--bs) + 114px))}" +
-        ".cellars-grid:not(.compact) .cabinet .shelf.two-row:is(.open,.auto-open){--bs:.95;--row-gap:30px;--floor-h:calc(var(--slot-h) + var(--row-gap));contain-intrinsic-size:auto calc(var(--rw) + 20px + 2 * var(--tag-w)) auto var(--ish-o,calc(var(--slot-h) * (1 + var(--bs)) + var(--row-gap) + 44px))}" +
+        ".cellars-grid:not(.compact) .cabinet .shelf.two-row{--row-gap:30px;--floor-h:calc(var(--slot-h) + var(--row-gap));contain-intrinsic-size:auto calc(var(--rw) + 20px + 2 * var(--tag-w)) auto var(--ish,calc(var(--slot-h) * 2 + var(--row-gap) + 44px))}" +
+        /* With empty_rows: condensed, a row with no bottle (front-empty, back-empty) is a strip of low outlines. */
+        ".cellars-grid:not(.compact) .cabinet .shelf.one-row.front-empty{contain-intrinsic-size:auto calc(var(--rw) + 20px + 2 * var(--tag-w)) auto var(--ish,calc(var(--slot-h) * .3 + 50px))}" +
+        ".cellars-grid:not(.compact) .cabinet .shelf.two-row:is(.front-empty,.back-empty){contain-intrinsic-size:auto calc(var(--rw) + 20px + 2 * var(--tag-w)) auto var(--ish,calc(var(--slot-h) * 1.3 + var(--row-gap) + 54px))}" +
+        ".cellars-grid:not(.compact) .cabinet .shelf.two-row.front-empty.back-empty{contain-intrinsic-size:auto calc(var(--rw) + 20px + 2 * var(--tag-w)) auto var(--ish,calc(var(--slot-h) * .6 + var(--row-gap) + 64px))}" +
         ".cellars-grid:not(.compact) .cabinet .shelf::before{content:'';position:absolute;left:0;right:0;bottom:calc(var(--lip-h) - 9px);height:var(--floor-h);z-index:0;pointer-events:none;clip-path:polygon(3% 0,97% 0,100% 100%,0 100%);transition:height .22s ease-out;background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,0) 18px),linear-gradient(90deg,rgba(0,0,0,var(--floor-vig)),rgba(0,0,0,0) 16%,rgba(0,0,0,0) 84%,rgba(0,0,0,var(--floor-vig))),radial-gradient(52% 110% at 50% 100%,rgba(255,206,150,.10),rgba(0,0,0,0) 70%)," + _WCM_SLATS + " 0 0/100% 100% no-repeat,linear-gradient(rgba(0,0,0,var(--floor-dim-far)),rgba(0,0,0,var(--floor-dim-near))),linear-gradient(var(--cab-floor-far),var(--cab-floor-near))}" +
-        ".cellars-grid:not(.compact) .cabinet .shelf.two-row:is(.open,.auto-open)::before{background:linear-gradient(rgba(0,0,0,.66),rgba(0,0,0,0) 26px),linear-gradient(90deg,rgba(0,0,0,var(--floor-vig)),rgba(0,0,0,0) 16%,rgba(0,0,0,0) 84%,rgba(0,0,0,var(--floor-vig))),radial-gradient(60% 80% at 50% 100%,rgba(255,206,150,.14),rgba(0,0,0,0) 70%)," + _WCM_SLATS + " 0 0/100% 100% no-repeat,linear-gradient(rgba(0,0,0,var(--floor-dim-far)),rgba(0,0,0,var(--floor-dim-near))),linear-gradient(var(--cab-floor-far),var(--cab-floor-near))}" +
+        ".cellars-grid:not(.compact) .cabinet .shelf.two-row::before{background:linear-gradient(rgba(0,0,0,.66),rgba(0,0,0,0) 26px),linear-gradient(90deg,rgba(0,0,0,var(--floor-vig)),rgba(0,0,0,0) 16%,rgba(0,0,0,0) 84%,rgba(0,0,0,var(--floor-vig))),radial-gradient(60% 80% at 50% 100%,rgba(255,206,150,.14),rgba(0,0,0,0) 70%)," + _WCM_SLATS + " 0 0/100% 100% no-repeat,linear-gradient(rgba(0,0,0,var(--floor-dim-far)),rgba(0,0,0,var(--floor-dim-near))),linear-gradient(var(--cab-floor-far),var(--cab-floor-near))}" +
         ".cellars-grid:not(.compact) .cabinet .shelf-head{position:relative;z-index:1;min-height:18px;padding:0 calc(var(--tag-w) + 6px);font-size:.75rem;color:var(--wcm-muted)}" +
         ".cellars-grid:not(.compact) .cabinet .shelf-name{color:var(--wcm-text);font-size:.8125rem;letter-spacing:.01em}" +
         ".cellars-grid:not(.compact) .cabinet .shelf-count{display:inline-flex;align-items:center;gap:3px;height:20px;padding:0 8px;border-radius:999px;background:rgba(255,240,225,.07);box-shadow:inset 0 0 0 1px rgba(255,240,225,.12);font-size:.75rem;line-height:1;color:var(--wcm-muted)}" +
@@ -3810,44 +3785,22 @@ const _WCM_STYLES =
         /* Theme colors inside the cabinets: the small secondary lines sit in the back row's shade and the
            front row's shadow, so they take more of the text color than the theme's muted gray. */
         ".cellars-grid:not(.compact) .cabinet.themed :is(.bt-origin,.bt-producer,.shelf-count,.slot-pos){color:color-mix(in srgb,var(--wcm-text) 60%,var(--wcm-muted))}" +
-        ".cellars-grid:not(.compact) .cabinet .shelf.two-row .lane-back{margin-top:calc(var(--slot-h) * (var(--bs) - 1) + 4px);transition:margin-top .22s ease-out}" +
-        ".cellars-grid:not(.compact) .cabinet .shelf.two-row .lane-front{margin-top:calc(var(--ov) * -1);transition:margin-top .22s ease-out}" +
-        ".cellars-grid:not(.compact) .cabinet .shelf.two-row:is(.open,.auto-open) .lane-front{margin-top:var(--row-gap)}" +
+        ".cellars-grid:not(.compact) .cabinet .shelf.two-row .lane-back{margin-top:4px}" +
+        ".cellars-grid:not(.compact) .cabinet .shelf.two-row .lane-front{margin-top:var(--row-gap)}" +
         ".cellars-grid:not(.compact) .cabinet .shelf.one-row .lane-front{margin-top:4px}" +
         /* BACK / FRONT tags stay pinned while a phone scrolls the shelf sideways. */
         ".cellars-grid:not(.compact) .cabinet .lane-tag{position:sticky;left:0;z-index:8;pointer-events:none;padding:7px 2px;border-radius:6px;background:rgba(10,7,5,.78);color:#e3d8ce;font-size:.625rem;letter-spacing:.14em;box-shadow:0 0 0 1px rgba(255,236,214,.12)}" +
-        ".cellars-grid:not(.compact) .cabinet .lane-front .lane-tag{align-self:start;margin-top:calc(var(--ov) + 14px);transition:margin-top .22s ease-out}" +
-        ".cellars-grid:not(.compact) .cabinet .shelf:is(.open,.auto-open) .lane-front .lane-tag{margin-top:24px}" +
         ".cellars-grid:not(.compact) .cabinet .slot{transition:transform .22s ease-out,box-shadow .15s ease-out,opacity .2s ease-out,filter .2s ease-out,border-color .15s ease-out,background-color .15s ease-out}" +
-        ".cellars-grid:not(.compact) .cabinet .lane-back .slot{z-index:1;transform:scale(var(--bs));transform-origin:50% 100%}" +
+        ".cellars-grid:not(.compact) .cabinet .lane-back .slot{z-index:1}" +
         ".cellars-grid:not(.compact) .cabinet .lane-front .slot{z-index:2}" +
         /* The lip overlaps a front card's bottom 6px: keep the stars clear of it. */
         ".cellars-grid:not(.compact) .cabinet .lane-front .slot.filled{padding-bottom:11px}" +
         ".cellars-grid:not(.compact) .cabinet .slot.filled .bt-name{flex-shrink:0}" +
         ".cellars-grid:not(.compact) .cabinet .lane-front .slot.filled .bt-stars{margin-top:2px}" +
-        /* Empty positions sit under every filled bottle, so they can never take its clicks. */
-        ".cellars-grid:not(.compact) .cabinet .slot.empty{z-index:0}" +
         ".cellars-grid:not(.compact) .cabinet .slot.filled{border-color:color-mix(in srgb,var(--type) 38%,rgba(255,240,225,.10))}" +
-        ".cellars-grid:not(.compact) .cabinet .lane-front .slot.filled{--depth-sh:0 -12px 16px -8px rgba(0,0,0,.62),0 2px 3px rgba(0,0,0,.45);box-shadow:var(--depth-sh)}" +
-        ".cellars-grid:not(.compact) .cabinet .lane-back .slot.filled{--depth-sh:0 10px 12px -8px rgba(0,0,0,.85);box-shadow:var(--depth-sh)}" +
-        ".cellars-grid:not(.compact) .cabinet .shelf.one-row .lane-front .slot.filled,.cellars-grid:not(.compact) .cabinet .shelf:is(.open,.auto-open) .slot.filled{--depth-sh:0 2px 3px rgba(0,0,0,.45),0 14px 20px -12px rgba(0,0,0,.7)}" +
+        ".cellars-grid:not(.compact) .cabinet .slot.filled{--depth-sh:0 2px 3px rgba(0,0,0,.45),0 14px 20px -12px rgba(0,0,0,.7);box-shadow:var(--depth-sh)}" +
         ".cellars-grid:not(.compact) .cabinet .slot.filled::after{content:'';position:absolute;inset:0;border-radius:inherit;pointer-events:none;background:linear-gradient(180deg,rgba(255,236,214,.05),rgba(0,0,0,0) 28%,rgba(0,0,0,.14));transition:opacity .2s ease-out}" +
-        ".cellars-grid:not(.compact) .cabinet .lane-back .slot.filled::after{background:linear-gradient(180deg,rgba(10,6,4,.20),rgba(10,6,4,.34) 70%)}" +
-        /* At rest a back bottle shows its label, status, a two-line name and the vintage, all inside the band
-           above the front row; producer and stars wait until it is lifted or pulled out, so no text is ever
-           half covered. */
-        ".cellars-grid:not(.compact) .cabinet .shelf:not(.open):not(.auto-open) .lane-back .slot.filled:not(:focus-visible):not(.match){--bt-stage-h:calc(var(--slot-h) * .38)}" +
-        ".cellars-grid:not(.compact) .cabinet .shelf:not(.open):not(.auto-open) .lane-back .slot.filled:not(:focus-visible):not(.match) :is(.bt-producer,.bt-stars){display:none}" +
-        ".cellars-grid:not(.compact) .cabinet .shelf:not(.open):not(.auto-open) .lane-back .slot.filled:not(:focus-visible):not(.match) .bt-meta{margin-top:2px}" +
-        /* Lift: keyboard focus and a search match bring a back bottle forward over the front row. A pointer
-           never does (it always crosses the back row first on its way down): hovering or dragging over a back
-           bottle only lights it and nudges it up inside its own visible band. */
-        ".cellars-grid:not(.compact) .cabinet .lane-back .slot.filled:focus-visible{z-index:4;transform:scale(1)}" +
-        ".cellars-grid:not(.compact) .cabinet .shelf:not(.open):not(.auto-open) .lane-back .slot.filled.match{z-index:4;transform:scale(.98)}" +
-        "@media (hover:hover){.cellars-grid:not(.compact) .cabinet .shelf:not(.open):not(.auto-open) .lane-back .slot.filled:not(.match):not(:focus-visible):hover{transform:translateY(-3px) scale(var(--bs))}}" +
-        ".cellars-grid:not(.compact) .cabinet .lane-back .slot.filled:is(:hover,:focus-visible,.drag-over,.match)::after,.cellars-grid:not(.compact) .cabinet .shelf:is(.open,.auto-open) .lane-back .slot.filled::after{opacity:0}" +
-        ".cellars-grid:not(.compact) .cabinet .lane-back .slot.filled:focus-visible{--depth-sh:0 18px 26px -12px rgba(0,0,0,.9)}" +
-        ".cellars-grid:not(.compact) .cabinet .lane-front .slot:focus-visible,.cellars-grid:not(.compact) .cabinet .lane-front .slot.drag-over,.cellars-grid:not(.compact) .cabinet .lane-front .slot.filled.match{z-index:5}" +
+        ".cellars-grid:not(.compact) .cabinet .slot:is(:focus-visible,.drag-over),.cellars-grid:not(.compact) .cabinet .slot.filled.match{z-index:5}" +
         /* State rings compose with the depth shadow instead of replacing it. */
         ".cellars-grid:not(.compact) .cabinet .slot.filled:hover{box-shadow:0 0 0 2px var(--wcm-accent),var(--depth-sh)}" +
         ".cellars-grid:not(.compact) .cabinet .slot.filled.match{box-shadow:0 0 0 2px var(--wcm-accent),0 0 20px 1px color-mix(in srgb,var(--wcm-accent) 55%,transparent),var(--depth-sh)}" +
@@ -3855,8 +3808,8 @@ const _WCM_STYLES =
         ".cellars-grid:not(.compact) .cabinet .slot:focus-visible{outline:3px solid var(--wcm-accent);outline-offset:2px}" +
         ".cellars-grid:not(.compact) .cabinet .slot.filled:focus-visible{box-shadow:0 0 0 2px #fff6ec,var(--depth-sh)}" +
         ".cellars-grid:not(.compact) .cabinet .slot.empty:focus-visible{box-shadow:0 0 0 2px #fff6ec}" +
-        /* Empty positions: in front, a low footprint on the floor (never covers a back bottle); at the back, a
-           faint ghost against the back wall. */
+        /* Empty positions: a faint bottle outline with the position number, the same in both rows. In a
+           condensed empty row (empty_rows: condensed) they are low outlines with a + (footprints). */
         ".cellars-grid:not(.compact) .cabinet .slot.empty{color:var(--wcm-muted);border:1.5px dashed rgba(255,236,214,.24);background:rgba(255,240,225,.025)}" +
         ".cellars-grid:not(.compact) .cabinet .slot.empty .slot-pos{font-size:.75rem;font-weight:600;opacity:1}" +
         ".cellars-grid:not(.compact) .cabinet .slot.empty.ghost{justify-content:flex-start;padding-top:20px;gap:6px}" +
@@ -3867,35 +3820,15 @@ const _WCM_STYLES =
         ".cellars-grid:not(.compact) .cabinet .slot.empty.footprint .slot-pos{color:var(--wcm-text);opacity:.85}" +
         ".cellars-grid:not(.compact) .cabinet .slot.empty:hover,.cellars-grid:not(.compact) .cabinet .slot.empty:focus-visible,.cellars-grid:not(.compact) .cabinet .slot.empty.drag-over{border-color:var(--wcm-accent);border-style:solid;color:var(--wcm-text);background:color-mix(in srgb,var(--wcm-accent) 22%,rgba(8,5,3,.5))}" +
         ".cellars-grid:not(.compact) .cabinet .slot.empty:hover .fp-plus,.cellars-grid:not(.compact) .cabinet .slot.empty.drag-over .fp-plus{color:var(--wcm-accent)}" +
-        /* While a bottle is dragged, every empty front position grows to a full-size drop target. */
-        ".cellars-grid:is(.dragging,.placing):not(.compact) .cabinet .slot.empty.footprint{height:var(--slot-h);margin-bottom:0;border-radius:12px;flex-direction:column;border-style:dashed;border-color:color-mix(in srgb,var(--wcm-accent) 70%,transparent);background:color-mix(in srgb,var(--wcm-accent) 10%,rgba(8,5,3,.35))}" +
         ".cellars-grid:is(.dragging,.placing):not(.compact) .cabinet .slot.empty.ghost{border-color:color-mix(in srgb,var(--wcm-accent) 70%,transparent);background:color-mix(in srgb,var(--wcm-accent) 8%,rgba(8,5,3,.3))}" +
         ".cellars-grid:not(.compact) .cabinet.themed .slot.empty.footprint{background:color-mix(in srgb,var(--wcm-surface) 70%,transparent);border-color:color-mix(in srgb,var(--wcm-text) 34%,transparent);box-shadow:0 2px 6px -2px rgba(0,0,0,.25)}" +
         ".cellars-grid:not(.compact) .cabinet.themed .slot.empty.ghost{border-color:color-mix(in srgb,var(--wcm-text) 22%,transparent);background:color-mix(in srgb,var(--wcm-surface) 35%,transparent)}" +
-        ".cellars-grid:not(.compact) .cabinet.themed .lane-back .slot.filled::after{background:linear-gradient(180deg,rgba(0,0,0,.06),rgba(0,0,0,.14) 70%)}" +
-        /* The lip: a wooden front rail with each front position's number set into it. On a two-row shelf the
-           whole lip, and the "Back row" plate in it, pull the shelf out. */
+        /* The lip: a wooden front rail with each front position's number set into it. */
         ".cellars-grid:not(.compact) .cabinet .rail{position:relative;z-index:3;display:grid;grid-template-columns:var(--tag-w) 1fr var(--tag-w);align-items:center;height:var(--lip-h);margin:-6px -10px 0;padding:0 10px;border-radius:2px 2px 3px 3px;background:repeating-linear-gradient(90deg,rgba(40,20,6,.12) 0 1px,rgba(0,0,0,0) 1px 7px,rgba(255,226,190,.05) 7px 8px,rgba(0,0,0,0) 8px 19px),linear-gradient(180deg,#e2bf95 0,#c79a6c 1.5px,#a47a51 3.5px,#8d6443 42%,#734f33 86%,#583a23 100%);box-shadow:0 1px 0 rgba(0,0,0,.6),inset 0 -1px 0 rgba(0,0,0,.35),0 9px 12px -6px rgba(0,0,0,.8)}" +
-        ".cellars-grid:not(.compact) .cabinet .shelf.two-row > .rail{cursor:pointer}" +
-        ".cellars-grid:not(.compact) .cabinet .shelf.two-row > .rail:hover{background:repeating-linear-gradient(90deg,rgba(40,20,6,.12) 0 1px,rgba(0,0,0,0) 1px 7px,rgba(255,226,190,.05) 7px 8px,rgba(0,0,0,0) 8px 19px),linear-gradient(180deg,#ecd0a8 0,#d4a878 1.5px,#b0865b 3.5px,#98704c 42%,#7c573a 86%,#5f4027 100%)}" +
         ".cellars-grid:not(.compact) .cabinet .lip-row{grid-column:2;grid-row:1;display:flex;justify-content:center;gap:var(--slot-gap);pointer-events:none}" +
         ".cellars-grid:not(.compact) .cabinet .lip-row i{flex:0 0 var(--slot-w);display:flex;justify-content:center;font-style:normal}" +
         ".cellars-grid:not(.compact) .cabinet .lip-row b{min-width:20px;height:15px;margin-top:1px;padding:0 4px;border-radius:3px;display:inline-flex;align-items:center;justify-content:center;background:linear-gradient(#2e2016,#1d140e);color:#f6e7d2;font-size:.75rem;font-weight:700;line-height:1;font-variant-numeric:tabular-nums;box-shadow:inset 0 1px 2px rgba(0,0,0,.7),0 1px 0 rgba(255,236,210,.32)}" +
-        /* The pull plate is set into the lip, so it never covers a bottle. Its ::before widens the touch
-           target to the whole height of the lip and the gap under it (35px), never above the lip, where the
-           bottom of the front bottle standing over the plate shows; the lip itself pulls the shelf too. */
-        ".pull-btn{position:sticky;left:12px;z-index:8;justify-self:start;margin:calc(5px - var(--lip-h,26px)) 0 5px 12px;display:inline-flex;align-items:center;gap:5px;height:16px;padding:0 7px 0 5px;border-radius:4px;border:none;background:linear-gradient(#2e2016,#1d140e);color:#f3e7da;font:inherit;font-size:.6875rem;font-weight:600;letter-spacing:.02em;line-height:1;white-space:nowrap;cursor:pointer;box-shadow:inset 0 1px 2px rgba(0,0,0,.7),0 1px 0 rgba(255,236,210,.35);transition:background-color .15s ease-out,color .15s ease-out}" +
-        ".pull-btn::before{content:'';position:absolute;left:-6px;right:-6px;top:-5px;bottom:-14px}" +
-        ".pull-btn svg{width:12px;height:12px;fill:currentColor;flex:0 0 auto;transition:transform .22s ease-out}" +
-        ".pull-btn[aria-expanded=\"true\"] svg{transform:rotate(180deg)}" +
-        ".pull-btn .peek-n{min-width:14px;height:12px;padding:0 3px;border-radius:3px;background:rgba(255,236,214,.16);font-size:.625rem;display:inline-flex;align-items:center;justify-content:center;font-variant-numeric:tabular-nums}" +
-        ".pull-btn:hover{background:linear-gradient(#4a3526,#2c2017)}" +
-        ".pull-btn[aria-expanded=\"true\"]{background:color-mix(in srgb,var(--wcm-accent) 52%,#000);color:#fff;box-shadow:inset 0 1px 2px rgba(0,0,0,.5),0 0 0 1px var(--wcm-accent)}" +
-        ".pull-btn[aria-expanded=\"true\"] .peek-n{background:rgba(0,0,0,.18)}" +
-        ".pull-btn:focus-visible{outline:2px solid #fff6ec;outline-offset:1px;box-shadow:0 0 0 4px var(--wcm-accent)}" +
-        ".cellars-grid:not(.compact) .cabinet.overflows .pull-btn .pull-txt{display:none}" +
         ".cellars-grid:not(.compact) .cabinet .shelf-noslots{position:relative;z-index:1;padding:12px 0 20px;text-align:center;font-size:.8125rem;font-style:italic;color:var(--wcm-muted)}" +
-        ".cellars-grid:not(.compact) .cabinet .shelf.no-anim,.cellars-grid:not(.compact) .cabinet .shelf.no-anim *,.cellars-grid:not(.compact) .cabinet .shelf.no-anim::before{transition:none !important}" +
         /* A cabinet wider than its screen: sideways scrolling snaps to bottle starts, the first paint lands on
            position 1, and only the shelves really wider than the view start at the left edge (--iw is the
            interior width, set by the card). */
@@ -3903,11 +3836,10 @@ const _WCM_STYLES =
         ".cellars-grid:not(.compact) .cabinet.overflows .lane-front .slot,.cellars-grid:not(.compact) .cabinet.overflows .shelf.one-row .slot{scroll-snap-align:start}" +
         ".cellars-grid:not(.compact) .cabinet.overflows .shelf :is(.lane-row,.lip-row){justify-self:start;justify-content:center;width:var(--rw);margin-left:max(0px,calc((var(--iw,0px) - 20px - 2 * var(--tag-w) - var(--rw)) / 2))}" +
         /* Filtering: empty positions step back; bottles that do not match fall into shadow but stay opaque, so
-           overlapping rows and the floor never show through them. */
+           the floor never shows through them. */
         ".cellars-grid.filtering .cabinet .slot.empty{opacity:.3}" +
         ".cellars-grid.filtering .cabinet .slot.empty:hover,.cellars-grid.filtering .cabinet .slot.empty:focus-visible,.cellars-grid.filtering .cabinet .slot.empty.drag-over{opacity:1}" +
         ".cabinet.lit .slot.filled.dimmed{filter:grayscale(.85) brightness(.42)}" +
-        ".cabinet.lit .lane-back .slot.filled.dimmed{filter:grayscale(.85) brightness(.36)}" +
         ".cabinet.themed .slot.filled.dimmed{filter:grayscale(.9) contrast(.55)}" +
         /* Bottle cards (Cellars view): a lit stage with the bottle drawn in its style (or the label photo,
            never cropped), a status chip pairing a glyph with the drinking window, then name, producer, vintage
@@ -4055,7 +3987,7 @@ const _WCM_STYLES =
         ".plan-hint svg{width:18px;height:18px;flex:0 0 auto;margin-top:1px;fill:var(--wcm-accent);color:var(--wcm-accent)}" +
         ".plan-hint em{font-style:normal;color:color-mix(in srgb,var(--wcm-text) 50%,var(--wcm-muted))}" +
         "@media (max-width:600px){.loc-pair{flex-wrap:nowrap;gap:12px;justify-content:space-between}.cabinet.mini{--slot-w:12px;--slot-gap:5px;padding:6px}.cabinet.mini .shelf{padding:6px 7px 0}.shelf-plan-title span{display:block}.shelf-plan-title .sp-dot{display:none}}" +
-        "@media (prefers-reduced-motion:reduce){.cabinet .slot,.cabinet .slot::after,.cab-fade,.pull-btn,.pull-btn svg,.cellars-grid:not(.compact) .cabinet .shelf::before,.cellars-grid:not(.compact) .cabinet .lane,.cellars-grid:not(.compact) .cabinet .lane-tag{transition:none !important}.slot.empty.paste-ready,.slot.pulse{animation:none}}" +
+        "@media (prefers-reduced-motion:reduce){.cabinet .slot,.cabinet .slot::after,.cab-fade,.cellars-grid:not(.compact) .cabinet .shelf::before,.cellars-grid:not(.compact) .cabinet .lane,.cellars-grid:not(.compact) .cabinet .lane-tag{transition:none !important}.slot.empty.paste-ready,.slot.pulse{animation:none}}" +
 
 
         /* All Bottles: one panel, its title (how many bottles it shows) and, on narrow widths, a sort select;
@@ -4777,7 +4709,7 @@ const _WCM_STYLES =
         "@media (prefers-reduced-motion:reduce){.cellar>*{transition:none}}" +
 
         /* Small screens */
-        "@media (max-width:780px){.wrap{padding:10px;gap:10px}.cellars-grid{--slot-w:7rem;--slot-h:11.25rem;--slot-gap:8px;gap:14px}.cellars-grid.compact{--slot-w:26px;--slot-h:26px;--slot-gap:9px}.pull-btn{margin-left:10px;left:10px}.cellar{width:100%;padding:10px}.modal{padding:14px;max-height:94vh}.wine-view-modal{padding:0}.duplicate-item{grid-template-columns:1fr}.modal-actions{flex-direction:column;align-items:stretch}}" +
+        "@media (max-width:780px){.wrap{padding:10px;gap:10px}.cellars-grid{--slot-w:7rem;--slot-h:11.25rem;--slot-gap:8px;gap:14px}.cellars-grid.compact{--slot-w:26px;--slot-h:26px;--slot-gap:9px}.cellar{width:100%;padding:10px}.modal{padding:14px;max-height:94vh}.wine-view-modal{padding:0}.duplicate-item{grid-template-columns:1fr}.modal-actions{flex-direction:column;align-items:stretch}}" +
         /* The page scrolls, not the card, on small and on short screens (a phone held sideways), so the
            cellars get the whole screen once the toolbar has scrolled away. */
         "@media (max-width:780px),(max-height:500px){:host{position:static !important;height:auto !important}.wrap{height:auto !important;overflow:visible !important}.main-scroll-content{overflow-y:visible !important;height:auto !important}}" +
@@ -4837,7 +4769,6 @@ const _WCM_ICONS = {
   // Two bottles side by side: identical bottles (×N).
   twins: '<svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3.6 1.5h1.8v3.2c0 .9 1.8 1.2 1.8 2.8v6.5c0 .5-.4 1-1 1H2.8c-.6 0-1-.5-1-1V7.5c0-1.6 1.8-1.9 1.8-2.8zM10.6 1.5h1.8v3.2c0 .9 1.8 1.2 1.8 2.8v6.5c0 .5-.4 1-1 1H9.8c-.6 0-1-.5-1-1V7.5c0-1.6 1.8-1.9 1.8-2.8z"/></svg>',
   // A drawer sliding toward you: pull a shelf out.
-  pull: '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 5h16v2H4zM6.6 10.6 12 16l5.4-5.4 1.4 1.4-6.8 6.8-6.8-6.8z"/></svg>',
   reach: '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3a1 1 0 0 1 1 1v11.6l4.3-4.3 1.4 1.4L12 19.4l-6.7-6.7 1.4-1.4 4.3 4.3V4a1 1 0 0 1 1-1z"/></svg>',
   behind: '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 7h10v12H4z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M9 4h11v12" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-dasharray="3 2.2"/></svg>'
 };
@@ -5048,18 +4979,15 @@ class WineCellarCard extends HTMLElement {
     this._longPressFired = false;
     // Clean-up pairs the user dismissed, so a rescan does not offer them again.
     this._rejectedCleanup = {};
-    // Shelf depth: the shelf the user pulled out ("cellarId|shelfId"), the
-    // shelves pushed back in while the current search result showed, the
-    // last result set and which cabinets were already brought to it.
-    this._openShelf = null;
-    this._pushedBack = { sig: "", keys: {} };
+    // The last search result set and which cabinets were already brought
+    // to it (see _revealMatchesSideways).
     this._depthSig = "";
     this._revealed = null;
     this._cabinetResizeObserver = null;
     this._shelfObserver = null;
     // The height each Cellars-view shelf was last drawn at
-    // ("cellarId|shelfId|c" at rest, "|o" pulled out), for its stand-in
-    // size while it is out of view (see _rememberShelfHeights).
+    // ("cellarId|shelfId"), for its stand-in size while it is out of view
+    // (see _rememberShelfHeights).
     this._shelfHeights = {};
     // Work waiting for the next paint: a bottle to show ("Show in cellar")
     // and the first search match to bring into view ("Find all").
@@ -7245,8 +7173,8 @@ class WineCellarCard extends HTMLElement {
         }
       });
       this._paintMatchCounts(grid, model);
-      // Shelves with a back-row match pull out, and wide cabinets slide to
-      // their first match, before the first match is brought into view.
+      // Wide cabinets slide to their first match before the first match is
+      // brought into view.
       this._syncDepth();
       if (opts.locate) this._scrollToFirstMatch(!!opts.forceLocate);
     }
@@ -8827,21 +8755,20 @@ class WineCellarCard extends HTMLElement {
     });
   }
 
-  // An empty position. In the Cellars view a front one is a low footprint on
-  // the shelf floor and a back one a faint ghost against the back wall; both
-  // sit under every bottle, so they never take a bottle's click.
+  // An empty position: in the Cellars view a faint bottle outline with its
+  // number, the same in both rows, or a low outline with a + in a condensed
+  // empty row (opts.condensed, see _condenseEmptyRows).
   _renderEmptySlot(cellar, shelf, lane, pos, opts) {
     opts = opts || {};
-    var back = lane === "back";
     var label = this._escape(_T("slot_empty_label", { loc: this._slotLocationText(cellar, opts.shelfRef || shelf.name || "", lane, pos) }));
     var inner = "";
     if (!opts.compact) {
-      inner = back
-        ? _WCM_BOTTLE_GHOST + '<span class="slot-pos">' + pos + "</span>"
-        : '<span class="fp-plus" aria-hidden="true">' + _WCM_ICONS.plus + '</span><span class="slot-pos">' + pos + "</span>";
+      inner = opts.condensed
+        ? '<span class="fp-plus" aria-hidden="true">' + _WCM_ICONS.plus + '</span><span class="slot-pos">' + pos + "</span>"
+        : _WCM_BOTTLE_GHOST + '<span class="slot-pos">' + pos + "</span>";
     }
     return (
-      '<div class="slot empty ' + (back ? "ghost" : "footprint") + (opts.pasteReady ? " paste-ready" : "") + '" role="button" tabindex="0" aria-label="' + label + '"' +
+      '<div class="slot empty ' + (opts.condensed ? "footprint" : "ghost") + (opts.pasteReady ? " paste-ready" : "") + '" role="button" tabindex="0" aria-label="' + label + '"' +
       (opts.compact ? ' title="' + label + '"' : "") +
       ' data-new-bottle="' + this._escape(JSON.stringify({
         cellar_id: cellar.id,
@@ -8960,14 +8887,8 @@ class WineCellarCard extends HTMLElement {
     );
   }
 
-  _pullLabel(shelfRef, count, expanded) {
-    return _T(expanded ? "depth_push" : "depth_pull", { shelf: shelfRef, count: count });
-  }
-
   // A shelf: its name and fill, the back row then the front row, and the lip
-  // with the number of each front position. In the Cellars view a two-row
-  // shelf pulls out (tap its lip, or the "Back row" plate in it) to bring the
-  // back row forward; opts.autoOpen lists the shelves a search pulls out.
+  // with the number of each front position. Both rows are drawn the same way.
   _renderShelf(cellar, shelf, index, slotIndex, opts) {
     opts = opts || {};
     var self = this;
@@ -8980,50 +8901,38 @@ class WineCellarCard extends HTMLElement {
     var laneOpts = Object.assign({}, opts, { showTags: back > 0, shelfRef: shelfRef });
     var lanes = "";
     function esc(value) { return self._escape(value); }
+    function filled(lane, capacity) {
+      var n = 0;
+      for (var p = 1; p <= capacity; p++) {
+        if (slotIndex.has(String(shelf.id) + "|" + lane + "|" + p)) n++;
+      }
+      return n;
+    }
+    // With empty_rows: condensed, a row that holds no bottle, front or back,
+    // is a strip of low outlines.
+    var condense = !opts.compact && this._condenseEmptyRows();
+    var frontEmpty = condense && front > 0 && !filled("front", front);
+    var backEmpty = condense && back > 0 && !filled("back", back);
 
     // The back row is drawn first (above, "behind") and the front row last,
     // standing on the lip.
-    if (back > 0) lanes += this._renderLaneSlots(cellar, shelf, "back", back, slotIndex, laneOpts);
-    if (front > 0) lanes += this._renderLaneSlots(cellar, shelf, "front", front, slotIndex, laneOpts);
+    if (back > 0) lanes += this._renderLaneSlots(cellar, shelf, "back", back, slotIndex, Object.assign({}, laneOpts, { condensed: backEmpty }));
+    if (front > 0) lanes += this._renderLaneSlots(cellar, shelf, "front", front, slotIndex, Object.assign({}, laneOpts, { condensed: frontEmpty }));
 
-    var canPull = twoRow && !opts.compact;
-    var open = canPull && this._openShelf === key;
-    var auto = canPull && !open && !!(opts.autoOpen && opts.autoOpen.has(key));
     var stored = this._countShelfBottles(shelf, slotIndex);
-    var frontFilled = 0;
-    for (var f = 1; f <= front; f++) {
-      if (slotIndex.has(String(shelf.id) + "|front|" + f)) frontFilled++;
-    }
     // While a search or filter is on, how many of its bottles match.
     var hits = opts.filtering ? (opts.model.perShelf[key] || 0) : 0;
     var classes = "shelf" +
       (!inline && this._isStaggered(shelf) ? " staggered" : "") +
       (inline ? " inline" : "") +
       (twoRow ? " two-row" : " one-row") +
-      (front > 0 && !frontFilled ? " front-empty" : "") +
-      (open ? " open" : "") +
-      (auto ? " auto-open" : "") +
+      (frontEmpty ? " front-empty" : "") +
+      (backEmpty ? " back-empty" : "") +
       (opts.filtering && !hits ? " no-hits" : "");
-
-    var pull = "";
-    if (canPull) {
-      var backFilled = 0;
-      for (var p = 1; p <= back; p++) {
-        if (slotIndex.has(String(shelf.id) + "|back|" + p)) backFilled++;
-      }
-      var pullLabel = esc(this._pullLabel(shelfRef, backFilled, open || auto));
-      pull =
-        '<button type="button" class="pull-btn" data-pull-shelf="' + esc(key) + '" data-shelf-label="' + esc(shelfRef) + '" data-back-n="' + backFilled + '"' +
-        ' aria-expanded="' + (open || auto) + '" aria-label="' + pullLabel + '" title="' + pullLabel + '">' +
-        _WCM_ICONS.pull + '<span class="pull-txt">' + esc(_T("depth_back_row")) + '</span><span class="peek-n">' + backFilled + "</span></button>";
-    }
 
     // Out of view, the shelf keeps the height it was last drawn at.
     var sizes = "";
-    if (!opts.compact && this._shelfHeights) {
-      if (this._shelfHeights[key + "|c"]) sizes += ";--ish-c:" + this._shelfHeights[key + "|c"] + "px";
-      if (this._shelfHeights[key + "|o"]) sizes += ";--ish-o:" + this._shelfHeights[key + "|o"] + "px";
-    }
+    if (!opts.compact && this._shelfHeights && this._shelfHeights[key]) sizes = ";--ish:" + this._shelfHeights[key] + "px";
 
     var numbers = "";
     if (!opts.compact && front > 0) {
@@ -9053,7 +8962,6 @@ class WineCellarCard extends HTMLElement {
       (front + back === 0 && !opts.compact ? '<div class="shelf-noslots">' + esc(_T("depth_no_slots")) + "</div>" : "") +
       lanes +
       '<div class="rail">' + numbers + "</div>" +
-      pull +
       "</div>"
     );
   }
@@ -9072,18 +8980,10 @@ class WineCellarCard extends HTMLElement {
     var edges = ["paddingTop", "paddingBottom", "borderTopWidth", "borderBottomWidth"].reduce(function (sum, prop) {
       return sum + (parseFloat(cs[prop]) || 0);
     }, 0);
-    function sliding(shelf) {
-      return !!shelf.getAnimations && shelf.getAnimations({ subtree: true }).some(function (anim) {
-        return anim.transitionProperty === "margin-top" && anim.playState === "running";
-      });
-    }
     shelves.forEach(function (shelf) {
-      // A shelf still sliding out or back in has no settled height yet.
-      if (sliding(shelf)) return;
       var height = shelf.getBoundingClientRect().height - edges;
       if (!(height > 0)) return;
-      var pulled = shelf.classList.contains("open") || shelf.classList.contains("auto-open");
-      memo[shelf.getAttribute("data-shelf-key") + (pulled ? "|o" : "|c")] = Math.round(height * 100) / 100;
+      memo[shelf.getAttribute("data-shelf-key")] = Math.round(height * 100) / 100;
     });
   }
 
@@ -9091,6 +8991,12 @@ class WineCellarCard extends HTMLElement {
   // the Home Assistant theme's colors inside the cabinets.
   _isLitInterior() {
     return !(this.config && String(this.config.interior || "").toLowerCase() === "theme");
+  }
+
+  // The card option empty_rows: condensed draws a shelf row that holds no
+  // bottle as a strip of low outlines, front and back rows alike.
+  _condenseEmptyRows() {
+    return !!(this.config && String(this.config.empty_rows || "").toLowerCase() === "condensed");
   }
 
   _cabinetMaterial(color) {
@@ -9132,8 +9038,7 @@ class WineCellarCard extends HTMLElement {
       compact: compact,
       filtering: model.filtering,
       model: model,
-      pasteReady: this._hasCopiedBottle(),
-      autoOpen: search.autoOpen
+      pasteReady: this._hasCopiedBottle()
     };
     var gridClasses = "cellars-grid" + (compact ? " compact" : "") + (opts.filtering ? " filtering" : "") +
       (search.count > 0 && search.count <= 6 ? " few-matches" : "");
@@ -9177,109 +9082,26 @@ class WineCellarCard extends HTMLElement {
     }).join("") + "</div>";
   }
 
-  /* Shelf depth: pulling a shelf out, and what the search does to it. */
+  /* What the search does to the cellars on screen. */
 
-  // The current search result and the shelves it pulls out on its own: when
-  // the search is focused (1 to 8 matches), every two-row shelf with a match
-  // in its back row, except the shelf the user opened and those the user
-  // pushed back in while this same result set was showing.
+  // The current search result: the matching bottles' ids and how many.
   _searchDepth() {
-    var self = this;
-    var ids = [];
-    var backHits = [];
-    this._filterModel().hits.forEach(function (b) {
-      ids.push(b.id);
-      if (b.lane === "back") backHits.push(b);
-    });
-    var sig = ids.join(",");
-    if (!this._pushedBack || this._pushedBack.sig !== sig) this._pushedBack = { sig: sig, keys: {} };
-    var autoOpen = new Set();
-    if (ids.length && ids.length <= 8) {
-      backHits.forEach(function (b) {
-        var shelf = self._getShelfById(b.cellar_id, b.shelf_id);
-        if (!shelf || !(Number(shelf.capacity_front || 0) > 0 && Number(shelf.capacity_back || 0) > 0)) return;
-        var key = String(b.cellar_id) + "|" + String(b.shelf_id);
-        if (key !== self._openShelf && !self._pushedBack.keys[key]) autoOpen.add(key);
-      });
-    }
-    return { sig: sig, count: ids.length, autoOpen: autoOpen };
+    var ids = this._filterModel().hits.map(function (b) { return b.id; });
+    return { sig: ids.join(","), count: ids.length };
   }
 
-  // Applies the search's depth state to the page on screen, after a paint and
-  // while the live search filters in place: the few-matches pop in Compact,
-  // the shelves pulled out for a back-row match, and each wide cabinet
-  // brought sideways to its first match.
+  // Applies the search result to the page on screen, after a paint and while
+  // the live search filters in place: the few-matches pop in Compact, and each
+  // wide cabinet brought sideways to its first match.
   _syncDepth(opts) {
     opts = opts || {};
-    var self = this;
     var root = this.shadowRoot;
     var grid = root && root.querySelector(".main-scroll-content .cellars-grid");
     if (!grid) return;
     var state = this._searchDepth();
     grid.classList.toggle("few-matches", state.count > 0 && state.count <= 6);
-    if (!grid.classList.contains("compact")) {
-      grid.querySelectorAll(".shelf.two-row").forEach(function (shelf) {
-        var on = state.autoOpen.has(shelf.getAttribute("data-shelf-key"));
-        if (shelf.classList.contains("auto-open") !== on) shelf.classList.toggle("auto-open", on);
-        self._paintPullPlate(shelf);
-      });
-    }
     this._depthSig = state.sig;
     if (state.count) this._revealMatchesSideways(opts.instant);
-  }
-
-  _paintPullPlate(shelf) {
-    var btn = shelf && shelf.querySelector(":scope > .pull-btn");
-    if (!btn) return;
-    var expanded = shelf.classList.contains("open") || shelf.classList.contains("auto-open");
-    var label = this._pullLabel(btn.getAttribute("data-shelf-label") || "", Number(btn.getAttribute("data-back-n") || 0), expanded);
-    if (btn.getAttribute("aria-expanded") !== String(expanded)) btn.setAttribute("aria-expanded", String(expanded));
-    if (btn.getAttribute("aria-label") !== label) {
-      btn.setAttribute("aria-label", label);
-      btn.setAttribute("title", label);
-    }
-  }
-
-  // Pulls one shelf out (key) or pushes it back in (null). One shelf is out
-  // at a time: opening one also pushes back those the search pulled out.
-  // opts.instant skips the slide (used before scrolling to a bottle).
-  _setShelfOpen(key, opts) {
-    opts = opts || {};
-    var self = this;
-    var root = this.shadowRoot;
-    this._openShelf = key || null;
-    if (!root) return;
-    root.querySelectorAll(".main-scroll-content .cellars-grid:not(.compact) .shelf.two-row").forEach(function (shelf) {
-      var k = shelf.getAttribute("data-shelf-key");
-      if (opts.instant) shelf.classList.add("no-anim");
-      shelf.classList.toggle("open", k === self._openShelf);
-      if (key && k !== key && shelf.classList.contains("auto-open")) {
-        self._pushedBack.keys[k] = true;
-        shelf.classList.remove("auto-open");
-      }
-      self._paintPullPlate(shelf);
-    });
-    if (opts.instant) {
-      void root.host.offsetWidth;
-      requestAnimationFrame(function () {
-        root.querySelectorAll(".shelf.no-anim").forEach(function (shelf) { shelf.classList.remove("no-anim"); });
-      });
-    }
-  }
-
-  _toggleShelf(shelf) {
-    if (!shelf) return;
-    var key = shelf.getAttribute("data-shelf-key");
-    if (!shelf.classList.contains("open") && !shelf.classList.contains("auto-open")) {
-      this._setShelfOpen(key);
-      return;
-    }
-    if (shelf.classList.contains("auto-open")) {
-      this._pushedBack.keys[key] = true;
-      shelf.classList.remove("auto-open");
-    }
-    if (this._openShelf === key) this._setShelfOpen(null);
-    else this._paintPullPlate(shelf);
   }
 
   // Once per cabinet per result set, a cabinet wider than the screen scrolls
@@ -9473,10 +9295,9 @@ class WineCellarCard extends HTMLElement {
     else this.render(false);
   }
 
-  // Brings a bottle's slot into view, vertically and inside its cabinet; a
-  // back-row bottle has its shelf pulled out first. The slot pulses, is shown
-  // even if the current filter dims it, and takes focus (opts.focus); its
-  // result chip, if it has one, becomes the current one.
+  // Brings a bottle's slot into view, vertically and inside its cabinet. The
+  // slot pulses, is shown even if the current filter dims it, and takes focus
+  // (opts.focus); its result chip, if it has one, becomes the current one.
   _gotoBottle(id, opts) {
     opts = opts || {};
     var root = this.shadowRoot;
@@ -9487,10 +9308,6 @@ class WineCellarCard extends HTMLElement {
       });
     }
     if (!el) return false;
-    var shelf = el.closest(".lane-back") ? el.closest(".cellars-grid:not(.compact) .shelf.two-row") : null;
-    if (shelf && !shelf.classList.contains("open") && !shelf.classList.contains("auto-open")) {
-      this._setShelfOpen(shelf.getAttribute("data-shelf-key"), { instant: true });
-    }
     this._scrollIntoBand(el, this._visibleBand(), "center", this._prefersReducedMotion() ? "auto" : "smooth");
     this._settleScrollOn(el);
     el.classList.remove("pulse");
@@ -13100,9 +12917,9 @@ class WineCellarCard extends HTMLElement {
       }
 
       // Cabinets wider than the screen: overflow policy and each one's
-      // remembered sideways scroll; then what the search does to the shelves
-      // (pulled out for a back-row match, wide cabinets brought to their
-      // first match), and the observers that keep both current.
+      // remembered sideways scroll; then the search result (wide cabinets
+      // brought to their first match), and the observers that keep both
+      // current.
       this._layoutCabinets();
       this._syncDepth({ instant: true });
       this._observeCabinets();
@@ -13128,22 +12945,9 @@ class WineCellarCard extends HTMLElement {
           if ((e.key === "Enter" || e.key === " ") && e.target.classList && e.target.classList.contains("slot")) {
             e.preventDefault();
             e.target.click();
-            return;
-          }
-          // Escape pushes back in the shelf that holds the focus.
-          var pulled = e.key === "Escape" && e.target.closest
-            ? e.target.closest(".cellars-grid:not(.compact) .shelf.open, .cellars-grid:not(.compact) .shelf.auto-open")
-            : null;
-          if (pulled) {
-            e.preventDefault();
-            e.stopPropagation();
-            self._toggleShelf(pulled);
-            var plate = pulled.querySelector(":scope > .pull-btn");
-            if (plate) plate.focus();
           }
         });
-        // A two-row shelf pulls out from its lip or the "Back row" plate in
-        // it; the scroll chips move a wide cabinet by most of a screen.
+        // The scroll chips move a wide cabinet by most of a screen.
         scrollContent.addEventListener("click", function (e) {
           var target = e.target && e.target.closest ? e.target : null;
           if (!target) return;
@@ -13155,13 +12959,7 @@ class WineCellarCard extends HTMLElement {
             if (interior) {
               interior.scrollBy({ left: Number(chip.getAttribute("data-hs")) * interior.clientWidth * 0.8, behavior: self._prefersReducedMotion() ? "auto" : "smooth" });
             }
-            return;
           }
-          var lip = target.closest(".pull-btn[data-pull-shelf]") || target.closest(".cellars-grid:not(.compact) .shelf.two-row > .rail");
-          if (!lip) return;
-          e.preventDefault();
-          e.stopPropagation();
-          self._toggleShelf(lip.closest(".shelf"));
         });
       }
 
