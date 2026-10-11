@@ -2,6 +2,7 @@
 
 [![HACS Custom](https://img.shields.io/badge/HACS-Custom-41BDF5.svg)](https://hacs.xyz/docs/faq/custom_repositories)
 [![GitHub Release](https://img.shields.io/github/v/release/kedube/ha-wine-cellar-manager)](https://github.com/kedube/ha-wine-cellar-manager/releases)
+[![CI](https://github.com/kedube/ha-wine-cellar-manager/actions/workflows/release_app.yml/badge.svg)](https://github.com/kedube/ha-wine-cellar-manager/actions/workflows/release_app.yml)
 [![License](https://img.shields.io/github/license/kedube/ha-wine-cellar-manager)](LICENSE)
 
 A Home Assistant integration and dashboard card for managing one or more wine cellars locally. Each cellar is drawn the way it is physically laid out, shelf by shelf and row by row, so you can find a bottle by where it sits. Optionally, Google Gemini can read a label or barcode photo and fill in the bottle details for you.
@@ -62,7 +63,7 @@ Or add it manually:
 2. Select **Add integration** and search for **Wine Cellar Manager**.
 3. Enter a title for the integration (or keep the default) and select **Submit**.
 
-The integration registers the dashboard card automatically, so there is no separate frontend resource to install.
+The integration registers the dashboard card automatically, so there is no separate frontend resource to install. If you added `/wine-cellar-manager-frontend/wine-cellar-card.js` as a dashboard resource yourself (**Settings** > **Dashboards** > **Resources**), you can remove it. Leaving it in place does no harm.
 
 ### Options
 

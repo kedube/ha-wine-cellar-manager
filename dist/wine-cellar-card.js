@@ -13663,10 +13663,14 @@ class WineCellarCard extends HTMLElement {
   }
 }
 
-customElements.define("wine-cellar-card", WineCellarCard);
-window.customCards = window.customCards || [];
-window.customCards.push({
-  type: "wine-cellar-card",
-  name: "Wine Cellar Card",
-  description: "Shelf-based wine dashboard with popup editing"
-});
+// The integration loads the card on every dashboard, and a dashboard resource
+// added by hand loads it again under another URL; define it only once.
+if (!customElements.get("wine-cellar-card")) {
+  customElements.define("wine-cellar-card", WineCellarCard);
+  window.customCards = window.customCards || [];
+  window.customCards.push({
+    type: "wine-cellar-card",
+    name: "Wine Cellar Card",
+    description: "Shelf-based wine dashboard with popup editing"
+  });
+}

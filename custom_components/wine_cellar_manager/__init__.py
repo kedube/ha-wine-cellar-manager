@@ -1,10 +1,12 @@
 """Wine Cellar Manager integration."""
 from __future__ import annotations
 
+from homeassistant.components.frontend import add_extra_js_url
 from homeassistant.components.http import StaticPathConfig
 from homeassistant.config_entries import ConfigEntry
 from homeassistant.core import HomeAssistant
 from homeassistant.helpers import config_validation as cv
+from homeassistant.loader import async_get_integration
 
 from .const import DOMAIN, PLATFORMS
 from .services import async_register_services, async_unregister_services
@@ -50,15 +52,14 @@ async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
                 )
             ]
         )
+        # Load the card on every dashboard, so no Lovelace resource is needed.
+        # The version query makes browsers fetch the new card after an update.
+        integration = await async_get_integration(hass, DOMAIN)
+        add_extra_js_url(
+            hass,
+            f"/wine-cellar-manager-frontend/wine-cellar-card.js?v={integration.version}",
+        )
         hass.data[DOMAIN]["frontend_registered"] = True
-
-    if "lovelace" in hass.data:
-        lovelace = hass.data["lovelace"]
-        if hasattr(lovelace, "async_register_custom_card"):
-            await lovelace.async_register_custom_card(
-                "wine-cellar-card",
-                "/wine-cellar-manager-frontend/wine-cellar-card.js"
-            )
 
     entry.async_on_unload(entry.add_update_listener(_async_update_listener))
 
