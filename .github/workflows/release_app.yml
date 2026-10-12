@@ -121,10 +121,14 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add custom_components/wine_cellar_manager/manifest.json
-          git commit -m "Release $VERSION [skip release]"
+          # The manifest already holds this version when an earlier run pushed
+          # its version commit but not its tag; then only the tag is missing.
+          git diff --cached --quiet || git commit -m "Release $VERSION [skip release]"
           git tag "$VERSION"
-          git push origin HEAD:${{ github.ref_name }}
-          git push origin "$VERSION"
+          # One atomic push: a tag pushed on its own right after its commit can
+          # be refused ("missing necessary objects"), leaving main bumped but
+          # untagged. Both refs land together or neither does.
+          git push --atomic origin HEAD:${{ github.ref_name }} "refs/tags/$VERSION"
 
       - name: ZIP custom_components
         if: steps.version.outputs.skip != 'true'
