@@ -26,5 +26,21 @@
         }
       }
     }
+  },
+  "entity": {
+    "sensor": {
+      "wine_stock_status": {
+        "name": "Inventário de vinho"
+      },
+      "total_cellar_capacity": {
+        "name": "Capacidade total da adega"
+      }
+    }
+  },
+  "services": {
+    "rebuild_ready": {
+      "name": "Recalcular “pronto para beber”",
+      "description": "Recalcula os valores derivados de “pronto para beber” de todas as garrafas."
+    }
   }
 }

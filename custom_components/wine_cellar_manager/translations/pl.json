@@ -26,5 +26,21 @@
         }
       }
     }
+  },
+  "entity": {
+    "sensor": {
+      "wine_stock_status": {
+        "name": "Stan zapasów wina"
+      },
+      "total_cellar_capacity": {
+        "name": "Całkowita pojemność piwnicy"
+      }
+    }
+  },
+  "services": {
+    "rebuild_ready": {
+      "name": "Przelicz gotowość do picia",
+      "description": "Ponownie oblicza pochodne wartości gotowości do picia dla wszystkich butelek."
+    }
   }
 }

@@ -26,5 +26,21 @@
         }
       }
     }
+  },
+  "entity": {
+    "sensor": {
+      "wine_stock_status": {
+        "name": "Wine stock status"
+      },
+      "total_cellar_capacity": {
+        "name": "Total cellar capacity"
+      }
+    }
+  },
+  "services": {
+    "rebuild_ready": {
+      "name": "Rebuild ready-to-drink flags",
+      "description": "Recomputes derived ready-to-drink values for all bottles."
+    }
   }
 }

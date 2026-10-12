@@ -26,5 +26,21 @@
         }
       }
     }
+  },
+  "entity": {
+    "sensor": {
+      "wine_stock_status": {
+        "name": "Stock de vin"
+      },
+      "total_cellar_capacity": {
+        "name": "Capacité totale du cellier"
+      }
+    }
+  },
+  "services": {
+    "rebuild_ready": {
+      "name": "Recalculer « prêt à boire »",
+      "description": "Recalcule les valeurs dérivées « prêt à boire » de toutes les bouteilles."
+    }
   }
 }

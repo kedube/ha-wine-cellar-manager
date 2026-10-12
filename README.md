@@ -150,7 +150,7 @@ empty_rows: condensed
 
 - **Four views**: Cellar, Compact, All Bottles, and Statistics.
 
-- **Languages**: the card and setup screens follow your Home Assistant language and ship with English, French, German, Spanish, Italian, Dutch, Portuguese, and Polish. Other languages fall back to English.
+- **Languages**: the card, setup screens, sensor names, and action follow your Home Assistant language and ship with English, German, French, Dutch, Spanish, Simplified Chinese, Italian, Polish, and Portuguese. Other languages fall back to English.
 
 ## Views
 

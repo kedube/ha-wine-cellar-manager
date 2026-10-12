@@ -26,5 +26,21 @@
         }
       }
     }
+  },
+  "entity": {
+    "sensor": {
+      "wine_stock_status": {
+        "name": "Scorte di vino"
+      },
+      "total_cellar_capacity": {
+        "name": "Capacità totale della cantina"
+      }
+    }
+  },
+  "services": {
+    "rebuild_ready": {
+      "name": "Ricalcola «pronto da bere»",
+      "description": "Ricalcola i valori derivati di «pronto da bere» per tutte le bottiglie."
+    }
   }
 }

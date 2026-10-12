@@ -80,7 +80,7 @@ class WineCellarStockSensor(BaseWineCellarSensor):
     def __init__(self, config_entry: ConfigEntry, store: Any) -> None:
         """Initialize stock sensor."""
         super().__init__(config_entry, store)
-        self._attr_name = "Wine stock status"
+        self._attr_translation_key = "wine_stock_status"
         # Unique ID immuable combinant l'entrée et le type pour éviter les duplicats
         self._attr_unique_id = f"{config_entry.entry_id}_wine_stock_status"
         self._attr_icon = "mdi:wine-bottle"
@@ -98,7 +98,7 @@ class WineCellarCapacitySensor(BaseWineCellarSensor):
     def __init__(self, config_entry: ConfigEntry, store: Any) -> None:
         """Initialize capacity sensor."""
         super().__init__(config_entry, store)
-        self._attr_name = "Total cellar capacity"
+        self._attr_translation_key = "total_cellar_capacity"
         self._attr_unique_id = f"{config_entry.entry_id}_total_cellar_capacity"
         self._attr_icon = "mdi:fridge-industrial"
 

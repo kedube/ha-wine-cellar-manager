@@ -26,5 +26,21 @@
         }
       }
     }
+  },
+  "entity": {
+    "sensor": {
+      "wine_stock_status": {
+        "name": "Existencias de vino"
+      },
+      "total_cellar_capacity": {
+        "name": "Capacidad total de la bodega"
+      }
+    }
+  },
+  "services": {
+    "rebuild_ready": {
+      "name": "Recalcular «listo para beber»",
+      "description": "Vuelve a calcular los valores derivados de «listo para beber» de todas las botellas."
+    }
   }
 }

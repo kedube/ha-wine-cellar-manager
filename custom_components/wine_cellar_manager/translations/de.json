@@ -26,5 +26,21 @@
         }
       }
     }
+  },
+  "entity": {
+    "sensor": {
+      "wine_stock_status": {
+        "name": "Weinbestand"
+      },
+      "total_cellar_capacity": {
+        "name": "Gesamtkapazität des Kellers"
+      }
+    }
+  },
+  "services": {
+    "rebuild_ready": {
+      "name": "Trinkreife neu berechnen",
+      "description": "Berechnet die abgeleiteten Trinkreife-Werte aller Flaschen neu."
+    }
   }
 }

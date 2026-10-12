@@ -1,0 +1,46 @@
+{
+  "title": "酒窖管理器",
+  "config": {
+    "step": {
+      "user": {
+        "title": "设置酒窖管理器",
+        "data": {
+          "title": "集成标题"
+        }
+      }
+    },
+    "abort": {
+      "already_configured": "酒窖管理器已配置。"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "酒窖管理器选项",
+        "data": {
+          "image_base_path": "默认图片基础路径",
+          "image_upload_dir": "/config 下的服务器上传文件夹",
+          "demo_enrichment": "启用演示增强钩子",
+          "gemini_api_key": "Gemini API 密钥",
+          "gemini_model": "Gemini 模型"
+        }
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "wine_stock_status": {
+        "name": "葡萄酒库存"
+      },
+      "total_cellar_capacity": {
+        "name": "酒窖总容量"
+      }
+    }
+  },
+  "services": {
+    "rebuild_ready": {
+      "name": "重新计算适饮状态",
+      "description": "重新计算所有酒款的适饮状态。"
+    }
+  }
+}

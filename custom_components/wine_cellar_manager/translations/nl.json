@@ -26,5 +26,21 @@
         }
       }
     }
+  },
+  "entity": {
+    "sensor": {
+      "wine_stock_status": {
+        "name": "Wijnvoorraad"
+      },
+      "total_cellar_capacity": {
+        "name": "Totale kellercapaciteit"
+      }
+    }
+  },
+  "services": {
+    "rebuild_ready": {
+      "name": "Drinkklaar opnieuw berekenen",
+      "description": "Berekent de afgeleide drinkklaar-waarden voor alle flessen opnieuw."
+    }
   }
 }
