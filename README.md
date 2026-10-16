@@ -307,7 +307,7 @@ python3 -m pytest
 
 ### Releases
 
-Releases are automated. Every push to `main` runs CI and then, if it passes, the Release workflow, which:
+Releases are automated. Every push to `main` runs CI and then, if it passes, the Release workflow. When something in `custom_components/` or `hacs.json` changed since the last release (not only tests, CI, docs or Dependabot updates), it:
 
 1. bumps the version from the latest tag: patch by default, or minor/major when a commit message since the last release has a line containing only `#minor` or `#major`;
 2. writes the new version to `manifest.json`, commits it, and tags it;
