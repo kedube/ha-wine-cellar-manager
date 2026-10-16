@@ -18,9 +18,6 @@
       "init": {
         "title": "Opties voor wijnkelderbeheer",
         "data": {
-          "image_base_path": "Standaard basispad voor afbeeldingen",
-          "image_upload_dir": "Uploadmap op de server onder /config",
-          "demo_enrichment": "Demo-verrijkingshooks inschakelen",
           "gemini_api_key": "Gemini API-sleutel",
           "gemini_model": "Gemini-model"
         }

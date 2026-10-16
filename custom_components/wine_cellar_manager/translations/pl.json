@@ -18,9 +18,6 @@
       "init": {
         "title": "Opcje menedżera piwnicy win",
         "data": {
-          "image_base_path": "Domyślna ścieżka bazowa obrazów",
-          "image_upload_dir": "Folder wgrywania na serwerze w /config",
-          "demo_enrichment": "Włącz hooki wzbogacania demo",
           "gemini_api_key": "Klucz API Gemini",
           "gemini_model": "Model Gemini"
         }

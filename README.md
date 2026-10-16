@@ -25,7 +25,7 @@ A Home Assistant integration and dashboard card for managing one or more wine ce
 
 ## Requirements
 
-- Home Assistant 2024.7.0 or newer
+- Home Assistant 2024.11.0 or newer
 - [HACS](https://hacs.xyz/) (for the recommended installation method)
 - Optional: a Google Gemini API key, used to analyze label and barcode images (see [Obtaining a Gemini API key](#obtaining-a-gemini-api-key))
 
@@ -67,13 +67,10 @@ The integration registers the dashboard card automatically, so there is no separ
 
 ### Options
 
-To set up Gemini or change image storage, go to **Settings** > **Devices & services** > **Wine Cellar Manager** and select **Configure**.
+To set up Gemini, go to **Settings** > **Devices & services** > **Wine Cellar Manager** and select **Configure**.
 
 | Option | Default | Description |
 | --- | --- | --- |
-| Default image base path | `/local/wine_labels` | URL path used to display label images. Leave as is unless you have a reason to change it. |
-| Server upload folder under /config | `www/wine_labels` | Folder, relative to `/config`, where uploaded label images are stored. Must match the base path above. |
-| Enable demo enrichment hooks | On | Enables built-in enrichment hooks. |
 | Gemini API key | *(empty)* | Needed only for label and barcode analysis. |
 | Gemini model | `gemini-3.6-flash` | Gemini model used for analysis. Leave as is. |
 
@@ -295,6 +292,7 @@ The CI workflow runs on every pull request, every push to `main`, and weekly:
 - **Hassfest**: Home Assistant's validation of the manifest, translations, and services.
 - **HACS validation**: checks the repository meets HACS requirements.
 - **Python lint**: [Ruff](https://docs.astral.sh/ruff/) with the rules in `ruff.toml`, a compile check, and a check that every file in `translations/` has the same keys as `strings.json`.
+- **Tests**: the backend tests in `tests/`, run with [pytest-homeassistant-custom-component](https://github.com/MatthieuDartiailh/pytest-homeassistant-custom-component) against the Home Assistant version pinned in `requirements_test.txt`.
 - **Dashboard card**: a JavaScript syntax check, and a check that `dist/` matches the card in `custom_components/wine_cellar_manager/frontend/`.
 
 To run the local checks before pushing:
@@ -303,6 +301,8 @@ To run the local checks before pushing:
 uvx ruff@0.16.8 check
 python3 scripts/check_translations.py
 node --check custom_components/wine_cellar_manager/frontend/wine-cellar-card.js
+pip install -r requirements_test.txt  # once, preferably in a virtual environment
+python3 -m pytest
 ```
 
 ### Releases

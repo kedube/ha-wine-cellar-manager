@@ -27,8 +27,3 @@ async def async_register_services(hass: HomeAssistant) -> None:
         handle_rebuild_ready,
     )
 
-
-async def async_unregister_services(hass: HomeAssistant) -> None:
-    """Unregister custom services."""
-    if hass.services.has_service(DOMAIN, SERVICE_REBUILD_READY):
-        hass.services.async_remove(DOMAIN, SERVICE_REBUILD_READY)

@@ -5417,7 +5417,9 @@ class WineCellarCard extends HTMLElement {
   // and resize and scroll, which keep the pinned toolbar and the filters
   // sheet in step with the screen.
   _ensureWindowListeners() {
-    if (this._onWindowKeydown) return;
+    // A render that ends after the card left the page must not bind them:
+    // nothing would remove them. connectedCallback binds them on return.
+    if (this._onWindowKeydown || !this.isConnected) return;
 
     var self = this;
     this._onWindowKeydown = function (e) {
@@ -5526,6 +5528,7 @@ class WineCellarCard extends HTMLElement {
 
     clearTimeout(this._toastTimer);
     this._toast = null;
+    this._paintToast();
     clearTimeout(this._longPressTimer);
 
     this._stopScanner();
@@ -5568,7 +5571,10 @@ class WineCellarCard extends HTMLElement {
   set hass(hass) {
     this._hass = hass;
     _wcmSetLang(hass && hass.language);
-    if (!this.shadowRoot || !this._hasRendered) {
+    // Hass updates come often: after a failed load, try again every 30 s
+    // at most instead of on each one.
+    if (this._loadFailedAt && Date.now() - this._loadFailedAt < 30000) return;
+    if (!this.shadowRoot || !this._hasRendered || this._loadFailedAt) {
       this.render(true);
     }
   }
@@ -6422,12 +6428,20 @@ class WineCellarCard extends HTMLElement {
     var CONCURRENCY = 4;
     var index = 0;
     var completed = 0;
+    var failure = null;
     var self = this;
 
+    // The first error stops the others from starting new saves; it is thrown
+    // once every save already sent has answered, so none is left running.
     async function worker() {
-      while (index < payloads.length) {
+      while (!failure && index < payloads.length) {
         var current = payloads[index++];
-        await self._callWS(current);
+        try {
+          await self._callWS(current);
+        } catch (err) {
+          failure = failure || err;
+          return;
+        }
         completed++;
         if (onProgress) onProgress(completed, payloads.length);
       }
@@ -6438,62 +6452,67 @@ class WineCellarCard extends HTMLElement {
       workers.push(worker());
     }
     await Promise.all(workers);
+    if (failure) throw failure;
   }
 
-  async _executeSyntaxMerge(item) {
+  // Merges send whole records, so they run one at a time, each built from
+  // the bottles as last loaded: two at once could each put back what the
+  // other changed. Whatever happens, the pairs are scanned again after.
+  async _runSyntaxMerge(message, build, onProgress) {
+    if (this._merging) return;
+    this._merging = true;
+    var self = this;
     try {
-      this._setActionMessage(_T("updating_field"));
-      var bottlesToUpdate = item.selectedValue === item.valueA ? item.bottlesB : item.bottlesA;
-
-      var self = this;
-      var payloads = (bottlesToUpdate || []).map(function (b) {
-        return self._buildBottleSavePayload(b, item.field, item.selectedValue);
-      });
-
-      await this._sendBottleUpdates(payloads);
-
-      // Rescan the fresh data: other pairs may involve the same bottles.
-      await this._loadData(true);
-      this._foundSyntaxDuplicates = this._computeSyntaxDuplicates();
-      this._clearActionMessage();
-      this.render(false);
-    } catch(err) {
+      this._setActionMessage(message);
+      var latest = new Map(((this._data && this._data.bottles) || []).map(function (b) { return [b.id, b]; }));
+      await this._sendBottleUpdates(build(function (b) { return latest.get(b.id) || b; }), onProgress);
+    } catch (err) {
       this._setFormError(_T("update_failed") + (err.message || err));
+    } finally {
+      this._merging = false;
+      this._clearActionMessage();
+      try {
+        // Rescan the fresh data: other pairs may involve the same bottles.
+        await this._loadData(true);
+        this._foundSyntaxDuplicates = this._computeSyntaxDuplicates();
+      } catch (err) {
+        console.error("Wine Cellar: rescan after merge failed", err);
+      }
+      self.render(false);
     }
+  }
+
+  _executeSyntaxMerge(item) {
+    var self = this;
+    return this._runSyntaxMerge(_T("updating_field"), function (latest) {
+      var bottlesToUpdate = item.selectedValue === item.valueA ? item.bottlesB : item.bottlesA;
+      return (bottlesToUpdate || []).map(function (b) {
+        return self._buildBottleSavePayload(latest(b), item.field, item.selectedValue);
+      });
+    });
   }
 
   // Merge All applies only the sure pairs (case, accents, spacing,
   // punctuation); pairs marked for checking are left to the user.
-  async _executeMergeAllSyntax() {
-    try {
-      this._setActionMessage(_T("merging_all_selections"));
-
-      var self = this;
-      var items = (this._foundSyntaxDuplicates || []).filter(function (item) { return item.certain; });
+  _executeMergeAllSyntax() {
+    var self = this;
+    return this._runSyntaxMerge(_T("merging_all_selections"), function (latest) {
+      var items = (self._foundSyntaxDuplicates || []).filter(function (item) { return item.certain; });
       // One save per bottle carrying every field it is merged on: two
       // full-record saves of the same bottle would undo each other.
       var byBottle = new Map();
       items.forEach(function (item) {
         var bottlesToUpdate = item.selectedValue === item.valueA ? item.bottlesB : item.bottlesA;
         (bottlesToUpdate || []).forEach(function (b) {
-          var payload = byBottle.get(b.id) || self._buildBottleSavePayload(b);
+          var payload = byBottle.get(b.id) || self._buildBottleSavePayload(latest(b));
           payload[item.field] = item.selectedValue;
           byBottle.set(b.id, payload);
         });
       });
-      var payloads = Array.from(byBottle.values());
-
-      await this._sendBottleUpdates(payloads, function (done, total) {
-        self._setActionMessage(_T("merging_all_selections") + " (" + done + "/" + total + ")");
-      });
-
-      await this._loadData(true);
-      this._foundSyntaxDuplicates = this._computeSyntaxDuplicates();
-      this._clearActionMessage();
-      this.render(false);
-    } catch(err) {
-      this._setFormError(_T("global_error") + (err.message || err));
-    }
+      return Array.from(byBottle.values());
+    }, function (done, total) {
+      self._setActionMessage(_T("merging_all_selections") + " (" + done + "/" + total + ")");
+    });
   }
 
   _renderCleanUpModal() {
@@ -6604,21 +6623,26 @@ class WineCellarCard extends HTMLElement {
     this.render(true);
   }
 
-  async _closeModal() {
+  // loaded: the caller has just reloaded the data, so the repaint need not
+  // fetch it again.
+  async _closeModal(loaded) {
     this._formError = "";
     this._actionMessage = "";
     this._dialogConfirm = null;
     this._combo = null;
     this._releaseSheetPhoto();
     this._modal = null;
-    return this.render(true);
+    return this.render(!loaded);
   }
 
   _setBottleModalMode(mode) {
     if (this._modal && this._modal.type === "bottle") {
       this._modal.mode = mode;
       // Switching between details and form starts from the stored bottle:
-      // a cancelled edit does not come back, nor does its photo or notes.
+      // a cancelled edit does not come back, nor does its photo or notes,
+      // nor a reading still on its way.
+      this._modal.readSeq = (this._modal.readSeq || 0) + 1;
+      this._modal.analyzing = false;
       this._modal.draft = null;
       this._releaseSheetPhoto();
       this._modal.photo = null;
@@ -7117,8 +7141,7 @@ class WineCellarCard extends HTMLElement {
     if (modal && modal.type === "bottle" && modal.bottle && String(modal.bottle.id) === String(id)) {
       await this._closeModal();
     } else {
-      await this._loadData(true);
-      await this.render(false);
+      await this.render(true);
     }
     var consumedId = result && result.consumed_id;
     this._showToast(_T("consume_done", { name: name }), consumedId ? {
@@ -7189,7 +7212,6 @@ class WineCellarCard extends HTMLElement {
       confirmLabel: _T("delete_cellar_confirm"),
       onConfirm: async function () {
         await self._callWS({ type: "wine_cellar_manager/delete_cellar", cellar_id: id });
-        await self._loadData(true);
         await self._closeModal();
       }
     });
@@ -7518,9 +7540,12 @@ class WineCellarCard extends HTMLElement {
     } else if (q) {
       var suggestions = this._suggestSearch();
       sub = suggestions.length
-        ? esc(_T("find_did_you_mean", { x: "\u0001" })).replace("\u0001", this._orList(suggestions.map(function (s) {
-            return '<button type="button" class="find-suggest" data-find-suggest="' + esc(s) + '">' + esc(s) + "</button>";
-          })))
+        ? esc(_T("find_did_you_mean", { x: "\u0001" })).replace("\u0001", function () {
+            // A function, so "$" in a wine name is not read as a pattern.
+            return self._orList(suggestions.map(function (s) {
+              return '<button type="button" class="find-suggest" data-find-suggest="' + esc(s) + '">' + esc(s) + "</button>";
+            }));
+          })
         : esc(_T("find_try_other"));
     }
     var actions = (q ? '<button type="button" class="btn small-btn" data-find-clear="search" data-key="empty:search">' + _WCM_ICONS.close + "<span>" + esc(_T("find_clear_search")) + "</span></button>" : "") +
@@ -8778,12 +8803,10 @@ class WineCellarCard extends HTMLElement {
       }
     } catch (err) {
       console.error("Wine Cellar: move failed", err);
-      await this._loadData(true);
       await this.render(true);
       this._showToast(_T("move_failed", { error: this._friendlyError(err) }), { kind: "warn" });
       return;
     }
-    await this._loadData(true);
     this._pendingPulse = { ids: [source.bottle_id], focus: !!focus };
     await this.render(true);
     this._showToast(text, {
@@ -8797,7 +8820,6 @@ class WineCellarCard extends HTMLElement {
             self._showToast(_T("move_failed", { error: self._friendlyError(err) }), { kind: "warn" });
             return;
           }
-          await self._loadData(true);
           self._pendingPulse = { ids: [source.bottle_id], focus: !!focus };
           await self.render(true);
           self._showToast(_T("undone"));
@@ -9872,9 +9894,9 @@ class WineCellarCard extends HTMLElement {
       icon = _WCM_ICONS.behind;
       var names = blockers.map(function (b) {
         return self._escape(_T("depth_blocker", { name: "\u0000", pos: b.pos }))
-          .replace("\u0000", "<strong>" + self._escape(b.bottle.wine_name || _T("unnamed_wine")) + "</strong>");
+          .replace("\u0000", function () { return "<strong>" + self._escape(b.bottle.wine_name || _T("unnamed_wine")) + "</strong>"; });
       }).join(" &amp; ");
-      hint = this._escape(_T("depth_behind", { names: "\u0001" })).replace("\u0001", names) +
+      hint = this._escape(_T("depth_behind", { names: "\u0001" })).replace("\u0001", function () { return names; }) +
         " <em>— " + this._escape(_T(blockers.length > 1 ? "depth_move_first_n" : "depth_move_first")) + "</em>";
     } else {
       hint = this._escape(_T(back ? "depth_back_clear" : "depth_front_reach"));
@@ -10010,7 +10032,7 @@ class WineCellarCard extends HTMLElement {
     var price = this._hasPrice(bottle) ? this._formatPrice(bottle.price) : "";
     var sub = producer ? esc(producer) + (vintage ? '<span class="bl-m"> · ' + vintage + "</span>" : "") : (vintage ? '<span class="bl-m">' + vintage + "</span>" : "");
     var locate = drawn
-      ? '<button type="button" class="bl-locate" data-list-locate="' + id + '" tabindex="-1" aria-label="' + esc(_T("bt_show_in_cellar") + ": " + this._bottleTitle(bottle.id)) +
+      ? '<button type="button" class="bl-locate" data-list-locate="' + id + '" tabindex="-1" aria-label="' + esc(_T("bt_show_in_cellar") + ": " + (bottle.vintage ? name + " " + bottle.vintage : name)) +
         '" title="' + esc(_T("bt_show_in_cellar")) + '"></button>'
       : "";
     return '<tr class="bl-row" role="row" data-bottle-row="' + id + '"' + (visible ? "" : " hidden") + ">" +
@@ -11457,15 +11479,24 @@ class WineCellarCard extends HTMLElement {
     });
   }
 
-  _unmarkSheetField(form, name) {
+  // edited: the user changed the field, so Undo leaves it as they made it.
+  _unmarkSheetField(form, name, edited) {
     var ui = this._modal && this._modal.ui;
     var box = this._sheetFieldBox(form, name);
     if (box) box.classList.remove("is-filled", "is-invalid", "is-shimmer");
+    var aging = name === "aging_start_year" || name === "aging_end_year";
     if (ui && ui.marks) {
       delete ui.marks[name];
-      if (name === "aging_start_year" || name === "aging_end_year") {
+      if (aging) {
         delete ui.marks.aging_start_year;
         delete ui.marks.aging_end_year;
+      }
+    }
+    if (edited && ui && ui.undo) {
+      delete ui.undo.values[name];
+      if (aging) {
+        delete ui.undo.values.aging_start_year;
+        delete ui.undo.values.aging_end_year;
       }
     }
   }
@@ -11575,6 +11606,7 @@ class WineCellarCard extends HTMLElement {
     var self = this;
     var data = this._data || {};
     var consumed = data.consumed_bottles || [];
+    var activeCount = (data.bottles || []).length;
     var all = (data.bottles || []).concat(consumed);
     var q = this._foldSearchText(query);
     if (!q) return [];
@@ -11586,7 +11618,7 @@ class WineCellarCard extends HTMLElement {
     if (field === "wine_name") {
       var groups = {};
       var list = [];
-      all.forEach(function (b) {
+      all.forEach(function (b, i) {
         var name = String(b.wine_name || "").trim();
         if (!name) return;
         var hay = self._foldSearchText([name, b.producer, b.region, b.country, b.varietal, b.vintage].join(" "));
@@ -11597,7 +11629,7 @@ class WineCellarCard extends HTMLElement {
           group = groups[key] = { name: name, producer: b.producer || "", vintage: b.vintage || null, type: b.wine_type, image: b.image_path || "", country: b.country || "", count: 0, sample: b };
           list.push(group);
         }
-        if (consumed.indexOf(b) < 0) {
+        if (i < activeCount) {
           group.count++;
           group.sample = b;
         }
@@ -11720,7 +11752,7 @@ class WineCellarCard extends HTMLElement {
     this._closeCombo(form);
     if (field !== "wine_name") {
       input.value = item.value;
-      this._unmarkSheetField(form, field);
+      this._unmarkSheetField(form, field, true);
       this._syncSheetMore(form);
       this._syncSheetDuplicate(form);
       input.focus();
@@ -11897,6 +11929,9 @@ class WineCellarCard extends HTMLElement {
   async _readSheetBarcode(form, file) {
     var self = this;
     var m = this._modal;
+    // A newer reading, or leaving this form, makes this one moot.
+    var seq = m.readSeq;
+    function live() { return m.readSeq === seq ? self._liveSheetForm(m) : null; }
     this._setSheetStage(form, "review");
     this._setSheetNote(form, { kind: "info", spin: true, text: _T("sheet_st_barcode") });
     try {
@@ -11904,20 +11939,21 @@ class WineCellarCard extends HTMLElement {
       var filename = "temp_barcode_" + String(file.name || "scan").replace(/\.[a-z0-9]+$/i, "").replace(/[^\w.-]+/g, "_").slice(0, 40) + ".jpg";
       var upload = await this._callWS({ type: "wine_cellar_manager/upload_label_image", data_base64: await _wcmBlobToBase64(blob), filename: filename });
       var result = await this._callWS({ type: "wine_cellar_manager/unified_analyze", barcode: "", image_path: (upload && upload.image_path) || "" });
-      var live = this._liveSheetForm(m);
-      if (!live) return;
+      var box = live();
+      if (!box) return;
       var code = result && result.suggestion && result.suggestion.barcode;
       if (!code) {
-        this._setSheetNote(live, { kind: "warn", text: _T("no_barcode_found") });
+        this._setSheetNote(box, { kind: "warn", text: _T("no_barcode_found") });
         return;
       }
-      this._sheetField(live, "barcode").value = code;
-      this._markSheetFields(live, ["barcode"], "ai");
-      this._syncSheetMore(live);
-      await this._analyzeSheet(live, { barcode: code });
+      this._sheetField(box, "barcode").value = code;
+      this._markSheetFields(box, ["barcode"], "ai");
+      this._syncSheetMore(box);
+      await this._analyzeSheet(box, { barcode: code });
     } catch (err) {
       console.error("Wine Cellar: barcode reading failed", err);
-      this._setSheetNote(this._liveSheetForm(m), { kind: "warn", text: _T("barcode_extraction_failed") });
+      var failed = live();
+      if (failed) this._setSheetNote(failed, { kind: "warn", text: _T("barcode_extraction_failed") });
     }
   }
 
@@ -12212,10 +12248,27 @@ class WineCellarCard extends HTMLElement {
     // Fewer free slots were left than bottles to save.
     if (!failure && saved.length < qty) failure = lastTaken || new Error(_T("unknown_error"));
     m.saving = false;
+    var reloaded = false;
     try {
       await this._loadData(true);
+      reloaded = true;
     } catch (err) {
       console.error("Wine Cellar: reload after save failed", err);
+    }
+
+    // The dialog was closed, or another one opened, while the save ran:
+    // what is on screen now stays as it is, and a toast tells the outcome.
+    if (this._modal !== m) {
+      await this.render(!reloaded);
+      if (saved.length) {
+        var whereSaved = saved.length > 1 ? this._plannedWhere(saved.map(at)) : this._slotWhere(at(saved[0]));
+        this._showToast(isEdit ? _T("sheet_saved_edit")
+          : saved.length > 1 ? _T("sheet_saved_n", { n: saved.length, where: whereSaved })
+          : _T("sheet_saved_one", { name: base.wine_name, where: whereSaved }));
+      } else {
+        this._showToast(_T("sheet_err_save", { error: this._friendlyError(failure) }), { kind: "warn" });
+      }
+      return;
     }
 
     if (failure && !saved.length) {
@@ -12253,8 +12306,9 @@ class WineCellarCard extends HTMLElement {
 
     if (isEdit) {
       var fresh = bottles.find(function (b) { return b.id === base.bottle_id; });
+      this._releaseSheetPhoto();
       this._modal = { type: "bottle", uid: ++this._modalSeq, bottle: fresh || null, preset: {}, mode: "view", ui: {} };
-      await this.render(true);
+      await this.render(!reloaded);
       this._showToast(_T("sheet_saved_edit"));
       return;
     }
@@ -12299,7 +12353,7 @@ class WineCellarCard extends HTMLElement {
       if (manual) this._modal.ui.stage = "review";
       this._modal.focusName = true;
     } else {
-      await this._closeModal();
+      await this._closeModal(reloaded);
     }
     this._showToast(message, { action: view, kind: kind });
   }
@@ -12520,7 +12574,7 @@ class WineCellarCard extends HTMLElement {
       var name = t.name;
       if (!name) return;
       if (!self._sheetFilling) {
-        self._unmarkSheetField(form, name);
+        self._unmarkSheetField(form, name, true);
         var error = form.querySelector('[data-err-for="' + (name.indexOf("aging_") === 0 ? "window" : name) + '"]');
         if (error) error.hidden = true;
         t.removeAttribute("aria-invalid");
@@ -12540,11 +12594,11 @@ class WineCellarCard extends HTMLElement {
         return;
       }
       if (t.name === "wine_type") {
-        if (!self._sheetFilling) self._unmarkSheetField(form, "wine_type");
+        if (!self._sheetFilling) self._unmarkSheetField(form, "wine_type", true);
         self._syncSheetTypes(form);
       }
       if (t.name === "rating") {
-        if (!self._sheetFilling) self._unmarkSheetField(form, "rating");
+        if (!self._sheetFilling) self._unmarkSheetField(form, "rating", true);
         self._syncSheetStars(form);
         self._syncSheetMore(form);
       }
@@ -12740,11 +12794,17 @@ class WineCellarCard extends HTMLElement {
         var el = row.querySelector('[name="' + name + '"]');
         return el ? el.value : "";
       }
+      // Typing runs ahead of the field's own max (applied on change): clamp,
+      // so a stray "100000" does not draw that many slots.
+      function capacity(name) {
+        var el = row.querySelector('[name="' + name + '"]');
+        return el ? Math.max(0, Math.min(self._capacityOf(el.value, 0), self._rowMax(el))) : 0;
+      }
       return {
         id: value("shelf_id[]"),
         name: value("shelf_name[]"),
-        capacity_front: self._capacityOf(value("capacity_front[]"), 0),
-        capacity_back: self._capacityOf(value("capacity_back[]"), 0)
+        capacity_front: capacity("capacity_front[]"),
+        capacity_back: capacity("capacity_back[]")
       };
     });
   }
@@ -13077,8 +13137,9 @@ class WineCellarCard extends HTMLElement {
       }
     }
     m.saving = false;
-    await this._loadData(true);
-    await this._closeModal();
+    // Only this dialog closes; one opened meanwhile stays as it is.
+    if (this._modal === m) await this._closeModal();
+    else await this.render(true);
     if (reorderFailed) this._showToast(_T("builder_order_failed"), { kind: "warn" });
     else this._showToast(_T("builder_saved"));
   }
@@ -13221,10 +13282,14 @@ class WineCellarCard extends HTMLElement {
     if (!this.shadowRoot || !this._hass) return;
 
 
-    // Sauvegarde persistante dans le navigateur pour survivre aux rafraîchissements globaux
+    // Kept in the browser so the scroll survives Home Assistant redrawing
+    // the card; it is given back only to the same view. Storage can be
+    // unavailable (private mode), which must not stop the render.
     var scrollContainer = this.shadowRoot.querySelector(".main-scroll-content");
     if (scrollContainer) {
-      window.sessionStorage.setItem("wine_cellar_scroll_top", scrollContainer.scrollTop);
+      try {
+        window.sessionStorage.setItem("wine_cellar_scroll_top", JSON.stringify({ view: this._paintedView, top: scrollContainer.scrollTop }));
+      } catch (err) { /* storage unavailable */ }
     }
 
     // A render requested while one is in flight is remembered and replayed in
@@ -13238,7 +13303,19 @@ class WineCellarCard extends HTMLElement {
     this._rendering = true;
 
     try {
-      var data = await this._loadData(!!force);
+      var data;
+      try {
+        data = await this._loadData(!!force);
+        this._loadFailedAt = 0;
+      } catch (err) {
+        this._loadFailedAt = Date.now();
+        // A first load that fails shows the error below. Later ones keep the
+        // card drawn from the data it has; set hass tries again shortly.
+        if (!this._data) throw err;
+        console.error("Wine Cellar: could not reload the data", err);
+        this._showToast(_T("action_failed", { error: this._friendlyError(err) }), { kind: "warn" });
+        data = this._data;
+      }
       // The "every slot is taken" notice goes away once there is room again.
       if (this._toolbarNotice && this._findFreeSlot()) this._toolbarNotice = "";
       var snapshot = JSON.stringify({
@@ -13314,6 +13391,7 @@ class WineCellarCard extends HTMLElement {
         this._styleTag() +
         '<ha-card><div class="wrap' + (this.config && this.config.background === "wood" ? " wood" : "") + '">' + _WCM_BOTTLE_SHADE + this._renderToolbar() +
         '<div class="main-scroll-content" id="wcm-view" role="tabpanel" aria-labelledby="wcm-tab-' + view + '">' + body + "</div>" + modal + cleanupModal + "</div></ha-card>";
+      this._paintedView = view;
 
       var self = this;
       var root = this.shadowRoot;
@@ -13342,12 +13420,15 @@ class WineCellarCard extends HTMLElement {
       this._syncDepth({ instant: true });
       this._observeCabinets();
 
-      var savedScroll = window.sessionStorage.getItem("wine_cellar_scroll_top");
-      if (savedScroll !== null) {
+      var savedScroll = null;
+      try {
+        savedScroll = JSON.parse(window.sessionStorage.getItem("wine_cellar_scroll_top") || "null");
+      } catch (err) { /* storage unavailable, or an older value */ }
+      if (savedScroll && savedScroll.view === view) {
         var restoreScrollTop = function () {
           var newScrollContainer = root.querySelector(".main-scroll-content");
           if (newScrollContainer) {
-            newScrollContainer.scrollTop = Number(savedScroll);
+            newScrollContainer.scrollTop = Number(savedScroll.top) || 0;
           }
         };
         // A bottle about to be shown (located, just added or moved, lifted

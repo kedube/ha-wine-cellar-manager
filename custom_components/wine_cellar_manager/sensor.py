@@ -7,10 +7,11 @@ from typing import Any
 from homeassistant.components.sensor import SensorEntity
 from homeassistant.config_entries import ConfigEntry
 from homeassistant.core import HomeAssistant, callback
+from homeassistant.helpers.dispatcher import async_dispatcher_connect
 from homeassistant.helpers.entity_platform import AddEntitiesCallback
 from homeassistant.helpers.typing import StateType
 
-from .const import DOMAIN, EVENT_DATA_CHANGED
+from .const import DOMAIN, SIGNAL_DATA_CHANGED
 
 _LOGGER = logging.getLogger(__name__)
 
@@ -46,24 +47,17 @@ class BaseWineCellarSensor(SensorEntity):
         """Register callbacks when entity is added to Home Assistant."""
 
         @callback
-        def _on_data_changed(event) -> None:
+        def _on_data_changed(payload: dict[str, Any]) -> None:
             """Triggered whenever bottles or cellars are saved/deleted.
 
-            The store puts the freshly saved payload on the event, so the
-            sensors can update straight from it instead of each re-reading
-            and re-normalizing the whole store.
+            The store sends the freshly saved payload, so the sensors update
+            straight from it instead of each re-reading the whole store.
             """
-            payload = (event.data or {}).get("data") if event else None
-            if isinstance(payload, dict):
-                self._stored_data = payload
-                self.async_write_ha_state()
-                return
-
-            # No payload (older event shape): fall back to a refresh.
-            self.async_schedule_update_ha_state(force_refresh=True)
+            self._stored_data = payload
+            self.async_write_ha_state()
 
         self.async_on_remove(
-            self.hass.bus.async_listen(EVENT_DATA_CHANGED, _on_data_changed)
+            async_dispatcher_connect(self.hass, SIGNAL_DATA_CHANGED, _on_data_changed)
         )
 
     async def async_update(self) -> None:

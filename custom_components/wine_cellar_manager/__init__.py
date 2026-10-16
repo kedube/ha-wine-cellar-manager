@@ -1,15 +1,18 @@
 """Wine Cellar Manager integration."""
 from __future__ import annotations
 
+from pathlib import Path
+
 from homeassistant.components.frontend import add_extra_js_url
 from homeassistant.components.http import StaticPathConfig
 from homeassistant.config_entries import ConfigEntry
 from homeassistant.core import HomeAssistant
+from homeassistant.exceptions import ConfigEntryNotReady
 from homeassistant.helpers import config_validation as cv
 from homeassistant.loader import async_get_integration
 
 from .const import DOMAIN, PLATFORMS
-from .services import async_register_services, async_unregister_services
+from .services import async_register_services
 from .storage import async_get_store
 from .websocket_api import async_register_websockets
 
@@ -17,34 +20,33 @@ CONFIG_SCHEMA = cv.config_entry_only_config_schema(DOMAIN)
 
 
 async def async_setup(hass: HomeAssistant, config: dict) -> bool:
-    """Set up the Wine Cellar Manager integration."""
+    """Set up the Wine Cellar Manager integration.
+
+    Runs once per Home Assistant start. The websocket commands and the
+    service stay registered while the entry is reloaded; they report an error
+    when no entry is loaded.
+    """
     hass.data.setdefault(DOMAIN, {})
-
-    if not hass.data[DOMAIN].get("websockets_registered"):
-        async_register_websockets(hass)
-        hass.data[DOMAIN]["websockets_registered"] = True
-
-    if not hass.data[DOMAIN].get("services_registered"):
-        await async_register_services(hass)
-        hass.data[DOMAIN]["services_registered"] = True
-
+    async_register_websockets(hass)
+    await async_register_services(hass)
     return True
 
 
 async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
     """Set up Wine Cellar Manager from a config entry."""
     hass.data.setdefault(DOMAIN, {})
-    if not hass.data[DOMAIN].get("websockets_registered"):
-        async_register_websockets(hass)
-        hass.data[DOMAIN]["websockets_registered"] = True
 
     store = async_get_store(hass)
-    await store.async_load()
+    try:
+        await store.async_get_cached()
+    except Exception as err:
+        # Retried later; starting empty would let the next change overwrite the data.
+        raise ConfigEntryNotReady(f"Could not load the wine cellar data: {err}") from err
 
     hass.data[DOMAIN][entry.entry_id] = {"store": store, "entry": entry}
 
     if not hass.data[DOMAIN].get("frontend_registered"):
-        frontend_dir = hass.config.path("custom_components", DOMAIN, "frontend")
+        frontend_dir = str(Path(__file__).parent / "frontend")
         await hass.http.async_register_static_paths(
             [
                 StaticPathConfig(
@@ -80,22 +82,9 @@ async def async_unload_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
         domain_data = hass.data[DOMAIN]
         domain_data.pop(entry.entry_id, None)
 
-        # When the last entry goes away, drop the services and the shared store
-        # so a later setup starts from a clean state instead of a stale cache.
-        remaining = [
-            key
-            for key in domain_data
-            if key
-            not in {
-                "store",
-                "services_registered",
-                "websockets_registered",
-                "frontend_registered",
-            }
-        ]
-        if not remaining:
-            if domain_data.pop("services_registered", False):
-                await async_unregister_services(hass)
+        # When the last entry goes away, drop the shared store so a later
+        # setup re-reads it from disk instead of using a stale cache.
+        if not any(key not in {"store", "frontend_registered"} for key in domain_data):
             domain_data.pop("store", None)
 
     return unload_ok

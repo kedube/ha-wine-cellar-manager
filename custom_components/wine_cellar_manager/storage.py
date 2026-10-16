@@ -2,9 +2,11 @@
 from __future__ import annotations
 
 import asyncio
-import hashlib
+import base64
+import binascii
 import logging
 import os
+import time
 import uuid
 from copy import deepcopy
 from datetime import UTC, datetime
@@ -12,6 +14,7 @@ from pathlib import Path
 from typing import Any
 
 from homeassistant.core import HomeAssistant
+from homeassistant.helpers.dispatcher import async_dispatcher_send
 from homeassistant.helpers.storage import Store
 
 from .const import (
@@ -21,6 +24,7 @@ from .const import (
     LANE_FRONT,
     LAYOUT_SINGLE,
     LAYOUT_STAGGERED,
+    SIGNAL_DATA_CHANGED,
     STORAGE_KEY,
     STORAGE_VERSION,
     WINE_TYPES,
@@ -48,6 +52,8 @@ def _remove_file_if_exists(path: str) -> None:
 
 
 ALLOWED_IMAGE_EXTENSIONS = {".jpg", ".jpeg", ".png", ".webp", ".gif"}
+
+LABELS_URL = "/local/wine_labels/"
 
 # Generous enough for a phone photo, small enough to bound memory and disk.
 MAX_IMAGE_BYTES = 12 * 1024 * 1024
@@ -116,15 +122,15 @@ class WineCellarStore:
         self._lock = asyncio.Lock()
 
     async def _async_ensure_loaded(self) -> dict[str, Any]:
-        """Populate the in-memory cache from disk on first use."""
+        """Populate the in-memory cache from disk on first use.
+
+        A read error is raised, never replaced by empty data: the next change
+        would save that empty data over the file.
+        """
         if self._data is not None:
             return self._data
 
-        try:
-            data = await self._store.async_load()
-        except Exception as err:
-            _LOGGER.exception("Store load failed: %r", err)
-            data = None
+        data = await self._store.async_load()
 
         if not isinstance(data, dict):
             self._data = _default_data()
@@ -143,8 +149,10 @@ class WineCellarStore:
         payload = self._normalize_data(data)
         self._data = payload
         await self._store.async_save(payload)
-        # Hand listeners the already-computed payload so sensors need not reload.
-        self.hass.bus.async_fire(EVENT_DATA_CHANGED, {"data": payload})
+        # Sensors get the payload through the dispatcher. The bus event carries
+        # no data, since the recorder writes each event's data to its database.
+        async_dispatcher_send(self.hass, SIGNAL_DATA_CHANGED, payload)
+        self.hass.bus.async_fire(EVENT_DATA_CHANGED)
 
     async def async_get_cached(self) -> dict[str, Any]:
         """Return the shared cached data. Callers must not mutate the result."""
@@ -477,20 +485,26 @@ class WineCellarStore:
 
         return str(resolved)
 
-    def _sha256(self, path: Path) -> str:
-        """Hash a file with SHA-256."""
-        try:
-            digest = hashlib.sha256()
-            with path.open("rb") as handle:
-                for chunk in iter(lambda: handle.read(65536), b""):
-                    digest.update(chunk)
-            return digest.hexdigest()
-        except Exception as err:
-            _LOGGER.warning("Could not hash %s: %r", path, err)
-            return ""
-
     def _iter_all_bottles(self, data: dict[str, Any]) -> list[dict[str, Any]]:
         return list(data.get("bottles", [])) + list(data.get("consumed_bottles", []))
+
+    def _find_shared_image(
+        self, data: dict[str, Any], wine_name: str, producer: str, exclude_id: str
+    ) -> str:
+        """Return the label image an identical wine (same name and producer) uses."""
+        name = str(wine_name).strip().lower()
+        maker = str(producer).strip().lower()
+        for bottle in self._iter_all_bottles(data):
+            if str(bottle.get("id")) == exclude_id:
+                continue
+            image = str(bottle.get("image_path") or "").strip()
+            if (
+                image.startswith(LABELS_URL)
+                and str(bottle.get("wine_name") or "").strip().lower() == name
+                and str(bottle.get("producer") or "").strip().lower() == maker
+            ):
+                return image
+        return ""
 
     def _is_image_referenced_elsewhere(
         self,
@@ -604,11 +618,6 @@ class WineCellarStore:
         """Put a consumed bottle back in the slot it was taken from."""
         async with self._lock:
             return await self._async_restore_consumed_bottle_unlocked(consumed_id)
-
-    async def async_copy_bottle(self, **kwargs: Any) -> str:
-        """Copy a bottle into an active slot."""
-        async with self._lock:
-            return await self._async_copy_bottle_unlocked(**kwargs)
 
     async def async_move_bottle(self, **kwargs: Any) -> None:
         """Move a bottle to another slot."""
@@ -751,7 +760,6 @@ class WineCellarStore:
             position=int(position),
         )
 
-        # Régularisation et renommage sécurisé du fichier image avec le nom du vin
         current_image_path = str(image_path or "").strip()
         previous_image_path = ""
         existing_bottle_id = bottle_id or ""
@@ -762,74 +770,55 @@ class WineCellarStore:
                     previous_image_path = str(bottle.get("image_path") or "").strip()
                     break
 
-        # ALGORITHME DE MUTUALISATION DE L'IMAGE POUR BOUTEILLES SEMBLABLES
-        if wine_name and current_image_path:
-            import os
-
-            # Normalisation stricte pour trouver une bouteille identique en stock
-            target_name_norm = str(wine_name).strip().lower()
-            target_prod_norm = str(producer).strip().lower()
-            existing_shared_path = ""
-
-            for b in self._iter_all_bottles(data):
-                if str(b.get("id")) == existing_bottle_id:
-                    continue
-                # Alignement sur la logique de similarité de l'interface
-                b_name_norm = str(b.get("wine_name") or "").strip().lower()
-                b_prod_norm = str(b.get("producer") or "").strip().lower()
-                b_img = str(b.get("image_path") or "").strip()
-
-                if b_name_norm == target_name_norm and b_prod_norm == target_prod_norm and b_img.startswith("/local/wine_labels/"):
-                    existing_shared_path = b_img
-                    break
-
-            # Cas A : Une bouteille identique existe déjà avec son image -> on réutilise son fichier
-            if existing_shared_path:
-                # Si l'image actuelle était un fichier temporaire issu d'un nouvel upload, on le nettoie pour ne pas saturer le disque
-                if current_image_path != existing_shared_path and current_image_path.startswith("/local/wine_labels/"):
-                    current_local_path = self._normalize_local_path(current_image_path)
-                    try:
-                        # On ne supprime le fichier physique que s'il n'est pas utilisé ailleurs
-                        if not self._is_image_referenced_elsewhere(data, image_path=current_image_path, exclude_ids={existing_bottle_id}):
-                            await self.hass.async_add_executor_job(
-                                _remove_file_if_exists, current_local_path
-                            )
-                    except Exception as img_err:
-                        _LOGGER.debug("Skipped duplicate image cleanup: %r", img_err)
-
-                _LOGGER.info("Wine Cellar Manager: Reusing shared image for wine '%s'", wine_name)
-                image_path = existing_shared_path
-
-            # Cas B : Aucun vin similaire trouvé -> On procède au renommage standard sécurisé de l'image
-            elif current_image_path.startswith("/local/wine_labels/"):
-                import time
-                clean_wine_name = "".join(c for c in wine_name if c.isalnum() or c in (" ", "_", "-")).strip()
+        # Shared label images. Only a newly uploaded photo is handled: an
+        # unchanged one, or one another bottle already uses, is kept as is,
+        # so editing or merging bottles never renames or replaces a file.
+        if (
+            wine_name
+            and current_image_path.startswith(LABELS_URL)
+            and current_image_path != previous_image_path
+            and not self._is_image_referenced_elsewhere(
+                data, image_path=current_image_path, exclude_ids={existing_bottle_id}
+            )
+        ):
+            current_local_path = self._normalize_local_path(current_image_path)
+            # A bottle getting its first photo takes the one an identical wine
+            # already uses; a bottle replacing its photo keeps the new one.
+            shared_path = (
+                ""
+                if previous_image_path
+                else self._find_shared_image(data, wine_name, producer, existing_bottle_id)
+            )
+            if shared_path:
+                if current_local_path:
+                    await self.hass.async_add_executor_job(
+                        _remove_file_if_exists, current_local_path
+                    )
+                _LOGGER.debug("Reusing the shared label image of '%s'", wine_name)
+                image_path = shared_path
+            elif current_local_path:
+                # Name the file after the wine.
+                clean_wine_name = "".join(
+                    c for c in wine_name if c.isalnum() or c in (" ", "_", "-")
+                ).strip()[:60]
                 clean_wine_name = clean_wine_name.replace(" ", "_") or "vin"
-
-                current_local_path = self._normalize_local_path(current_image_path)
-                _, ext = os.path.splitext(current_local_path)
-                ext = ext.lower() if ext else ".jpg"
-
+                ext = os.path.splitext(current_local_path)[1].lower() or ".jpg"
                 new_filename = f"{clean_wine_name}_{int(time.time())}_{uuid.uuid4().hex[:8]}{ext}"
-                new_local_path = os.path.join(self.hass.config.path("www", "wine_labels"), new_filename)
-                new_image_path_url = f"/local/wine_labels/{new_filename}"
-
-                source_exists = await self.hass.async_add_executor_job(
-                    os.path.exists, current_local_path
+                new_local_path = os.path.join(
+                    self.hass.config.path("www", "wine_labels"), new_filename
                 )
-                if source_exists and current_local_path != new_local_path:
-                    try:
-                        if self._is_image_referenced_elsewhere(data, image_path=current_image_path, exclude_ids={existing_bottle_id}):
-                            import shutil
-                            def _sync_copy(): shutil.copy2(current_local_path, new_local_path)
-                            await self.hass.async_add_executor_job(_sync_copy)
-                        else:
-                            def _sync_rename(): os.rename(current_local_path, new_local_path)
-                            await self.hass.async_add_executor_job(_sync_rename)
 
-                        image_path = new_image_path_url
-                    except Exception as err:
-                        _LOGGER.error("Impossible de renommer le fichier image : %r", err)
+                def _rename() -> bool:
+                    if not os.path.exists(current_local_path):
+                        return False
+                    os.rename(current_local_path, new_local_path)
+                    return True
+
+                try:
+                    if await self.hass.async_add_executor_job(_rename):
+                        image_path = f"{LABELS_URL}{new_filename}"
+                except OSError as err:
+                    _LOGGER.error("Could not rename the label image: %r", err)
 
         payload = {
             "id": bottle_id or uuid.uuid4().hex,
@@ -976,58 +965,6 @@ class WineCellarStore:
         await self.async_save(data)
         return record["id"]
 
-    async def _async_copy_bottle_unlocked(
-        self,
-        *,
-        source_bottle_id: str,
-        cellar_id: str,
-        shelf_id: str,
-        lane: str,
-        position: int,
-    ) -> str:
-        """Copy active or consumed bottle into an active slot."""
-        data = await self.async_load()
-        active = data["bottles"]
-        consumed = data["consumed_bottles"]
-
-        source = None
-        for bottle in active:
-            if bottle.get("id") == source_bottle_id:
-                source = dict(bottle)
-                break
-
-        if source is None:
-            for bottle in consumed:
-                if bottle.get("id") == source_bottle_id:
-                    source = dict(bottle)
-                    break
-
-        if source is None:
-            raise ValueError("Source bottle not found")
-
-        self._validate_slot_available(
-            data,
-            bottle_id=None,
-            cellar_id=cellar_id,
-            shelf_id=shelf_id,
-            lane=lane,
-            position=int(position),
-        )
-
-        source["id"] = uuid.uuid4().hex
-        source["cellar_id"] = cellar_id
-        source["shelf_id"] = shelf_id
-        source["lane"] = lane
-        source["position"] = int(position)
-        source["consumed_at"] = ""
-        source["original_bottle_id"] = ""
-        source["created_at"] = _utcnow()
-        source["updated_at"] = _utcnow()
-
-        active.append(self._normalize_bottle(source))
-        await self.async_save(data)
-        return source["id"]
-
     async def _async_move_bottle_unlocked(
         self,
         *,
@@ -1119,146 +1056,8 @@ class WineCellarStore:
 
         await self.async_save(data)
 
-
-    async def async_search_bottles(self, query: str, limit: int = 10) -> list[dict[str, Any]]:
-        """Search active and consumed bottles."""
-        q = (query or "").strip().lower()
-        if not q:
-            return []
-
-        data = await self.async_load()
-        cellar_map = {c.get("id", ""): c.get("name", "") for c in data["cellars"]}
-
-        results: list[dict[str, Any]] = []
-
-        def score_text(value: Any) -> int:
-            text = str(value or "").lower()
-            if not text:
-                return 0
-            if text == q:
-                return 100
-            if text.startswith(q):
-                return 75
-            if q in text:
-                return 50
-            return 0
-
-        for source_name, items in (("active", data["bottles"]), ("consumed", data["consumed_bottles"])):
-            for bottle in items:
-                best = max(
-                    score_text(bottle.get("wine_name")),
-                    score_text(bottle.get("producer")),
-                    score_text(bottle.get("region")),
-                    score_text(bottle.get("country")),
-                    score_text(bottle.get("varietal")),
-                    score_text(bottle.get("vintage")),
-                    score_text(bottle.get("notes")),
-                )
-                if best <= 0:
-                    continue
-
-                cellar_id = bottle.get("cellar_id", "")
-                results.append(
-                    {
-                        "bottle_id": bottle.get("id", ""),
-                        "wine_name": bottle.get("wine_name", ""),
-                        "producer": bottle.get("producer", ""),
-                        "vintage": bottle.get("vintage"),
-                        "region": bottle.get("region", ""),
-                        "country": bottle.get("country", ""),
-                        "varietal": bottle.get("varietal", ""),
-                        "display_origin": self._compute_display_origin(bottle),
-                        "cellar_name": cellar_map.get(cellar_id, "") or "Consumed / archived",
-                        "source": source_name,
-                        "score": best,
-                        "image_path": bottle.get("image_path", ""),
-                        "wine_type": bottle.get("wine_type", "other"),
-                        "price": bottle.get("price"),
-                        "serving_temp": bottle.get("serving_temp"),
-                        "alcohol_pct": bottle.get("alcohol_pct"),
-                        "aging_start_year": bottle.get("aging_start_year"),
-                        "aging_end_year": bottle.get("aging_end_year"),
-                        "rating": bottle.get("rating"),
-                        "notes": bottle.get("notes", ""),
-                        "saq_url": bottle.get("saq_url"),
-                    }
-                )
-
-        results.sort(key=lambda item: (-int(item.get("score", 0)), str(item.get("wine_name", "")).lower()))
-        return results[:limit]
-
-    async def async_find_duplicate_labels(self, image_path: str) -> list[dict[str, Any]]:
-        """Find duplicate label files by hash across active and consumed bottles."""
-        local_path = self._normalize_local_path(image_path)
-        if not local_path:
-            return []
-
-        target = Path(local_path)
-        if not target.exists() or not target.is_file():
-            return []
-
-        target_hash = self._sha256(target)
-        if not target_hash:
-            return []
-
-        data = await self.async_load()
-        cellar_map = {c.get("id", ""): c.get("name", "") for c in data["cellars"]}
-        results: list[dict[str, Any]] = []
-
-        for source_name, items in (("active", data["bottles"]), ("consumed", data["consumed_bottles"])):
-            for bottle in items:
-                candidate_path = self._normalize_local_path(str(bottle.get("image_path", "")))
-                if not candidate_path:
-                    continue
-
-                candidate = Path(candidate_path)
-                if not candidate.exists() or not candidate.is_file():
-                    continue
-
-                try:
-                    if candidate.resolve() == target.resolve():
-                        continue
-                except Exception:
-                    pass
-
-                candidate_hash = self._sha256(candidate)
-                if not candidate_hash or candidate_hash != target_hash:
-                    continue
-
-                results.append(
-                    {
-                        "bottle_id": bottle.get("id", ""),
-                        "wine_name": bottle.get("wine_name", ""),
-                        "producer": bottle.get("producer", ""),
-                        "vintage": bottle.get("vintage"),
-                        "region": bottle.get("region", ""),
-                        "country": bottle.get("country", ""),
-                        "varietal": bottle.get("varietal", ""),
-                        "display_origin": self._compute_display_origin(bottle),
-                        "cellar_name": cellar_map.get(bottle.get("cellar_id", ""), "") or "Consumed / archived",
-                        "distance": 0,
-                        "source": source_name,
-                        "image_path": bottle.get("image_path", ""),
-                        "wine_type": bottle.get("wine_type", "other"),
-                        "price": bottle.get("price"),
-                        "serving_temp": bottle.get("serving_temp"),
-                        "alcohol_pct": bottle.get("alcohol_pct"),
-                        "aging_start_year": bottle.get("aging_start_year"),
-                        "aging_end_year": bottle.get("aging_end_year"),
-                        "rating": bottle.get("rating"),
-                        "notes": bottle.get("notes", ""),
-                        "saq_url": bottle.get("saq_url"),
-                    }
-                )
-
-        return results[:10]
-
     async def async_upload_label_image(self, filename: str, data_base64: str) -> str:
         """Decode base64 image data and save it securely to the local filesystem."""
-        import base64
-        import binascii
-        import time
-
         upload_dir = self.hass.config.path("www", "wine_labels")
 
         clean_filename = "".join(
@@ -1305,7 +1104,7 @@ class WineCellarStore:
         try:
             await self.hass.async_add_executor_job(_sync_write_image)
             _LOGGER.debug("Saved label image to %s (%s)", target_path, detected)
-            return f"/local/wine_labels/{unique_filename}"
+            return f"{LABELS_URL}{unique_filename}"
 
         except OSError as err:
             _LOGGER.error("Failed to write image to disk: %r", err)

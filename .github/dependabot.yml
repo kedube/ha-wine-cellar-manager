@@ -4,3 +4,8 @@ updates:
     directory: /
     schedule:
       interval: weekly
+  # requirements_test.txt: moves the tests to new Home Assistant releases.
+  - package-ecosystem: pip
+    directory: /
+    schedule:
+      interval: weekly

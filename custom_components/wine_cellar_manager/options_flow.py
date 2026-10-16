@@ -4,18 +4,17 @@ from typing import Any
 
 import voluptuous as vol
 from homeassistant.config_entries import OptionsFlow
+from homeassistant.helpers.selector import (
+    TextSelector,
+    TextSelectorConfig,
+    TextSelectorType,
+)
 
 from .const import (
-    DEFAULT_DEMO_ENRICHMENT,
     DEFAULT_GEMINI_API_KEY,
     DEFAULT_GEMINI_MODEL,
-    DEFAULT_IMAGE_BASE_PATH,
-    DEFAULT_IMAGE_UPLOAD_DIR,
-    OPTION_DEMO_ENRICHMENT,
     OPTION_GEMINI_API_KEY,
     OPTION_GEMINI_MODEL,
-    OPTION_IMAGE_BASE_PATH,
-    OPTION_IMAGE_UPLOAD_DIR,
 )
 
 
@@ -40,30 +39,16 @@ class WineCellarManagerOptionsFlowHandler(OptionsFlow):
 
         schema = vol.Schema(
             {
-                vol.Required(
-                    OPTION_IMAGE_BASE_PATH,
-                    default=self.config_entry.options.get(
-                        OPTION_IMAGE_BASE_PATH, DEFAULT_IMAGE_BASE_PATH
-                    ),
-                ): str,
-                vol.Required(
-                    OPTION_IMAGE_UPLOAD_DIR,
-                    default=self.config_entry.options.get(
-                        OPTION_IMAGE_UPLOAD_DIR, DEFAULT_IMAGE_UPLOAD_DIR
-                    ),
-                ): str,
-                vol.Required(
-                    OPTION_DEMO_ENRICHMENT,
-                    default=self.config_entry.options.get(
-                        OPTION_DEMO_ENRICHMENT, DEFAULT_DEMO_ENRICHMENT
-                    ),
-                ): bool,
+                # A suggested value, not a default: a default would put the
+                # old key back when the field is cleared.
                 vol.Optional(
                     OPTION_GEMINI_API_KEY,
-                    default=self.config_entry.options.get(
-                        OPTION_GEMINI_API_KEY, DEFAULT_GEMINI_API_KEY
-                    ),
-                ): str,
+                    description={
+                        "suggested_value": self.config_entry.options.get(
+                            OPTION_GEMINI_API_KEY, DEFAULT_GEMINI_API_KEY
+                        )
+                    },
+                ): TextSelector(TextSelectorConfig(type=TextSelectorType.PASSWORD)),
                 vol.Required(
                     OPTION_GEMINI_MODEL,
                     default=self.config_entry.options.get(

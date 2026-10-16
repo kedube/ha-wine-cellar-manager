@@ -3,14 +3,14 @@ from __future__ import annotations
 
 import json
 import logging
-import os
 from typing import Any
 
 from homeassistant.core import HomeAssistant
 from pydantic import BaseModel, Field
 
 from .const import DEFAULT_GEMINI_MODEL, OPTION_GEMINI_API_KEY, OPTION_GEMINI_MODEL
-from .websocket_api import _get_config_entry_options
+from .storage import _detect_image_mime, async_get_store
+from .websocket_api import _get_config_entry_options, _normalize_label_suggestion
 
 _LOGGER = logging.getLogger(__name__)
 
@@ -66,28 +66,23 @@ def _get_client_and_model(hass: HomeAssistant) -> tuple[Any, str]:
     return client, model_name
 
 
-def _load_image_bytes_and_mime(image_path: str) -> tuple[bytes, str]:
-    """Safely resolve paths, read content and dynamically detect if it's PNG or JPEG."""
-    resolved_path = image_path
-    if image_path.startswith("/local/"):
-        resolved_path = "/config/www/" + image_path[len("/local/"):]
+def _label_file(hass: HomeAssistant, image_path: str) -> str:
+    """Return the label's path on disk.
 
-    if not os.path.exists(resolved_path):
-        raise FileNotFoundError(f"Image label file not found on disk: {resolved_path}")
+    Only images under <config>/www/wine_labels are read, so a crafted path can
+    never send another file (secrets.yaml, say) to Gemini.
+    """
+    local_path = async_get_store(hass)._normalize_local_path(image_path)
+    if not local_path:
+        raise ValueError("Only uploaded label images can be analyzed.")
+    return local_path
 
-    with open(resolved_path, "rb") as f:
+
+def _load_image_bytes_and_mime(local_path: str) -> tuple[bytes, str]:
+    """Read a label image and detect its MIME type from its magic bytes."""
+    with open(local_path, "rb") as f:
         data = f.read()
-
-    # Analyse des "magic bytes" signature du fichier pour en extraire le bon type MIME
-    mime_type = "image/jpeg"
-    if data.startswith(b"\x89PNG\r\n\x1a\n"):
-        mime_type = "image/png"
-    elif data.startswith(b"GIF87a") or data.startswith(b"GIF89a"):
-        mime_type = "image/gif"
-    elif data.startswith(b"RIFF") and data[8:12] == b"WEBP":
-        mime_type = "image/webp"
-
-    return data, mime_type
+    return data, _detect_image_mime(data) or "image/jpeg"
 
 
 async def async_analyze_wine_with_gemini(
@@ -112,15 +107,15 @@ async def async_analyze_wine_with_gemini(
             return json.loads(response.text)
 
         suggestion_raw = await hass.async_add_executor_job(_sync_text_query)
-        from .websocket_api import _normalize_label_suggestion
         return {"suggestion": _normalize_label_suggestion(suggestion_raw, "")}
 
     if not image_path:
         raise ValueError("An image path is required for vision analysis.")
+    local_path = _label_file(hass, image_path)
 
     def _sync_vision_analysis():
         from google.genai import types
-        image_bytes, mime_type = _load_image_bytes_and_mime(image_path)
+        image_bytes, mime_type = _load_image_bytes_and_mime(local_path)
 
         # Passage obligatoire par types.Part.from_bytes en fournissant le type MIME détecté dynamiquement
         image_part = types.Part.from_bytes(data=image_bytes, mime_type=mime_type)
@@ -137,8 +132,6 @@ async def async_analyze_wine_with_gemini(
 
     try:
         raw_json = await hass.async_add_executor_job(_sync_vision_analysis)
-        from .websocket_api import _normalize_label_suggestion
-
         normalized = _normalize_label_suggestion(raw_json, image_path)
 
         return {
@@ -155,11 +148,12 @@ async def async_extract_barcode_from_image(
     image_path: str,
 ) -> dict[str, Any]:
     """Scan an uploaded image to detect and extract numeric barcode strings using Gemini."""
+    local_path = _label_file(hass, image_path)
     client, model_name = await hass.async_add_executor_job(_get_client_and_model, hass)
 
     def _sync_barcode_extraction():
         from google.genai import types
-        image_bytes, mime_type = _load_image_bytes_and_mime(image_path)
+        image_bytes, mime_type = _load_image_bytes_and_mime(local_path)
         image_part = types.Part.from_bytes(data=image_bytes, mime_type=mime_type)
 
         response = client.models.generate_content(

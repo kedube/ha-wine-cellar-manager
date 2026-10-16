@@ -51,6 +51,22 @@ jobs:
       - name: Translations match strings.json
         run: python scripts/check_translations.py
 
+  tests:
+    name: Tests
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.13"
+          cache: pip
+          cache-dependency-path: requirements_test.txt
+      # Pins the Home Assistant version the tests run against.
+      - name: Install test requirements
+        run: pip install -r requirements_test.txt
+      - name: Pytest
+        run: python -m pytest
+
   card:
     name: Dashboard card
     runs-on: ubuntu-24.04

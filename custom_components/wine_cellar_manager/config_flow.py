@@ -5,18 +5,12 @@ from homeassistant import config_entries
 from homeassistant.core import callback
 
 from .const import (
-    DEFAULT_DEMO_ENRICHMENT,
     DEFAULT_GEMINI_API_KEY,
     DEFAULT_GEMINI_MODEL,
-    DEFAULT_IMAGE_BASE_PATH,
-    DEFAULT_IMAGE_UPLOAD_DIR,
     DEFAULT_TITLE,
     DOMAIN,
-    OPTION_DEMO_ENRICHMENT,
     OPTION_GEMINI_API_KEY,
     OPTION_GEMINI_MODEL,
-    OPTION_IMAGE_BASE_PATH,
-    OPTION_IMAGE_UPLOAD_DIR,
 )
 from .options_flow import WineCellarManagerOptionsFlowHandler
 
@@ -35,9 +29,6 @@ class WineCellarManagerConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
                 title=title,
                 data={"title": title},
                 options={
-                    OPTION_IMAGE_BASE_PATH: DEFAULT_IMAGE_BASE_PATH,
-                    OPTION_IMAGE_UPLOAD_DIR: DEFAULT_IMAGE_UPLOAD_DIR,
-                    OPTION_DEMO_ENRICHMENT: DEFAULT_DEMO_ENRICHMENT,
                     OPTION_GEMINI_API_KEY: DEFAULT_GEMINI_API_KEY,
                     OPTION_GEMINI_MODEL: DEFAULT_GEMINI_MODEL,
                 },

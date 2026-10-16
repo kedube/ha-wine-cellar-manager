@@ -18,9 +18,6 @@
       "init": {
         "title": "Options du gestionnaire de cave à vin",
         "data": {
-          "image_base_path": "Chemin de base par défaut des images",
-          "image_upload_dir": "Dossier réseau de téléversement sous /config",
-          "demo_enrichment": "Activer les crochets d'enrichissement démo",
           "gemini_api_key": "Clé d'API Gemini",
           "gemini_model": "Modèle Gemini"
         }
