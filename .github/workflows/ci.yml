@@ -58,7 +58,9 @@ jobs:
       - uses: actions/checkout@v7
       - uses: actions/setup-python@v7
         with:
-          python-version: "3.13"
+          # The Python that the Home Assistant pinned in requirements_test.txt
+          # needs (3.14 since Home Assistant 2026.3); they change together.
+          python-version: "3.14"
           cache: pip
           cache-dependency-path: requirements_test.txt
       # Pins the Home Assistant version the tests run against.

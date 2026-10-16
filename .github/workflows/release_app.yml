@@ -4,6 +4,10 @@ name: Release
 # latest tag, written to manifest.json, committed, tagged, and the integration
 # zip is attached to the GitHub release.
 #
+# Only changes to the integration (custom_components/ or hacs.json) are
+# released: a push that changes only tests, CI, docs or test dependencies
+# runs CI and stops there.
+#
 # Bump size: patch by default. To bump more, put a line containing only
 # "#minor" or "#major" in a commit message since the last release, or run the
 # workflow manually and pick the bump. Put "[skip release]" in the head commit
@@ -69,8 +73,8 @@ jobs:
           last=$(git tag --list '[0-9]*.[0-9]*.[0-9]*' --sort=-v:refname | head -n1)
           last=${last:-0.0.0}
 
-          if [ "$last" != "0.0.0" ] && [ -z "$(git rev-list "$last"..HEAD)" ]; then
-            echo "No commits since $last; nothing to release."
+          if [ "$last" != "0.0.0" ] && [ -z "$(git rev-list "$last"..HEAD -- custom_components hacs.json)" ]; then
+            echo "No changes to the integration since $last; nothing to release."
             echo "skip=true" >> "$GITHUB_OUTPUT"
             exit 0
           fi
