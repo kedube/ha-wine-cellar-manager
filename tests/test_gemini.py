@@ -64,6 +64,15 @@ async def test_vision_reads_label_from_config_dir(
     assert suggestion["serving_temp"] == 17
 
 
+async def test_analyze_command_reads_label(
+    hass: HomeAssistant, gemini_entry, labels_dir: Path, fake_genai: dict, ws
+) -> None:
+    """The card's analyze command loads the Gemini module and reads the label."""
+    result = await ws(type="unified_analyze", image_path=add_photo(labels_dir, "label.jpg"))
+    assert result["suggestion"]["wine_name"] == "Margaux"
+    assert fake_genai["mime"] == "image/jpeg"
+
+
 @pytest.mark.parametrize("path", ["/config/secrets.yaml", "/local/../secrets.yaml", "/etc/hosts"])
 async def test_vision_refuses_files_outside_labels(
     hass: HomeAssistant, gemini_entry, labels_dir: Path, fake_genai: dict, path: str

@@ -292,7 +292,7 @@ The CI workflow runs on every pull request, every push to `main`, and weekly:
 - **Hassfest**: Home Assistant's validation of the manifest, translations, and services.
 - **HACS validation**: checks the repository meets HACS requirements.
 - **Python lint**: [Ruff](https://docs.astral.sh/ruff/) with the rules in `ruff.toml`, a compile check, and a check that every file in `translations/` has the same keys as `strings.json`.
-- **Tests**: the backend tests in `tests/`, run with [pytest-homeassistant-custom-component](https://github.com/MatthieuDartiailh/pytest-homeassistant-custom-component) against the Home Assistant version pinned in `requirements_test.txt`.
+- **Tests**: the backend tests in `tests/`, run with Home Assistant's [pytest-home-assistant](https://github.com/home-assistant/core/tree/dev/packages/pytest-home-assistant) against the Home Assistant version pinned in `requirements_test.txt`.
 - **Dashboard card**: a JavaScript syntax check, and a check that `dist/` matches the card in `custom_components/wine_cellar_manager/frontend/`.
 
 To run the local checks before pushing:

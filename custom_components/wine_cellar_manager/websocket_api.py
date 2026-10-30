@@ -8,6 +8,7 @@ from typing import Any
 import voluptuous as vol
 from homeassistant.components import websocket_api
 from homeassistant.core import HomeAssistant, callback
+from homeassistant.helpers.importlib import async_import_module
 
 from .const import (
     DOMAIN,
@@ -466,15 +467,14 @@ async def ws_unified_analyze(
         return
 
     try:
-        from .gemini_vision import (
-            async_analyze_wine_with_gemini,
-            async_extract_barcode_from_image,
-        )
+        # Imported on first use, in the executor: importing pydantic would
+        # block the event loop.
+        gemini_vision = await async_import_module(hass, f"{__package__}.gemini_vision")
 
         if image_path and not barcode and "temp_barcode_" in image_path:
             store = async_get_store(hass)
             try:
-                barcode_result = await async_extract_barcode_from_image(hass, image_path)
+                barcode_result = await gemini_vision.async_extract_barcode_from_image(hass, image_path)
                 extracted = barcode_result.get("barcode", "")
             finally:
                 await store.async_delete_image(image_path)
@@ -496,7 +496,7 @@ async def ws_unified_analyze(
             )
             return
 
-        result = await async_analyze_wine_with_gemini(
+        result = await gemini_vision.async_analyze_wine_with_gemini(
             hass,
             barcode=barcode or None,
             image_path=image_path or None,

@@ -8,7 +8,7 @@ from homeassistant.components.websocket_api.const import DOMAIN as WS_DOMAIN
 from homeassistant.config_entries import ConfigEntryState
 from homeassistant.core import HomeAssistant
 from homeassistant.exceptions import HomeAssistantError
-from pytest_homeassistant_custom_component.common import MockConfigEntry
+from pytest_homeassistant.common import MockConfigEntry
 
 from .common import DOMAIN, add_cellar, save_bottle
 

@@ -1,2 +1,8 @@
 # Test dependencies; this pins the Home Assistant version the tests run against.
-pytest-homeassistant-custom-component==0.13.375
+# pytest-home-assistant is not on PyPI yet, so it is built from the Home
+# Assistant release of the same version: when homeassistant is bumped, move the
+# tag in the URL with it.
+homeassistant==2026.11.0b1
+pytest-home-assistant @ https://github.com/home-assistant/core/archive/refs/tags/2026.11.0b1.tar.gz#subdirectory=packages/pytest-home-assistant
+# The integration's requirement (manifest.json); gemini_vision needs its pydantic.
+google-genai==2.34.0

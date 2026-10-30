@@ -1,6 +1,9 @@
 {
   "domain": "wine_cellar_manager",
   "name": "Wine Cellar Manager",
+  "categories": [
+    "productivity_information"
+  ],
   "codeowners": [
     "@kedube"
   ],
