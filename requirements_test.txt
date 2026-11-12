@@ -5,4 +5,4 @@
 homeassistant==2026.11.0
 pytest-home-assistant @ https://github.com/home-assistant/core/archive/refs/tags/2026.11.0b1.tar.gz#subdirectory=packages/pytest-home-assistant
 # The integration's requirement (manifest.json); gemini_vision needs its pydantic.
-google-genai==2.34.0
+google-genai==3.0.0
