@@ -309,13 +309,15 @@ python3 -m pytest
 
 ### Releases
 
-Releases are automated. Every push to `main` runs CI and then, if it passes, the Release workflow. When something in `custom_components/` or `hacs.json` changed since the last release (not only tests, CI, docs or Dependabot updates), it:
+Releases are automated. Every push to `main` runs CI and then, if it passes, the Release workflow. When the push itself changes something in `custom_components/` or `hacs.json`, it:
 
 1. bumps the version from the latest tag: patch by default, or minor/major when a commit message since the last release has a line containing only `#minor` or `#major`;
 2. writes the new version to `manifest.json`, commits it, and tags it;
-3. publishes a GitHub release with `wine_cellar_manager.zip` attached.
+3. publishes a GitHub release with `wine_cellar_manager.zip` attached, holding every change to the integration since the last release.
 
-Add `[skip release]` to a commit message to push without releasing, or run the workflow by hand from the Actions tab to pick the bump. Pull before pushing again, as each release adds a version commit to `main`. The release fails if `dist/wine-cellar-card.js` differs from the card in `custom_components/wine_cellar_manager/frontend/`, so copy it over after editing the card.
+A push that changes only CI, tests, docs or test dependencies, and any push of Dependabot's commits, runs CI but never releases. That holds even when earlier integration changes are still unreleased (pushed with `[skip release]`, or from a run that failed): the run shows a warning, and they go out with the next push that changes the integration.
+
+Add `[skip release]` to a commit message to push without releasing, or run the workflow by hand from the Actions tab to release what is waiting and pick the bump. Pull before pushing again, as each release adds a version commit to `main`. The release fails if `dist/wine-cellar-card.js` differs from the card in `custom_components/wine_cellar_manager/frontend/`, so copy it over after editing the card.
 
 ## Credit
 

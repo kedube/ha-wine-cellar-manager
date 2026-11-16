@@ -1,12 +1,15 @@
 name: Release
 
-# Every push to main runs CI and, if it passes, publishes a new release: the version is bumped from the
-# latest tag, written to manifest.json, committed, tagged, and the integration
-# zip is attached to the GitHub release.
+# Every push to main runs CI. A push that changes the integration
+# (custom_components/ or hacs.json) then publishes a new release: the version
+# is bumped from the latest tag, written to manifest.json, committed, tagged,
+# and the integration zip is attached to the GitHub release.
 #
-# Only changes to the integration (custom_components/ or hacs.json) are
-# released: a push that changes only tests, CI, docs or test dependencies
-# runs CI and stops there.
+# A push that changes only CI, tests, docs or test dependencies, and any push
+# of Dependabot's (or another bot's) commits, runs CI and stops there. It never
+# releases, not even integration changes an earlier push left unreleased
+# ("[skip release]", or a failed run): those go out with the next push that
+# changes the integration, or a manual run, and the run says they are waiting.
 #
 # Bump size: patch by default. To bump more, put a line containing only
 # "#minor" or "#major" in a commit message since the last release, or run the
@@ -55,35 +58,73 @@ jobs:
         id: version
         env:
           MANUAL_BUMP: ${{ github.event.inputs.bump }}
+          # The commit main was at before this push (empty for a manual run).
+          BEFORE: ${{ github.event.before }}
         run: |
-          # A push that lands while CI runs moves main past this commit, and the
-          # version commit could not be pushed. That push has its own run, queued
-          # behind this one, which releases these commits once its CI passes.
-          git fetch --quiet origin "$GITHUB_REF_NAME"
-          if [ "$(git rev-parse FETCH_HEAD)" != "$GITHUB_SHA" ]; then
-            if git log -1 --format=%B FETCH_HEAD | grep -qF '[skip release]'; then
-              echo "::warning::$GITHUB_REF_NAME moved past this commit to a [skip release] commit; these changes release with the next push."
-            else
-              echo "::notice::$GITHUB_REF_NAME moved past this commit; the run for the newer push releases it."
-            fi
-            echo "skip=true" >> "$GITHUB_OUTPUT"
-            exit 0
-          fi
+          skip() { echo "skip=true" >> "$GITHUB_OUTPUT"; exit 0; }
+
+          # How many commits in a range change the integration and were made by
+          # a person. Bot commits (Dependabot, this workflow's own version
+          # commits) never count.
+          integration_changes() {
+            git log --format=%an "$1" -- custom_components hacs.json | grep -cv '\[bot\]$' || true
+          }
 
           last=$(git tag --list '[0-9]*.[0-9]*.[0-9]*' --sort=-v:refname | head -n1)
           last=${last:-0.0.0}
+          since_last=$([ "$last" = "0.0.0" ] && echo "$GITHUB_SHA" || echo "$last..$GITHUB_SHA")
 
-          if [ "$last" != "0.0.0" ] && [ -z "$(git rev-list "$last"..HEAD -- custom_components hacs.json)" ]; then
+          if [ "$(integration_changes "$since_last")" = 0 ]; then
             echo "No changes to the integration since $last; nothing to release."
-            echo "skip=true" >> "$GITHUB_OUTPUT"
-            exit 0
+            skip
+          fi
+
+          # Only a push that changes the integration itself releases. A push of
+          # CI, tests, docs or Dependabot updates does not, even with unreleased
+          # changes waiting from an earlier push.
+          if [ "$GITHUB_EVENT_NAME" = push ]; then
+            # BEFORE is all zeros, or gone after a force push: use the release range.
+            pushed=$since_last
+            if git cat-file -e "$BEFORE^{commit}" 2>/dev/null; then
+              pushed="$BEFORE..$GITHUB_SHA"
+            fi
+            if [ "$(integration_changes "$pushed")" = 0 ]; then
+              echo "::warning::This push does not change the integration, so it does not release. Changes to the integration since $last are still unreleased: they go out with the next push that changes custom_components/ or hacs.json, or run the Release workflow by hand."
+              skip
+            fi
+          fi
+
+          # A push that lands while CI runs moves main past this commit, and the
+          # version commit could not be pushed on top of this one.
+          git fetch --quiet origin "$GITHUB_REF_NAME"
+          main=$(git rev-parse FETCH_HEAD)
+          base=$GITHUB_SHA
+          if [ "$main" != "$GITHUB_SHA" ]; then
+            if ! git merge-base --is-ancestor "$GITHUB_SHA" "$main"; then
+              echo "::warning::$GITHUB_REF_NAME was rewritten since this commit; nothing released. Run the Release workflow by hand to release it."
+              skip
+            fi
+            if [ -n "$(git rev-list "$GITHUB_SHA..$main" -- custom_components hacs.json)" ]; then
+              # The newer push changes the integration too: its own run, queued
+              # behind this one, releases both once its CI passes.
+              if git log -1 --format=%B "$main" | grep -qF '[skip release]'; then
+                echo "::warning::$GITHUB_REF_NAME moved past this commit to a [skip release] commit; these changes release with the next push that changes the integration, or run the Release workflow by hand."
+              else
+                echo "::notice::$GITHUB_REF_NAME moved past this commit; the run for the newer push releases it."
+              fi
+              skip
+            fi
+            # Only CI, tests, docs or Dependabot updates came after this commit,
+            # and their runs do not release, so this run releases, on top of
+            # them. They leave the integration's files as this run tested them.
+            echo "::notice::$GITHUB_REF_NAME moved past this commit with no change to the integration; releasing on top of $main."
+            base=$main
           fi
 
           if [ -n "$MANUAL_BUMP" ]; then
             bump=$MANUAL_BUMP
           else
-            range=$([ "$last" = "0.0.0" ] && echo HEAD || echo "$last..HEAD")
-            messages=$(git log "$range" --format=%B)
+            messages=$(git log "$since_last" --format=%B)
             # Only a line holding the keyword alone counts, so a message that
             # merely mentions "#major" does not trigger a major release.
             if echo "$messages" | grep -qiE '^[[:space:]]*#major[[:space:]]*$'; then bump=major
@@ -101,8 +142,11 @@ jobs:
           next="$major.$minor.$patch"
 
           echo "Releasing $next ($bump bump from $last)"
-          echo "version=$next" >> "$GITHUB_OUTPUT"
-          echo "skip=false" >> "$GITHUB_OUTPUT"
+          {
+            echo "version=$next"
+            echo "base=$base"
+            echo "skip=false"
+          } >> "$GITHUB_OUTPUT"
 
       # The version commit is pushed with GITHUB_TOKEN, which does not trigger
       # another workflow run, so this cannot loop.
@@ -110,7 +154,11 @@ jobs:
         if: steps.version.outputs.skip != 'true'
         env:
           VERSION: ${{ steps.version.outputs.version }}
+          BASE: ${{ steps.version.outputs.base }}
         run: |
+          # This commit, or main's newer CI/test/docs commits on top of it.
+          git checkout --quiet --detach "$BASE"
+
           python3 - <<'EOF'
           import json, os
           path = "custom_components/wine_cellar_manager/manifest.json"
