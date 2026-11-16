@@ -272,6 +272,8 @@ While a search or filter is active, a strip under the header says how many bottl
 ## Notes
 
 - **Currency**: prices are shown in the currency set in Home Assistant (**Settings** > **System** > **General**), and Gemini is asked for prices in that currency. Prices you already saved are not converted.
+- **Label photos**: photos are stored in `<config>/www/wine_labels`, which Home Assistant serves at `/local/wine_labels/` without a login (the file names are random, so they can't be guessed). Photos uploaded but never saved with a bottle (a sheet closed without saving, a failed barcode scan) are deleted after a day. Other files you put in that folder are left alone.
+- **Read-only users**: users in Home Assistant's read-only group can view the card but can't add, edit, move, or delete anything, upload photos, or use Gemini.
 - **Québec references**: the integration was originally built for personal use in Québec, Canada, so some features refer to the SAQ (Québec's provincial liquor retailer), such as the default bottle link and barcode lookups on SAQ.com.
 - **Translations**: the integration was originally written in French and translated during development, so some wording quirks may remain.
 - **AI-assisted code**: large parts of the code were debugged, optimized, and refactored with the help of AI tools.

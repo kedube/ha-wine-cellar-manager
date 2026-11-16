@@ -1,6 +1,8 @@
 """Wine Cellar Manager integration."""
 from __future__ import annotations
 
+import logging
+from datetime import datetime, timedelta
 from pathlib import Path
 
 from homeassistant.components.frontend import add_extra_js_url
@@ -9,14 +11,19 @@ from homeassistant.config_entries import ConfigEntry
 from homeassistant.core import HomeAssistant
 from homeassistant.exceptions import ConfigEntryNotReady
 from homeassistant.helpers import config_validation as cv
+from homeassistant.helpers.event import async_track_time_interval
 from homeassistant.loader import async_get_integration
 
 from .const import DOMAIN, PLATFORMS
 from .services import async_register_services
-from .storage import async_get_store
+from .storage import WineCellarStore, async_get_store
 from .websocket_api import async_register_websockets
 
+_LOGGER = logging.getLogger(__name__)
+
 CONFIG_SCHEMA = cv.config_entry_only_config_schema(DOMAIN)
+
+ORPHAN_SWEEP_INTERVAL = timedelta(days=1)
 
 
 async def async_setup(hass: HomeAssistant, config: dict) -> bool:
@@ -65,8 +72,31 @@ async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
 
     entry.async_on_unload(entry.add_update_listener(_async_update_listener))
 
+    # Delete label photos that were uploaded but never saved with a bottle:
+    # once now (in the background) and then daily.
+    async def _async_sweep(_now: datetime | None = None) -> None:
+        await _async_remove_orphan_images(store)
+
+    entry.async_create_background_task(
+        hass, _async_sweep(), f"{DOMAIN} unused label photo sweep"
+    )
+    entry.async_on_unload(
+        async_track_time_interval(hass, _async_sweep, ORPHAN_SWEEP_INTERVAL)
+    )
+
     await hass.config_entries.async_forward_entry_setups(entry, PLATFORMS)
     return True
+
+
+async def _async_remove_orphan_images(store: WineCellarStore) -> None:
+    """Delete unused label photos; a failure is logged, never raised."""
+    try:
+        removed = await store.async_remove_orphan_images()
+    except Exception:
+        _LOGGER.exception("Could not clean up unused label photos")
+        return
+    if removed:
+        _LOGGER.debug("Deleted %s unused label photo(s)", removed)
 
 
 async def _async_update_listener(hass: HomeAssistant, entry: ConfigEntry) -> None:
@@ -80,7 +110,11 @@ async def async_unload_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
 
     if unload_ok and DOMAIN in hass.data:
         domain_data = hass.data[DOMAIN]
-        domain_data.pop(entry.entry_id, None)
+        entry_data = domain_data.pop(entry.entry_id, None) or {}
+
+        # The Gemini client keeps a connection pool open until closed.
+        if (client := entry_data.get("gemini_client")) is not None:
+            await hass.async_add_executor_job(client.close)
 
         # When the last entry goes away, drop the shared store so a later
         # setup re-reads it from disk instead of using a stale cache.

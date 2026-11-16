@@ -82,3 +82,60 @@ async def test_change_event_is_small_and_sensors_update(hass: HomeAssistant, ws)
     assert all(len(json.dumps(dict(event.data))) < 500 for event in events)
     states = {state.attributes.get("friendly_name"): state.state for state in hass.states.async_all("sensor")}
     assert states == {"Wine stock status": "1", "Total cellar capacity": "6"}
+
+
+async def test_read_only_user_can_read_but_not_change(
+    hass: HomeAssistant, ws, hass_ws_client, hass_read_only_access_token
+) -> None:
+    cellar = await add_cellar(ws)
+    client = await hass_ws_client(hass, hass_read_only_access_token)
+
+    async def send(**msg):
+        msg["type"] = f"{DOMAIN}/{msg['type']}"
+        await client.send_json_auto_id(msg)
+        return await client.receive_json()
+
+    assert (await send(type="data"))["success"]
+    for msg in (
+        {"type": "delete_cellar", "cellar_id": cellar},
+        {"type": "upload_label_image", "filename": "a.jpg", "data_base64": "/9j/4AAQ"},
+        {"type": "unified_analyze", "barcode": "123"},
+    ):
+        reply = await send(**msg)
+        assert not reply["success"], msg["type"]
+        assert reply["error"]["code"] == "unauthorized", msg["type"]
+    assert (await ws(type="data"))["cellars"], "the cellar was deleted"
+
+
+async def test_unexpected_error_is_logged_not_sent(
+    hass: HomeAssistant, ws, hass_ws_client, caplog
+) -> None:
+    cellar = await add_cellar(ws)
+    bottle = await save_bottle(ws, cellar, 1, wine_name="A")
+    client = await hass_ws_client(hass)
+    with patch(
+        "custom_components.wine_cellar_manager.storage.WineCellarStore.async_delete_bottle",
+        side_effect=OSError(5, "Input/output error", "/srv/ha/.storage/secret"),
+    ):
+        await client.send_json_auto_id({"type": f"{DOMAIN}/delete_bottle", "bottle_id": bottle["id"]})
+        reply = await client.receive_json()
+    assert reply["error"]["code"] == "delete_failed"
+    assert "/srv/ha" not in reply["error"]["message"]
+    assert "/srv/ha" in caplog.text
+
+
+async def test_unused_upload_is_swept_at_startup(hass: HomeAssistant, dependencies, labels_dir) -> None:
+    import os
+    import time
+
+    orphan = labels_dir / "label_1700000000_0000000a.jpg"
+    orphan.write_bytes(b"\xff\xd8\xff")
+    old = time.time() - 2 * 86400
+    os.utime(orphan, (old, old))
+
+    entry = MockConfigEntry(domain=DOMAIN, unique_id=DOMAIN, data={"title": "C"}, options={})
+    entry.add_to_hass(hass)
+    with patch("custom_components.wine_cellar_manager.add_extra_js_url"):
+        assert await hass.config_entries.async_setup(entry.entry_id)
+        await hass.async_block_till_done(wait_background_tasks=True)
+    assert not orphan.exists()

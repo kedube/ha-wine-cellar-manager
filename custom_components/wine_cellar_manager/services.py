@@ -18,8 +18,12 @@ async def async_register_services(hass: HomeAssistant) -> None:
             return
 
         _LOGGER.debug("Wine Cellar Manager: drinking-window data rebuild started.")
-        # Re-fire the change event so sensors recompute "ready_to_drink" for today.
-        await store.async_save(await store.async_load())
+        # "ready_to_drink" and "past_peak" are worked out for today's date each
+        # time the card reads the data. Saving it unchanged sends the change
+        # notifications (the sensors and the wine_cellar_manager_data_changed
+        # event), so whatever listens refreshes. Under the store lock, like
+        # every other save.
+        await store.async_resave()
 
     hass.services.async_register(
         DOMAIN,

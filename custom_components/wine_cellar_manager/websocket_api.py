@@ -3,9 +3,11 @@ from __future__ import annotations
 
 import logging
 import re
+from pathlib import PurePosixPath
 from typing import Any
 
 import voluptuous as vol
+from homeassistant.auth.permissions.const import POLICY_CONTROL
 from homeassistant.components import websocket_api
 from homeassistant.core import HomeAssistant, callback
 from homeassistant.helpers.importlib import async_import_module
@@ -57,31 +59,70 @@ def _safe_float(val: Any) -> float | None:
         return None
 
 
+def _loaded_entry_data(hass: HomeAssistant) -> dict[str, Any] | None:
+    """Return the loaded entry's data ({"store", "entry", ...}), or None."""
+    domain_data = hass.data.get(DOMAIN, {})
+    for entry in hass.config_entries.async_entries(DOMAIN):
+        if entry_data := domain_data.get(entry.entry_id):
+            return entry_data
+    return None
+
+
+def _can_write(connection: websocket_api.ActiveConnection) -> bool:
+    """Whether the user may change the cellar (not a read-only user)."""
+    return connection.user.permissions.access_all_entities(POLICY_CONTROL)
+
+
 def _get_store(
     hass: HomeAssistant,
     connection: websocket_api.ActiveConnection,
     msg: dict[str, Any],
 ) -> WineCellarStore | None:
-    """Return the loaded entry's store, or answer the message with an error."""
-    domain_data = hass.data.get(DOMAIN, {})
-    for entry in hass.config_entries.async_entries(DOMAIN):
-        if entry_data := domain_data.get(entry.entry_id):
-            return entry_data["store"]
+    """Return the loaded entry's store, or answer the message with an error.
+
+    Every command but reading the data changes something, so read-only users
+    get an error for those.
+    """
+    if msg["type"] != WS_TYPE_GET_DATA and not _can_write(connection):
+        connection.send_error(
+            msg["id"], "unauthorized", "Read-only users cannot change the cellar."
+        )
+        return None
+    if entry_data := _loaded_entry_data(hass):
+        return entry_data["store"]
     connection.send_error(msg["id"], "no_entry", "Wine Cellar Manager is not loaded.")
     return None
 
 
-def _get_config_entry_options(hass: HomeAssistant) -> dict[str, Any]:
-    """Get config entry options."""
-    entries = hass.config_entries.async_entries(DOMAIN)
-    if not entries:
-        return {}
-    return dict(entries[0].options) if isinstance(entries, list) else dict(entries.options)
+def _send_failure(
+    connection: websocket_api.ActiveConnection,
+    msg: dict[str, Any],
+    code: str,
+    err: Exception,
+) -> None:
+    """Answer a failed command.
+
+    A ValueError carries a message meant for the user (the card translates the
+    known ones). Anything else is a bug or an I/O error: it goes to the log,
+    and the card gets a plain message instead of paths or internals.
+    """
+    if isinstance(err, ValueError):
+        connection.send_error(msg["id"], code, str(err))
+        return
+    _LOGGER.error("%s failed", msg["type"], exc_info=err)
+    connection.send_error(
+        msg["id"], code, "Unexpected error; see the Home Assistant log for details."
+    )
+
+
+# What Gemini sometimes answers instead of the exact type names.
+_WINE_TYPE_ALIASES = {"rose": "rosé", "rosado": "rosé", "rosato": "rosé"}
 
 
 def _normalize_wine_type(val: Any) -> str:
     """Normalize wine type string."""
     t = _safe_str(val).strip().lower()
+    t = _WINE_TYPE_ALIASES.get(t, t)
     return t if t in WINE_TYPES else "other"
 
 
@@ -104,24 +145,27 @@ def _normalize_label_suggestion(payload: dict[str, Any], image_path: str) -> dic
     country = _safe_str(payload.get("country")).strip()
     raw_varietal = _safe_str(payload.get("varietal")).strip()
 
-    raw_varietal_lower = raw_varietal.lower().replace("shiraz", "syrah")
+    # Grapes whose own name has a hyphen; any other hyphen joins a blend
+    # ("Grenache-Syrah-Mourvèdre").
     single_composite_grapes = {
         "cabernet-sauvignon", "pinot-noir", "chenin-blanc", "sauvignon-blanc",
-        "cabernet-franc", "gros-manseng", "petit-manseng", "gewürztraminer",
-        "savagnin-rose", "carignan-noir", "mourvèdre-syrah"
+        "cabernet-franc", "gros-manseng", "petit-manseng", "savagnin-rose",
+        "carignan-noir",
     }
 
-    normalized_text = raw_varietal_lower.replace("/", "-").replace("&", "-").replace(" and ", "-")
-
-    if "-" in normalized_text:
-        if normalized_text in single_composite_grapes:
-            varietal = raw_varietal.replace("Shiraz", "Syrah").replace("shiraz", "Syrah")
-        else:
-            parts = [p.strip().capitalize() for p in normalized_text.split("-") if p.strip()]
-            parts = [p if p != "Syrah" else "Syrah" for p in parts]
-            varietal = ", ".join(parts)
-    else:
-        varietal = raw_varietal.replace("Shiraz", "Syrah").replace("shiraz", "Syrah").capitalize()
+    # Split the blend on its separators first, so a hyphenated grape in a
+    # list ("Cabernet-Sauvignon, Merlot") stays whole, and keep each grape's
+    # own capitals ("Pinot Noir"): only the first letter is raised.
+    grapes: list[str] = []
+    for chunk in re.split(
+        r"\s*(?:,|/|&|\band\b)\s*", re.sub(r"(?i)shiraz", "Syrah", raw_varietal)
+    ):
+        chunk = chunk.strip()
+        if "-" in chunk and chunk.lower() not in single_composite_grapes:
+            grapes.extend(part.strip() for part in chunk.split("-") if part.strip())
+        elif chunk:
+            grapes.append(chunk)
+    varietal = ", ".join(grape[:1].upper() + grape[1:] for grape in grapes)
 
     notes = _safe_str(payload.get("notes")).strip()
 
@@ -252,7 +296,7 @@ async def ws_save_cellar(hass: HomeAssistant, connection: websocket_api.ActiveCo
         )
         connection.send_result(msg["id"], {"status": "success"})
     except Exception as err:
-        connection.send_error(msg["id"], "save_failed", str(err))
+        _send_failure(connection, msg, "save_failed", err)
 
 
 @websocket_api.websocket_command({vol.Required("type"): WS_TYPE_DELETE_CELLAR, vol.Required("cellar_id"): str})
@@ -268,8 +312,7 @@ async def ws_delete_cellar(hass: HomeAssistant, connection: websocket_api.Active
         await store.async_delete_cellar(target_cellar_id)
         connection.send_result(msg["id"], {"status": "success"})
     except Exception as err:
-        _LOGGER.error("Erreur lors de la suppression en cascade du cellier : %r", err)
-        connection.send_error(msg["id"], "delete_failed", str(err))
+        _send_failure(connection, msg, "delete_failed", err)
 
 
 @websocket_api.websocket_command({
@@ -333,8 +376,7 @@ async def ws_save_bottle(hass: HomeAssistant, connection: websocket_api.ActiveCo
         )
         connection.send_result(msg["id"], {"status": "success"})
     except Exception as err:
-        _LOGGER.exception("Error in ws_save_bottle: %r", err)
-        connection.send_error(msg["id"], "save_failed", str(err))
+        _send_failure(connection, msg, "save_failed", err)
 
 
 @websocket_api.websocket_command({vol.Required("type"): WS_TYPE_CONSUME_BOTTLE, vol.Required("bottle_id"): str})
@@ -348,7 +390,7 @@ async def ws_consume_bottle(hass: HomeAssistant, connection: websocket_api.Activ
         # The history record's id lets the card undo this (restore_consumed_bottle).
         connection.send_result(msg["id"], {"status": "success", "consumed_id": consumed_id})
     except Exception as err:
-        connection.send_error(msg["id"], "consume_failed", str(err))
+        _send_failure(connection, msg, "consume_failed", err)
 
 
 @websocket_api.websocket_command({vol.Required("type"): WS_TYPE_RESTORE_BOTTLE, vol.Required("consumed_id"): str})
@@ -365,7 +407,7 @@ async def ws_restore_consumed_bottle(
         bottle_id = await store.async_restore_consumed_bottle(msg["consumed_id"])
         connection.send_result(msg["id"], {"status": "success", "bottle_id": bottle_id})
     except Exception as err:
-        connection.send_error(msg["id"], "restore_failed", str(err))
+        _send_failure(connection, msg, "restore_failed", err)
 
 
 @websocket_api.websocket_command({vol.Required("type"): WS_TYPE_DELETE_BOTTLE, vol.Required("bottle_id"): str})
@@ -378,7 +420,7 @@ async def ws_delete_bottle(hass: HomeAssistant, connection: websocket_api.Active
         await store.async_delete_bottle(msg["bottle_id"])
         connection.send_result(msg["id"], {"status": "success"})
     except Exception as err:
-        connection.send_error(msg["id"], "delete_failed", str(err))
+        _send_failure(connection, msg, "delete_failed", err)
 
 
 @websocket_api.websocket_command({
@@ -405,8 +447,7 @@ async def ws_move_bottle(hass: HomeAssistant, connection: websocket_api.ActiveCo
         )
         connection.send_result(msg["id"], {"status": "success"})
     except Exception as err:
-        _LOGGER.error("Failed to move bottle via WS: %r", err)
-        connection.send_error(msg["id"], "move_failed", str(err))
+        _send_failure(connection, msg, "move_failed", err)
 
 
 @websocket_api.websocket_command({
@@ -426,8 +467,7 @@ async def ws_swap_bottles(hass: HomeAssistant, connection: websocket_api.ActiveC
         )
         connection.send_result(msg["id"], {"status": "success"})
     except Exception as err:
-        _LOGGER.error("Failed to swap bottles via WS: %r", err)
-        connection.send_error(msg["id"], "swap_failed", str(err))
+        _send_failure(connection, msg, "swap_failed", err)
 
 
 @websocket_api.websocket_command({vol.Required("type"): WS_TYPE_UPLOAD_LABEL_IMAGE, vol.Required("filename"): str, vol.Required("data_base64"): str})
@@ -440,7 +480,7 @@ async def ws_upload_label_image(hass: HomeAssistant, connection: websocket_api.A
         path = await store.async_upload_label_image(msg["filename"], msg["data_base64"])
         connection.send_result(msg["id"], {"image_path": path})
     except Exception as err:
-        connection.send_error(msg["id"], "upload_failed", str(err))
+        _send_failure(connection, msg, "upload_failed", err)
 
 
 @websocket_api.websocket_command({
@@ -455,6 +495,13 @@ async def ws_unified_analyze(
     msg: dict[str, Any],
 ) -> None:
     """Unified analyze flow: barcode first, otherwise label image."""
+    # It spends the owner's Gemini quota and deletes the scanned photo.
+    if not _can_write(connection):
+        connection.send_error(
+            msg["id"], "unauthorized", "Read-only users cannot analyze labels."
+        )
+        return
+
     barcode = "".join(ch for ch in _safe_str(msg.get("barcode", "")) if ch.isdigit())
     image_path = _safe_str(msg.get("image_path", "")).strip()
 
@@ -466,18 +513,24 @@ async def ws_unified_analyze(
         )
         return
 
+    # A barcode photo the card uploaded only for this scan, deleted however
+    # the scan ends. Judged by the file's own name, never through "..", so
+    # no label a bottle uses can be passed off as one.
+    scan = PurePosixPath(image_path)
+    is_scan = (
+        bool(image_path)
+        and scan.name.startswith("temp_barcode_")
+        and ".." not in scan.parts
+    )
+
     try:
         # Imported on first use, in the executor: importing pydantic would
         # block the event loop.
         gemini_vision = await async_import_module(hass, f"{__package__}.gemini_vision")
 
-        if image_path and not barcode and "temp_barcode_" in image_path:
-            store = async_get_store(hass)
-            try:
-                barcode_result = await gemini_vision.async_extract_barcode_from_image(hass, image_path)
-                extracted = barcode_result.get("barcode", "")
-            finally:
-                await store.async_delete_image(image_path)
+        if is_scan and not barcode:
+            barcode_result = await gemini_vision.async_extract_barcode_from_image(hass, image_path)
+            extracted = barcode_result.get("barcode", "")
 
             if not extracted:
                 connection.send_result(
@@ -506,7 +559,11 @@ async def ws_unified_analyze(
         connection.send_result(msg["id"], result)
 
     except Exception as err:
-        _LOGGER.exception("Unified analyze failed: %r", err)
-        # Nettoyage préventif des caractères de structure JSON pour ne pas faire planter la carte JS
-        error_msg = str(err).replace("{", "[").replace("}", "]").replace('"', "'")
-        connection.send_error(msg["id"], "analyze_failed", error_msg)
+        if isinstance(err, ValueError):
+            # Gemini's errors quote JSON; keep its punctuation out of the card.
+            err = ValueError(str(err).replace("{", "[").replace("}", "]").replace('"', "'"))
+        _send_failure(connection, msg, "analyze_failed", err)
+
+    finally:
+        if is_scan:
+            await async_get_store(hass).async_delete_image(image_path)

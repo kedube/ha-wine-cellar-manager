@@ -6,11 +6,13 @@ import base64
 import binascii
 import logging
 import os
+import re
 import time
 import uuid
+from collections.abc import Iterable
 from copy import deepcopy
 from datetime import UTC, datetime
-from pathlib import Path
+from pathlib import Path, PurePosixPath
 from typing import Any
 
 from homeassistant.core import HomeAssistant
@@ -55,8 +57,22 @@ ALLOWED_IMAGE_EXTENSIONS = {".jpg", ".jpeg", ".png", ".webp", ".gif"}
 
 LABELS_URL = "/local/wine_labels/"
 
-# Generous enough for a phone photo, small enough to bound memory and disk.
-MAX_IMAGE_BYTES = 12 * 1024 * 1024
+# Home Assistant's websocket refuses frames over 4 MiB (aiohttp's default), which
+# is about 3 MiB of image once base64-encoded: a larger upload never arrives.
+# The card sends photos scaled down to 2000 px, far below this.
+MAX_IMAGE_BYTES = 3 * 1024 * 1024
+
+# Far above the card's shelf stepper (24), low enough that the card can draw
+# every slot.
+MAX_SHELF_SLOTS = 200
+
+# Uploads no bottle uses (an edit sheet closed without saving, a barcode scan
+# that failed) are deleted once they are this old.
+ORPHAN_IMAGE_MAX_AGE = 24 * 3600
+
+# The names this integration gives the files it writes:
+# <name>_<unix time>_<8 hex digits><ext>. Other files are never swept.
+_UPLOAD_NAME = re.compile(r"_\d{9,}_[0-9a-f]{8}\.(?:jpe?g|png|webp|gif)$")
 
 
 def _safe_external_url(value: Any) -> str | None:
@@ -131,6 +147,10 @@ class WineCellarStore:
             return self._data
 
         data = await self._store.async_load()
+        if self._data is not None:
+            # Another caller finished the first load while this one waited,
+            # and may have saved a change since: its copy is the newer one.
+            return self._data
 
         if not isinstance(data, dict):
             self._data = _default_data()
@@ -529,6 +549,22 @@ class WineCellarStore:
 
         return False
 
+    def _delete_label_files(self, image_paths: Iterable[str]) -> None:
+        """Delete label images; runs in the executor.
+
+        Resolving a path reads the disk, so it is never done in the event loop.
+        _normalize_local_path refuses anything outside the labels directory.
+        """
+        for image_path in image_paths:
+            if local_path := self._normalize_local_path(image_path):
+                _remove_file_if_exists(local_path)
+
+    async def async_label_file(self, image_path: str) -> str:
+        """Return the file behind a label URL, or "" if outside the labels dir."""
+        return await self.hass.async_add_executor_job(
+            self._normalize_local_path, image_path
+        )
+
     async def _async_delete_image_if_unreferenced(
         self,
         data: dict[str, Any],
@@ -548,12 +584,9 @@ class WineCellarStore:
         ):
             return
 
-        # _normalize_local_path already refuses anything outside the labels dir.
-        local_path = self._normalize_local_path(normalized_target)
-        if not local_path:
-            return
-
-        await self.hass.async_add_executor_job(_remove_file_if_exists, local_path)
+        await self.hass.async_add_executor_job(
+            self._delete_label_files, [normalized_target]
+        )
 
     async def async_delete_image(self, image_path: str) -> None:
         """Delete an image stored under /local/wine_labels."""
@@ -561,12 +594,51 @@ class WineCellarStore:
         if not normalized_target:
             return
 
-        # _normalize_local_path refuses anything outside the labels directory.
-        local_path = self._normalize_local_path(normalized_target)
-        if not local_path:
-            return
+        await self.hass.async_add_executor_job(
+            self._delete_label_files, [normalized_target]
+        )
 
-        await self.hass.async_add_executor_job(_remove_file_if_exists, local_path)
+    async def async_remove_orphan_images(self) -> int:
+        """Delete uploads no bottle uses once they are a day old; return how many.
+
+        A photo uploaded from an edit sheet that is then closed, or a barcode
+        scan whose analysis failed, is otherwise kept forever.
+        """
+        async with self._lock:
+            data = await self._async_ensure_loaded()
+            # Compared by file name, which keeps a file whenever in doubt.
+            in_use = {
+                PurePosixPath(str(b.get("image_path") or "").strip()).name
+                for b in self._iter_all_bottles(data)
+            }
+            return await self.hass.async_add_executor_job(
+                self._remove_orphan_images, in_use, time.time() - ORPHAN_IMAGE_MAX_AGE
+            )
+
+    def _remove_orphan_images(self, in_use: set[str], cutoff: float) -> int:
+        """Delete this integration's unused uploads older than cutoff (executor)."""
+        try:
+            entries = list(os.scandir(self._labels_base_dir()))
+        except FileNotFoundError:
+            return 0
+
+        removed = 0
+        for entry in entries:
+            if (
+                entry.name in in_use
+                or not _UPLOAD_NAME.search(entry.name)
+                or not entry.is_file(follow_symlinks=False)
+                or entry.stat(follow_symlinks=False).st_mtime > cutoff
+            ):
+                continue
+            _remove_file_if_exists(entry.path)
+            removed += 1
+        return removed
+
+    async def async_resave(self) -> None:
+        """Save the data unchanged, which sends the change notifications."""
+        async with self._lock:
+            await self.async_save(await self.async_load())
 
     # ------------------------------------------------------------------
     # Public mutating API.
@@ -647,7 +719,19 @@ class WineCellarStore:
 
         normalized_shelves = []
         for index, shelf in enumerate(shelves):
+            if not isinstance(shelf, dict):
+                raise ValueError("Each shelf must be an object")
             normalized_shelves.append(self._normalize_shelf(shelf, index))
+
+        # Bottles find their shelf by id, so two shelves must never share one.
+        shelf_ids = [shelf["id"] for shelf in normalized_shelves]
+        if len(shelf_ids) != len(set(shelf_ids)):
+            raise ValueError("Shelf ids must be unique")
+        if any(
+            max(shelf["capacity_front"], shelf["capacity_back"]) > MAX_SHELF_SLOTS
+            for shelf in normalized_shelves
+        ):
+            raise ValueError(f"A shelf lane holds at most {MAX_SHELF_SLOTS} bottles")
 
         if cellar_id:
             for cellar in cellars:
@@ -702,7 +786,6 @@ class WineCellarStore:
             b for b in self._iter_all_bottles(data)
             if b.get("cellar_id") == cellar_id
         ]
-        removed_ids = {str(b.get("id") or "") for b in cellar_bottles}
         image_paths = {
             str(b.get("image_path") or "").strip()
             for b in cellar_bottles
@@ -713,12 +796,13 @@ class WineCellarStore:
         data["bottles"] = [b for b in data["bottles"] if b.get("cellar_id") != cellar_id]
         data["consumed_bottles"] = [b for b in data["consumed_bottles"] if b.get("cellar_id") != cellar_id]
 
-        for image_path in image_paths:
-            await self._async_delete_image_if_unreferenced(
-                data,
-                image_path=image_path,
-                exclude_ids=removed_ids,
-            )
+        # One scan of the bottles left, not one per image: a big cellar has
+        # thousands of each, and this runs in the event loop.
+        still_used = {
+            str(b.get("image_path") or "").strip() for b in self._iter_all_bottles(data)
+        }
+        if unused := image_paths - still_used:
+            await self.hass.async_add_executor_job(self._delete_label_files, unused)
 
         await self.async_save(data)
 
@@ -751,6 +835,10 @@ class WineCellarStore:
     ) -> str:
         """Create or update a bottle."""
         data = await self.async_load()
+        if bottle_id and not any(b.get("id") == bottle_id for b in data["bottles"]):
+            # Drunk or deleted since the client loaded it (another tab or
+            # device): saving must not bring it back.
+            raise ValueError("Bottle not found")
         self._validate_slot_available(
             data,
             bottle_id=bottle_id,
@@ -781,7 +869,7 @@ class WineCellarStore:
                 data, image_path=current_image_path, exclude_ids={existing_bottle_id}
             )
         ):
-            current_local_path = self._normalize_local_path(current_image_path)
+            current_local_path = await self.async_label_file(current_image_path)
             # A bottle getting its first photo takes the one an identical wine
             # already uses; a bottle replacing its photo keeps the new one.
             shared_path = (
@@ -853,6 +941,9 @@ class WineCellarStore:
                 if bottle.get("id") == bottle_id:
                     payload["created_at"] = bottle.get("created_at") or _utcnow()
                     payload["updated_at"] = _utcnow()
+                    if wine_year is None:
+                        # Not sent by the card: keep what the bottle had.
+                        payload["wine_year"] = bottle.get("wine_year")
                     data["bottles"][index] = self._normalize_bottle(payload)
 
                     new_image_path = str(payload.get("image_path") or "").strip()
@@ -1075,37 +1166,40 @@ class WineCellarStore:
         if not name_part:
             name_part = "uploaded_label"
 
-        try:
-            image_bytes = base64.b64decode(data_base64, validate=True)
-        except (binascii.Error, ValueError) as err:
-            raise ValueError("Uploaded data is not valid base64") from err
-
-        if not image_bytes:
-            raise ValueError("Uploaded image is empty")
-
-        if len(image_bytes) > MAX_IMAGE_BYTES:
-            raise ValueError(
-                f"Image is too large ({len(image_bytes) // 1024} KB); "
-                f"the limit is {MAX_IMAGE_BYTES // 1024} KB"
-            )
-
-        detected = _detect_image_mime(image_bytes)
-        if detected is None:
-            raise ValueError("Uploaded file is not a recognized image")
-
         unique_filename = f"{name_part}_{int(time.time())}_{uuid.uuid4().hex[:8]}{ext_part}"
         target_path = os.path.join(upload_dir, unique_filename)
 
-        def _sync_write_image():
+        def _sync_write_image() -> str:
+            # Decoding a few megabytes is CPU work: done here, not in the loop.
+            try:
+                image_bytes = base64.b64decode(data_base64, validate=True)
+            except (binascii.Error, ValueError) as err:
+                raise ValueError("Uploaded data is not valid base64") from err
+
+            if not image_bytes:
+                raise ValueError("Uploaded image is empty")
+
+            if len(image_bytes) > MAX_IMAGE_BYTES:
+                raise ValueError(
+                    f"Image is too large ({len(image_bytes) // 1024} KB); "
+                    f"the limit is {MAX_IMAGE_BYTES // 1024} KB"
+                )
+
+            detected = _detect_image_mime(image_bytes)
+            if detected is None:
+                raise ValueError("Uploaded file is not a recognized image")
+
             os.makedirs(upload_dir, exist_ok=True)
             with open(target_path, "wb") as handle:
                 handle.write(image_bytes)
+            return detected
 
         try:
-            await self.hass.async_add_executor_job(_sync_write_image)
-            _LOGGER.debug("Saved label image to %s (%s)", target_path, detected)
-            return f"{LABELS_URL}{unique_filename}"
-
+            detected = await self.hass.async_add_executor_job(_sync_write_image)
         except OSError as err:
-            _LOGGER.error("Failed to write image to disk: %r", err)
-            raise ValueError(f"Could not save the image: {err}") from err
+            # The path stays in the log; the card only gets a plain message.
+            _LOGGER.error("Failed to write image %s: %s", target_path, err)
+            raise ValueError("Could not save the image") from err
+
+        _LOGGER.debug("Saved label image to %s (%s)", target_path, detected)
+        return f"{LABELS_URL}{unique_filename}"
