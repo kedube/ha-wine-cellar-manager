@@ -8,7 +8,7 @@ from pathlib import Path
 from unittest.mock import patch
 
 import pytest
-from homeassistant.core import HomeAssistant
+from homeassistant.core import HomeAssistant, callback
 
 from .common import DOMAIN, LABELS, add_cellar, add_photo, photo_exists, save_bottle
 
@@ -236,7 +236,15 @@ async def test_rebuild_ready_waits_for_a_change_in_progress(hass: HomeAssistant,
 
     store = hass.data[DOMAIN][entry.entry_id]["store"]
     saves = []
-    async_dispatcher_connect(hass, f"{DOMAIN}_data_changed", saves.append)
+
+    # A @callback listener runs inline when the store sends the signal. A plain
+    # callable (saves.append) would run in the executor and could land after
+    # the asserts below.
+    @callback
+    def _on_save(payload) -> None:
+        saves.append(payload)
+
+    async_dispatcher_connect(hass, f"{DOMAIN}_data_changed", _on_save)
     async with store._lock:
         call = hass.async_create_task(
             hass.services.async_call(DOMAIN, "rebuild_ready", blocking=True)
