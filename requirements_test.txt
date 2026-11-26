@@ -3,4 +3,4 @@
 # Assistant version the tests run against.
 pytest-homeassistant==2026.11.1
 # The integration's requirement (manifest.json); gemini_vision needs its pydantic.
-google-genai==3.3.0
+google-genai==3.6.1
